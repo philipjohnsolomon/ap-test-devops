@@ -1,0 +1,43 @@
+.alert {
+	// we hide the heading lable with css rather than ripping it out, in case delivery teams want to re-enable it. 
+	& h4 {
+		display: none;
+	}
+}
+
+/* error messages outside agencyportal-form */
+.error-message {
+	font-weight: bold;
+	color: @form-validation-error;
+}
+
+/* XARC errors outside agencyportal-form */
+.initial-display-messages,
+.ajax-messages {
+	.alert {
+		.fa {
+			position: absolute;
+			left: 25px;
+			top: 18px;
+		}
+		p {
+			display: block;
+			margin-left: 20px; 
+		}
+		&.alert-info .fa {
+			&:before{
+				content: @icon-alert-info;
+			}
+		}
+		&.alert-warning .fa {
+			&:before{
+				content: @icon-alert-warning;
+			}
+		}
+		&.alert-danger .fa {
+			&:before{
+				content: @icon-alert-danger;
+			}
+		}
+	}
+}

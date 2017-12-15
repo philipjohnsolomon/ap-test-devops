@@ -1,0 +1,158 @@
+<transactionDefinitionBehavior xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/behavior/transactionDefinitionBehavior.xsd">
+	<!--  The following delimiter applies to the <for> elements for separating page entities -->
+	<delimiter>/</delimiter>
+	<!-- 
+        TODO: Example Eligibility behaviors. Project teams should update these behaviors as required.
+        Changes to the set of eligibility question(s) must be reflected in the CommlAutoPreConditions.eligibilityUniqueIds array.
+
+    <behavior id="excludeIneligibleMsg" title="Exclude the Ineligible Message By Default">
+        <do action="exclude" />
+        <for>*/generalInfo/eligibilityTips/</for>
+    </behavior>
+    <behavior id="includeIneligibleMsg" title="Include Ineligible Message when a Controlling State and SICCd are entered, and a question has been answered 'Yes'">
+        <do action="include" />
+        <where>
+            <preCondition name="ControllingState">!</preCondition>
+            <preCondition name="ApplicantClassBusiness">!</preCondition>
+            <preCondition name="XPATH{ count(CommlPolicy/QuestionAnswer[QuestionCd='CPR21' or QuestionCd='AUTOP02' or QuestionCd='DRIVE19' or QuestionCd='INMRC12']/YesNoCd[.='YES']) }">!0</preCondition>
+        </where>
+        <for>*/generalInfo/eligibilityTips/</for>
+    </behavior>
+
+    <behavior id="excludeEligibilityQ1" title="Example for Class 1234">
+        <do action="exclude" />
+        <where>
+            <preCondition name="ApplicantClassBusiness"></preCondition>
+        </where>
+        <for>*/generalInfo/eligibility/EligibilityQ1</for>
+    </behavior>
+
+    <behavior id="excludeEligibilityQ3" title="Example for Class 1234">
+        <do action="exclude" />
+        <where>
+            <preCondition name="ApplicantClassBusiness">!1234</preCondition>
+        </where>
+        <for>*/generalInfo/eligibility/EligibilityQ3</for>
+    </behavior>
+
+    <behavior id="excludeEligibilityQ4" title="Example for Class 2345">
+        <do action="exclude" />
+        <where>
+            <preCondition name="ApplicantClassBusiness">!2345</preCondition>
+        </where>
+        <for>*/generalInfo/eligibility/EligibilityQ4</for>
+    </behavior>
+
+    <behavior id="excludeEligibilityQ2" title="Example for Class 3456">
+        <do action="exclude" />
+        <where>
+            <preCondition name="ApplicantClassBusiness">!3456</preCondition>
+        </where>
+        <for>*/generalInfo/eligibility/EligibilityQ2</for>
+    </behavior>
+
+    <behavior>
+        <description>Exclude all other field sets on the General Information page until the risk is 
+        determined to be eligible.  Applies to full application transactions only, when entered
+        via Portal directly. 
+
+        The 'inUploadWriterMode' and 'hasOriginalDocument' checks prevent this behavior from excluding
+        fields during upload processing, which would result in data loss.  The 'hasOriginalDocument'
+        check prevents this behavior from resolving to true for uploads, endorsement and renewal transactions
+        which causes the system to drop data for all excluded fields. In these scenarios we show all the fields
+        allowing the data to flow into Portal and lean on the XARC rule to prevents ineligible risks from proceeding.
+       </description>
+
+
+        <do action="exclude" />
+        <where>
+            <preCondition name="ApplicantClassBusiness"></preCondition>            
+            <preCondition name="inUploadWriterMode">false</preCondition>
+        </where>
+        <where>
+            <preCondition name="EligibilityQ1">!NO</preCondition>            
+            <preCondition name="inUploadWriterMode">false</preCondition>
+        </where>
+        <where>
+            <preCondition name="ApplicantClassBusiness">3456</preCondition>
+            <preCondition name="EligibilityQ2">!NO</preCondition>            
+            <preCondition name="inUploadWriterMode">false</preCondition>
+        </where>
+        <where>
+            <preCondition name="ApplicantClassBusiness">1234</preCondition>
+            <preCondition name="EligibilityQ3">!NO</preCondition>            
+            <preCondition name="inUploadWriterMode">false</preCondition>
+        </where>
+        <where>
+            <preCondition name="ApplicantClassBusiness">2345</preCondition>
+            <preCondition name="EligibilityQ4">!NO</preCondition>            
+            <preCondition name="inUploadWriterMode">false</preCondition>
+        </where>
+        <for>*/generalInfo/AgencyInformation</for>
+        <for>*/generalInfo/ApplicantNameSection</for>
+        <for>*/generalInfo/ApplicantInfo</for>
+        <for>*/generalInfo/PolicyTerm</for>
+        <for>*/generalInfo/ApplicantMailingSection</for>
+        <for>*/generalInfo/InspectionContactSection</for>
+        <for>*/generalInfo/AccountingContactSection</for>
+        <for>*/generalInfo/NatureBusinessSection</for>
+    </behavior>
+
+    <behavior>
+        <description>Exclude eligibility XARC Rules for endorsement and renewal transactions.</description>
+        <do action="exclude" />
+        <for>endorseCommlUmbrella/generalInfo/process/generalInfoEligibilityXarcConnector</for>
+        <for>renewalCommlUmbrella/generalInfo/process/generalInfoEligibilityXarcConnector</for>
+    </behavior>
+    End if eligibility behaviors	
+         -->
+    <behavior>
+        <do action="exclude"/>
+        <where>
+            <preCondition name="CommlPolicy.LOBCd">!AUTOB</preCondition>
+        </where>
+        <for>*/PriorCarrier/priorCarrierInfo/PriorCarrierCSL</for>
+        <for>*/PriorCarrier/priorCarrierInfo/PriorCarrierBIPP</for>
+        <for>*/PriorCarrier/priorCarrierInfo/PriorCarrierBIPA</for>
+        <for>*/PriorCarrier/priorCarrierInfo/PriorCarrierPD</for>
+    </behavior>
+    <!-- 
+    <behavior>
+        <do action="exclude"/>
+        <where>
+            <preCondition name="CommlPolicy.LOBCd">!CGL</preCondition>
+        </where>
+        <for>*/PriorCarrier/PriorCarrierGeneralLiabilityPolicyInfoSection</for>
+    </behavior>
+     -->
+    <behavior>
+        <do action="exclude"/>
+        <where>
+            <preCondition name="CommlPolicy.LOBCd">!CPKGE</preCondition>
+        </where>
+        <for>*/PriorCarrier/priorCarrierInfo/priorCarrierLobCd</for>
+    </behavior>
+    <behavior>
+        <do action="exclude"/>
+        <where>
+            <preCondition name="CommlPolicy.LOBCd">!UMBRC</preCondition>
+        </where>
+        <for>*/PriorCarrier/priorCarrierInfo/PriorCarrierCommercialUmberellaEachOccurrence</for>
+        <for>*/PriorCarrier/priorCarrierInfo/PriorCarrierCommercialUmberellaAggregateLimit</for>
+    </behavior>
+    <behavior>
+        <do action="exclude"/>
+        <where>
+            <preCondition name="CommlPolicy.LOBCd">!in('PROPC', 'CRIME', 'GARAG')</preCondition>
+        </where>
+        <for>*/PriorCarrier/priorCarrierInfo/PriorCarrierLimit</for>
+    </behavior>
+	<behavior>
+        <do action="exclude" />
+        <where>
+            <preCondition name="CommlPolicy.LOBCd">CPKGE</preCondition>
+        </where>
+        <for>*/PriorCarrier/priorCarrierInfo/OtherOrPriorPolicyLOBCd</for>
+    </behavior>
+										
+</transactionDefinitionBehavior>

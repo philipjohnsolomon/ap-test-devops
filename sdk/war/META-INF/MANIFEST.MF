@@ -1,0 +1,49 @@
+Manifest-Version: 1.0
+Implementation-Title: apwebconfig
+Implementation-Version: 5.3.0-2
+Class-Path: toolkit-5.3.0-2.jar apbase-5.3.0-2.jar mail-1.4.1.jar acti
+ vation-1.1.jar jaxen-1.1.6.jar annovention-1.2.jar javassist-3.15.0-G
+ A.jar xsom-20140925.jar commons-logging-1.1.3.jar slf4j-jdk14-1.6.6.j
+ ar relaxngDatatype-1.0.jar xalan-2.7.2.jar serializer-2.7.2.jar jerse
+ y-container-servlet-2.22.1.jar jersey-container-servlet-core-2.22.1.j
+ ar jersey-common-2.22.1.jar jersey-guava-2.22.1.jar osgi-resource-loc
+ ator-1.0.1.jar jersey-server-2.22.1.jar jersey-client-2.22.1.jar jers
+ ey-media-jaxb-2.22.1.jar javax.annotation-api-1.2.jar hk2-api-2.4.0-b
+ 31.jar hk2-utils-2.4.0-b31.jar aopalliance-repackaged-2.4.0-b31.jar j
+ avax.inject-2.4.0-b31.jar hk2-locator-2.4.0-b31.jar validation-api-1.
+ 1.0.Final.jar jersey-media-json-processing-2.22.1.jar javax.json-1.0.
+ 4.jar jsonp-jaxrs-1.0.jar jersey-media-json-jackson-2.22.1.jar jersey
+ -entity-filtering-2.22.1.jar jackson-core-2.6.3.jar jackson-databind-
+ 2.6.3.jar jackson-jaxrs-json-provider-2.6.3.jar jackson-module-jaxb-a
+ nnotations-2.6.3.jar jackson-annotations-2.6.3.jar jackson-jaxrs-base
+ -2.6.3.jar javax.ws.rs-api-2.0.1.jar jersey-media-multipart-2.22.1.ja
+ r mimepull-1.9.6.jar jdom2-2.0.6.jar json-20090211.jar poi-3.11.jar c
+ ommons-codec-1.9.jar poi-ooxml-3.11.jar poi-ooxml-schemas-3.11.jar xm
+ lbeans-2.6.0.jar apsecurity-5.3.0-2.jar commons-fileupload-1.2.1.jar 
+ apsecurityreference-5.3.0-2.jar apwebapp-5.3.0-2.jar jstl-1.2.jar tag
+ libs-standard-impl-1.2.1.jar pdfbox-1.8.8.jar fontbox-1.8.8.jar jempb
+ ox-1.8.8.jar solr-core-4.10.4.jar lucene-analyzers-common-4.10.4.jar 
+ lucene-analyzers-kuromoji-4.10.4.jar lucene-analyzers-phonetic-4.10.4
+ .jar lucene-codecs-4.10.4.jar lucene-core-4.10.4.jar lucene-expressio
+ ns-4.10.4.jar lucene-grouping-4.10.4.jar lucene-highlighter-4.10.4.ja
+ r lucene-join-4.10.4.jar lucene-memory-4.10.4.jar lucene-misc-4.10.4.
+ jar lucene-queries-4.10.4.jar lucene-queryparser-4.10.4.jar lucene-sp
+ atial-4.10.4.jar lucene-suggest-4.10.4.jar hppc-0.5.2.jar protobuf-ja
+ va-2.5.0.jar spatial4j-0.4.1.jar commons-configuration-1.6.jar common
+ s-io-2.3.jar commons-lang-2.6.jar dom4j-1.6.1.jar joda-time-2.2.jar l
+ og4j-1.2.17.jar antlr-runtime-3.5.jar hadoop-annotations-2.2.0.jar ha
+ doop-auth-2.2.0.jar hadoop-common-2.2.0.jar hadoop-hdfs-2.2.0.jar htt
+ pclient-4.3.1.jar httpcore-4.3.jar httpmime-4.3.1.jar zookeeper-3.4.6
+ .jar wstx-asl-3.2.7.jar noggit-0.5.jar asm-4.1.jar asm-commons-4.1.ja
+ r org.restlet-2.1.1.jar org.restlet.ext.servlet-2.1.1.jar slf4j-api-1
+ .7.6.jar guava-16.0.1.jar solr-solrj-4.10.4.jar
+Built-By: jenkins
+Created-By: Apache Maven 3.2.1
+Build-Date: February 22 2017 3:12 PM
+Implementation-Vendor: Agencyport Software
+Implementation-Vendor-Id: com.agencyport.sdk
+Build-Jdk: 1.7.0_04
+Specification-Title: apwebconfig
+Specification-Version: 5.3.0-2
+Archiver-Version: Plexus Archiver
+

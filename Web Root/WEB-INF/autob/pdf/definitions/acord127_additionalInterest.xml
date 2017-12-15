@@ -1,0 +1,67 @@
+<fields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/pdf/pdfDefinitions.xsd">
+	<field defaultValue="${itemIndex}">
+		<eLabel>AdditionalInterest_Item_VehicleProducerIdentifier</eLabel>
+	</field>
+	<field>
+		<eLabel>AdditionalInterest_FullName</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.AdditionalInterest.GeneralPartyInfo.NameInfo.CommlName.CommercialName</xpath>
+	</field>
+	<field>
+		<eLabel>AdditionalInterest_MailingAddress_LineOne</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.AdditionalInterest.GeneralPartyInfo.Addr.Addr1</xpath>
+	</field>
+	<field>
+		<eLabel>AdditionalInterest_MailingAddress_LineTwo</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.AdditionalInterest.GeneralPartyInfo.Addr.Addr2</xpath>
+	</field>
+	<field>
+		<eLabel>AdditionalInterest_MailingAddress_CityName</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.AdditionalInterest.GeneralPartyInfo.Addr.City</xpath>
+	</field>
+	<field>
+		<eLabel>AdditionalInterest_MailingAddress_StateOrProvinceCode</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.AdditionalInterest.GeneralPartyInfo.Addr.StateProvCd</xpath>
+	</field>
+	<field>
+		<eLabel>AdditionalInterest_MailingAddress_PostalCode</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.AdditionalInterest.GeneralPartyInfo.Addr.PostalCode</xpath>
+	</field>
+	<field>
+		<eLabel>AdditionalInterest_InterestRank</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.AdditionalInterest.AdditionalInterestInfo.InterestRank</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>AdditionalInterest_CertificateRequiredIndicator</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.AdditionalInterest.AdditionalInterestInfo.CertificateRequiredDt</xpath>
+	</field>
+	<field>
+		<eLabel>AdditionalInterestccountNumberIdentifier</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.AdditionalInterest.AdditionalInterestInfo.AccountNumberId</xpath>
+	</field>
+	<field>
+		<eLabel>AdditionalInterest_AccountNumberIdentifier</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.AdditionalInterest.AdditionalInterestInfo.AccountNumberId</xpath>
+	</field>
+	<checkBoxGroup>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.AdditionalInterest.AdditionalInterestInfo.NatureInterestCd</xpath>
+		<checkBox trueValue="ADDIN">
+			<eLabel>AdditionalInterest_Interest_AdditionalInsuredIndicator</eLabel>
+		</checkBox>
+		<checkBox trueValue="LOSSP">
+			<eLabel>AdditionalInterest_Interest_LossPayeeIndicator</eLabel>
+		</checkBox>
+		<checkBox trueValue="OWNER">
+			<eLabel>AdditionalInterest_Interest_OwnerIndicator</eLabel>
+		</checkBox>
+		<checkBox trueValue="EMPL">
+			<eLabel>AdditionalInterest_Interest_EmployeeAsLessorIndicator</eLabel>
+		</checkBox>
+		<checkBox trueValue="RG">
+			<eLabel>AdditionalInterest_Interest_RegistrantIndicator</eLabel>
+		</checkBox>
+		<checkBox trueValue="LIEN">
+			<eLabel>AdditionalInterest_Interest_LienholderIndicator</eLabel>
+		</checkBox>
+	</checkBoxGroup>
+</fields>

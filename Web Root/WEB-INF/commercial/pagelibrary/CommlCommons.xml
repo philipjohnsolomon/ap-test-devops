@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="CommlCommons" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/definition/transactionDefinitionFile.xsd">
+    <!--
+        General Information Page
+        <page title="General Information" id="generalInfo" type="dataEntry">
+        Eligibility tips
+        <pageElement type="tips" id="eligibilityTips">
+        <fieldElement type="message" uniqueId="ineligibleMsg" >We’re sorry, but this risk does not meet our appetite.</fieldElement>
+        </pageElement>
+        Controlling State and class of business Section
+        <pageElement legend="Controlling State" id="controllingState" type="fieldset">
+        <fieldElement label="Controlling State" type="selectlist" id="CommlPolicy.ControllingStateProvCd" uniqueId="ControllingState" required="true">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="autobCodeListRef.xml" target="controllingStates" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+        </fieldElement>
+        <fieldElement label="Class of Business" type="selectlist" id="InsuredOrPrincipal.InsuredOrPrincipalInfo[InsuredOrPrincipalRoleCd='Insured'].BusinessInfo.SICCd" uniqueId="ApplicantClassBusiness" required="true" defaultValue="">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="autobCodeListRef.xml" target="classOfBusiness" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+        </fieldElement>
+        </pageElement>
+        Eligibility Questions Section
+        <pageElement legend="Eligibility Questions" id="eligibility" type="questionnaire">
+        <fieldElement label="Has any carrier cancelled, declined insured, refused to renew or required policy restitution on similar insurance?" type="question" id="CommlPolicy.QuestionAnswer[QuestionCd='CPR21'].YesNoCd" uniqueId="EligibilityQ1" required="true" defaultValue="" />
+        <fieldElement label="Have you had any automobile losses in the past 3 years" type="question" id="CommlPolicy.QuestionAnswer[QuestionCd='AUTOP02'].YesNoCd" uniqueId="EligibilityQ2" required="true" defaultValue="" />
+        <fieldElement label="Do any drivers take medications for neurological mental or emotional problems?" type="question" id="CommlPolicy.QuestionAnswer[QuestionCd='DRIVE19'].YesNoCd" uniqueId="EligibilityQ3" required="true" defaultValue="" />
+        <fieldElement label="Do any drivers not receive regular physicals?" type="question" id="CommlPolicy.QuestionAnswer[QuestionCd='INMRC12'].YesNoCd" uniqueId="EligibilityQ4" required="true" defaultValue="" />
+        </pageElement>
+        Agency Information Section
+        <pageElement legend="Agency Information" id="agencyInformation" type="fieldset">
+        <fieldElement label="Agency Name" uniqueId="AgencyName" type="text" id="Producer.GeneralPartyInfo.NameInfo.CommlName.CommercialName" required="false" size="30" maxLength="40" groupId="Producer.GeneralPartyInfo.NameInfo" />
+        <fieldElement label="Address Line 1" uniqueId="AgencyAddr1" type="text" id="Producer.GeneralPartyInfo.Addr.Addr1" required="false" size="30" maxLength="40" />
+        <fieldElement label="Address Line 2" uniqueId="AgencyAddr2" type="text" id="Producer.GeneralPartyInfo.Addr.Addr2" size="30" maxLength="40" />
+        <fieldElement label="City" uniqueId="AgencyCity" type="text" id="Producer.GeneralPartyInfo.Addr.City" required="false" size="20" maxLength="30" />
+        <fieldElement label="State" uniqueId="AgencyState" type="selectlist" id="Producer.GeneralPartyInfo.Addr.StateProvCd" required="false">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="state" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+        </fieldElement>
+        <fieldElement label="Zip Code" uniqueId="AgencyZip" type="text" id="Producer.GeneralPartyInfo.Addr.PostalCode" required="false" size="10" maxLength="10">
+        <formatMask type="USZipCodeShort" />
+        </fieldElement>
+        <fieldElement label="Producer Phone" uniqueId="AgencyPhone" type="text" id="Producer.GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone'].PhoneNumber" size="20" maxLength="20" groupId="Producer.GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone']">
+        <formatMask type="phone" />
+        <validation type="phone">US</validation>
+        <correction type="phone" />
+        </fieldElement>
+        <fieldElement label="Producer Fax" uniqueId="AgencyFax" type="text" id="Producer.GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Fax'].PhoneNumber" size="20" maxLength="20" groupId="Producer.GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Fax']">
+        <formatMask type="phone" />
+        <validation type="phone">US</validation>
+        <correction type="phone" />
+        </fieldElement>
+        <fieldElement label="E-mail Address" uniqueId="AgencyEmail" type="text" id="Producer.GeneralPartyInfo.Communications.EmailInfo.EmailAddr" size="40" maxLength="128" groupId="Producer.GeneralPartyInfo.Communications.EmailInfo">
+        <validation type="email" id="agentEmailAddress" message="This field is not a recognized email format." />
+        </fieldElement>
+        <fieldElement label="Producer Code" uniqueId="AgencyProdCode" type="text" id="Producer.ProducerInfo.ContractNumber" size="15" maxLength="15" groupId="Producer.ProducerInfo" />
+        <fieldElement label="Producer Sub Code" uniqueId="AgencyProdSubCode" type="text" id="Producer.ProducerInfo.ProducerSubCode" size="8" maxLength="8" groupId="Producer.ProducerInfo" />
+        <fieldElement label="Agency Customer ID" uniqueId="AgencyCustomerID" type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].ItemIdInfo.AgencyId" size="25" maxLength="25" groupId="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].ItemIdInfo.AgencyId">
+        <fieldHelper type="balloon">Enter the Agency ID for the Insured.</fieldHelper>
+        </fieldElement>
+        </pageElement>
+        First Named Insured Tips
+        <pageElement type="tips" id="firstNamedInsuredTips">
+        <fieldElement type="message">Please enter first named insured and all other named insureds. Use Agent Comments for additional space if needed.</fieldElement>
+        </pageElement>
+        Applicant Information Section
+        <pageElement legend="Applicant Information" id="applicantInformation" type="fieldset">
+        <fieldElement type="hidden" id="TransactionRequestDt" defaultValue="SYSTEM_DATE()" />
+        <fieldElement type="hidden" id="RqUID" defaultValue="GUID()" copy="false" />
+        <fieldElement type="hidden" id="CurCd" defaultValue="USD" />
+        <fieldElement type="hidden" id="CommlPolicy.@id" defaultValue="GUID()" copy="false" />
+        <fieldElement label="Applicant Name" uniqueId="ApplicantName" type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo.CommlName.CommercialName" required="true" size="30" maxLength="50" />
+        <fieldElement label="Doing Business As" uniqueId="DoingBusinessAs" type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo.SupplementaryNameInfo[SupplementaryNameCd='DBA'].SupplementaryName" size="30" maxLength="50" groupId="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo.SupplementaryNameInfo[SupplementaryNameCd='DBA']" />
+        <fieldElement label="Tax Id Type" type="selectlist" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo.TaxIdentity.TaxIdTypeCd" groupId="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo.TaxIdentity" uniqueId="TaxIdType">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="taxIdType" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+        </fieldElement>
+        <fieldElement label="Tax Id" type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo.TaxIdentity.TaxId" groupId="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo.TaxIdentity" size="18" maxLength="16" uniqueId="TaxIdFEIN">
+        <formatMask type="fein" />
+        <validation type="fein" />
+        <fieldSecurity secureDataEntryMode="fullyMask" encryptAtRest="true" />
+        </fieldElement>
+        <fieldElement label="Tax Id" type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo.TaxIdentity.TaxId" groupId="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo.TaxIdentity" size="18" maxLength="16" uniqueId="TaxIdSSN">
+        <formatMask type="ssn" />
+        </fieldElement>
+        <fieldElement label="Legal Entity" uniqueId="LegalEntity" type="selectlist" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo.LegalEntityCd">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="applInfoCodeListRef.xml" target="legalEntity" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+        </fieldElement>
+        <fieldElement label="Date Business Started" uniqueId="DateBusinessStart" type="date" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].InsuredOrPrincipalInfo.BusinessInfo.BusinessStartDt" required="true" maxLength="10" />
+        <fieldElement label="Business Phone" uniqueId="BusinessPhone" type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone' &amp;&amp; CommunicationUseCd='Business'].PhoneNumber" size="20" maxLength="20"
+        groupId="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone' &amp;&amp; CommunicationUseCd='Business']">
+        <formatMask type="phone" />
+        <validation type="phone">US</validation>
+        <correction type="phone" />
+        </fieldElement>
+        <fieldElement label="Billing Method" uniqueId="BillingMethod" type="selectlist" id="CommlPolicy.BillingMethodCd" defaultValue="CPB">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="applInfoCodeListRef.xml" target="billingPlan" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+        </fieldElement>
+        <fieldElement label="Direct Bill Pay Plan" uniqueId="DBPayPlan" type="selectlist" id="CommlPolicy.PaymentOption.PaymentPlanCd" defaultValue="8P" groupId="CommlPolicy.PaymentOption">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="paymentPlan" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+        </fieldElement>
+        <fieldElement label="Auditable?" type="selectlist" id="CommlPolicy.CommlPolicySupplement.AuditInd" uniqueId="Auditable">
+        <optionList source="codeListRef.xml" target="blank" />
+        <optionList source="codeListRef.xml" target="yesNoCd" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+        </fieldElement>
+        <fieldElement label="Gross Annual Revenues" uniqueId="GrossAnnualRev" type="text" id="CommlPolicy.CommlPolicySupplement.CommlParentOrSubsidiaryInfo[MiscParty.MiscPartyInfo.MiscPartyRoleCd='ParentCompany'].AnnualGrossReceiptsAmt.Amt" size="10" maxLength="10" groupId="CommlPolicy.CommlPolicySupplement.CommlParentOrSubsidiaryInfo[MiscParty.MiscPartyInfo.MiscPartyRoleCd='ParentCompany'].AnnualGrossReceiptsAmt">
+        <validation type="numeric" />
+        </fieldElement>
+        <fieldElement label="E-Mail Address" uniqueId="ApplicantEmail" type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Communications.EmailInfo[CommunicationUseCd='Business'].EmailAddr" size="40" maxLength="128" groupId="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Communications.EmailInfo[CommunicationUseCd='Business']">
+        <validation type="email" id="applicantEmailAddress" message="This field is not a recognized email format." />
+        </fieldElement>
+        <fieldElement label="Website Address" uniqueId="ApplicantWebsite" type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Communications.WebsiteInfo[CommunicationUseCd='Business'].WebsiteURL" size="34" maxLength="32" />
+        </pageElement>
+        Policy Term Section
+        <pageElement legend="Policy Term" id="policyTerm" type="fieldset">
+        <fieldElement label="Endorsement Effective Date" type="date" id="TransactionEffectiveDt" maxLength="10" uniqueId="TransactionEffectiveDate" />
+        <fieldElement label="Effective Date" type="date" id="CommlPolicy.ContractTerm.EffectiveDt" required="true" uniqueId="EffectiveDate" maxLength="10" />
+        <fieldElement label="Expiration Date" type="date" id="CommlPolicy.ContractTerm.ExpirationDt" required="true" uniqueId="ExpirationDate" maxLength="10" />
+        </pageElement>
+        Mailing Address Section
+        <pageElement legend="Mailing Address" id="mailingAddress" type="fieldset">
+        <fieldElement type="hidden" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Addr[AddrTypeCd='MailingAddress'].@id" defaultValue="GUID()" copy="false" />
+        <fieldElement label="Address Line 1" uniqueId="ApplicantMailingAddress1" type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Addr[AddrTypeCd='MailingAddress'].Addr1" required="true" size="30" maxLength="64" />
+        <fieldElement label="Address Line 2" uniqueId="ApplicantMailingAddress2" type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Addr[AddrTypeCd='MailingAddress'].Addr2" size="30" maxLength="64" />
+        <fieldElement label="City" uniqueId="ApplicantMailingCity" type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Addr[AddrTypeCd='MailingAddress'].City" required="true" size="20" maxLength="32" />
+        <fieldElement label="State" uniqueId="ApplicantMailingState" type="selectlist" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Addr[AddrTypeCd='MailingAddress'].StateProvCd" required="true">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="state" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+        </fieldElement>
+        <fieldElement label="Zip Code" uniqueId="ApplicantMailingZip" type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Addr[AddrTypeCd='MailingAddress'].PostalCode" required="true" size="9" maxLength="10">
+        <formatMask type="USZipCodeShort" />
+        </fieldElement>
+        </pageElement>
+        <pageElement legend="Inspection Contact Information" id="inspectionContactInfo" type="fieldset">
+        <fieldElement type="message">Please note if your accounting and inspection names are the same, type &quot;same&quot; in the name field</fieldElement>
+        <fieldElement label="Name" uniqueId="InspectionName" type="text" id="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='InspectionContact'].GeneralPartyInfo.NameInfo.CommlName.CommercialName" size="30" maxLength="30" groupId="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='InspectionContact']" />
+        <fieldElement label="Phone" uniqueId="InspectionPhone" type="text" id="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='InspectionContact'].GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone' &amp;&amp; CommunicationUseCd='Business'].PhoneNumber" size="20" maxLength="20" groupId="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='InspectionContact']">
+        <formatMask type="phone" />
+        <validation type="phone">US</validation>
+        <correction type="phone" />
+        </fieldElement>
+        <fieldElement label="Business Email Address" uniqueId="InspectionEmail" type="text" id="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='InspectionContact'].GeneralPartyInfo.Communications.EmailInfo[CommunicationUseCd='Business'].EmailAddr" size="40" maxLength="128" groupId="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='InspectionContact']">
+        <validation type="email" id="inspectionEmailAddress" message="This field is not a recognized email format." />
+        </fieldElement>
+        </pageElement>
+        <pageElement legend="Accounting Contact Information" id="accountingContactInfo" type="fieldset">
+        <fieldElement label="Name" uniqueId="AccountingName" type="text" id="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='AC'].GeneralPartyInfo.NameInfo.CommlName.CommercialName" size="30" maxLength="30" groupId="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='AC']" />
+        <fieldElement label="Phone" uniqueId="AccountingPhone" type="text" id="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='AC'].GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone' &amp;&amp; CommunicationUseCd='Business'].PhoneNumber" size="20" maxLength="20" groupId="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='AC']">
+        <formatMask type="phone" />
+        <validation type="phone">US</validation>
+        <correction type="phone" />
+        </fieldElement>
+        <fieldElement label="Business Email Address" uniqueId="AccountingEmail" type="text" id="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='AC'].GeneralPartyInfo.Communications.EmailInfo[CommunicationUseCd='Business'].EmailAddr" size="40" maxLength="128" groupId="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='AC']">
+        <validation type="email" id="accountingEmailAddress" message="This field is not a recognized email format." />
+        </fieldElement>
+        </pageElement>
+        <pageElement legend="Nature Of Business" id="natureOfBusiness" type="fieldset">
+        <fieldElement label="Please describe the nature of the business in the space below." uniqueId="NatureofBusiness" type="textarea" id="InsuredOrPrincipal.InsuredOrPrincipalInfo[InsuredOrPrincipalRoleCd='Insured'].BusinessInfo.OperationsDesc" required="true" cols="60" rows="5" />
+        </pageElement>
+        <connectors type="process">
+        <connector title="Example Eligibility Connector" type="XARC" id="generalInfoEligibilityXarcConnector">
+        <executeWhen userAction="Continue" id="generalInfoEligibilityExecuteWhen" />
+        <xarcRules ruleLibraryId="commlCommonsEligibilityRules" id="riskAppetiteXARCRule1" ruleId="riskAppetite1" />
+        <xarcRules ruleLibraryId="commlCommonsEligibilityRules" id="riskAppetiteXARCRule2" ruleId="riskAppetite2" />
+        <xarcRules ruleLibraryId="commlCommonsEligibilityRules" id="riskAppetiteXARCRule3" ruleId="riskAppetite3" />
+        <xarcRules ruleLibraryId="commlCommonsEligibilityRules" id="riskAppetiteXARCRule4" ruleId="riskAppetite4" />
+        </connector>
+        </connectors>
+        </page> -->
+    <!-- General Information -->
+    <page title="General Information" id="generalInfo" type="dataEntry">
+        <pageElement legend="Agency Information" id="agencyInformation" type="fieldset">
+            <fieldElement label="Agency Name" type="text" id="Producer.GeneralPartyInfo.NameInfo.CommlName.CommercialName" size="40" maxLength="40" groupId="Producer.GeneralPartyInfo.NameInfo" />
+            <fieldElement label="Address Line 1" type="text" id="Producer.GeneralPartyInfo.Addr.Addr1" size="30" maxLength="40" />
+            <fieldElement label="Address Line 2" type="text" id="Producer.GeneralPartyInfo.Addr.Addr2" size="30" maxLength="40" />
+            <fieldElement label="City" type="text" id="Producer.GeneralPartyInfo.Addr.City" size="20" maxLength="30" />
+            <fieldElement label="State" type="selectlist" id="Producer.GeneralPartyInfo.Addr.StateProvCd">
+                <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+                <optionList reader="xmlreader" source="codeListRef.xml" target="state" />
+                <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+                <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+            </fieldElement>
+            <fieldElement label="Zip Code" type="text" id="Producer.GeneralPartyInfo.Addr.PostalCode" size="10" maxLength="10">
+                <formatMask type="USZipCodeShort" />
+            </fieldElement>
+            <fieldElement label="Producer Phone" type="text" id="Producer.GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone'].PhoneNumber" size="20" maxLength="20" groupId="Producer.GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone']">
+                <formatMask type="phone" />
+                <validation type="phone">US</validation>
+                <correction type="phone" />
+            </fieldElement>
+            <fieldElement label="Producer Fax" type="text" id="Producer.GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Fax'].PhoneNumber" size="20" maxLength="20" groupId="Producer.GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Fax']">
+                <formatMask type="phone" />
+                <validation type="phone">US</validation>
+                <correction type="phone" />
+            </fieldElement>
+            <fieldElement label="E-mail Address" type="text" id="Producer.GeneralPartyInfo.Communications.EmailInfo.EmailAddr" size="40" maxLength="128" groupId="Producer.GeneralPartyInfo.Communications.EmailInfo" />
+            <fieldElement label="Producer Code" type="text" id="Producer.ProducerInfo.ContractNumber" size="15" maxLength="15" groupId="Producer.ProducerInfo" />
+            <fieldElement label="Producer Sub Code" type="text" id="Producer.ProducerInfo.ProducerSubCode" size="8" maxLength="8" groupId="Producer.ProducerInfo" />
+            <fieldElement label="Agency Customer ID" type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].ItemIdInfo.AgencyId" size="25" maxLength="25" groupId="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].ItemIdInfo">
+                <fieldHelper type="balloon">Enter the Agency ID for the Insured.</fieldHelper>
+            </fieldElement>
+        </pageElement>
+        <pageElement type="tips">
+            <fieldElement type="message">Please Enter the First Named Insured Under Applicant Name. Enter Other Named Insureds Under Agent Comments.</fieldElement>
+        </pageElement>
+        <pageElement legend="Applicant Information" id="applicantInfo" type="fieldset">
+            <fieldElement type="hidden" id="TransactionRequestDt" defaultValue="SYSTEM_DATE()" />
+            <fieldElement type="hidden" id="RqUID" defaultValue="GUID()" />
+            <fieldElement type="hidden" id="CurCd" defaultValue="USD" />
+            <fieldElement type="hidden" id="CommlPolicy.@id" defaultValue="GUID()" />
+            <!-- Default value will have to be updated through preconditions -->
+            <fieldElement type="hidden" id="CommlPolicy.LOBCd" defaultValue="CPKGE" uniqueId="policyLOBCd" />
+            <fieldElement label="Applicant Name" type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo[0].CommlName.CommercialName" required="true" size="50" maxLength="50" />
+            <fieldElement label="Doing Business As" type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo[0].SupplementaryNameInfo[SupplementaryNameCd='DBA'].SupplementaryName" size="50" maxLength="50" groupId="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo.SupplementaryNameInfo[SupplementaryNameCd='DBA']" />
+            <fieldElement label="Tax Id Type" type="radio" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo[0].TaxIdentity.TaxIdTypeCd" uniqueId="taxIdType" groupId="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo[0].TaxIdentity">
+                <optionList reader="xmlreader" source="codeListRef.xml" target="taxIdType" />
+                <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+                <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+            </fieldElement>
+            <fieldElement label="Tax Id" type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo[0].TaxIdentity.TaxId" uniqueId="taxIdFEIN" size="18" maxLength="16" groupId="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo.TaxIdentity">
+                <formatMask type="fein" />
+            </fieldElement>
+            <fieldElement label="Tax Id" type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo[0].TaxIdentity.TaxId" uniqueId="taxIdSSN" size="18" maxLength="16" groupId="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo.TaxIdentity">
+                <formatMask type="ssn" />
+            </fieldElement>
+            <fieldElement label="Legal Entity" type="selectlist" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo[0].LegalEntityCd" uniqueId="LegalEntity">
+                <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+                <optionList reader="xmlreader" source="applInfoCodeListRef.xml" target="legalEntity" />
+                <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+                <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+            </fieldElement>
+            <fieldElement label="Date Business Started" type="date" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].InsuredOrPrincipalInfo.BusinessInfo.BusinessStartDt" required="true" maxLength="10" groupId="CommlPolicy.CommlPolicySupplement.CommlParentOrSubsidiaryInfo[MiscParty.MiscPartyInfo.MiscPartyRoleCd='ParentCompany'].BusinessStartDt" />
+            <fieldElement label="Business Phone" type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone' &amp;&amp; CommunicationUseCd='Business'].PhoneNumber" size="20" maxLength="20" groupId="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone' &amp;&amp; CommunicationUseCd='Business']">
+                <formatMask type="phone" />
+                <validation type="phone">US</validation>
+                <correction type="phone" />
+            </fieldElement>
+            <fieldElement label="Billing Method" type="selectlist" id="CommlPolicy.BillingMethodCd" defaultValue="CPB">
+                <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+                <optionList reader="xmlreader" source="applInfoCodeListRef.xml" target="billingPlan" />
+                <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+                <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+            </fieldElement>
+            <fieldElement label="Direct Bill Pay Plan" type="selectlist" id="CommlPolicy.PaymentOption.PaymentPlanCd" defaultValue="8P" groupId="CommlPolicy.PaymentOption">
+                <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+                <optionList reader="xmlreader" source="codeListRef.xml" target="paymentPlan" />
+                <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+                <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+            </fieldElement>
+            <!-- @expunge
+            <fieldElement label="Auditable?" type="selectlist" id="CommlPolicy.CommlPolicySupplement.AuditInd" defaultValue="0/NV" viewId="commonViews.xml:Display.Audit.Info">
+                <optionList reader="xmlreader" source="applInfoCodeListRef.xml" target="audit" />
+                <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+                <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+            </fieldElement>
+            -->
+            <fieldElement label="Gross Annual Revenues" type="text" id="CommlPolicy.CommlPolicySupplement.CommlParentOrSubsidiaryInfo[MiscParty.MiscPartyInfo.MiscPartyRoleCd='ParentCompany'].AnnualGrossReceiptsAmt.Amt" size="10" maxLength="10" groupId="CommlPolicy.CommlPolicySupplement.CommlParentOrSubsidiaryInfo[MiscParty.MiscPartyInfo.MiscPartyRoleCd='ParentCompany'].AnnualGrossReceiptsAmt">
+                <validation type="numeric" />
+            </fieldElement>
+            <fieldElement label="E-Mail Address" type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Communications.EmailInfo[CommunicationUseCd='Business'].EmailAddr" size="40" maxLength="128" groupId="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Communications.EmailInfo[CommunicationUseCd='Business']" />
+            <fieldElement label="Website Address" type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Communications.WebsiteInfo[CommunicationUseCd='Business'].WebsiteURL" size="34" maxLength="32" />
+        </pageElement>
+        <pageElement legend="Policy Term" id="policyTerm" type="fieldset">
+            <fieldElement label="Endorsement Effective Date" type="date" id="TransactionEffectiveDt" required="true" maxLength="10" uniqueId="transactionEffectiveDate" />
+            <fieldElement label="Effective Date" type="date" id="CommlPolicy.ContractTerm.EffectiveDt" uniqueId="EffectiveDate" required="true" />
+            <fieldElement label="Expiration Date" type="date" id="CommlPolicy.ContractTerm.ExpirationDt" uniqueId="ExpirationDate" required="true">
+                <validation type="dateCompare" message="Expiration date cannot preceed effective date">after(CommlPolicy.ContractTerm.EffectiveDt)</validation>
+            </fieldElement>
+        </pageElement>
+        <pageElement legend="Mailing Address" type="fieldset">
+            <fieldElement type="hidden" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Addr[AddrTypeCd='MailingAddress'].@id" defaultValue="GUID()" />
+            <fieldElement label="Address Line 1" type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Addr[AddrTypeCd='MailingAddress'].Addr1" required="true" size="30" maxLength="64" />
+            <fieldElement label="Address Line 2" type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Addr[AddrTypeCd='MailingAddress'].Addr2" size="30" maxLength="64" />
+            <fieldElement label="City" type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Addr[AddrTypeCd='MailingAddress'].City" required="true" size="20" maxLength="32" />
+            <fieldElement label="State" type="selectlist" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Addr[AddrTypeCd='MailingAddress'].StateProvCd" required="true">
+                <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+                <optionList reader="xmlreader" source="codeListRef.xml" target="state" />
+                <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+                <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+            </fieldElement>
+            <fieldElement label="Zip Code" type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Addr[AddrTypeCd='MailingAddress'].PostalCode" required="true" size="9" maxLength="10">
+                <formatMask type="USZipCodeShort" />
+            </fieldElement>
+        </pageElement>
+        <pageElement legend="Inspection Contact Information" id="inspectionContactInfo" type="fieldset">
+            <fieldElement type="message">Please note if your accounting and inspection names are the same, type &quot;same&quot; in the name field</fieldElement>
+            <fieldElement label="Name" type="text" id="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='InspectionContact'].GeneralPartyInfo.NameInfo.CommlName.CommercialName" size="30" maxLength="30" groupId="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='InspectionContact']" />
+            <fieldElement label="Phone" type="text" id="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='InspectionContact'].GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone' &amp;&amp; CommunicationUseCd='Business'].PhoneNumber" size="20" maxLength="20" groupId="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='InspectionContact']">
+                <formatMask type="phone" />
+                <validation type="phone">US</validation>
+                <correction type="phone" />
+            </fieldElement>
+            <fieldElement label="Business Email Address" type="text" id="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='InspectionContact'].GeneralPartyInfo.Communications.EmailInfo[CommunicationUseCd='Business'].EmailAddr" size="40" maxLength="128" groupId="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='InspectionContact']" />
+        </pageElement>
+        <pageElement legend="Accounting Contact Information" id="accountingContactInfo" type="fieldset">
+            <fieldElement label="Name" type="text" id="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='AC'].GeneralPartyInfo.NameInfo.CommlName.CommercialName" size="30" maxLength="30" groupId="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='AC']" />
+            <fieldElement label="Phone" type="text" id="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='AC'].GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone' &amp;&amp; CommunicationUseCd='Business'].PhoneNumber" size="20" maxLength="20" groupId="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='AC']">
+                <formatMask type="phone" />
+                <validation type="phone">US</validation>
+                <correction type="phone" />
+            </fieldElement>
+            <fieldElement label="Business Email Address" type="text" id="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='AC'].GeneralPartyInfo.Communications.EmailInfo[CommunicationUseCd='Business'].EmailAddr" size="40" maxLength="128" groupId="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='AC']" />
+        </pageElement>
+        <pageElement type="tips">
+            <fieldElement type="message">In multi-state risks this will ordinarily be the state containing the headquarters of the business. The state chosen will govern the statutory requirements of the policy.</fieldElement>
+         </pageElement>  
+        <pageElement legend="Controlling State" id="policyControlState" type="fieldset">         
+            <fieldElement label="Controlling State" type="selectlist" id="CommlPolicy.ControllingStateProvCd" required="true" uniqueId="controlState">
+                <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+                <optionList reader="xmlreader" source="codeListRef.xml" target="state" />
+                <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+                <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+            </fieldElement>
+        </pageElement>
+        <pageElement legend="Nature Of Business" type="fieldset">
+            <fieldElement label="Please describe the nature of the business in the space below." type="textarea" id="InsuredOrPrincipal.InsuredOrPrincipalInfo[InsuredOrPrincipalRoleCd='Insured'].BusinessInfo.OperationsDesc" required="true" cols="60" rows="5" maxLength="300" />
+        </pageElement>
+        <pageElement type="script" contentType="text/javascript" src="javascript/comml_expiration_date.js" />
+        <pageElement id="script" type="script" contentType="text/javascript" src="javascript/copy_contact_information.js" />
+    </page>
+    <!-- Location -->
+    <page title="Locations" id="location" source="Location" type="roster">
+        <pageElement type="tips">
+            <fieldElement type="message">Enter all locations for any line(s) of business to be attached to this policy.</fieldElement>
+        </pageElement>
+        <pageElement legend="Location Information" id="location" type="roster" minEntries="1">
+        	<fieldElement label="Location #" type="column" id="Location.ItemIdInfo.AgencyId"  />
+            <fieldElement label="Location Address" type="column" id="Location" maxLength="75" viewId="commonViews.xml:Display.Roster.Location" />
+            <action type="edit" />
+            <action type="delete" />
+        </pageElement>
+        <pageElement legend="Location Information" id="locationInformation" type="fieldset">
+            <fieldElement label="Hidden Field" type="hidden" id="Location.@id" required="true" defaultValue="GUID()" copy="false" />
+            <fieldElement type="hidden" id="Location.SubLocation.@id" label="Hidden Field" required="true" defaultValue="GUID()" copy="false" />
+            <fieldElement label="Location #" type="text" id="Location.ItemIdInfo.AgencyId" required="true" size="5" maxLength="10" uniqueId="LocationNumber" />
+            <fieldElement label="Address Line 1" type="text" id="Location.Addr.Addr1" required="true" size="30" maxLength="75" firstTimeDefaultValue="InsuredOrPrincipal.GeneralPartyInfo.Addr.Addr1" uniqueId="addr1" />
+            <fieldElement label="Address Line 2" type="text" id="Location.Addr.Addr2" size="30" maxLength="75" firstTimeDefaultValue="InsuredOrPrincipal.GeneralPartyInfo.Addr.Addr2" uniqueId="addr2" />
+            <fieldElement label="City" type="text" id="Location.Addr.City" required="true" size="20" maxLength="50" firstTimeDefaultValue="InsuredOrPrincipal.GeneralPartyInfo.Addr.City" uniqueId="city" />
+            <fieldElement label="State" type="selectlist" id="Location.Addr.StateProvCd" required="true" firstTimeDefaultValue="InsuredOrPrincipal.GeneralPartyInfo.Addr.StateProvCd" uniqueId="Location.StateProvCd">
+                <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+                <optionList reader="xmlreader" source="codeListRef.xml" target="state" />
+                <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+                <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+            </fieldElement>
+            <fieldElement label="Zip Code" type="text" id="Location.Addr.PostalCode" required="true" size="9" maxLength="10" firstTimeDefaultValue="InsuredOrPrincipal.GeneralPartyInfo.Addr.PostalCode" uniqueId="postalCode">
+                <formatMask type="USZipCodeShort" />
+            </fieldElement>
+            <fieldElement label="City Limits" type="selectlist" id="Location.RiskLocationCd" uniqueId="CityLimits">
+                <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+                <optionList reader="xmlreader" source="applInfoCodeListRef.xml" target="risklocation" />
+                <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+                <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+            </fieldElement>
+            <!-- @expunge
+            <fieldElement label="Tax Code" type="text" id="Location.TaxCodeInfo.TaxCd" size="5" maxLength="5" uniqueId="taxCode" />
+            <fieldElement label="Fire District Name/Code" type="text" id="Location.FireDistrict" size="25" maxLength="25" uniqueId="fireDistrict" />
+            <fieldElement label="General Liability Territory Code" type="text" id="Location.Territory[TerritoryAppliesToCd='CGL'].TerritoryCd" size="10" maxLength="10" uniqueId="glTerritoryCd" />
+            <fieldElement label="Property Territory Code" type="text" id="Location.Territory[TerritoryAppliesToCd='PROPC'].TerritoryCd" size="10" maxLength="10" uniqueId="propertTeritoryCd" />
+            <fieldElement label="Commercial Auto Territory Code" type="text" id="Location.Territory[TerritoryAppliesToCd='AUTOB'].TerritoryCd" size="10" maxLength="10" uniqueId="autoTeritoryCd" />
+-->
+        </pageElement>
+    </page>
+    <page title="Loss History" id="lossHistory" type="roster" source="CommlPolicy.Loss" forceViewOnUpload="true">
+        <pageElement type="tips">
+            <fieldElement type="message">Please do your best to tell us about any loss history for this risk. All loss information will be verified before the policy is issued. If you wish to submit remarks associated with any losses you've itemized, please add a comment.</fieldElement>
+        </pageElement>
+        <pageElement legend="Loss History Information" id="lossHistory" type="roster" maxEntries="5">
+            <fieldElement label="Loss Date" type="column" id="CommlPolicy.Loss.LossDt" maxLength="25" />
+            <fieldElement label="Amount Paid" type="column" id="CommlPolicy.Loss.TotalPaidAmt.Amt" maxLength="25" >
+            	<formatMask type="USDollars" />
+            </fieldElement>
+            <action type="edit" />
+            <action type="delete" />
+        </pageElement>
+        <pageElement legend="Loss Information" type="fieldset" id="lossInfo">
+        	<fieldElement label="ID Attribute" type="hidden" id="CommlPolicy.Loss.@id" defaultValue="GUID()"/>
+            <fieldElement label="Occurrence Date" uniqueId="LossOccurrenceDate" type="date" id="CommlPolicy.Loss.LossDt" required="true" maxLength="10" />
+            <fieldElement label="Claim Date" uniqueId="LossClaimDate" type="date" id="CommlPolicy.Loss.ReportedDt" required="true" maxLength="10" />
+            <fieldElement label="Amount Paid" uniqueId="AmountPaid" type="text" id="CommlPolicy.Loss.TotalPaidAmt.Amt" required="true" size="15" maxLength="15">
+            	<validation type="numeric" />
+                <formatMask type="USDollars" />
+            </fieldElement>
+            <fieldElement label="Amount Reserved" uniqueId="AmountReserved" type="text" id="CommlPolicy.Loss.ProbableIncurredAmt.Amt" required="true" size="15" maxLength="15">
+            	<validation type="numeric" />
+                <formatMask type="USDollars" />
+            </fieldElement>
+            <fieldElement label="Claim Status Indicator" uniqueId="ClaimStatusInd" type="selectlist" id="CommlPolicy.Loss.ClaimSettledInd" required="true">
+                <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+                <optionList reader="xmlreader" source="codeListRef.xml" target="claimStatus" />
+                <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+                <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+            </fieldElement>
+            <fieldElement label="Description" uniqueId="LossDescription" type="text" id="CommlPolicy.Loss.LossDesc" maxLength="255" size="50" groupId="CommlPolicy.Loss.LossDesc"/>
+        </pageElement>
+        <connectors type="process">
+            <connector type="custom" className="com.agencyport.shared.commercial.connectors.AccountValidationManager" id="AccountValidationManager">
+                <executeWhen userAction="Continue" />
+            </connector>
+        </connectors>
+    </page>
+    <!-- Prior Carriers -->
+    <page title="Prior Carriers" id="PriorCarrier" source="CommlPolicy.OtherOrPriorPolicy" type="roster">
+        <pageElement type="tips">
+            <fieldElement type="message">Please enter your prior carrier information on this screen. If you don't have prior carrier coverage click "Continue" to proceed.</fieldElement>
+        </pageElement>
+        <pageElement legend="Prior Carrier Information" id="PriorCarrier" type="roster" dataFilter="CommlPolicy.OtherOrPriorPolicy.PolicyCd='Prior'">
+            <fieldElement label="Carrier Name" type="column" id="CommlPolicy.OtherOrPriorPolicy.InsurerName" maxLength="25" />
+            <fieldElement label="Policy Number" type="column" id="CommlPolicy.OtherOrPriorPolicy.PolicyNumber" maxLength="25" />
+            <fieldElement label="Expiration Date" type="column" id="CommlPolicy.OtherOrPriorPolicy.ContractTerm.ExpirationDt" maxLength="25" />
+            <action type="edit" />
+            <action type="delete" />
+        </pageElement>
+        <!-- Carrier name and other carrier name have the same IDs. The way it should work is if a user selects "other" for carrier name, then a user must enter "other carrier name". Otherwise, "other carrier name" is not applicable. -->
+        <pageElement legend="Prior Carrier" type="fieldset" id="priorCarrierInfo">
+        	<fieldElement label="ID Attribute" type="hidden" id="CommlPolicy.OtherOrPriorPolicy.@id" defaultValue="GUID()"/>
+            <fieldElement type="hidden" id="CommlPolicy.OtherOrPriorPolicy.PolicyCd" defaultValue="Prior" />
+            <fieldElement type="hidden" uniqueId="OtherOrPriorPolicyLOBCd" id="CommlPolicy.OtherOrPriorPolicy.LOBCd" defaultValue="CommlPolicy.LOBCd"/>
+            <fieldElement label="Line of Business" type="selectlist" uniqueId="priorCarrierLobCd" id="CommlPolicy.OtherOrPriorPolicy.LOBCd">
+                <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+                <optionList reader="dynamic" source="dynamicListTemplates.xml" target="priorPolicyLineOfBusinessCodes" />
+                <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+            </fieldElement>
+            <fieldElement label="Prior Carrier Name" uniqueId="PriorCarrierName" type="text" id="CommlPolicy.OtherOrPriorPolicy.InsurerName" required="true" size="15" maxLength="40" />
+            <fieldElement label="Policy Number" uniqueId="PriorCarrierPolicyNumber" type="text" id="CommlPolicy.OtherOrPriorPolicy.PolicyNumber" size="15" maxLength="15" />
+            <fieldElement label="Total Premium" uniqueId="PriorCarrierTotalPremium" type="text" id="CommlPolicy.OtherOrPriorPolicy.PolicyAmt.Amt" size="9" maxLength="9">
+                <validation type="numeric" />
+            </fieldElement>
+            <fieldElement label="Effective Date" type="date" id="CommlPolicy.OtherOrPriorPolicy.ContractTerm.EffectiveDt"  maxLength="10" uniqueId="PriorCarrierEffectiveDate" />
+            <fieldElement label="Expiration Date" type="date" id="CommlPolicy.OtherOrPriorPolicy.ContractTerm.ExpirationDt"  maxLength="10" uniqueId="PriorCarrierExpirationDate" />
+            <fieldElement label="Modification Factor" uniqueId="PriorCarrierModificationFactor" type="text" id="CommlPolicy.OtherOrPriorPolicy.RatingFactor" size="12" maxLength="12">
+                <validation type="numeric" />
+            </fieldElement>
+            <!-- AUTOB Specific -->
+            <fieldElement label="Combined Single Limit" uniqueId="PriorCarrierCSL" type="text" id="CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='CSL'].Limit.FormatInteger" size="15" maxLength="15" groupId="CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='CSL']">
+                <validation type="numeric" />
+            </fieldElement>
+            <fieldElement label="Bodily Injury Per Person" uniqueId="PriorCarrierBIPP" type="text" id="CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='BISPL'].Limit[LimitAppliesToCd='PerPerson'].FormatInteger" size="15" maxLength="15" groupId="CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='BISPL'].Limit[LimitAppliesToCd='PerPerson']">
+                <validation type="numeric" />
+            </fieldElement>
+            <fieldElement label="Bodily Injury Per Accident" uniqueId="PriorCarrierBIPA" type="text" id="CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='BISPL'].Limit[LimitAppliesToCd='PerAcc'].FormatInteger" size="15" maxLength="15" groupId="CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='BISPL'].Limit[LimitAppliesToCd='PerAcc']">
+                <validation type="numeric" />
+            </fieldElement>
+            <fieldElement label="Property Damage" uniqueId="PriorCarrierPD" type="text" id="CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='PD'].Limit.FormatInteger" size="15" maxLength="15" groupId="CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='PD']">
+                <validation type="numeric" />
+            </fieldElement>
+            <!-- UMBRC Specific -->
+            <fieldElement label="Each Occurrence Limit" uniqueId="PriorCarrierCommercialUmberellaEachOccurrence" type="text" id="CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='EAOCC'].Limit.FormatInteger" size="15" maxLength="15" groupId="CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='EAOCC'].Limit">
+                <formatMask type="USDollars" />
+            </fieldElement>
+            <fieldElement label="Aggregate Limit" uniqueId="PriorCarrierCommercialUmberellaAggregateLimit" type="text" id="CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='GENAG'].Limit.FormatInteger" size="15" maxLength="15">
+                <formatMask type="USDollars" />
+            </fieldElement>
+            <!-- PROPC & CRIME & GARAG Specific -->
+            <fieldElement label="Limit" uniqueId="PriorCarrierLimit" type="text" id="CommlPolicy.OtherOrPriorPolicy.Coverage.Limit.FormatInteger" size="15" maxLength="15" groupId="CommlPolicy.OtherOrPriorPolicy.Coverage.Limit.FormatInteger">
+                <validation type="numeric" />
+                <formatMask type="USDollars" />
+            </fieldElement>
+        </pageElement>
+        <!-- General Liability Specific Section
+            <pageElement legend="General Liability Policy Info" id="PriorCarrierGeneralLiabilityPolicyInfoSection" type="fieldset">
+            <fieldElement label="Aggregate Limit" type="text" maxLength="15" uniqueId="PriorCarrierGeneralLiabilityAggregateLimit" id="CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='GENAG'].Limit.FormatInteger" size="10" groupId="CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='GENAG']">
+            <formatMask type="customNumeric">###,###</formatMask>
+            </fieldElement>
+            <fieldElement label="Products Completed Operations Aggregate" type="text" maxLength="15" uniqueId="PriorCarrierGeneralLiabilityProductCompOpAggregate" id="CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='PRDCO'].Limit.FormatInteger" size="10" groupId="CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='PRDCO']">
+            <formatMask type="customNumeric">###,###</formatMask>
+            </fieldElement>
+            <fieldElement label="Personal and Advertising Injury" type="text" maxLength="15" uniqueId="PriorCarrierGeneralLiabilityPersonalAdvInj" id="CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='PIADV'].Limit.FormatInteger" size="10" groupId="CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='PIADV']">
+            <formatMask type="customNumeric">###,###</formatMask>
+            </fieldElement>
+            <fieldElement label="Each Occurrence" type="text" maxLength="15" uniqueId="PriorCarrierGeneralLiabilityEachOccurrence " id="CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='EAOCC'].Limit.FormatInteger" size="10" groupId="CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='EAOCC']">
+            <formatMask type="customNumeric">###,###</formatMask>
+            </fieldElement>
+            <fieldElement label="Fire Damage" type="text" maxLength="15" uniqueId="PriorCarrierGeneralLiabilityFireDamage" id="CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='FIRDM'].Limit.FormatInteger" size="10" groupId="CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='FIRDM']">
+            <formatMask type="customNumeric">###,###</formatMask>
+            </fieldElement>
+            <fieldElement label="Medical Expense" type="text" maxLength="15" uniqueId="PriorCarrierGeneralLiabilityMedicalExpense" id="CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='MEDEX'].Limit.FormatInteger" size="10" groupId="CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='MEDEX']">
+            <formatMask type="customNumeric">###,###</formatMask>
+            </fieldElement>
+            </pageElement> -->
+    </page>
+    <!-- File Attachment -->
+    <page title="File Attachments" id="fileAttachment" source="FileAttachmentInfo" type="roster" subtype="file">
+        <pageElement type="tips">
+            <fieldElement type="message">If you would like to add a file attachment to this submission please enter it below. Please note that file size is limited to 2MB.</fieldElement>
+            <fieldElement type="message">If you do not have any files to attach, please click the "Continue" button below.</fieldElement>
+        </pageElement>
+        <pageElement legend="File Attachments" id="fileAttachment" type="roster" maxEntries="10">
+            <fieldElement label="File Name" type="column" id="FileAttachmentInfo.AttachmentFilename" maxLength="20" />
+            <fieldElement label="Document Type" type="column" id="FileAttachmentInfo.AttachmentTypeCd" maxLength="50" />
+            <action type="delete" />
+        </pageElement>
+        <pageElement legend="Attachment" type="fieldset" id="attachment">
+            <fieldElement label="File Name" type="file" id="FileAttachmentInfo.AttachmentFilename" required="true" />
+            <fieldElement label="Document Type" type="selectlist" id="FileAttachmentInfo.AttachmentTypeCd" uniqueId="attachmentType" required="true">
+                <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+                <!-- alter codelists with behaviors for LOB -->
+                <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+                <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+            </fieldElement>
+        </pageElement>
+    </page>
+</collection>

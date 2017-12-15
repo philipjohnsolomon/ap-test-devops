@@ -1,0 +1,31 @@
+<fields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/pdf/pdfDefinitions.xsd">
+	<field>
+		<eLabel>Producer_CustomerIdentifier_A</eLabel>
+		<xpath>InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].ItemIdInfo.AgencyId</xpath>
+	</field>
+	<field>
+		<eLabel>Form_CompletionDate_A</eLabel>
+		<xpath>TransactionRequestDt</xpath>
+		<format type="date" pattern="MM/dd/yyyy"/>
+	</field>
+	<field>
+		<eLabel>Producer_FullName_A</eLabel>
+		<xpath>Producer.GeneralPartyInfo.NameInfo.CommlName.CommercialName</xpath>
+	</field>
+	<field>
+		<eLabel>Policy_PolicyNumberIdentifier_A</eLabel>
+		<xpath>CommlPolicy.PolicyNumber</xpath>
+	</field>
+	<field>
+		<eLabel>Insurer_FullName_A</eLabel>
+		<xpath>CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='CarrierInsurer'].GeneralPartyInfo.NameInfo.CommlName.CommercialName</xpath>
+	</field>
+	<field>
+		<eLabel>Insurer_NAICCode_A</eLabel>
+		<xpath>CommlPolicy.NAICCd</xpath>
+	</field>
+	<field>
+		<eLabel>NamedInsured_FullName_A</eLabel>
+		<xpath>InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo.CommlName.CommercialName</xpath>
+	</field>
+</fields>

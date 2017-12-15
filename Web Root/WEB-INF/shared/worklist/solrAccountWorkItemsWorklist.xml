@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by Norm Baker (AgencyPort) -->
+<workListViewDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" viewName="AccountItemsView" index="worklist" workItemType="regular" isSaveable="false" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/worklist/workListViewDefinition.xsd">
+	<filters id="filters1"> 
+		<filter id="filter1" name="lob" fieldRefId="lob" type="LOB">
+			<!-- Will inherit the title from its related field -->
+		</filter>
+		<filter id="filter2" name="status" fieldRefId="status" type="STATUS">
+			<content localeId="1" title="Status"/>
+		</filter>
+		<filter id="filter3" name="transaction_type" fieldRefId="transaction_type" type="TRANSACTION_TYPE">
+			<content localeId="1" title="Transaction"/>
+		</filter>
+		<!-- 
+		<filter id="filter4" name="custom_filter" fieldRefId="premium" type="CUSTOM">
+			<content localeId="1" title="Custom Filter"/>
+		</filter>
+		 -->
+	</filters>
+	<sortInfos>
+		<sortInfo id="sort1" name="workitem_sort_by" >
+			<defaultSortClause fieldRefId="last_update_time" acsending="false"/>
+			<fieldRef fieldRefId="work_item_id"/>
+			<fieldRef fieldRefId="entity_name"/>
+			<fieldRef fieldRefId="last_update_time"/>
+			<fieldRef fieldRefId="effective_date"/>
+			<fieldRef fieldRefId="premium"/>
+			<fieldRef fieldRefId="complete_percent"/>
+			<content localeId="1" title="Sort By"/>
+		</sortInfo>
+	</sortInfos> 
+	<queryInfos>
+		<queryInfo id="query1" name="workitem_query_info" transactionId="worklist" pageId="worklistAdvancedSearch">
+			<queryField fieldRefId="work_item_id" pageFieldRefId="workItemId" />
+			<queryField fieldRefId="effective_date" pageFieldRefId="effectiveDate" />
+			<!-- The following query field accommodates the search for a work item by name -->
+			<queryField fieldRefId="entity_name" >
+				<opCode>CONTAINS</opCode>
+				<operands>
+					<operand>*</operand>
+				</operands>
+			</queryField>
+			<queryField interactive="false" fieldRefId="status" >
+				<opCode>NOT_EQUAL</opCode>
+				<operands>
+					<operand>DELETE</operand>
+				</operands>
+			</queryField>
+			<queryField interactive="false" fieldRefId="commit_flag" >
+				<opCode>EQUALS</opCode>
+				<operands>
+					<operand>1</operand>
+				</operands>
+			</queryField>
+ 			<queryField interactive="false" fieldRefId="account_id" />
+			<content localeId="1" title="More Options" />
+		</queryInfo>
+	</queryInfos>
+	<views>
+		<view>
+			<filterRefs>
+				<filterRef filterRefId="filter1"/>
+				<filterRef filterRefId="filter2"/>
+				<filterRef filterRefId="filter3"/>
+				<!-- 
+				<filterRef filterRefId="filter4"/>
+				 -->
+			</filterRefs>
+			<sortInfoRef sortInfoRefId="sort1"/>
+			<queryInfoRef queryInfoRefId="query1"/>
+			<listView type="CARD"  selected="true" fetchSize="20" viewPortSize="10">
+				<fieldRef fieldRefId="work_item_id"/>
+				<fieldRef fieldRefId="account_id"/>
+				<fieldRef fieldRefId="lob"/>
+				<fieldRef fieldRefId="entity_name"/>
+				<fieldRef fieldRefId="effective_date"/>
+				<fieldRef fieldRefId="premium"/>
+				<fieldRef fieldRefId="transaction_type"/>
+				<fieldRef fieldRefId="status"/>
+				<fieldRef fieldRefId="complete_percent"/>
+			</listView>
+			<listView type="TABULAR" >
+				<fieldRef fieldRefId="work_item_id"/>
+				<fieldRef fieldRefId="account_id"/>
+				<fieldRef fieldRefId="lob"/>
+				<fieldRef fieldRefId="entity_name"/>
+				<fieldRef fieldRefId="status"/>
+				<fieldRef fieldRefId="last_update_time"/>
+				<fieldRef fieldRefId="effective_date"/>
+				<fieldRef fieldRefId="premium"/>
+				<fieldRef fieldRefId="transaction_type"/>
+				<fieldRef fieldRefId="complete_percent"/>
+			</listView>
+		</view>
+	</views>
+</workListViewDefinition>

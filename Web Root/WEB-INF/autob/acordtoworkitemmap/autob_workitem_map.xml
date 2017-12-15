@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- id is the transaction.@mappingId -->
+<acordtoworkitemmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/acordtoworkitemmap/acordtoworkitemmap.xsd"
+	id="autob">
+	<mapEntry>
+		<xpath valueType="string">InsuredOrPrincipal.GeneralPartyInfo.NameInfo.CommlName.CommercialName</xpath>
+		<workitemproperty>ENTITY_NAME</workitemproperty>
+	</mapEntry>
+	<mapEntry>
+		<xpath valueType="date">CommlPolicy.ContractTerm.EffectiveDt</xpath>
+		<workitemproperty>EFFECTIVE_DATE</workitemproperty>
+	</mapEntry>
+	<mapEntry>
+		<xpath valueType="date">CommlPolicy.ContractTerm.ExpirationDt</xpath>
+		<workitemproperty>EXPIRATION_DATE</workitemproperty>
+	</mapEntry>
+	<mapEntry>
+		<xpath valueType="string">CommlPolicy.LOBCd</xpath>
+		<workitemproperty>LOB</workitemproperty>
+	</mapEntry>
+</acordtoworkitemmap>

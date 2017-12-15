@@ -1,0 +1,404 @@
+/* Search & Filtering */
+
+.search-filter {
+	padding: 0;
+	background: transparent;
+	position: relative; 
+	z-index: 1;
+	
+	.container {
+		background: #fff;
+		padding-top: 15px;
+		border: 1px solid @gray-light-medium;
+	}
+	
+	.active-filters-display {
+		margin: 0;
+		position: relative;
+		z-index: 1;
+		border-bottom: 1px solid @gray-light;
+		padding-bottom: .5em;
+		margin-bottom: 1em;
+		
+		.filter-button {
+			display: inline-block;
+			padding: 0;
+			padding-right: 20px;
+			margin: 5px 0;
+			vertical-align: baseline;
+			white-space: nowrap;
+			
+			&.reset a {
+				cursor:pointer;
+			}
+		
+			button.close {
+				position: relative;
+				right: -5px;
+				top: -2px;
+				.fa {
+					&:before{content: @icon-ui-close-solid;}
+				}	
+			}
+			&.showing-all {
+				padding: 0;
+				display: none;
+			}
+		}	
+	}
+
+		
+	.filter-display  {
+		.nav-tabs {
+			background: @theme-active-background; 
+			border-bottom: 0 !important;			
+			> li {
+				margin-bottom: 0;
+			}
+			> li > a	{
+				margin-right: 0; background: none; margin-bottom: 0;
+			}
+			> li.active > a {
+				background: transparent;
+				font-weight: 700;
+			}
+		}
+		.tab-content {
+			background: #fff; 
+			box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25); 
+			padding: 15px; 
+			overflow: auto;
+		
+			ul {
+				margin: 0; 
+				padding: 0;
+			}
+			ul li {
+				list-style: none; 
+				float: left; 
+				margin-right: 50px; 
+				line-height: 2;
+			}
+			ul li a {
+				color: @gray-light;
+			}
+			ul li a:hover	{
+				color: @gray; 
+				text-decoration: underline;
+			}
+		}
+	}	
+	
+	.row.input-group.search,
+	.row.filter-row,
+	.row.search-bar	{
+		margin-bottom: 10px;
+	}
+	
+	.row.search-bar	{
+		text-align: center;
+		
+		.search-field	{
+			margin: 0 auto;
+			width: 33.3333%;
+			
+			.input-group.search,
+			.twitter-typeahead {
+				width: 100%;
+			}
+			input.form-control.tt-input {
+				margin: 0 auto;
+			}
+			.dropdown {
+				display: inline-block;
+				vertical-align: top;
+			}
+			form.advanced	{
+				text-align: left;
+				width: 300px;
+				margin: 10px;
+			}
+			
+			/* Find an Account input */
+			
+			.twitter-typeahead .account-search-input.tt-input {
+				background: #fff !important;
+								
+				&::-moz-placeholder {
+					color: @gray-light;
+				}
+			}
+		}
+	}
+	
+	.row.filter-row	{
+	
+		/* Advanced Search dropdowns (date ranges) */
+		
+		.advanced-search-div {
+			.dropdown-menu	{
+				width: 300px;
+				
+				form.advanced, 
+				div.advanced {
+					padding: 10px;
+					.form-group	{
+						margin: 0;
+					}
+				}
+				
+				.has-addon .input-group {
+					&.date {
+						position: static;
+						.fa {
+							&:before {content: @icon-ui-calendar;}
+						}
+					}
+					> .form-control {
+						width: 100%;
+					}
+				}
+				
+				.work-item-id {
+					margin-bottom: 5px;
+					label {
+						margin-top: 5px;
+					}
+					.form-group {
+						width: 100%;
+						.form-control {
+							float: right;
+							width: 68%;
+						}
+					}
+				}
+
+				.form-group.effective-date-form {
+					padding-bottom: 5px;
+					overflow: auto;
+					margin-bottom: 5px;
+
+					.effective-date {
+						overflow: auto;
+						margin-bottom: 0;
+						label {
+							display: block;
+						}
+						.date-operator {
+							width: 50%;
+							float: left;
+							.form-control {
+								width: 100%;
+							}
+						}
+						.start-date, 
+						.between-dates, 
+						.end-date {
+							width: 48%;
+							float: right;
+						}
+						.end-date, 
+						.between-dates {
+							margin-top: 10px;
+							position: static;
+						}
+						
+						.form-control {
+							padding: 6px;
+						}
+					}
+					
+					.btn {
+						margin-top: 5px;
+						float: right;
+					}
+				}				
+				
+				.form-group.save-filter-as {
+					border-top: 1px solid @gray-lighter;
+					padding-top: 5px;
+					.form-control {
+						width: 218px;
+					}			
+					.btn {
+						margin-top: 5px;
+						float: none;
+					}
+				}
+			}
+		}
+		
+		.button-row {
+			overflow: auto;
+			
+			.btn {
+				margin-bottom: 10px;
+				&.button-right {
+					float: right;
+				}
+			}
+			
+		}
+		
+		.btn {
+			margin-bottom: 3px;
+		}
+
+
+		/* filter counter DIV*/
+
+		div.filter-counter {
+			display: inline-block;
+			padding: 6px 12px 0;
+			white-space: nowrap;
+			font-weight: 700;
+		}	
+
+		div.filter-counter:after {
+			content: ".";
+			visibility: hidden;  
+		}	
+		
+
+		/* filter counter */
+
+		.btn.btn-default.filter-counter {
+			font-weight: 700;
+		}	
+
+		.btn.btn-default.filter-counter:after {
+			content: ".";
+			visibility: hidden;  
+		}	
+		
+		.btn.btn-default.filter-counter:hover {
+			background-color: #fff;
+			border-color: @gray-light;
+			color: @gray-dark;
+			cursor: default;
+		}		
+		
+		
+		// Danger and error appear as red
+		.btn-filter {
+		  .button-variant(@btn-filter-color; @btn-filter-bg; @btn-filter-border);
+		}
+	}
+	
+	.row.input-group.search	{
+		text-align: center; 
+		margin: 0 auto;
+	}
+	
+	.search-filter .filter-button.showing-all {
+		padding-right: 8px;
+	}
+		
+	.filter select {
+		width: 140px;
+	}
+	
+	.filter input[type="text"] {
+		width: 20%;
+	}
+	
+	.filter-controls {
+		z-index: 5;
+	
+		select.form-control	{
+			display: inline; width: auto;
+		}
+
+
+		/* 
+			Status filter 
+			Double-purposing as a work items colors legend 
+		*/
+		.dropdown-menu > li:hover, 
+		.dropdown-menu > li:focus {
+			background: @theme-active-background; 
+			a {
+				color: @theme-active-color; 
+				background: transparent;
+			}
+		}
+		
+		.dropdown-menu.filter-status {
+			> li > {
+				position: relative; 
+				padding: 3px 20px;
+				a {
+					display: inline; 
+					padding-left: 15px;
+					.swatch {
+						position: absolute;
+						left: 10px;
+						top: 5px;
+						width: 15px;
+						height: 15px;
+						margin-right: 5px;
+						background-color: @gray-light;
+						border-radius: @border-radius-small;
+					}
+				}
+			}
+			> li.status-APPROVE .swatch 			{background-color: @workitem-approved;}
+			> li.status-BIND .swatch 				{background-color: @workitem-bound;}
+			> li.status-CLIENTDECLINED .swatch 		{background-color: @workitem-client-declined;}
+			> li.status-DECLINE .swatch 			{background-color: @workitem-declined;}
+			> li.status-INPROGRESS .swatch 			{background-color: @workitem-in-progress;}
+			> li.status-REFER .swatch 				{background-color: @workitem-referred;}
+			> li.status-REJECT .swatch 				{background-color: @workitem-rejected;}
+
+			> li.status-ACTIVE .swatch 				{background-color: @workitem-active;}
+			> li.status-INACTIVE .swatch 			{background-color: @workitem-inactive;}
+			> li.status-DELETE .swatch 				{background-color: @workitem-deleted;}
+			> li.status-OFFLINE .swatch 			{background-color: @workitem-offline;}
+			> li.status-TRANSFERTOADMIN .swatch 	{background-color: @workitem-transferred;}
+		}
+
+
+		/* 
+			"Current selected LOB filter" 
+			Attempt at deposing the work item Active Filter Display gray buttons
+		*/
+		.dropdown-menu.filter-selector	{
+			&.filter-lob	{
+				> li.selected-lob >	{
+					&:hover a, 
+					&:focus a {
+						color: #fff;
+					}
+					a {
+						color: @theme-active-background; 
+						background: transparent;
+						font-weight: 700;
+					}
+				}
+			
+			}
+		}
+	}
+	
+	.search-area {
+		text-align: center;
+		.input-group {
+			margin: 0 auto;
+			&.search {
+				width: 100%;
+				.twitter-typeahead {
+					width: 100%;
+					.form-control {width: 100%;}
+				}
+			}
+		}
+	}
+	
+	
+    /*	misc. tablet-view styles */
+	@media ( max-width : @screen-sm ) {
+		.row.search-bar .search-field {
+			width: 90%;
+		}
+	}
+}

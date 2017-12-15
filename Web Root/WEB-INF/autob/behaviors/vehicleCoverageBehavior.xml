@@ -1,0 +1,1413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transactionDefinitionBehavior xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/behavior/transactionDefinitionBehavior.xsd">
+    <!-- The following delimiter applies to the <for> elements for separating page entities -->
+    <delimiter>/</delimiter>
+    <hotField key="*/vehicle/vehicleInformation/Year" />
+    <hotField key="*/vehicle/vehicleInformation/VehicleBodyType">
+        <refreshListFieldEvent key="*/vehicle/vehicleInformation/HotVehicleType" selectionHint="USE_DEFAULT_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/vehicleCoverages/OtcType" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+    </hotField>
+    <hotField key="*/vehicle/truckTractorTrailerInformation/HotTruckRadiusUse" />
+    <hotField key="*/vehicle/UninsuredUnderinsuredMotoristsCoverage/UMUIMOption" />
+    <hotField key="*/vehicle/UninsuredUnderinsuredMotoristsCoverage/TradOrNew" /> 
+    <hotField key="*/vehicle/UninsuredUnderinsuredMotoristsCoverage/TradUMSplitLimit" />
+    <hotField key="*/vehicle/VehicleRejectUMCoverageSection/VehicleRejectUMCoverage" />
+    <hotField key="*/vehicle/VehicleRejectUMCoverageSection/VehicleRejectUMPDCoverage" />
+    <hotField key="*/vehicle/vehicleCoverages/CollisionDeductible" />
+    <hotField key="*/vehicle/vehicleCoverages/LimitedCollision" />
+    <hotField key="*/vehicle/vehicleCoverages/BroadenedCollision" />
+    <!-- End Hot Fields -->
+
+    <!-- @expunge
+        <hotField key="*/vehicle/vehicleInformation/HotVehicleType">
+        <refreshListFieldEvent key="*/vehicle/specialVehicleInformation/VehicleClass" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/MedicalPaymentsLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/MedicalExpenseLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/StackingOption" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/AtFaultOptionUMCSL" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/EconomicLossOptionUMCSL" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/LimitUMCSL" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/DeductibleUMCSL" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/AtFaultOptionUMISP" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/EconomicLossOptionUMISP" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/LimitUMISP" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/LimitOptionUNCSL" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/LimitDeductibleUNDSP" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/LimitOptionUMUIM" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/OptionUMUIM" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/LimitOptionUMUIMSP" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/OptionUMPD" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/UMUIMPDLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/UIMPDLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/LimitUMUIMPD" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/vehicleCoverages/OtcType" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/vehicleCoverages/OtherThanCollisionDeductible" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/vehicleCoverages/FullGlassCoverage" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/vehicleCoverages/CollisionOption" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/vehicleCoverages/CollisionDeductible" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/BasicFirstPartyBenefitsLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/TortOptionNoFaultCoverage" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/CoordinationOfBenefits" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/StackingOptionPIP" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/FirstPartyBenefits" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/MedicalLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/WageLossBenefits" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/FuneralLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/AccidentalDeathLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/ExtendedPersonalInjuryProtection" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/DeathAndDisabilityLimits" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/PipLimitOption" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/DeductibleNoFaultCov" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/AdditionalPIPSingleLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/AdditionalPIP" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/AdditionalPIPLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/AdditionalPIPOption" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/DeductibleAppliesTo" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/CopaymentOption" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/ExclusionOfWorkLoss" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/ExclusionOfLossOfIncome" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/additionalVehicleOptions/AntiTheftDevice" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/additionalVehicleOptions/PassiveRestraint" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        </hotField>
+        <hotField key="*/vehicle/truckTractorTrailerInformation/TruckVehicleTypeOT" />
+        <hotField key="*/vehicle/truckTractorTrailerInformation/TruckVehicleUse" />
+        <hotField key="*/vehicle/physicalDamageOnly/HotPhysicalDamageOnly" />
+        <hotField key="*/vehicle/stateCoverages/StackingOption" />
+        <hotField key="*/vehicle/stateCoverages/SupplementaryUMSUM">
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/UMUIMOption" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        </hotField>
+        <hotField key="*/vehicle/stateCoverages/UMUIMOption">
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/AtFaultOptionUMCSL" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/EconomicLossOptionUMCSL" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/LimitUMCSL" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/DeductibleUMCSL" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/AtFaultOptionUMISP" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/EconomicLossOptionUMISP" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/LimitUMISP" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/LimitOptionUNCSL" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/LimitDeductibleUNDSP" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/LimitOptionUMUIM" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/OptionUMUIM" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/LimitOptionUMUIMSP" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/OptionUMPD" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/UMUIMPDLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/UIMPDLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/LimitUMUIMPD" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        </hotField>
+        <hotField key="*/vehicle/stateCoverages/UMUIMPDLimit" />
+        <hotField key="*/vehicle/vehicleCoverages/CollisionDeductible" />
+         -->
+        <hotField key="*/vehicle/vehicleCoverages/OtcType">
+        <refreshListFieldEvent key="*/vehicle/vehicleCoverages/OtherThanCollisionDeductibleCOMP" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/vehicleCoverages/OtherThanCollisionDeductiblePERIL" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        </hotField>
+        
+        <hotField key="*/vehicle/vehicleInformation/CommlAutoLineBusiness.CommlRateState.CommlVeh.HotGaragedLocationRef">
+        <refreshListFieldEvent key="*/vehicle/vehicleInformation/CommlAutoLineBusiness.CommlRateState.CommlVeh.HotGaragedLocationRef" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/vehicleInformation/HotRegisteredState" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/specialVehicleInformation/VehicleClass" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/MedicalPaymentsLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/MedicalExpenseLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/StackingOption" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/AtFaultOptionUMCSL" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/EconomicLossOptionUMCSL" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/LimitUMCSL" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/DeductibleUMCSL" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/AtFaultOptionUMISP" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/EconomicLossOptionUMISP" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/LimitUMISP" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/LimitOptionUNCSL" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/LimitDeductibleUNDSP" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/LimitOptionUMUIM" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/OptionUMUIM" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/LimitOptionUMUIMSP" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/OptionUMPD" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/UMUIMPDLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/UIMPDLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/LimitUMUIMPD" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/vehicleCoverages/OtherThanCollisionDeductible" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/vehicleCoverages/CollisionOption" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/vehicleCoverages/CollisionDeductible" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/BasicFirstPartyBenefitsLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/TortOptionNoFaultCoverage" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/CoordinationOfBenefits" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/StackingOptionPIP" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/FirstPartyBenefits" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/MedicalLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/WageLossBenefits" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/FuneralLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/AccidentalDeathLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/ExtendedPersonalInjuryProtection" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/DeathAndDisabilityLimits" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/PipLimitOption" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/PipCoverageOptionCd" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/DeductibleNoFaultCov" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/AdditionalPIPSingleLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/AdditionalPIP" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/AdditionalPIPLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/AdditionalPIPOption" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/DeductibleAppliesTo" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/CopaymentOption" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/ExclusionOfWorkLoss" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/stateCoverages/ExclusionOfLossOfIncome" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/additionalVehicleOptions/AntiTheftDevice" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/additionalVehicleOptions/PassiveRestraint" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        </hotField>
+
+   
+
+    <!-- Vehicle Information Section -->
+    <behavior id="excludeComprehensiveAndCollisionSymbolCds" title="Exclude Comp/Collision Symbols when model year is less than 2011">
+        <description>These are ISO 75 Symbols which only apply to vehicles model year 2011 and newer.  The symbols may be used in rating.</description>
+        <do action="exclude" />
+        <where>
+            <preCondition name="Year">!</preCondition>
+            <preCondition name="Year">lt(2011)</preCondition>
+        </where>
+        <for>*/vehicle/vehicleInformation/SymbolComp</for>
+        <for>*/vehicle/vehicleInformation/SymbolColl</for>
+    </behavior>
+    <behavior id="makeGrossVehicleWeightRequired" title="make GrossVehicleWeight Required for Commercial Truck type">
+        <do action="alter">
+            <property name="required">true</property>
+        </do>
+        <where>
+            <preCondition name="HotVehicleType">COML</preCondition>
+        </where>
+        <for>*/vehicle/vehicleInformation/GrossVehicleWeight</for>
+    </behavior>
+   <!-- Private Passenger -->
+    <behavior title="Display privatePassengerInformation Section only if vehicleType is private passenger">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HotVehicleType">!PP</preCondition>
+        </where>
+        <for>*/vehicle/privatePassengerInformation</for>
+    </behavior>
+ 
+       <!--  truckTractorTrailerInformation -->
+    <behavior title="Display truckTractorTrailerInformation Section only if vehicleType is Commercial or Truck/Tractor/Trailer">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HotVehicleType">!COML</preCondition>
+        </where>
+        <for>*/vehicle/truckTractorTrailerInformation</for>
+    </behavior>
+       <behavior title="Display Principal Garaging Zone and FarthestTerminalZone only if vehicleType is Commercial or Truck/Tractor/Trailer and RadiusUse is LongDistance">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HotTruckRadiusUse">!LD</preCondition>
+        </where>
+        <for>*/vehicle/truckTractorTrailerInformation/PrincipalGaragingZoneOT</for>
+        <for>*/vehicle/truckTractorTrailerInformation/FarthestTerminalZoneOT</for>
+    </behavior>
+   <!--   Public/Special Vehicle Information -->
+   <behavior title="Exclude Public Vehicle Section if vehicle type is not public">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HotVehicleType">!PU</preCondition>
+        </where>
+        <for>*/vehicle/publicVehicleInformation</for>
+   </behavior>
+   <behavior title="Display only when Vehicle Type !=  Public and Public Vehicle Type = (Van Pool - Employer Furnished or Van Pool - Other)">
+        <do action="exclude" />
+        <where>
+            <preCondition name="VehicleBodyType">in('VANPE' , 'VANPO')</preCondition>
+        </where>
+        <for>*/vehicle/publicVehicleInformation/HotRadiusUse</for>
+   </behavior>
+   <behavior title="Display only when Vehicle Type = Public and Public Vehicle Type = (Van Pool - Employer Furnished or Van Pool - Other)">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HotVehicleType">!PU</preCondition>
+            <preCondition name="VehicleBodyType">!in('VANPE' , 'VANPO')</preCondition>
+        </where>
+        <for>*/vehicle/publicVehicleInformation/SeatCapacityPV</for>
+   </behavior>
+   <behavior title="Display only when Vehicle Type = Public and Radius Use = Long Distance and Public Vehicle Type = 
+   (Airport Bus or Limousine or Inter-City Bus or Charter Bus or Sightseeing Bus or Bus - 
+   Transportation of Athletes or Entertainers or Bus - Social Service, Employee Operated or Bus - Social Service, 
+   All Other or Bus - Not Otherwise Classified)">
+        <do action="exclude" />
+        <where>
+            <preCondition name="VehicleBodyType">in('BUSARP' , 'BUSICTY' , 'CHRTB' , 'BUSSSE' , 'TRAE' , 'SSEMP' , 'SSOTH' , 'BUSOTH')</preCondition>
+        </where>
+        <for>*/vehicle/publicVehicleInformation/PrincipalGaragingZonePV</for>
+        <for>*/vehicle/publicVehicleInformation/FarthestTerminalZonePV</for>
+   </behavior>   
+   <behavior title="Exclude special Vehicle Section if vehicle type is not special">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HotVehicleType">!in('SPEC')</preCondition>
+        </where>
+        <for>*/vehicle/specVehicleInformation</for>
+   </behavior>
+    <behavior title="Exclude numberOfDrivingInstructors if vehicle body type is not driving school">
+        <do action="exclude" />
+        <where>
+            <preCondition name="VehicleBodyType">!in('CDS')</preCondition>
+        </where>
+        <for>*/vehicle/specialVehicleInformation/NumberOfDrivingInstructors</for>
+   </behavior>
+    <behavior title="Exclude numberOfDrivingInstructors if vehicle body type is not driving school">
+        <do action="exclude" />
+        <where>
+            <preCondition name="VehicleBodyType">!in('SNOWM')</preCondition>
+        </where>
+        <for>*/vehicle/supplementalCoverages/passengerHazard</for>
+   </behavior>
+    <behavior title="Exclude Dual Controls if vehicle body type is not driving school">
+        <do action="exclude" />
+        <where>
+            <preCondition name="VehicleBodyType">!in('CDS' , 'SDS')</preCondition>
+        </where>
+        <for>*/vehicle/specialVehicleInformation/DualControls</for>
+   </behavior>
+    <behavior title="Exclude Motorcycle Engine Size if vehicle body type is not Motorcycle">
+        <do action="exclude" />
+        <where>
+            <preCondition name="VehicleBodyType">!in('MC')</preCondition>
+        </where>
+        <for>*/vehicle/specialVehicleInformation/MotorcycleEngineSize</for>
+   </behavior>
+    <behavior title="Exclude Vehicle Class if vehicle body type is not FDNP,FNRE,MOBUN,SMEF">
+        <do action="exclude" />
+        <where>
+            <preCondition name="VehicleBodyType">!in('FDNP' , 'FNRE' , 'MOBUN' , 'SMEF')</preCondition>
+        </where>
+        <for>*/vehicle/specialVehicleInformation/VehicleClass</for>
+   </behavior>
+    <behavior title="Exclude # of Registration Plates and DescriptionOfRegistrationPlates if vehicle body type is not RPSA">
+        <do action="exclude" />
+        <where>
+            <preCondition name="VehicleBodyType">!in('RPSA')</preCondition>
+        </where>
+        <for>*/vehicle/specialVehicleInformation/NumberOfRegistrationPlates</for>
+        <for>*/vehicle/specialVehicleInformation/DescriptionOfRegistrationPlates</for>
+   </behavior>
+   <behavior weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="LimitedCollision">!1</preCondition>
+        </where>
+        <for>*/vehicle/vehicleCoverages/LimitedCollisionDeductible</for>
+   </behavior>
+   <behavior weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="BroadenedCollision">!1</preCondition>
+        </where>
+        <for>*/vehicle/vehicleCoverages/BroadenedCollisionDeductible</for>
+   </behavior>
+
+  <!--    ***** State Coverages *****-->
+    
+    <behavior title="Exclude Medical Payments Limit field when vehicle type is special" weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HotVehicleType">SPEC</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/MedicalPaymentsLimit</for>
+        <for>*/vehicle/vehicleCoverages</for>
+    </behavior>
+    <behavior title="ExcludePrincipally Operated by Employee field when vehicle type is not special" weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HotVehicleType">!PP</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/PrincipallyOperatedByEmployees</for>
+    </behavior>
+    
+    <!-- Reject UMUIM Coverage -->
+    <behavior title="Exclude Uninsured/Underinsured Section if reject check box is selected">
+        <do action="exclude" />
+        <where>
+            <preCondition name="VehicleRejectUMCoverage">YES</preCondition>
+        </where>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage</for>
+    </behavior>
+    <behavior title="Exclude UMPD Section if reject check box is selected" weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="VehicleRejectUMPDCoverage">YES</preCondition>
+        </where>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/UMPDLlmits</for>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/UMPDDeductible</for>        
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/UIMPDLimit</for>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/UIMPDDeductible</for>
+    </behavior>
+    
+    <!-- Uninsured/Underinsured Motorists Coverage behaviors -->
+    
+    <behavior title="Exclude UMCSLStackingOption if coverage type is not UMCSL or UMISP" weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="UMUIMOption">!in('UMCSL','UNCSL')</preCondition>
+        </where>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/UMCSLStackingOption</for>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/hiddenUMCSLStacking</for>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/hiddenUNCSLStacking</for>
+    </behavior>
+    
+<!--  @expunge ??   
+    
+     <behavior title="Change UMUIMCoverageTypeCd Options based on state" >
+        <do action="alter">
+            <property name="optionListReferenceTag">xmlreader:codeListRef.xml:blank|xmlreader:autobCodeListRef.xml:UIMCoverageType</property>
+        </do>
+        <where>
+            <preCondition name="ControllingState">in('AK', 'CT','ME','MN','NC','ND','NJ','RI', 'TN', 'TX')</preCondition>
+        </where>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/UMUIMOption</for>
+    </behavior>
+     -->
+    <behavior title="Exclude UNCSLStackingOption if coverage type is not UMCSL or UMISP" weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="UMUIMOption">!in('UMISP','UNDSP')</preCondition>
+        </where>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/UNCSLStackingOption</for>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/hiddenUMISPStacking</for>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/hiddenUNDUMStacking</for>
+    </behavior>
+    
+    <behavior title="Exclude single limit if UMUIM Option is not UMCSL" weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="UMUIMOption">!UMCSL</preCondition>
+        </where>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/UMCSLLimit</for>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/TradUMSingleLimit</for>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/NewUMSingleLmits</for>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/UMUIMCSLLimit</for>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/UIMCSLLimit</for>        
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/UMUIMConversionOptionCSL</for>
+    </behavior>
+    <behavior title="Exclude split limit if UMUIM Option is not UMISP" weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="UMUIMOption">!in('UMISP', 'UMUIM')</preCondition>
+        </where>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/UMSplitLimits</for>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/TradUMSplitLimit</for>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/NewUMSplitLmits</for>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/UMUIMSplitLimits</for>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/UMUIMSplitLimitsNC</for>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/UIMSplitLimits</for>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/UIMPDLimit</for>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/UMUIMPDLimit</for>        
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/UMUIMConversionOptionBI</for>
+    </behavior>
+     
+    <behavior title="If Limit is entered for Traditional single, hide fields for Add On limits and other fields." weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="TradOrNew">!AO</preCondition>
+        </where>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/NewUMSingleLmits</for>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/NewUMDeductible</for>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/NewUMPDLimit</for>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/NewUMPDDeductible</for>        
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/NewUMSplitLmits</for>
+    </behavior> 
+    
+    <behavior title="If Limit is entered for Traditional single, hide fields for Add On limits and other fields." weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="TradOrNew">!RA</preCondition>
+        </where>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/TradUMSingleLimit</for>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/TradUMSplitLimit</for>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/UMUIMLiabilityDeductible</for>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/TradUMPDLimit</for>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/TradUMPDDeductible</for>
+    </behavior>
+    
+    <behavior title="If Limit is entered for Traditional split, hide fields for Add On limits and other fields." weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="TradUMSplitLimit">!</preCondition>
+        </where>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/NewUMSplitLmits</for>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/NewUMDeductible</for>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/NewUMPDLimit</for>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/NewUMPDDeductible</for>
+    </behavior>
+    
+    <!-- Physical Damage behaviors -->
+    <behavior title="Exclude Cost New Limit field and StatedAmount field when vehicle type is special" weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HotVehicleType">SPEC</preCondition>
+        </where>
+        <for>*/vehicle/vehicleCoverages/PdcOriginalCostNew</for>
+        <for>*/vehicle/vehicleCoverages/StatedAmount</for>
+    </behavior>
+    
+     <!-- Additional Coverages behaviors -->
+    <behavior title="Exclude towingAndLaborLimit field when vehicle type is not private passenger" weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HotVehicleType">!PP</preCondition>
+        </where>
+        <for>*/vehicle/supplementalCoverages/TowingAndLaborLimit</for>
+    </behavior>
+    <behavior title="Exclude Rental Reimb - # of Days,Audio, Visual and Data Electronic Equipment,Tapes/Records/Discs Coverage  when vehicle type is special" weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HotVehicleType">SPEC</preCondition>
+        </where>
+        <for>*/vehicle/supplementalCoverages/RentalReimbursementNumberOfRentalDays</for>
+        <for>*/vehicle/supplementalCoverages/AudioVisualDataElectronicEquipment</for>
+        <for>*/vehicle/supplementalCoverages/TapesRecordsAndDiscsCoverage</for>
+    </behavior>
+    <behavior title="Exclude Mutual Aid field when vehicle type is not special or public">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HotVehicleType">!in('SPEC', 'PU')</preCondition>
+        </where>
+        <for>*/vehicle/supplementalCoverages/MutualAidNonSPVeh</for>
+    </behavior>
+    
+     <!-- Additional Vehicle Options behaviors -->
+    <behavior title="Exclude AccidentPreventionCourseCompletionDate and DefensiveDrivingCourseCompletionDate field when vehicle type is special" weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HotVehicleType">SPEC</preCondition>
+        </where>
+        <for>*/vehicle/additionalVehicleOptions/AccidentPreventionCourseCompletionDate</for>
+        <for>*/vehicle/additionalVehicleOptions/DefensiveDrivingCourseCompletionDate</for>
+    </behavior>
+    <behavior title="Display only when Vehicle Type = Public and Public Vehicle Type != (Van Pool - Employer Furnished or Van Pool - Other)" weight="40">
+        <do action="exclude" />
+        <where>
+        <preCondition name="HotVehicleType">PU</preCondition>
+            <preCondition name="VehicleBodyType">!in('VANPE' , 'VANPO')</preCondition>
+        </where>
+        <for>*/vehicle/additionalVehicleOptions/RideSharingAgreement</for>
+   </behavior>
+    <behavior title="Exclude # of Safety Features field when vehicle type is not private passenger" weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HotVehicleType">!PP</preCondition>
+            <preCondition name="CollisionDeductible">!in('')</preCondition>
+        </where>
+        <for>*/vehicle/additionalVehicleOptions/NumberOfSafetyFeatures</for>
+    </behavior>
+    <behavior title="Display only when Vehicle Type = Truck, Tractor or Trailer " weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HotVehicleType">!COML</preCondition>
+        </where>
+        <for>*/vehicle/additionalVehicleOptions/LoggingIndicator</for>
+     </behavior>
+     <behavior title="Display only when Vehicle Type = public " weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HotVehicleType">!PU</preCondition>
+        </where>
+        <for>*/vehicle/additionalVehicleOptions/DayCareCenterVehicle</for>
+     </behavior>
+     
+     <!-- OTC TYPE -->
+     
+     <behavior weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="OtcType">!COMP</preCondition>
+        </where>
+        <for>*/vehicle/vehicleCoverages/OtherThanCollisionDeductibleCOMP</for>
+        <for>*/vehicle/vehicleCoverages/FullGlassCoverage</for>
+    </behavior>
+    
+    <behavior weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="OtcType">!PERIL</preCondition>
+        </where>
+        <for>*/vehicle/vehicleCoverages/OtherThanCollisionDeductiblePERIL</for>
+    </behavior>
+
+    <!-- @expunge
+
+        <behavior id="excludeVehicleClass" title="Exclude Vehicle Class if Special Vehicles are Fire Dept and Law Enforcement TTT, Funeral Directors, Mobile Home, Mobile or Farm Equipment">
+        <do action="exclude" />
+        <where>
+        <preCondition name="VehicleBodyType">!in('FNRE','FDNP','MOBUN','SMEF')</preCondition>
+        </where>
+        <for>*/vehicle/specialVehicleInformation/VehicleClass</for>
+        </behavior>
+        <behavior id="excludeNumberOfDrivingInstructors" title="Exclude # of Driving Instructors if Special Vehicle Type !='Commercial Driving School'">
+        <do action="exclude" />
+        <where>
+        <preCondition name="VehicleBodyType">!in('CDS')</preCondition>
+        </where>
+        <for>*/vehicle/specialVehicleInformation/NumberOfDrivingInstructors</for>
+        </behavior>
+        <behavior id="excludeDualControls" title="Exclude Dual Controls if Special Vehicle Type !='Commercial Driving School' AND !='Driver Training - Educational Institution'">
+        <do action="exclude" />
+        <where>
+        <preCondition name="VehicleBodyType">!in('CDS', 'SDS')</preCondition>
+        </where>
+        <for>*/vehicle/specialVehicleInformation/DualControls</for>
+        </behavior>
+        <behavior id="excludeMotorcycleEngineSize" title="Exclude Motorcycle Engine Size if Special Vehicle Type !='Motorcycles'">
+        <do action="exclude" />
+        <where>
+        <preCondition name="VehicleBodyType">!in('MC')</preCondition>
+        </where>
+        <for>*/vehicle/specialVehicleInformation/MotorcycleEngineSize</for>
+        </behavior>
+        <behavior id="excludeRegistrationPlates" title="Exclude # of Registration Plates AND Description of Registration Plates if Special Vehicle Type !='Registration Plates Not Issued for a Specific Auto'">
+        <do action="exclude" />
+        <where>
+        <preCondition name="VehicleBodyType">!in('RPSA')</preCondition>
+        </where>
+        <for>*/vehicle/specialVehicleInformation/NumberOfRegistrationPlates</for>
+        <for>*/vehicle/specialVehicleInformation/DescriptionOfRegistrationPlates</for>
+        </behavior>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <behavior id="excludeAddressInfo" title="Exclude address information">
+        <do action="exclude" />
+        <for>*/vehicle/vehicleInformation/VehicleInfoAddr1</for>
+        <for>*/vehicle/vehicleInformation/VehicleInfoAddr2</for>
+        <for>*/vehicle/vehicleInformation/VehicleInfoCity</for>
+        <for>*/vehicle/vehicleInformation/VehicleInfoState</for>
+        <for>*/vehicle/vehicleInformation/VehicleInfoZipCode</for>
+        <for>*/vehicle/vehicleInformation/VehicleInfoTerrCd</for>
+        </behavior>
+        <behavior id="excludePrivatePassengerInformation" title="Exclude Private Passenger Information">
+        <do action="exclude" />
+        <where>
+        <preCondition name="HotVehicleType">!PP</preCondition>
+        </where>
+        <for>*/vehicle/PrivatePassengerInformation</for>
+        </behavior>
+        <behavior id="excludePublicVehicleInformation" title="Exclude Public Vehicle Information">
+        <do action="exclude" />
+        <where>
+        <preCondition name="HotVehicleType">!PU</preCondition>
+        </where>
+        <for>*/vehicle/PublicVehicleInformation</for>
+        </behavior>
+        <behavior id="excludeSpecialVehicleInformation" title="Exclude Special Vehicle Information">
+        <do action="exclude" />
+        <where>
+        <preCondition name="HotVehicleType">!SPEC</preCondition>
+        </where>
+        <for>*/vehicle/SpecialVehicleInformation</for>
+        </behavior>
+
+
+        <behavior id="excludeTruckTractorTrailerInformation" title="Exclude Truck Tractor Trailer Information">
+        <do action="exclude" />
+        <where>
+        <preCondition name="HotVehicleType">!COML</preCondition>
+        </where>
+        <for>*/vehicle/truckTractorTrailerInformation</for>
+        </behavior>
+        <behavior id="N6" title="Exclude Liability,Medical Payments, UnInsured/UnderInsured Motorists, and No Fault Coverages">
+        <do action="exclude" />
+        <where>
+        <preCondition name="HotPhysicalDamageOnly">1</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages</for>
+        </behavior>
+        <behavior id="excludeNoFaultIfInNJandNotPP" title="Exclude No Fault Coverages if in NJ and Vehicle Type !=PP">
+        <do action="exclude" />
+        <where>
+        <preCondition name="HotVehicleType">!PP</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('NJ')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/PipCoverage</for>
+        <for>*/vehicle/stateCoverages/PipCoverageOptionCd</for>
+        <for>*/vehicle/stateCoverages/PipCoverageLimit</for>
+        <for>*/vehicle/stateCoverages/PasicFirstPartyBenefitsLimit</for>
+        <for>*/vehicle/stateCoverages/TortOptionNoFaultCoverage</for>
+        <for>*/vehicle/stateCoverages/StackingOptionPIP</for>
+        <for>*/vehicle/stateCoverages/AdditionalFirstPartyBenefits</for>
+        <for>*/vehicle/stateCoverages/CombinationFirstPartyBenefits</for>
+        <for>*/vehicle/stateCoverages/PipLimitOption</for>
+        <for>*/vehicle/stateCoverages/PipLimitOptionSingle</for>
+        <for>*/vehicle/stateCoverages/PipLimitOptionSplit</for>
+        <for>*/vehicle/stateCoverages/AdditionalPIPSingleLimit</for>
+        <for>*/vehicle/stateCoverages/AdditionalPIPSplitLimit</for>
+        <for>*/vehicle/stateCoverages/AdditionalPIPLimit</for>
+        <for>*/vehicle/stateCoverages/AdditionalPIPOption</for>
+        <for>*/vehicle/stateCoverages/DeductibleNoFaultCov</for>
+        <for>*/vehicle/stateCoverages/DeductibleAppliesTo</for>
+        <for>*/vehicle/stateCoverages/CoveredByWorkersCompensation</for>
+        <for>*/vehicle/stateCoverages/PrincipallyOperatedByEmployeesPIP</for>
+        <for>*/vehicle/stateCoverages/OwnerOperated</for>
+        <for>*/vehicle/stateCoverages/EmployerFurnished</for>
+        <for>*/vehicle/stateCoverages/ExtendedMedicalExpenses</for>
+        <for>*/vehicle/stateCoverages/ExtendedMedicalExpensesLimit</for>
+        <for>*/vehicle/stateCoverages/PipHealthInsuranceOption</for>
+        <for>*/vehicle/stateCoverages/WageLossBenefits</for>
+        <for>*/vehicle/stateCoverages/FuneralLimit</for>
+        <for>*/vehicle/stateCoverages/AccidentalDeathLimit</for>
+        <for>*/vehicle/stateCoverages/DeathAndDisabilityLimits</for>
+        <for>*/vehicle/stateCoverages/OBEL</for>
+        <for>*/vehicle/stateCoverages/EPIP</for>
+        <for>*/vehicle/stateCoverages/CopaymentOption</for>
+        <for>*/vehicle/stateCoverages/ExclusionOfWorkLoss</for>
+        <for>*/vehicle/stateCoverages/ExclusionOfLossOfIncome</for>
+        </behavior>
+
+        show or hide Medical Payments Coverage based on selected dropdown
+        <behavior id="excludeMedicalPaymentsCoverage" title="Exclude Medical Payments Coverage Fields">
+        <do action="exclude" />
+        <for>*/vehicle/stateCoverages/PrincipallyOperatedByEmployees</for>
+        </behavior>
+        <behavior id="includePrincipallyOperatedByEmployees" title="Include Principally Operated by Employees For VA if Vehicle Type = PP">
+        <do action="include" />
+        <where>
+        <preCondition name="HotVehicleType">PP</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('VA')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/PrincipallyOperatedByEmployees</for>
+        </behavior>
+        show or hide UMCSL/UMISP based on selected dropdown
+        <behavior id="excludeUninsuredCoverages" title="Exclude Uninsured/Underinsured Coverage Fields">
+        <do action="exclude" />
+        <for>*/vehicle/stateCoverages/StackingOption</for>
+        <for>*/vehicle/stateCoverages/IndividualMarriedCoupleUMCSL</for>
+        <for>*/vehicle/stateCoverages/AtFaultOptionUMCSL</for>
+        <for>*/vehicle/stateCoverages/EconomicLossOptionUMCSL</for>
+        <for>*/vehicle/stateCoverages/LimitUMCSL</for>
+        <for>*/vehicle/stateCoverages/DeductibleUMCSL</for>
+        <for>*/vehicle/stateCoverages/LimitOptionUMUIM</for>
+        <for>*/vehicle/stateCoverages/individualMarriedCoupleUMISP</for>
+        <for>*/vehicle/stateCoverages/atFaultOptionUMISP</for>
+        <for>*/vehicle/stateCoverages/economicLossOptionUMISP</for>
+        <for>*/vehicle/stateCoverages/limitUMISP</for>
+        <for>*/vehicle/stateCoverages/deductibleUMISP</for>
+        <for>*/vehicle/stateCoverages/limitOptionUMUIMSP</for>
+        <for>*/vehicle/stateCoverages/includedExcludedUNCSL</for>
+        <for>*/vehicle/stateCoverages/optionUMPD</for>
+        <for>*/vehicle/stateCoverages/UMUIMPDLimit</for>
+        <for>*/vehicle/stateCoverages/UMPDDeductible</for>
+        <for>*/vehicle/stateCoverages/UIMPDLimit</for>
+        <for>*/vehicle/stateCoverages/limitUMUIMPD</for>
+        <for>*/vehicle/stateCoverages/limitOptionUNCSL</for>
+        <for>*/vehicle/stateCoverages/limitDeductibleUNDSP</for>
+        <for>*/vehicle/stateCoverages/optionUMUIM</for>
+        <for>*/vehicle/stateCoverages/optionUMUIMSP</for>
+        </behavior>
+        <behavior id="includeIndividualMarriedCoupleForUMCSL" title="Show Individual or Married Couple Field if Uninsured/Underinsured Coverage is equal to UMCSL">
+        <do action="include" />
+        <where>
+        <preCondition name="UMUIMOption">UMCSL</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">!in('FL', 'HI', 'MS', 'MT', 'MA', 'NM', 'NY', 'PA')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/individualMarriedCoupleUMCSL</for>
+        </behavior>
+        <behavior id="includeUninsuredLimitsForUMCSL" title="Show Uninsured/Underinsured Limits if Uninsured/Underinsured Coverage is equal to UMCSL">
+        <do action="include" />
+        <where>
+        <preCondition name="UMUIMOption">UMCSL</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">!in('AK', 'CT', 'FL', 'HI', 'MN', 'MT', 'MS', 'NE', 'NJ', 'NM', 'NY', 'PA', 'TX', 'WA')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/limitUMCSL</for>
+        </behavior>
+        <behavior id="includeIndividualMarriedCoupleForUMISP" title="Show Individual or Married Couple Field if Uninsured/Underinsured Coverage is equal to UMISP">
+        <do action="include" />
+        <where>
+        <preCondition name="UMUIMOption">UMISP</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">!in('FL', 'HI', 'MS', 'MT', 'MA', 'NM', 'NY', 'PA')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/individualMarriedCoupleUMISP</for>
+        </behavior>
+        <behavior id="N12" title="Include atFaultOptionUMCSL if in GA">
+        <do action="include" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('GA')</preCondition>
+        <preCondition name="UMUIMOption">UMCSL</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/atFaultOptionUMCSL</for>
+        </behavior>
+        <behavior id="includeAtFaultForGA" title="Include atFaultOptionUMISP if in GA">
+        <do action="include" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('GA')</preCondition>
+        <preCondition name="UMUIMOption">UMISP</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/atFaultOptionUMISP</for>
+        </behavior>
+        <behavior id="includeAtFaultForLA" title="Include economicLossOptionUMCSL if in LA">
+        <do action="include" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('LA')</preCondition>
+        <preCondition name="UMUIMOption">UMCSL</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/economicLossOptionUMCSL</for>
+        </behavior>
+        <behavior id="includeEconomicLossForLA" title="Include economicLossOptionUMISP if in LA">
+        <do action="include" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('LA')</preCondition>
+        <preCondition name="UMUIMOption">UMISP</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/economicLossOptionUMISP</for>
+        </behavior>
+        <behavior id="includeOptionUMUIMForCT" title="Include optionUMUIM if in CT">
+        <do action="include" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('CT')</preCondition>
+        <preCondition name="UMUIMOption">UMCSL</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/optionUMUIM</for>
+        </behavior>
+        <behavior id="includeOptionUMUIMSPForCT" title="Include optionUMUIMSP in in CT">
+        <do action="include" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('CT')</preCondition>
+        <preCondition name="UMUIMOption">UMISP</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/optionUMUIMSP</for>
+        </behavior>
+        <behavior id="includeLimitUMUIMPDForStates" title="Include limitUMUIMPD if in DC, NJ, TX, RI, or WA">
+        <do action="include" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('DC', 'NJ', 'TX', 'WA')</preCondition>
+        <preCondition name="UMUIMOption">UMISP</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/limitUMUIMPD</for>
+        </behavior>
+        <behavior id="includeLimitOptionUNCSLForStates" title="Include UIM CSL">
+        <do action="include" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('AZ', 'AR', 'DC', 'ID', 'IL', 'IN', 'IA', 'KY', 'MA', 'MI', 'MO', 'ND', 'OH', 'SC', 'SD', 'UT', 'WA', 'WV', 'WI')</preCondition>
+        <preCondition name="UMUIMOption">UMCSL</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/limitOptionUNCSL</for>
+        </behavior>
+        medical
+        <behavior id="excludeMedicalPaymentsLimitForVA" title="Exclude Medical Payments Limit if in VA">
+        <do action="exclude" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('VA')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/medicalPaymentsLimit</for>
+        </behavior>
+        <behavior id="excludeSupplementaryDeathForTX" title="Exclude Supplementary Death Benefits if in TX">
+        <do action="exclude" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">!in('TX')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/supplementaryDeathBenefits</for>
+        </behavior>
+        <behavior id="excludeMedicalPaymentsCoverages" title="Exclude Medical Expense Limit and Principally Operated By Employee">
+        <do action="exclude" />
+        <for>*/vehicle/stateCoverages/medicalExpenseLimit</for>
+        <for>*/vehicle/stateCoverages/principallyOperatedByEmployee</for>
+        </behavior>
+        <behavior id="includeMedicalPaymentsCoveragesForVA" title="Include Medical Expense Limit and Principally Operated By Employee if Vehicle Type is Private Passenger and in VA">
+        <do action="include" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('VA')</preCondition>
+        <preCondition name="HotVehicleType">in('PP')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/medicalExpenseLimit</for>
+        <for>*/vehicle/stateCoverages/principallyOperatedByEmployee</for>
+        </behavior>
+        <behavior id="excludeMedicalPaymentsLimitForCO" title="Exclude Medical Payments Limit if Special Vehicle is Motorcycle and in CO">
+        <do action="exclude" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('CO')</preCondition>
+        <preCondition name="VehicleBodyType">in('MC')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/medicalPaymentsLimit</for>
+        </behavior>
+        <behavior id="excludeUninsuredCoveragesForGC_RA" title="Exclude Uninsured/Underinsured Motorists Coverage if Special Vehicles are Golf Mobile or Repossessed Autos">
+        <do action="exclude" />
+        <where>
+        <preCondition name="VehicleBodyType">in('GC', 'RA')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/supplementaryUMSUM</for>
+        <for>*/vehicle/stateCoverages/stackingOption</for>
+        <for>*/vehicle/stateCoverages/UMUIMOption</for>
+        <for>*/vehicle/stateCoverages/individualMarriedCoupleUMCSL</for>
+        <for>*/vehicle/stateCoverages/atFaultOptionUMCSL</for>
+        <for>*/vehicle/stateCoverages/economicLossOptionUMCSL</for>
+        <for>*/vehicle/stateCoverages/limitUMCSL</for>
+        <for>*/vehicle/stateCoverages/deductibleUMCSL</for>
+        <for>*/vehicle/stateCoverages/individualMarriedCoupleUMISP</for>
+        <for>*/vehicle/stateCoverages/atFaultOptionUMISP</for>
+        <for>*/vehicle/stateCoverages/economicLossOptionUMISP</for>
+        <for>*/vehicle/stateCoverages/limitUMISP</for>
+        <for>*/vehicle/stateCoverages/deductibleUMISP</for>
+        <for>*/vehicle/stateCoverages/includedExcludedUNCSL</for>
+        <for>*/vehicle/stateCoverages/limitOptionUNCSL</for>
+        <for>*/vehicle/stateCoverages/limitDeductibleUNDSP</for>
+        <for>*/vehicle/stateCoverages/limitOptionUMUIM</for>
+        <for>*/vehicle/stateCoverages/optionUMUIM</for>
+        <for>*/vehicle/stateCoverages/limitOptionUMUIMSP</for>
+        <for>*/vehicle/stateCoverages/optionUMUIMSP</for>
+        <for>*/vehicle/stateCoverages/optionUMPD</for>
+        <for>*/vehicle/stateCoverages/UMUIMPDLimit</for>
+        <for>*/vehicle/stateCoverages/UIMPDLimit</for>
+        <for>*/vehicle/stateCoverages/limitUMUIMPD</for>
+        </behavior>
+        <behavior id="excludeUnUnderInsuredMotCov2" title="Exclude Uninsured/Underinsured Motorists Coverage if Special Vehicles are Fire Dept and Law Enforcement PPT ,TTT or Motorcycles for CO,ID">
+        <do action="exclude" />
+        <where>
+        <preCondition name="VehicleBodyType">in('FDP', 'FNDP', 'MC')</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('CO', 'ID')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/supplementaryUMSUM</for>
+        <for>*/vehicle/stateCoverages/stackingOption</for>
+        <for>*/vehicle/stateCoverages/UMUIMOption</for>
+        <for>*/vehicle/stateCoverages/individualMarriedCoupleUMCSL</for>
+        <for>*/vehicle/stateCoverages/atFaultOptionUMCSL</for>
+        <for>*/vehicle/stateCoverages/economicLossOptionUMCSL</for>
+        <for>*/vehicle/stateCoverages/limitUMCSL</for>
+        <for>*/vehicle/stateCoverages/deductibleUMCSL</for>
+        <for>*/vehicle/stateCoverages/individualMarriedCoupleUMISP</for>
+        <for>*/vehicle/stateCoverages/atFaultOptionUMISP</for>
+        <for>*/vehicle/stateCoverages/economicLossOptionUMISP</for>
+        <for>*/vehicle/stateCoverages/limitUMISP</for>
+        <for>*/vehicle/stateCoverages/deductibleUMISP</for>
+        <for>*/vehicle/stateCoverages/includedExcludedUNCSL</for>
+        <for>*/vehicle/stateCoverages/limitOptionUNCSL</for>
+        <for>*/vehicle/stateCoverages/limitDeductibleUNDSP</for>
+        <for>*/vehicle/stateCoverages/limitOptionUMUIM</for>
+        <for>*/vehicle/stateCoverages/optionUMUIM</for>
+        <for>*/vehicle/stateCoverages/limitOptionUMUIMSP</for>
+        <for>*/vehicle/stateCoverages/optionUMUIMSP</for>
+        <for>*/vehicle/stateCoverages/optionUMPD</for>
+        <for>*/vehicle/stateCoverages/UMUIMPDLimit</for>
+        <for>*/vehicle/stateCoverages/UIMPDLimit</for>
+        <for>*/vehicle/stateCoverages/limitUMUIMPD</for>
+        </behavior>
+        behaviors to exclude coverages based on controlling state
+        <behavior id="includeStackingOptions" title="Include Stacking Options if in HI, IA, KY, MT, NM or PA">
+        <do action="include" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('HI', 'IA', 'KY', 'MT', 'NM', 'PA')</preCondition>
+        <preCondition name="UMUIMOption">in('UMCSL', 'UMISP')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/stackingOption</for>
+        </behavior>
+        <behavior id="excludeSupplmentaryUninsuredForNY" title="Exclude Supplementary Uninsured/Underinsured Motorists if not in NY">
+        <do action="exclude" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">!in('NY')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/supplementaryUMSUM</for>
+        </behavior>
+        <behavior id="alterUninsuredLimitOptionForNYIfSuppIsNo" title="Alter UM Limit Option if in NY and Supplementary Uninsured/Underinsured Motorists = 'No'">
+        <do action="alter">
+        <property name="optionListReferenceTag">xmlreader:autobCodeListRef.xml:uninsuredLimitOptionCdSplitOnly</property>
+        </do>
+        <where>
+        <preCondition name="supplementaryUMSUM">NO</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('NY')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/UMUIMOption</for>
+        </behavior>
+        <behavior id="includeLimitOptionUMUIMForNY" title="Include limitOptionUMUIM For NY">
+        <do action="include" />
+        <where>
+        <preCondition name="UMUIMOption">UMCSL</preCondition>
+        <preCondition name="supplementaryUMSUM">YES</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('NY')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/limitOptionUMUIM</for>
+        <for>*/vehicle/stateCoverages/individualMarriedCoupleUMCSL</for>
+        </behavior>
+        <behavior id="includeLimitOptionUMUIMSPForNY" title="Include limitOptionUMUIMSP For NY">
+        <do action="include" />
+        <where>
+        <preCondition name="UMUIMOption">UMISP</preCondition>
+        <preCondition name="supplementaryUMSUM">YES</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('NY')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/limitOptionUMUIMSP</for>
+        <for>*/vehicle/stateCoverages/individualMarriedCoupleUMISP</for>
+        </behavior>
+        <behavior id="includeDeductibleUMCSLForGA" title="Include deductibleUMCSL if in GA">
+        <do action="include" />
+        <where>
+        <preCondition name="UMUIMOption">UMCSL</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('GA')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/deductibleUMCSL</for>
+        </behavior>
+        <behavior id="includeDeductibleUMISPForGA" title="Include deductibleUMISP if in GA">
+        <do action="include" />
+        <where>
+        <preCondition name="UMUIMOption">UMISP</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('GA')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/deductibleUMISP</for>
+        </behavior>
+        <behavior id="includeLimitUMISPForStates" title="Include UM Split Limit if not in AK, CT, MA, MI, NE, NJ, NY, TX or WA">
+        <do action="include" />
+        <where>
+        <preCondition name="UMUIMOption">UMISP</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">!in('AK', 'CT', 'FL', 'HI', 'MN', 'MT', 'MS', 'NE', 'NJ', 'NM', 'NY', 'PA', 'TX', 'WA')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/limitUMISP</for>
+        </behavior>
+        <behavior id="includeLimitUMCSLForStackingOptionStates" title="Include limitUMCSL For Stacking Option States">
+        <do action="include" />
+        <where>
+        <preCondition name="UMUIMOption">UMCSL</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('HI', 'IA', 'KY', 'MT', 'NM', 'PA')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/limitUMCSL</for>
+        <for>*/vehicle/stateCoverages/individualMarriedCoupleUMCSL</for>
+        </behavior>
+        <behavior id="includeLimitUMISPForStackingOptionStates" title="Include limitUMISP For Stacking Option States">
+        <do action="include" />
+        <where>
+        <preCondition name="UMUIMOption">UMISP</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('HI', 'IA', 'KY', 'MT', 'NM', 'PA')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/limitUMISP</for>
+        <for>*/vehicle/stateCoverages/individualMarriedCoupleUMISP</for>
+        </behavior>
+        <behavior id="includeLimitOptionUNCSLForStackingOptionStates" title="Include limitOptionUNCSL For Stacking Option States">
+        <do action="include" />
+        <where>
+        <preCondition name="UMUIMOption">UMCSL</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('HI', 'IA', 'KY', 'MT', 'PA')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/limitOptionUNCSL</for>
+        </behavior>
+        <behavior id="includeLimitDeductibleUNDSPForStackingOptionStates" title="Include limitDeductibleUNDSP For Stacking Option States">
+        <do action="include" />
+        <where>
+        <preCondition name="UMUIMOption">UMISP</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('HI', 'IA', 'KY', 'MT', 'PA')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/limitDeductibleUNDSP</for>
+        </behavior>
+        <behavior id="includeLimitUMISPForNY" title="Include UM Split Limit for NY if UM Supplementary Uninsured/Underinsured Motorists = NO">
+        <do action="include" />
+        <where>
+        <preCondition name="supplementaryUMSUM">NO</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('NY')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/limitUMISP</for>
+        </behavior>
+        <behavior id="alterLimitUMISPForNY" title="Alter UM Split Limit for NY if UM Supplementary Uninsured/Underinsured Motorists = NO">
+        <do action="alter">
+        <property name="optionListReferenceTag">custom:com.agencyport.autob.custom.StateSpcVehCoverageListBuilder:UMSplitLimitCd</property>
+        </do>
+        <where>
+        <preCondition name="supplementaryUMSUM">NO</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('NY')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/limitUMISP</for>
+        </behavior>
+        <behavior id="includeLimitDeductibleUNDSPForStates" title="Exclude limitDeductibleUNDSP if in AZ, AR, DC, ID, IL, IN, IA, KE, MA, MO, ND, OH, SC, SD, UT, WA, WV or WI">
+        <do action="include" />
+        <where>
+        <preCondition name="UMUIMOption">UMISP</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('AZ', 'AR', 'DC', 'ID', 'IL', 'IN', 'IA', 'KE', 'MA', 'MI', 'MO', 'ND', 'OH', 'SC', 'SD', 'UT', 'WA', 'WV', 'WI')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/limitDeductibleUNDSP</for>
+        </behavior>
+        <behavior id="includeLimitOptionUMUIM" title="Include limitOptionUMUIM">
+        <do action="include" />
+        <where>
+        <preCondition name="UMUIMOption">UMCSL</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('AK', 'CT', 'MN', 'NE', 'NJ', 'TX', 'WY')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/limitOptionUMUIM</for>
+        </behavior>
+        <behavior id="includeLimitOptionUMUIMSP" title="Include limitOptionUMUIMSP">
+        <do action="include" />
+        <where>
+        <preCondition name="UMUIMOption">UMISP</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('AK', 'CT', 'MN', 'NE', 'NJ', 'TX', 'WY')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/limitOptionUMUIMSP</for>
+        </behavior>
+        <behavior id="includeOptionUMPDForStates" title="Include UMPD Option if not in AL, AR, CA, CO, DE, IL, IN, LA, MS, NM, ,NC, OH, OR, RI, TN or UT">
+        <do action="include" />
+        <where>
+        <preCondition name="UMUIMOption">UMCSL</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('AK', 'AR', 'CA', 'CO', 'DE', 'IL', 'IN', 'LA', 'MS', 'NM', 'NC', 'OH', 'OR', 'RI', 'TN', 'UT')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/optionUMPD</for>
+        </behavior>
+        <behavior id="includeLimitUMPDForStates" title="Include UMPD limit if not in AL, AR, CA, CO, DC, DE, ,GA, IL, IN, LA, MD, MS, NM, NH, NC, OH, OR, RI, TN, UT, VT, VA or WV">
+        <do action="include" />
+        <where>
+        <preCondition name="UMUIMOption">UMISP</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('AK', 'AR', 'CA', 'CO', 'DE', 'DC', 'GA', 'IL', 'IN', 'LA', 'MA', 'MD', 'MS', 'NM', 'NH', 'NC', 'OH', 'OR', 'RI', 'SC', 'TN', 'UT', 'VT', 'VA', 'WV')</preCondition>
+        </where>
+        <for>*/vehicle/stateCoverages/UMUIMPDLimit</for>
+        </behavior>
+        <behavior id="includeUMPDDeductibleForStates" title="Include UMPD deductible">
+        <do action="include" />
+        <where>
+        <preCondition name="UMUIMOption">UMISP</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('OH', 'SC', 'VI', 'VT', 'WA')</preCondition>
+        <preCondition name="UMUIMPDLimit">!</preCondition>
+        </where>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/UMPDDeductible</for>
+        </behavior>
+        <behavior id="includeLimitUNDPDForStates" title="Include UNDPD limit if in DC, SC, RI, WA or WV">
+        <do action="include" />
+        <where>
+        <preCondition name="UMUIMOption">UMISP</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('DC', 'SC', 'WA', 'WV')</preCondition>
+        </where>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/UIMPDLimit</for>
+        </behavior>
+        alter help bubble text for 'individual/married couple' in uninsured/underinsured
+        <behavior id="alterIndividualMarriedCoupleHelpForCA" title="Add Individual/Married Couple Help Text for California">
+        <do action="alter">
+        <property name="helpText">If any named insured is an individual, married couple or registered domestic partnership, then YES should be selected (different rates apply)</property>
+        </do>
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('CA')</preCondition>
+        </where>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/IndividualMarriedCoupleUMCSL</for>
+        @expunge
+        <for>*/vehicle/stateCoverages/individualMarriedCoupleUMISP</for>
+
+        </behavior>
+        <behavior id="alterIndividualMarriedCoupleHelpForCT" title="Add Individual/Married Couple Help Text for Connecticut">
+        <do action="alter">
+        <property name="helpText">If any named insured is an individual, married couple or party to a civil union recognized under Connecticut law, then YES should be selected (different rates apply)</property>
+        </do>
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('CT')</preCondition>
+        </where>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/IndividualMarriedCoupleUMCSL</for>
+        @expunge
+        <for>*/vehicle/stateCoverages/individualMarriedCoupleUMISP</for>
+
+        </behavior>
+        <behavior id="alterIndividualMarriedCoupleHelpForNH" title="Add Individual/Married Couple Help Text for New Hampshire">
+        <do action="alter">
+        <property name="helpText">If any named insured is an individual, married couple or party to a civil union recognized under New Hampshire law, then YES should be selected (different rates apply)</property>
+        </do>
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('NH')</preCondition>
+        </where>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/IndividualMarriedCoupleUMCSL</for>
+        @expunge
+        <for>*/vehicle/stateCoverages/individualMarriedCoupleUMISP</for>
+
+        </behavior>
+        <behavior id="alterIndividualMarriedCoupleHelpForNJ" title="Add Individual/Married Couple Help Text for New Jersey">
+        <do action="alter">
+        <property name="helpText">If any named insured is an individual, married couple or party to a civil union recognized under New Jersey law, then YES should be selected (different rates apply)</property>
+        </do>
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('NJ')</preCondition>
+        </where>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/IndividualMarriedCoupleUMCSL</for>
+        @expunge
+        <for>*/vehicle/stateCoverages/individualMarriedCoupleUMISP</for>
+
+        </behavior>
+        <behavior id="alterIndividualMarriedCoupleHelpForOR" title="Add Individual/Married Couple Help Text for Oregon">
+        <do action="alter">
+        <property name="helpText">If any named insured is an individual, married couple or individuals in a domestic partnership recognized under Oregon law, then YES should be selected (different rates apply)</property>
+        </do>
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('OR')</preCondition>
+        </where>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/IndividualMarriedCoupleUMCSL</for>
+        @expunge
+        <for>*/vehicle/stateCoverages/individualMarriedCoupleUMISP</for>
+
+        </behavior>
+        end underinsured behaviors
+        <behavior id="alterOTCTypeCodelistForAntique" title="Alter OTC Type Codelist For Antique Autos">
+        <do action="alter">
+        <property name="optionListReferenceTag">xmlreader:autobCodeListRef.xml:physicalDamageOTCType_AA</property>
+        </do>
+        <where>
+        <preCondition name="HotVehicleType">SPEC</preCondition>
+        <preCondition name="VehicleBodyType">in('AA')</preCondition>
+        </where>
+        <for>*/vehicle/vehicleCoverages/OtcType</for>
+        </behavior>
+        <behavior id="alterOTCTypeCodelistForGolfmobile" title="Alter OTC Type Codelist For Golfmobiles">
+        <do action="alter">
+        <property name="optionListReferenceTag">xmlreader:autobCodeListRef.xml:physicalDamageOTCType_GC</property>
+        </do>
+        <where>
+        <preCondition name="HotVehicleType">SPEC</preCondition>
+        <preCondition name="VehicleBodyType">in('GC')</preCondition>
+        </where>
+        <for>*/vehicle/vehicleCoverages/OtcType</for>
+        </behavior>
+        <behavior id="alterOTCTypeCodelistForMotorcycles" title="Alter OTC Type Codelist For Motorcycles">
+        <do action="alter">
+        <property name="optionListReferenceTag">xmlreader:autobCodeListRef.xml:physicalDamageOTCType_MC</property>
+        </do>
+        <where>
+        <preCondition name="HotVehicleType">SPEC</preCondition>
+        <preCondition name="VehicleBodyType">in('MC')</preCondition>
+        </where>
+        <for>*/vehicle/vehicleCoverages/OtcType</for>
+        </behavior>
+        <behavior id="alterOTCTypeCodelistForRepossessedAutos" title="Alter OTC Type Codelist For Repossessed Autos">
+        <do action="alter">
+        <property name="optionListReferenceTag">xmlreader:autobCodeListRef.xml:physicalDamageOTCType_RA</property>
+        </do>
+        <where>
+        <preCondition name="HotVehicleType">SPEC</preCondition>
+        <preCondition name="VehicleBodyType">in('RA')</preCondition>
+        </where>
+        <for>*/vehicle/vehicleCoverages/OtcType</for>
+        </behavior>
+        <behavior id="alterOTCTypeCodelistForSnowmobiles" title="Alter OTC Type Codelist For Snowmobiles">
+        <do action="alter">
+        <property name="optionListReferenceTag">xmlreader:autobCodeListRef.xml:physicalDamageOTCType_SNOWM</property>
+        </do>
+        <where>
+        <preCondition name="HotVehicleType">SPEC</preCondition>
+        <preCondition name="VehicleBodyType">in('SNOWM')</preCondition>
+        </where>
+        <for>*/vehicle/vehicleCoverages/OtcType</for>
+        </behavior>
+        <behavior id="alterOtherThanCollisionDeductibleId" title="Alter Other Than Collision Deductible Id based on OTC Type Selected">
+        <do action="alter">
+        <property name="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='${OtcType}'].Deductible.FormatInteger</property>
+        </do>
+        <where>
+        <preCondition name="OtcType">in('COMP', 'PERIL', 'PFIRE', 'PFRTH', 'LSPER', 'ExcludingFallingThroughIce', 'IncludingFallingThroughIce')</preCondition>
+        </where>
+        <for>*/vehicle/vehicleCoverages/OtherThanCollisionDeductible</for>
+        </behavior>
+        <behavior id="excludeOtherThanCollisionForPR" title="Exclude Other Than Collision Deductible if in PR">
+        <do action="exclude" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('PR')</preCondition>
+        </where>
+        <for>*/vehicle/vehicleCoverages/OtherThanCollisionDeductible</for>
+        </behavior>
+        <behavior id="excludeFullGlass" title="Exclude Full Glass Coverage">
+        <do action="exclude" />
+        <for>*/vehicle/vehicleCoverages/FullGlassCoverage</for>
+        </behavior>
+        <behavior id="includeFullGlassForAZ_NY" title="Include Full Glass Coverage if OTC Type = 'Comprehensive', based on Vehicle Type">
+        <do action="include" />
+        <where>
+        <preCondition name="OtcType">COMP</preCondition>
+        <preCondition name="VehicleBodyType">!in('SNOWM', 'GC', 'MC')</preCondition>
+        </where>
+        <for>*/vehicle/vehicleCoverages/FullGlassCoverage</for>
+        </behavior>
+        @expinge
+        <behavior id="excludeCollisionOption" title="Exclude Collision Option if not in MI">
+        <do action="exclude" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">!in('MI')</preCondition>
+        </where>
+        <for>*/vehicle/vehicleCoverages/collisionOption</for>
+        </behavior>
+
+        Additional Vehicle Options - Individual Fields
+        <behavior id="excludeAdditionalVehicleOptions" title="Exclude Additional Vehicle Options - to be included later">
+        <do action="exclude" />
+        <for>*/vehicle/additionalVehicleOptions/MotorcycleTrainingCourseCompletionDate</for>
+        <for>*/vehicle/additionalVehicleOptions/AccidentPreventionCourseCompletionDate</for>
+        <for>*/vehicle/additionalVehicleOptions/DefensiveDrivingCourseCompletionDate</for>
+        <for>*/vehicle/additionalVehicleOptions/RideSharingAgreement</for>
+        <for>*/vehicle/additionalVehicleOptions/AntiTheftDevice</for>
+        <for>*/vehicle/additionalVehicleOptions/NumberOfSafetyFeatures</for>
+        <for>*/vehicle/additionalVehicleOptions/LoggingIndicator</for>
+        <for>*/vehicle/additionalVehicleOptions/AuxiliaryRunningLamps</for>
+        <for>*/vehicle/additionalVehicleOptions/PassiveRestraint</for>
+        <for>*/vehicle/additionalVehicleOptions/DayCareCenterVehicle</for>
+        </behavior>
+        <behavior id="includeAccidentCourseDateForStates" title="Include Accident Prevention Course Completion Date if in AL, CO, KY, LA, MN, MT, NV, NM, NY, OK, OR, RI, SC, TN, WA or WV">
+        <do action="include" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('AL','CO','KY','LA','MN','MT','NV','NM','NY','OK','OR','RI','SC','TN','WA','WV')</preCondition>
+        </where>
+        <for>*/vehicle/additionalVehicleOptions/AccidentPreventionCourseCompletionDate</for>
+        </behavior>
+        <behavior id="includeMotorcycleTrainingDateForTN" title="Include Motorcycle Training Course Completion Date if Special Vehicle type is equal to Motorcycles and in TN or CT">
+        <do action="include" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('TN', 'CT')</preCondition>
+        <preCondition name="VehicleBodyType">in('MC')</preCondition>
+        </where>
+        <for>*/vehicle/additionalVehicleOptions/MotorcycleTrainingCourseCompletionDate</for>
+        </behavior>
+        <behavior id="includeDefensiveDriverForIL" title="Include Defensive Driving Course Completion Date if in IL">
+        <do action="include" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('IL')</preCondition>
+        </where>
+        <for>*/vehicle/additionalVehicleOptions/DefensiveDrivingCourseCompletionDate</for>
+        </behavior>
+        <behavior id="includeAntiTheftDeviceForStates" title="Include Anti Theft Device if in KY, LA, MN, NJ, NY or RI">
+        <do action="include" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('KY','LA','MN','NJ','NY','RI')</preCondition>
+        </where>
+        <for>*/vehicle/additionalVehicleOptions/AntiTheftDevice</for>
+        </behavior>
+        <behavior id="includeNumberForSafetyFeaturesForNJ" title="Include Number Of Safety Features if Vehicle type is Private Passenger, Collision Deductible > 0 and in NJ">
+        <do action="include" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('NJ')</preCondition>
+        <preCondition name="HotVehicleType">in('PP')</preCondition>
+        <preCondition name="collisionDeductible">!in('')</preCondition>
+        </where>
+        <for>*/vehicle/additionalVehicleOptions/NumberOfSafetyFeatures</for>
+        </behavior>
+        <behavior id="includePassRestraintForNV" title="Include Passive Restraint if in NV">
+        <do action="include" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('NV')</preCondition>
+        </where>
+        <for>*/vehicle/additionalVehicleOptions/PassiveRestraint</for>
+        </behavior>
+        <behavior id="includeAxiliaryRunningLampsForNY" title="Include Auxiliary Running Lamps if in NY">
+        <do action="include" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('NY')</preCondition>
+        </where>
+        <for>*/vehicle/additionalVehicleOptions/AuxiliaryRunningLamps</for>
+        </behavior>
+        <behavior id="includeLoggingIndicatorForSC_WA" title="Include Logging Indicator if Vehicle type equal to Truck, Tractor or Trailer and in SC or WA">
+        <do action="include" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('SC','WA')</preCondition>
+        <preCondition name="HotVehicleType">in('COML')</preCondition>
+        </where>
+        <for>*/vehicle/additionalVehicleOptions/LoggingIndicator</for>
+        </behavior>
+        <behavior id="includeDayCareVehicleForTN" title="Include DayCare Center Vehicle if Vehicle type equal to Public Vehicle and in TN">
+        <do action="include" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('TN')</preCondition>
+        <preCondition name="HotVehicleType">in('PU')</preCondition>
+        </where>
+        <for>*/vehicle/additionalVehicleOptions/DayCareCenterVehicle</for>
+        </behavior>
+        https://www.squishlist.com/agencyport/templates/53491/
+        <behavior id="includeRideSharingForCO" title="Include Ride Sharing Agreement if Special Vehicle Type and in CO">
+        <do action="include" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('CO')</preCondition>
+        <preCondition name="HotVehicleType">in('SPEC')</preCondition>
+        </where>
+        <for>*/vehicle/additionalVehicleOptions/RideSharingAgreement</for>
+        </behavior>
+        Supplemental Coverages - Section
+        <behavior id="excludeTowingLaborLimitForNonPP" title="Exclude Towing And Labor Limit if Vehicle type not equal to Private Passenger">
+        <do action="exclude" />
+        <where>
+        <preCondition name="HotVehicleType">!in('PP')</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">!in('WY')</preCondition>
+        </where>
+        <for>*/vehicle/supplementalCoverages/TowingAndLaborLimit</for>
+        </behavior>
+        <behavior id="excludeSupplementalCoveragesForSPEC">
+        <do action="exclude" />
+        <where>
+        <preCondition name="HotVehicleType">in('SPEC')</preCondition>
+        </where>
+        <for>*/vehicle/supplementalCoverages/RentalReimbursementDailyRentalAmount</for>
+        <for>*/vehicle/supplementalCoverages/RentalReimbursementNumberOfRentalDays</for>
+        <for>*/vehicle/supplementalCoverages/AudioVisualDataElectronicEquipment</for>
+        <for>*/vehicle/supplementalCoverages/TapesRecordsAndDiscsCoverage</for>
+        </behavior>
+        @expunge
+        <behavior id="excludeAutoLoanCoverage" title="Exclude Auto Loan Coverage">
+        <do action="exclude" />
+        <for>*/vehicle/supplementalCoverages/autoLoanCoverage</for>
+        </behavior>
+
+        <behavior id="includeAutoLoanForWA" title="Include Auto Loan Coverage if Vehicle type equal to Private Passenger Use and in WA">
+        <do action="include" />
+        <where>
+        <preCondition name="HotVehicleType">in('PP')</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('WA')</preCondition>
+        </where>
+        <for>*/vehicle/supplementalCoverages/autoLoanCoverage</for>
+        </behavior>
+
+        <behavior id="excludeAutoLeaseGapForWA" title="Exclude Auto Loan Lease Gap Coverage if Vehicle type not equal to Private Passenger Use and in WA">
+        <do action="exclude" />
+        <where>
+        <preCondition name="HotVehicleType">!in('PP')</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('WA')</preCondition>
+        </where>
+        <for>*/vehicle/supplementalCoverages/AutoLoanLeaseGapCoverage</for>
+        </behavior>
+
+        <behavior id="excludeAutoLeaseGapForSPEC" title="Exclude Auto Loan Lease Gap Coverage if Vehicle type is Special and not in WA">
+        <do action="exclude" />
+        <where>
+        <preCondition name="HotVehicleType">in('SPEC')</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">!in('WA')</preCondition>
+        </where>
+        <for>*/vehicle/supplementalCoverages/AutoLoanLeaseGapCoverage</for>
+        </behavior>
+
+        <behavior id="excludeMutualAidForNY" title="Exclude Mutual Aid Coverage if not in NY">
+        <do action="exclude" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">!in('NY')</preCondition>
+        </where>
+        <for>*/vehicle/supplementalCoverages/MutualAidNonSPVeh</for>
+        </behavior>
+        @expunge
+        <behavior id="excludeAttorneysFees" title="Exclude Attorney's Fees">
+        <do action="exclude" />
+        <for>*/vehicle/supplementalCoverages/attorneysFees</for>
+        </behavior>
+
+        <behavior id="includeAttorneyFeesForAK" title="Include Attorney's Fees if in AK and uninsuredLimitOption is selected">
+        <do action="include" />
+        <where>
+        <preCondition name="UMUIMOption">in('UMCSL','UMISP')</preCondition>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('AK')</preCondition>
+        </where>
+        <for>*/vehicle/supplementalCoverages/attorneysFees</for>
+        </behavior>
+
+        <behavior id="excludeBroadenedCollisionDeductible" title="Exclude Broadened Collision Deductible when not in Michigan">
+        <do action="exclude" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">!in('MI')</preCondition>
+        </where>
+        <for>*/vehicle/vehicleCoverages/broadenedCollisionDeductible</for>
+        </behavior>
+        <behavior id="excludeLimitedCollision" title="Exclude Limited Collision when not in Michigan">
+        <do action="exclude" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">!in('MI')</preCondition>
+        </where>
+        <for>*/vehicle/vehicleCoverages/LimitedCollision</for>
+        </behavior>
+    -->
+</transactionDefinitionBehavior>

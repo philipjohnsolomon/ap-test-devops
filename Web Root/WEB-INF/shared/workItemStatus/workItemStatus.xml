@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workItemStatusDefinition id="workItemStatus" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/workitemstatus/workitemstatusdefinition.xsd">
+	<status code="15" mnemonic="INPROGRESS" localeId="1" beforeTitle="In-Progress" duringTitle="in-progress" afterTitle="In-Progress" />
+	<status code="20" mnemonic="REFER" localeId="1" beforeTitle="Refer" duringTitle="referring" afterTitle="Referred" />
+	<status code="21" mnemonic="APPROVE" localeId="1" beforeTitle="Approve" duringTitle="approving" afterTitle="Approved" />
+	<status code="22" mnemonic="BIND" localeId="1" beforeTitle="Bind" duringTitle="binding" afterTitle="Bound" />
+	<status code="30" mnemonic="REJECT" localeId="1" beforeTitle="Reject" duringTitle="rejecting" afterTitle="Rejected" />
+	<status code="35" mnemonic="DECLINE" localeId="1" beforeTitle="Decline" duringTitle="declining" afterTitle="Declined" />
+	<status code="40" mnemonic="OFFLINE" localeId="1" beforeTitle="Offline" duringTitle="offlining" afterTitle="Offline" />
+	<status code="55" mnemonic="DELETE" localeId="1" beforeTitle="Decline" duringTitle="deleting" afterTitle="Deleted" />
+	<status code="60" mnemonic="CLIENTDECLINED" localeId="1" beforeTitle="Client-Decline" duringTitle="client-declining" afterTitle="Client-Declined" />
+	<status code="70" mnemonic="TRANSFERTOADMIN" localeId="1" beforeTitle="Transfer" duringTitle="transferring" afterTitle="Transferred" />
+	<status code="115" mnemonic="ACTIVE" localeId="1" beforeTitle="Active" duringTitle="activating" afterTitle="Active" />
+	<status code="120" mnemonic="INACTIVE" localeId="1" beforeTitle="Deactivate" duringTitle="deactivating" afterTitle="Inactive" />
+	<!-- Espana -->
+	<status code="15" mnemonic="INPROGRESS" localeId="3" beforeTitle="En Progreso" duringTitle="en progreso" afterTitle="En Progreso" />
+	<status code="20" mnemonic="REFER" localeId="3" beforeTitle="Referir" duringTitle="referir" afterTitle="Referido" />
+	<status code="21" mnemonic="APPROVE" localeId="3" beforeTitle="Aprobar" duringTitle="aprobando" afterTitle="Aprobado" />
+	<status code="22" mnemonic="BIND" localeId="3" beforeTitle="Expedir" duringTitle="expedir" afterTitle="Expedido" />
+	<status code="30" mnemonic="REJECT" localeId="3" beforeTitle="Rechazar" duringTitle="rechazar" afterTitle="Rechazado" />
+	<status code="35" mnemonic="DECLINE" localeId="3" beforeTitle="Declinar" duringTitle="declinar" afterTitle="Declinado" />
+	<status code="40" mnemonic="OFFLINE" localeId="3" beforeTitle="Desconectado" duringTitle="desconectado" afterTitle="Desconectado" />
+	<status code="55" mnemonic="DELETE" localeId="3" beforeTitle="Borrar" duringTitle="borrar" afterTitle="Borrado" />
+	<status code="60" mnemonic="CLIENTDECLINED" localeId="3" beforeTitle="Declinado por el Cliente" duringTitle="Declinado por el Cliente" afterTitle="Declinado por el Cliente" />
+	<status code="70" mnemonic="TRANSFERTOADMIN" localeId="3" beforeTitle="Transferido a la Administración de Pólizas" duringTitle="Transferido a la Administración de Pólizas" afterTitle="Transferido a la Administración de Pólizas" />
+	<status code="115" mnemonic="ACTIVE" localeId="3" beforeTitle="Activo" duringTitle="activación" afterTitle="Activo" />
+	<status code="120" mnemonic="INACTIVE" localeId="3" beforeTitle="Desactivar" duringTitle="desactivación" afterTitle="Inactivo" />
+	
+</workItemStatusDefinition>

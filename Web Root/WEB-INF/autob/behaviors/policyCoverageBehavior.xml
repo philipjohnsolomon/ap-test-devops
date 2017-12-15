@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transactionDefinitionBehavior xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/behavior/transactionDefinitionBehavior.xsd">
+
+    <additionalFieldToShred name="OBEL" />
+
+    <hotField key="*/policyCoverages/coverageInformationSection/HotRateState" >
+    
+        <refreshListFieldEvent key="*/policyCoverages/coverageInformationSection/HotRateState" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/policyCoverages/coveragesForNamedIndividuals/DocMedicalPaymentsLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/policyCoverages/coveragesForNamedIndividuals/DocComprehensiveCoverage" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/policyCoverages/coveragesForNamedIndividuals/DocCollisionCoverage" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/policyCoverages/coveragesForNamedIndividuals/DocratingTerritory" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/policyCoverages/coveragesForNamedIndividuals/DocLiabilityLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/policyCoverages/coveragesForNamedIndividuals/docUMLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/policyCoverages/coveragesForNamedIndividuals/DocUIMLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <!-- @expunge
+        <refreshListFieldEvent key="*/policyCoverages/coveragesForNamedIndividuals/docUMPDLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/policyCoverages/coveragesForNamedIndividuals/docUMUIMLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/policyCoverages/coveragesForNamedIndividuals/docUIMPDLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/policyCoverages/coveragesForNamedIndividuals/docUMUIMPDLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+         -->
+        <refreshListFieldEvent key="*/policyCoverages/hiredAuto/HiredAutoOtherThanCollisionDeductible" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/policyCoverages/hiredAuto/HiredAutoLiabilityLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/policyCoverages/liabilityCoveragesSection/LiabilityLimitCSL" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/policyCoverages/liabilityCoveragesSection/LiabilityLimitBISPL" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/policyCoverages/liabilityCoveragesSection/PropertyDamageDeductible" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/policyCoverages/liabilityCoveragesSection/LimitedPropertyDamageLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+       <!-- @expunge
+        <refreshListFieldEvent key="*/policyCoverages/liabilityCoverage/liabilityDeductibleAppliesToCSL" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/policyCoverages/liabilityCoverage/liabilityDeductibleAppliesToBISPL" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/policyCoverages/liabilityCoverage/optionalBItoOthersOption" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/policyCoverages/liabilityCoverage/optionalBItoOthersOptionCSL" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/policyCoverages/liabilityCoverage/optionalBItoOthersOptionSPL" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/policyCoverages/symbols/OptionalBodilyInjuryToOthersSymbolCd" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+         -->
+         
+    </hotField>
+    
+    <hotField key="*/policyCoverages/liabilityCoveragesSection/LiabilityOption">
+        <refreshListFieldEvent key="*/policyCoverages/liabilityCoveragesSection/LiabilityLimitCSL" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/policyCoverages/liabilityCoveragesSection/LiabilityLimitBISPL" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <!-- @expunge
+        <refreshListFieldEvent key="*/policyCoverages/liabilityCoverage/liabilityDeductibleAppliesToCSL" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/policyCoverages/liabilityCoverage/liabilityDeductibleAppliesToBISPL" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/policyCoverages/liabilityCoverage/optionalBItoOthersOption" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+         -->
+    </hotField>
+    <!-- @expunge
+    <hotField key="*/policyCoverages/liabilityCoverage/optionalBItoOthersOption">
+        <refreshListFieldEvent key="*/policyCoverages/liabilityCoverage/optionalBItoOthersOptionCSL" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/policyCoverages/liabilityCoverage/optionalBItoOthersOptionSPL" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+    </hotField>
+    -->
+    <hotField key="*/policyCoverages/hiredAutoSection/HiredAutoCoverage" />
+    <hotField key="*/policyCoverages/nonOwnedAutoSection/NonOwnedAutoCoverage" />
+    <hotField key="*/policyCoverages/driveOtherCarCoverageSection/DocCoverage" />
+    <hotField key="*/policyCoverages/driveOtherCarCoverageSection/DocBroadenedPIP" />
+    <hotField key="*/policyCoverages/hiredAutoSection/HiredAutoOTCType"/>
+
+
+    <!-- Liability Coverage -->
+
+    <!-- show or hide CSL/BISPL based on selected dropdown values -->
+    <!-- @expunge
+    <behavior id="excludeLiabilityCoverages" title="Exclude Liablity Coverage Fields">
+        <do action="exclude" />
+        <for>*/policyCoverages/liabilityCoverage/liabilityLimitBISPL</for>
+        <for>*/policyCoverages/liabilityCoverage/liabilityDeductibleBISPL</for>
+        <for>*/policyCoverages/liabilityCoverage/liabilityDeductibleAppliesToBISPL</for>
+        <for>*/policyCoverages/liabilityCoverage/liabilityLimitCSL</for>
+        <for>*/policyCoverages/liabilityCoverage/liabilityDeductibleCSL</for>
+        <for>*/policyCoverages/liabilityCoverage/liabilityDeductibleAppliesToCSL</for>
+        <for>*/policyCoverages/liabilityCoverage/optionalBItoOthersOption</for>
+        <for>*/policyCoverages/liabilityCoverage/optionalBItoOthersOptionCSL</for>
+        <for>*/policyCoverages/liabilityCoverage/optionalBItoOthersOptionSPL</for>
+        <for>*/policyCoverages/liabilityCoverage/motorcycleOccupantExclusion</for>
+        <for>*/policyCoverages/liabilityCoverage/passengerHazard</for>
+    </behavior>
+    -->
+    <behavior id="includeLiabilityCoveragesForBISPL" title="Show BISPL Liablity Coverage Fields if Liablilty Option is equal to BISPL" weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="LiabilityOption">!BISPL</preCondition>
+        </where>
+        <for>*/policyCoverages/liabilityCoveragesSection/LiabilityLimitBISPL</for>
+        <for>*/policyCoverages/liabilityCoveragesSection/PropertyDamageLimit</for>
+        <for>*/policyCoverages/liabilityCoveragesSection/LimitedPropertyDamageLimit</for>
+        <for>*/policyCoverages/liabilityCoveragesSection/OptionalBodilyInjurySplitLimit</for>
+        <!-- @expunge
+        <for>*/policyCoverages/liabilityCoverage/liabilityDeductibleBISPL</for>
+        <for>*/policyCoverages/liabilityCoverage/liabilityDeductibleAppliesToBISPL</for>
+        -->
+    </behavior>
+    <behavior id="includeLiabilityCoveragesForCSL" title="Show CSL Liablity Coverage Fields if Liablilty Option is equal to CSL" weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="LiabilityOption">!CSL</preCondition>
+        </where>
+        <for>*/policyCoverages/liabilityCoveragesSection/LiabilityLimitCSL</for>
+        <for>*/policyCoverages/liabilityCoveragesSection/OptionalBodilyInjuryCLSLimit</for>
+        <!-- @expunge
+        <for>*/policyCoverages/liabilityCoverage/liabilityDeductibleCSL</for>
+        <for>*/policyCoverages/liabilityCoverage/liabilityDeductibleAppliesToCSL</for>
+        -->
+    </behavior>
+    <behavior id="includePassengerHazardForSNOWM" title="Show Passenger Hazard if Liablilty Option is equal to CSL or BISPL and any Body Type is Snowmobile">
+        <do action="exclude" />
+        <where>
+            <preCondition name="LiabilityOption">!in('CSL', 'BISPL')</preCondition>
+            <preCondition name="XPATH{ count(CommlAutoLineBusiness/CommlRateState[@id = ap:getVar('ap:CommlRateStateId')]/CommlVeh/VehBodyTypeCd[.='SNOWM']) }">0</preCondition>
+        </where>
+        <for>*/policyCoverages/liabilityCoveragesSection/PassengerHazard</for>
+    </behavior>
+    <behavior id="alterPassengerHazardId" title="Alter Passenger Hazard Id based on Liablilty Option Selected">
+        <do action="alter">
+            <property name="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='${liabilityOption}'].Option.OptionCd</property>
+        </do>
+        <where>
+            <preCondition name="LiabilityOption">in('CSL', 'BISPL')</preCondition>
+        </where>
+        <for>*/policyCoverages/liabilityCoveragesSection/PassengerHazard</for>
+    </behavior>
+   
+    <!-- alter liabilty code list behaviors -->
+    <!-- @expunge
+    <behavior id="alterLiabilityDetuctibleCodelistsForStates" title="Alter Liabilty Coverage code list">
+        <do action="alter">
+            <property name="optionListReferenceTag">xmlreader:autobCodeListRef.xml:LiabilityFullDeductibleOptionCd</property>
+        </do>
+        <where>
+            <preCondition name="HotRateState">in('CT', 'DE', 'GA', 'HI', 'IL', 'IN', 'IA', 'KS', 'KY', 'MD', 'MN', 'MI', 'NH', 'NJ', 'NY', 'OR', 'PA', 'SD', 'UT', 'VA', 'WV', 'WY')</preCondition>
+        </where>
+        <for>*/policyCoverages/liabilityCoverage/liabilityDeductibleAppliesToBISPL</for>
+        <for>*/policyCoverages/liabilityCoverage/liabilityDeductibleAppliesToCSL</for>
+    </behavior>
+    
+    <behavior id="alterLiabilityCoverageCodeListsForAK" title="Alter Liabilty Coverage code list for Alaska">
+        <do action="alter">
+            <property name="optionListReferenceTag">custom:com.agencyport.autob.custom.StateSpcVehCoverageListBuilder:LiabilityDeductibleOptionCd</property>
+        </do>
+        <where>
+            <preCondition name="HotRateState">in('AK')</preCondition>
+        </where>
+        <for>*/policyCoverages/liabilityCoverage/liabilityDeductibleAppliesToBISPL</for>
+        <for>*/policyCoverages/liabilityCoverage/liabilityDeductibleAppliesToCSL</for>
+    </behavior>
+    -->
+    <!-- Optional BI to Others Option (MA Only) -->
+    <!-- @expunge
+    <behavior id="includeOptionalBItoOthersOption" title="Show Optional BI to Others Option in MA when Liability is elected">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('MA')</preCondition>
+            <preCondition name="liabilityOption">!</preCondition>
+        </where>
+        <for>*/policyCoverages/liabilityCoverage/optionalBItoOthersOption</for>
+    </behavior>
+    <behavior id="alterOptionalBItoOthersOptionList" title="Alter Optional BI to Others List based on Liability limit option">
+        <do action="alter">
+            <property name="optionListReferenceTag">xmlreader:autobCodeListRef.xml:optionalBItoOthersOptionCdBISPL</property>
+        </do>
+        <where>
+            <preCondition name="HotRateState">in('MA')</preCondition>
+            <preCondition name="liabilityOption">BISPL</preCondition>
+        </where>
+        <for>*/policyCoverages/liabilityCoverage/optionalBItoOthersOption</for>
+    </behavior>
+    <behavior id="includeOptionalBItoOthersForCSL" title="Show OPTBI Coverage Fields if Optional BI Option is equal to CSL">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('MA')</preCondition>
+            <preCondition name="liabilityOption">!</preCondition>
+            <preCondition name="optionalBItoOthersOption">CSL</preCondition>
+        </where>
+        <for>*/policyCoverages/liabilityCoverage/optionalBItoOthersOptionCSL</for>
+    </behavior>
+    <behavior id="includeOptionalBItoOthersForSplitLimit" title="Show OPTBI Coverage Fields if Optional BI Option is Split">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('MA')</preCondition>
+            <preCondition name="liabilityOption">!</preCondition>
+            <preCondition name="optionalBItoOthersOption">BISPL</preCondition>
+        </where>
+        <for>*/policyCoverages/liabilityCoverage/optionalBItoOthersOptionSPL</for>
+    </behavior>
+    -->
+    <behavior id="includeMotorcycleOccupantExclusion" title="Show Motorcycle Occupant Exclusion when at least one MC is garaged in MA and Optional BI is elected" weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HotRateState">!in('MA')</preCondition>
+            <preCondition name="LiabilityOption"></preCondition>
+            <!-- @expunge
+            <preCondition name="optionalBItoOthersOption">!</preCondition>
+            -->
+            <preCondition name="XPATH{ count(CommlAutoLineBusiness/CommlRateState[StateProvCd='MA']/CommlVeh/VehBodyTypeCd[.='MC']) }">0</preCondition>
+        </where>
+        <for>*/policyCoverages/liabilityCoveragesSection/MotorcycleGuestOccupnacyExclusion</for>
+    </behavior>
+
+    <!-- Supplemental Coverage -->
+    <!-- @expunge
+    <behavior id="excludeSupplementalCoverages" title="Exclude Certain Supplemental Coverages - to be included later">
+        <do action="exclude" />
+        <for>*/policyCoverages/supplementalCoverages/BuyBack</for>
+        <for>*/policyCoverages/supplementalCoverages/OBEL</for>
+    </behavior>
+   
+    <behavior id="includePropDamageLiabilityBuyBackCoverageForMI" title="Property Damage Liability Buy Back Coverage" weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HotRateState">!in('KY')</preCondition>
+            <preCondition name="HotVehicleType">!in('PP')</preCondition>
+        </where>
+        <for>*/policyCoverages/supplementalCoverages/BuyBack</for>
+    </behavior>
+    
+    <behavior id="includeOBELCoverageLimit" title="Include OBEL Limit if in NY AND OBEL = 'Yes'" weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HotRateState">!in('NY')</preCondition>
+            <preCondition name="XPATH{ count(CommlAutoLineBusiness/CommlRateState[StateProvCd='NY']/CommlVeh/CommlCoverage[CoverageCd='OBEL']) }">0</preCondition>
+        </where>
+        <for>*/policyCoverages/supplementalCoverages/OBEL</for>
+    </behavior>
+     -->
+    <!-- Hired Auto Coverage -->
+
+    <behavior id="excludeHiredAutoCoverageFields" title="Exclude Hired Auto Fields when the Hired Auto Option is unchecked" weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HiredAutoCoverage">NO</preCondition>
+        </where>
+        <for>*/policyCoverages/hiredAutoSection/HiredAutoCollisionDeductible</for>
+        <for>*/policyCoverages/hiredAutoSection/HiredAutoOTCType</for>
+        <for>*/policyCoverages/hiredAutoSection/HiredAutoOtherThanCollisionDeductibleCOMP</for>
+        <for>*/policyCoverages/hiredAutoSection/HiredAutoOtherThanCollisionDeductiblePERIL</for>
+        <for>*/policyCoverages/hiredAutoSection/HiredAutoLiabilityLimit</for>
+        <for>*/policyCoverages/hiredAutoSection/HiredAutoTotalCostOfHire</for>
+        <for>*/policyCoverages/hiredAutoSection/HiredAutoIfAnyRatingBasis</for>
+        <for>*/policyCoverages/hiredAutoSection/HiredAutoNumberofDays</for>
+        <for>*/policyCoverages/hiredAutoSection/HiredAutoNumberofVehicles</for>
+    </behavior>
+    
+    <behavior weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HiredAutoOTCType">!COMP</preCondition>
+        </where>
+        <for>*/policyCoverages/hiredAutoSection/HiredAutoOtherThanCollisionDeductibleCOMP</for>
+    </behavior>
+    
+    <behavior weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HiredAutoOTCType">!PERIL</preCondition>
+        </where>
+        <for>*/policyCoverages/hiredAutoSection/HiredAutoOtherThanCollisionDeductiblePERIL</for>
+    </behavior>
+
+    <!-- Non-Owned Auto Coverage -->
+
+    <behavior id="excludeNonOwnedAutoCoverageFields" title="Exclude Non-Owned Fields when the Non-Owned Coverage Option is unchecked" weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="NonOwnedAutoCoverage">NO</preCondition>
+        </where>
+        <for>*/policyCoverages/nonOwnedAutoSection/NumberOfEmployees</for>
+        <for>*/policyCoverages/nonOwnedAutoSection/NumberOfPartners</for>
+        <for>*/policyCoverages/nonOwnedAutoSection/NumberOfVolunteers</for>
+    </behavior>
+
+    <!-- Drive Other Car (DOC) Coverage -->
+
+    <behavior id="excludeDOCCoverageFields" title="Exclude DOC Fields when the DOC Coverage Option is unchecked" weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="DocCoverage">!in('YES')</preCondition>
+        </where>
+        <for>*/policyCoverages/driveOtherCarCoverageSection/DocNumberOfNamedIndividuals</for>
+        <for>*/policyCoverages/driveOtherCarCoverageSection/DocratingTerritory</for>
+        <for>*/policyCoverages/driveOtherCarCoverageSection/DocLiabilityLimit</for>
+        <for>*/policyCoverages/driveOtherCarCoverageSection/DocUMLimit</for>
+        <for>*/policyCoverages/driveOtherCarCoverageSection/DocUIMLimit</for>
+        <!-- @expunge
+        <for>*/policyCoverages/driveOtherCarCoverageSection/DocUMPDLimit</for>
+        <for>*/policyCoverages/driveOtherCarCoverageSection/DocUMUIMLimit</for>
+        <for>*/policyCoverages/driveOtherCarCoverageSection/DocUIMPDLimit</for>
+        <for>*/policyCoverages/driveOtherCarCoverageSection/DocUMUIMPDLimit</for>
+         -->
+        <for>*/policyCoverages/driveOtherCarCoverageSection/DocMedicalPaymentsLimit</for>
+        <for>*/policyCoverages/driveOtherCarCoverageSection/DocComprehensiveCoverage</for>
+        <for>*/policyCoverages/driveOtherCarCoverageSection/DocCollisionCoverage</for>
+        <for>*/policyCoverages/driveOtherCarCoverageSection/DocBroadenedPIP</for>
+        <for>*/policyCoverages/driveOtherCarCoverageSection/DocBroadenedPIPNumIndividuals</for>
+    </behavior>
+<!--   @expunge  
+    <behavior id="excludeDocUMLimit" title="Drive Other Car - UML Limit">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HotRateState">in('AK','CT','MN','NE','NJ','NY','TX','WA')</preCondition>
+        </where>
+        <for>*/policyCoverages/coveragesForNamedIndividuals/docUMLimit</for>
+    </behavior>
+    <behavior id="excludeDocUIMLimit" title="Drive Other Car - UIM Limit">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HotRateState">in('AL','AK','CA','CO','CT','DE','FL','GA','KS','LA','ME','MD','MI','MN','MS','NE','NV','NH','NJ','NM','NY','NC','OK','OR','RI','TN','TX','VT','VA')</preCondition>
+        </where>
+        <for>*/policyCoverages/coveragesForNamedIndividuals/docUIMLimit</for>
+    </behavior>
+    <behavior id="excludeDocUMUIMLimit" title="Drive Other Car - UMUIM Limit">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HotRateState">!in('AK','CT','MN','NE','NJ','NY','TX')</preCondition>
+        </where>
+        <for>*/policyCoverages/coveragesForNamedIndividuals/docUMUIMLimit</for>
+    </behavior>
+    <behavior id="excludeDocUMPDLimit" title="Drive Other Car - UMPD Limit">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HotRateState">in('AL','AZ','CT','FL','HI','IA','KS','KY','ME','MI','MN','MO','MT','NE','NV','NJ','NY','ND','OK','PA','SD','TX','WA','WI')</preCondition>
+        </where>
+        <for>*/policyCoverages/coveragesForNamedIndividuals/docUMPDLimit</for>
+    </behavior>
+    <behavior id="excludeDocUIMPDLimit" title="Drive Other Car - UIMPD Limit">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HotRateState">!in('DC','SC','WA','WV')</preCondition>
+        </where>
+        <for>*/policyCoverages/coveragesForNamedIndividuals/docUIMPDLimit</for>
+    </behavior>
+    <behavior id="excludeDocUMUIMPDLimit" title="Drive Other Car - UMUIMPD Limit">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HotRateState">!in('NJ','TX')</preCondition>
+        </where>
+        <for>*/policyCoverages/coveragesForNamedIndividuals/docUMUIMPDLimit</for>
+    </behavior>
+    <behavior id="excludeDocMedicalPaymentsLimitForPA" title="Drive Other Car - Medical Payments Limit - PA">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HotRateState">in('PA')</preCondition>
+        </where>
+        <for>*/policyCoverages/coveragesForNamedIndividuals/docMedicalPaymentsLimit</for>
+    </behavior>
+    <behavior id="excludeDocMedicalPaymentsLimitForMI" title="Drive Other Car - Medical Payments Limit - MI">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HotRateState">in('MI')</preCondition>
+        </where>
+        <for>*/policyCoverages/coveragesForNamedIndividuals/docMedicalPaymentsLimit</for>
+    </behavior>
+    -->
+    <behavior id="excludeDOCBroadenedPIPNumIndividuals" title="Exclude DOC Broadened PIP # Individuals" weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="DocBroadenedPIP">0</preCondition>
+        </where>
+        <for>*/policyCoverages/driveOtherCarCoverageSection/DocBroadenedPIPNumIndividuals</for>
+    </behavior>
+
+ 
+    <!-- Supplemental Coverages -->
+<!-- @expunge
+    <behavior id="ExlucdeGovSubdivisionsIncreasedLiabilityLimitsForOK" title="Government Subdivisions Increased Liability Limits">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HotRateState">!in('OK')</preCondition>
+        </where>
+        <for>*/policyCoverages/supplementalCoverages/GovSubdivisionsIncreasedLiabilityLimits</for>
+    </behavior>
+ -->
+    <!-- Symbols -->
+
+    <!-- ****** All Symbols behavior is backed up in the CommlAutoReferentialIntegrityManager to prevent erroneous symbols from being orphaned when PreConditions change. ****** -->
+    <behavior id="excludeCommAutoPIPSymbols" title="Comm Auto PIP Symbols">
+        <do action="exclude" />
+        <where>
+            <preCondition name="XPATH{ count(CommlAutoLineBusiness/CommlRateState[contains('AK:DC:FL:HI:KS:KY:MD:MI:MN:NJ:NY:ND:OR:TX:UT:WA', StateProvCd)]) }">0</preCondition>
+        </where>
+        <for>*/policyCoverages/symbolsSection/SymbolsPIP</for>
+    </behavior>
+    <!--  @expunge
+    <behavior id="excludePIPNoFaultSymbolCdByState" title="Exclude PIP No Fault Symbol Code by State">
+        <description>Excludes the PIP Symbol for those State which do not support no fault (PIP) and any which utilize custom symbols, such as Pennsylvania</description>
+        <do action="exclude" />
+        <where>
+            <preCondition name="XPATH{ count(CommlAutoLineBusiness/CommlRateState[contains('MA:MI:NJ:NY', StateProvCd)]) }">0</preCondition>
+        </where>
+        <for>*/policyCoverages/symbols/PIPNoFaultSymbolCd</for>
+    </behavior>
+    
+    <behavior id="excludeDamageToSomoneElsesPropertySymbolCdByState" title="Exclude Damage to Someone Else's Property Symbol when MA is not included">
+        <do action="exclude" />
+        <where>
+            <preCondition name="XPATH{ count(CommlAutoLineBusiness/CommlRateState[StateProvCd='MA']) }">0</preCondition>
+        </where>
+        <for>*/policyCoverages/symbols/DamageToSomoneElsesPropertySymbolCd</for>
+    </behavior>
+     
+    <behavior id="excludeOptionalBodilyInjuryToOthersSymbolCd" title="Exclude Optional Bodily Injury To Others Symbol when coverage is not elected. Offered in MA only.">
+        <do action="exclude" />
+        <where>
+            <preCondition name="XPATH{ count(CommlAutoLineBusiness/CommlRateState[StateProvCd='MA']/CommlAutoOptionalCoverages/CommlCoverage[CoverageCd='OPTBI']) }">0</preCondition>
+        </where>
+        <for>*/policyCoverages/symbols/OptionalBodilyInjuryToOthersSymbolCd</for>
+    </behavior>
+    
+    <behavior id="excludePennsylvaniaSpecificPIPSymbols" title="Exclude PA specific PIP symbols when PA is not included">
+        <do action="exclude" />
+        <where>
+            <preCondition name="XPATH{ count(CommlAutoLineBusiness/CommlRateState[StateProvCd='PA']) }">0</preCondition>
+        </where>
+        <for>*/policyCoverages/symbols/FirstPartyBenefitsSymbolCd</for>
+        <for>*/policyCoverages/symbols/CombinationFirstPartyBenefitsSymbolCd</for>
+        <for>*/policyCoverages/symbols/ExtraordinaryMedicalBenefitsSymbolCd</for>
+    </behavior>
+    -->
+    <behavior>
+        <do action="alter">
+            <property name="optionListReferenceTag">xmlreader:codeListRef.xml:blank|autobCodeListRef.xml:SymbolsPIPDC</property>
+        </do>
+        <where>
+            <preCondition name="ControllingState">DC</preCondition>
+        </where>
+        <for>*/policyCoverages/symbolsSection/PIPNoFaultSymbolCd</for>
+    </behavior>
+    <behavior id="excludeNewYorkSpecificPIPSymbols" title="Exclude NY specific PIP symbols when NY is not included">
+        <do action="exclude" />
+        <where>
+            <preCondition name="XPATH{ count(CommlAutoLineBusiness/CommlRateState[StateProvCd='NY']) }">0</preCondition>
+        </where>
+        <for>*/policyCoverages/symbolsSection/SymbolsOBEL</for>
+        <for>*/policyCoverages/symbolsSection/SymbolsAPIP</for>
+        <for>*/policyCoverages/symbolsSection/SymbolsWorkLoss</for>
+        <for>*/policyCoverages/symbolsSection/SymbolsMedicalExpenseElimination</for>
+    </behavior>
+  <!--    @expunge
+    <behavior id="excludeMichiganSpecificPIPSymbols" title="Exclude MI specific PIP symbols when MI is not included">
+        <do action="exclude" />
+        <where>
+            <preCondition name="XPATH{ count(CommlAutoLineBusiness/CommlRateState[StateProvCd='MI']) }">0</preCondition>
+        </where>
+        <for>*/policyCoverages/symbols/LimitedPropertyDamageLiabilitySymbolCd</for>
+        <for>*/policyCoverages/symbols/PropertyProtectionCoverageSymbolCd</for>
+    </behavior>
+     -->
+</transactionDefinitionBehavior>
+

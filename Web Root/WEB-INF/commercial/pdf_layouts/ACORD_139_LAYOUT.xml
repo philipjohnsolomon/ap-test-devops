@@ -1,0 +1,223 @@
+
+<pdf_layout name="ACORD_139_LAYOUT">
+
+	<page pageNum="1">
+
+		<field name="Form.formDate" font="9" x="7.2" y=".65" type="2" maxWidth="10" maxHeight="8" pdfDesc="form date"/>
+			
+		<!-- Header Information -->
+		<field name="Form.Agency.Info" font="9"  x=".35" y="1.27" type="2" maxWidth="40" maxHeight="4" pdfDesc="agency name"/>
+		<field name="Form.Agency.Name" font="9"  x=".35" y="1.27" type="2" maxWidth="40" maxHeight="4" pdfDesc="agency name"/>	
+		<field name="Form.Agency.Addr1" font="9"  x=".35" y="1.47" type="2" maxWidth="40" maxHeight="4" pdfDesc="agency name"/>	
+		<field name="Form.Agency.Addr2" font="9"  x=".35" y="1.67" type="2" maxWidth="40" maxHeight="4" pdfDesc="agency name"/>	
+		<field name="Form.Agency.City" font="9"  x=".35" y="1.87" type="2" maxWidth="40" maxHeight="4" pdfDesc="agency name"/>	
+		<field name="Form.Agency.State.Zip" font="9"  x=".35" y="2.07" type="2" maxWidth="40" maxHeight="4" pdfDesc="agency name"/>	
+		<field name="Form.Agency.Phone" font="9" x="1.54" y=".86" type="2" maxWidth="24" maxHeight="" pdfDesc="Agency Phone"/>
+		<field name="Form.Agency.Fax" font="9" x="1.41" y="1.03" type="2" maxWidth="24" maxHeight="" pdfDesc="Agency fax"/>
+		<field name="Form.Agency.Code" font="9" x=".67" y="2.21" type="2" maxWidth="13" maxHeight="" pdfDesc="Agency Code"/>
+		<field name="Form.Agency.SubCode" font="9" x="2.33" y="2.21" type="2" maxWidth="13" maxHeight="" pdfDesc="Agency Subcode"/>
+		<field name="Form.Agency.CustomerId" font="9" x="1.33" y="2.36" type="2" maxWidth="27" maxHeight="" pdfDesc="Agency Cust ID"/>
+
+		<field name="Form.Company.Name" font="9" x="3.50" y="1" type="2" maxWidth="46" maxHeight="" pdfDesc="Company Name"/>
+		<field name="Form.Applicant.Name" font="7" x="3.50" y="1.18" type="2" maxWidth="34" maxHeight="2" pdfDesc="Applicant Name"/>
+		<field name="Form.NAIC.Code" font="9" x="6.09" y=".85" type="2" maxWidth="10" maxHeight="" pdfDesc="NAIC Code"/>
+		<field name="Form.Policy.Number" font="9" x="5.57" y="1.32" type="2" maxWidth="19" maxHeight="" pdfDesc="Policy Number"/>
+		<field name="Form.Curr.Page" font="9" x="7.3" y="1.07" type="2" maxWidth="3" maxHeight="" pdfDesc="Current Page"/>
+		<field name="Form.Total.Page" font="9" x="7.78" y="1.07" type="2" maxWidth="3" maxHeight="" pdfDesc="Total Pages"/>
+		<field name="Form.Applicant.EffectiveDate" font="9" x="7.14" y="1.31" type="2" maxWidth="10" maxHeight="" pdfDesc="Effective Date"/>
+		<field name="Form.Applicant.StreetAddress" font="8" x="3.52" y="1.58" type="2" maxWidth="40" maxHeight="2" pdfDesc="Head Quarter Addr1ess"/>
+		<field name="Form.Applicant.CityStateZip" font="8" x="3.52" y="1.72" type="2" maxWidth="40" maxHeight="2" pdfDesc="Head Quarter Addr1ess"/>
+	
+	
+		<field name="Coins.80" font="9" x="3.47" y="2.03" type="2" maxWidth="1" maxHeight="" pdfDesc="coins 80"/>
+		<field name="Coins.90" font="9" x="3.47" y="2.18" type="2" maxWidth="1" maxHeight="" pdfDesc="coins 90"/>
+		<field name="Coins.100" font="9" x="3.46" y="2.32" type="2" maxWidth="1" maxHeight="" pdfDesc="coins 100"/>
+		<field name="Coins.Unknown" font="9" x="3.46" y="2.51" type="2" maxWidth="1" maxHeight="" pdfDesc="coins unknown"/>
+		<field name="Coins.Unknown.value" font="9" x="3.67" y="2.51" type="2" maxWidth="4" maxHeight="" pdfDesc="coins unknown"/>
+		
+		<field name="Form.Blanket.Number" font="9" x="7.33" y="2.5" type="2" maxWidth="6" maxHeight="" pdfDesc="coins unknown"/>
+		<field name="Form.Blanket.Name" font="9" x="6.62" y="2.5" type="2" maxWidth="8" maxHeight="" pdfDesc="coins unknown"/>
+		
+		<field name="Basic" font="9" x="4.07" y="2.03" type="2" maxWidth="1" maxHeight="" pdfDesc="basic"/>
+		<field name="Broad" font="9" x="4.08" y="2.18" type="2" maxWidth="1" maxHeight="" pdfDesc="broad"/>
+		<field name="Special" font="9" x="4.08" y="2.35" type="2" maxWidth="1" maxHeight="" pdfDesc="special"/>
+		<field name="CauseofLoss.Unknown" font="9" x="4.08" y="2.5" type="2" maxWidth="1" maxHeight="" pdfDesc="unknown cause of loss"/>
+		<field name="CauseofLoss.Unknown.Value" font="9" x="4.27" y="2.5" type="2" maxWidth="15" maxHeight="" pdfDesc="unknown cause of loss"/>
+		
+		<field name="Earthquake" font="9" x="5.55" y="2.03" type="2" maxWidth="1" maxHeight="" pdfDesc="earthquake"/>
+		<field name="Flood" font="9" x="5.55" y="2.18" type="2" maxWidth="1" maxHeight="" pdfDesc="flood"/>
+		<field name="Sprinkler.Leak" font="9" x="5.55" y="2.33" type="2" maxWidth="1" maxHeight="" pdfDesc="sprinkler"/>
+		<field name="Vandal.Excl" font="9" x="5.55" y="2.51" type="2" maxWidth="1" maxHeight="" pdfDesc="vandal"/>
+		<field name="SpAvgRate" font="9" x="6.66" y="2.02" type="2" maxWidth="1" maxHeight="" pdfDesc="special average rate"/>
+		<field name="BlktRate" font="9" x="6.68" y="2.19" type="2" maxWidth="1" maxHeight="" pdfDesc="blanket rate"/>
+		<field name="Rate.Unknown" font="9" x="6.68" y="2.34" type="2" maxWidth="1" maxHeight="" pdfDesc1="unknown rate"/>
+		<field name="Rate.Unknown.Value" font="9" x="6.88" y="2.34" type="2" maxWidth="18" maxHeight="" pdfDesc1="unknown rate value"/>
+		
+		<field name="Form.Numbers1" font="9" x=".35" y="2.8" type="2" maxWidth="105" maxHeight="" pdfDesc1="Form Numbers1"/>
+		<field name="Form.Numbers2" font="9" x=".35" y="2.9" type="2" maxWidth="105" maxHeight="" pdfDesc1="Form Numbers2"/>
+		<field name="Form.Numbers3" font="9" x=".35" y="3" type="2" maxWidth="105" maxHeight="" pdfDesc1="Form Numbers3"/>
+		
+		<field name="Loc1.ClassCd" font="9" x=".31" y="3.51" type="2" maxWidth="5" maxHeight="" pdfDesc1="class code"/>
+		<field name="Loc1.Number" font="9" x=".77" y="3.51" type="2" maxWidth="2" maxHeight="" pdfDesc1="number"/>
+		<field name="Loc1.BldgNo" font="9" x="1.06" y="3.51" type="2" maxWidth="2" maxHeight="" pdfDesc1="building no"/>
+		<field name="Loc1.Desc1" font="9" x="1.68" y="3.51" type="2" maxWidth="42" maxHeight="" pdfDesc1="description1"/>
+		<field name="Loc1.Desc2" font="9" x="1.38" y="3.62" type="2" maxWidth="46" maxHeight="" pdfDesc1="description2"/>
+		<field name="Loc1.Addr1" font="9" x="1.83" y="3.76" type="2" maxWidth="40" maxHeight="" pdfDesc1="address1"/>
+		<field name="Loc1.Addr2" font="9" x="1.39" y="3.86" type="2" maxWidth="46" maxHeight="" pdfDesc1="address2"/>
+		<field name="Loc1.ACV" font="9" x="4.91" y="3.51" type="2" maxWidth="3" maxHeight="" pdfDesc1="actual cash value"/>
+		<field name="Loc1.Subject" font="9" x="5.22" y="3.51" type="2" maxWidth="4" maxHeight="" pdfDesc1="subject"/>
+		<field name="Loc1.Values" font="9" x="5.71" y="3.51" type="2" maxWidth="12" maxHeight="" pdfDesc1="values"/>		
+		<field name="Loc1.Rate" font="6" x="6.72" y="3.51" type="2" maxWidth="10" maxHeight="" pdfDesc1="rate"/>
+		<field name="Loc1.Premium" font="9" x="7.34" y="3.51" type="2" maxWidth="12" maxHeight="" pdfDesc1="premium"/>
+		
+		<field name="Loc2.ClassCd" font="9" x=".31" y="4.01" type="2" maxWidth="5" maxHeight="" pdfDesc1="class code"/>
+		<field name="Loc2.Number" font="9" x=".77" y="4.01" type="2" maxWidth="2" maxHeight="" pdfDesc1="number"/>
+		<field name="Loc2.BldgNo" font="9" x="1.06" y="4.01" type="2" maxWidth="2" maxHeight="" pdfDesc1="building no"/>
+		<field name="Loc2.Desc1" font="9" x="1.68" y="4.01" type="2" maxWidth="42" maxHeight="" pdfDesc1="description1"/>
+		<field name="Loc2.Desc2" font="9" x="1.38" y="4.11" type="2" maxWidth="46" maxHeight="" pdfDesc1="description2"/>
+		<field name="Loc2.Addr1" font="9" x="1.87" y="4.26" type="2" maxWidth="40" maxHeight="" pdfDesc1="address1"/>
+		<field name="Loc2.Addr2" font="9" x="1.38" y="4.35" type="2" maxWidth="46" maxHeight="" pdfDesc1="address1"/>
+		<field name="Loc2.ACV" font="9" x="4.91" y="4" type="2" maxWidth="3" maxHeight="" pdfDesc1="actual cash value"/>
+		<field name="Loc2.Subject" font="9" x="5.22" y="4" type="2" maxWidth="4" maxHeight="" pdfDesc1="subject"/>
+		<field name="Loc2.Values" font="9" x="5.71" y="4" type="2" maxWidth="12" maxHeight="" pdfDesc1="subject"/>		
+		<field name="Loc2.Rate" font="6" x="6.72" y="4" type="2" maxWidth="10" maxHeight="" pdfDesc1="rate"/>
+		<field name="Loc2.Premium" font="9" x="7.34" y="4" type="2" maxWidth="12" maxHeight="" pdfDesc1="premium"/>
+		
+		<field name="Loc3.ClassCd" font="9" x=".31" y="4.51" type="2" maxWidth="5" maxHeight="" pdfDesc1="class code"/>
+		<field name="Loc3.Number" font="9" x=".77" y="4.51" type="2" maxWidth="2" maxHeight="" pdfDesc1="number"/>
+		<field name="Loc3.BldgNo" font="9" x="1.06" y="4.51" type="2" maxWidth="2" maxHeight="" pdfDesc1="building no"/>
+		<field name="Loc3.Desc1" font="9" x="1.68" y="4.51" type="2" maxWidth="42" maxHeight="" pdfDesc1="description1"/>
+		<field name="Loc3.Desc2" font="9" x="1.38" y="4.62" type="2" maxWidth="46" maxHeight="" pdfDesc1="description2"/>
+		<field name="Loc3.Addr1" font="9" x="1.83" y="4.76" type="2" maxWidth="40" maxHeight="" pdfDesc1="address1"/>
+		<field name="Loc3.Addr2" font="9" x="1.39" y="4.86" type="2" maxWidth="46" maxHeight="" pdfDesc1="address2"/>
+		<field name="Loc3.ACV" font="9" x="4.91" y="4.51" type="2" maxWidth="3" maxHeight="" pdfDesc1="actual cash value"/>
+		<field name="Loc3.Subject" font="9" x="5.22" y="4.51" type="2" maxWidth="4" maxHeight="" pdfDesc1="subject"/>
+		<field name="Loc3.Values" font="9" x="5.71" y="4.51" type="2" maxWidth="12" maxHeight="" pdfDesc1="subject"/>		
+		<field name="Loc3.Rate" font="6" x="6.72" y="4.51" type="2" maxWidth="10" maxHeight="" pdfDesc1="rate"/>
+		<field name="Loc3.Premium" font="9" x="7.34" y="4.51" type="2" maxWidth="12" maxHeight="" pdfDesc1="premium"/>
+		
+		<field name="Loc4.ClassCd" font="9" x=".31" y="5.01" type="2" maxWidth="5" maxHeight="" pdfDesc1="class code"/>
+		<field name="Loc4.Number" font="9" x=".77" y="5.01" type="2" maxWidth="2" maxHeight="" pdfDesc1="number"/>
+		<field name="Loc4.BldgNo" font="9" x="1.06" y="5.01" type="2" maxWidth="2" maxHeight="" pdfDesc1="building no"/>
+		<field name="Loc4.Desc1" font="9" x="1.68" y="5.01" type="2" maxWidth="42" maxHeight="" pdfDesc1="description1"/>
+		<field name="Loc4.Desc2" font="9" x="1.38" y="5.12" type="2" maxWidth="46" maxHeight="" pdfDesc1="description2"/>
+		<field name="Loc4.Addr1" font="9" x="1.83" y="5.26" type="2" maxWidth="40" maxHeight="" pdfDesc1="address1"/>
+		<field name="Loc4.Addr2" font="9" x="1.39" y="5.36" type="2" maxWidth="46" maxHeight="" pdfDesc1="address2"/>
+		<field name="Loc4.ACV" font="9" x="4.91" y="5.01" type="2" maxWidth="3" maxHeight="" pdfDesc1="actual cash value"/>
+		<field name="Loc4.Subject" font="9" x="5.22" y="5.01" type="2" maxWidth="4" maxHeight="" pdfDesc1="subject"/>
+		<field name="Loc4.Values" font="9" x="5.71" y="5.01" type="2" maxWidth="12" maxHeight="" pdfDesc1="subject"/>		
+		<field name="Loc4.Rate" font="6" x="6.72" y="5.01" type="2" maxWidth="10" maxHeight="" pdfDesc1="rate"/>
+		<field name="Loc4.Premium" font="9" x="7.34" y="5.01" type="2" maxWidth="12" maxHeight="" pdfDesc1="premium"/>
+		
+		<field name="Loc5.ClassCd" font="9" x=".31" y="5.51" type="2" maxWidth="5" maxHeight="" pdfDesc1="class code"/>
+		<field name="Loc5.Number" font="9" x=".77" y="5.51" type="2" maxWidth="2" maxHeight="" pdfDesc1="number"/>
+		<field name="Loc5.BldgNo" font="9" x="1.06" y="5.51" type="2" maxWidth="2" maxHeight="" pdfDesc1="building no"/>
+		<field name="Loc5.Desc1" font="9" x="1.68" y="5.51" type="2" maxWidth="42" maxHeight="" pdfDesc1="description1"/>
+		<field name="Loc5.Desc2" font="9" x="1.38" y="5.62" type="2" maxWidth="46" maxHeight="" pdfDesc1="description2"/>
+		<field name="Loc5.Addr1" font="9" x="1.83" y="5.76" type="2" maxWidth="40" maxHeight="" pdfDesc1="address1"/>
+		<field name="Loc5.Addr2" font="9" x="1.38" y="5.86" type="2" maxWidth="46" maxHeight="" pdfDesc1="address2"/>
+		<field name="Loc5.ACV" font="9" x="4.91" y="5.51" type="2" maxWidth="3" maxHeight="" pdfDesc1="actual cash value"/>
+		<field name="Loc5.Subject" font="9" x="5.22" y="5.51" type="2" maxWidth="4" maxHeight="" pdfDesc1="subject"/>
+		<field name="Loc5.Values" font="9" x="5.71" y="5.51" type="2" maxWidth="12" maxHeight="" pdfDesc1="subject"/>		
+		<field name="Loc5.Rate" font="6" x="6.72" y="5.51" type="2" maxWidth="10" maxHeight="" pdfDesc1="rate"/>
+		<field name="Loc5.Premium" font="9" x="7.34" y="5.51" type="2" maxWidth="12" maxHeight="" pdfDesc1="premium"/>
+		
+		<field name="Loc6.ClassCd" font="9" x=".31" y="6.01" type="2" maxWidth="5" maxHeight="" pdfDesc1="class code"/>
+		<field name="Loc6.Number" font="9" x=".77" y="6.01" type="2" maxWidth="2" maxHeight="" pdfDesc1="number"/>
+		<field name="Loc6.BldgNo" font="9" x="1.06" y="6.01" type="2" maxWidth="2" maxHeight="" pdfDesc1="building no"/>
+		<field name="Loc6.Desc1" font="9" x="1.68" y="6.01" type="2" maxWidth="42" maxHeight="" pdfDesc1="description1"/>
+		<field name="Loc6.Desc2" font="9" x="1.38" y="6.12" type="2" maxWidth="46" maxHeight="" pdfDesc1="description2"/>
+		<field name="Loc6.Addr1" font="9" x="1.83" y="6.26" type="2" maxWidth="40" maxHeight="" pdfDesc1="address1"/>
+		<field name="Loc6.Addr2" font="9" x="1.38" y="6.36" type="2" maxWidth="46" maxHeight="" pdfDesc1="address2"/>
+		<field name="Loc6.ACV" font="9" x="4.91" y="6.01" type="2" maxWidth="3" maxHeight="" pdfDesc1="actual cash value"/>
+		<field name="Loc6.Subject" font="9" x="5.22" y="6.01" type="2" maxWidth="4" maxHeight="" pdfDesc1="subject"/>
+		<field name="Loc6.Values" font="9" x="5.71" y="6.01" type="2" maxWidth="12" maxHeight="" pdfDesc1="subject"/>		
+		<field name="Loc6.Rate" font="6" x="6.72" y="6.01" type="2" maxWidth="10" maxHeight="" pdfDesc1="rate"/>
+		<field name="Loc6.Premium" font="9" x="7.34" y="6.01" type="2" maxWidth="12" maxHeight="" pdfDesc1="premium"/>
+		
+		<field name="Loc7.ClassCd" font="9" x=".31" y="6.51" type="2" maxWidth="5" maxHeight="" pdfDesc1="class code"/>
+		<field name="Loc7.Number" font="9" x=".77" y="6.51" type="2" maxWidth="2" maxHeight="" pdfDesc1="number"/>
+		<field name="Loc7.BldgNo" font="9" x="1.06" y="6.51" type="2" maxWidth="2" maxHeight="" pdfDesc1="building no"/>
+		<field name="Loc7.Desc1" font="9" x="1.68" y="6.51" type="2" maxWidth="42" maxHeight="" pdfDesc1="description1"/>
+		<field name="Loc7.Desc2" font="9" x="1.38" y="6.62" type="2" maxWidth="46" maxHeight="" pdfDesc1="description2"/>
+		<field name="Loc7.Addr1" font="9" x="1.83" y="6.76" type="2" maxWidth="40" maxHeight="" pdfDesc1="address1"/>
+		<field name="Loc7.Addr2" font="9" x="1.39" y="6.86" type="2" maxWidth="46" maxHeight="" pdfDesc1="address2"/>
+		<field name="Loc7.ACV" font="9" x="4.91" y="6.51" type="2" maxWidth="3" maxHeight="" pdfDesc1="actual cash value"/>
+		<field name="Loc7.Subject" font="9" x="5.22" y="6.51" type="2" maxWidth="4" maxHeight="" pdfDesc1="subject"/>
+		<field name="Loc7.Values" font="9" x="5.71" y="6.51" type="2" maxWidth="12" maxHeight="" pdfDesc1="subject"/>		
+		<field name="Loc7.Rate" font="6" x="6.72" y="6.51" type="2" maxWidth="10" maxHeight="" pdfDesc1="rate"/>
+		<field name="Loc7.Premium" font="9" x="7.34" y="6.51" type="2" maxWidth="12" maxHeight="" pdfDesc1="premium"/>
+		
+		<field name="Loc8.ClassCd" font="9" x=".31" y="7.01" type="2" maxWidth="5" maxHeight="" pdfDesc1="class code"/>
+		<field name="Loc8.Number" font="9" x=".77" y="7.01" type="2" maxWidth="2" maxHeight="" pdfDesc1="number"/>
+		<field name="Loc8.BldgNo" font="9" x="1.06" y="7.01" type="2" maxWidth="2" maxHeight="" pdfDesc1="building no"/>
+		<field name="Loc8.Desc1" font="9" x="1.68" y="7.01" type="2" maxWidth="42" maxHeight="" pdfDesc1="description1"/>
+		<field name="Loc8.Desc2" font="9" x="1.38" y="7.12" type="2" maxWidth="46" maxHeight="" pdfDesc1="description2"/>
+		<field name="Loc8.Addr1" font="9" x="1.83" y="7.26" type="2" maxWidth="40" maxHeight="" pdfDesc1="address1"/>
+		<field name="Loc8.Addr2" font="9" x="1.39" y="7.36" type="2" maxWidth="46" maxHeight="" pdfDesc1="address2"/>
+		<field name="Loc8.ACV" font="9" x="4.91" y="7.01" type="2" maxWidth="3" maxHeight="" pdfDesc1="actual cash value"/>
+		<field name="Loc8.Subject" font="9" x="5.22" y="7.01" type="2" maxWidth="4" maxHeight="" pdfDesc1="subject"/>
+		<field name="Loc8.Values" font="9" x="5.71" y="7.01" type="2" maxWidth="12" maxHeight="" pdfDesc1="subject"/>		
+		<field name="Loc8.Rate" font="6" x="6.72" y="7.01" type="2" maxWidth="10" maxHeight="" pdfDesc1="rate"/>
+		<field name="Loc8.Premium" font="9" x="7.34" y="7.01" type="2" maxWidth="12" maxHeight="" pdfDesc1="premium"/>
+		
+		<field name="Loc9.ClassCd" font="9" x=".31" y="7.51" type="2" maxWidth="5" maxHeight="" pdfDesc1="class code"/>
+		<field name="Loc9.Number" font="9" x=".77" y="7.51" type="2" maxWidth="2" maxHeight="" pdfDesc1="number"/>
+		<field name="Loc9.BldgNo" font="9" x="1.06" y="7.51" type="2" maxWidth="2" maxHeight="" pdfDesc1="building no"/>
+		<field name="Loc9.Desc1" font="9" x="1.68" y="7.51" type="2" maxWidth="42" maxHeight="" pdfDesc1="description1"/>
+		<field name="Loc9.Desc2" font="9" x="1.38" y="7.62" type="2" maxWidth="46" maxHeight="" pdfDesc1="description2"/>
+		<field name="Loc9.Addr1" font="9" x="1.83" y="7.76" type="2" maxWidth="40" maxHeight="" pdfDesc1="address1"/>
+		<field name="Loc9.Addr2" font="9" x="1.39" y="7.86" type="2" maxWidth="40" maxHeight="" pdfDesc1="address2"/>
+		<field name="Loc9.ACV" font="9" x="4.91" y="7.51" type="2" maxWidth="3" maxHeight="" pdfDesc1="actual cash value"/>
+		<field name="Loc9.Subject" font="9" x="5.22" y="7.51" type="2" maxWidth="4" maxHeight="" pdfDesc1="subject"/>
+		<field name="Loc9.Values" font="9" x="5.71" y="7.51" type="2" maxWidth="12" maxHeight="" pdfDesc1="subject"/>		
+		<field name="Loc9.Rate" font="6" x="6.72" y="7.51" type="2" maxWidth="10" maxHeight="" pdfDesc1="rate"/>
+		<field name="Loc9.Premium" font="9" x="7.34" y="7.51" type="2" maxWidth="12" maxHeight="" pdfDesc1="premium"/>
+		
+		<field name="Loc10.ClassCd" font="9" x=".31" y="8.01" type="2" maxWidth="5" maxHeight="" pdfDesc1="class code"/>
+		<field name="Loc10.Number" font="9" x=".77" y="8.01" type="2" maxWidth="2" maxHeight="" pdfDesc1="number"/>
+		<field name="Loc10.BldgNo" font="9" x="1.06" y="8.01" type="2" maxWidth="2" maxHeight="" pdfDesc1="building no"/>
+		<field name="Loc10.Desc1" font="9" x="1.68" y="8.01" type="2" maxWidth="42" maxHeight="" pdfDesc1="description1"/>
+		<field name="Loc10.Desc2" font="9" x="1.38" y="8.12" type="2" maxWidth="46" maxHeight="" pdfDesc1="description2"/>
+		<field name="Loc10.Addr1" font="9" x="1.83" y="8.26" type="2" maxWidth="40" maxHeight="" pdfDesc1="address1"/>
+		<field name="Loc10.Addr2" font="9" x="1.39" y="8.36" type="2" maxWidth="46" maxHeight="" pdfDesc1="address2"/>
+		<field name="Loc10.ACV" font="9" x="4.91" y="8.01" type="2" maxWidth="3" maxHeight="" pdfDesc1="actual cash value"/>
+		<field name="Loc10.Subject" font="9" x="5.22" y="8.01" type="2" maxWidth="4" maxHeight="" pdfDesc1="subject"/>
+		<field name="Loc10.Values" font="9" x="5.71" y="8.01" type="2" maxWidth="12" maxHeight="" pdfDesc1="subject"/>		
+		<field name="Loc10.Rate" font="6" x="6.72" y="8.01" type="2" maxWidth="10" maxHeight="" pdfDesc1="rate"/>
+		<field name="Loc10.Premium" font="9" x="7.34" y="8.01" type="2" maxWidth="12" maxHeight="" pdfDesc1="premium"/>
+		
+		<field name="Loc11.ClassCd" font="9" x=".31" y="8.51" type="2" maxWidth="5" maxHeight="" pdfDesc1="class code"/>
+		<field name="Loc11.Number" font="9" x=".77" y="8.51" type="2" maxWidth="2" maxHeight="" pdfDesc1="number"/>
+		<field name="Loc11.BldgNo" font="9" x="1.06" y="8.51" type="2" maxWidth="2" maxHeight="" pdfDesc1="building no"/>
+		<field name="Loc11.Desc1" font="9" x="1.68" y="8.51" type="2" maxWidth="42" maxHeight="" pdfDesc1="description1"/>
+		<field name="Loc11.Desc2" font="9" x="1.38" y="8.62" type="2" maxWidth="46" maxHeight="" pdfDesc1="description2"/>
+		<field name="Loc11.Addr1" font="9" x="1.83" y="8.76" type="2" maxWidth="40" maxHeight="" pdfDesc1="address1"/>
+		<field name="Loc11.Addr2" font="9" x="1.39" y="8.86" type="2" maxWidth="46" maxHeight="" pdfDesc1="address2"/>
+		<field name="Loc11.ACV" font="9" x="4.91" y="8.51" type="2" maxWidth="3" maxHeight="" pdfDesc1="actual cash value"/>
+		<field name="Loc11.Subject" font="9" x="5.22" y="8.51" type="2" maxWidth="4" maxHeight="" pdfDesc1="subject"/>
+		<field name="Loc11.Values" font="9" x="5.71" y="8.51" type="2" maxWidth="12" maxHeight="" pdfDesc1="subject"/>		
+		<field name="Loc11.Rate" font="6" x="6.72" y="8.51" type="2" maxWidth="10" maxHeight="" pdfDesc1="rate"/>
+		<field name="Loc11.Premium" font="9" x="7.34" y="8.51" type="2" maxWidth="12" maxHeight="" pdfDesc1="premium"/>
+		
+		
+		<field name="Total.Value" font="6" x="5.82" y="9" type="2" maxWidth="16" maxHeight="" pdfDesc1="total value"/>
+		
+		<field name="Total.Premium" font="6" x="7.43" y="9" type="2" maxWidth="16" maxHeight="" pdfDesc1="total premium"/>
+					
+	</page>
+
+<!-- Page 2 -->
+       <page pageNum="2">
+               <field name="InsuredName" font="9" x="0.5" y="0.7" type="2" maxWidth="90" maxHeight="" pdfDesc1="page heading name"/>
+
+               <field name="Address" font="9" x=".5" y=".86" type="2" maxWidth="90" maxHeight="" pdfDesc1="page heading address"/>
+
+               <field name="AdditionalInformation" font="7" x="0.5" y="2.06" type="2" maxWidth="130" maxHeight="" pdfDesc1="AdditionalInformation"/>
+
+       </page>
+
+ 
+
+
+</pdf_layout>

@@ -1,0 +1,212 @@
+<fields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/pdf/pdfDefinitions.xsd">
+	<field type="question">
+		<eLabel>CommercialPolicy_Question_AAICode_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL34'].YesNoCd</xpath>
+	</field>
+	<field>
+		<eLabel>BusinessInformation_ParentOrganizationName_A</eLabel>
+		<xpath>CommlPolicy.CommlPolicySupplement.CommlParentOrSubsidiaryInfo.MiscParty[MiscPartyInfo.MiscPartyRoleCd='ParentCompany'].GeneralPartyInfo.NameInfo.CommlName.CommercialName</xpath>
+	</field>
+	<field>
+		<eLabel>Subsidiary_ParentSubsidiaryRelationshipDescription_A</eLabel>
+		<xpath>CommlPolicy.CommlPolicySupplement.CommlParentOrSubsidiaryInfo[MiscParty.MiscPartyInfo.MiscPartyRoleCd='ParentCompany'].RelationshipDesc</xpath>
+	</field>
+	<field>
+		<eLabel>Subsidiary_ParentOwnershipPercent_A</eLabel>
+		<xpath>CommlPolicy.CommlPolicySupplement.CommlParentOrSubsidiaryInfo[MiscParty.MiscPartyInfo.MiscPartyRoleCd='ParentCompany'].OwnedPct</xpath>
+	</field>
+	<field type="question">
+		<eLabel>CommercialPolicy_Question_AAJCode_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL35'].YesNoCd</xpath>
+	</field>
+	<field>
+		<eLabel>Subsidiary_OrganizationName_A</eLabel>
+		<xpath>CommlPolicy.CommlPolicySupplement.CommlParentOrSubsidiaryInfo.MiscParty[MiscPartyInfo.MiscPartyRoleCd='Subsidiary'].GeneralPartyInfo.NameInfo.CommlName.CommercialName</xpath>
+	</field>
+	<field>
+		<eLabel>Subsidiary_ParentSubsidiaryRelationshipDescription_A</eLabel>
+		<xpath>CommlPolicy.CommlPolicySupplement.CommlParentOrSubsidiaryInfo[MiscParty.MiscPartyInfo.MiscPartyRoleCd='Subsidiary'].RelationshipDesc</xpath>
+	</field>
+	<field>
+		<eLabel>Subsidiary_ParentOwnershipPercent_A</eLabel>
+		<xpath>CommlPolicy.CommlPolicySupplement.CommlParentOrSubsidiaryInfo[MiscParty.MiscPartyInfo.MiscPartyRoleCd='Subsidiary'].OwnedPct</xpath>
+	</field>
+	<field type="question">
+		<eLabel>CommercialPolicy_Question_KAACode_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL47'].YesNoCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CommercialPolicy_FormalSafetyProgram_SafetyManualIndicator_A</eLabel>
+		<xpath>CommlPolicy.CommlPolicySupplement.SafetyManualInd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CommercialPolicy_FormalSafetyProgram_SafetyPositionIndicator_A</eLabel>
+		<xpath>CommlPolicy.CommlPolicySupplement.SafetyPositionInd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CommercialPolicy_FormalSafetyProgram_MonthlyMeetingsIndicator_A</eLabel>
+		<xpath>CommlPolicy.CommlPolicySupplement.MonthlySafetyMeetingInd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CommercialPolicy_FormalSafetyProgram_OSHAIndicator_A</eLabel>
+		<xpath>CommlPolicy.CommlPolicySupplement.OSHASafetyProgramInd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CommercialPolicy_FormalSafetyProgram_OtherIndicator_A</eLabel>
+		<xpath>CommlPolicy.CommlPolicySupplement.OtherSafetyProgramInd</xpath>
+	</field>
+	<field>
+		<eLabel>CommercialPolicy_FormalSafetyProgram_OtherDescription_A</eLabel>
+	</field>
+	<field type="question">
+		<eLabel>CommercialPolicy_Question_ABCCode_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL41'].YesNoCd</xpath>
+	</field>
+	<field>
+		<eLabel>CommercialPolicy_AnyExposureToFlammableExplosivesChemicalsExplanation_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL41'].Explanation</xpath>
+	</field>
+	<field type="question">
+		<eLabel>CommercialPolicy_Question_AAHCode_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL22'].YesNoCd</xpath>
+	</field>
+	<field>
+		<eLabel>OtherPolicy_LineOfBusinessCode_A</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy[PolicyCd='Other'].LOBCd</xpath>
+	</field>
+	<field>
+		<eLabel>OtherPolicy_OtherPolicyDescription_A</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy[PolicyCd='Other'].PolicyNumber</xpath>
+	</field>
+	<field type="question">
+		<eLabel>CommercialPolicy_Question_AACCode_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL06'].YesNoCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CancelNonRenew_NonPaymentIndicator_A</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy[PolicyCd='Prior'  &amp;&amp;  LOBCd='CPKGE'].PolicyTerminatedCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CancelNonRenew_NonRenewalIndicator_A</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy[PolicyCd='Prior'  &amp;&amp;  LOBCd='CPKGE'].PolicyTerminatedCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CancelNonRenew_AgentNoLongerWritesForInsurerIndicator_A</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy[PolicyCd='Prior'  &amp;&amp;  LOBCd='CPKGE'].PolicyTerminatedCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CancelNonRenew_UnderwritingIndicator_A</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy[PolicyCd='Prior'  &amp;&amp;  LOBCd='CPKGE'].PolicyTerminatedCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CancelNonRenew_UnderwritingConditionCorrectedIndicator_A</eLabel>
+	</field>
+	<field>
+		<eLabel>CancelNonRenew_UnderwritingConditionCorrectedDescription_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL06'].QuestionOccurrenceInfo.ResolutionDesc</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CancelNonRenew_OtherIndicator_A</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy[PolicyCd='Prior'  &amp;&amp;  LOBCd='CPKGE'].PolicyTerminatedCd</xpath>
+	</field>
+	<field>
+		<eLabel>CancelNonRenew_OtherDescription_A</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy[PolicyCd='Prior'  &amp;&amp;  LOBCd='CPKGE'  &amp;&amp;  PolicyTerminatedCd='OT']PolicyTerminatedReasonDesc</xpath>
+	</field>
+	<field type="question">
+		<eLabel>CommercialPolicy_Question_AADCode_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL07'].YesNoCd</xpath>
+	</field>
+	<field>
+		<eLabel>CommercialPolicy_PastLossesClaimsRelatingSexualAbuseDiscriminationNegligentHiringExplanation_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL07'].Explanation</xpath>
+	</field>
+	<field type="question">
+		<eLabel>CommercialPolicy_Question_KABCode_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL61'].YesNoCd</xpath>
+	</field>
+	<field>
+		<eLabel>CommercialPolicy_PastFiveYearsAnyApplicantIndictedOrConvictedFraudBriberyArsonExplanation_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL61'].Explanation</xpath>
+	</field>
+	<field type="question">
+		<eLabel>CommercialPolicy_Question_AAFCode_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL62'].YesNoCd</xpath>
+	</field>
+	<field>
+		<eLabel>Underwriting_Question_OccurrenceDate_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL62'].QuestionOccurrenceInfo.OccurrenceDt</xpath>
+	</field>
+	<field>
+		<eLabel>Underwriting_Question_ExplanationDescription_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL62'].Explanation</xpath>
+	</field>
+	<field>
+		<eLabel>Underwriting_Question_ResolutionDescription_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL62'].QuestionOccurrenceInfo.ResolutionDesc</xpath>
+	</field>
+	<field>
+		<eLabel>Underwriting_Question_ResolutionDate_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL62'].QuestionOccurrenceInfo.ResolutionDt</xpath>
+	</field>
+	<field type="question">
+		<eLabel>CommercialPolicy_Question_KAKCode_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL55'].YesNoCd</xpath>
+	</field>
+	<field>
+		<eLabel>Underwriting_Question_OccurrenceDate_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL55'].QuestionOccurrenceInfo.OccurrenceDt</xpath>
+	</field>
+	<field>
+		<eLabel>Underwriting_Question_ExplanationDescription_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL55'].Explanation</xpath>
+	</field>
+	<field>
+		<eLabel>Underwriting_Question_ResolutionDescription_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL55'].QuestionOccurrenceInfo.ResolutionDesc</xpath>
+	</field>
+	<field>
+		<eLabel>Underwriting_Question_ResolutionDate_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL55'].QuestionOccurrenceInfo.ResolutionDt</xpath>
+	</field>
+	<field type="question">
+		<eLabel>CommercialPolicy_Question_KALCode_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL63'].YesNoCd</xpath>
+	</field>
+	<field>
+		<eLabel>Underwriting_Question_OccurrenceDate_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL63'].QuestionOccurrenceInfo.OccurrenceDt</xpath>
+	</field>
+	<field>
+		<eLabel>Underwriting_Question_ExplanationDescription_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL63'].Explanation</xpath>
+	</field>
+	<field>
+		<eLabel>Underwriting_Question_ResolutionDescription_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL63'].QuestionOccurrenceInfo.ResolutionDesc</xpath>
+	</field>
+	<field>
+		<eLabel>Underwriting_Question_ResolutionDate_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL63'].QuestionOccurrenceInfo.ResolutionDt</xpath>
+	</field>
+	<field type="question">
+		<eLabel>CommercialPolicy_Question_ABBCode_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL40'].YesNoCd</xpath>
+	</field>
+	<field>
+		<eLabel>AdditionalInterest_FullName_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL40'].Explanation</xpath>
+	</field>
+	<field type="question">
+		<eLabel>CommercialPolicy_Question_KACCode_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='CUMBR17'].YesNoCd</xpath>
+	</field>
+	<field type="question">
+		<eLabel>CommercialPolicy_Question_KAMCode_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL64'].YesNoCd</xpath>
+	</field>
+	<field>
+		<eLabel>CommercialPolicy_ApplicantOtherBusinessVenturesCoverageNotRequestedExplanation_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL64'].Explanation</xpath>
+	</field>
+</fields>

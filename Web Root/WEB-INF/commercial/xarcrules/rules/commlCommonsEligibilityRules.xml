@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rule_file xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="commlCommonsEligibilityRules" title="Commercial Common Eligibility Rules" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/xarcrules/xarcrules.xsd">
+    <rule title="Validate Eligibility Against Risk Appetite" name="riskAppetite1" id="N1">
+        <description id="N2">Prevent the user from continuing when the risk is ineligible</description>
+        <action id="N3">
+            <message id="N7" showMultiple="false" severity="30">
+                <text id="N5">We’re sorry, but this risk does not meet our appetite.</text>
+            </message>
+        </action>
+        <step id="N6">
+            <selectNodes id="N8">
+                <where id="N9" negate="false">
+                    <operator id="N10" type="=">
+                        <operand id="N11" fieldType="field">
+                            <field id="N12" fieldKey="*/generalInfo/eligibility/EligibilityQ1">CommlPolicy.QuestionAnswer[QuestionCd='CPR21'].YesNoCd</field>
+                        </operand>
+                        <operand id="N13" fieldType="constant">
+                            <constant id="N14">YES</constant>
+                        </operand>
+                    </operator>
+                </where>
+                 </selectNodes>
+        </step>
+    </rule>
+         <rule title="Validate Eligibility Against Risk Appetite" name="riskAppetite2" >
+        <description >Prevent the user from continuing when the risk is ineligible</description>
+        <action >
+            <message  showMultiple="false" severity="30">
+                <text >We’re sorry, but this risk does not meet our appetite.</text>
+            </message>
+        </action>
+        <step >
+            <selectNodes >
+                <where id="N15" negate="false">
+                    <operator id="N16" type="=">
+                        <operand id="N17" fieldType="field">
+                            <field id="N18" fieldKey="*/generalInfo/eligibility/EligibilityQ2">CommlPolicy.QuestionAnswer[QuestionCd='AUTOP02'].YesNoCd</field>
+                        </operand>
+                        <operand id="N19" fieldType="constant">
+                            <constant id="N20">YES</constant>
+                        </operand>
+                    </operator>
+                </where>
+                                 </selectNodes>
+        </step>
+    </rule>
+         <rule title="Validate Eligibility Against Risk Appetite" name="riskAppetite3" >
+        <description >Prevent the user from continuing when the risk is ineligible</description>
+        <action >
+            <message  showMultiple="false" severity="30">
+                <text >We’re sorry, but this risk does not meet our appetite.</text>
+            </message>
+        </action>
+        <step >
+            <selectNodes >
+                <where id="N21" negate="false">
+                    <operator id="N22" type="=">
+                        <operand id="N23" fieldType="field">
+                            <field id="N24" fieldKey="*/*/eligibility/EligibilityQ3">CommlPolicy.QuestionAnswer[QuestionCd='DRIVE19'].YesNoCd</field>
+                        </operand>
+                        <operand id="N25" fieldType="constant">
+                            <constant id="N26">YES</constant>
+                        </operand>
+                    </operator>
+                </where>
+                                 </selectNodes>
+        </step>
+    </rule>
+         <rule title="Validate Eligibility Against Risk Appetite" name="riskAppetite4" >
+        <description >Prevent the user from continuing when the risk is ineligible</description>
+        <action >
+            <message  showMultiple="false" severity="30">
+                <text >We’re sorry, but this risk does not meet our appetite.</text>
+            </message>
+        </action>
+        <step >
+            <selectNodes >
+                <where id="N27" negate="false">
+                    <operator id="N28" type="=">
+                        <operand id="N29" fieldType="field">
+                            <field id="N30" fieldKey="*/*/eligibility/EligibilityQ4">CommlPolicy.QuestionAnswer[QuestionCd='INMRC12'].YesNoCd</field>
+                        </operand>
+                        <operand id="N31" fieldType="constant">
+                            <constant id="N32">YES</constant>
+                        </operand>
+                    </operator>
+                </where>
+            </selectNodes>
+        </step>
+    </rule>
+</rule_file>
+

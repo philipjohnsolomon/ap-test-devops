@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" title="Account Pages" id="ACCOUNT" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/definition/transactionDefinitionFile.xsd">
+  <page id="accountInformation" title="Create Account" type="dataEntry" menuDisplay="never" styleClass="account-page" supportsIPDTRDynamicContent="true">
+    <pageElement id="editTip" type="tips">
+      <fieldElement type="message">Any changes you make here will not affect your existing work items.</fieldElement>
+    </pageElement>
+    <pageElement id="createTip" type="tips">
+      <fieldElement type="message">Creating an account allows you to reuse the account information with each new submission.</fieldElement>
+    </pageElement>
+    <pageElement type="fieldset" legend="Account Information" id="AccountInformationSection">
+      <fieldElement type="hidden" id="TransactionRequestDt" defaultValue="SYSTEM_DATE()" />
+      <fieldElement type="hidden" id="RqUID" defaultValue="GUID()" />
+      <fieldElement type="hidden" id="CurCd" defaultValue="USD" />
+      <fieldElement type="hidden" id="ItemIdInfo.AgencyId" />
+      <fieldElement type="hidden" id="ItemIdInfo.SystemId" uniqueId="AccountSystemId" defaultValue="GUID()" />
+	  <fieldElement type="hidden" id="ItemIdInfo.ExternalSystemId" uniqueId="AccountExternalId"/>
+	  <fieldElement type="hidden" id="ItemIdInfo.ExternalSystemLockingId" uniqueId="AccountExternalLockingId"/>
+      <fieldElement type="hidden" id="AccountStatusCd" />
+      <fieldElement type="hidden" id="AccountNumber" />
+      <fieldElement type="hidden" id="Frozen" />
+      <fieldElement type="radio" id="BroadLOBCd" label="Account Type" uniqueId="AccountHolderType" required="true">
+        <optionList source="accountCodeListRef.xml" target="accountTypeCd" />
+      </fieldElement>
+      <fieldElement type="hidden" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].ItemIdInfo.SystemId" defaultValue="GUID()" uniqueId="AccountHolderSystemId" />
+      <fieldElement type="hidden" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].ItemIdInfo.ExternalSystemId" uniqueId="AccountHolderExternalId"/>
+      <fieldElement type="hidden" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].ItemIdInfo.ExternalSystemLockingId" uniqueId="AccountHolderExternalLockingId"/>
+      <fieldElement type="hidden" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.NameInfo[NameTypeCd='P'].ItemIdInfo.ExternalSystemId" uniqueId="AccHolderNameInfoExternalIdPersonal"/>
+      <fieldElement type="hidden" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.NameInfo[NameTypeCd='P'].ItemIdInfo.ExternalSystemLockingId" uniqueId="AccHolderNameInfoExternalLockingIdPersonal"/>
+      <fieldElement type="text" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.NameInfo[NameTypeCd='P'].PersonName.GivenName" label="First Name" uniqueId="AccountHolderFirstName" required="true" size="30" maxLength="30" groupId="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.NameInfo[NameTypeCd='P']" />
+      <fieldElement type="text" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.NameInfo[NameTypeCd='P'].PersonName.Surname" label="Last Name" uniqueId="AccountHolderLastName" required="true" size="30" maxLength="30" groupId="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.NameInfo[NameTypeCd='P']" />
+      <fieldElement type="hidden" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.NameInfo[NameTypeCd='C'].ItemIdInfo.ExternalSystemId" uniqueId="AccHolderNameInfoExternalIdCommercial"/>
+      <fieldElement type="hidden" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.NameInfo[NameTypeCd='C'].ItemIdInfo.ExternalSystemLockingId" uniqueId="AccHolderNameInfoExternalLockingIdCommercial"/>
+      <fieldElement type="text" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.NameInfo[NameTypeCd='C'].CommlName.CommercialName" label="Company Name" uniqueId="AccountHolderCompanyName" required="true" size="30" maxLength="60" groupId="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.NameInfo[NameTypeCd='C']" />
+      <fieldElement type="text" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.NameInfo[NameTypeCd='C'].SupplementaryNameInfo[SupplementaryNameCd='DBA'].SupplementaryName" label="Doing Business As" size="40" maxLength="40" uniqueId="DoingBusinessAs" />
+      <fieldElement type="text" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.NameInfo[NameTypeCd='C'].TaxIdentity[TaxIdTypeCd='FEIN'].TaxId" label="FEIN" size="18" maxLength="16" uniqueId="taxIdFEIN">
+        <formatMask type="fein" />
+        <validation type="fein" />
+        <fieldSecurity secureDataEntryMode="fullyMask" encryptAtRest="true"/>
+      </fieldElement>
+      <fieldElement type="text" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.NameInfo[NameTypeCd='P'].TaxIdentity[TaxIdTypeCd='SSN'].TaxId" label="SSN" size="18" maxLength="16" uniqueId="taxIdSSN">
+        <formatMask type="ssn" />
+        <validation type="ssn" />
+        <fieldSecurity secureDataEntryMode="fullyMask" encryptAtRest="true"/>
+      </fieldElement>
+      <fieldElement type="hidden" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone' &amp;&amp; CommunicationUseCd='Home'].ItemIdInfo.ExternalSystemId" uniqueId="AccHolderPhone1ExtId"/>
+      <fieldElement type="hidden" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone' &amp;&amp; CommunicationUseCd='Home'].ItemIdInfo.ExternalSystemLockingId" uniqueId="AccHolderPhone1ExtLockingId"/>
+      <fieldElement type="text" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone' &amp;&amp; CommunicationUseCd='Home'].PhoneNumber" label="Home Phone Number" size="20" maxLength="20" uniqueId="ApplicantHomePhoneNumber">
+        <formatMask type="phone" />
+		<validation type="phone">US</validation>
+		<correction type="phone" />
+      </fieldElement>
+      <fieldElement type="hidden" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone' &amp;&amp; CommunicationUseCd='Business'].ItemIdInfo.ExternalSystemId" uniqueId="AccHolderPhone2ExtId"/>
+      <fieldElement type="hidden" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone' &amp;&amp; CommunicationUseCd='Business'].ItemIdInfo.ExternalSystemLockingId" uniqueId="AccHolderPhone2ExtLockingId"/>
+      <fieldElement type="text" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone' &amp;&amp; CommunicationUseCd='Business'].PhoneNumber" label="Work Phone Number" size="20" maxLength="20" uniqueId="ApplicantWorkPhoneNumber">
+        <formatMask type="phone" />
+		<validation type="phone">US</validation>
+		<correction type="phone" />
+      </fieldElement>
+      <fieldElement type="hidden" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Cell' &amp;&amp; CommunicationUseCd='Business'].ItemIdInfo.ExternalSystemLockingId" uniqueId="AccHolderPhone3ExtLockingId"/>
+      <fieldElement type="hidden" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Cell' &amp;&amp; CommunicationUseCd='Business'].ItemIdInfo.ExternalSystemId" uniqueId="AccHolderPhone3ExtId"/>
+      <fieldElement type="text" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Cell' &amp;&amp; CommunicationUseCd='Business'].PhoneNumber" label="Mobile Phone Number" size="20" maxLength="20" uniqueId="ApplicantMobilePhoneNumber">
+        <formatMask type="phone" />
+		<validation type="phone">US</validation>
+		<correction type="phone" />
+      </fieldElement>
+      <fieldElement type="hidden" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone' &amp;&amp; CommunicationUseCd='Business'].ItemIdInfo.ExternalSystemId" uniqueId="AccHolderPhone4ExtId"/>
+      <fieldElement type="hidden" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone' &amp;&amp; CommunicationUseCd='Business'].ItemIdInfo.ExternalSystemLockingId" uniqueId="AccHolderPhone4ExtLockingId"/>
+      <fieldElement type="text" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone' &amp;&amp; CommunicationUseCd='Business'].PhoneNumber" label="Business Phone Number" size="20" maxLength="20" uniqueId="ApplicantBusinessPhoneNumber">
+        <formatMask type="phone" />
+		<validation type="phone">US</validation>
+		<correction type="phone" />
+      </fieldElement>
+      <fieldElement type="hidden" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Communications.EmailInfo[CommunicationUseCd='Business'].ItemIdInfo.ExternalSystemId" uniqueId="AccHolderEmailExtId"/>
+      <fieldElement type="hidden" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Communications.EmailInfo[CommunicationUseCd='Business'].ItemIdInfo.ExternalSystemLockingId" uniqueId="AccHolderEmailExtLockingId"/>
+      <fieldElement type="text" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Communications.EmailInfo[CommunicationUseCd='Business'].EmailAddr" label="Primary Email Address" size="40" maxLength="60">
+        <validation type="email" id="applicantEmailAddress" message="This field is not a recognized email format." />
+      </fieldElement>
+      <fieldElement type="filterlist" size="8" id="BusinessInfo.SICCd" label="SIC Code" required="false" uniqueId="sicCode-IK">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement type="selectlist" id="BusinessInfo.SICCd" label="SIC Code" required="false" uniqueId="sicCode">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="sicCode" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement type="selectlist" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.NameInfo[NameTypeCd='C'].LegalEntityCd" required="false" label="Legal Entity" uniqueId="legalEntity">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="applInfoCodeListRef.xml" target="legalEntity" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+    </pageElement>
+    <pageElement type="fieldset" legend="Account Address" id="MailingAddressSection">
+      <fieldElement type="hidden" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Addr.ItemIdInfo.SystemId" defaultValue="GUID()" uniqueId="AccountHolderAddressSystemId" />
+      <fieldElement type="selectlist" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Addr.AddrTypeCd" label="Address Type" required="true" uniqueId="AccountHolderAddressType">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="accountCodeListRef.xml" target="addressTypeCd" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement type="text" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Addr.Addr1" label="Address Line 1" size="30" maxLength="60" required="true" uniqueId="MailingAddressLine1" />
+      <fieldElement type="text" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Addr.Addr2" label="Address Line 2" size="30" maxLength="60" uniqueId="MailingAddressLine2" />
+      <fieldElement type="text" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Addr.City" label="City" size="20" maxLength="60" required="true" uniqueId="MailingAddressCity" />
+      <fieldElement type="selectlist" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Addr.StateProvCd" label="State" required="true" uniqueId="MailingAddressState">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="state" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement type="text" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Addr.PostalCode" label="Zip Code" size="10" maxLength="10" required="true" uniqueId="MailingAddressZip">
+        <formatMask type="USZipCodeLong" />
+           <validation type="USZipCode" />
+      </fieldElement>
+      <fieldElement type="hidden" id="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Addr.CountryCd" defaultValue="US" uniqueId="MailingAddressCountryCd" />
+    </pageElement>
+  </page>
+  <page id="location" source="Location" title="Locations" type="roster" menuDisplay="never">
+    <pageElement id="location" type="roster" legend="Location Information" minEntries="1">
+      <fieldElement type="column" id="Location" label="Location" maxLength="75" viewId="accountViews.xml:Display.Roster.Location" />
+      <action type="edit" htmlDefinitionId="ACCOUNT_ACTION_EDIT" />
+      <action type="delete" htmlDefinitionId="ACCOUNT_ACTION_DELETE" />
+    </pageElement>
+    <pageElement id="locationInformation" type="fieldset" legend="Location Information">
+      <fieldElement type="hidden" id="Location.ItemIdInfo.SystemId" defaultValue="GUID()" uniqueId="LocationSystemId" />
+	  <fieldElement type="hidden" id="Location.ItemIdInfo.ExternalSystemId" uniqueId="LocationExternalId"/>
+	  <fieldElement type="hidden" id="Location.ItemIdInfo.ExternalSystemLockingId" uniqueId="LocationExternalLockingId"/>
+      <fieldElement type="hidden" id="Location.@id" label="Hidden Field" required="true" defaultValue="GUID()" copy="false" uniqueId="LocationID" />
+      <fieldElement type="text" id="Location.Addr.Addr1" label="Address Line 1" required="true" size="30" maxLength="60" uniqueId="LocationAddressLine1" firstTimeDefaultValue="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Addr.Addr1" />
+      <fieldElement type="text" id="Location.Addr.Addr2" label="Address Line 2" size="30" maxLength="60" uniqueId="LocationAddressLine2" firstTimeDefaultValue="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Addr.Addr2" />
+      <fieldElement type="text" id="Location.Addr.City" label="City" required="true" size="20" maxLength="60" uniqueId="LocationAddressCity" firstTimeDefaultValue="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Addr.City" />
+      <fieldElement type="selectlist" id="Location.Addr.StateProvCd" label="State" required="true" uniqueId="LocationAddressState" firstTimeDefaultValue="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Addr.StateProvCd">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="state" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement type="text" id="Location.Addr.PostalCode" label="Zip Code" required="true" size="10" maxLength="10" uniqueId="LocationAddressZip" firstTimeDefaultValue="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Addr.PostalCode">
+        <formatMask type="USZipCodeLong" id="N21" />
+           <validation type="USZipCode" />
+      </fieldElement>
+      <fieldElement type="hidden" id="Location.Addr.CountryCd" defaultValue="US" uniqueId="LocationAddressCountryCd" firstTimeDefaultValue="MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Addr.CountryCd" />
+    </pageElement>
+  </page>
+  <page id="people" source="MiscParty" title="People and Resources" type="roster" menuDisplay="never">
+    <pageElement id="ContactSummaryRoster" type="roster" legend="People and Resources">
+      <fieldElement type="column" label="Name" id="AccountName" maxLength="75" viewId="accountViews.xml:Display.Roster.ContactFullName" />
+      <fieldElement type="column" label="Role(s)" id="MiscParty.MiscPartyInfo.MiscPartyRoleCd" viewId="accountViews.xml:Display.Roster.ContactRoles" maxLength="120" />
+      <action type="edit" htmlDefinitionId="ACCOUNT_ACTION_EDIT" />
+      <action type="delete" htmlDefinitionId="ACCOUNT_ACTION_DELETE" />
+    </pageElement>
+    <pageElement id="ContactDetailSection" type="fieldset" legend="Details">
+      <fieldElement type="hidden" id="MiscParty.ItemIdInfo.SystemId" defaultValue="GUID()" uniqueId="AccountContactSystemId" />
+      <fieldElement type="hidden" id="MiscParty.@id" label="Hidden Field" uniqueId="ContactID" required="true" copy="false" defaultValue="GUID()" />
+      <fieldElement type="radio" id="MiscParty.GeneralPartyInfo.NameInfo.NameTypeCd" label="Type" uniqueId="AccountContactType" required="true">
+        <optionList source="accountCodeListRef.xml" target="accountTypeCd" />
+      </fieldElement>
+      <fieldElement type="text" id="MiscParty.GeneralPartyInfo.NameInfo.PersonName.GivenName" label="First Name" uniqueId="ContactFirstName" required="true" size="30" maxLength="30" />
+      <fieldElement type="text" id="MiscParty.GeneralPartyInfo.NameInfo.PersonName.Surname" label="Last Name" uniqueId="ContactLastName" required="true" size="30" maxLength="30" />
+      <fieldElement type="text" id="MiscParty.GeneralPartyInfo.NameInfo.CommlName.CommercialName" label="Company Name" uniqueId="ContactCompanyName" required="true" size="30" maxLength="60" />
+      <fieldElement type="text" id="MiscParty.GeneralPartyInfo.NameInfo.TaxIdentity[TaxIdTypeCd='FEIN'].TaxId" label="FEIN" size="18" maxLength="16" uniqueId="contactFEIN">
+        <formatMask type="fein" />
+        <validation type="fein" />
+        <fieldSecurity secureDataEntryMode="fullyMask" encryptAtRest="true"/>
+      </fieldElement>
+      <fieldElement type="text" id="MiscParty.GeneralPartyInfo.NameInfo.TaxIdentity[TaxIdTypeCd='SSN'].TaxId" label="SSN" size="18" maxLength="16" uniqueId="contactSSN">
+        <formatMask type="ssn" />
+        <validation type="ssn" />
+        <fieldSecurity secureDataEntryMode="fullyMask" encryptAtRest="true"/>
+      </fieldElement>
+      <fieldElement type="text" id="MiscParty.GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone' &amp;&amp; CommunicationUseCd='Home'].PhoneNumber" label="Home Phone Number" size="20" maxLength="20" uniqueId="ContactHomePhoneNumber">
+        <formatMask type="phone" />
+		<validation type="phone">US</validation>
+		<correction type="phone" />
+      </fieldElement>
+      <fieldElement type="text" id="MiscParty.GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone' &amp;&amp; CommunicationUseCd='Business'].PhoneNumber" label="Work Phone Number" size="20" maxLength="20" uniqueId="ContactWorkPhoneNumber">
+        <formatMask type="phone" />
+		<validation type="phone">US</validation>
+		<correction type="phone" />
+      </fieldElement>
+      <fieldElement type="text" id="MiscParty.GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Cell' &amp;&amp; CommunicationUseCd='Business'].PhoneNumber" label="Mobile Phone Number" size="20" maxLength="20" uniqueId="ContactMobilePhoneNumber">
+        <formatMask type="phone" />
+		<validation type="phone">US</validation>
+		<correction type="phone" />
+      </fieldElement>
+      <fieldElement type="text" id="MiscParty.GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone' &amp;&amp; CommunicationUseCd='Business'].PhoneNumber" label="Business Phone Number" size="20" maxLength="20" uniqueId="ContactBusinessPhoneNumber">
+        <formatMask type="phone" />
+		<validation type="phone">US</validation>
+		<correction type="phone" />
+      </fieldElement>
+      <fieldElement type="text" id="MiscParty.GeneralPartyInfo.Communications.EmailInfo[CommunicationUseCd='Business'].EmailAddr" label="Primary Email Address" size="40" maxLength="60" uniqueId="ContactPrimaryEmailAddress">
+        <validation type="email" id="contactEmailAddress" message="This field is not a recognized email format." />
+      </fieldElement>
+    </pageElement>
+    <pageElement id="ContactAddressSection" type="fieldset" legend="Address">
+      <fieldElement type="hidden" id="MiscParty.GeneralPartyInfo.Addr.ItemIdInfo.SystemId" defaultValue="GUID()" uniqueId="ContactAddressSystemId" />
+      <fieldElement type="selectlist" id="MiscParty.GeneralPartyInfo.Addr.AddrTypeCd" required="true" label="Address Type" uniqueId="ContactAddressType">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="accountCodeListRef.xml" target="addressTypeCd" />
+        <fieldHelper type="script" function="ap.account.applyAccountHolderAddressAsContactAddress" linkText="Copy account holder address" htmlDefinitionId="LINK_SCRIPT" styleClass="accountAddressCopy" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement type="text" id="MiscParty.GeneralPartyInfo.Addr.Addr1" label="Address Line 1" required="true" size="30" maxLength="60" uniqueId="ContactAddressLine1" />
+      <fieldElement type="text" id="MiscParty.GeneralPartyInfo.Addr.Addr2" label="Address Line 2" size="30" maxLength="60" uniqueId="ContactAddressLine2" />
+      <fieldElement type="text" id="MiscParty.GeneralPartyInfo.Addr.City" label="City" required="true" size="20" maxLength="60" uniqueId="ContactAddressCity" />
+      <fieldElement type="selectlist" id="MiscParty.GeneralPartyInfo.Addr.StateProvCd" label="State" required="true" uniqueId="ContactAddressState">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="state" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement type="text" id="MiscParty.GeneralPartyInfo.Addr.PostalCode" label="Zip Code" required="true" size="10" maxLength="10" uniqueId="ContactAddressZip">
+        <formatMask type="USZipCodeLong" />
+           <validation type="USZipCode" />
+      </fieldElement>
+      <fieldElement type="hidden" id="MiscParty.GeneralPartyInfo.Addr.CountryCd" uniqueId="ContactCountryCd" defaultValue="US" />
+    </pageElement>
+    <pageElement id="RolesSection" type="fieldset" legend="Roles">
+      <fieldElement id="account_roletips" type="message">Please select at least one role.</fieldElement>
+      <fieldElement type="checkbox" id="MiscParty.MiscPartyInfo[MiscPartyRoleCd='AC'].MiscPartyRoleCd" label="Accounting Contact" uniqueId="contactRoleAC" checkedValue="AC" uncheckedValue="" groupId="MiscParty.MiscPartyInfo[MiscPartyRoleCd='AC']" />
+      <fieldElement type="checkbox" id="MiscParty.MiscPartyInfo[MiscPartyRoleCd='AccountHolder'].MiscPartyRoleCd" label="Account Holder" uniqueId="contactRoleAccountHolder" checkedValue="AccountHolder" uncheckedValue="" groupId="MiscParty.MiscPartyInfo[MiscPartyRoleCd='AccountHolder']" />
+      <fieldElement type="checkbox" id="MiscParty.MiscPartyInfo[MiscPartyRoleCd='AdditionalInsured'].MiscPartyRoleCd" label="Additional Insured" uniqueId="contactRoleAdditionalInsured" checkedValue="AdditionalInsured" uncheckedValue="" groupId="MiscParty.MiscPartyInfo[MiscPartyRoleCd='AdditionalInsured']" />
+      <fieldElement type="checkbox" id="MiscParty.MiscPartyInfo[MiscPartyRoleCd='AdditionalInterest'].MiscPartyRoleCd" label="Additional Interest" uniqueId="contactRoleAdditionalInterest" checkedValue="AdditionalInterest" uncheckedValue="" groupId="MiscParty.MiscPartyInfo[MiscPartyRoleCd='AdditionalInterest']" />
+      <fieldElement type="checkbox" id="MiscParty.MiscPartyInfo[MiscPartyRoleCd='BillingContact'].MiscPartyRoleCd" label="Billing Contact" uniqueId="contactRoleBillingContact" checkedValue="BillingContact" uncheckedValue="" groupId="MiscParty.MiscPartyInfo[MiscPartyRoleCd='BillingContact']" />
+      <fieldElement type="checkbox" id="MiscParty.MiscPartyInfo[MiscPartyRoleCd='CC'].MiscPartyRoleCd" label="Claims Information Contact" uniqueId="contactRoleCC" checkedValue="CC" uncheckedValue="" groupId="MiscParty.MiscPartyInfo[MiscPartyRoleCd='CC']" />
+      <fieldElement type="checkbox" id="MiscParty.MiscPartyInfo[MiscPartyRoleCd='Driver'].MiscPartyRoleCd" label="Driver" uniqueId="contactRoleDriver" checkedValue="Driver" uncheckedValue=""  groupId="MiscParty.MiscPartyInfo[MiscPartyRoleCd='Driver']" />
+      <fieldElement type="text" id="MiscParty.GeneralPartyInfo.License.LicensePermitNumber" label="License Number" uniqueId="ContactLicenseNumber" size="20" maxLength="30" />
+      <fieldElement type="selectlist" id="MiscParty.GeneralPartyInfo.License.StateProvCd" label="License State" uniqueId="ContactLicenseState">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="state" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement type="checkbox" id="MiscParty.MiscPartyInfo[MiscPartyRoleCd='InspectionContact'].MiscPartyRoleCd" label="Inspection Contact" uniqueId="contactRoleInspectionContact" checkedValue="InspectionContact" uncheckedValue="" groupId="MiscParty.MiscPartyInfo[MiscPartyRoleCd='InspectionContact']" />
+      <fieldElement type="checkbox" id="MiscParty.MiscPartyInfo[MiscPartyRoleCd='LaborClient'].MiscPartyRoleCd" label="Labor Client" uniqueId="contactRoleLaborClient" checkedValue="LaborClient" uncheckedValue="" groupId="MiscParty.MiscPartyInfo[MiscPartyRoleCd='LaborClient']" />
+      <fieldElement type="checkbox" id="MiscParty.MiscPartyInfo[MiscPartyRoleCd='LaborContractor'].MiscPartyRoleCd" label="Labor Contractor" uniqueId="contactRoleLaborContractor" checkedValue="LaborContractor" uncheckedValue="" groupId="MiscParty.MiscPartyInfo[MiscPartyRoleCd='LaborContractor']" />
+      <fieldElement type="checkbox" id="MiscParty.MiscPartyInfo[MiscPartyRoleCd='NamedInsured'].MiscPartyRoleCd" label="Named Insured" uniqueId="contactRoleNamedInsured" checkedValue="NamedInsured" uncheckedValue="" groupId="MiscParty.MiscPartyInfo[MiscPartyRoleCd='NamedInsured']" />
+      <fieldElement type="checkbox" id="MiscParty.MiscPartyInfo[MiscPartyRoleCd='OwnerOfficer'].MiscPartyRoleCd" label="Owner Officer" uniqueId="contactRoleOwnerOfficer" checkedValue="OwnerOfficer" uncheckedValue="" groupId="MiscParty.MiscPartyInfo[MiscPartyRoleCd='OwnerOfficer']" />
+      <fieldElement type="checkbox" id="MiscParty.MiscPartyInfo[MiscPartyRoleCd='SecondaryContact'].MiscPartyRoleCd" label="Secondary Contact" uniqueId="contactRoleSecondaryContact" checkedValue="SecondaryContact" uncheckedValue="" groupId="MiscParty.MiscPartyInfo[MiscPartyRoleCd='SecondaryContact']" />
+    </pageElement>
+  </page>
+  <page id="producer" source="Producer" title="Producers" type="roster" menuDisplay="never">
+    <pageElement id="ProducerSummaryRoster" type="roster" legend="Producers">
+      <fieldElement type="column" label="Code" id="Producer.ProducerInfo.ContractNumber" maxLength="20" />
+      <action type="edit" htmlDefinitionId="ACCOUNT_ACTION_EDIT" />
+      <action type="delete" htmlDefinitionId="ACCOUNT_ACTION_DELETE" />
+    </pageElement>
+    <pageElement id="ProducerDetailSection" type="fieldset" legend="Details">
+      <fieldElement type="text" id="Producer.ProducerInfo.ContractNumber" label="Producer Code" uniqueId="ProducerCode" required="true" />
+      <fieldElement type="text" id="Producer.ItemIdInfo.SystemId" defaultValue="GUID()" label="Producer Code Internal Id" uniqueId="ProducerCodeId" required="true" />
+    </pageElement>
+  </page>
+</collection>

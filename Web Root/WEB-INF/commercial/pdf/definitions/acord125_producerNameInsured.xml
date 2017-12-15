@@ -1,0 +1,256 @@
+<fields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/pdf/pdfDefinitions.xsd">
+    <field>
+        <eLabel>Producer_FullName_A</eLabel>
+        <xpath>Producer.GeneralPartyInfo.NameInfo.CommlName.CommercialName</xpath>
+    </field>
+    <field>
+        <eLabel>Producer_MailingAddress_LineOne_A</eLabel>
+        <xpath>Producer.GeneralPartyInfo.Addr.Addr1</xpath>
+    </field>
+    <field>
+        <eLabel>Producer_MailingAddress_LineTwo_A</eLabel>
+        <xpath>Producer.GeneralPartyInfo.Addr.Addr2</xpath>
+    </field>
+    <field>
+        <eLabel>Producer_MailingAddress_CityName_A</eLabel>
+        <xpath>Producer.GeneralPartyInfo.Addr.City</xpath>
+    </field>
+    <field>
+        <eLabel>Producer_MailingAddress_StateOrProvinceCode_A</eLabel>
+        <xpath>Producer.GeneralPartyInfo.Addr.StateProvCd</xpath>
+    </field>
+    <field>
+        <eLabel>Producer_MailingAddress_PostalCode_A</eLabel>
+        <xpath>Producer.GeneralPartyInfo.Addr.PostalCode</xpath>
+    </field>
+    <field>
+        <eLabel>Producer_ContactPerson_FullName_A</eLabel>
+        <xpath>Producer.GeneralPartyInfo.NameInfo.SupplementaryNameInfo[SupplementaryNameCd='PrimaryContact'].SupplementaryName</xpath>
+    </field>
+    <field>
+        <eLabel>Producer_ContactPerson_PhoneNumber_A</eLabel>
+        <xpath>Producer.GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone'].PhoneNumber</xpath>
+    </field>
+    <field>
+        <eLabel>Producer_ContactPerson_CellPhoneNumber_A</eLabel>
+        <xpath>Producer.GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Cell'].PhoneNumber</xpath>
+    </field>
+    <field>
+        <eLabel>Producer_FaxNumber_A</eLabel>
+        <xpath>Producer.GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Fax'].PhoneNumber</xpath>
+    </field>
+    <field>
+        <eLabel>Producer_ContactPerson_EmailAddress_A</eLabel>
+        <xpath>Producer.GeneralPartyInfo.Communications.EmailInfo.EmailAddr</xpath>
+    </field>
+    <field>
+        <eLabel>Insurer_ProducerIdentifier_A</eLabel>
+        <xpath>Producer.ProducerInfo.ContractNumber</xpath>
+    </field>
+    <field>
+        <eLabel>Insurer_SubProducerIdentifier_A</eLabel>
+        <xpath>Producer.ProducerInfo.ProducerSubCode</xpath>
+    </field>
+
+    <field>
+        <eLabel>Producer_CustomerServiceRepresentative_FullName_A</eLabel>
+        <xpath>Producer.GeneralPartyInfo.NameInfo.SupplementaryNameInfo[SupplementaryNameCd='PrimaryContact'].SupplementaryName</xpath>
+    </field>
+    <field>
+        <eLabel>Policy_EffectiveDate_A</eLabel>
+        <xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+        <format type="date" />
+    </field>
+    <field>
+        <eLabel>Policy_ExpirationDate_A</eLabel>
+        <xpath>CommlPolicy.ContractTerm.ExpirationDt</xpath>
+        <format type="date" />
+    </field>
+    <field>
+        <eLabel>Policy_Payment_PaymentScheduleCode_A</eLabel>
+        <xpath>CommlPolicy.PaymentOption.PaymentPlanCd</xpath>
+    </field>
+    <field>
+        <eLabel>Policy_PaymentMethod_MethodDescription_A</eLabel>
+        <xpath>CommlPolicy.PaymentOption.MethodPaymentCd</xpath>
+    </field>
+    <field>
+        <eLabel>Policy_Audit_FrequencyCode_A</eLabel>
+        <xpath>CommlPolicy.CommlPolicySupplement.AuditInd</xpath>
+    </field>
+    <field>
+        <eLabel>Policy_Payment_DepositAmount_A</eLabel>
+        <xpath>CommlPolicy.PaymentOption.DepositAmt.Amt</xpath>
+    </field>
+    <field>
+        <eLabel>Policy_Payment_MinimumPremiumAmount_A</eLabel>
+        <xpath>CommlPolicy.MinPremAmt.Amt</xpath>
+    </field>
+    <field>
+        <eLabel>Policy_Payment_EstimatedTotalAmount_A</eLabel>
+        <xpath>CommlPolicy.CurrentTermAmt.Amt</xpath>
+    </field>
+    <field>
+        <eLabel>NamedInsured_GeneralLiabilityCode_A</eLabel>
+        <xpath>InsuredOrPrincipal.InsuredOrPrincipalInfo[InsuredOrPrincipalRoleCd='Insured'].BusinessInfo.GeneralLiabilityCd</xpath>
+    </field>
+    <field>
+        <eLabel>NamedInsured_SICCode_A</eLabel>
+        <xpath>InsuredOrPrincipal.InsuredOrPrincipalInfo[InsuredOrPrincipalRoleCd='Insured'].BusinessInfo.SICCd</xpath>
+    </field>
+    <field>
+        <eLabel>NamedInsured_NAICSCode_A</eLabel>
+        <xpath>InsuredOrPrincipal.InsuredOrPrincipalInfo[InsuredOrPrincipalRoleCd='Insured'].BusinessInfo.NAICSCd</xpath>
+    </field>
+    <field>
+        <eLabel>NamedInsured_TaxIdentifier_A</eLabel>
+        <xpath>InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo.TaxIdentity.TaxId</xpath>
+    </field>
+    <field>
+        <eLabel>NamedInsured_Primary_PhoneNumber_A</eLabel>
+        <xpath>InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone' &amp;&amp; CommunicationUseCd='Business'].PhoneNumber</xpath>
+    </field>
+    <field>
+        <eLabel>NamedInsured_Secondary_PhoneNumber_A</eLabel>
+        <xpath>InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Cell' &amp;&amp; CommunicationUseCd='Business'].PhoneNumber</xpath>
+    </field>
+    <field>
+        <eLabel>NamedInsured_MailingAddress_LineOne_A</eLabel>
+        <xpath>InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Addr.Addr1</xpath>
+    </field>
+    <field>
+        <eLabel>NamedInsured_MailingAddress_LineTwo_A</eLabel>
+        <xpath>InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Addr.Addr2</xpath>
+    </field>
+    <field>
+        <eLabel>NamedInsured_MailingAddress_CityName_A</eLabel>
+        <xpath>InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Addr.City</xpath>
+    </field>
+    <field>
+        <eLabel>NamedInsured_MailingAddress_StateOrProvinceCode_A</eLabel>
+        <xpath>InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Addr.StateProvCd</xpath>
+    </field>
+    <field>
+        <eLabel>NamedInsured_MailingAddress_PostalCode_A</eLabel>
+        <xpath>InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Addr.PostalCode</xpath>
+    </field>
+    <field>
+        <eLabel>NamedInsured_Primary_WebsiteAddress_A</eLabel>
+        <xpath>InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Communications.WebsiteInfo[CommunicationUseCd='Business'].WebsiteURL</xpath>
+    </field>
+
+    <field>
+        <eLabel>NamedInsured_Primary_EmailAddress_A</eLabel>
+        <xpath>InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Communications.EmailInfo[CommunicationUseCd='Business'].EmailAddr</xpath>
+    </field>
+    <field>
+        <eLabel>NamedInsured_LegalEntity_MemberManagerCount_A</eLabel>
+        <xpath>InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].InsuredOrPrincipalInfo.BusinessInfo.NumMembersManagers</xpath>
+    </field>
+    <!--
+        <field>
+        <eLabel>NamedInsured_Contact_ContactDescription_A</eLabel>
+        <xpath>CommlPolicy.MiscParty.MiscPartyInfo.MiscPartyRoleCd</xpath>
+        </field>
+    -->
+    <!-- find the proper role code
+        <field>
+        <eLabel>NamedInsured_Contact_FullName_A</eLabel>
+        <xpath>CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='XXXX'].GeneralPartyInfo.NameInfo.CommlName.CommercialName</xpath>
+        </field>
+        <field>
+        <eLabel>NamedInsured_Contact_PrimaryPhoneNumber_A</eLabel>
+        <xpath>CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='XXXX'].GeneralPartyInfo[PreferredContact.PreferencePriority='1'].Communications.PhoneInfo[PhoneTypeCd='Phone'].PhoneNumber</xpath>
+        </field>
+    -->
+    <field type="checkbox">
+        <eLabel>NamedInsured_Contact_PrimaryHomePhoneIndicator_A</eLabel>
+        <xpath>CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='Home'].GeneralPartyInfo[PreferredContact.PreferencePriority='1'].Communications.PhoneInfo[PhoneTypeCd='Phone'].CommunicationUseCd</xpath>
+    </field>
+    <field type="checkbox">
+        <eLabel>NamedInsured_Contact_PrimaryBusinessPhoneIndicator_A</eLabel>
+        <xpath>CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='Business'].GeneralPartyInfo[PreferredContact.PreferencePriority='1'].Communications.PhoneInfo[PhoneTypeCd='Phone'].CommunicationUseCd</xpath>
+    </field>
+    <field type="checkbox">
+        <eLabel>NamedInsured_Contact_PrimaryCellPhoneIndicator_A</eLabel>
+        <xpath>CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='Alternate'].GeneralPartyInfo[PreferredContact.PreferencePriority='1'].Communications.PhoneInfo[PhoneTypeCd='Phone'].CommunicationUseCd</xpath>
+    </field>
+    <field>
+        <eLabel>NamedInsured_Contact_SecondaryPhoneNumber_A</eLabel>
+        <xpath>CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='Home'].GeneralPartyInfo[PreferredContact.PreferencePriority='2'].Communications.PhoneInfo[PhoneTypeCd='Phone'].PhoneNumber</xpath>
+    </field>
+    <field type="checkbox">
+        <eLabel>NamedInsured_Contact_SecondaryHomePhoneIndicator_A</eLabel>
+        <xpath>CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='Home'].GeneralPartyInfo[PreferredContact.PreferencePriority='2'].Communications.PhoneInfo[PhoneTypeCd='Phone'].CommunicationUseCd</xpath>
+    </field>
+    <field type="checkbox">
+        <eLabel>NamedInsured_Contact_SecondaryBusinessPhoneIndicator_A</eLabel>
+        <xpath>CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='Business'].GeneralPartyInfo[PreferredContact.PreferencePriority='2'].Communications.PhoneInfo[PhoneTypeCd='Phone'].CommunicationUseCd</xpath>
+    </field>
+    <field type="checkbox">
+        <eLabel>NamedInsured_Contact_SecondaryCellPhoneIndicator_A</eLabel>
+        <xpath>CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='Alternate'].GeneralPartyInfo[PreferredContact.PreferencePriority='2'].Communications.PhoneInfo[PhoneTypeCd='Phone'].CommunicationUseCd</xpath>
+    </field>
+    <!-- find the role code
+        <field>
+        <eLabel>NamedInsured_Contact_PrimaryEmailAddress_A</eLabel>
+        <xpath>CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='XXXX'].GeneralPartyInfo[PreferredContact.PreferencePriority='1'].Communications.PhoneInfo.EmailAddr</xpath>
+        </field>
+        <field>
+        <eLabel>NamedInsured_Contact_SecondaryEmailAddress_A</eLabel>
+        <xpath>CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='XXXX'].GeneralPartyInfo[PreferredContact.PreferencePriority='2'].Communications.PhoneInfo.EmailAddr</xpath>
+        </field>
+    -->
+    <!-- Legal Entity Check Box group -->
+    <checkBoxGroup>
+        <xpath>InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo.LegalEntityCd</xpath>
+        <checkBox trueValue="IN">
+            <eLabel>NamedInsured_LegalEntity_IndividualIndicator_A</eLabel>
+        </checkBox>
+        <checkBox trueValue="PT">
+            <eLabel>NamedInsured_LegalEntity_PartnershipIndicator_A</eLabel>
+        </checkBox>
+        <checkBox trueValue="CP">
+            <eLabel>NamedInsured_LegalEntity_CorporationIndicator_A</eLabel>
+        </checkBox>
+        <checkBox trueValue="JV">
+            <eLabel>NamedInsured_LegalEntity_JointVentureIndicator_A</eLabel>
+        </checkBox>
+        <checkBox trueValue="LL">
+            <eLabel>NamedInsured_LegalEntity_LimitedLiabilityCorporationIndicator_A</eLabel>
+        </checkBox>
+        <checkBox trueValue="SS">
+            <eLabel>NamedInsured_LegalEntity_SubchapterSCorporationIndicator_A</eLabel>
+        </checkBox>
+        <checkBox trueValue="NP">
+            <eLabel>NamedInsured_LegalEntity_NotForProfitIndicator_A</eLabel>
+        </checkBox>
+        <checkBox trueValue="TR">
+            <eLabel>NamedInsured_LegalEntity_TrustIndicator_A</eLabel>
+        </checkBox>
+        <checkBox trueValue="CP">
+            <eLabel>NamedInsured_LegalEntity_CorporationIndicator_A</eLabel>
+        </checkBox>
+        <checkBox trueValue="PT">
+            <eLabel>NamedInsured_LegalEntity_PartnershipIndicator_A</eLabel>
+        </checkBox>
+        <checkBox trueValue="SolePrp">
+            <eLabel>NamedInsured_LegalEntity_SoleProprietorIndicator_A</eLabel>
+        </checkBox>
+        <checkBox trueValue="UA">
+            <eLabel>NamedInsured_LegalEntity_SoleProprietorIndicator_A</eLabel>
+        </checkBox>
+    </checkBoxGroup>
+    <checkBoxGroup>
+        <xpath>CommlPolicy.BillingMethodCd</xpath>
+        <checkBox trueValue="CPB">
+            <eLabel>Policy_Payment_DirectBillIndicator_A</eLabel>
+        </checkBox>
+        <checkBox trueValue="AB">
+            <eLabel>Policy_Payment_ProducerBillIndicator_A</eLabel>
+        </checkBox>
+        <checkBox trueValue="CAB">
+            <eLabel>Policy_Payment_DirectBillIndicator_A</eLabel>
+        </checkBox>
+    </checkBoxGroup>
+</fields>

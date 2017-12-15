@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transaction id="worklist" title="Advanced Search Dialogs" 
+	target="shared" 
+	lob="shared" 
+	type="new_business" 
+	supportsFastForward="false"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/definition/transactionDefinitionFile.xsd">
+	
+  <description>Page definitions for Advanced Search Dialogs for My Accounts and My Work</description>
+  <page id="worklistAdvancedSearch" title="More Options" type="dataEntry">
+  		<pageElement id="worklistAdvancedSearch" type="fieldset" legend="More Options">
+			<fieldElement type="text"
+				id="SP.workItemId"
+				uniqueId="workItemId"
+				label="Work Item ID"
+				size="9" maxLength="9">
+			</fieldElement>	
+			<fieldElement type="selectlist"
+				id="SP.operator"
+				uniqueId="operator"
+				label="Operator" defaultValue="LESS_THAN">
+				<optionList reader="custom" source="com.agencyport.api.pojo.OperatorsListBuilder" target="dataType=DATE"/>
+			</fieldElement>	
+			<fieldElement type="date" id="SP.EffectiveDate" uniqueId="effectiveDate" label="Effective" required="false" 
+				size="10" maxLength="10" />
+		</pageElement>
+  </page> 
+  <page id="accountlistAdvancedSearch" title="More Options" type="dataEntry">
+  		<pageElement id="accountlistAdvancedSearch" type="fieldset" legend="More Options">
+			<fieldElement type="text"
+				id="SP.accountId"
+				uniqueId="accountId"
+				label="Account Number"
+				size="9" maxLength="9">
+			</fieldElement>	
+			<fieldElement type="text"
+				id="SP.city"
+				uniqueId="city"
+				label="City"
+				size="30" maxLength="30">
+			</fieldElement>	
+			<fieldElement type="selectlist"
+				id="SP.state"
+				uniqueId="state"
+				label="State">
+				<optionList reader="xmlreader" source="codeListRef.xml" target="state"/>
+			</fieldElement>	
+			<fieldElement type="text"
+				id="SP.zip"
+				uniqueId="zipCode"
+				label="Zip Code"
+				size="10" maxLength="10">
+			</fieldElement>	
+		</pageElement>
+  </page> 
+</transaction>
+

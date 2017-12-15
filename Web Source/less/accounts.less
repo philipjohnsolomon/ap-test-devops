@@ -1,0 +1,293 @@
+.account-section {
+	padding-bottom: @content-margin-bottom;
+
+	.nav > li > a {
+		color: @theme-tab-text;
+		background: @theme-tab-bg;
+		border-color: @theme-tab-border;
+		border: 0;
+		margin-bottom: 1px;
+	}
+	
+	.nav > li > a:hover {
+    	color: @theme-tab-hover-text;
+		background: @theme-tab-hover-bg;
+    	border-color: @theme-tab-hover-border;
+	}
+
+	.nav-tabs > li.active > a, 
+	.nav-tabs > li.active > a:hover, 
+	.nav-tabs > li.active > a:focus {
+		color: @theme-tab-active-text;
+		background: @theme-tab-active-bg;
+		border-color: @theme-tab-active-border;
+		outline: 0;
+		border: 0;
+	}
+	
+	/*	Dropdowns */
+	
+	.filter-type {
+		li a .fa {
+			margin-right: 5px;
+		}
+		.type-P .fa	{
+			&:before {content: @icon-card-personal;}
+		}
+		.type-C .fa	{
+			&:before {content: @icon-card-commercial;}
+		}
+	}
+	
+	/*	Account Detail */
+	.account-details {	
+		margin: 40px 0;
+	
+		.header	{
+			color: #fff; 
+			background: @gray; 
+			padding: 10px; 
+			overflow: auto;
+			
+			
+			.edit-account {
+				.fa {
+					&:before{content: @icon-account-edit;}
+				}
+			}
+			.merge-account {
+				.fa {
+					&:before{content: @icon-account-merge;}
+				}
+			}
+			.delete-account {
+				.fa {
+					&:before{content: @icon-account-delete;}
+				}
+			}
+			
+			h2 {
+				display: inline-block; 
+				color: #fff; 
+				font-size: @font-size-large; 
+				margin: 0; 
+				padding: 0; 
+				line-height: 2;
+			}
+			ul {
+				list-style: none; margin: 0;
+			}
+			li {
+				display: inline; 
+				font-size: @font-size-base * 1.75; 
+				margin-left: 20px;
+				
+				span	{display: none;}
+				a 		{color: #fff;}
+				a:hover {color: @gray-light;}
+			}
+		}
+				
+		.account-detail {
+			.info-internal {
+				dl {
+					dt {
+						font-style: normal; 
+						font-weight: 100;
+						font-size: @font-size-base * 1.25; 
+					}
+					dd {
+						margin-bottom: .5em; 
+						padding-bottom: .5em; 
+						border-bottom: 1px solid; 
+						border-color: lighten(@gray-light, 20%);
+					}
+
+				}
+			}
+			
+			.info-account.row {
+				position: relative;
+				background: #fff;
+				min-height: 0;
+				margin-left: 0;
+				margin-right: 0;
+				padding: 0;
+				cursor: default;
+				border: 0;
+				-webkit-box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.25);
+				-moz-box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.25);
+				box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.25);
+			
+				.account-column {
+					position: relative;	
+					padding: 20px;
+				
+					dl {
+						margin-bottom: 1em;
+						dt {
+							font-weight: 600;
+						}
+						dt.account-name	{
+							font-size: @font-size-base * 1.75; 
+							font-weight: 400;
+							line-height: (@line-height-base * 0.85);
+							margin-bottom: .5em;
+						}
+						dd {
+							margin-bottom: 0; 
+							font-weight: 400;
+						}
+					}
+				}
+				.account-column.contact-info {
+					border-left: 1px solid lighten(@gray-light, 20%); 
+					border-right: 1px solid lighten(@gray-light, 20%);
+
+					.phone-label	{color: @gray-light;}
+				}
+			}
+		}
+	}
+	
+	
+	/* FORM outside of our standard markup (Locations and People tabs) */
+	form.account-form {
+		.form-control {
+			width: auto;
+		}
+		
+		.search-field .form-control {
+			width: 100%;
+		}
+		
+		.date {
+			.input-group-addon .fa {
+				line-height: 18px;
+				&:before{content: @icon-ui-calendar;}
+			}
+		}
+
+		.input-group.date {
+			display: inline-block;
+			width: 146px;
+		
+			.form-control {
+				float: none;
+			}
+			.input-group-addon {
+				height: 34px;
+				padding: 6px 12px;
+				display: inline-block;
+				margin-left: -4px;
+				margin-top: -2px;
+			}
+		}	
+		
+		/* 
+			IE 10 on Windows 8 
+			http://stackoverflow.com/questions/1120879/css-checkbox-input-styling
+		*/
+		&.form-horizontal {
+			::-ms-check {
+				background: transparent;
+			}					
+			.form-group {
+				.checkbox {
+					input[type="checkbox"] {
+						padding: 0;
+						outline: 0;
+					}
+				}
+			}
+		}
+		
+		
+		/* alerts specific to account details */
+		
+		.tab-content {
+			.initial-display-messages,
+			.ajax-messages {
+				.alert {
+					position: relative;
+					.fa {
+						left: 15px;
+					}
+				}
+			}
+		}
+		
+		
+		/* horizontal alignment of Type, Company & Person for People/Add Details */
+		.radioSet	{
+			overflow: auto;
+			
+			.options {
+				padding-top: 7px;
+				display: inline-block;
+				vertical-align: middle;
+			
+				label {
+					margin-left: 10px; 
+					margin-bottom: 0;
+					padding-left: 20px; 
+					vertical-align: middle;
+				
+					input[type="radio"] {
+						float: left; 
+						margin-left: -20px;
+						margin-top: 4px;
+						line-height: normal;
+						padding: 0;
+						min-height: 0;    				
+					}
+				}
+			}		
+		}				
+	}	
+	
+	/*	tabbed UI */
+	.tab-content {
+		position: relative;
+		background: transparent;
+		padding: 0;
+		box-shadow: 0;
+		
+		.tab-white-background {
+			padding: 20px; 
+			background: #fff; 
+			border: 1px solid @gray-lighter; 
+			box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+		}
+		
+		.agencyportal-form	{
+			border: 0;
+			padding: 0;
+		}
+		
+		table.roster {
+			background: #fff;
+			thead td, 
+			thead th {
+				color: @gray;
+				background: #fff;
+			}
+		}
+	}
+	
+	
+	/*	888 pixels is an artistic decision. Existing breakpoints don't look as good */
+
+	@media ( max-width : 698px ) {
+		.account-details .account-detail .info-account.row .account-column {
+			min-height: 0;
+			border: 0;
+			border-bottom: 1px solid lighten(@gray-light, 20%);
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+	}
+	
+	
+}
+

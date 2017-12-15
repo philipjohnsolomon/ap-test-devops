@@ -1,0 +1,54 @@
+<dynamicListTemplates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/codelist/dynamicListTemplate.xsd">
+	<dynamicListTemplate id="GaragingLocations">
+		<field type="id">Location.Addr[AddrTypeCd='GaragingAddress'].Addr1</field>
+		<field type="singleSpace"> </field>
+		<field type="id">Location.Addr[AddrTypeCd='GaragingAddress'].City</field>
+		<field type="formatInfo">, </field>
+		<field type="id">Location.Addr[AddrTypeCd='GaragingAddress'].StateProvCd</field>
+		<field type="singleSpace"> </field>
+		<field type="id">Location.Addr[AddrTypeCd='GaragingAddress'].PostalCode</field>
+		<groupId>Location</groupId>
+		<returnValueId>Location.@id</returnValueId>
+		<listBuilderClassName/>
+	</dynamicListTemplate>
+	<dynamicListTemplate id="Locations">
+	    <field type="id">Location.ItemIdInfo.AgencyId</field>
+		<field type="formatInfo"> - </field>
+		<field type="id">Location.Addr.Addr1</field>
+		<field type="singleSpace"> </field>
+		<field type="id">Location.Addr.City</field>
+		<field type="formatInfo">, </field>
+		<field type="id">Location.Addr.StateProvCd</field>
+		<field type="singleSpace"> </field>
+		<field type="id">Location.Addr.PostalCode</field>
+		<groupId>Location</groupId>
+		<returnValueId>Location.@id</returnValueId>
+		<listBuilderClassName/>
+	</dynamicListTemplate>
+	<dynamicListTemplate id="PropertyItems">	
+		<field type="id">PersInlandMarineLineBusiness.PropertySchedule.ItemIdInfo.AgencyId</field>
+		<field type="formatInfo"> - </field>
+		<field type="id">PersInlandMarineLineBusiness.PropertySchedule.ItemDefinition.ItemDesc</field>
+		<groupId>PersInlandMarineLineBusiness.PropertySchedule</groupId>
+		<returnValueId>PersInlandMarineLineBusiness.PropertySchedule.PropertyClassCd.@id</returnValueId>
+		<listBuilderClassName/>
+	</dynamicListTemplate>
+	<dynamicListTemplate id="waterCrafts">	
+		<field type="id">WatercraftLineBusiness.Watercraft.ItemDefinition.Manufacturer</field>
+		<field type="formatInfo"> / </field>
+		<field type="id">WatercraftLineBusiness.Watercraft.ItemDefinition.Model</field>
+		<field type="formatInfo"> - </field>
+		<field type="id">Location[@id='${WatercraftLineBusiness.Watercraft.@DockLocationRef}'].Addr.Addr1</field>
+		<field type="singleSpace"> </field>
+		<field type="id">Location[@id='${WatercraftLineBusiness.Watercraft.@DockLocationRef}'].Addr.City</field>
+		<field type="formatInfo">, </field>
+		<field type="id">Location[@id='${WatercraftLineBusiness.Watercraft.@DockLocationRef}'].Addr.StateProvCd</field>
+		<field type="singleSpace"> </field>
+		<field type="id">Location[@id='${WatercraftLineBusiness.Watercraft.@DockLocationRef}'].Addr.PostalCode</field>
+		<groupId>WatercraftLineBusiness.Watercraft</groupId>
+		<returnValueId>WatercraftLineBusiness.Watercraft.@id</returnValueId>
+		<listBuilderClassName/>
+	</dynamicListTemplate>
+	
+</dynamicListTemplates>

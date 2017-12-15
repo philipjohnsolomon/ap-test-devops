@@ -1,0 +1,201 @@
+/* CSS RESET -----------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* END CSS RESET -----------------------  */
+
+html, body {
+	background: url(canvas.png);
+	font-family: 'Droid Sans', sans-serif;	
+}
+span.emphasize {
+	color: #000;
+}
+#message {
+	color: #fff;
+	background: #000 url(184-warning@2x.png) 10px 10px no-repeat;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 1em;
+	z-index: 2;
+	width: 300px;
+	text-align: right;
+	border-radius: 5px;
+	min-height: 60px;
+	padding: 15px 15px 15px 60px;
+}
+#message span {
+	display: inline-block;	
+}
+#body {
+	width: 782px;
+	margin: 20px auto;
+}
+#build_stamp {
+	text-align: right;
+	font-size: .65em;
+	color: #999;
+}
+
+#navigation {
+	width: 180px;
+	float: left;
+	text-align: right;
+	padding: 20px 0 0 0;
+}
+#navigation li {
+	margin: 0 0 10px 0;
+	padding: 5px 5px 10px 0;
+	border-bottom: 1px solid #ccc;
+	color: #999;
+	text-shadow: 0px 1px 1px #fff;	
+}
+#navigation li.selected {
+	color: #4e4e4e;
+}
+#body div.contents {
+	float: right;
+	width: 600px;
+	background: #fff url(agencyport.png) no-repeat bottom right;
+	border-radius: 5px;
+	box-shadow: 5px 5px 2px #ddd;
+	border: 1px solid #ccc;
+	border-right: 1px solid #c4c4c4;
+	border-bottom: 1px solid #c4c4c4;	
+}
+#body div.contents div.page {
+	margin: 40px 50px;
+	color: #444;
+	padding:0 80px 0 0;
+}
+#body div.contents div.page.getting_started {
+	background: url(246-route@2x.png) no-repeat top right;	
+}
+#body div.contents div.page.database_setup {
+	background: url(293-database@2x.png) no-repeat top right;	
+}
+#body div.contents div.page.template_install {
+	background: url(265-download@2x.png) no-repeat top right;		
+}
+#body div.contents div.page.wrap_up {
+	background: url(258-checkmark@2x.png) no-repeat top right;
+}
+
+#body div.contents div.page h1 {
+	font-size: 1.25em;
+}
+#body div.contents div.page p {
+	margin: 20px 0;
+	line-height: 1.5em;
+	font-size: .95em;
+	color: #999;
+}
+#body div.contents div.section {
+	margin: 50px 0;	
+	position: relative;
+}
+#body div.contents div.section table {
+	width: 100%;
+}
+#body div.contents table th, #body div.contents table td {
+	padding: 5px;
+	border: 1px solid #ccc;
+	text-align: left;
+}
+#body div.contents table th {
+	background: #efefef;
+}
+#body div.contents table td.title {
+	background: url(26-checkmark.png) no-repeat 2px 4px;
+	padding-left: 25px;
+}
+#body div.contents select.database_type {
+	font-size: 1em;
+}
+#body div.contents div.final_button {
+	font-size: 1.1em;
+}
+
+.button.small, .button.small:hover {
+	padding: 1px 5px;
+}
+.button {
+	background-color: #0083aa;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0083aa), color-stop(100%, #00799d));
+	background-image: -webkit-linear-gradient(top, #0083aa, #00799d);
+	background-image: -moz-linear-gradient(top, #0083aa, #00799d);
+	background-image: -ms-linear-gradient(top, #0083aa, #00799d);
+	background-image: -o-linear-gradient(top, #0083aa, #00799d);
+	background-image: linear-gradient(top, #0083aa, #00799d);
+	border: 0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	color: #fff;
+	line-height: 1;
+	padding: 8px 12px;
+	text-align: center;
+	font-size: .8em;
+}
+.button:hover {
+	background-color: #006f90;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #006f90), color-stop(100%, #005973));
+	background-image: -webkit-linear-gradient(top, #006f90, #005973);
+	background-image: -moz-linear-gradient(top, #006f90, #005973);
+	background-image: -ms-linear-gradient(top, #006f90, #005973);
+	background-image: -o-linear-gradient(top, #006f90, #005973);
+	background-image: linear-gradient(top, #006f90, #005973);
+	border: 0;
+	cursor: pointer;
+}
+
+
+

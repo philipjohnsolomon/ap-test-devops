@@ -1,0 +1,218 @@
+<transactionDefinitionBehavior xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/behavior/transactionDefinitionBehavior.xsd">
+    <!-- The following delimiter applies to the <for> elements for separating page entities -->
+    <delimiter>/</delimiter>
+
+    <!-- Location hotFields to be set in preconditions for RateState determination -->
+
+    <hotField key="*/policyCoverages/liabilityCoveragesSection/LiabilityOption" />
+    <hotField key="*/vehicle/vehicleInformation/VehicleBodyType" />
+    <hotField key="*/vehicle/vehicleInformation/HotVehicleType" />
+    <hotField key="*/policyCoverages/hiredAutoSection/HiredAutoCoverage" />
+    <hotField key="*/policyCoverages/nonOwnedAutoSection/NonOwnedAutoCoverage" />
+    <hotField key="*/policyCoverages/driveOtherCarCoverageSection/DocCoverage" />
+
+    <hotField assistant="com.agencyport.shared.preconditions.EffectiveDateIPDTRAssistant" key="*/generalInfo/policyTerm/EffectiveDate" />
+    <hotField key="*/AUTOBGarageLocation/AddAUTOBGarageLocation/StateProvCd" auto="false" />
+    <hotField key="*/AUTOBGarageLocation/AddAUTOBGarageLocation/Location.@id" auto="false" />
+
+    <hotField key="*/generalInfo/applicantInformation/TaxIdType" />
+
+    <hotField key="*/AUTOBquestionnaire/AUTOBemdQuestions/ElectronicMonitoringInd" />
+    <!-- Example of class level behaviors -->
+    <!-- @expunge
+        <behavior id="excludeStateSpecific" title="State Specific content exclusion">
+        <do action="exclude" />
+        <for>*/.StateSpecific</for>
+        <for>*/*/.StateSpecific</for>
+        <for>*/*/*/.StateSpecific</for>
+        </behavior>
+
+        <behavior id="includeNYContent" title="Include NY content">
+        <do action="include" />
+        <where>
+        <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('NY')</preCondition>
+        </where>
+        <for>*/.NY</for>
+        <for>*/*/.NY</for>
+        <for>*/*/*/.NY</for>
+        </behavior>
+    -->
+    <!-- Policy Coverages page Behaviors -->
+    <behavior title="Display CSL fields if Liability Coverage Type is CSL">
+        <do action="exclude" />
+        <where>
+            <preCondition name="LiabilityOption">!CSL</preCondition>
+        </where>
+        <for>*/policyCoverages/liabilityCoveragesSection/LiabilityLimitCSL</for>
+        <for>*/policyCoverages/liabilityCoveragesSection/OptionalBodilyInjuryCLSLimit</for>
+    </behavior>
+    <behavior title="Display BISPL fields if Liability Coverage Type is BISPL">
+        <do action="exclude" />
+        <where>
+            <preCondition name="LiabilityOption">!BISPL</preCondition>
+        </where>
+        <for>*/policyCoverages/liabilityCoveragesSection/LiabilityLimitBISPL</for>
+        <for>*/policyCoverages/liabilityCoveragesSection/OptionalBodilyInjurySplitLimit</for>
+    </behavior>
+    <behavior title="Change label of 'Property Damage Limit' when controlling state is MA">
+        <do action="alter">
+            <property name="label">Damage to Someone Else's Property</property>
+        </do>
+        <where>
+            <preCondition name="ControllingState">MA</preCondition>
+        </where>
+        <for>*/policyCoverages/liabilityCoveragesSection/PropertyDamageLimit</for>
+    </behavior>
+    <behavior title="Exclude passengerHazard field for all vehicle types">
+        <do action="exclude" />
+        <for>*/policyCoverages/liabilityCoveragesSection/PassengerHazard</for>
+    </behavior>
+    <behavior title="Include passengerHazard field based on vehicle type">
+        <do action="include" />
+        <where>
+            <preCondition name="VehicleBodyType">SNOWM</preCondition>
+            <preCondition name="HotVehicleType">in('PU','SPEC')</preCondition>
+        </where>
+        <for>*/policyCoverages/liabilityCoveragesSection/PassengerHazard</for>
+    </behavior>
+    <behavior title="Display Hired Auto Section based on Hired Auto Coverage Checkbox">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HiredAutoCoverage">!YES</preCondition>
+        </where>
+        <for>*/policyCoverages/hiredAutoSection/HiredAutoLiabilityLimit</for>
+        <for>*/policyCoverages/hiredAutoSection/HiredAutoTotalCostOfHire</for>
+        <for>*/policyCoverages/hiredAutoSection/HiredAutoIfAnyRatingBasis</for>
+        <for>*/policyCoverages/hiredAutoSection/HiredAutoCollisionDeductible</for>
+        <for>*/policyCoverages/hiredAutoSection/HiredAutoOTCType</for>
+        <for>*/policyCoverages/hiredAutoSection/HiredAutoOtherThanCollisionDeductible</for>
+        <for>*/policyCoverages/hiredAutoSection/HiredAutoSafetyGlass</for>
+        <for>*/policyCoverages/hiredAutoSection/HiredAutoNumberofDays</for>
+        <for>*/policyCoverages/hiredAutoSection/HiredAutoNumberofVehicles</for>
+    </behavior>
+    <behavior title="Display Non-Owned Auto Section based on NonOwnedAutoCoverage Checkbox">
+        <do action="exclude" />
+        <where>
+            <preCondition name="NonOwnedAutoCoverage">!YES</preCondition>
+        </where>
+        <for>*/policyCoverages/nonOwnedAutoSection/NumberOfEmployees</for>
+        <for>*/policyCoverages/nonOwnedAutoSection/NumberOfPartners</for>
+        <for>*/policyCoverages/nonOwnedAutoSection/NumberOfVolunteers</for>
+    </behavior>
+    <behavior title="Display Drive Other Car Coverage based on DriveOtherCarCoverage Checkbox">
+        <do action="exclude" />
+        <where>
+            <preCondition name="DocCoverage">!YES</preCondition>
+        </where>
+        <for>*/policyCoverages/driveOtherCarCoverageSection/DocNumberOfNamedIndividuals</for>
+        <for>*/policyCoverages/driveOtherCarCoverageSection/DocratingTerritory</for>
+        <for>*/policyCoverages/driveOtherCarCoverageSection/DocLiabilityLimit</for>
+        <for>*/policyCoverages/driveOtherCarCoverageSection/DocUMLimit</for>
+        <for>*/policyCoverages/driveOtherCarCoverageSection/DocUIMLimit</for>
+        <for>*/policyCoverages/driveOtherCarCoverageSection/DocMedicalPaymentsLimit</for>
+        <for>*/policyCoverages/driveOtherCarCoverageSection/DocComprehensiveCoverage</for>
+        <for>*/policyCoverages/driveOtherCarCoverageSection/DocCollisionCoverage</for>
+        <for>*/policyCoverages/driveOtherCarCoverageSection/DocBroadenedPIP</for>
+        <for>*/policyCoverages/driveOtherCarCoverageSection/DocBroadenedPIPNumIndividuals</for>
+    </behavior>
+
+    <!-- End of Policy Coverages page Behaviors -->
+    <behavior id="excludeTaxId" title="TaxId Exclusion">
+        <do action="exclude" />
+        <for>*/generalInfo/applicantInformation/TaxIdFEIN</for>
+        <for>*/generalInfo/applicantInformation/TaxIdSSN</for>
+    </behavior>
+
+    <behavior id="includeFEINValidationFormat" title="FEIN Validation Format">
+        <do action="include" />
+        <where>
+            <preCondition name="TaxIdType">FEIN</preCondition>
+        </where>
+        <for>*/generalInfo/applicantInformation/TaxIdFEIN</for>
+    </behavior>
+    <behavior id="includeSSNValidationFormat" title="SSN Validation Format">
+        <do action="include" />
+        <where>
+            <preCondition name="TaxIdType">SSN</preCondition>
+        </where>
+        <for>*/generalInfo/applicantInformation/TaxIdSSN</for>
+    </behavior>
+
+    <!-- excluded the Transaction Effective Date field for new business -->
+    <behavior id="exludeTransEffectiveDate" title="Exclude the Transaction Effective Date field for new business">
+        <do action="exclude" />
+        <for>autob/generalInfo/policyTerm/TransactionEffectiveDate</for>
+        <for>autobQuickQuote/generalInfo/policyTerm/TransactionEffectiveDate</for>
+        <for>autobRenew/generalInfo/policyTerm/TransactionEffectiveDate</for>
+    </behavior>
+
+    <!-- Excluded items from Quote transaction -->
+    <behavior>
+        <do action="exclude" />
+        <for>autobQuickQuote/generalInfo/agencyInformation/*</for>
+        <for>autobQuickQuote/generalInfo/inspectionContactInfo/*</for>
+        <for>autobQuickQuote/generalInfo/accountingContactInfo/*</for>
+    </behavior>
+    <behavior>
+        <do action="exclude" />
+        <for>*/AUTOBquestionnaire/AUTOBemdQuestions/MonitorDriverSafetyInd</for>
+        <for>*/AUTOBquestionnaire/AUTOBemdQuestions/NavigationInd</for>
+        <for>*/AUTOBquestionnaire/AUTOBemdQuestions/FuelConsumptionTrackingInd</for>
+        <for>*/AUTOBquestionnaire/AUTOBemdQuestions/MonitorVehicleMaintenanceInd</for>
+        <for>*/AUTOBquestionnaire/AUTOBemdQuestions/MileageTrackingInd</for>
+        <for>*/AUTOBquestionnaire/AUTOBemdQuestions/LocationTrackingInd</for>
+    </behavior>
+    <!-- Optional Coverages Page -->
+    <!-- Removing because of issue https://www.squishlist.com/agencyport/templates/53722/
+        and there being no documentation for why this behavior was present.
+        <behavior id="alterRosterReadOnly" title="Set Roster to readonly">
+        <do action="alter">
+        <property name="readonly">true</property>
+        </do>
+        <where>
+        <preCondition name="inRosterEditMode">true</preCondition>
+        </where>
+        <for>*/policyCoverages/coverageInformation/HotRateState</for>
+        <for>*/AUTOBpremiumModification/premiumModification/premModRateState</for>
+        </behavior>
+    -->
+    <!-- Comml Auto Multi State - Endorsements -->
+    <behavior id="alterEndorsementsReadOnly" title="Endorsements">
+        <do action="alter">
+            <property name="readonly">true</property>
+        </do>
+        <for>autobEndorse/generalInfo/agencyInformation/*</for>
+        <for>autobEndorse/generalInfo/applicantInformation/InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo.CommlName.CommercialName</for>
+        <for>autobEndorse/generalInfo/policyTerm/EffectiveDate</for>
+        <for>autobEndorse/generalInfo/policyTerm/ExpirationDate</for>
+      <!--   <for>endorseCommlAuto/vehicle/vehicleInformation/CommlAutoLineBusiness.CommlRateState.StateProvCd</for> -->
+        <for>autobEndorse/generalInfo/controllingState/ControllingState</for>
+    </behavior>
+
+    <!-- For endorsements, mark key fields on the roster as readonly -->
+    <behavior id="alterEndorsementFieldsReadOnly" title="Mark Fields as readonly for Endorsements">
+        <do action="alter">
+            <property name="readonly">true</property>
+        </do>
+        <where>
+            <preCondition name="inRosterEditMode">true</preCondition>
+        </where>
+        <for>autobEndorse/AUTOBGarageLocation/AddAUTOBGarageLocation/StateProvCd</for>
+        <for>autobEndorse/policyCoverages/coverageInformation/HotRateState</for>
+        <for>autobEndorse/AUTOBpremiumModification/premiumModification/PremModRateState</for>
+    </behavior>
+
+
+    <behavior title="Electronic Monitoring Devices">
+        <do action="include" />
+        <where>
+            <preCondition name="ElectronicMonitoringInd">YES</preCondition>
+        </where>
+        <for>*/AUTOBquestionnaire/AUTOBemdQuestions/MonitorDriverSafetyInd</for>
+        <for>*/AUTOBquestionnaire/AUTOBemdQuestions/NavigationInd</for>
+        <for>*/AUTOBquestionnaire/AUTOBemdQuestions/FuelConsumptionTrackingInd</for>
+        <for>*/AUTOBquestionnaire/AUTOBemdQuestions/MonitorVehicleMaintenanceInd</for>
+        <for>*/AUTOBquestionnaire/AUTOBemdQuestions/MileageTrackingInd</for>
+        <for>*/AUTOBquestionnaire/AUTOBemdQuestions/LocationTrackingInd</for>
+    </behavior>
+</transactionDefinitionBehavior>

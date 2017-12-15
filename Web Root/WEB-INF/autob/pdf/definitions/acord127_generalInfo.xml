@@ -1,0 +1,232 @@
+<fields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/pdf/pdfDefinitions.xsd" >
+	<field type="question">
+		<eLabel>CommercialVehicleLineOfBusiness_Question_AAJCode_A</eLabel>
+		<xpath>CommlAutoLineBusiness.QuestionAnswer[QuestionCd='AUTOP11' or QuestionCd='AUTOB10'].YesNoCd</xpath>
+	</field>
+	<!-- 
+	<field>
+		<eLabel>Vehicle_ProducerIdentifier_AA</eLabel>
+		<xpath>CommlVeh.ItemIdInfo.AgencyId</xpath>
+	</field>
+	<field>
+		<eLabel>AdditionalInterest_FullName_C</eLabel>
+		<xpath>CommlVeh.AdditionalInterest[AdditionalInterestInfo.NatureInterestCd='OWNER'].GeneralPartyInfo.NameInfo.CommlName.CommercialName</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_ProducerIdentifier_AB</eLabel>
+		<xpath>CommlVeh.ItemIdInfo.AgencyId</xpath>
+	</field>
+	<field>
+		<eLabel>AdditionalInterest_FullName_D</eLabel>
+		<xpath>CommlVeh.AdditionalInterest[AdditionalInterestInfo.NatureInterestCd='OWNER'].GeneralPartyInfo.NameInfo.CommlName.CommercialName</xpath>
+	</field>
+	-->
+	<field type="question">
+		<eLabel>CommercialVehicleLineOfBusiness_Question_ABACode_A</eLabel>
+		<xpath>CommlAutoLineBusiness.QuestionAnswer[ QuestionCd='AUTOB11'].YesNoCd</xpath>
+	</field>
+	<field type="question">
+		<eLabel>CommercialVehicleLineOfBusiness_Question_KADCode_A</eLabel>
+		<xpath>CommlAutoLineBusiness.QuestionAnswer[ QuestionCd='INMRC09'].YesNoCd</xpath>
+	</field>
+	<field>
+		<eLabel>CommercialVehicleLineOfBusiness_VehicleMaintenanceProgramInOperationExplanation_A</eLabel>
+		<xpath>CommlAutoLineBusiness.QuestionAnswer[ QuestionCd='INMRC09'].Explanation</xpath>
+	</field>
+	<field type="question">
+		<eLabel>CommercialVehicleLineOfBusiness_Question_ABCCode_A</eLabel>
+		<xpath>CommlAutoLineBusiness.QuestionAnswer[ QuestionCd='CUMBR07'].YesNoCd</xpath>
+	</field>
+	<field>
+		<eLabel>CommercialVehicleLineOfBusiness_VehiclesLeasedToOthersExplanation_A</eLabel>
+		<xpath>CommlAutoLineBusiness.QuestionAnswer[ QuestionCd='CUMBR07'].Explanation</xpath>
+	</field>
+	<field type="question">
+		<eLabel>CommercialVehicleLineOfBusiness_Question_AAGCode_A</eLabel>
+		<xpath>CommlAutoLineBusiness.QuestionAnswer[ QuestionCd='AUTOB07'].YesNoCd</xpath>
+	</field>
+	<!-- 
+	<field>
+		<eLabel>Vehicle_ProducerIdentifier_AC</eLabel>
+		<xpath>CommlVeh.CommlVehSupplement.VehAlteredInd</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_Question_ModifiedEquipmentDescription_A</eLabel>
+		<xpath>CommlVeh.ItemModificationInfo.ModificationDesc</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_Question_ModifiedEquipmentCostAmount_A</eLabel>
+		<xpath>CommlVeh.ItemModificationInfo.ModificationCostAmt.Amt</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_ProducerIdentifier_AD</eLabel>
+		<xpath>CommlVeh.CommlVehSupplement.VehAlteredInd</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_Question_ModifiedEquipmentDescription_B</eLabel>
+		<xpath>CommlVeh.ItemModificationInfo.ModificationDesc</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_Question_ModifiedEquipmentCostAmount_B</eLabel>
+		<xpath>CommlVeh.ItemModificationInfo.ModificationCostAmt.Amt</xpath>
+	</field>
+	-->
+	<field type="question">
+		<eLabel>CommercialVehicleLineOfBusiness_Question_AAECode_A</eLabel>
+		<xpath>CommlAutoLineBusiness.QuestionAnswer[ QuestionCd='AUTOB04'].YesNoCd</xpath>
+	</field>
+	<field type="question">
+		<eLabel>CommercialVehicleLineOfBusiness_Question_AAFCode_A</eLabel>
+		<xpath>CommlAutoLineBusiness.QuestionAnswer[ QuestionCd='AUTOB06'].YesNoCd</xpath>
+	</field>
+	<field>
+		<eLabel>CommercialVehicleLineOfBusiness_OperationInvolveTransportingHazardousMaterialsExplanation_A</eLabel>
+		<xpath>CommlAutoLineBusiness.QuestionAnswer[ QuestionCd='AUTOB06'].Explanation</xpath>
+	</field>
+	<field>
+		<eLabel>Producer_CustomerIdentifier_A</eLabel>
+		<xpath>InsuredOrPrincipal.ItemIdInfo.AgencyId</xpath>
+	</field>
+	<field type="question">
+		<eLabel>CommercialVehicleLineOfBusiness_Question_AABCode_A</eLabel>
+		<xpath>CommlAutoLineBusiness.QuestionAnswer[ QuestionCd='AUTOB01'].YesNoCd</xpath>
+	</field>
+	<field>
+		<eLabel>CommercialVehicleLineOfBusiness_HoldHarmlessAgreementsExplanation_A</eLabel>
+		<xpath>CommlAutoLineBusiness.QuestionAnswer[ QuestionCd='AUTOB01'].Explanation</xpath>
+	</field>
+	<field type="question">
+		<eLabel>CommercialVehicleLineOfBusiness_Question_AACCode_A</eLabel>
+		<xpath>CommlAutoLineBusiness.QuestionAnswer[ QuestionCd='AUTOB02'].YesNoCd</xpath>
+	</field>
+	<field>
+		<eLabel>CommercialVehicleLineOfBusiness_VehiclesUsedByFamilyMembersExplanation_A</eLabel>
+		<xpath>CommlAutoLineBusiness.QuestionAnswer[ QuestionCd='AUTOB02'].Explanation</xpath>
+	</field>
+	<field type="question">
+		<eLabel>CommercialVehicleLineOfBusiness_Question_KAECode_A</eLabel>
+		<xpath>CommlAutoLineBusiness.QuestionAnswer[ QuestionCd='INMRC10'].YesNoCd</xpath>
+	</field>
+	<field>
+		<eLabel>CommercialVehicleLineOfBusiness_ApplicantObtainMVRVerificationsExplanation_A</eLabel>
+		<xpath>CommlAutoLineBusiness.QuestionAnswer[ QuestionCd='INMRC10'].Explanation</xpath>
+	</field>
+	<field type="question">
+		<eLabel>CommercialVehicleLineOfBusiness_Question_KAFCode_A</eLabel>
+		<xpath>CommlAutoLineBusiness.QuestionAnswer[ QuestionCd='INMRC14'].YesNoCd</xpath>
+	</field>
+	<field>
+		<eLabel>CommercialVehicleLineOfBusiness_ApplicantSpecificDriverRecruitingMethodExplanation_K</eLabel>
+		<xpath>CommlAutoLineBusiness.QuestionAnswer[ QuestionCd='INMRC14'].Explanation</xpath>
+	</field>
+	<field type="question">
+		<eLabel>CommercialVehicleLineOfBusiness_Question_AAHCode_A</eLabel>
+		<xpath>CommlAutoLineBusiness.QuestionAnswer[ QuestionCd='AUTOB08'].YesNoCd</xpath>
+	</field>
+	<field>
+		<eLabel>CommercialVehicleLineOfBusiness_AnyDriversNotCoveredWorkersCompensationExplanation_A</eLabel>
+		<xpath>CommlAutoLineBusiness.QuestionAnswer[ QuestionCd='AUTOB08'].Explanation</xpath>
+	</field>
+	<field type="question">
+		<eLabel>CommercialVehicleLineOfBusiness_Question_AADCode_A</eLabel>
+		<xpath>CommlAutoLineBusiness.QuestionAnswer[ QuestionCd='AUTOB03'].YesNoCd</xpath>
+	</field>
+	<field>
+		<eLabel>CommercialVehicleLineOfBusiness_AnyVehiclesOwnedNotScheduledExplanation_A</eLabel>
+		<xpath>CommlAutoLineBusiness.QuestionAnswer[ QuestionCd='AUTOB03'].Explanation</xpath>
+	</field>
+	<field type="question">
+		<eLabel>CommercialVehicleLineOfBusiness_Question_AAICode_A</eLabel>
+		<xpath>CommlAutoLineBusiness.QuestionAnswer[ QuestionCd='AUTOB09'].YesNoCd</xpath>
+	</field>
+	<!-- 
+	<field>
+		<eLabel>AccidentConviction_DriverProducerIdentifier_A</eLabel>
+		<xpath>CommlPolicy.AccidentViolation@DriverRef</xpath>
+	</field>
+	 -->
+	<field>
+		<eLabel>AccidentConviction_TrafficViolationDate_A</eLabel>
+		<xpath>CommlPolicy.AccidentViolation.AccidentViolationDt</xpath>
+	</field>
+	<field>
+		<eLabel>AccidentConviction_TrafficViolationDescription_A</eLabel>
+		<xpath>CommlPolicy.AccidentViolation.AccidentViolationDesc</xpath>
+	</field>
+	<!-- 
+	<field>
+		<eLabel>AccidentConviction_PlaceOfIncident_A</eLabel>
+		<xpath>CommlPolicy.AccidentViolation.PlaceIndident</xpath>
+	</field>
+	 -->
+	<field>
+		<eLabel>AccidentConviction_ViolationYearCount_A</eLabel>
+		<xpath>CommlPolicy.AccidentViolation.ConvictionsDuration.DurationPeriod[UnitMeasurementCd='ANN'].NumUnits</xpath>
+	</field>
+	<field type="question">
+		<eLabel>CommercialVehicleLineOfBusiness_Question_ABBCode_A</eLabel>
+		<xpath>CommlAutoLineBusiness.QuestionAnswer[ QuestionCd='AUTOB12'].YesNoCd</xpath>
+	</field>
+	<field>
+		<eLabel>CommercialVehicleLineOfBusiness_AgentInspectedVehiclesExplanation_A</eLabel>
+		<xpath>CommlAutoLineBusiness.QuestionAnswer[ QuestionCd='AUTOB12'].Explanation</xpath>
+	</field>
+	<field type="question">
+		<eLabel>CommercialVehicleLineOfBusiness_Question_KAGCode_A</eLabel>
+		<xpath>CommlAutoLineBusiness.QuestionAnswer[ QuestionCd='AUTOB17'].YesNoCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CommercialVehicleLineOfBusiness_KAHCode_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlAutoPolicyInfo.ElectronicMonitoringInfo.ElectronicMonitoringInd</xpath>
+	</field>
+	<field>
+		<eLabel>CommercialVehicleLineOfBusiness_ElectronicDataMonitoringDevice_FleetMonitoredPercent_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlAutoPolicyInfo.ElectronicMonitoringInfo.FleetVehMonitoredPct</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CommercialVehicleLineOfBusiness_ElectronicDataMonitoringDevice_MonitorDriverSafetyIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlAutoPolicyInfo.ElectronicMonitoringInfo.MonitorDriverSafetyInd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CommercialVehicleLineOfBusiness_ElectronicDataMonitoringDevice_TrackFuelConsumptionIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlAutoPolicyInfo.ElectronicMonitoringInfo.FuelConsumptionTrackingInd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CommercialVehicleLineOfBusiness_ElectronicDataMonitoringDevice_MonitorVehicleMaintenanceIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlAutoPolicyInfo.ElectronicMonitoringInfo.MonitorVehicleMaintenanceInd</xpath>
+	</field>
+	<field>
+		<eLabel>CommercialVehicleLineOfBusiness_ElectronicDataMonitoringDevice_MileageTrackingDeviceIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlAutoPolicyInfo.ElectronicMonitoringInfo.MileageTrackingInd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CommercialVehicleLineOfBusiness_LocationTrackingDeviceIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlAutoPolicyInfo.ElectronicMonitoringInfo.LocationTrackingInd</xpath>
+	</field>
+	<field>
+		<eLabel>CommercialVehicleLineOfBusiness_ElectronicDataMonitoringDevice_NavigationIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlAutoPolicyInfo.ElectronicMonitoringInfo.NavigationInd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CommercialVehicleLineOfBusiness_ElectronicDataMonitoringDevice_OtherIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlAutoPolicyInfo.ElectronicMonitoringInfo.OtherMonitoringUse.OtherUseInd</xpath>
+	</field>
+	<field>
+		<eLabel>CommercialVehicleLineOfBusiness_ElectronicDataMonitoringDevice_OtherDesciption_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlAutoPolicyInfo.ElectronicMonitoringInfo.OtherMonitoringUse.OtherUseDescription</xpath>
+	</field>
+	<!-- 
+	<field>
+		<eLabel>CommercialVehicleLineOfBusiness_ElectronicDataMonitoringDevice_AdditionalDescription_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlAutoPolicyInfo.ElectronicMonitoringInfo.GeneralUseDescription</xpath>
+	</field>
+	 -->
+	<field>
+		<eLabel>CommercialVehicleLineOfBusiness_GarageStorageDescription_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlAutoPolicyInfo.GarageStorageLocationDesc</xpath>
+	</field>
+	<field>
+		<eLabel>CommercialVehicleLineOfBusiness_MaximumExposureAllVehiclesAmount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlAutoPolicyInfo.MaxExposureAmt.Amt</xpath>
+	</field>
+</fields>

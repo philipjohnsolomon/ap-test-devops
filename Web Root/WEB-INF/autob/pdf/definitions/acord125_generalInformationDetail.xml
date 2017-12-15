@@ -1,0 +1,19 @@
+<fields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/pdf/pdfDefinitions.xsd">
+	<field>
+		<eLabel>CommercialPolicy_Question_AAFCode_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL09'].YesNoCd</xpath>
+	</field>
+	<field>
+		<eLabel>CommercialPolicy_Question_KAKCode_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL25'].YesNoCd</xpath>
+	</field>
+	<field>
+		<eLabel>AdditionalInterest_FullName_B</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL40'].Explanation</xpath>
+	</field>
+	<field>
+		<eLabel>CommercialPolicy_Question_KACCode_A</eLabel>
+		<xpath>CommlPolicy.QuestionAnswer[QuestionCd='GENRL52'].YesNoCd</xpath>
+	</field>
+</fields>

@@ -1,0 +1,128 @@
+/* modifying /lib/bootstrap-datepicker-master/less/datepicker3.less  */
+
+/* datepicker (data entry forms) */
+
+.datepicker,
+.open .dropdown-toggle.datepicker {
+
+	table tr:first-child th:hover,
+	table tr td span:hover,
+	table tr td.day:hover,
+	table tr td.day.focused,
+	table tr td.disabled,
+	table tr td.disabled:hover,
+	table tr td.disabled:hover:hover,
+	table tr td:focus,
+	table tr td:hover:focus,
+	table tr td.disabled:focus,
+	table tr td.disabled:hover:focus,
+	table tr td.disabled:active,
+	table tr td.disabled:hover:active,
+	table tr td.disabled.active,
+	table tr td.disabled:hover.active {
+		background-color: @theme-active-hover;
+		border: none;
+	}
+	
+	table tr td.today {
+		background-color: @gray-light;
+	}
+
+	table tr td.active,
+	table tr td:hover.active,
+	table tr td:active,
+	table tr td:hover:active {
+	 	color: @theme-active-color;
+		background-color: @theme-active-background;
+	}
+
+}
+
+/* ap calendar (dropdown from Search Filter) */
+
+.ap-calendar {
+	.dropdown-menu {
+		background-color: white;
+		padding: 5px;
+		width: auto !important;
+		
+		li {
+			&:hover {
+				background: transparent !important;
+			}
+			table {
+				width: 300px;
+				&:focus,
+				&:active {
+					border: 0; 
+					outline: 0;
+				}
+								
+				.btn-sm, 
+				&.h6 em {						
+					padding: 6px 10px !important;
+					float: none !important;
+				}					
+				
+				thead {
+					th {
+						text-align: center;
+						padding: 2px;
+						.btn {
+							margin: 0 !important;
+							&.pull-right {
+								float: left !important;
+							}
+						}				
+					}
+				}	
+				
+				tbody {
+					td {
+						text-align: center;
+						&.h6 {
+							em {
+								font-style: normal;
+							}
+						}
+						&.text-center {
+							padding: 2px;
+						}
+					}
+				}			
+				
+				.btn {
+					&.active {
+						color: #fff !important;
+						background-color: @theme-active-background !important;
+						.text-info {
+							color: @theme-active-color;
+						}
+					}
+				}
+			}
+			
+			.btn {
+				margin-bottom: 0 !important;
+				&.btn-info,
+				&.btn-danger,
+				&.btn-success {
+					color: @btn-default-color;
+					background: @btn-default-bg;
+					border-color: @btn-default-border;
+					&:hover {
+						background: @gray-lighter;
+					}
+				}
+			}
+			
+			.pull-left {
+				.btn {
+					float: left !important;
+				}
+			}
+		}
+	}
+}
+
+

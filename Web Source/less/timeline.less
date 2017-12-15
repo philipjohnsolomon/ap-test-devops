@@ -1,0 +1,79 @@
+
+.timeline-dialog {
+
+	.timeline-event-list {
+		&.col-md-3 {padding: 0;}
+		
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		
+			li	{
+				a {
+					display: block;
+					padding: 10px;
+			
+					.timeline-counter {
+						font-weight: bold;
+					}
+					.timeline-title	{
+						display: block;
+						line-height: 100%;
+						margin-bottom: 5px;
+					}
+					.timeline-timestamp	{
+						font-size: 80%; 
+						display: block; 
+						color: @gray-light;
+					}
+					&:hover	{
+						background-color: @gray-lighter;
+						cursor: pointer;
+						cursor: hand;
+					}
+				}
+				&.active a	{
+					background-color: @link-color;
+					color: #fff;
+					.timeline-timestamp {color: #fff;}
+				}
+			}
+		}
+	}
+	
+	.timeline-header {
+		padding: 10px 0;
+		border-bottom: 1px solid @gray-light;
+		margin-bottom: 10px;
+		p {
+			margin: 0;
+			font-weight: bold;
+			.timeline-when {
+				float: right;
+				font-weight: normal;
+			}
+		}
+	}
+	
+	.timeline-event-detail	{}
+}
+
+
+
+h2.start, 
+h2.date {
+	font-size: 20px;
+}
+
+.vco-navigation, 
+.nav-container {
+	display: none;
+}
+
+.slider-item, 
+.vco-slider {
+	overflow-y: inherit !important;
+	border-bottom: 1px solid @gray-lighter;
+}
+

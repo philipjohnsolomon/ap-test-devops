@@ -1,0 +1,143 @@
+.work-item-assistant {
+
+	.panel {
+		&-default {
+			border-color: @theme-panel-border-color;
+		
+			.panel-heading {
+				background-color: @theme-panel-heading-open-background;
+				color: @theme-panel-heading-open-color;
+				
+				.fa {
+					color: @theme-panel-heading-open-icon;
+				}				
+
+				&.collapsed {
+					background-color: @theme-panel-heading-background;
+					color: @theme-panel-heading-color;
+					.fa {
+						color: @theme-panel-heading-icon;
+					}				
+				}
+			}
+		
+			.panel-body {
+				padding: 15px;
+				background-color: @theme-panel-body-background;
+			}
+		}
+	}
+
+	.btn-info {
+		background-color: @theme-active-background;
+		border-color: @theme-active-background;
+	}
+	
+	.wip-button {
+		text-align: center;
+	}
+	
+	.wia-container {
+		max-height: 200px;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+
+	.meta-data {
+		font-size: @font-size-small;
+	}
+	
+	.wia-content {
+		background: @gray-lighter;
+		margin-bottom: 5px;
+		padding: 5px;
+		border-radius: @border-radius-base;
+		dl {
+			margin-bottom: 0;
+			dd, dt {
+				margin-bottom: 0;
+				line-height: 1.2;
+			}
+		}
+	}
+	
+	.form-control {
+		margin-bottom: 10px;
+	}
+	
+	/* section header icons */
+	
+	.has-comments .fa {
+		&:before {content: @icon-work-item-assistant-comments;}
+	}
+	.has-files .fa {
+		&:before {content: @icon-work-item-assistant-files;}
+	}
+	.has-users .fa {
+		&:before {content: @icon-work-item-assistant-users;}
+	}
+	.timeline-link .fa {
+		&:before {content: @icon-work-item-menu-timeline;}
+	}
+	.upload-queue-delete .fa {
+		&:before {content: @icon-ui-delete;}
+	}
+	.upload-file-delete .fa	{ 
+		&:before {content: @icon-ui-delete;}
+	}
+	.comment-delete  .fa { 
+		&:before {content: @icon-ui-delete;}
+	}
+	.upload-queue-upload .fa {
+		&:before {content: @icon-mainmenu-upload;}
+	}
+	.upload-file-edit .fa {
+		&:before {content: @icon-account-edit;}
+	}
+
+	
+	/* comments */
+
+	.wia-comments {
+		.comment {
+			margin-bottom: 5px;
+		}
+		.author {}
+		
+		.new-comment {
+			margin-top: 10px;
+		}
+	}
+	
+	
+	/* uploader */
+
+	.file-uploader {
+		h4 {
+			margin-bottom: 10px;
+		}
+		.alert {
+			margin-top: 10px;
+			padding: 10px;
+			line-height: 1.2; 
+		}
+		.wia-upload-info {
+			margin-left: 3px;
+		}
+		
+		.wip-button {
+			margin-bottom: 10px;
+		}
+	}
+	
+	
+	/* users */
+	
+	.wia-users {
+		dl,
+		dl dd {
+			margin-bottom: 0;
+		}
+	}
+}
+

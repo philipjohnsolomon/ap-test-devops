@@ -1,0 +1,229 @@
+.home-page {
+	/* Classes to support the getting started section which includes a 
+	   bunch of images that represent the lines of business and associated
+	   actions that let a user get started */
+	   
+	padding-bottom: @content-margin-bottom;
+	
+	.get-started {
+	
+		.lines-of-business {
+			.col-lg-2	{min-width: 20%;}
+		
+			.line-of-business {
+				background-size: cover;
+				min-height: 220px;
+				position: relative;
+				margin: 10px 0;
+				border: 3px solid #fff;
+				
+				.caption {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					padding: 10px;
+					background: @theme-lob-tile-caption-bg;
+					text-align: center;
+					h4 {
+						color: @theme-lob-tile-caption-text;
+						padding:0;
+						margin: 0;
+						font-size: 100%;
+					}
+				}
+				
+				.btn-group {
+					width: 100%;
+					text-align: center;
+					position: absolute;
+					top: 50px;
+					left: auto;
+					display: none;
+				}
+			
+				.lob-button	{
+					margin: 20px 0;
+				}
+			
+				.btn-group {
+					.btn {
+						margin-bottom: 1.5em;
+						border: 0;
+						display: inline;
+
+						color: @theme-lob-tile-btn-color;
+						background-color: @theme-lob-tile-btn-background;
+						
+						&:hover	{
+							color: @theme-lob-tile-btn-hover-color;
+							background-color: @theme-lob-tile-btn-hover-background;
+						}
+						
+						&:active	{
+							color: @theme-lob-tile-btn-active-color;
+							background-color: @theme-lob-tile-btn-active-background;
+						}
+					}
+				}
+				
+				.hover-color	{
+					position: absolute; 
+					top: 0; left: 0; 
+					display: none; 
+					background-color: @theme-lob-tile-hover; 
+					opacity: .80; 
+					width: 100%; 
+					height: 100%;
+				}
+			}
+		
+			.line-of-business:hover,
+			.line-of-business:focus,
+			.line-of-business:active {
+				.hover-color	{display: block;}
+				.btn-group		{display: block;}
+				.caption		{background-color: @theme-lob-tile-caption-active-bg;}
+			}
+			.personal-auto {
+				background-image: url('../../img/personal-auto.jpg');
+			}
+			.homeowners {
+				background-image: url('../../img/homeowners.jpg');	
+			}
+			.workers-comp {
+				background-image: url('../../img/workers-comp.jpg');		
+			}
+			.commercial-auto {
+				background-image: url('../../img/commercial-auto.jpg');		
+			}
+			.farmowners {
+				background-image: url('../../img/farmowners.jpg');		
+			}
+            .management-liability {
+                background-image: url('../../img/management-liability.jpg');
+            }
+            .business-owners-policy {
+                background-image: url('../../img/business-owner-1.jpg');
+            }
+            .personal-umbrella {
+                background-image: url('../../img/personal-umbrella.jpg');
+            }
+			.test-app {
+				background-image: url('../../img/test-app.png');
+				background-color: fade(@theme-color-3, 20%);
+				background-position: center center;
+			}
+            .commercial-property {
+                background-image: url('../../img/commercial-property.jpg');
+            }
+            .commercial-package {
+                background-image: url('../../img/commercial-package.jpg');
+            }
+            .liability {
+                background-image: url('../../img/liability.jpg');
+				background-position: right center;
+            }
+            .dwelling-fire {
+                background-image: url('../../img/dwelling-fire.jpg');
+				background-position: right center;
+            }
+		}
+	}
+
+	
+	/* Classes supporting the "Queue" section of the home page which includes
+	   a list of items most recently updated by the current user and a list
+	   of items waiting for action from an underwriter */
+	.queue {
+		background: white;
+		
+		h4 {
+			color: @theme-queue-header;
+		}
+		
+		.fa {
+			color: @theme-queue-icon;
+			margin-right: 5px;
+		}	
+			
+		.queue-agent {
+			.fa {
+				&:before{content: @icon-home-queue-agent;}
+			}
+		}
+		.queue-underwriter {
+			 .fa {
+				&:before{content: @icon-home-queue-underwriter;}
+			}
+		}
+
+		
+		/* making labels look less clickable than buttons */
+		.label {
+			color: inherit;
+			border: 0;
+			font-weight: 500;
+
+			&-primary {
+				background: transparent;
+			}
+			&-success {
+				background: transparent; 
+			}
+			&-info {
+				background: transparent;
+			}
+			&-warning {
+				background: transparent;
+			}
+			&-danger	{
+				color: @brand-danger; 
+				background: transparent; 
+			}
+			&-in-progress	{
+				background: transparent;
+			}
+		}		
+		
+		.table-panel i {
+			opacity: .40;
+			padding: 5px;
+		}
+	}
+	/* Classes supporting the tiles that categorize the number of items
+	   in the system associated with each status */
+	.quotes {
+		.stat {
+			cursor: pointer;
+			border: 3px solid white;
+			color: @theme-stat-color;
+			text-align: center;
+			padding: 20px;
+			h1 {
+				color: @theme-stat-header;
+				margin: 0;
+			}
+			p {
+				margin: 0;
+			}
+						
+			&.label-inprogress {
+			  background: @workitem-in-progress;
+			}
+			&.label-referred {
+			  background: @workitem-referred;
+			}
+			&.label-decline {
+			  background: @workitem-declined;
+			}
+			&.label-approve,
+			&.label-renewal {
+			  background: @workitem-approved;
+			}
+			&.label-bind {
+			  background: @workitem-bound;
+			}			
+		}
+	}
+}

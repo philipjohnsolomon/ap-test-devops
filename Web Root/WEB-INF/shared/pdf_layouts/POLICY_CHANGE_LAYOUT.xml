@@ -1,0 +1,233 @@
+<pdf_layout name="POLICY_CHANGE_LAYOUT">
+
+	<!-- Page 1 General Page Type-->
+	<page pageNum="1">
+
+		<field name="ReferenceNumber" font="9" x="1.60" y="1.25" type="2" maxWidth="15" maxHeight="" pdfDesc="work item id"/>
+		<field name="PolicyNumber" font="9" x="5.40" y="1.25" type="2" maxWidth="15" maxHeight="" pdfDesc="policy number"/>
+		
+		<field name="DateOfChange" font="9" x="1.93" y="1.38" type="2" maxWidth="15" maxHeight="" pdfDesc="effective date of change" />
+		<field name="EffectiveDate" font="9" x="5.7" y="1.38" type="2" maxWidth="15" maxHeight="" pdfDesc="effective date" />
+		<field name="ExpirationDate" font="9" x="1.83" y="1.51" type="2" maxWidth="15" maxHeight="" pdfDesc="expiration date" />
+		
+		<field name="Insured.Info1" font="9" x="1.06" y="1.78" type="2" maxWidth="40" maxHeight="" pdfDesc="insured info"/>
+		<field name="Insured.Info2" font="9" x="1.06" y="1.91" type="2" maxWidth="40" maxHeight="" pdfDesc="insured info"/>
+		<field name="Insured.Info3" font="9" x="1.06" y="2.04" type="2" maxWidth="40" maxHeight="" pdfDesc="insured info"/>
+		<field name="Insured.Info4" font="9" x="1.06" y="2.17" type="2" maxWidth="40" maxHeight="" pdfDesc="insured info"/>
+		
+		<field name="Producer.Info1" font="9" x="5.13" y="1.78" type="2" maxWidth="40" maxHeight="" pdfDesc="insured info"/>
+		<field name="Producer.Info2" font="9" x="5.13" y="1.91" type="2" maxWidth="40" maxHeight="" pdfDesc="insured info"/>
+		<field name="Producer.Info3" font="9" x="5.13" y="2.04" type="2" maxWidth="40" maxHeight="" pdfDesc="insured info"/>
+		<field name="Producer.Info4" font="9" x="5.13" y="2.17" type="2" maxWidth="40" maxHeight="" pdfDesc="insured info"/>	
+		
+		<field name="Section.Heading" font="12" x="0.58" y="2.56" type="2" maxWidth="60" maxHeight="" pdfDesc="section heading"/>	
+		
+		<field name="Value.Changed.1" font="7" x="0.48" y="2.98" type="2" maxWidth="38" maxHeight="3" pdfDesc="value label"/>		
+		<field name="Value.Original.1" font="7" x="2.81" y="2.98" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Current.1" font="7" x="4.93" y="2.98" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Action.1" font="7" x="7.10" y="3.20" type="2" maxWidth="15" maxHeight="3" pdfDesc="value label"/> 
+		
+		<field name="Value.Changed.2" font="7" x="0.48" y="3.34" type="2" maxWidth="38" maxHeight="3" pdfDesc="value label"/>		
+		<field name="Value.Original.2" font="7" x="2.81" y="3.34" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Current.2" font="7" x="4.93" y="3.34" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Action.2" font="7" x="7.10" y="3.56" type="2" maxWidth="15" maxHeight="3" pdfDesc="value label"/>		
+		
+		<field name="Value.Changed.3" font="7" x="0.48" y="3.70" type="2" maxWidth="38" maxHeight="3" pdfDesc="value label"/>		
+		<field name="Value.Original.3" font="7" x="2.81" y="3.70" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Current.3" font="7" x="4.93" y="3.70" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Action.3" font="7" x="7.10" y="3.92" type="2" maxWidth="15" maxHeight="3" pdfDesc="value label"/>			
+		
+		<field name="Value.Changed.4" font="7" x="0.48" y="4.06" type="2" maxWidth="38" maxHeight="3" pdfDesc="value label"/>		
+		<field name="Value.Original.4" font="7" x="2.81" y="4.06" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Current.4" font="7" x="4.93" y="4.06" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Action.4" font="7" x="7.10" y="4.28" type="2" maxWidth="15" maxHeight="3" pdfDesc="value label"/>		
+		
+		<field name="Value.Changed.5" font="7" x="0.48" y="4.42" type="2" maxWidth="38" maxHeight="3" pdfDesc="value label"/>		
+		<field name="Value.Original.5" font="7" x="2.81" y="4.42" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Current.5" font="7" x="4.93" y="4.42" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Action.5" font="7" x="7.10" y="4.64" type="2" maxWidth="15" maxHeight="3" pdfDesc="value label"/>		
+		
+		<field name="Value.Changed.6" font="7" x="0.48" y="4.78" type="2" maxWidth="38" maxHeight="3" pdfDesc="value label"/>		
+		<field name="Value.Original.6" font="7" x="2.81" y="4.78" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Current.6" font="7" x="4.93" y="4.78" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Action.6" font="7" x="7.10" y="5.00" type="2" maxWidth="15" maxHeight="3" pdfDesc="value label"/>						
+			
+		<field name="Value.Changed.7" font="7" x="0.48" y="5.13" type="2" maxWidth="38" maxHeight="3" pdfDesc="value label"/>		
+		<field name="Value.Original.7" font="7" x="2.81" y="5.13" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Current.7" font="7" x="4.93" y="5.13" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Action.7" font="7" x="7.10" y="5.35" type="2" maxWidth="15" maxHeight="3" pdfDesc="value label"/>	
+		
+		<field name="Value.Changed.8" font="7" x="0.48" y="5.48" type="2" maxWidth="38" maxHeight="3" pdfDesc="value label"/>		
+		<field name="Value.Original.8" font="7" x="2.81" y="5.48" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Current.8" font="7" x="4.93" y="5.48" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Action.8" font="7" x="7.10" y="5.70" type="2" maxWidth="15" maxHeight="3" pdfDesc="value label"/>			
+		
+		<field name="Value.Changed.9" font="7" x="0.48" y="5.84" type="2" maxWidth="38" maxHeight="3" pdfDesc="value label"/>		
+		<field name="Value.Original.9" font="7" x="2.81" y="5.84" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Current.9" font="7" x="4.93" y="5.84" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Action.9" font="7" x="7.10" y="6.06" type="2" maxWidth="15" maxHeight="3" pdfDesc="value label"/>			
+		
+		<field name="Value.Changed.10" font="7" x="0.48" y="6.20" type="2" maxWidth="38" maxHeight="3" pdfDesc="value label"/>		
+		<field name="Value.Original.10" font="7" x="2.81" y="6.20" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Current.10" font="7" x="4.93" y="6.20" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Action.10" font="7" x="7.10" y="6.42" type="2" maxWidth="15" maxHeight="3" pdfDesc="value label"/>		
+		
+		<field name="Value.Changed.11" font="7" x="0.48" y="6.56" type="2" maxWidth="38" maxHeight="3" pdfDesc="value label"/>		
+		<field name="Value.Original.11" font="7" x="2.81" y="6.56" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Current.11" font="7" x="4.93" y="6.56" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Action.11" font="7" x="7.10" y="6.78" type="2" maxWidth="15" maxHeight="3" pdfDesc="value label"/>	
+		
+		<field name="Value.Changed.12" font="7" x="0.48" y="6.92" type="2" maxWidth="38" maxHeight="3" pdfDesc="value label"/>		
+		<field name="Value.Original.12" font="7" x="2.81" y="6.92" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Current.12" font="7" x="4.93" y="6.92" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Action.12" font="7" x="7.10" y="7.14" type="2" maxWidth="15" maxHeight="3" pdfDesc="value label"/>					
+		
+		<field name="Value.Changed.13" font="7" x="0.48" y="7.27" type="2" maxWidth="38" maxHeight="3" pdfDesc="value label"/>		
+		<field name="Value.Original.13" font="7" x="2.81" y="7.27" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Current.13" font="7" x="4.93" y="7.27" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Action.13" font="7" x="7.10" y="7.49" type="2" maxWidth="15" maxHeight="3" pdfDesc="value label"/>	
+		
+		<field name="Value.Changed.14" font="7" x="0.48" y="7.62" type="2" maxWidth="38" maxHeight="3" pdfDesc="value label"/>		
+		<field name="Value.Original.14" font="7" x="2.81" y="7.62" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Current.14" font="7" x="4.93" y="7.62" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Action.14" font="7" x="7.10" y="7.84" type="2" maxWidth="15" maxHeight="3" pdfDesc="value label"/>			
+		
+		<field name="Value.Changed.15" font="7" x="0.48" y="7.98" type="2" maxWidth="38" maxHeight="3" pdfDesc="value label"/>		
+		<field name="Value.Original.15" font="7" x="2.81" y="7.98" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Current.15" font="7" x="4.93" y="7.98" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Action.15" font="7" x="7.10" y="8.20" type="2" maxWidth="15" maxHeight="3" pdfDesc="value label"/>	
+		
+		<field name="Value.Changed.16" font="7" x="0.48" y="8.33" type="2" maxWidth="38" maxHeight="3" pdfDesc="value label"/>		
+		<field name="Value.Original.16" font="7" x="2.81" y="8.33" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Current.16" font="7" x="4.93" y="8.33" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Action.16" font="7" x="7.10" y="8.55" type="2" maxWidth="15" maxHeight="3" pdfDesc="value label"/>			
+		
+		<field name="Value.Changed.17" font="7" x="0.48" y="8.69" type="2" maxWidth="38" maxHeight="3" pdfDesc="value label"/>		
+		<field name="Value.Original.17" font="7" x="2.81" y="8.69" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Current.17" font="7" x="4.93" y="8.69" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Action.17" font="7" x="7.10" y="8.91" type="2" maxWidth="15" maxHeight="3" pdfDesc="value label"/>	
+		
+		<field name="Value.Changed.18" font="7" x="0.48" y="9.05" type="2" maxWidth="38" maxHeight="3" pdfDesc="value label"/>		
+		<field name="Value.Original.18" font="7" x="2.81" y="9.05" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Current.18" font="7" x="4.93" y="9.05" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Action.18" font="7" x="7.10" y="9.27" type="2" maxWidth="15" maxHeight="3" pdfDesc="value label"/>		
+		
+		<field name="Value.Changed.19" font="7" x="0.48" y="9.41" type="2" maxWidth="38" maxHeight="3" pdfDesc="value label"/>		
+		<field name="Value.Original.19" font="7" x="2.81" y="9.41" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Current.19" font="7" x="4.93" y="9.41" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Action.19" font="7" x="7.10" y="9.63" type="2" maxWidth="15" maxHeight="3" pdfDesc="value label"/>	
+		
+		<field name="Value.Changed.20" font="7" x="0.48" y="9.77" type="2" maxWidth="38" maxHeight="3" pdfDesc="value label"/>		
+		<field name="Value.Original.20" font="7" x="2.81" y="9.77" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Current.20" font="7" x="4.93" y="9.77" type="2" maxWidth="35" maxHeight="3" pdfDesc="value label"/>
+		<field name="Value.Action.20" font="7" x="7.10" y="9.99" type="2" maxWidth="15" maxHeight="3" pdfDesc="value label"/>				
+
+		<field name="PageNumber" font="9" x="4.42" y="10.54" type="2" maxWidth="3" maxHeight="" pdfDesc="Page Number" />
+
+	</page>
+	
+	<!-- Page 2 Questionnaire  Page Type -->
+	<page pageNum="2">
+
+		<field name="ReferenceNumber" font="9" x="1.60" y="1.25" type="2" maxWidth="15" maxHeight="" pdfDesc="work item id"/>
+		<field name="PolicyNumber" font="9" x="5.40" y="1.25" type="2" maxWidth="15" maxHeight="" pdfDesc="policy number"/>
+		
+		<field name="DateOfChange" font="9" x="1.93" y="1.38" type="2" maxWidth="15" maxHeight="" pdfDesc="effective date of change" />
+		<field name="EffectiveDate" font="9" x="5.7" y="1.38" type="2" maxWidth="15" maxHeight="" pdfDesc="effective date" />
+		<field name="ExpirationDate" font="9" x="1.83" y="1.51" type="2" maxWidth="15" maxHeight="" pdfDesc="expiration date" />
+		
+		<field name="Insured.Info1" font="9" x="1.06" y="1.78" type="2" maxWidth="40" maxHeight="" pdfDesc="insured info"/>
+		<field name="Insured.Info2" font="9" x="1.06" y="1.91" type="2" maxWidth="40" maxHeight="" pdfDesc="insured info"/>
+		<field name="Insured.Info3" font="9" x="1.06" y="2.04" type="2" maxWidth="40" maxHeight="" pdfDesc="insured info"/>
+		<field name="Insured.Info4" font="9" x="1.06" y="2.17" type="2" maxWidth="40" maxHeight="" pdfDesc="insured info"/>
+		
+		<field name="Producer.Info1" font="9" x="5.13" y="1.78" type="2" maxWidth="40" maxHeight="" pdfDesc="insured info"/>
+		<field name="Producer.Info2" font="9" x="5.13" y="1.91" type="2" maxWidth="40" maxHeight="" pdfDesc="insured info"/>
+		<field name="Producer.Info3" font="9" x="5.13" y="2.04" type="2" maxWidth="40" maxHeight="" pdfDesc="insured info"/>
+		<field name="Producer.Info4" font="9" x="5.13" y="2.17" type="2" maxWidth="40" maxHeight="" pdfDesc="insured info"/>	
+		
+		<field name="Section.Heading" font="12" x="0.58" y="2.56" type="2" maxWidth="60" maxHeight="" pdfDesc="section heading"/>	
+		
+		<field name="Value.Changed.1" font="7" x="0.48" y="2.98" type="2" maxWidth="38" maxHeight="6" pdfDesc="value label"/>		
+		<field name="Value.Original.1" font="7" x="2.81" y="3.20" type="2" maxWidth="35" maxHeight="6" pdfDesc="value label"/>
+		<field name="Value.Current.1" font="7" x="4.93" y="3.20" type="2" maxWidth="35" maxHeight="6" pdfDesc="value label"/>
+		<field name="Value.Action.1" font="7" x="7.10" y="3.20" type="2" maxWidth="15" maxHeight="6" pdfDesc="value label"/> 	
+		
+		<field name="Value.Changed.2" font="7" x="0.48" y="3.66" type="2" maxWidth="38" maxHeight="6" pdfDesc="value label"/>		
+		<field name="Value.Original.2" font="7" x="2.81" y="3.92" type="2" maxWidth="35" maxHeight="6" pdfDesc="value label"/>
+		<field name="Value.Current.2" font="7" x="4.93" y="3.92" type="2" maxWidth="35" maxHeight="6" pdfDesc="value label"/>
+		<field name="Value.Action.2" font="7" x="7.10" y="3.92" type="2" maxWidth="15" maxHeight="6" pdfDesc="value label"/>			
+		
+		<field name="Value.Changed.3" font="7" x="0.48" y="4.37" type="2" maxWidth="38" maxHeight="6" pdfDesc="value label"/>		
+		<field name="Value.Original.3" font="7" x="2.81" y="4.64" type="2" maxWidth="35" maxHeight="6" pdfDesc="value label"/>
+		<field name="Value.Current.3" font="7" x="4.93" y="4.64" type="2" maxWidth="35" maxHeight="6" pdfDesc="value label"/>
+		<field name="Value.Action.3" font="7" x="7.10" y="4.64" type="2" maxWidth="15" maxHeight="6" pdfDesc="value label"/>							
+			
+		<field name="Value.Changed.4" font="7" x="0.48" y="5.08" type="2" maxWidth="38" maxHeight="6" pdfDesc="value label"/>		
+		<field name="Value.Original.4" font="7" x="2.81" y="5.35" type="2" maxWidth="35" maxHeight="6" pdfDesc="value label"/>
+		<field name="Value.Current.4" font="7" x="4.93" y="5.35" type="2" maxWidth="35" maxHeight="6" pdfDesc="value label"/>
+		<field name="Value.Action.4" font="7" x="7.10" y="5.35" type="2" maxWidth="15" maxHeight="6" pdfDesc="value label"/>		
+		
+		<field name="Value.Changed.5" font="7" x="0.48" y="5.79" type="2" maxWidth="38" maxHeight="6" pdfDesc="value label"/>		
+		<field name="Value.Original.5" font="7" x="2.81" y="6.06" type="2" maxWidth="35" maxHeight="6" pdfDesc="value label"/>
+		<field name="Value.Current.5" font="7" x="4.93" y="6.06" type="2" maxWidth="35" maxHeight="6" pdfDesc="value label"/>
+		<field name="Value.Action.5" font="7" x="7.10" y="6.06" type="2" maxWidth="15" maxHeight="6" pdfDesc="value label"/>				
+		
+		<field name="Value.Changed.6" font="7" x="0.48" y="6.50" type="2" maxWidth="38" maxHeight="6" pdfDesc="value label"/>		
+		<field name="Value.Original.6" font="7" x="2.81" y="6.78" type="2" maxWidth="35" maxHeight="6" pdfDesc="value label"/>
+		<field name="Value.Current.6" font="7" x="4.93" y="6.78" type="2" maxWidth="35" maxHeight="6" pdfDesc="value label"/>
+		<field name="Value.Action.6" font="7" x="7.10" y="6.78" type="2" maxWidth="15" maxHeight="6" pdfDesc="value label"/>				
+		
+		<field name="Value.Changed.7" font="7" x="0.48" y="7.21" type="2" maxWidth="38" maxHeight="6" pdfDesc="value label"/>		
+		<field name="Value.Original.7" font="7" x="2.81" y="7.49" type="2" maxWidth="35" maxHeight="6" pdfDesc="value label"/>
+		<field name="Value.Current.7" font="7" x="4.93" y="7.49" type="2" maxWidth="35" maxHeight="6" pdfDesc="value label"/>
+		<field name="Value.Action.7" font="7" x="7.10" y="7.49" type="2" maxWidth="15" maxHeight="6" pdfDesc="value label"/>			
+		
+		<field name="Value.Changed.8" font="7" x="0.48" y="7.92" type="2" maxWidth="38" maxHeight="6" pdfDesc="value label"/>		
+		<field name="Value.Original.8" font="7" x="2.81" y="8.20" type="2" maxWidth="35" maxHeight="6" pdfDesc="value label"/>
+		<field name="Value.Current.8" font="7" x="4.93" y="8.20" type="2" maxWidth="35" maxHeight="6" pdfDesc="value label"/>
+		<field name="Value.Action.8" font="7" x="7.10" y="8.20" type="2" maxWidth="15" maxHeight="6" pdfDesc="value label"/>		
+		
+		<field name="Value.Changed.9" font="7" x="0.48" y="8.63" type="2" maxWidth="38" maxHeight="6" pdfDesc="value label"/>		
+		<field name="Value.Original.9" font="7" x="2.81" y="8.91" type="2" maxWidth="35" maxHeight="6" pdfDesc="value label"/>
+		<field name="Value.Current.9" font="7" x="4.93" y="8.91" type="2" maxWidth="35" maxHeight="6" pdfDesc="value label"/>
+		<field name="Value.Action.9" font="7" x="7.10" y="8.91" type="2" maxWidth="15" maxHeight="6" pdfDesc="value label"/>	
+		
+		<field name="Value.Changed.10" font="7" x="0.48" y="9.34" type="2" maxWidth="38" maxHeight="6" pdfDesc="value label"/>		
+		<field name="Value.Original.10" font="7" x="2.81" y="9.63" type="2" maxWidth="35" maxHeight="6" pdfDesc="value label"/>
+		<field name="Value.Current.10" font="7" x="4.93" y="9.63" type="2" maxWidth="35" maxHeight="6" pdfDesc="value label"/>
+		<field name="Value.Action.10" font="7" x="7.10" y="9.63" type="2" maxWidth="15" maxHeight="6" pdfDesc="value label"/>			
+
+		<field name="PageNumber" font="9" x="4.42" y="10.65" type="2" maxWidth="3" maxHeight="" pdfDesc="Page Number" />
+
+	</page>	
+	
+	<!-- Page 3 Remark  Page Type -->
+	<page pageNum="3">
+
+		<field name="ReferenceNumber" font="9" x="1.60" y="1.25" type="2" maxWidth="15" maxHeight="" pdfDesc="work item id"/>
+		<field name="PolicyNumber" font="9" x="5.40" y="1.25" type="2" maxWidth="15" maxHeight="" pdfDesc="policy number"/>
+		
+		<field name="DateOfChange" font="9" x="1.93" y="1.38" type="2" maxWidth="15" maxHeight="" pdfDesc="effective date of change" />
+		<field name="EffectiveDate" font="9" x="5.7" y="1.38" type="2" maxWidth="15" maxHeight="" pdfDesc="effective date" />
+		<field name="ExpirationDate" font="9" x="1.83" y="1.51" type="2" maxWidth="15" maxHeight="" pdfDesc="expiration date" />
+		
+		<field name="Insured.Info1" font="9" x="1.06" y="1.78" type="2" maxWidth="40" maxHeight="" pdfDesc="insured info"/>
+		<field name="Insured.Info2" font="9" x="1.06" y="1.91" type="2" maxWidth="40" maxHeight="" pdfDesc="insured info"/>
+		<field name="Insured.Info3" font="9" x="1.06" y="2.04" type="2" maxWidth="40" maxHeight="" pdfDesc="insured info"/>
+		<field name="Insured.Info4" font="9" x="1.06" y="2.17" type="2" maxWidth="40" maxHeight="" pdfDesc="insured info"/>
+		
+		<field name="Producer.Info1" font="9" x="5.13" y="1.78" type="2" maxWidth="40" maxHeight="" pdfDesc="insured info"/>
+		<field name="Producer.Info2" font="9" x="5.13" y="1.91" type="2" maxWidth="40" maxHeight="" pdfDesc="insured info"/>
+		<field name="Producer.Info3" font="9" x="5.13" y="2.04" type="2" maxWidth="40" maxHeight="" pdfDesc="insured info"/>
+		<field name="Producer.Info4" font="9" x="5.13" y="2.17" type="2" maxWidth="40" maxHeight="" pdfDesc="insured info"/>	
+		
+		<field name="Section.Heading" font="12" x="0.58" y="2.56" type="2" maxWidth="60" maxHeight="" pdfDesc="section heading"/>	
+		
+		<field name="Remark.Value" font="7" x="0.48" y="3.26" type="2" maxWidth="125" maxHeight="" pdfDesc="value label"/>			
+		
+		<field name="PageNumber" font="9" x="4.42" y="10.65" type="2" maxWidth="3" maxHeight="" pdfDesc="Page Number" />
+		
+	</page>			
+
+</pdf_layout>

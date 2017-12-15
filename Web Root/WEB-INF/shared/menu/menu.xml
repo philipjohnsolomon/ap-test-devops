@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menuDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/menu/menuDefinition.xsd">
+
+	<menuGroup name="MainMenu" description="MainMenu">
+		<menuMember id="home" name="Home" description="Home" url="DisplayHomePage" permission="accessMenu_Home"/>
+		<menuMember id="my-work" name="My Work" description="My Work" url="DisplayWorkInProgress?WorkListType=WorkItemsView" permission="accessMenu_My Work"/>
+		<menuMember id="toolkit" name="Toolkit" description="Toolkit" url="Toolkit" permission="accessMenu_Toolkit"/>
+		<menuMember id="my-reports" name="My Reports" description="My Reports" url="DisplayReports" permission="accessMenu_My Reports"/>
+		<menuMember id="solr-admin" name="Solr Admin" description="Solr Administration" url="SolrBatchUpdate" permission="accessMenu_Solr_Admin"/>	
+	</menuGroup>
+	
+	<menuGroup name="AccountMainMenu" description="MainMenu">
+		<menuMember id="home" name="Home" description="Home" url="DisplayHomePage" permission="accessMenu_Home"/>
+		<menuMember id="my-accounts" name="My Accounts" description="My Accounts" url="DisplayWorkInProgress?WorkListType=AccountsView" permission="accessMenu_My Accounts"/>
+		<menuMember id="my-work" name="My Work" description="My Work" url="DisplayWorkInProgress?WorkListType=WorkItemsView" permission="accessMenu_My Work"/>
+		<menuMember id="my-reports" name="My Reports" description="My Reports" url="DisplayReports" permission="accessMenu_My Reports"/>
+		<menuMember id="toolkit" name="Toolkit" description="Toolkit" url="Toolkit" permission="accessMenu_Toolkit"/>
+		<menuMember id="solr-admin" name="Solr Admin" description="Solr Administration" url="SolrBatchUpdate" permission="accessMenu_Solr_Admin"/>
+	</menuGroup>
+	
+</menuDefinition>

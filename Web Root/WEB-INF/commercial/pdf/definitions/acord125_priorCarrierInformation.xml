@@ -1,0 +1,93 @@
+<fields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/pdf/pdfDefinitions.xsd">
+	<field>
+		<eLabel>PriorCoverage_PolicyYear</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy[PolicyCd='Prior'].ContractTerm.EffectiveDt</xpath>
+		<format type="date" pattern="yyyy" />
+	</field>
+	<field>
+		<eLabel>PriorCoverage_GeneralLiability_InsurerFullName</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy[PolicyCd='Prior' &amp;&amp; LOBCd='CGL'].InsurerName</xpath>
+	</field>
+	<field>
+		<eLabel>PriorCoverage_GeneralLiability_PolicyNumberIdentifier</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy[PolicyCd='Prior' &amp;&amp; LOBCd='CGL'].PolicyNumber</xpath>
+	</field>
+	<field>
+		<eLabel>PriorCoverage_GeneralLiability_EffectiveDate</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy[PolicyCd='Prior' &amp;&amp; LOBCd='CGL'].ContractTerm.EffectiveDt</xpath>
+	</field>
+	<field>
+		<eLabel>PriorCoverage_GeneralLiability_ExpirationDate</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy[PolicyCd='Prior' &amp;&amp; LOBCd='CGL'].ContractTerm.ExpirationDt</xpath>
+	</field>
+	<field>
+		<eLabel>PriorCoverage_GeneralLiability_TotalPremiumAmount</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy[PolicyCd='Prior' &amp;&amp; LOBCd='CGL'].PolicyAmt.Amt</xpath>
+	</field>
+	<field>
+		<eLabel>PriorCoverage_Automobile_InsurerFullName</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy[PolicyCd='Prior' &amp;&amp; LOBCd='AUTOB'].InsurerName</xpath>
+	</field>
+	<field>
+		<eLabel>PriorCoverage_Automobile_PolicyNumberIdentifier</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy[PolicyCd='Prior' &amp;&amp; LOBCd='AUTOB'].PolicyNumber</xpath>
+	</field>
+	<field>
+		<eLabel>PriorCoverage_Automobile_EffectiveDate</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy[PolicyCd='Prior' &amp;&amp; LOBCd='AUTOB'].ContractTerm.EffectiveDt</xpath>
+	</field>
+	<field>
+		<eLabel>PriorCoverage_Automobile_ExpirationDate</eLabel>
+		<xpath>
+		CommlPolicy.OtherOrPriorPolicy[PolicyCd='Prior' &amp;&amp;LOBCd='AUTOB'].ContractTerm.ExpirationDt
+		</xpath>
+	</field>
+	<field>
+		<eLabel>PriorCoverage_Automobile_TotalPremiumAmount</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy[PolicyCd='Prior' &amp;&amp; LOBCd='AUTOB'].PolicyAmt.Amt</xpath>
+	</field>
+	<field>
+		<eLabel>PriorCoverage_Property_InsurerFullName</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy[PolicyCd='Prior' &amp;&amp; LOBCd='PROPC'].InsurerName</xpath>
+	</field>
+	<field>
+		<eLabel>PriorCoverage_Property_PolicyNumberIdentifier</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy[PolicyCd='Prior' &amp;&amp; LOBCd='PROPC'].PolicyNumber</xpath>
+	</field>
+	<field>
+		<eLabel>PriorCoverage_Property_EffectiveDate</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy[PolicyCd='Prior' &amp;&amp; LOBCd='PROPC'].ContractTerm.EffectiveDt</xpath>
+	</field>
+	<field>
+		<eLabel>PriorCoverage_Property_ExpirationDate</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy[PolicyCd='Prior' &amp;&amp; LOBCd='PROPC'].ContractTerm.ExpirationDt</xpath>
+	</field>
+	<field>
+		<eLabel>PriorCoverage_Property_TotalPremiumAmount</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy[PolicyCd='Prior' &amp;&amp; LOBCd='PROPC'].PolicyAmt.Amt</xpath>
+	</field>
+	<field>
+		<eLabel>PriorCoverage_OtherLine_LineOfBusiness</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy[PolicyCd='Prior' &amp;&amp; LOBCd='UN'].LOBCd</xpath>
+	</field>
+	<field>
+		<eLabel>PriorCoverage_OtherLine_InsurerFullName</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy[PolicyCd='Prior' &amp;&amp; LOBCd='UN'].InsurerName</xpath>
+	</field>
+	<field>
+		<eLabel>PriorCoverage_OtherLine_PolicyNumberIdentifier</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy[PolicyCd='Prior' &amp;&amp; LOBCd='UN'].PolicyNumber</xpath>
+	</field>
+	<field>
+		<eLabel>PriorCoverage_OtherLine_EffectiveDate</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy[PolicyCd='Prior' &amp;&amp; LOBCd='UN'].ContractTerm.EffectiveDt</xpath>
+	</field>
+	<field>
+		<eLabel>PriorCoverage_OtherLine_ExpirationDate</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy[PolicyCd='Prior' &amp;&amp; LOBCd='UN'].ContractTerm.ExpirationDt</xpath>
+	</field>
+	<field>
+		<eLabel>PriorCoverage_OtherLine_TotalPremiumAmount</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy[PolicyCd='Prior' &amp;&amp; LOBCd='UN'].PolicyAmt.Amt</xpath>
+	</field>
+</fields>

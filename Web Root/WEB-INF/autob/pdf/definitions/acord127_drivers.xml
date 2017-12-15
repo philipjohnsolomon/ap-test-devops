@@ -1,0 +1,90 @@
+<fields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/pdf/pdfDefinitions.xsd">
+	 <field defaultValue="${itemIndex}">
+		<eLabel>Driver_ProducerIdentifier</eLabel>
+	</field>
+	<field>
+		<eLabel>Driver_GivenName</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlDriver.GeneralPartyInfo.NameInfo.PersonName.GivenName</xpath>
+	</field>
+	<field>
+		<eLabel>Driver_OtherGivenNameInitial</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlDriver.GeneralPartyInfo.NameInfo.PersonName.OtherGivenName</xpath>
+	</field>
+	<field>
+		<eLabel>Driver_Surname</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlDriver.GeneralPartyInfo.NameInfo.PersonName.Surname</xpath>
+	</field>
+	<field>
+		<eLabel>Driver_MailingAddress_CityName</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlDriver.GeneralPartyInfo.Addr.City</xpath>
+	</field>
+	<field>
+		<eLabel>Driver_MailingAddress_StateOrProvinceCode</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlDriver.GeneralPartyInfo.Addr.StateProvCd</xpath>
+	</field>
+	<field>
+		<eLabel>Driver_MailingAddress_PostalCode</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlDriver.GeneralPartyInfo.Addr.PostalCode</xpath>
+	</field>
+	<field>
+		<eLabel>Driver_GenderCode</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlDriver.DriverInfo.PersonInfo.GenderCd</xpath>
+	</field>
+	<field>
+		<eLabel>Driver_MaritalStatusCode</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlDriver.DriverInfo.PersonInfo.MaritalStatusCd</xpath>
+	</field>
+	<field>
+		<eLabel>Driver_BirthDate</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlDriver.DriverInfo.PersonInfo.BirthDt</xpath>
+	</field>
+	<field>
+		<eLabel>Driver_ExperienceYearCount</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlDriver.CommlDriverInfo.CommlExperience.NumUnits</xpath>
+	</field>
+	<field>
+		<eLabel>Driver_LicensedYear</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlDriver.DriverInfo.License.LicensedDt</xpath>
+		<format type="date" pattern="yyyy" />
+	</field>
+	<field>
+		<eLabel>Diver_LicenseNumberIdentifier</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlDriver.DriverInfo.License.LicensePermitNumber</xpath>
+	</field>
+	<field>
+		<eLabel>Driver_TaxIdentifier</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlDriver.GeneralPartyInfo.NameInfo.TaxIdentity[TaxIdTypeCd='SSN'].TaxId</xpath>
+	</field>
+	<field>
+		<eLabel>Driver_LicensedStateOrProvinceCode</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlDriver.DriverInfo.License.StateProvCd</xpath>
+	</field>
+	<field>
+		<eLabel>Driver_HiredDate</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlDriver.CommlDriverInfo.HiredDt</xpath>
+	</field>
+	<field>
+		<eLabel>Driver_Coverage_BroadenedNoFaultCode</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlDriver.CommlDriverInfo.BroadenedPIPAppliesInd</xpath>
+	</field>
+	
+	<field>
+		<eLabel>Driver_Coverage_DriverOtherCarCode</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlDriver.CommlDriverInfo.DriveOtherCarInd</xpath>
+	</field>
+	<field>
+		<eLabel>Driver_LicenseNumberIdentifier</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlDriver.DriverInfo.License.LicensePermitNumber</xpath>
+	</field>
+	<!--Use the vehicle number entered to determine //CommlPolicy/DriverVeh@VehRef -->
+	<!--		
+<field>
+			<eLabel>Driver_Vehicle_ProducerIdentifier</eLabel>
+			<xpath>CommlVeh/ItemIdInfo/AgencyId</xpath> 
+</field>			
+<field>
+			<eLabel>Driver_Vehicle_UsePercent</eLabel>
+			<xpath>CommlPolicy/DriverVeh/UsePct/xpath>
+</field>			
+-->
+</fields>

@@ -1,0 +1,38 @@
+<views xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/view/view.xsd">
+	<view id="Display.Roster.ContactFullName" title="Full Name" type="standard" deleteMode="onEmptyValue">
+		<fieldSet>
+			<field type="id">MiscParty.GeneralPartyInfo.NameInfo.PersonName.GivenName</field>
+			<field type="singleSpace"> </field>
+			<field type="id">MiscParty.GeneralPartyInfo.NameInfo.PersonName.Surname</field>
+			<field type="singleSpace"> </field>
+			<field type="id">MiscParty.GeneralPartyInfo.NameInfo.CommlName.CommercialName</field>
+		</fieldSet>
+	</view>
+	<view id="AccountHolder.Address" title="Account Holder Address Line 1, Line 2" type="standard" deleteMode="onEmptyValue">
+		<fieldSet>
+			<field type="id">MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Addr.Addr1</field>
+			<field type="singleSpace"> </field>
+			<field type="id">MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Addr.Addr2</field>
+		</fieldSet>
+	</view>
+	<view id="Display.Roster.Location" title="Location" type="standard" deleteMode="onEmptyValue">
+			<fieldSet>
+				<field type="id">Location.Addr.Addr1</field>
+				<field type="singleSpace"> </field>
+				<field type="id">Location.Addr.Addr2</field>
+				<field type="singleSpace"> </field>
+				<field type="id">Location.Addr.City</field>
+				<field type="formatInfo">, </field>
+				<field type="id">Location.Addr.StateProvCd</field>
+				<field type="singleSpace"> </field>
+				<field type="id">Location.Addr.PostalCode</field>
+			</fieldSet>
+	</view>
+	<view id="Display.Roster.ContactRoles" title="Contact Roles" type="standard" deleteMode="onEmptyValue">
+		<customArgument name="maxRolesToDisplay" value="3"/>
+		<fieldSet>
+			<field type="id">MiscParty.MiscPartyInfo</field>
+		</fieldSet>
+		<viewClassName>com.agencyport.account.view.ContactRoleView</viewClassName>
+	</view>
+</views>

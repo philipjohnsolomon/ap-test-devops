@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 rel. 3 sp1 (http://www.altova.com) by Norm Baker (AgencyPort) -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" attributeFormDefault="unqualified" version="1.7.0">
+	<!-- This schema contains AgencyPort's simplification of the ACORD standard based on the special field helper reduction initiative -->
+	<xsd:redefine schemaLocation="ap_acord_extension.xsd">
+	
+	 <xsd:complexType name="RealEstate_Type">
+	  <xsd:annotation>
+		    <xsd:documentation>Simplification allows a Location aggregate to directly hang within a RealEstate parent</xsd:documentation>
+	  </xsd:annotation>
+	  <xsd:complexContent>
+		 <xsd:extension base="RealEstate_Type">
+			<xsd:sequence>
+				<xsd:element ref="Location" minOccurs="0"/>
+			</xsd:sequence>
+		 </xsd:extension>
+	</xsd:complexContent>
+	</xsd:complexType>  
+		<xsd:complexType name="CommlSubLocation_Type">
+			<xsd:annotation>
+				<xsd:documentation>Simplification accommodates PropertyInfo children under CommlSubLocation</xsd:documentation>
+			</xsd:annotation>
+			<xsd:complexContent>
+				<xsd:extension base="CommlSubLocation_Type">
+					<xsd:sequence>
+						<xsd:element ref="CommlPropertyInfo" minOccurs="0" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Added by AgencyPort</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element ref="GlassSignInfo" minOccurs="0" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Added by AgencyPort</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element ref="GeneralLiabilityClassification" minOccurs="0" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Added by AgencyPort</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element ref="SubLocation" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>Added by AgencyPort</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="WorkCompLineBusiness_Type">
+			<xsd:annotation>
+				<xsd:documentation>Simplification models policy entities which ACORD models under the WCRateState for the controlling state province code</xsd:documentation>
+			</xsd:annotation>
+			<xsd:complexContent>
+				<xsd:extension base="WorkCompLineBusiness_Type">
+					<xsd:sequence>
+						<xsd:element ref="ValenAnalytics" minOccurs="0" maxOccurs="unbounded" />
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="Dwell_Type">
+			<xsd:annotation>
+				<xsd:documentation>Simplification allows a Location aggregate to directly hang within a Dwell parent</xsd:documentation>
+			</xsd:annotation>
+			<xsd:complexContent>
+				<xsd:extension base="Dwell_Type">
+					<xsd:sequence>
+						<xsd:element ref="Location" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="AdditionalInterest_Type">
+			<xsd:annotation>
+				<xsd:documentation>Adds an additional interest description so we don't have to maintain a RemarkText foreign aggregate.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:complexContent>
+				<xsd:extension base="AdditionalInterest_Type">
+					<xsd:sequence>
+						<xsd:element ref="Description" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		
+		<xsd:complexType name="CommlRateState_Type">
+			<xsd:annotation>
+				<xsd:documentation>Accommodation of segmentation of optional coverages and premium modification to their own parent</xsd:documentation>
+			</xsd:annotation>
+			<xsd:complexContent>
+				<xsd:extension base="CommlRateState_Type">
+					<xsd:sequence>
+						<xsd:element name="CommlAutoOptionalCoverages" type="CommlAutoOptionalCoverages_Type" minOccurs="0"/>
+						<xsd:element name="CommlAutoPremiumModification" type="CommlAutoPremiumModification_Type" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="PersPkgPolicyQuoteInqRq_Type">
+			<xsd:complexContent>
+				<xsd:extension base="PersPkgPolicyQuoteInqRq_Type">
+					<xsd:sequence>
+         				<xsd:element name="DwellFireLineBusiness" type="DwellFireLineBusiness_Type" minOccurs="0"/>
+         				<xsd:element name="HomeLineBusiness" type="HomeLineBusiness_Type" minOccurs="0"/>
+         				<xsd:element name="PersAutoLineBusiness" type="PersAutoLineBusiness_Type" minOccurs="0"/>
+         				<xsd:element name="PersUmbrellaLineBusiness" type="PersUmbrellaLineBusiness_Type" minOccurs="0"/>
+         				<xsd:element name="PersInlandMarineLineBusiness" type="PersInlandMarineLineBusiness_Type" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:redefine>
+	
+	<xsd:element name="ValenAnalytics">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="StateProvCd" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="RiskScore" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="Misclassified" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="AuditResults"  minOccurs="0" maxOccurs="unbounded" />
+				<xsd:element ref="ReportDate" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="ReportID" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="RequestData" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="ErrorInfo" minOccurs="0" maxOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Misclassified">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="Interpretation" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="LowerBoundValue"  minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="UpperBoundValue"  minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="Score"  minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="PAExplanation" minOccurs="0" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="RequestData">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="FirstYearClaimCount" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="SecondYearClaimCount"  minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="ThirdYearClaimCount"  minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="EMod"  minOccurs="0" maxOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="RiskScore">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="Interpretation" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="LowerBoundValue"  minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="UpperBoundValue"  minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="Score"  minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="PredictionValue" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="PAExplanation" minOccurs="0" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="PAExplanation">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Category" type="xsd:string" minOccurs="0" maxOccurs="1" />
+				<xsd:element name="Value" type="xsd:string" minOccurs="0" maxOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="AuditResults">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="RatingClassificationCd" minOccurs="0" maxOccurs="1" />
+				<xsd:element name="Description" type="xsd:string" minOccurs="0" maxOccurs="1" />
+				<xsd:element name="PercentOfPayroll" type="xsd:string" minOccurs="0" maxOccurs="1" />
+				<xsd:element name="PercentOfObservations" type="xsd:string" minOccurs="0" maxOccurs="1" />
+				<xsd:element name="Governing" type="xsd:boolean" minOccurs="0" maxOccurs="1" />
+				<xsd:element name="TotalClassPayroll" type="xsd:string" minOccurs="0" maxOccurs="1" />
+				<xsd:element name="PercentOfTotalPayroll" type="xsd:string" minOccurs="0" maxOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="Interpretation" type="xsd:string" />
+	<xsd:element name="LowerBoundValue" type="xsd:string" />
+	<xsd:element name="UpperBoundValue" type="xsd:string" />
+	<xsd:element name="Score" type="xsd:string" />
+	<xsd:element name="PredictionValue" type="xsd:string" />
+	<xsd:element name="ReportDate" type="xsd:date" />
+	<xsd:element name="ReportID" type="xsd:string" />
+	<xsd:element name="FirstYearClaimCount" type="xsd:long" />
+	<xsd:element name="SecondYearClaimCount" type="xsd:long" />
+	<xsd:element name="ThirdYearClaimCount" type="xsd:long" />
+	<xsd:element name="EMod" type="xsd:string" />
+	<xsd:element name="ErrorInfo" type="xsd:string" />
+	
+   <xsd:complexType name="CommlAutoOptionalCoverages_Type">
+      <xsd:complexContent>
+         <xsd:extension base="CommlAutoOptionalCoverages_Type_NoID">
+            <xsd:attribute name="id" type="ID"/>
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+   <xsd:complexType name="CommlAutoOptionalCoverages_Type_NoID">
+      <xsd:sequence>
+      	 <xsd:element ref="ItemIdInfo" minOccurs="0"	maxOccurs="1"/>
+         <xsd:element ref="CommlAutoHiredInfo" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="CommlAutoNonOwnedInfo" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="CommlAutoDriveOtherCarInfo" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="CommlCoverage" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   
+   <xsd:complexType name="CommlAutoPremiumModification_Type">
+      <xsd:complexContent>
+         <xsd:extension base="CommlAutoPremiumModification_Type_NoID">
+            <xsd:attribute name="id" type="ID"/>
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+   <xsd:complexType name="CommlAutoPremiumModification_Type_NoID">
+      <xsd:sequence>
+      	 <xsd:element ref="ItemIdInfo" minOccurs="0"	maxOccurs="1"/>
+         <xsd:element ref="CommlCoverage" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   
+ 
+	
+</xsd:schema>

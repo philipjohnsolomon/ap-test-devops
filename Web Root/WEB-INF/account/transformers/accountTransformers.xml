@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformers  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/transformer/transformer.xsd">
+	<transformer name="Workitem XML to Account XML" type="aggregator" targetFormat="ACORDWorkItemUpFill" lob="ACCOUNT">
+		<step name="WorkItem_TO_Account" type="XSLT" xsltResourceId="workitemupfill.xsl" />
+	</transformer>
+</transformers>
+
+

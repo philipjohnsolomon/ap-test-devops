@@ -1,0 +1,289 @@
+<fields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/pdf/pdfDefinitions.xsd">
+	<field>
+		<eLabel>Vehicle_BodilyInjury_PerPersonLimitAmount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='BISPL'].Limit[LimitAppliesToCd='PerPerson'].FormatInteger</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_BodilyInjury_PerAccidentLimitAmount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='BISPL'].Limit[LimitAppliesToCd='PerAcc'].FormatInteger</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_PropertyDamage_PerAccidentLimitAmount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='PD'].Limit.FormatInteger</xpath>
+	</field>
+
+
+	<field>
+		<eLabel>Vehicle_HiredBorrowed_HiredCostAmount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlAutoHiredInfo.HiredLiabilityCostAmt.Amt</xpath>
+	</field>
+
+	<field type="checkbox">
+		<eLabel>Vehicle_HiredBorrowed_IfAnyBasisIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlAutoHiredInfo.IfAnyRatingBasisInd</xpath>
+	</field>
+	<!-- NonOwnedGroupTypeCd is not defined in the schema <field type="checkbox"> 
+		<eLabel>Vehicle_NonOwnedGroup_EmployeeIndicator_A</eLabel> <xpath>CommlAutoLineBusiness.CommlRateState[StateProvCd='${stateCode}'].CommlAutoNonOwnedInfo[NonOwnedGroupTypeCd='E'].NonOwnedGroupTypeCd</xpath> 
+		</field> <field> <eLabel>Vehicle_NonOwnedGroup_EmployeeCount_A</eLabel> <xpath>CommlAutoLineBusiness.CommlRateState[StateProvCd='${stateCode}'].CommlAutoNonOwnedInfo[NonOwnedGroupTypeCd='E'].NumNonOwned</xpath> 
+		</field> <field type="checkbox"> <eLabel>Vehicle_NonOwnedGroup_VolunteerIndicator_A</eLabel> 
+		<xpath>CommlAutoLineBusiness.CommlRateState[StateProvCd='${stateCode}'].CommlAutoNonOwnedInfo[NonOwnedGroupTypeCd='V'].NonOwnedGroupTypeCd</xpath> 
+		</field> <field> <eLabel>Vehicle_NonOwnedGroup_VolunteerCount_A</eLabel> 
+		<xpath>CommlAutoLineBusiness.CommlRateState[StateProvCd='${stateCode}'].CommlAutoNonOwnedInfo[NonOwnedGroupTypeCd='V'].NumNonOwned</xpath> 
+		</field> <field type="checkbox"> <eLabel>Vehicle_NonOwnedGroup_PartnerIndicator_A</eLabel> 
+		<xpath>CommlAutoLineBusiness.CommlRateState[StateProvCd='${stateCode}'].CommlAutoNonOwnedInfo[NonOwnedGroupTypeCd='PRT'].NonOwnedGroupTypeCd</xpath> 
+		</field> <field> <eLabel>Vehicle_NonOwnedGroup_PartnerCount_A</eLabel> <xpath>CommlAutoLineBusiness.CommlRateState[StateProvCd='${stateCode}'].CommlAutoNonOwnedInfo[NonOwnedGroupTypeCd='PRT'].NumNonOwned</xpath> 
+		</field> -->
+
+	<!-- NonOwnedGroupTypeCd is not defined in the schema -->
+	<field>
+		<eLabel>Vehicle_NonOwnedGroup_EmployeeCount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlAutoNonOwnedInfo.NonOwnedInfo[NonOwnedGroupTypeCd='E'].NumNonOwned</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_NonOwnedGroup_VolunteerCount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlAutoNonOwnedInfo.NonOwnedInfo[NonOwnedGroupTypeCd='V'].NumNonOwned</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_NonOwnedGroup_PartnerCount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlAutoNonOwnedInfo.NonOwnedInfo[NonOwnedGroupTypeCd='PRT'].NumNonOwned</xpath>
+	</field>
+
+	<!-- NonOwnedGroupTypeCd is not defined in the schema - End -->
+
+	<field>
+		<eLabel>Vehicle_TowingAndLabour_LimitAmount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='TL'].Limit.FormatInteger</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_HiredPhysicalDamage_DayCount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlAutoHiredInfo.NumDays</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_HiredPhysicalDamage_VehicleCount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlAutoHiredInfo.NumVehs</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_Comprehensive_DeductibleAmount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlAutoHiredInfo.CommlCoverage[CoverageCd='COMP'].Deductible.FormatInteger</xpath>
+	</field>
+
+	<field>
+		<eLabel>Vehicle_SpecifiedCauseOfLoss_DeductibleAmount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlAutoHiredInfo.CommlCoverage[CoverageCd='PERIL'].Deductible.FormatInteger</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_HiredPhysicalDamage_PrimaryIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState[StateProvCd='${stateCode}'].CommlAutoHiredInfo.CommlCoverage[CoverageCd='COMP'or CoverageCd='PERIL' or CoverageCd='COLL'].Option[OptionCd='P'].OptionCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_HiredPhysicalDamage_SecondaryIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState[StateProvCd='${stateCode}'].CommlAutoHiredInfo.CommlCoverage[CoverageCd='COMP'or CoverageCd='PERIL' or CoverageCd='COLL'].Option[OptionCd='SC'].OptionCd</xpath>
+	</field>
+	<field>
+		<eLabel>Producer_NationalIdentifier_B</eLabel>
+		<xpath>Producer.ProducerInfo.NIPRId</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_TruckersSymbol_FortyOneIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[LiabilitySymbolCd='41'].LiabilitySymbolCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_TruckersSymbol_FortyTwoIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[LiabilitySymbolCd='42'].LiabilitySymbolCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_TruckersSymbol_FortyThreeIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[LiabilitySymbolCd='43'].LiabilitySymbolCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_TruckersSymbol_FortySixIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[LiabilitySymbolCd='46'].LiabilitySymbolCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_TruckersSymbol_FortySevenIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[LiabilitySymbolCd='47'].LiabilitySymbolCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_TruckersSymbol_FiftyIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[LiabilitySymbolCd='50'].LiabilitySymbolCd</xpath>
+	</field>
+
+	<!-- Liability -->
+	<checkBoxGroup>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='CSL'].CoverageCd</xpath>
+		<checkBox trueValue="CSL">
+			<eLabel>Vehicle_CombinedSingleLimit_LimitIndicator_A</eLabel>
+		</checkBox>
+	</checkBoxGroup>
+	<checkBoxGroup>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='BISPL'].CoverageCd</xpath>
+		<checkBox trueValue="BISPL">
+			<eLabel>Vehicle_BodilyInjury_EachPersonLimitIndicator_A</eLabel>
+		</checkBox>
+	</checkBoxGroup>
+	<!-- Medical Payments -->
+	<checkBoxGroup>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol.AutoMedicalPaymentsSymbolCd</xpath>
+		<checkBox trueValue="2">
+			<eLabel>Vehicle_BusinessAutoSymbol_TwoIndicator_B</eLabel>
+		</checkBox>
+		<checkBox trueValue="3">
+			<eLabel>Vehicle_BusinessAutoSymbol_ThreeIndicator_B</eLabel>
+		</checkBox>
+		<checkBox trueValue="4">
+			<eLabel>Vehicle_BusinessAutoSymbol_FourIndicator_B</eLabel>
+		</checkBox>
+		<checkBox trueValue="7">
+			<eLabel>Vehicle_BusinessAutoSymbol_SevenIndicator_B</eLabel>
+		</checkBox>
+		<checkBox trueValue="8">
+			<eLabel>Vehicle_BusinessAutoSymbol_EightIndicator_B</eLabel>
+		</checkBox>
+	</checkBoxGroup>
+	<!-- Liability -->
+	<checkBoxGroup>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol.LiabilitySymbolCd</xpath>
+		<checkBox trueValue="1">
+			<eLabel>Vehicle_BusinessAutoSymbol_OneIndicator_A</eLabel>
+		</checkBox>
+		<checkBox trueValue="2">
+			<eLabel>Vehicle_BusinessAutoSymbol_TwoIndicator_A</eLabel>
+		</checkBox>
+		<checkBox trueValue="3">
+			<eLabel>Vehicle_BusinessAutoSymbol_ThreeIndicator_A</eLabel>
+		</checkBox>
+		<checkBox trueValue="4">
+			<eLabel>Vehicle_BusinessAutoSymbol_FourIndicator_A</eLabel>
+		</checkBox>
+		<checkBox trueValue="7">
+			<eLabel>Vehicle_BusinessAutoSymbol_SevenIndicator_A</eLabel>
+		</checkBox>
+		<checkBox trueValue="8">
+			<eLabel>Vehicle_BusinessAutoSymbol_EightIndicator_A</eLabel>
+		</checkBox>
+		<checkBox trueValue="9">
+			<eLabel>Vehicle_BusinessAutoSymbol_NineIndicator_A</eLabel>
+		</checkBox>
+	</checkBoxGroup>
+	<!-- Towing & Labor -->
+	<checkBoxGroup>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol.TowingAndLaborSymbolCd</xpath>
+		<checkBox trueValue="3">
+			<eLabel>Vehicle_BusinessAutoSymbol_ThreeIndicator_E</eLabel>
+		</checkBox>
+		<checkBox trueValue="7">
+			<eLabel>Vehicle_BusinessAutoSymbol_SevenIndicator_E</eLabel>
+		</checkBox>
+	</checkBoxGroup>
+	<!-- COMP/OTC -->
+	<checkBoxGroup>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol.ComprehensiveSymbolCd</xpath>
+		<checkBox trueValue="2">
+			<eLabel>Vehicle_BusinessAutoSymbol_TwoIndicator_F</eLabel>
+		</checkBox>
+		<checkBox trueValue="3">
+			<eLabel>Vehicle_BusinessAutoSymbol_ThreeIndicator_F</eLabel>
+		</checkBox>
+		<checkBox trueValue="4">
+			<eLabel>Vehicle_BusinessAutoSymbol_FourIndicator_F</eLabel>
+		</checkBox>
+		<checkBox trueValue="7">
+			<eLabel>Vehicle_BusinessAutoSymbol_SevenIndicator_F</eLabel>
+		</checkBox>
+		<checkBox trueValue="8">
+			<eLabel>Vehicle_BusinessAutoSymbol_EightIndicator_F</eLabel>
+		</checkBox>
+	</checkBoxGroup>
+	<!-- Specified causes of loss -->
+	<checkBoxGroup>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol.SpecifiedPerilsSymbolCd</xpath>
+		<checkBox trueValue="2">
+			<eLabel>Vehicle_BusinessAutoSymbol_TwoIndicator_G</eLabel>
+		</checkBox>
+		<checkBox trueValue="3">
+			<eLabel>Vehicle_BusinessAutoSymbol_ThreeIndicator_G</eLabel>
+		</checkBox>
+		<checkBox trueValue="4">
+			<eLabel>Vehicle_BusinessAutoSymbol_FourIndicator_G</eLabel>
+		</checkBox>
+		<checkBox trueValue="7">
+			<eLabel>Vehicle_BusinessAutoSymbol_SevenIndicator_G</eLabel>
+		</checkBox>
+		<checkBox trueValue="8">
+			<eLabel>Vehicle_BusinessAutoSymbol_EightIndicator_G</eLabel>
+		</checkBox>
+	</checkBoxGroup>
+	<!-- Collision -->
+	<checkBoxGroup>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol.CollisionSymbolCd</xpath>
+		<checkBox trueValue="2">
+			<eLabel>Vehicle_BusinessAutoSymbol_TwoIndicator_H</eLabel>
+		</checkBox>
+		<checkBox trueValue="3">
+			<eLabel>Vehicle_BusinessAutoSymbol_ThreeIndicator_H</eLabel>
+		</checkBox>
+		<checkBox trueValue="4">
+			<eLabel>Vehicle_BusinessAutoSymbol_FourIndicator_H</eLabel>
+		</checkBox>
+		<checkBox trueValue="7">
+			<eLabel>Vehicle_BusinessAutoSymbol_SevenIndicator_H</eLabel>
+		</checkBox>
+		<checkBox trueValue="8">
+			<eLabel>Vehicle_BusinessAutoSymbol_EightIndicator_H</eLabel>
+		</checkBox>
+	</checkBoxGroup>
+
+
+	<!-- Uninsured Motorist -->
+
+	<checkBoxGroup>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol.UninsuredMotoristSymbolCd</xpath>
+		<checkBox trueValue="2">
+			<eLabel>Vehicle_BusinessAutoSymbol_TwoIndicator_C</eLabel>
+		</checkBox>
+		<checkBox trueValue="3">
+			<eLabel>Vehicle_BusinessAutoSymbol_ThreeIndicator_C</eLabel>
+		</checkBox>
+		<checkBox trueValue="4">
+			<eLabel>Vehicle_BusinessAutoSymbol_FourIndicator_C</eLabel>
+		</checkBox>
+		<checkBox trueValue="6">
+			<eLabel>Vehicle_BusinessAutoSymbol_SixIndicator_C</eLabel>
+		</checkBox>
+		<checkBox trueValue="7">
+			<eLabel>Vehicle_BusinessAutoSymbol_SevenIndicator_C</eLabel>
+		</checkBox>
+	</checkBoxGroup>
+
+	<checkBoxGroup>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlAutoNonOwnedInfo.NonOwnedInfo[NonOwnedGroupTypeCd='E'].NonOwnedGroupTypeCd</xpath>
+		<checkBox trueValue="E">
+			<eLabel>Vehicle_NonOwnedGroup_EmployeeIndicator_A</eLabel>
+		</checkBox>
+	</checkBoxGroup>
+	<checkBoxGroup>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlAutoNonOwnedInfo.NonOwnedInfo[NonOwnedGroupTypeCd='PRT'].NonOwnedGroupTypeCd</xpath>
+		<checkBox trueValue="PRT">
+			<eLabel>Vehicle_NonOwnedGroup_PartnerIndicator_A</eLabel>
+		</checkBox>
+	</checkBoxGroup>
+	<checkBoxGroup>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlAutoNonOwnedInfo.NonOwnedInfo[NonOwnedGroupTypeCd='V'].NonOwnedGroupTypeCd</xpath>
+		<checkBox trueValue="V">
+			<eLabel>Vehicle_NonOwnedGroup_VolunteerIndicator_A</eLabel>
+		</checkBox>
+	</checkBoxGroup>
+
+	<!-- <field type="checkbox"> <eLabel>Vehicle_BusinessAutoSymbol_TwoIndicator_C</eLabel> 
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[UninsuredMotoristSymbolCd='2'].UninsuredMotoristSymbolCd</xpath> 
+		</field> <field type="checkbox"> <eLabel>Vehicle_BusinessAutoSymbol_ThreeIndicator_C</eLabel> 
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[UninsuredMotoristSymbolCd='3'].UninsuredMotoristSymbolCd</xpath> 
+		</field> <field type="checkbox"> <eLabel>Vehicle_BusinessAutoSymbol_FourIndicator_C</eLabel> 
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[UninsuredMotoristSymbolCd='4'].UninsuredMotoristSymbolCd</xpath> 
+		</field> <field type="checkbox"> <eLabel>Vehicle_BusinessAutoSymbol_SixIndicator_C</eLabel> 
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[UninsuredMotoristSymbolCd='6'].UninsuredMotoristSymbolCd</xpath> 
+		</field> <field type="checkbox"> <eLabel>Vehicle_BusinessAutoSymbol_SevenIndicator_C</eLabel> 
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[UninsuredMotoristSymbolCd='7'].UninsuredMotoristSymbolCd</xpath> 
+		</field> -->
+</fields>

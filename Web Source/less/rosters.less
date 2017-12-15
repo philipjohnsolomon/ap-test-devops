@@ -1,0 +1,103 @@
+#rosterAddNewLink {
+	padding-bottom: 10px;
+}
+table.roster  {
+	border: 1px solid @primary-box-border-color; 
+	
+	th.actions	{
+		text-align: right;
+	}
+
+	td.actionCell {
+		text-align: right;
+		min-width: 30%;
+	}
+	td.actionCell a {
+		margin-top: 2px;
+		margin-bottom: 2px;
+	}
+	.table > thead > tr > th {
+		border-bottom: 1px solid @primary-box-border-color; 
+		font-weight: 400; 
+		background: @roster-th-background;
+	}
+	.table > tbody > tr > td {
+		vertical-align: middle;
+	}
+	#rosterUpdateButton {
+		margin-bottom: 20px;
+	}
+	.btn {
+		padding: 3px 6px;
+	}
+	
+	
+	/* Roster editing states */
+
+	tr.needs-visiting td	{
+		color: @roster-needs-visiting;
+	}	
+	
+	tr.unrecoverable td	{
+		color: @roster-unrecoverable;
+	}
+	
+	tr.was-deleted td	{
+		color: @roster-was-deleted;
+	}
+
+	tr.was-edited td	{
+		font-style: italic;
+	}
+	tr.was-added td	{
+		color: @roster-was-added;
+	}
+}
+
+
+/* Roster editing states in popup helper  */
+
+.roster-help-container {
+	.needs-visiting	{
+		color: @roster-needs-visiting;
+	}	
+	.unrecoverable	{
+		color: @roster-unrecoverable;
+	}
+	.was-deleted	{
+		color: @roster-was-deleted;
+	}
+	.was-edited	{
+		font-style: italic;
+	}
+	.was-added	{
+		color: @roster-was-added;
+	}
+}
+
+
+/* 
+	overriding Bootstrap responsive defaults. 
+	nowrap's not realistic for this content.
+*/
+
+.table-responsive  {
+	border: 0;
+
+	> .table > thead > tr > th,
+	> .table > tbody > tr > th,
+	> .table > tfoot > tr > th,
+	> .table > thead > tr > td,
+	> .table > tbody > tr > td,
+	> .table > tfoot > tr > td {
+		white-space: normal;
+	}			
+
+}
+
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+<indexMapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" index="account" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/searchindex/indexMapping.xsd">
+<!-- http://reference.agencyport.com/schemas/5.2/searchindex/indexMapping.xsd C:\Projects\sdk\apwebapp\resources\schemas\searchindex\indexMapping.xsd -->
+	<field id="work_item_id" name="account_id" indexFieldName="id" type="INTEGER"  workItemPropertyName="WORKITEM_ID">
+		<content localeId="1" title="ID"/>
+	</field>
+	<field id="account_type" name="account_type" type="STRING" >
+		<content localeId="1" title="Type"/>
+	</field>
+	<field id="status" indexFieldName="workitem_status" type="STATUS" workItemPropertyName="WORKITEM_STATUS">
+		<content localeId="1" title="Status"/>
+	</field>
+	<field id="entity_name" name="entity_name" indexSearchFieldName="entity_name_search" type="STRING" >
+		<content localeId="1" title="Name"/>
+	</field>
+	<field id="last_update_time" name="last_update_time" type="TIME" >
+		<content localeId="1" title="Updated"/>
+	</field>
+	<field id="address" name="address" type="STRING" >
+		<content localeId="1" title="Address"/>
+	</field>
+	<field id="city" name="city" type="STRING" >
+		<content localeId="1" title="City"/>
+	</field>
+	<field id="state_prov_cd" type="STRING" >
+		<content localeId="1" title="State"/>
+	</field>
+	<field id="postal_code" type="STRING" >
+		<content localeId="1" title="Zip Code"/>
+	</field>
+	<field id="user_group_id" indexFieldName="usergroupid" type="INTEGER" workItemPropertyName="USERGROUP_ID">
+		<content localeId="1" title="User Group Id"/>
+	</field>
+	<field id="account_number" type="STRING" >
+		<content localeId="1" title="Account Number"/>
+	</field>
+	<field id="tax_id" type="STRING" >
+		<content localeId="1" title="Tax Id"/>
+	</field>
+	<field id="creation_time" type="TIME" >
+		<content localeId="1" title="Creation TIME"/>
+	</field>
+	<field id="phone_number" type="STRING" >
+		<content localeId="1" title="Creation TIME"/>
+	</field>
+	<field id="account_pas_id" type="STRING" >
+		<content localeId="1" title="Account PAS Id"/>
+	</field>
+	<field id="other_name" isSearchable="false" type="STRING" >
+		<content localeId="1" title="Other Name"/>
+	</field>
+</indexMapping>

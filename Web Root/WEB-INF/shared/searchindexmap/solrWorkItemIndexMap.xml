@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by Norm Baker (AgencyPort) -->
+<indexMapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" index="worklist" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/searchindex/indexMapping.xsd">
+<!-- http://reference.agencyport.com/schemas/5.2/searchindex/indexMapping.xsd C:\Projects\sdk\apwebapp\resources\schemas\searchindex\indexMapping.xsd -->
+	<field id="work_item_id" indexFieldName="id" type="INTEGER" workItemPropertyName="WORKITEM_ID">
+		<content localeId="1" title="ID"/>
+		<content localeId="3" title="Identificación"/>
+	</field>
+	<field id="status" indexFieldName="workitem_status" type="STATUS" workItemPropertyName="WORKITEM_STATUS">
+		<content localeId="1" title="Status"/>
+		<content localeId="3" title="Estado"/>
+	</field>
+	<field id="premium" type="DECIMAL" >
+		<content localeId="1" title="Premium" format="currency: ' '"/>
+		<content localeId="3" title="Prima" format="currency: ' '"/>
+	</field>
+	<field id="entity_name" indexSearchFieldName="entity_name_search" type="STRING" >
+		<content localeId="1" title="Name"/>
+		<content localeId="3" title="Nombre"/>
+	</field>
+	<field id="effective_date" type="DATE" >
+		<content localeId="1" title="Effective"/>
+		<content localeId="3" title="Efectivo"/>
+	</field>
+	<field id="lob" type="LOB" >
+		<content localeId="1" title="LOB"/>
+		<content localeId="3" title="LOB"/>
+	</field>
+	<field id="transaction_type" type="STRING" >
+		<content localeId="1" title="Transaction Type"/>
+		<content localeId="3" title="Transacción Tipo" />
+	</field>
+	<field id="last_update_time" type="TIME" >
+		<content localeId="1" title="Updated"/>
+		<content localeId="3" title="Actualizado"/>
+	</field>
+	<field id="complete_percent" type="INTEGER" workItemPropertyName="PERCENT_COMPLETE" >
+		<content localeId="1" title="Complete %" format="percentage"/>
+		<content localeId="3" title="Spanish Complete %" format="percentage"/>
+	</field>
+	<field id="commit_flag" type="INTEGER" >
+		<content localeId="1" title="Commit Flag"/>
+	</field>
+	<field id="account_id" type="INTEGER" workItemPropertyName="RELATED_ACCOUNT_ID">
+		<content localeId="1" title="Account Id"/>
+	</field>
+	<field id="transaction_id" type="STRING" >
+		<content localeId="1" title="Transaction Id"/>
+	</field>
+	<field id="user_group_id" indexFieldName="usergroupid" type="INTEGER" workItemPropertyName="USERGROUP_ID">
+		<content localeId="1" title="User Group Id"/>
+	</field>
+	<field id="creator_id" type="INTEGER" workItemPropertyName="CREATED_BY">
+		<content localeId="1" title="User Group Id"/>
+	</field>
+	<field id="owner_id" type="INTEGER" >
+		<content localeId="1" title="Owner Id"/>
+	</field>
+	<field id="owner_group_id" type="INTEGER" >
+		<content localeId="1" title="Owner Group Id"/>
+	</field>
+	<field id="creation_time" type="TIME" >
+		<content localeId="1" title="Creation Time"/>
+	</field>
+</indexMapping>

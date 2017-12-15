@@ -1,0 +1,59 @@
+<transaction 
+	title					="Commercial Auto" 
+	id						="autob" 
+	target					="CommlAutoPolicyQuoteInqRq" 
+	lob						="AUTOB" 
+	type					="new_business" 
+	allowEmptyNode			="false" 
+	enableAllMenuEntries	="false"
+	fieldValidations		="enabled" 
+	summaryPageId			="policySummary"
+	prevalidate				="true"
+	mappingId				="autob"
+	workItemAssistantId		="workitemassistant"
+	supportsIPDTRDynamicContent="true"
+	supportsDefaults		="true" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/definition/transactionDefinitionFile.xsd"
+	autoMaintainIdAttributes="true">
+ 	<description>Multi state New Business transaction for Commercial Auto Line of Business</description>
+ 	
+	<!-- General Information -->
+	<importPage id="AUTOB.generalInfo" 	fileName="autobCommons.xml"/>
+	
+	<!--  Driver Roster -->
+	<importPage id="AUTOB.drivers" 				fileName="autobCommons.xml"/>
+	
+	<!--  Location Roster -->
+	<importPage id="AUTOB.AUTOBGarageLocation" 	fileName="autobCommons.xml"/>
+	
+	<!-- Vehicles Page Roster -->
+	<importPage id="AUTOB.vehicle" 				fileName="autobCommons.xml"/>
+	
+	<!--  Policy Coverages Roster -->
+	<importPage id="AUTOB.policyCoverages" 	fileName="autobCommons.xml"/>
+
+	<!-- Premium Modification -->
+	<!-- TODO: The premium modification page has been removed from the template transaction but left
+	intact for those client projects which require its use. Each client project needs to decide whether
+	to keep this page or delete it. -->
+	<!-- <importPage id="AUTOB.AUTOBpremiumModification" fileName="commlAutoCommons.xml"/> -->
+	
+	<!-- Applicant Questions -->
+	<importPage id="125Commons.questionnaire" 	fileName="125Commons.xml"/>
+			
+	<!-- Underwriting Questions -->
+	<importPage id="AUTOB.AUTOBquestionnaire" 	fileName="autobCommons.xml"/>	
+		
+	<!-- Additional Interests -->
+	<importPage id="AUTOB.additionalInterests" 	fileName="autobCommons.xml"/> 
+
+	<!-- Prior Carrier-->
+	<importPage id="CommlCommons.PriorCarrier" 	fileName="CommlCommons.xml"/>
+
+	<!-- Loss History-->
+	<importPage id="CommlCommons.lossHistory" fileName="CommlCommons.xml" />
+	
+	<importPage id="AUTOB.policySummary" fileName="autobCommons.xml"/>
+	
+</transaction>

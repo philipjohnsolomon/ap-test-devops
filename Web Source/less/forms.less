@@ -1,0 +1,452 @@
+form.agencyportal-form	{
+	padding: 20px; 
+	background: #fff; 
+	border: 1px solid @gray-lighter; 
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+	
+	/* sets primary properties of all fieldsets in an agencyportal-form */
+	fieldset {
+		border-bottom: 1px solid @gray-lighter; 
+		margin-bottom: 20px; 
+		padding-bottom: 20px;
+	}
+	
+	/* sets primary properties of all legends in an agencyportal-form */
+	legend {
+		color: inherit; 
+		border: 0;
+	}
+	
+	.fa-question {
+		font-size: 22px; 
+		margin-left: 5px;
+	}
+	
+	.form-group {
+	    	background-color:transparent;
+	    	transition:background-color 2s;
+	}	 
+
+	.dynamic-form-group {
+	    	background-color: @state-warning-bg;
+	}
+	
+	/* Override default Bootstrap 3.1.1 implementation which makes all text inputs the same size. 
+	/* Instead, respect the size attribute of the control */
+	.form-control {
+		width: auto;
+		display: inline-block;
+		max-width: 100%;
+	}
+
+	.form-horizontal {
+		/* Centers the buttons on a data entry page */
+		.form-actions {
+			text-align: center;
+		}
+			
+		/* Improves horizontal alignment of different form zones, possible fix for Read Only views. */
+		.control-label,
+		.radio,
+		.checkbox,
+		.radio-inline,
+		.checkbox-inline {
+			padding-top: 0;
+		}
+	}
+
+	/* sets the color of the icon next to the field that launches a field helper */
+	.tooltip-balloon {
+		color: #666;
+		/* sets the hover color of the icon next to the field that launches a field helper */
+		&:hover {
+			text-decoration: none;
+			cursor: pointer;
+		}
+	}
+	
+	/* sets the basic properties of the questionnaire type AP fieldset */
+	.questionnaire {
+		padding-top: 0;
+	}
+
+	/* Sets the color of a label associated with an invalid field */
+	span.problemField {
+		font-weight: bold;
+		color: @form-validation-error;
+		
+		.select2-choice {
+			border: solid thin @form-validation-error;
+		}
+	}
+	/* keeps the width of text areas from overlapping the column they're a part of */
+	textarea.form-control {
+		width: 90%;	
+	}
+
+	/* Secondary actions are the other actions usually next to continue */
+	.secondary-actions.form-control {
+		display: inline-block;
+		vertical-align: middle;
+		width: auto;
+	}
+	
+	/* Field Helper to wrap around INPUT fields */
+	.field-helper {
+		display: inline;
+	}
+	
+	.tooltip {
+		width: 70%;
+	}	
+	
+	.input-group-addon {
+		width: auto;
+	}
+	
+	.has-addon	{
+		position: relative;
+		display: inline-block;
+		padding-right: 26px;
+		
+		.field-helper {
+			position: absolute; 
+			right: 0; 
+			top: 0;
+		}		
+		.tooltip {
+			width: 100%;
+		}			
+	}
+	
+	/* Width control for long-ass SELECT/OPTION items (example: "1322 Oil Or Gas Well: Cleaning Or Swabbing Of Old Wells Having Previously Produced Gas Or Oil-By Contractor-No Drilling and Drivers") */
+	.selectListContainer select {
+		max-width: 40%;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	/* sets hover/cursor of field helper icons (right of text inputs) */
+	.fieldHelper {
+		&:hover {
+			text-decoration: none;
+			cursor: pointer;
+		}
+	}
+	
+	span.read-only-text {
+		margin-right: 5px;
+	}
+	
+	.secure-label {
+	
+		display: inline-block;
+		margin-top: 2px;
+		
+		.edit-secure {
+			margin-left: 5px;
+			cursor: pointer;
+			.fa {
+				&:before{content: @icon-ui-edit-secure;}
+			}
+		}
+	}
+	
+	/* Popovers with no headline */
+	.popover {
+		.popover-title {
+		  position: absolute;
+		  top: 0;
+		  right: 0;
+		  background-color: transparent;
+		  border-bottom: 0;
+		}
+		.popover-content {
+			margin-right: 0; 
+			min-width: @popover-min-width;
+		}
+	}
+	
+
+	/* Roster Popovers */
+	.roster-popover {
+		.popover {
+			.popover-title {
+			  position: static;
+			  top: auto;
+			  right: auto;
+			  font-size: @font-size-h4;
+			  margin-bottom: 0;
+			  margin-top: 10px;
+			  padding-bottom: 0;
+			}
+			.popover-content {
+				margin-right: 10px; 
+			}
+		}
+	}	
+		
+	/* font awesome controls */
+	.date {
+		.input-group-addon .fa {
+			line-height: 18px;
+			&:before{content: @icon-ui-calendar;}
+		}
+	}
+
+	.tooltip-balloon, 
+	.field-helper-calendar  {
+		.fa {
+			&:before{content: @icon-ui-question;}
+			font-size: @font-size-large;
+		}
+	}
+	
+	.time {
+		.input-group-addon .fa {
+			&:before{content: @icon-ui-clock;}
+		}
+	}
+
+	.tooltip-balloon, 
+	.field-helper-time  {
+		.fa {
+			&:before{content: @icon-ui-question;}
+			font-size: @font-size-large;
+		}
+	}
+	
+	.view-file-action {
+		.fa {
+			&:before{content: @icon-ui-file;}
+		}
+	}
+	
+	/* single button (within conditional code btn-group DIV) */
+	.btn-group.single-button {
+		padding-top: 0;
+		> .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+			border-bottom-right-radius: @border-radius-base;
+			border-top-right-radius: @border-radius-base;
+		}
+	}
+	
+	.account-entities {
+		ul {
+			list-style: none;
+			padding-left: 20px;
+			li {
+			
+				input[type="checkbox"] {margin-right: 5px;}
+			}
+		}
+	}
+	
+	/* input-group-addon combined with undo (fa-undo) */
+	.input-group.date {
+		display: inline-block;
+		width: 146px;
+		
+		.form-control {
+			float: none;
+		}
+		.input-group-addon {
+			height: 34px;
+			padding: 6px 12px;
+			display: inline-block;
+			margin-left: -4px;
+    		margin-top: -2px;
+		}
+	}	
+
+	/* select2 overrides */
+	
+	.select2-container {
+		.select2-choice {
+			background-image: none;
+			
+			// robbed from Bootstrap's .form-control
+			display: block;
+			width: 100%;
+			height: @input-height-base; 
+			padding: @padding-base-vertical @padding-base-horizontal;
+			font-size: @font-size-base;
+			line-height: @line-height-base;
+			color: @input-color;
+			background-color: @input-bg;
+			background-image: none; 
+			border: 1px solid @input-border;
+			border-radius: @input-border-radius;
+			.box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+			.transition(~"border-color ease-in-out .15s, box-shadow ease-in-out .15s");
+
+			.select2-arrow {
+				display: inline-block;
+				width: 18px;
+				height: 100%;
+				position: absolute;
+				right: 0;
+				top: 0;
+				border-left: 1px solid @gray-light;
+				border-radius: 0 4px 4px 0;
+				background-clip: padding-box;
+				background: @gray-lighter;
+				background-image: none;
+			}
+		}
+		
+		&.select2-container-active {
+			.select2-choice {
+				border: 1px solid @input-border-focus;
+			}
+		}
+	}
+	
+	.btn {
+		border: 1px solid rgba(0,0,0,.2);
+	}
+	
+	@media ( max-width : @screen-lg ) {
+		.input-group.date {
+			width: 160px;
+		
+		}	
+	}
+}
+
+/*
+ 	The select2 "drop" lives outside of the form
+*/
+
+.select2-drop-active{
+	border: 1px solid @input-border-focus;
+	margin-top: -3px;
+    padding-top: 3px;
+}
+
+/* 
+	Policy Change Summary
+	(not really a FORM, but this is the best LESS location for now.)
+*/
+.policy-change-summary {
+	a.pdf .fa {
+		&:before{content: @icon-ui-pdf;}
+		margin-right: 5px;
+	}
+}
+
+
+/* Read Only view for multiple FORMS */
+
+form.read-only {
+	width: 100%;
+}
+
+.read-only	{
+	display: inline-block; 
+	padding-top: 7px;
+}
+
+.form-horizontal .radio .read-only, 
+.form-horizontal .checkbox .read-only {
+	padding-top: 0;
+} 
+
+.btn-group.read-only {
+	padding-top: 0;
+	> .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+		border-bottom-right-radius: @border-radius-base;
+		border-top-right-radius: @border-radius-base;
+		border-right: 0;
+	}
+	
+	> .btn:last-child:not(:first-child), 
+	> .dropdown-toggle:not(:first-child) {
+		border-bottom-left-radius: @border-radius-base;
+		border-top-left-radius: @border-radius-base;
+	}
+	
+	&.single-button {
+		padding-top: 0;
+		> .btn {
+			border-radius: @border-radius-base;
+		}
+	}
+}
+
+
+/* Snippet */
+
+.snippet {
+	position: fixed;
+	top: 65px;
+	right: 15px;
+	width: 400px;
+	padding-top: 30px;
+	height: 510px;
+	z-index: @zindex-snippet;
+	-webkit-overflow-scrolling: touch;
+	
+	.snippet-container {
+		min-width: 30px;
+		min-height: 30px;
+		
+		.snippet-header {
+					
+			position: absolute; 
+			left: 400px; 
+			top: 0;
+			
+			.close {
+				position: absolute;
+				right: 5px;
+				top: 5px;
+				color: @theme-active-background;
+				opacity: @close-button-opacity;
+				&:hover {
+					color: fade(@theme-active-background, 70%);
+				}
+				&:active {
+					color: darken(@theme-active-background, 70%);
+				}
+				.fa {
+					&:before{content: @icon-policy-snippet;}
+				}
+				&.collapsed {
+					.fa {
+						&:before{content: @icon-policy-snippet-collapsed;}
+					}
+				}
+			}
+
+		}
+		/*.snippet-toggle {
+			&.collapse.in {
+				width: 402px; 
+				height: 480px;	
+				border: 1px solid @gray-light;
+				background: white;
+				overflow: scroll;
+			}
+		}*/
+		.snippet-body {
+			 &.image-container {
+				width: 402px; 
+				height: 480px;	
+				border: 1px solid @gray-light;
+				background: white;
+				overflow: scroll;
+			}
+			img {
+				width: 400px; 
+				height: 478px;		
+			}
+		}
+	}
+}
+
+.snippet-low-confidence,
+.snippet-low-confidence a {
+	background-color: @alert-warning-bg !important;
+}	

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one or more
+ contributor license agreements.  See the NOTICE file distributed with
+ this work for additional information regarding copyright ownership.
+ The ASF licenses this file to You under the Apache License, Version 2.0
+ (the "License"); you may not use this file except in compliance with
+ the License.  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<!--
+ This is a stripped down config file used for a simple example...  
+ It is *not* a good example to work from. 
+-->
+<config>
+	<luceneMatchVersion>4.10.4</luceneMatchVersion>
+	<!--  The DirectoryFactory to use for indexes.
+        solr.StandardDirectoryFactory, the default, is filesystem based.
+        solr.RAMDirectoryFactory is memory based, not persistent, and doesn't work with replication. -->
+	<directoryFactory name="DirectoryFactory" class="${solr.directoryFactory:solr.StandardDirectoryFactory}"/>
+	<dataDir>${solr.account.data.dir:}</dataDir>
+	<!-- To enable dynamic schema REST APIs, use the following for <schemaFactory>:
+  
+       <schemaFactory class="ManagedIndexSchemaFactory">
+         <bool name="mutable">true</bool>
+         <str name="managedSchemaResourceName">managed-schema</str>
+       </schemaFactory>
+       
+       When ManagedIndexSchemaFactory is specified, Solr will load the schema from
+       he resource named in 'managedSchemaResourceName', rather than from schema.xml.
+       Note that the managed schema resource CANNOT be named schema.xml.  If the managed
+       schema does not exist, Solr will create it after reading schema.xml, then rename
+       'schema.xml' to 'schema.xml.bak'. 
+       
+       Do NOT hand edit the managed schema - external modifications will be ignored and
+       overwritten as a result of schema modification REST API calls.
+
+       When ManagedIndexSchemaFactory is specified with mutable = true, schema
+       modification REST API calls will be allowed; otherwise, error responses will be
+       sent back for these requests. 
+  -->
+	<schemaFactory class="ClassicIndexSchemaFactory"/>
+	<updateHandler class="solr.DirectUpdateHandler2">
+		<autoSoftCommit>
+			<maxTime>1000</maxTime>
+		</autoSoftCommit>
+		<autoCommit>
+			<maxDocs>100</maxDocs>
+			<maxTime>1800000</maxTime>
+			<openSearcher>false</openSearcher>
+		</autoCommit>
+		<updateLog>
+			<str name="dir">${solr.account.data.dir:}</str>
+		</updateLog>
+	</updateHandler>
+
+	<requestHandler name="/search" class="solr.SearchHandler" default="true" >
+		<lst name="defaults">
+			<str name="rows">1000</str>
+		</lst>		
+	</requestHandler> 
+		
+	<requestHandler name="/replication" class="solr.ReplicationHandler" startup="lazy"/>
+	<requestDispatcher handleSelect="true">
+		<requestParsers enableRemoteStreaming="false" multipartUploadLimitInKB="2048" formdataUploadLimitInKB="2048"/>
+	</requestDispatcher>
+	<requestHandler name="/update" class="solr.UpdateRequestHandler"/>
+	<!-- Spell Check
+
+        The spell check component can return a list of alternative spelling
+        suggestions.  
+
+        http://wiki.apache.org/solr/SpellCheckComponent
+     -->
+	<searchComponent name="spellcheck" class="solr.SpellCheckComponent">
+		<str name="queryAnalyzerFieldType">entity_name_search</str>
+		<!-- Multiple "Spell Checkers" can be declared and used by this
+         component
+      -->
+		<!-- a spellchecker built from a field of the main index -->
+		<lst name="spellchecker">
+			<str name="name">default</str>
+			<str name="field">entity_name_search</str>
+			<str name="classname">solr.DirectSolrSpellChecker</str>
+			<!-- the spellcheck distance measure used, the default is the internal levenshtein -->
+			<str name="distanceMeasure">internal</str>
+			<!-- minimum accuracy needed to be considered a valid spellcheck suggestion -->
+			<float name="accuracy">0.5</float>
+			<!-- the maximum #edits we consider when enumerating terms: can be 1 or 2 -->
+			<int name="maxEdits">2</int>
+			<!-- the minimum shared prefix when enumerating terms -->
+			<int name="minPrefix">1</int>
+			<!-- maximum number of inspections per result. -->
+			<int name="maxInspections">5</int>
+			<!-- minimum length of a query term to be considered for correction -->
+			<int name="minQueryLength">4</int>
+			<!-- maximum threshold of documents a query term can appear to be considered for correction -->
+			<float name="maxQueryFrequency">0.01</float>
+			<!-- uncomment this to require suggestions to occur in 1% of the documents
+      	<float name="thresholdTokenFrequency">.01</float>
+      -->
+		</lst>
+		<!-- a spellchecker that can break or combine words.  See "/spell" handler below for usage -->
+		<lst name="spellchecker">
+			<str name="name">wordbreak</str>
+			<str name="classname">solr.WordBreakSolrSpellChecker</str>
+			<str name="field">name</str>
+			<str name="combineWords">true</str>
+			<str name="breakWords">true</str>
+			<int name="maxChanges">10</int>
+		</lst>
+	</searchComponent>
+	<!-- config for the admin interface -->
+	<admin>
+		<defaultQuery>*:*</defaultQuery>
+	</admin>
+</config>

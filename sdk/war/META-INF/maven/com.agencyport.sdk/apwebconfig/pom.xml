@@ -1,0 +1,79 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<artifactId>agencyportal</artifactId>
+		<groupId>com.agencyport.sdk</groupId>
+		<version>5.3.0-2</version>
+		<relativePath>../agencyportal/pom.xml</relativePath>
+	</parent>
+	<artifactId>apwebconfig</artifactId>
+	<packaging>war</packaging>
+
+	<properties>
+		<!-- Hack to get around SONAR error because no Java in this project 
+		[ERROR] [11:02:11.458] Invalid value for sonar.binaries
+		[ERROR] No files nor directories matching 'C:\Projects\sdk\apwebcontent\target\classes'
+		-->
+		<sonar.java.binaries>target</sonar.java.binaries>
+	</properties>
+	
+	<dependencies>
+		<dependency>
+			<groupId>com.agencyport.sdk</groupId>
+			<version>5.3.0-2</version>
+			<artifactId>toolkit</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.agencyport.sdk</groupId>
+			<version>5.3.0-2</version>
+			<artifactId>apsecurity</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.agencyport.sdk</groupId>
+			<version>5.3.0-2</version>
+			<artifactId>apsecurityreference</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.agencyport.sdk</groupId>
+			<version>5.3.0-2</version>
+			<artifactId>apwebapp</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.agencyport.sdk</groupId>
+			<version>5.3.0-2</version>
+			<artifactId>apwebcontent</artifactId>
+			<type>war</type>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.4</version>
+
+				<configuration>
+					<warSourceDirectory>${project.basedir}/Web Root</warSourceDirectory>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+					<attachClasses>false</attachClasses>
+					<packagingExcludes>WEB-INF/lib/*.jar</packagingExcludes>
+					<archive>
+		        		<manifest>
+		        			<addClasspath>true</addClasspath>
+		        			<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+              				<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+		        		</manifest>
+		        		<manifestEntries>
+		        			<Implementation-Vendor>Agencyport Software</Implementation-Vendor>
+		        			<Build-Date>${timestamp}</Build-Date>
+		        		</manifestEntries>
+		        	</archive>
+				</configuration>
+			</plugin>
+					
+		</plugins>
+	</build>
+</project>

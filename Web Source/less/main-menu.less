@@ -1,0 +1,94 @@
+.navbar-fixed-top {
+	background: darken(@navbar-default-bg,10%);
+	.navbar-brand {
+		font-size: @font-size-base * 1.6;
+	}
+    	
+	.navbar-nav a .fa {
+		padding-right: 5px;
+	}
+
+
+    /*	font awesome icons */
+    
+    .navbar-nav {
+		.home a .fa {
+			&:before{content: @icon-mainmenu-home;}
+		}
+		.my-accounts a .fa {
+			&:before{content: @icon-mainmenu-accounts;}
+		}
+		.my-work a .fa {
+			&:before{content: @icon-mainmenu-work;}
+		}
+		.toolkit a .fa {
+			&:before{content: @icon-mainmenu-toolkit;}
+		}
+		.solr-admin a .fa {
+			&:before{content: @icon-mainmenu-solradmin;}
+		}
+		.my-reports a .fa {
+			&:before{content: @icon-mainmenu-reports;}
+		}
+		&.current-user a .fa {
+			&:before{content: @icon-mainmenu-user;}
+		}
+		&.get-started a .fa {
+			&:before{content: @icon-mainmenu-get-started;}
+		}
+		
+		> .active > a {
+			&,
+			&:hover,
+			&:focus {
+				color: @navbar-default-link-active-color;
+				background-color: @navbar-default-link-active-bg;
+				cursor: default;
+			}
+		}
+		> .disabled > a {
+			&,
+			&:hover,
+			&:focus {
+				color: @navbar-inverse-link-disabled-color;
+				background-color: @navbar-inverse-link-disabled-bg;
+			}
+		}  
+	}    
+    
+    
+    /*	dropdown menus */
+    
+	.dropdown-menu > li > a {
+		color: inherit;
+		.badge {
+			margin-left: 5px;
+		}
+	}
+	.dropdown-menu > li > a:hover,
+	.dropdown-menu > li > a:focus {
+		color: @theme-active-color;
+		background-color: @theme-active-background;
+	}
+	.dropdown-menu > .active > a,
+	.dropdown-menu > .active > a:hover,
+	.dropdown-menu > .active > a:focus {
+		color: @theme-active-color;
+		background-color: @theme-active-background;
+	}
+	       
+    /*	name/icon toggler for mobile (iPad Air portrait and smaller) */
+	@media ( max-width : @screen-lg ) {
+		.navbar-collapse.collapse {
+			.navbar-nav > li > a > span {
+				display: none;
+			}
+			&.in {
+				.navbar-nav > li > a > span {
+					display: inline;
+				}
+			}
+		}
+	}
+	
+}

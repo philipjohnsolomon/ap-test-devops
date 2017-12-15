@@ -1,0 +1,32 @@
+<dynamicListTemplates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/codelist/dynamicListTemplate.xsd">
+    <!-- commlAutoDynamicListTemplates.xml -->
+    <dynamicListTemplate id="CommlRateStates" title="State Prov List">
+        <description>Code list for StateProvs</description>
+        <field type="id">CommlAutoLineBusiness.CommlRateState.StateProvCd</field>
+        <groupId>CommlAutoLineBusiness.CommlRateState</groupId>
+        <returnValueId>USE_DISPLAY_ITEM</returnValueId>
+    </dynamicListTemplate>
+    <dynamicListTemplate id="Drivers" title="Drivers List">
+        <description>Code list for Drivers</description>
+        <field type="id">CommlAutoLineBusiness.CommlDriver.GeneralPartyInfo.NameInfo.PersonName.GivenName</field>
+        <field type="singleSpace"> </field>
+        <field type="id">CommlAutoLineBusiness.CommlDriver.GeneralPartyInfo.NameInfo.PersonName.OtherGivenName</field>
+        <field type="singleSpace"> </field>
+        <field type="id">CommlAutoLineBusiness.CommlDriver.GeneralPartyInfo.NameInfo.PersonName.Surname</field>
+        <groupId>CommlAutoLineBusiness.CommlDriver</groupId>
+        <returnValueId>CommlAutoLineBusiness.CommlDriver.@id</returnValueId>
+    </dynamicListTemplate>
+    <dynamicListTemplate id="Vehicles" title="Vehicles List">
+        <description>Code list for Vehicles</description>
+        <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.ModelYear</field>
+        <field type="singleSpace"> </field>
+        <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.Manufacturer</field>
+        <field type="singleSpace"> </field>
+        <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.Model</field>
+        <field type="formatInfo">, </field>
+        <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.VehIdentificationNumber</field>
+        <field type="singleSpace"> </field>
+        <groupId>CommlAutoLineBusiness.CommlRateState.CommlVeh</groupId>
+        <returnValueId>CommlAutoLineBusiness.CommlRateState.CommlVeh.@id</returnValueId>
+    </dynamicListTemplate>
+</dynamicListTemplates>

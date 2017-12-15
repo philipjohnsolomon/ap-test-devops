@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by Norm Baker (AgencyPort) -->
+<workListViewDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" viewName="AccountsView" index="account" workItemType="account" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/worklist/workListViewDefinition.xsd">
+<!-- http://reference.agencyport.com/schemas/5.2/worklist/workListViewDefinition.xsd C:\Projects\sdk\apwebapp\resources\schemas\worklist\workListViewDefinition.xsd -->
+	<filters id="filters1"> 
+		<filter id="filter1" name="account_types" fieldRefId="account_type" type="ACCOUNT_TYPE">
+		</filter>
+	</filters>
+	<sortInfos>
+		<sortInfo id="sort1" name="account_sort_by" >
+			<defaultSortClause fieldRefId="last_update_time" acsending="false"/>
+			<fieldRef fieldRefId="work_item_id"/>
+			<fieldRef fieldRefId="entity_name"/>
+			<fieldRef fieldRefId="last_update_time"/>
+			<content localeId="1" title="Sort By"/>
+		</sortInfo>
+	</sortInfos> 
+	<queryInfos>
+		<queryInfo id="query1" name="account_query_info" transactionId="worklist" pageId="accountlistAdvancedSearch">
+			<queryField fieldRefId="work_item_id" pageFieldRefId="accountId" isSaveable="true"/>
+			<queryField fieldRefId="city" pageFieldRefId="city" isSaveable="true"/>
+			<queryField fieldRefId="state_prov_cd" pageFieldRefId="state" isSaveable="true"/>
+			<queryField fieldRefId="postal_code" pageFieldRefId="zipCode" isSaveable="true"/>
+			<!-- The following query field accommodates the search for an account by name -->
+			<queryField fieldRefId="entity_name" >
+				<opCode>CONTAINS</opCode>
+				<operands>
+					<operand>*</operand>
+				</operands>
+			</queryField>
+			<queryField interactive="false" fieldRefId="status" >
+				<opCode>NOT_EQUAL</opCode>
+				<operands>
+					<operand>DELETE</operand>
+				</operands>
+			</queryField>			
+			<content localeId="1" title="More Options" />
+		</queryInfo>
+	</queryInfos>
+	<views>
+		<view>
+			<filterRefs>
+				<filterRef filterRefId="filter1"/>
+			</filterRefs>
+			<sortInfoRef sortInfoRefId="sort1"/>
+			<queryInfoRef queryInfoRefId="query1"/>
+			<listView type="CARD"  selected="true" fetchSize="20" viewPortSize="20">
+				<fieldRef fieldRefId="work_item_id"/>
+				<fieldRef fieldRefId="account_number"/>
+				<fieldRef fieldRefId="account_type"/>
+				<fieldRef fieldRefId="entity_name"/>
+				<fieldRef fieldRefId="address"/>
+			</listView>
+			<listView type="TABULAR" fetchSize="40" viewPortSize="40">
+				<fieldRef fieldRefId="work_item_id"/>
+				<fieldRef fieldRefId="account_type"/>
+				<fieldRef fieldRefId="entity_name"/>
+				<fieldRef fieldRefId="last_update_time"/>
+				<fieldRef fieldRefId="address"/>
+			</listView>
+		</view>
+	</views>
+</workListViewDefinition>

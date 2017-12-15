@@ -1,0 +1,183 @@
+/* Policy Summary */
+
+.policy-summary {
+	&.endorsement {
+		padding-top: @padded-box-padding;
+	}
+
+	.window-history {
+		margin: 0;
+		margin-bottom: 10px;
+		.fa {
+			font-size: 70%;
+		}
+	}
+	
+	h1, h2, h3	{
+		margin-top: 0;
+	}
+	
+	.header {
+		h1 {
+			color: @header-title;
+			position: relative;
+			.label {
+				float: none;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				border-radius: @border-radius-base;
+				padding: 10px;
+				background: transparent;
+				border: 1px solid @gray;
+				font-size: 50%;
+				/* Policy summary JSPs should use the IWorkItemStatus.getMnemonic().toLowerCase()
+				   as a key in these CSS styles and not the after title which can vary across
+				   locales. Below we have kept both until all template JSPs are cut over to properly
+				   use IWorkItemStatus.getMnemonic().toLowerCase() */
+				&-in-progress	{color: @workitem-in-progress; border-color: @workitem-in-progress;}
+				&-inprogress	{color: @workitem-in-progress; border-color: @workitem-in-progress;}
+				&-referred   	{color: @workitem-referred; border-color: @workitem-referred;}
+				&-refer		   	{color: @workitem-referred; border-color: @workitem-referred;}
+				&-declined   	{color: @workitem-declined; border-color: @workitem-declined;}
+				&-decline   	{color: @workitem-declined; border-color: @workitem-declined;}
+				&-approved   	{color: @workitem-approved; border-color: @workitem-approved;}
+				&-approve    	{color: @workitem-approved; border-color: @workitem-approved;}
+				&-renewal    	{color: @workitem-renewal; border-color: @workitem-renewal;}
+				&-rejected    	{color: @workitem-rejected; border-color: @workitem-rejected;}	
+				&-reject    	{color: @workitem-rejected; border-color: @workitem-rejected;}	
+				&-bound      	{color: @workitem-bound; border-color: @workitem-bound;}
+				&-bind      	{color: @workitem-bound; border-color: @workitem-bound;}
+				&-deleted    	{color: @workitem-deleted; border-color: @workitem-deleted;}	
+				&-delete    	{color: @workitem-deleted; border-color: @workitem-deleted;}	
+			}
+		}
+		p {
+			color: @header-text;
+		}
+	}
+
+	.premiums {
+		.premium {
+			position: relative;
+			text-align: center;
+			padding: 0 20px;
+			h3 {
+				font-size: @font-size-h2;
+				color: @theme-color-4;
+				border-bottom: 1px solid @gray-light; 
+				margin: 0;
+				padding-bottom: 5px;
+				margin-bottom: 8px;
+			}
+			h4 {
+				margin: 0;
+				font-size: @font-size-base;
+			}
+		}
+		@media ( max-width : @screen-md) {
+			.premium {
+				text-align: left;
+				border-bottom: 1px solid @gray-light;
+				margin-bottom: 25px;
+				padding-bottom: 8px;
+				h3 {
+					border: 0; 
+					margin: 0; 
+					padding: 0;
+				}
+				h4 {
+					position: absolute; 
+					right: 0; 
+					top: 20%;
+				}
+			}
+		}		
+	}	
+	
+	.cards {
+		.card {
+			cursor: default;
+			min-height: 170px;
+			height: auto;
+			font-size: inherit;
+			&:hover {
+				color: inherit;
+			}
+			.fa {
+				color: @gray-light;
+				font-size: 35px;
+			}
+			&.agency .fa {
+				&:before {content: @icon-policy-summary-agency;}
+			}
+			&.applicant .fa {
+				&:before {content: @icon-policy-summary-applicant;}
+			}
+			&.documents .fa {
+				&:before {content: @icon-policy-summary-documents;}
+			}
+			&.policy .fa {
+				&:before {content: @icon-policy-summary-documents;}
+			}
+		}
+	}
+	
+	.switch-views {
+		border-bottom: 1px solid @gray-light;
+		margin: 0 0 1em;
+		padding-bottom: 1em;
+	}
+	
+	.table {
+		.table {
+			background: inherit;
+		}
+		& .roster {
+			border: 0;
+		}
+	}
+
+	table.coverage-comparision {
+		tr.tabs th {
+			width: 33%;
+			vertical-align: top;
+			.fa {
+				&:before {content: @icon-ui-spinner;}
+				float: right;
+				z-index: 2;
+				color: @gray-light;
+			}
+			&.active {
+				background: @gray-lighter;
+				cursor: pointer;
+				&.good {
+					background: @alert-warning-bg;
+					border-color: @alert-warning-text;
+					h3 {
+						color: @alert-warning-text;
+					}
+				}
+				&.better {
+					background: @alert-info-bg;
+					border-color: @alert-info-text;
+					h3 {
+						color: @alert-info-text;
+					}
+				}
+				&.best {
+					background: @alert-success-bg;
+					border-color: @alert-success-text;
+					h3 {
+						color: @alert-success-text;
+					}
+				}
+			}
+			ul {
+				list-style: none;
+				margin-left: 0;
+				padding-left: 0;
+			}
+		}
+	}
+}

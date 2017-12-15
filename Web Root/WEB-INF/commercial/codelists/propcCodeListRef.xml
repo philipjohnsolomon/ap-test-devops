@@ -1,0 +1,314 @@
+<codeListRef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/codelist/codelist.xsd">
+
+
+    <optionList id="constructionTypeCd">
+        <option value="G">Adobe </option>
+        <option value="R">Fire Resistive</option>
+        <option value="F">Frame</option>
+        <option value="JM">Joisted Masonry </option>
+        <option value="T">Manufactured Home</option>
+        <option value="MY">Masonry</option>
+        <option value="MNC">Masonry Non-Combustible </option>
+        <option value="V">Masonry Veneer</option>
+        <option value="NC">Non-Combustible </option>
+        <option value="SteelF">Steel Frame </option>
+    </optionList>
+    <optionList title="Additional Interest Type List" id="additionalInterest">
+        <option value="AILH">Additional Insured and Lienholder</option>
+        <option value="AILL">Addition Insured Lessor and Loss Payee</option>
+        <option value="AIM">Additional Insured and Mortgagee</option>
+        <option value="LIEN">Lienholder</option>
+        <option value="LOSSP">Loss Payee</option>
+        <option value="LOSSPAI">Loss Payee and Additional Insured</option>
+        <option value="MORTG">Mortgagee</option>
+        <option value="MORTGLOSSP">Mortgagee and Loss Payee</option>
+        <option value="OT">Other</option>
+    </optionList>
+    <optionList title="Blanket Coverage Type List" id="blanket">
+        <option value="BLDG">Building</option>
+        <option value="BPP">Business Personal Property</option>
+        <option value="BUSIN">Business Income with Extra Expenses</option>
+        <option value="BUSEE">Business Income without Extra Expenses</option>
+        <option value="C">Contents</option>
+        <option value="CBCC">Combined Building &amp; Contents</option>
+        <option value="PO">Property of Others</option>
+        <option value="MACEQ">Machinery &amp; Equipment</option>
+        <!-- @expunge
+            <option value="PPEMP">Business Personal Property</option>
+            <option value="FIX">Fixtures</option>
+            <option value="FURN">Furniture</option>
+            <option value="FF">Furniture and Fixtures</option>
+            <option value="FIA">Improvements and Alterations</option>
+            <option value="MACEQ">Machinery</option>
+            <option value="POTS">Other Than Stock</option>
+            <option value="PPOA">Personal Property of Others</option>
+            <option value="BOIRT">Rental Income</option>
+            <option value="STOCK">Stock</option>
+            <option value="TIB">Tenants Improvements &amp; Betterments</option>
+            <option value="MOLL">Unit Owner Fixtures</option>
+            <option value="MOPS">Unit Owner Fixtures/Improvements &amp; Alterations</option>
+        -->
+    </optionList>
+    <optionList title="Business Code List" id="businessCode">
+        <option value="ED">Educational</option>
+        <option value="GV">Governmental</option>
+        <option value="IN">Institutional</option>
+        <option value="MN">Manufacturing</option>
+        <option value="ME">Mercantile</option>
+        <option value="NM">Mercantile/Non-Manufacturing</option>
+        <option value="MI">Mining</option>
+        <option value="RN">Rental</option>
+    </optionList>
+    <!-- @expunge
+    <optionList title="Business Income Type of Business List" id="businessIncomeTypeOfBusiness">
+        <option value="ED">Educational</option>
+        <option value="GV">Governmental</option>
+        <option value="IN">Institutional</option>
+        <option value="MN">Manufacturing</option>
+        <option value="ME">Mercantile</option>
+        <option value="NM">Mercantile and Manufacturing</option>
+        <option value="MI">Mining</option>
+        <option value="RN">Rental</option>
+    </optionList>
+     -->
+    <optionList title="Cause of Loss List" id="causeLoss">
+        <option value="BASIC">Basic</option>
+        <option value="BRD">Broad</option>
+        <option value="SPC">Special </option>
+    </optionList>
+    <!-- @expunge
+    <optionList title="Civil Authority List" id="civilAuthority">
+        <option value="0">60 Days</option>
+        <option value="24">90 Days</option>
+        <option value="24">180 Days</option>
+    </optionList>
+     -->
+    <optionList title="Class Rating Indicator List" id="classRatingInd">
+        <option value="CLR">Class Rated</option>
+        <option value="P">Special Rated</option>
+        <option value="S">Specifically Rated</option>
+    </optionList>
+    <optionList title="Construction Type List" id="constructionType">
+        <option value="A">Aluminum Siding</option>
+        <option value="F">Frame</option>
+        <option value="MY">Masonry</option>
+        <option value="V">Masonry Veneer</option>
+        <option value="R">Fire Resistive</option>
+        <option value="Vinyl">Vinyl Siding</option>
+        <option value="JM">Joisted Masonry</option>
+        <option value="MFR">Modified Fire Resistive</option>
+        <option value="MILL">Heavy Timber Fire Resistive</option>
+    </optionList>
+    <!-- @expunge
+    <optionList title="Coverage Type List" id="coverages">
+        <option value="Earthquake">Earthquake</option>
+        <option value="Earthquake Masonry Veneer Limitation">Earthquake Masonry Veneer Limitation</option>
+        <option value="Earthquake Sprinkler Leakage">Earthquake Sprinkler Leakage</option>
+        <option value="Inflation Guard">Inflation Guard</option>
+        <option value="Molten Material">Molten Material</option>
+        <option value="Pier and Wharf">Pier and Wharf</option>
+        <option value="Additional Covered Property">Additional Covered Property</option>
+        <option value="Radio or TV Antennas">Radio or TV Antennas</option>
+        <option value="Radioactive Contamination">Radioactive Contamination</option>
+        <option value="Additional Coverage Signs">Additional Coverage Signs and Antennas</option>
+        <option value="Wind or Hail">Wind or Hail</option>
+        <option value="Vandalism">Vandalism</option>
+    </optionList>
+    <optionList title="CSP Class Code List" id="CSPClassCd">
+        <option value="CSP">CSP</option>
+        <option value="P">P</option>
+        <option value="S">S</option>
+    </optionList>
+    <optionList title="Deductible List" id="deductible">
+        <option value="250">$250</option>
+        <option value="500">$500</option>
+        <option value="1000">$1,000</option>
+        <option value="2500">$2,500</option>
+        <option value="10000">$10,000</option>
+        <option value="25000">$25,000</option>
+        <option value="50000">$50,000</option>
+        <option value="75000">$75,000</option>
+    </optionList>
+    <optionList title="Electronic Media Limit List" id="electronicMedia">
+        <option value="0">No Limit</option>
+        <option value="180">180 Day Limit</option>
+    </optionList>
+     -->
+    <optionList title="Excluded Cause of Loss List" id="excludedCauseOfLoss">
+        <option value="S">Sprinkler Leakage Excluded</option>
+        <option value="V">Vandalism Excluded</option>
+        <option value="VS">Vandalism and Sprinkler Leakage Excluded</option>
+    </optionList>
+    <optionList title="File Option Type List" id="PROPCFileOptionList">
+        <option value="139">ACORD Statement Schedule of Values</option>
+        <option value="610">Premium Payment Supplement</option>
+        <option value="BFA">Burglar Fire Alarm Certificate</option>
+        <option value="CAB">Condo Association by Laws</option>
+        <option value="CALC">Premium Calculation</option>
+        <option value="CIR">Claim Investigation Report</option>
+        <option value="ClaimsDetail">Claims detail for a specific date</option>
+        <option value="ClaimsHistory">Claims detail for an evaluation period</option>
+        <option value="ClaimsPayDetail">Claims payment information for a specific date</option>
+        <option value="ClaimsPayHistory">Claims payment information from the evaluation period</option>
+        <option value="COR">Correspondence</option>
+        <option value="CRR">Credit Reports</option>
+        <option value="CSA">Consignment Agreement</option>
+        <option value="EQK">Earthquake Application</option>
+        <option value="EXP">Expiring Policy</option>
+        <option value="FS">Financial Statement</option>
+        <option value="FSA">Financial Statement Analysis</option>
+        <option value="LAR">Latest Annual Report</option>
+        <option value="LAU">Letter of Authorization</option>
+        <option value="LBL">Literature Brochures, Labels, Warnings</option>
+        <option value="LHI">Loss History</option>
+        <option value="OT">Other</option>
+        <option value="PDC">Protection Device Certificate</option>
+        <option value="PDI">Premises Diagram</option>
+        <option value="PHO">Photograph</option>
+        <option value="PolicyDetail">Policy detail for a specific date</option>
+        <option value="PolicyHistory">Policy history for an evaluation period</option>
+        <option value="QuoteProposal">Quote Proposal</option>
+        <option value="RCW">Replacement Cost Worksheet(s)</option>
+        <option value="SCH">Schedule (Property)</option>
+        <option value="URQ">Unprotected Risk Questionnaire</option>
+    </optionList>
+    <!-- @expunge
+    <optionList title="Fungus Applies to List" id="fungusAppliesTo">
+        <option value="Per Location">Per Location</option>
+        <option value="All Locations">All Locations</option>
+    </optionList>
+    -->
+    <optionList title="Fungus Period List" id="fungus">
+        <option value="0">0 Days</option>
+        <option value="60">60 Days</option>
+        <option value="90">90 Days</option>
+        <option value="120">120 Days</option>
+        <option value="150">150 Days</option>
+        <option value="180">180 Days</option>
+    </optionList>
+    <!-- @expunge
+    <optionList title="Indemnity Period List" id="indemnityPeriod">
+        <option value="60">60</option>
+        <option value="90">90</option>
+        <option value="120">120</option>
+        <option value="150">150</option>
+        <option value="180">180</option>
+        <option value="270">270</option>
+        <option value="365">365</option>
+        <option value="450">450</option>
+        <option value="540">540</option>
+        <option value="630">630</option>
+        <option value="730">730</option>
+    </optionList>
+    <optionList title="Monthly Indemnity Period List" id="monthlyIndemnity">
+        <option value="1">1/3</option>
+        <option value="2">1/4</option>
+        <option value="3">1/6</option>
+    </optionList>
+    <optionList title="Monthly Limitation List" id="monthlyLimitation">
+        <option value="1">30%-60%-90%-100%</option>
+        <option value="2">25%-50%-75%-100%</option>
+        <option value="3">20%-40%-80%-100%</option>
+    </optionList>
+    <optionList title="Payroll Exclusion List" id="payrollExclusion">
+        <option value="0">0 Days</option>
+        <option value="90">90 Days</option>
+        <option value="180">180 Days</option>
+    </optionList>
+     -->
+    <optionList title="Radioactive Containment Coverage List" id="radioActiveContCov">
+        <option value="Broad">Broadened</option>
+        <option value="Limited">Limited</option>
+    </optionList>
+    <!-- @expunge
+    <optionList title="Roof Material Type List" id="roofMaterial">
+        <option value="ALUM">Aluminum Shingles</option>
+        <option value="ASBO">Asbestos</option>
+        <option value="CLAY">Clay Tile</option>
+        <option value="COMP">Composition</option>
+        <option value="CONCRETE">Concrete</option>
+        <option value="METL">Metal</option>
+        <option value="PLAS">Plastic</option>
+        <option value="ROCK">Rock</option>
+        <option value="ROLL">Rolled Roofing</option>
+        <option value="SLAT">Slated</option>
+        <option value="TILE">Tile</option>
+        <option value="WOODS">Wood Shingle</option>
+    </optionList>
+     -->
+    <optionList title="Subject of Insurance Deductible" id="subjectOfInsuranceDeductible">
+        <option value="250">$250</option>
+        <option value="500">$500</option>
+        <option value="1000">$1,000</option>
+        <option value="2500">$2,500</option>
+        <option value="10000">$10,000</option>
+        <option value="25000">$25,000</option>
+        <option value="50000">$50,000</option>
+        <option value="75000">$75,000</option>
+    </optionList>
+    <optionList title="Subject of Insurance List" id="subjectOfInsurance">
+        <option value="BLDG">Building</option>
+        <option value="BIDP">Business Income From Dependent Properties</option>
+        <option value="BUSIN">Business Income with Extra Expense</option>
+        <option value="BUSEE">Business Income without Extra Expense</option>
+        <option value="BPP">Business Personal Property</option>
+        <option value="COMRP">Condo Unit Owners Misc Real Property</option>
+        <option value="DEBRL">Debris Removal</option>
+        <option value="ELCOM">Electronic Commerce</option>
+        <option value="EE">Extra Expense</option>
+        <option value="FIX">Fixtures</option>
+        <option value="FURN">Furniture</option>
+        <option value="HPP">Household Personal Property</option>
+        <option value="LSINT">Leasehold Interest</option>
+        <option value="LEGLB">Legal Liability</option>
+        <option value="MACEQ">Machinery and Equipment</option>
+        <option value="MTR">MA Tenant Relocation</option>
+        <option value="MENO">Mortgage Holders Errors and Omissions</option>
+        <option value="BOLAW">Ordinance or Law</option>
+        <option value="PULCR">Pollutant Cleanup and Removal</option>
+        <option value="PO">Property of Others</option>
+        <option value="POTS">Property Other Than Stock</option>
+        <option value="SPOIL">Spoilage</option>
+        <option value="STOCK">Stock</option>
+        <option value="TIB">Tenants Improvements and Betterments</option>
+        <option value="TIMEL">Time Element</option>
+        <option value="TSP">Trees, Shrubs and Plants</option>
+        <option value="PAPER">Valuable Papers</option>
+    </optionList>
+    <optionList title="Terrorism Option Type List" id="terrorismOptionType">
+        <option value="NTRIA/TRIA">Terrorism provided by and outside Terrorism Risk Insurance Act</option>
+        <option value="NTRIA">Terrorism outside Terrorism Risk Insurance Act</option>
+        <option value="TRIA">Terrorism provided by Terrorism Risk Insurance Act</option>
+    </optionList>
+    <optionList title="Valuation Type List" id="valuation">
+        <option value="ACV">Actual Cash Value</option>
+        <option value="ACT">Actual Loss Sustained</option>
+        <option value="G">Agreed Amount a.k.a. Agreed Value</option>
+        <option value="FVR">Functional Replacement Cost</option>
+        <option value="FR">Full Value Replacement Cost</option>
+        <option value="M">Market Value</option>
+        <option value="RR">Repair Replacement</option>
+        <option value="RC">Replacement Cost</option>
+        <option value="REP">Reproduction</option>
+        <option value="StatedAmt">Stated Amount</option>
+        <option value="SELL">Selling Price</option>
+        <option value="TotalInsuredValue">Total Insured Value</option>
+    </optionList>
+    <!-- @expunge
+    <optionList title="Wind Hail Percentage Deductible List" id="windHailPercentDed">
+        <option value="1%">1%</option>
+        <option value="2%">2%</option>
+        <option value="5%">5%</option>
+    </optionList>
+    <optionList title="Wind Hail Percentage List" id="windHail">
+        <option value="1">1%</option>
+        <option value="2">2%</option>
+        <option value="5">5%</option>
+    </optionList>
+     -->
+    <optionList title="Waiting Period List" id="waitingPeriod">
+        <option value="0">0</option>
+        <option value="24">24</option>
+        <option value="72">72</option>
+    </optionList>
+</codeListRef>

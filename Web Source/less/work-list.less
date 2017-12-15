@@ -1,0 +1,345 @@
+.worklist-section {
+	padding: 0;
+	
+	.search-filter	{
+		margin-top: 20px;
+	}
+	
+	/* container for table view, in case clients want extra padding or rounded corners */
+	.work-list-table-container {
+	
+		/* work list table */
+		.table.work-list {
+			> thead > tr > th, 
+			> tbody > tr > td, 
+			> tfoot > tr > td {
+				padding: @work-list-cell-padding;
+			}
+		
+			/* 
+				Selected rows
+				(temporary solution for currently wacky "info" class selector)
+			*/
+			> thead > tr > td.info,
+			> tbody > tr > td.info,
+			> tfoot > tr > td.info,
+			> thead > tr > th.info,
+			> tbody > tr > th.info,
+			> tfoot > tr > th.info,
+			> thead > tr.info > td,
+			> tbody > tr.info > td,
+			> tfoot > tr.info > td,
+			> thead > tr.info > th,
+			> tbody > tr.info > th,
+			> tfoot > tr.info > th,
+			> tbody > tr.selected > td, 
+			> tbody > tr.worklistactions td {
+			  background-color: @theme-active-background;
+			  color: @theme-active-color;
+			  border-color:  @theme-active-background;
+				.popover {
+					color: @text-color;
+				}
+				.fa {
+					color: @theme-active-color;
+				}		  
+			}
+			
+		
+			tr {
+				background: #fff;
+				
+				&.odd td {
+					background: @table-bg-accent;
+				}
+				&.even td {
+					background: @table-bg;
+				}
+			
+				&.worklistactions {
+					position: absolute;
+					right: 10px;
+					display: block;
+					background: @theme-active-background;
+				
+					td {
+						background-color: @theme-active-background;
+						color: @theme-active-color;
+						border-color:  @theme-active-background;
+					
+						.btn {
+							margin: 0 3px;
+						}
+					
+						.btn-group {
+							&.actions-other {
+								.btn {
+									margin: 0;
+								}
+							}
+						}
+					
+						.dropdown-menu {
+							padding: 5px 0;
+
+							> li > span {
+								clear: both;
+								display: block;
+								color: @gray;
+								font-weight: normal;
+								padding: 3px 20px;
+								white-space: nowrap;
+								&:hover {
+									color: @theme-active-color;
+									background: @theme-active-background;
+								}
+							}
+						}				  	
+					}
+				}
+			}
+	
+			.worklistdata-effectivedate, 
+			.worklistdata-premium	{
+				text-align: right;
+			}
+			.worklistdata-complete	{
+				text-align: center;
+			}
+		
+			.no-account {
+				.fa {
+					position: static;
+					right: auto;
+					bottom: auto;
+					font-size: 80%;
+					color: @gray;
+					&:before {content: @icon-card-no-account;}
+				}
+			}
+		}
+	}
+
+
+	/* couldn't find this in the app. perhaps it's discarded. reformatted in CLASS selectors anyway */
+	.wi-reference {
+		.progress-bar span {
+			margin-left: 5px;
+		}
+		.progress-bar-default span {
+			color: @gray-lighter;
+		}
+		
+		.lob-title {
+			margin-left: 10px;
+		}
+	}
+		
+	.invisible {
+		display: none;
+	}
+	
+	.progress {
+		margin-bottom: 0;
+	}
+	
+	.progress .bar {
+		text-align: left;
+		padding-left: 10px;
+	}
+	
+	.progress .bar .pull-right {
+		padding-right: 10px;
+	}
+	
+	.blue-header {
+		color: @theme-color-4;
+	}
+	
+	.label-large {
+		padding: 12px;
+		margin: 4px;
+	}
+	
+	.worklist-item.worklist-tile:hover .badge {
+		background-color: rgba(0,0,0,0.3);
+	}
+		
+	.row.searchresults {
+		margin: 0;
+	}
+	
+	div.info-account,#account_detail {
+		background-color: #fff;
+		margin-bottom: 20px;
+		padding: 20px;
+		min-height: 160px;
+		cursor: pointer;
+		box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+		border-top: 2px solid #fff;
+	}
+	
+	div.info-account h3 {
+		font-size: 16px;
+		padding: 0;
+		margin: 0;
+		font-weight: bold;
+		line-height: 1.42857;
+	}
+	
+	div.info-account ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	h1#account_title,
+	h2.search-results-title {
+		border-bottom: 1px solid #ccc;
+		margin-bottom: 10px;
+		padding-bottom: 10px;
+	}
+	
+	h2.search-results-title .small {
+		font-size: 50%;
+		color: inherit;
+	}
+	
+	#account_details_container #workitems #work_list_contents .container {
+		width: auto;
+	}
+		
+	h2 {
+		margin-top: 0;
+	}
+	
+	/* icons visible for Cards, not TABLE view */
+	
+	.card.PI .lob-icon.fa-stethoscope, 
+	.card.KIDRA .lob-icon.fa-dollar, 
+	.card.CGL .lob-icon.fa-medkit, 
+	.card.CFRM .lob-icon.fa-picture, 
+	.card.UMBRC .lob-icon.fa-umbrella, 
+	.card.BOP .lob-icon.fa-building-o, 
+	.card.PROPC .lob-icon.fa-building-o, 
+	.card.AUTOP .lob-icon.fa-road, 
+	.card.HOME .lob-icon.fa-home, 
+	.card.WORK .lob-icon.fa-wrench, 
+	.card.AUTOB .lob-icon.fa-truck {
+		display: inline; 
+	}	
+	
+	
+	/* filter controls */
+	
+
+	.filter-controls {
+		a .fa {
+			padding-right: 5px;
+		}
+		
+		.filter-selector {
+			li a .fa {
+				margin-right: 5px;
+			}
+			.account_types-P .fa	{
+				&:before {content: @icon-account-personal;}
+			}
+			.account_types-C .fa	{
+				&:before {content: @icon-account-commercial;}
+			}
+			.account_types-U .fa	{
+				&:before {content: @icon-account-unknown;}
+			}
+		}
+		
+		li {
+			&.lob-AUTOP i.lob-icon {
+				&:before {content: @icon-workitem-personal-auto;}
+			}
+			&.lob-HOME i.lob-icon {
+				&:before {content: @icon-workitem-homeowners;}
+			}
+			&.lob-WORK i.lob-icon {
+				&:before {content: @icon-workitem-workers-comp;}
+			}
+			&.lob-AUTOB i.lob-icon {
+				&:before {content: @icon-workitem-commercial-auto;}
+			}	
+			&.lob-CFRM i.lob-icon {
+				&:before {content: @icon-workitem-farmowners;}
+			}	
+			&.lob-BOP i.lob-icon {
+				&:before {content: @icon-workitem-bop;}
+			}	
+			&.lob-MROF i.lob-icon {
+				&:before {content: @icon-workitem-management-liability;}
+			}
+			&.lob-UMBRP i.lob-icon {
+				&:before {content: @icon-workitem-personal-umbrella;}
+			}
+			&.lob-PROPC i.lob-icon {
+				&:before {content: @icon-workitem-commercial-property;}
+			}
+			&.lob-CPKGE i.lob-icon {
+				&:before {content: @icon-workitem-commercial-package;}
+			}
+			&.lob-CGL i.lob-icon {
+				&:before {content: @icon-workitem-liability;}
+			}
+			&.lob-TEST i.lob-icon {
+				&:before {content: @icon-workitem-test-app;}
+			}
+			&.lob-DFIRE i.lob-icon {
+				&:before {content: @icon-workitem-dwelling-fire;}
+			}
+		}
+		.repeater {
+			display: inline;
+		}
+	}
+	
+	
+	/* Get Started dropdown for TABLE view, no A HREFs */
+	
+	.dropdown-menu.filter-selector	{
+		&.filter-lob	{
+			li.on-click {
+				padding: 3px 20px;
+				white-space: nowrap;
+				cursor: pointer;
+				&:hover, 
+				&:focus {
+					color: @theme-active-color;
+					background: @theme-active-background; 
+				}
+			}
+		}
+	}
+
+	/* saved filters */
+	
+    .dropdown-menu.saved-filter {
+    	> li {
+			& > a {
+				display: inline-block;
+				&.filter-entry {
+					width: 80%;
+					white-space: normal;
+					padding-right: 0;
+				}
+			}
+    	}
+		.delete {
+			padding: 3px 10px;
+			max-width: 20%;
+			 .fa {
+			 	&:before { 
+			 		content: @icon-ui-close;
+			 	}		 	
+			}
+		}
+	}
+
+
+}

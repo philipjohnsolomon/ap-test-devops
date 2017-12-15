@@ -1,0 +1,293 @@
+.padded-box {
+	padding: @padded-box-padding;
+	min-height: @padded-box-padding;
+	background: @padded-box-bg;
+	border: 1px solid @padded-box-border; 
+	margin: @padded-box-margin;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+	
+	h1 {
+		margin-top: 0;
+	}
+}
+
+/* HTML navigation arrow from Boostrap. Visual size controlled by border width. */
+
+.caret {
+	border-width: 6px;
+}
+
+
+/* Back to Top */
+
+.back-to-top {
+	display: none;
+	z-index: 1000;
+	position: fixed;
+	bottom: 5px;
+	right: 20px;
+	width: 60px;
+	padding: 5px;
+	text-align: center;
+	cursor: pointer;
+	background-color: @gray;
+	.opacity(60);
+	img {}	
+	h4 	{
+		font-size: @font-size-base;
+		color: #fff;
+		text-transform: uppercase;
+		margin: 0;
+	}	
+}
+#backtotop:hover {
+	.opacity(90);
+}
+
+
+/* 
+	Typehead processing buttons (with spinner graphic). 
+	Currently used in Upload Forms modals. Could be used site-wide. 
+*/
+
+.spinner-container {
+	position: relative;
+	width : 27px;
+}
+	
+.drop-in {
+	/* background-color: lighten(@theme-color-1, 5%); */
+}
+	
+section.white-background {
+	background: #fff;
+	-webkit-box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.25);
+}
+
+/* making numbers easier to read */
+.badge {
+  font-weight: 400;
+}
+
+
+ /*	dropdown mods */
+    
+.dropdown-menu {
+  color: inherit;
+  
+  > li > a {	  
+	  &:hover,
+	  &:focus {
+		  color: @theme-active-color;
+		  background-color: @theme-active-background;
+	  }
+	}
+  
+	> .active > a,
+	> .active > a:hover,
+	> .active > a:focus {
+	  background-color: #416daf;
+	}
+
+	.dropdown-header {
+		color: inherit;
+		font-size: inherit;
+		font-weight: bold;
+	}
+}    
+
+
+/* font awesome controls, not unique to any content type */
+
+.close .fa	{
+	&:before{content: @icon-ui-close;}
+}
+.search .fa	{
+	&:before{content: @icon-ui-search;}
+}
+.display-home-page .fa	{
+	&:before{content: @icon-ui-home;}
+}
+.delete-popover .fa	{
+	&:before{content: @icon-turnstile-delete;}
+}
+.window-history .fa {
+	&:before{content: @icon-ui-back;}
+}
+.switch-options	{
+	.card-view .fa {
+		&:before{content: @icon-ui-view-card;}
+	}
+	.list-view .fa {
+		&:before{content: @icon-ui-view-table;}
+	}
+	.tabular-view .fa {
+		&:before{content: @icon-ui-view-table;}
+	}
+}
+.in-progress .fa	{
+	&:before{content: @icon-ui-in-progress;}
+}
+
+/* making A HREF buttons look normal when in a font-stylized parent DIV */
+.btn	{font-style: normal;}
+
+
+/* 
+	Data: replacement for multi-column data tables with responsive-breaking entries (VIN numbers, non-breaking numbers) 
+	Hopeful use in Modals and Rosters 
+*/
+.data {
+	h3 {
+		border-bottom: 0 !important;
+		border-top: 2px solid @gray-light;
+		padding: 7px 0;
+		margin-top: 20px !important;
+		font-size: @font-size-medium !important;
+	}
+	.details {
+		p {
+			border-top: 1px solid @gray-light;
+			padding: 5px 0;
+			margin: 0;
+			&.error {}
+		}
+	}
+}
+
+
+/* 
+	moving "please wait" progress bar outside of Work Item Menu, making UI position like 4.6 
+*/
+.progress.please-wait {
+	position: fixed; 
+	top: 130px; 
+	right: 50px; 
+	width: 14%; 
+	min-width: 100px;
+	z-index: 9999;
+	
+	&.affix {
+		top: 60px;
+	}
+}
+
+@media ( max-width : @screen-sm) {
+	.progress.please-wait {
+		right: 10px; 
+	}
+}
+
+
+/* button row outside of Modals and forms */
+.button-row	{
+	margin-bottom: 10px;
+}
+
+.no-wrap {
+	white-space: nowrap;
+}
+
+/* error 404 */
+
+body.error-404 {
+	.error-404-section {
+		background: white;
+		padding: @padded-box-padding;
+	}
+}
+
+.ap-error {
+
+}
+
+/* SOLR admin */
+
+.solr-admin-section {	
+	background: white;
+	padding: 30px;
+	.table {
+		margin-bottom: 0;
+		.index {
+			text-transform: capitalize;
+			padding-left: 0;
+		}
+		th {
+			font-weight: bold;
+		}
+	}
+}
+
+
+
+/* Turnstile file uploader (Work Item Assistant, Modals) */
+
+.upload-file-queue {
+	.file-drop-zone {
+		position: relative;
+		border: 3px dashed @drop-zone-hover-color;
+		width: 100%;
+		margin-bottom: 1em;
+		border-radius: @border-radius-base;
+		padding: 20px;
+		
+		&.nv-file-over, 
+		&.dropping-in, 
+		&:hover {
+			background: @drop-zone-hover-color;
+			.file-drop-instructions {
+				color: white;
+				.fa	{
+					color: white;
+				}
+			}
+			.file-drop-indicator {
+				p {
+					color: white;
+				}
+			}
+		}
+		.file-drop-instructions {
+			text-align: center;
+			.fa	{
+				display: block;
+				&:before{content: @icon-ui-file;}
+				font-size: 50px;
+				color: @gray-light;
+				margin-bottom: 5px;
+			}			
+		}
+		.file-drop-indicator {
+			padding: 10px;
+			line-height: 1.1;
+			p {
+				margin-bottom: 5px;
+			}
+			.progress {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.turnstile-files-selector.tab-pane {
+	.upload-file-queue {
+		.file-drop-zone {
+			margin-bottom: 0;		
+		}
+	}
+}
+ 
+
+
+
+
+
+
+
+
+
+
+

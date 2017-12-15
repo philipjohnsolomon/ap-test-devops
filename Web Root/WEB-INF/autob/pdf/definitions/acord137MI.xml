@@ -1,0 +1,185 @@
+<fields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/pdf/pdfDefinitions.xsd" >
+	<field type="checkbox">
+		<eLabel>Vehicle_CombinedSingleLimit_LimitIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='CSL'].CoverageCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_FiveIndicator_L</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[PIPNoFaultSymbolCd='5'].PIPNoFaultSymbolCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_SevenIndicator_L</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[PIPNoFaultSymbolCd='7'].PIPNoFaultSymbolCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_PIPOption_IncomeLevelOneIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='PIP'].Option[OptionTypeCd='Opt2' &amp;&amp; OptionCd='M1'].OptionCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_PIPOption_IncomeLevelTwoIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='PIP'].Option[OptionTypeCd='Opt2' &amp;&amp; OptionCd='M12'].OptionCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_PIPOption_IncomeLevelThreeIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='PIP'].Option[OptionTypeCd='Opt2' &amp;&amp; OptionCd='M3'].OptionCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_PIPOption_IncomeLevelFourIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='PIP'].Option[OptionTypeCd='Opt2' &amp;&amp; OptionCd='M4'].OptionCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_PIPOption_IncomeLevelFiveIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='PIP'].Option[OptionTypeCd='Opt2' &amp;&amp; OptionCd='M5'].OptionCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_PIPOption_IncomeLevelSixIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='PIP'].Option[OptionTypeCd='Opt2' &amp;&amp; OptionCd='M6'].OptionCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_PIPOption_IncomeLevelOtherIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='PIP'].Option[OptionTypeCd='Opt2' &amp;&amp; OptionCd='OT'].OptionCd</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_PIP_DeductibleAmount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='PIP'].Deductible.FormatInteger</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_PIPOption_CoordinationWorkLossIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='PIP' &amp;&amp; Option.OptionTypeCd='Opt1'].Option[OptionCd ='W' or OptionCd ='MW'].OptionCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_PIPOption_CoordinationMedicalExpenseIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='PIP' &amp;&amp; Option.OptionTypeCd='Opt1'].Option[OptionCd ='M' or OptionCd ='MW'].OptionCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_PIPBenefit_RejectWorkLossIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='PIP'].Option[OptionTypeCd='Bene3' &amp;&amp; OptionCd='R'].OptionCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_FiveIndicator_M</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[LimitedPropertyDamageLiabilitySymbolCd='5'].LimitedPropertyDamageLiabilitySymbolCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_SevenIndicator_M</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[LimitedPropertyDamageLiabilitySymbolCd='7'].LimitedPropertyDamageLiabilitySymbolCd</xpath>
+	</field>
+	
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_FiveIndicator_O</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[PropertyProtectionCoverageSymbolCd='5'].PropertyProtectionCoverageSymbolCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_SevenIndicator_O</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[PropertyProtectionCoverageSymbolCd='7'].PropertyProtectionCoverageSymbolCd</xpath>
+	</field>
+	
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_TwoIndicator_B</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[AutoMedicalPaymentsSymbolCd='2'].AutoMedicalPaymentsSymbolCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_ThreeIndicator_B</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[AutoMedicalPaymentsSymbolCd='3'].AutoMedicalPaymentsSymbolCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_FourIndicator_B</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[AutoMedicalPaymentsSymbolCd='4'].AutoMedicalPaymentsSymbolCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_SevenIndicator_B</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[AutoMedicalPaymentsSymbolCd='7'].AutoMedicalPaymentsSymbolCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_EightIndicator_B</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[AutoMedicalPaymentsSymbolCd='8'].AutoMedicalPaymentsSymbolCd</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_MedicalPayments_PerPersonLimitAmount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='MEDPM'].Limit.FormatInteger</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_CombinedSingleLimit_LimitIndicator_B</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='UMCSL'].CoverageCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BodilyInjury_EachPersonLimitIndicator_B</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='UMISP'].CoverageCd</xpath>
+	</field>
+	<!-- 
+	<field>
+		<eLabel>Vehicle_UninsuredMotorists_BodilyInjuryPerPersonLimitAmount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='UMCSL' or (CoverageCd='UMISP' and Limit.LimitAppliesToCd='PerPerson')].Limit.FormatInteger</xpath>
+	</field>
+	 -->
+	<field>
+		<eLabel>Vehicle_UninsuredMotorists_BodilyInjuryPerAccidentLimitAmount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='UMISP'].Limit[LimitAppliesToCd='PerAcc'].FormatInteger</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_TwoIndicator_D</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[UnderinsuredMotoristSymbolCd='2'].UnderinsuredMotoristSymbolCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_ThreeIndicator_D</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[UnderinsuredMotoristSymbolCd='3'].UnderinsuredMotoristSymbolCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_FourIndicator_D</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[UnderinsuredMotoristSymbolCd='4'].UnderinsuredMotoristSymbolCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_SixIndicator_D</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[UnderinsuredMotoristSymbolCd='6'].UnderinsuredMotoristSymbolCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_SevenIndicator_D</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[UnderinsuredMotoristSymbolCd='7'].UnderinsuredMotoristSymbolCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_CombinedSingleLimit_LimitIndicator_C</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='UNCSL'].CoverageCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BodilyInjury_EachPersonLimitIndicator_C</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='UNDSP'].CoverageCd</xpath>
+	</field>
+	<!-- 
+	<field>
+		<eLabel>Vehicle_UnderinsuredMotorists_BodilyInjuryPerPersonLimitAmount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='UNCSL' or (CoverageCd='UNDSP' and Limit.LimitAppliesToCd='PerPerson')].Limit.FormatInteger</xpath>
+	</field>
+	-->
+	<field>
+		<eLabel>Vehicle_UnderinsuredMotorists_BodilyInjuryPerAccidentLimitAmount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='UNDSP'].Limit[LimitAppliesToCd='PerAcc'].FormatInteger</xpath>
+	</field>
+
+	<field>
+		<eLabel>Vehicle_Collision_DeductibleAmount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='COLL'].Deductible.FormatInteger</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_CollisionOption_LimitedCollisionApplicableIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='LCOLL'].CoverageCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_CollisionOption_LimitedCollisionNotApplicableIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='LCOLL'].Option[OptionCd='RJ'].OptionCd</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_Collision_DeductibleAmount_D</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='BCOLL'].Deductible.FormatInteger</xpath>
+	</field>
+	
+	<!--  WorkLossDeclinedInd not defined in schema
+	<field>
+		<eLabel>Driver_ProducerIdentifier_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlDriver.CommlDriverInfo[WorkLossDeclinedInd='1'].WorkLossDeclinedInd</xpath>
+	</field>
+	
+	<field>
+		<eLabel>Driver_ProducerIdentifier_B</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlDriver.CommlDriverInfo[WorkLossDeclinedInd='1'].WorkLossDeclinedInd</xpath>
+	</field>
+	 -->
+</fields>

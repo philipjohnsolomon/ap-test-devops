@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workitemassistant id="workitemassistant" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/workitemassistant/workitemassistant.xsd">
+
+<section type="comments" id="comments" label="Comments">
+	
+</section>
+
+<section type="fileAttachments" id="fileattachments" label="Documents">
+	<codeListRef source="codeListRef.xml" target="blank"/>
+	<codeListRef source="codeListRef.xml" target="fileAttachmentType"/>
+</section>
+
+<section type="activeUsers" id="activeusers" label="Users">
+
+</section>
+
+</workitemassistant>
+
+

@@ -1,0 +1,17 @@
+<views xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/view/view.xsd">
+	<view id="Display.Roster.Simplified.PremisesNames" type="standard" deleteMode="onEmptyValue">
+		<fieldSet>
+			<field type="id">CommlSubLocation.SubLocation.ItemIdInfo.AgencyId</field>
+			<field type="formatInfo"> </field>
+			<field type="id">Location[@id='${CommlSubLocation.@LocationRef}'].Addr.Addr1</field>
+			<field type="formatInfo"> </field>
+			<field type="id">Location[@id='${CommlSubLocation.@LocationRef}'].Addr.City</field>
+			<field type="formatInfo">, </field>
+			<field type="id">Location[@id='${CommlSubLocation.@LocationRef}'].Addr.StateProvCd</field>
+			<field type="formatInfo"> </field>
+			<field type="id">Location[@id='${CommlSubLocation.@LocationRef}'].Addr.PostalCode</field>
+		</fieldSet>
+	</view>
+	
+</views>

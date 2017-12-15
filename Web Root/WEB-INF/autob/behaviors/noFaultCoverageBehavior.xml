@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transactionDefinitionBehavior xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/behavior/transactionDefinitionBehavior.xsd">
+    <!-- The following delimiter applies to the <for> elements for separating page entities -->
+    <delimiter>/</delimiter>
+
+    <hotField key="*/vehicle/NoFaultCoveragesPIP/PipCoverage">
+        <refreshListFieldEvent key="*/vehicle/NoFaultCoverages/FuneralExpLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/NoFaultCoverages/MedicalLimitDC" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/NoFaultCoverages/TortOptionNoFaultCoverage" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/NoFaultCoverages/DeductibleNoFaultCov" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <!-- @expunge
+        <refreshListFieldEvent key="*/vehicle/NoFaultCoverages/additionalPIPLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/NoFaultCoverages/additionalPIPOption" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+         -->
+    </hotField>
+    <hotField key="*/vehicle/NoFaultCoveragesPIP/WaiverofPIP"/>
+  <!--   @expunge
+    <hotField key="*/vehicle/NoFaultCoverages/PipCoverageOptionCd">
+        <refreshListFieldEvent key="*/vehicle/NoFaultCoverages/FuneralExpLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/NoFaultCoverages/MedicalLimitDC" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/NoFaultCoverages/TortOptionNoFaultCoverage" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+    </hotField>
+    <hotField key="*/vehicle/NoFaultCoverages/firstPartyBenefits">
+        <refreshListFieldEvent key="*/vehicle/NoFaultCoverages/FuneralExpLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/NoFaultCoverages/TortOptionNoFaultCoverage" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+    </hotField>
+    <hotField key="*/vehicle/NoFaultCoverages/pipLimitOption">
+        <refreshListFieldEvent key="*/vehicle/NoFaultCoverages/pipLimitOptionSingle" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/NoFaultCoverages/pipLimitOptionSplit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/NoFaultCoverages/additionalPIPSingleLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+        <refreshListFieldEvent key="*/vehicle/NoFaultCoverages/additionalPIPSplitLimit" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+    </hotField>
+    <hotField key="*/vehicle/NoFaultCoverages/extendedMedicalExpenses" />
+ -->
+    <hotField key="*/vehicle/NoFaultCoverages/PipCoverageLimit" />
+     <hotField key="*/vehicle/vehicleInformation/HotRegisteredState" />
+     <hotField key="*/vehicle/UninsuredUnderinsuredMotoristsCoverage/UMUIMOption" />
+     
+     
+     <hotField key="*/vehicle/NoFaultCoverages/PIPSplitLimitsCSL"/>
+     <hotField key="*/vehicle/NoFaultCoverages/PIPSplitLimitsBI">
+        <refreshListFieldEvent key="*/vehicle/NoFaultCoverages/PIPSplitLimitsCSL" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+     </hotField>
+     
+    <!-- End of HotFields -->
+    <behavior>
+        <do action="exclude" />
+        <where>
+            <preCondition name="PipCoverage">!YES</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages</for>
+    </behavior>
+    <behavior weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="WaiverofPIP">YES</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages</for>
+        <for>*/vehicle/NoFaultCoveragesPIP/PipCoverage</for>
+    </behavior>
+    
+     <behavior  title="Exclude UMPD stuff if UMCSL is choosen" weight="40">
+        <do action="exclude" />
+        <where>
+            <preCondition name="UMUIMOption">UMCSL</preCondition>
+        </where>
+        <for>*/vehicle/VehicleRejectUMCoverageSection/VehicleRejectUMPDCoverage</for>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/UMPDLlmits</for>
+        <for>*/vehicle/UninsuredUnderinsuredMotoristsCoverage/UMPDDeductible</for>
+    </behavior>
+    
+    <behavior title="Prefill $8000 as PIP Coverage Limit for state of MA">
+        <do action="alter">
+            <property name="optionListReferenceTag">xmlreader:autobCodeListRef.xml:PipCoverageLimitMA|xmlreader:codeListRef.xml:noCoverage|xmlreader:autobCodeListRef.xml:PipCoverageLimit</property>
+        </do>
+        <where>
+             <preCondition name="HotRegisteredState">MA</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/PipCoverageLimit</for>
+    </behavior>
+    
+    <behavior title="Set Statutory Limit as PIP Coverage Limit for state of KS if limit is empty">
+        <do action="alter">
+            <property name="optionListReferenceTag">xmlreader:autobCodeListRef.xml:PipCoverageLimitKS|xmlreader:autobCodeListRef.xml:PipCoverageLimit</property>
+        </do>
+        <where>
+             <preCondition name="HotRegisteredState">KS</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/PipCoverageLimit</for>
+    </behavior>
+    
+    <behavior title="For State of ND change field title to Total APIP Limit" weight="40">
+        <do action="alter">
+            <property name="label">Total APIP Limit</property>
+        </do>
+        <where>
+             <preCondition name="HotRateState">ND</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/AdditionalPIPSingleLimit</for>
+    </behavior>
+    
+    <behavior title="Exclude CoveredByWorkersCompensation and PrincipallyOperatedbyEmployees if vehicle type is Special">
+        <do action="exclude" />
+        <where>
+            <preCondition name="HotVehicleType">SPEC</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/CoveredByWorkersCompensation</for>
+        <for>*/vehicle/NoFaultCoverages/PrincipallyOperatedbyEmployees</for>
+    </behavior>
+    
+    
+    <behavior  weight="40">
+        <do action="exclude"/>
+        <where>
+            <preCondition name="PIPSplitLimitsBI">!</preCondition>
+            <preCondition name="XPATH{CommlAutoLineBusiness/CommlRateState[StateProvCd='DE']/CommlVeh/CommlCoverage[CoverageCd='PIP']/Limit[LimitAppliesToCd='PerAcc']/LimitAppliesToCd }">in('PerAcc')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/PIPSplitLimitsCSL</for>
+    </behavior>
+     <behavior weight="40">
+        <do action="exclude"/>
+        <where>
+            <preCondition name="PIPSplitLimitsCSL">!</preCondition>
+            <preCondition name="XPATH{CommlAutoLineBusiness/CommlRateState[StateProvCd='DE']/CommlVeh/CommlCoverage[CoverageCd='PIP']/Limit[LimitAppliesToCd='PerAcc']/LimitAppliesToCd }">!in('PerAcc')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/PIPSplitLimitsBI</for>
+    </behavior>
+    
+<!--     
+    <behavior weight="40">
+        <do action="exclude"/>
+        <where>
+            <preCondition name="XPATH{ count(CommlAutoLineBusiness/CommlRateState[StateProvCd='DE']/CommlVeh/CommlCoverage[CoverageCd='PIP']/Limit/FormatInteger) }">1</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/PIPSplitLimitsBI</for>
+    </behavior>
+    <behavior weight="40">
+        <do action="include"/>
+        <where>
+            <preCondition name="XPATH{ count(CommlAutoLineBusiness/CommlRateState[StateProvCd='DE']/CommlVeh/CommlCoverage[CoverageCd='PIP']/Limit[LimitAppliesToCd='PerAcc']/FormatInteger) }">1</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/PIPSplitLimitsBI</for>
+    </behavior>
+
+    exclude no fault coverages where each has applicable include behaviors below
+    <behavior id="excludeNoFaultCoverages" title="Exclude No Fault Coverage for all States">
+        <do action="exclude" />
+        <for>*/vehicle/NoFaultCoverages/TortOptionNoFaultCoverage</for>
+        <for>*/vehicle/NoFaultCoverages/MedicalOnly</for>
+        <for>*/vehicle/NoFaultCoverages/HealthInsuranceOption</for>
+        <for>*/vehicle/NoFaultCoverages/CoveredByWorkersCompensation</for>
+        @expunge
+        <for>*/vehicle/NoFaultCoverages/ownerOperated</for>
+        <for>*/vehicle/NoFaultCoverages/employerFurnished</for>
+        <for>*/vehicle/NoFaultCoverages/extendedMedicalExpenses</for>
+        <for>*/vehicle/NoFaultCoverages/extendedMedicalExpensesLimit</for>
+        <for>*/vehicle/NoFaultCoverages/ExtraordinaryMedicalBenefits</for>
+        
+        <for>*/vehicle/NoFaultCoverages/ExtendedPIPOption</for>
+        <for>*/vehicle/NoFaultCoverages/WorkLoss</for>
+        <for>*/vehicle/NoFaultCoverages/FuneralExpLimit</for>
+        <for>*/vehicle/NoFaultCoverages/AccDeathBenefitsLimit</for>
+        <for>*/vehicle/NoFaultCoverages/PrincipallyOperatedbyEmployees</for>
+        @expunge
+        <for>*/vehicle/NoFaultCoverages/BasicFirstPartyBenefitsLimit</for>
+        <for>*/vehicle/NoFaultCoverages/CombinationFirstPartyBenefits</for>
+        <for>*/vehicle/NoFaultCoverages/exclusionOfLossOfIncome</for>
+        <for>*/vehicle/NoFaultCoverages/exclusionOfWorkLoss</for>
+        
+        <for>*/vehicle/NoFaultCoverages/PIPStackingOption</for>
+        <for>*/vehicle/NoFaultCoverages/DeductibleNoFaultCov</for>
+        @expunge
+        <for>*/vehicle/NoFaultCoverages/pipLimitOptionSingle</for>
+        <for>*/vehicle/NoFaultCoverages/pipLimitOptionSplit</for>
+        <for>*/vehicle/NoFaultCoverages/additionalPIPSingleLimit</for>
+        <for>*/vehicle/NoFaultCoverages/additionalPIPSplitLimit</for>
+        <for>*/vehicle/NoFaultCoverages/additionalPIPLimit</for>
+        <for>*/vehicle/NoFaultCoverages/additionalPIPOption</for>
+        <for>*/vehicle/NoFaultCoverages/copaymentOption</for>
+        <for>*/vehicle/NoFaultCoverages/CoordinationWorkLoss</for> 
+       
+        <for>*/vehicle/NoFaultCoverages/IncomeLevelPIP</for>
+        <for>*/vehicle/NoFaultCoverages/PropertyProtection</for>
+        <for>*/vehicle/NoFaultCoverages/LimitedPropertyDamageLimit</for>
+        @expunge
+        <for>*/vehicle/NoFaultCoverages/pipOptionMA</for>
+        <for>*/vehicle/NoFaultCoverages/additionalPIPNY</for>
+        <for>*/vehicle/NoFaultCoverages/pipWorkLossCoordination</for>
+        <for>*/vehicle/NoFaultCoverages/pipMedicalExpenseElimination</for>
+        
+    </behavior>
+
+    exclude no fault for special vehicles
+    
+    <behavior id="excludeNoFaultForSpecial" title="Exclude No Fault Coverages if Vehicle Type is Golfmobiles, Repossessed Autos, or Snowmobiles">
+        <do action="exclude" />
+        <where>
+            <preCondition name="VehicleBodyType">in('GC', 'RA', 'SNOWM')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages</for>
+    </behavior>
+
+    setup state specific PIP coverages with excludes
+    these fields handle the base aggregate each states PIP coverage
+    @expunge
+    <behavior id="excludeStateSpecificPIP" title="State Specific PIP">
+        <do action="exclude" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">!in('DC', 'FL', 'HI', 'IA', 'KS', 'KY', 'MA', 'MD', 'MI', 'MN', 'MS', 'NY', 'OR', 'PR', 'TX', 'UT')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/PipCoverage</for>
+    </behavior>
+
+    <behavior id="excludePIPCovLimitIfNotNJ" title="Exclude PIP Coverage Limit if not in NJ">
+        <do action="exclude" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">!in('NJ')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/PipCoverageLimit</for>
+    </behavior>
+
+    <behavior id="excludeStateSpecificPIPForAR_WA" title="Arkansas and Washington Specific PIP">
+        <do action="exclude" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">!in('AR', 'WA')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/PipCoverageOptionCd</for>
+    </behavior>
+
+    <behavior id="excludeBasicBenefitsForPA" title="Exclude Basic First Party Benefits Limit if not in PA">
+        <do action="exclude" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">!in('PA')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/basicFirstPartyBenefitsLimit</for>
+    </behavior>
+
+    <behavior id="excludeDeathDisabilityForSD" title="Exclude Death And Disability Limits if not in SD">
+        <do action="exclude" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">!in('SD')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/deathAndDisabilityLimits</for>
+    </behavior>
+
+    <behavior id="excludeDetuctibleAppliesToForDE" title="Exclude Deductible Applies To if not in DE">
+        <do action="exclude" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">!in('DE')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/deductibleAppliesTo</for>
+    </behavior>
+
+    <behavior id="excludePIPLimitOptionForDE" title="Exclude PIP Limit Option if not in Deleware">
+        <do action="exclude" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">!in('DE')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/pipLimitOption</for>
+    </behavior>
+
+    @expunge 
+    
+    end setup for state specific PIP behaviors 
+
+     setup for state specific PIP optional behaviors 
+    <behavior id="basicPIPReadOnlyNY" title="Make Basic PIP Read-Only in NY">
+        <description>Basic PIP Coverage is compulsory in NY.  We make the field read-only and alter the list to a single option via another behavior.</description>
+        <do action="alter">
+            <property name="readonly">true</property>
+        </do>
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('NY')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/PipCoverage</for>
+    </behavior>
+
+
+    <behavior id="includePIPOptionForMA" title="Include PIP Option in MA">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('MA')</preCondition>
+            <preCondition name="PipCoverage">YES</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/pipOptionMA</for>
+    </behavior>
+
+    <behavior id="includePIPStackingOptionForMN" title="Include Stacking Option PIP if in MN">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('MN')</preCondition>
+            <preCondition name="PipCoverage">YES</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/PIPStackingOption</for>
+    </behavior>
+
+    behaviors for principallyOperatedByEmployeesPIP
+    <behavior id="includeOperatedEmployeeForDE" title="Include Principally Operated By Employees if Vehicle Type is PP and in DE">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('DE')</preCondition>
+            <preCondition name="HotVehicleType">in('PP')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/PrincipallyOperatedbyEmployees</for>
+    </behavior>
+
+    <behavior id="includePrincipallyOperatedByEmployees" title="Include Principally Operated By Employees if PIP Coverage is equal YES, Vehicle type is equal to Private Passenger Use and in FL, HI, KY, MD, MI, MN, ND ,OR or UT">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('FL','HI', 'KY', 'MD', 'MI', 'MN', 'ND', 'OR', 'UT')</preCondition>
+            <preCondition name="HotVehicleType">in('PP')</preCondition>
+            <preCondition name="PipCoverage">YES</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoveragesPrincipallyOperatedbyEmployees</for>
+    </behavior>
+
+    <behavior id="includePrincipallyOperatedByEmployeesForNY" title="Include Principally Operated By Employees if PIP Coverage is equal YES, Vehicle type is Private Passenger and in NY">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('NY')</preCondition>
+            <preCondition name="HotVehicleType">in('PP')</preCondition>
+            <preCondition name="PipCoverage">YES</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/PrincipallyOperatedbyEmployees</for>
+    </behavior>
+
+    includes behaviors for PIP optional coverages. these are excluded above
+    <behavior id="includeNoFaultCovsForHI" title="Include Copayment Option, Additional Chiropractic Treatment Cov, Wage Loss Benefits and Managed Care Option if in HI">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('HI')</preCondition>
+            <preCondition name="PipCoverage">YES</preCondition>
+        </where>
+        @expunge
+        <for>*/vehicle/NoFaultCoverages/copaymentOption</for>
+        <for>*/vehicle/NoFaultCoverages/additionalChiropracticTreatmentCov</for>
+        
+        <for>*/vehicle/NoFaultCoverages/ManagedCareOption</for>
+        <for>*/vehicle/NoFaultCoverages/WorkLoss</for>
+        <for>*/vehicle/NoFaultCoverages/FuneralExpLimit</for>
+        <for>*/vehicle/NoFaultCoverages/AccDeathBenefitsLimit</for>
+    </behavior>
+
+    <behavior id="includeTortForKY" title="Include Tort Option No Fault Coverage if in KY">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('KY')</preCondition>
+            <preCondition name="PipCoverage">YES</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/TortOptionNoFaultCoverage</for>
+    </behavior>
+
+    <behavior id="includeTortForNJ" title="Include Tort Option No Fault Coverage if in NJ, vehicle type is Private Passenger, and PIP applies">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('NJ')</preCondition>
+            <preCondition name="HotVehicleType">in('PP')</preCondition>
+            <preCondition name="PipCoverageLimit">250000</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/TortOptionNoFaultCoverage</for>
+    </behavior>
+
+    <behavior id="includeMedicalExpensesForNJ" title="Include Medical Expenses if in NJ and PIP applies">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('NJ')</preCondition>
+            <preCondition name="PipCoverageLimit">250000</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/MedicalOnly</for>
+        <for>*/vehicle/NoFaultCoverages/HealthInsuranceOption</for>
+        @expunge
+        <for>*/vehicle/NoFaultCoverages/extendedMedicalExpenses</for>
+        
+    </behavior>
+@expunge
+    <behavior id="includeExtendedMedicalExpensesLimitForNJ" title="Include Extended Medical Expenses Limit if in NJ and PIP applies">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('NJ')</preCondition>
+            <preCondition name="PipCoverageLimit">250000</preCondition>
+            <preCondition name="extendedMedicalExpenses">YES</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/extendedMedicalExpensesLimit</for>
+    </behavior>
+
+    <behavior id="includeExtraordinaryMedicalBenefitsForPA" title="Include Extraordinary Medical Benefits if in PA">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('PA')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/extraordinaryMedicalBenefits</for>
+    </behavior>
+
+
+    <behavior id="includeTortForPA" title="Include Tort Option No Fault Coverage if in PA and vehicle type is Private Passenger">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('PA')</preCondition>
+            <preCondition name="HotVehicleType">in('PP')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/TortOptionNoFaultCoverage</for>
+    </behavior>
+
+    <behavior id="includeWorkersCompForCOML" title="Include Covered By Workers Compensation if PIP Coverage is equal YES, Vehicle type is equal to Truck, Tractor or Trailer and in FL, HI, KY, MC, MN, ND or UT">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('FL','HI', 'KY', 'MI', 'MN', 'ND', 'UT')</preCondition>
+            <preCondition name="HotVehicleType">in('COML')</preCondition>
+            <preCondition name="PipCoverage">YES</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/CoveredByWorkersCompensation</for>
+    </behavior>
+
+    <behavior id="includeWorkersCompForNYandCOML" title="Include Covered By Workers Compensation if PIP Coverage is equal YES, Vehicle type is equal to Truck, Tractor or Trailer and in NY">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('NY')</preCondition>
+            <preCondition name="HotVehicleType">in('COML')</preCondition>
+            <preCondition name="PipCoverage">YES</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/CoveredByWorkersCompensation</for>
+    </behavior>
+@expunge
+    <behavior id="includeOwnerOperatedForNYandTaxicabLimo" title="Include Owner Operated if PIP Coverage is equal YES, Vehicle type is Taxi or Limo and in NY">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('NY')</preCondition>
+            <preCondition name="VehicleBodyType">in('TAXI', 'LM')</preCondition>
+            <preCondition name="PipCoverage">YES</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/ownerOperated</for>
+    </behavior>
+
+    <behavior id="includeOwnerOperatedForFLandPIP" title="Include Owner Operated if PIP Coverage is equal YES and in FL">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('FL')</preCondition>
+            <preCondition name="PipCoverage">YES</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/ownerOperated</for>
+    </behavior>
+
+    <behavior id="includeOwnerOperatedForNYandPIP" title="Include Owner Operated if PIP Coverage is equal YES, Vehicle type is Taxi or Limo and in NY">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('NY')</preCondition>
+            <preCondition name="VehicleBodyType">in('TAXI', 'LM')</preCondition>
+            <preCondition name="PipCoverage">YES</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/ownerOperated</for>
+    </behavior>
+
+    <behavior id="includeEmployerFurnishedForFLandHIandVanPools" title="Include Employer Furnished if PIP Coverage is equal YES, Vehicle type is Van Pools and in FL or HI">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('FL','HI')</preCondition>
+            <preCondition name="VehicleBodyType">in('VANPE', 'VANPO')</preCondition>
+            <preCondition name="PipCoverage">YES</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/employerFurnished</for>
+    </behavior>
+
+    <behavior id="includeEmployerFurnishedForNYandVanPools" title="Include Employer Furnished if PIP Coverage is equal YES, Vehicle type is Van Pools and in NY">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('NY')</preCondition>
+            <preCondition name="VehicleBodyType">in('VANPE', 'VANPO')</preCondition>
+            <preCondition name="PipCoverage">YES</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/employerFurnished</for>
+    </behavior>
+
+    <behavior id="includeWorkersCompForPP" title="Include Covered By Workers Compensation if PIP Coverage is equal YES, Vehicle type is equal to Private Passenger and in FL">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('FL')</preCondition>
+            <preCondition name="HotVehicleType">in('PP')</preCondition>
+            <preCondition name="PipCoverage">YES</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/CoveredByWorkersCompensation</for>
+    </behavior>
+
+    <behavior id="includeEPIPForFL" title="Include Extended Personal Injury Protection if PIP Coverage is equal YES and in FL">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('FL')</preCondition>
+            <preCondition name="PipCoverage">YES</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/ExtendedPIPOption</for>
+    </behavior>
+@expunge
+    <behavior id="includeAdditionalBenefitsForPA" title="Include Additional First Party Benefits if in PA">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('PA')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/BasicFirstPartyBenefitsLimit</for>
+    </behavior>
+    <behavior id="includeCombinationBenefitsForPA" title="Include Combination First Party Benefits if in PA">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('PA')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/combinationFirstPartyBenefits</for>
+    </behavior>
+    PIP Exclusion of Work Loss
+    @expunge
+    <behavior id="includeExclusionOfWorkLossForFL_MI_MN" title="Include Exclusion Of Work Loss if PIP Coverage is equal YES and in FL, NI or MN">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('FL','MI','MN')</preCondition>
+            <preCondition name="PipCoverage">YES</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/exclusionOfWorkLoss</for>
+    </behavior>
+    <behavior id="alterExclusionOfWorkLossIdForFL" title="Alter Exclusion of Work Loss Id for FL">
+        <do action="alter">
+            <property name="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionTypeCd='Opt1'].OptionCd</property>
+        </do>
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('FL')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/exclusionOfWorkLoss</for>
+    </behavior>
+    <behavior id="alterExclusionOfWorkLossGroupIdForFL" title="Alter Exclusion of Work Loss Id for FL">
+        <do action="alter">
+            <property name="groupId">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionTypeCd='Opt1']</property>
+        </do>
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('FL')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/exclusionOfWorkLoss</for>
+    </behavior>
+    <behavior id="alterExclusionOfWorkLossIdForMN" title="Alter Exclusion of Work Loss Id for MN">
+        <do action="alter">
+            <property name="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionTypeCd='Opt3'].OptionCd</property>
+        </do>
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('MN')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/exclusionOfWorkLoss</for>
+    </behavior>
+    <behavior id="alterExclusionOfWorkLossGroupIdForMN" title="Alter Exclusion of Work Loss Id for MN">
+        <do action="alter">
+            <property name="groupId">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionTypeCd='Opt3']</property>
+        </do>
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('MN')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/exclusionOfWorkLoss</for>
+    </behavior>
+
+    <behavior id="includeIncomeLevelPIP" title="Include Income Level in MI">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('MI')</preCondition>
+            <preCondition name="PipCoverage">YES</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/IncomeLevelPIP</for>
+        <for>*/vehicle/NoFaultCoverages/PropertyProtection</for>
+        <for>*/vehicle/NoFaultCoverages/LimitedPropertyDamageLimit</for>
+    </behavior>
+@expunge
+    <behavior id="includeExclusionLossIncomeForUT" title="Include Exclusion Of Loss Of Income if PIP Coverage is equal YES and in UT">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('UT')</preCondition>
+            <preCondition name="PipCoverage">YES</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/exclusionOfLossOfIncome</for>
+    </behavior>
+
+    <behavior id="includePIPSingleLimitForDE" title="Include PIP Single Limit if in DE and pipLimit is CSL">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('DE')</preCondition>
+            <preCondition name="pipLimitOption">CSL</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/pipLimitOptionSingle</for>
+        <for>*/vehicle/NoFaultCoverages/additionalPIPSingleLimit</for>
+    </behavior>
+
+    <behavior id="includePIPSplitLimitForDE" title="Include PIP Split Limit if in DE and pipLimit is SPL">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('DE')</preCondition>
+            <preCondition name="pipLimitOption">SPL</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/pipLimitOptionSplit</for>
+        <for>*/vehicle/NoFaultCoverages/additionalPIPSplitLimit</for>
+    </behavior>
+
+    <behavior id="includeAdditionalPIPLimit" title="Include Additional PIP Limit if PipCoverage is YES and in Fl or HI">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('FL','HI')</preCondition>
+            <preCondition name="PipCoverage">YES</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/additionalPIPLimit</for>
+    </behavior>
+
+    <behavior id="includePIPifNotMCinND" title="Include PIP if Vehicle Type !='Motorcycles' and in ND">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('ND')</preCondition>
+            <preCondition name="VehicleBodyType">!in('MC')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/PipCoverage</for>
+    </behavior>
+@expunge
+    <behavior id="includeAdditionalPIPOption" title="Include Additional PIP Limit if PipCoverage is YES and in KS, KY, MN, ND, or UT">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('KS', 'KY', 'MN', 'ND', 'UT')</preCondition>
+            <preCondition name="PipCoverage">YES</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/additionalPIPOption</for>
+    </behavior>
+
+    <behavior id="includeAdditionalPIPOptionForNJ" title="Include Additional PIP Limit if PipCoverageLimit is YES and in NJ">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('NJ')</preCondition>
+            <preCondition name="PipCoverageLimit">250000</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/additionalPIPOption</for>
+    </behavior>
+
+    TODO: write for DE, KY, NY
+    <behavior id="includeDeductibleForFL_HI_MA" title="Include Deductible No Fault Coverage if in Fl, HI and MA">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('FL','HI', 'MA')</preCondition>
+            <preCondition name="PipCoverage">YES</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/DeductibleNoFaultCov</for>
+    </behavior>
+
+    <behavior id="includeDeductibleForNJ" title="Include Deductible No Fault Coverage if PipCoverageLimit is YES and in NJ">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('NJ')</preCondition>
+            <preCondition name="PipCoverageLimit">250000</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/DeductibleNoFaultCov</for>
+    </behavior>
+@expunge
+    <behavior id="includeCoordWorkLossMedExpPIP" title="Include Coordination of Work Loss/Medical Expense">
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('MI')</preCondition>
+            <preCondition name="PipCoverage">YES</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/coordWorkLossMedExpPIP</for>
+    </behavior>
+
+    <behavior id="includeAddedPIPCoveragesForNY" title="Include Added PIP Coverages for NY">
+        <description>Include the added PIP coverages for NY.  Basic PIP is automatically included.</description>
+        <do action="include" />
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('NY')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/additionalPIPNY</for>
+        <for>*/vehicle/NoFaultCoverages/pipWorkLossCoordination</for>
+        <for>*/vehicle/NoFaultCoverages/pipMedicalExpenseElimination</for>
+    </behavior>
+
+    end include behaviors for PIP optional coverages
+
+    alter help text behaviors
+   @expunge
+     <behavior id="alterPIPHelpTextForAR" title="Alter PIP Help Text for Arkansas">
+        <do action="alter">
+            <property name="helpText">Basic Limits Include Medical: $5,000 Work Loss: $140 per week Essential Services: $70 per week Death Benefits: $5,000</property>
+        </do>
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('AR')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/PipCoverageOptionCd</for>
+    </behavior>
+
+    <behavior id="alterPIPHelpTextForKS" title="Alter PIP Help Text for Kansas">
+        <do action="alter">
+            <property name="helpText">Basic Limits Include&#10;Medical: $4,500 Rehabilitation: $4,500 Funeral: $2,000 Work Loss: $900 per month Essential Services: $25 per day Survivor Benefits: $900 per month maximum and $25 per day Benefit Period: 1 Year</property>
+        </do>
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('KS')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/PipCoverage</for>
+    </behavior>
+
+    <behavior id="alterPIPHelpTextForKY" title="Alter PIP Help Text for Kentucky">
+        <do action="alter">
+            <property name="helpText">Basic Limits Include Aggregate: $10,000 per person per accident (includes medical, rehab) Funeral: $1,000 Work Loss: $200 per week</property>
+        </do>
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('KY')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/PipCoverage</for>
+    </behavior>
+
+    <behavior id="alterPIPHelpTextForHI" title="Alter PIP Help Text for Hawaii">
+        <do action="alter">
+            <property name="helpText">Medical: $10,000 per person per accident</property>
+        </do>
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('KY')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/PipCoverage</for>
+    </behavior>
+
+    <behavior id="alterPIPHelpTextForMD" title="Alter PIP Help Text for Maryland">
+        <do action="alter">
+            <property name="helpText">Basic Limits Include Aggregate: $2,500 Medical: $2,500 Work Loss: 85 percent of the loss of gross income incurred within 3 years Essential Services</property>
+        </do>
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('MD')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/PipCoverage</for>
+    </behavior>
+
+    <behavior id="alterPIPHelpTextForMI" title="Alter PIP Help Text for Michigan">
+        <do action="alter">
+            <property name="helpText">Basic Limits Include Property Damage: $1 million maximum per accident Medical: No maximum dollar amount for reasonable and necessary medical expenses Funeral: $1,750 Work Loss: Up to 85 percent of an insured's loss of income/up to $4,948 for any 30 day period Essential Services: $20 per day Survivor Benefits: Up to $4,948 for any 30-day period</property>
+        </do>
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('MI')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/PipCoverage</for>
+    </behavior>
+
+    <behavior id="alterPIPHelpTextForMN" title="Alter PIP Help Text for Minnesota">
+        <do action="alter">
+            <property name="helpText">Basic Limits Include Aggregate: $20,000 maximum for work loss, essential services, funeral, and survivor benefits; $40,000 overall aggregate Medical: $20,000 Funeral: $2,000 Work Loss: Up to 85 percent of loss of gross income/up to $250 per week Essential Services: Up to $200 per week Survivor Benefits: Not to exceed $200 per week for loss of income and $200 per week for expenses</property>
+        </do>
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('MN')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/PipCoverage</for>
+    </behavior>
+
+    <behavior id="alterPIPHelpTextForND" title="Alter PIP Help Text for North Dakota">
+        <do action="alter">
+            <property name="helpText">Basic Limits Include Aggregate: $30,000 Medical: Included in Aggregate Rehabilitation: Included in Aggregate Funeral: $3,500 Work Loss: 85 percent of loss of gross income/up to $150 per week Essential Services: Up to $15 per day Survivor Benefits: $150 per week</property>
+        </do>
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('ND')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/PipCoverage</for>
+    </behavior>
+
+    <behavior id="alterPIPHelpTextForOR" title="Alter PIP Help Text for Oregon">
+        <do action="alter">
+            <property name="helpText">Basic Limits Include Medical: $15,000 Funeral: $5,000 Work Loss: 70 percent of the insured's loss of income/up to $1,250 per month Essential Services: $30 per day Miscellaneous: $25 per day for child care expenses (max $750)</property>
+        </do>
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('OR')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/PipCoverage</for>
+    </behavior>
+
+    <behavior id="alterPIPHelpTextForPR" title="Alter PIP Help Text for Puerto Rico">
+        <do action="alter">
+            <property name="helpText">Basic Limits Include Medical Payments: Medical, hospital, and rehabilitation expenses for a period of 2 consecutive years Funeral: $1,000 Work Loss (other than homemaker): $100/week (first year), $50/week (second year) Work Loss (homemaker): $25/week (16 weeks) - total disability only Death: $25,000 max/$10,000 per person (primary dependents), $5,000 max/$1,000 per person (secondary dependents) Dismemberment: $10,000</property>
+        </do>
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('PR')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/PipCoverage</for>
+    </behavior>
+
+    <behavior id="alterPIPHelpTextForPA" title="Alter Tort Help Text for Pennsylvania">
+        <do action="alter">
+            <property name="helpText">The Pennsylvania no-fault statute also provides for each owner of a currently registered private passenger auto in the state to elect a tort option, i.e., to be exempted from tort liability for noneconomic damages unless the bodily injuries suffered exceed the verbal threshold (limited tort option) or to be fully liable for noneconomic damages (full tort option).</property>
+        </do>
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('PA')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/TortOptionNoFaultCoverage</for>
+    </behavior>
+
+    <behavior id="alterTortOptionHelpTextForNJ" title="Alter Tort Help Text for New Jersey">
+        <do action="alter">
+            <property name="helpText">The New Jersey no-fault statute provides for every owner, registrant, operator, or occupant of a private passenger type auto in the state to elect a tort option (i.e., to be exempted from tort liability for noneconomic loss with a verbal threshold or to be liable for noneconomic loss).</property>
+        </do>
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('NJ')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/TortOptionNoFaultCoverage</for>
+    </behavior>
+@expunge
+    <behavior id="alterExclusionOfWorkLossHelpTextForMI" title="Alter Exclusion of Work Loss Help Text for MI">
+        <do action="alter">
+            <property name="helpText">A person who is 60 years of age or older who would not be eligible to receive work loss benefits may waive coverage for work loss benefits by signing a waiver on a form provided by the insurer in exchange for a reduced premium.</property>
+        </do>
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('MI')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/exclusionOfWorkLoss</for>
+    </behavior>
+    
+    end alter help text behaviors
+
+    alter code list behaviors
+   @expunge 
+    <behavior id="alterPIPCodeListForNY" title="Alter Pip Coverage code list for New York">
+        <do action="alter">
+            <property name="optionListReferenceTag">xmlreader:autobCodeListRef.xml:PipCoverageNY</property>
+        </do>
+        <where>
+            <preCondition name="CommlAutoLineBusiness.CommlRateState.StateProvCd">in('NY')</preCondition>
+        </where>
+        <for>*/vehicle/NoFaultCoverages/PipCoverage</for>
+    </behavior>
+
+  -->
+</transactionDefinitionBehavior>

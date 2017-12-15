@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transaction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" title="Account" 
+	id="account" 
+	target="Account" 
+	type="account" 
+	lob="ACCOUNT" 
+	supportsFastForward="false" fieldValidations="enabled" 
+	mappingId="accountMap" 
+	xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/definition/transactionDefinitionFile.xsd" 
+	autoMaintainIdAttributes="true" supportsDefaults="false">
+  <description>Account TDF</description>
+  <importPage id="ACCOUNT.accountInformation" fileName="accountPages.xml" />
+  <importPage id="ACCOUNT.location" fileName="accountPages.xml" /> 
+  <importPage id="ACCOUNT.people" fileName="accountPages.xml" />
+  <importPage id="ACCOUNT.producer" fileName="accountPages.xml" />
+</transaction>
+

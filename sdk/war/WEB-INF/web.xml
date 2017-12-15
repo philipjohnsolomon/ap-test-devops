@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+
+	<display-name>AgencyPortal Version 5.0</display-name>
+	<description>A sample application built on AgencyPortal 5.0 to demonstrate features.</description>
+	
+	<!-- Context "listeners" and their associated context parameters are where the bootstrap magic happens -->
+	<context-param>
+		<param-name>PROPERTY_FILE_NAME</param-name>
+		<param-value>/WEB-INF/framework</param-value>
+	</context-param>
+	<context-param>
+		<param-name>ENV_ID</param-name>
+		<param-value>agencyport.env</param-value>
+	</context-param>
+	<listener>
+		<description>Bootstraps the integration kit framework and the agencyportal framework</description>
+		<listener-class>com.agencyport.intkit.core.servlets.IntegrationInitializerServletContextListener</listener-class>
+		<!-- 
+			if you don't have integration kit, use this listener-class instead:
+			<listener-class>com.agencyport.servlets.shared.InitializerServletContextListener</listener-class>
+		 -->
+	</listener>
+	
+	<filter>
+		<description>AgencyPort Common Security Interface Servlet Filter</description>
+		<display-name>ACSISecurityFilter</display-name>
+		<filter-name>ACSISecurityFilter</filter-name>
+		<!-- 
+		<filter-class>com.agencyport.security.filter.builtin.PortalSecurityFilter</filter-class>
+		 -->
+		<filter-class>com.agencyport.intkit.core.security.filter.IntKitSecurityFilter</filter-class>
+		<init-param>
+			<description>Exclusion filter is expressed as a list of tokens, each entry delimited by a semi-colon. The basic
+			algorithm checks the request URI against each of these items and circumvents the usual security screening done against
+			the request if the URI contains any one of the entries in this list.
+			</description>
+			<param-name>security_filter_exclusion_list</param-name>
+			<param-value>solr;Logon;.js;.gif;.ico;.css;.png;.jpg;.ttf;.woff;DisplayForgotPassword;ProcessForgotPassword;DisplaySignupForm;ProcessSignupForm;PolicyAdminSimulator;EntryPointServlet;Install</param-value>
+		</init-param>
+	</filter>
+ 	<filter>
+		<description>RIA Security Filter for SOAP</description>
+		<display-name>SOAPSecurityFilter</display-name>
+		<filter-name>SOAPSecurityFilter</filter-name>
+		<filter-class>com.agencyport.intkit.core.security.soap.SOAPSecurityFilter</filter-class>
+	</filter>	
+	<filter>
+		<description>Solr Filter</description>
+		<display-name>SolrFilter</display-name>
+		<filter-name>SolrFilter</filter-name>
+		<filter-class>com.agencyport.solr.filter.SolrFilter</filter-class>
+	</filter>
+	<filter>
+		<description>AgencyPort Toolkit Filter</description>
+		<display-name>ToolkitFilter</display-name>
+		<filter-name>ToolkitFilter</filter-name>
+		<filter-class>com.agencyport.toolkit.servlets.ToolkitServletFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>ACSISecurityFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>ToolkitFilter</filter-name>
+		<url-pattern>/DisplayHomePage</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>ToolkitFilter</filter-name>
+		<url-pattern>/DisplayWorkInProgress</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>ToolkitFilter</filter-name>
+		<url-pattern>/DisplayReports</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>SolrFilter</filter-name>
+		<url-pattern>/solr/worklist/*</url-pattern>
+		<url-pattern>/solr/account/*</url-pattern>		
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>SOAPSecurityFilter</filter-name>
+		<url-pattern>/PortalTSWorkflowService</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>SOAPSecurityFilter</filter-name>
+		<url-pattern>/SynchronizationService</url-pattern>
+	</filter-mapping>	
+	<!-- SOLR -->
+	<!-- Any path (name) registered in solrconfig.xml will be sent to that filter -->
+	<filter>
+		<filter-name>SolrRequestFilter</filter-name>
+		<filter-class>com.agencyport.solr.APSolrDispatchFilter</filter-class>
+		<!-- If you are wiring Solr into a larger web application which controls 
+			the web context root, you will probably want to mount Solr under a path prefix 
+			(app.war with /app/solr mounted into it, for example). You will need to put 
+			this prefix in front of the SolrDispatchFilter url-pattern mapping too (/solr/*), 
+			and also on any paths for legacy Solr servlet mappings you may be using. 
+			For the Admin UI to work properly in a path-prefixed configuration, the admin 
+			folder containing the resources needs to be under the app context root named 
+			to match the path-prefix. For example: .war xxx js main.js -->
+		<init-param>
+			<param-name>path-prefix</param-name>
+			<param-value>/solr</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<!-- NOTE: When using multicore, /admin JSP URLs with a core specified 
+			such as /solr/coreName/admin/stats.jsp get forwarded by a RequestDispatcher 
+			to /solr/admin/stats.jsp with the specified core put into request scope keyed 
+			as "org.apache.solr.SolrCore". It is unnecessary, and potentially problematic, 
+			to have the SolrDispatchFilter configured to also filter on forwards. Do 
+			not configure this dispatcher as <dispatcher>FORWARD</dispatcher>. -->
+		<filter-name>SolrRequestFilter</filter-name>
+		<url-pattern>/solr/*</url-pattern>
+	</filter-mapping>
+	<!-- SOLR -->
+	<listener>
+		<description>Http Session Listener</description>
+		<display-name>APSessionListener</display-name>
+		<listener-class>com.agencyport.webshared.APSessionListener</listener-class>
+	</listener>
+   
+	
+    <servlet>
+        <servlet-name>jersey</servlet-name>
+        <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>javax.ws.rs.Application</param-name>
+            <param-value>com.agencyport.api.RestfulAPIApplication</param-value>
+        </init-param>
+        <init-param>
+            <param-name>jersey.config.server.provider.packages</param-name>
+            <param-value>com.agencyport.api</param-value>
+        </init-param>
+        <init-param>
+        	<!-- Send X-Jersey-Tracing-Accept header to enable on demand tracing -->
+            <param-name>jersey.config.server.tracing.type</param-name>
+            <param-value>ON_DEMAND</param-value>
+        </init-param>
+        <init-param>
+            <param-name>jersey.config.server.monitoring.statistics.enabled</param-name>
+            <param-value>false</param-value>
+        </init-param>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+	<servlet>
+		<description>Displays the logon form</description>
+		<display-name>DisplayLogonForm</display-name>
+		<servlet-name>DisplayLogonForm</servlet-name>
+		<servlet-class>com.agencyport.security.servlets.DisplayLogonForm</servlet-class>
+	</servlet>
+	<servlet>
+		<description>The servlet to determine if an Install is taking place or normal portal access</description>
+		<display-name>EntryPointServlet</display-name>
+		<servlet-name>EntryPointServlet</servlet-name>
+		<servlet-class>com.agencyport.shared.servlets.EntryPointServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>Displays the install page</description>
+		<display-name>Install</display-name>
+		<servlet-name>Install</servlet-name>
+		<servlet-class>com.agencyport.product.install.servlets.InstallServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>Main Toolkit display servlet</description>
+		<display-name>ToolkitFrontServlet</display-name>
+		<servlet-name>ToolkitFrontServlet</servlet-name>
+		<servlet-class>com.agencyport.toolkit.servlets.ToolkitFrontServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>Process the logon form submit</description>
+		<display-name>ProcessLogonForm</display-name>
+		<servlet-name>ProcessLogonForm</servlet-name>
+		<servlet-class>com.agencyport.security.servlets.ProcessLogonForm</servlet-class>
+	</servlet>
+	<servlet>
+		<description>Process the logoff request</description>
+		<display-name>ProcessLogoff</display-name>
+		<servlet-name>ProcessLogoff</servlet-name>
+		<servlet-class>com.agencyport.security.servlets.ProcessLogoff</servlet-class>
+	</servlet>
+	<servlet>
+		<description>The servlet to display the home page.</description>
+		<display-name>DisplayHomePage</display-name>
+		<servlet-name>DisplayHomePage</servlet-name>
+		<servlet-class>com.agencyport.shared.servlets.DisplayHomePage</servlet-class>
+	</servlet>
+	<servlet>
+		<description>WIP</description>
+		<display-name>DisplayWorkInProgress</display-name>
+		<servlet-name>DisplayWorkInProgress</servlet-name>
+		<servlet-class>com.agencyport.servlets.worklist.WorkItemServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>WIP JSON</description>
+		<display-name>DisplayWorkInProgressAsJSON</display-name>
+		<servlet-name>DisplayWorkInProgressAsJSON</servlet-name>
+		<servlet-class>com.agencyport.servlets.worklist.WorkItemServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>LaunchWorkItem</description>
+		<display-name>LaunchWorkItem</display-name>
+		<servlet-name>LaunchWorkItem</servlet-name>
+		<servlet-class>com.agencyport.servlets.worklist.WorkItemServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>WorkItemAction</description>
+		<display-name>WorkItemAction</display-name>
+		<servlet-name>WorkItemAction</servlet-name>
+		<servlet-class>com.agencyport.servlets.worklist.WorkItemServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>Clean out all the old work item specific session data</description>
+		<display-name>CleanSession</display-name>
+		<servlet-name>CleanSession</servlet-name>
+		<servlet-class>com.agencyport.servlets.shared.CleanSession</servlet-class>
+	</servlet>
+	<servlet>
+		<description>Displays the Forgot password page</description>
+		<display-name>DisplayForgotPassword</display-name>
+		<servlet-name>DisplayForgotPassword</servlet-name>
+		<servlet-class>com.agencyport.security.servlets.DisplayForgotPassword</servlet-class>
+	</servlet>
+	<servlet>
+		<description>Processes the Forgot password page</description>
+		<display-name>ProcessForgotPassword</display-name>
+		<servlet-name>ProcessForgotPassword</servlet-name>
+		<servlet-class>com.agencyport.security.servlets.ProcessForgotPassword</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>FrontServlet</servlet-name>
+		<servlet-class>com.agencyport.servlets.base.FrontServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DebugProvider</servlet-name>
+		<servlet-class>com.agencyport.servlets.domXML.DebugProvider</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>IntrapageDTRServlet</servlet-name>
+		<servlet-class>com.agencyport.servlets.base.IntrapageDTRServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>Policy Admin Simulator for Testing Endorsements</description>
+		<display-name>PolicyAdminSimulator</display-name>
+		<servlet-name>PolicyAdminSimulator</servlet-name>
+		<servlet-class>com.agencyport.policyadmin.PolicyAdminSimulator</servlet-class>
+	</servlet>
+	<servlet>
+		<description>The servlet serves up AM chart report data</description>
+		<display-name>ReportServlet</display-name>
+		<servlet-name>ReportServlet</servlet-name>
+		<servlet-class>com.agencyport.dashboard.servlets.ReportServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>The servlet serves up AM chart report data</description>
+		<display-name>DisplayReports</display-name>
+		<servlet-name>DisplayReports</servlet-name>
+		<servlet-class>com.agencyport.dashboard.servlets.ReportServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>The servlet perform account search.</description>
+		<display-name>AccountSearchServlet</display-name>
+		<servlet-name>AccountSearchServlet</servlet-name>
+		<servlet-class>com.agencyport.account.servlets.AccountSearchServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>Personal Auto Rating Servlet</description>
+		<display-name>PersAutoRatingServlet</display-name>
+		<servlet-name>PersAutoRatingServlet</servlet-name>
+		<servlet-class>com.agencyport.persauto.servlets.PersAutoRatingServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>The servlet used to handle requests for Solr batch updating.</description>
+		<display-name>SolrBatchUpdate</display-name>
+		<servlet-name>SolrBatchUpdate</servlet-name>
+		<servlet-class>com.agencyport.servlets.base.SolrBatchUpdateServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>The servlet used to prepare Solr requests for passing through the Security Filter.</description>
+		<display-name>SolrSecurityServlet</display-name>
+		<servlet-name>SolrSecurityServlet</servlet-name>
+		<servlet-class>com.agencyport.solr.manager.SolrSecurityServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>The servlet used to upload files to..</description>
+		<display-name>FileUploadServlet</display-name>
+		<servlet-name>FileUploadServlet</servlet-name>
+		<servlet-class>com.agencyport.intkit.core.fileupload.FileUploadServlet</servlet-class>
+	</servlet>
+	  <servlet>
+	    <description>Integration Kit SOAP Web Service Request Processor</description>
+	    <display-name>SOAPListener</display-name>
+	    <servlet-name>SOAPListener</servlet-name>
+	    <servlet-class>com.agencyport.ws.SOAPListener</servlet-class>
+	  </servlet>
+	<servlet>
+		<description>This servlet handles the request for Valen Reports</description>
+		<display-name>AnalyticsReportsServlet</display-name>
+		<servlet-name>AnalyticsReportsServlet</servlet-name>
+		<servlet-class>com.agencyport.intkit.analytics.report.servlets.AnalyticsReportServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This servlet handles the request for Turnstile Snippets</description>
+		<display-name>SnippetImageRenderer</display-name>
+		<servlet-name>SnippetImageRenderer</servlet-name>
+		<servlet-class>com.agencyport.turnstile.SnippetImageRenderer</servlet-class>
+	</servlet>	  
+	  
+    <servlet-mapping>
+        <servlet-name>jersey</servlet-name>
+        <url-pattern>/api/*</url-pattern>
+    </servlet-mapping>
+    
+	
+	  <servlet-mapping>
+	    	<servlet-name>SOAPListener</servlet-name>
+	    	<url-pattern>/PortalTSWorkflowService</url-pattern>
+	  </servlet-mapping> 
+	  <servlet-mapping>
+	    	<servlet-name>SOAPListener</servlet-name>
+	    	<url-pattern>/SynchronizationService</url-pattern>
+	  </servlet-mapping> 
+	<servlet-mapping>
+		<servlet-name>FileUploadServlet</servlet-name>
+		<url-pattern>/FileUploadServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>SolrBatchUpdate</servlet-name>
+		<url-pattern>/SolrBatchUpdate</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SolrSecurityServlet</servlet-name>
+		<url-pattern>/SolrSecurityServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ReportServlet</servlet-name>
+		<url-pattern>/ReportServlet</url-pattern>
+	</servlet-mapping>
+		<servlet-mapping>
+		<servlet-name>DisplayReports</servlet-name>
+		<url-pattern>/DisplayReports</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PolicyAdminSimulator</servlet-name>
+		<url-pattern>/PolicyAdminSimulator</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DebugProvider</servlet-name>
+		<url-pattern>/DebugProvider</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Install</servlet-name>
+		<url-pattern>/Install</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>EntryPointServlet</servlet-name>
+		<url-pattern>/EntryPointServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DisplayLogonForm</servlet-name>
+		<url-pattern>/DisplayLogonForm</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ToolkitFrontServlet</servlet-name>
+		<url-pattern>/Toolkit</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ToolkitFrontServlet</servlet-name>
+		<url-pattern>/ToolkitFrontServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ProcessLogonForm</servlet-name>
+		<url-pattern>/ProcessLogonForm</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ProcessLogoff</servlet-name>
+		<url-pattern>/ProcessLogoff</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DisplayHomePage</servlet-name>
+		<url-pattern>/DisplayHomePage</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DisplayWorkInProgress</servlet-name>
+		<url-pattern>/DisplayWorkInProgress</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DisplayWorkInProgressAsJSON</servlet-name>
+		<url-pattern>/DisplayWorkInProgressAsJSON</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LaunchWorkItem</servlet-name>
+		<url-pattern>/LaunchWorkItem</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>WorkItemAction</servlet-name>
+		<url-pattern>/WorkItemAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CleanSession</servlet-name>
+		<url-pattern>/CleanSession</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FrontServlet</servlet-name>
+		<url-pattern>/FrontServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>IntrapageDTRServlet</servlet-name>
+		<url-pattern>/IntrapageDTRServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DisplayForgotPassword</servlet-name>
+		<url-pattern>/DisplayForgotPassword</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ProcessForgotPassword</servlet-name>
+		<url-pattern>/ProcessForgotPassword</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AccountSearchServlet</servlet-name>
+		<url-pattern>/AccountSearchServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PersAutoRatingServlet</servlet-name>
+		<url-pattern>/PersAutoRatingServlet</url-pattern>
+	</servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AnalyticsReportsServlet</servlet-name>
+        <url-pattern>/AnalyticsReportsServlet</url-pattern>
+    </servlet-mapping>
+	<servlet-mapping>
+	  	<servlet-name>SnippetImageRenderer</servlet-name>
+	  	<url-pattern>/SnippetImageRenderer</url-pattern>
+	</servlet-mapping>
+	
+	<session-config>
+		<session-timeout>60</session-timeout>
+	</session-config>
+
+	<mime-mapping>
+		<extension>txt</extension>
+		<mime-type>text/plain</mime-type>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>html</extension>
+		<mime-type>text/html</mime-type>
+	</mime-mapping>
+	<welcome-file-list>
+		<welcome-file>EntryPointServlet</welcome-file>
+	</welcome-file-list>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/error/404.jsp</location>
+	</error-page>
+</web-app>

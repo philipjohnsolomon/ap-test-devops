@@ -1,0 +1,96 @@
+<fields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/pdf/pdfDefinitions.xsd" >
+<!--  OperatorExperienceCd not defined in schema
+	<field>
+		<eLabel>Operator_Experience</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlVehSupplement.OperatorExperienceRestrictionCd</xpath>
+	</field>-->
+	 <field>
+		<eLabel>VIN</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.VehIdentificationNumber</xpath>
+	</field>
+	<field>
+		<eLabel>Truck_Vehicle_Type</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlVehSupplement.VehTypeCd</xpath>
+	</field>
+	<field>
+		<eLabel>Number_of_Driving_Instructors</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlVehSupplement.NumDrivingInstructors</xpath>
+	</field>
+	<field>
+		<eLabel>Dual_Controls</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlVehSupplement.DualControlsInd</xpath>
+	</field>
+	<field>
+		<eLabel>Motorcycle_Engine_Size</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.Displacement[UnitMeasurementCd='CMQ'].NumUnits</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_Class</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlVehSupplement.SpecialClassCd</xpath>
+	</field>
+	<field type="question">
+		<eLabel>Physical_Damage_Only</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlVehSupplement.QuestionAnswer[QuestionCd='AUTOB99'].YesNoCd</xpath>
+	</field>
+	<field>
+		<eLabel>Rental_Reimb _Daily_Amount</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='RREIM'].Limit[LimitAppliesToCd='PerDay'].FormatInteger</xpath>
+	</field>
+	<field>
+		<eLabel>Mobile_Home_Contents_Coverage</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='MHE'].CommlCoverageSupplement.CoverageSubCd</xpath>
+	</field>
+	<field>
+		<eLabel>Mobile_Home_Contents_Cov_Limit</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='MHE'].Limit.FormatInteger</xpath>
+	</field>
+	<field>
+		<eLabel>Excl_Cov_Volunteer_Workers</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlVehSupplement.IndividualLiabilityForVolunteerInd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vol_FFWorker_Inj_Excl_Buyback</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='VFWEB'].CoverageCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vol_FFWorker_Inj_Excl_Endt</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='VFWEE'].CoverageCd</xpath>
+	</field>
+	<field>
+		<eLabel>Liability_Deductible</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='CSL'].Deductible.FormatInteger</xpath>
+	</field>
+	<field>
+		<eLabel>Liability_Deductible_Applies_To</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='CSL'].Deductible.DeductibleAppliesToCd</xpath>
+	</field>
+	<field>
+		<eLabel>Defensive_Driving_Course_Date</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='DD'].EffectiveDt</xpath>
+	</field>
+	<field>
+		<eLabel>Towing_and_Labor_Limit</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='TL'].Limit.FormatInteger</xpath>
+	</field>
+	<field>
+		<eLabel>Rental_Reimb_Days</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='RREIM'].Option.OptionValue</xpath>
+	</field>
+	<field>
+		<eLabel>AudioVisualData_CostNew</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='AV'].Option.OptionValue</xpath>
+	</field>
+	 <field type="checkbox">
+		<eLabel>TapesRecordsDiscs_Coverage</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlVehSupplement.CommlCoverage[CoverageCd='TR'].CoverageCd</xpath>
+	</field> 
+	
+	<field type="checkbox">
+		<eLabel>Auto_Loan_Lease_Gap_Coverage</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='GAP'].CoverageCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Farm_Labor_Contractors</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='LFEMP'].CoverageCd</xpath>
+	</field>
+</fields>

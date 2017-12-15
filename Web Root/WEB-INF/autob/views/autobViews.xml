@@ -1,0 +1,987 @@
+<views xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/view/view.xsd">
+    <!-- autobViews.xml -->
+    <!-- Vehicles & Coverages -->
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMCSL_UMISP'].Option[OptionTypeCd='Opt1'].OptionCd" title="UM Stacking Mutually Exclusive View" type="standard" deleteMode="onEmptyValue">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMCSL'].Option[OptionTypeCd='Opt1'].OptionCd</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UNCSL'].Option[OptionTypeCd='Opt1'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMCSL'].Option[OptionTypeCd='Opt1']</deleteField>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UNCSL'].Option[OptionTypeCd='Opt1']</deleteField>
+        </fieldSet>
+    </view>
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UNCSL_UNDSP'].Option[OptionTypeCd='Opt1'].OptionCd" title="UNCSL_UNDSP Stacking Mutually Exclusive View" type="standard" deleteMode="onEmptyValue">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMISP'].Option[OptionTypeCd='Opt1'].OptionCd</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UNDSP'].Option[OptionTypeCd='Opt1'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMISP'].Option[OptionTypeCd='Opt1']</deleteField>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UNDSP'].Option[OptionTypeCd='Opt1']</deleteField>
+        </fieldSet>
+    </view>
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMCSL_UMISP'].Option.OptionCd" title="UM Individual or Married Couple Exclusive View" type="mutuallyExclusiveFieldSets" deleteMode="onEmptyValue">
+        <fieldSet searchId="UMCSL">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMCSL'].Option[OptionTypeCd='Opt2'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMCSL'].Option[OptionTypeCd='Opt2']</deleteField>
+        </fieldSet>
+        <fieldSet searchId="UMISP">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMISP'].Option[OptionTypeCd='Opt2'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMISP'].Option[OptionTypeCd='Opt2']</deleteField>
+        </fieldSet>
+    </view>
+    
+    <view id="UMSplitLimits" title="UMSplitLimits" type="standard" deleteMode="onEmptyValue">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMISP'].Limit[LimitAppliesToCd='PerPerson'].FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMISP'].Limit[LimitAppliesToCd='PerAcc'].FormatInteger</field>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMISP'].Limit</deleteField>
+        </fieldSet>
+    </view>
+    <view id="TradUMSplitLimit" title="TradUMSplitLimit" type="standard" deleteMode="onEmptyValue">
+        <fieldSet searchId="/">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMISP' &amp;&amp; Option.OptionCd='RA'].Limit[LimitAppliesToCd='PerPerson'].FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMISP' &amp;&amp; Option.OptionCd='RA'].Limit[LimitAppliesToCd='PerAcc'].FormatInteger</field>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMISP' &amp;&amp; Option.OptionCd='RA'].Limit</deleteField>
+        </fieldSet>
+    </view>
+    <view id="UMUIMLiabilityDeductible" title="UMUIMLiabilityDeductible" type="mutuallyExclusiveFieldSets" deleteMode="onEmptyValue">
+        <fieldSet searchId="UMCSL">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMCSL' &amp;&amp; Option.OptionCd='RA'].Deductible.FormatInteger</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMCSL' &amp;&amp; Option.OptionCd='RA'].Deductible.FormatInteger</deleteField>
+        </fieldSet>
+        <fieldSet searchId="UMISP">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMISP' &amp;&amp; Option.OptionCd='RA'].Deductible.FormatInteger</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMISP' &amp;&amp; Option.OptionCd='RA'].Deductible.FormatInteger</deleteField>
+        </fieldSet>
+    </view>
+    <view id="NewUMSplitLmits" title="NewUMSplitLmits" type="standard" deleteMode="onEmptyValue">
+        <fieldSet searchId="/">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMISP' &amp;&amp; Option.OptionCd='AO'].Limit[LimitAppliesToCd='PerPerson'].FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMISP' &amp;&amp; Option.OptionCd='AO'].Limit[LimitAppliesToCd='PerAcc'].FormatInteger</field>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMISP' &amp;&amp; Option.OptionCd='AO'].Limit</deleteField>
+        </fieldSet>
+    </view>
+    <view id="NewUMDeductible" title="NewUMDeductible" type="mutuallyExclusiveFieldSets" deleteMode="onEmptyValue">
+        <fieldSet searchId="UMCSL">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMCSL' &amp;&amp; Option.OptionCd='AO'].Deductible.FormatInteger</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMCSL' &amp;&amp; Option.OptionCd='AO'].Deductible.FormatInteger</deleteField>
+        </fieldSet>
+        <fieldSet searchId="UMISP">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMISP' &amp;&amp; Option.OptionCd='AO'].Deductible.FormatInteger</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMISP' &amp;&amp; Option.OptionCd='AO'].Deductible.FormatInteger</deleteField>
+        </fieldSet>
+    </view>
+    <view id="UIMSplitLimits" title="UIMSplitLimits" type="standard" deleteMode="onEmptyValue">
+        <fieldSet searchId="/">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UNDSP'].Limit[LimitAppliesToCd='PerPerson'].FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UNDSP'].Limit[LimitAppliesToCd='PerAcc'].FormatInteger</field>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UNDSP']</deleteField>
+        </fieldSet>
+    </view>
+    <view id="SupplementaryUMLimits" title="SupplementaryUMLimits" type="standard" deleteMode="onEmptyValue">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMSUM'].Limit[LimitAppliesToCd='PerPerson'].FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMSUM'].Limit[LimitAppliesToCd='PerAcc'].FormatInteger</field>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMSUM']</deleteField>
+        </fieldSet>
+    </view>
+    <view id="UMUIMSplitLimits" title="UMISP Coverage" type="standard" deleteMode="onEmptyValue">
+        <fieldSet searchId="/">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMISP'].Limit[LimitAppliesToCd='PerPerson'].FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMISP'].Limit[LimitAppliesToCd='PerAcc'].FormatInteger</field>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMISP'].Limit</deleteField>
+        </fieldSet>
+    </view>
+    <view id="UMUIMConversionOption" title="UMUIMConversionOption" type="mutuallyExclusiveFieldSets" deleteMode="onEmptyValue">
+        <fieldSet searchId="UMCSL">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMCSL'].Option[OptionCd='C']</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMCSL'].Option[OptionCd='C']</deleteField>
+        </fieldSet>
+        <fieldSet searchId="UMISP">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMISP'].Option[OptionCd='C']</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMISP'].Option[OptionCd='C']</deleteField>
+        </fieldSet>
+    </view>
+    <view id="PIPSplitLimits" title="PIPSplitLimits" type="standard" deleteMode="onEmptyValue">
+        <fieldSet searchId="/">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Limit[LimitAppliesToCd='PerPerson'].FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Limit[LimitAppliesToCd='PerAcc'].FormatInteger</field>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Limit</deleteField>
+        </fieldSet>
+    </view>
+    <view id="PIPSingleLimit" title="PIPSplitLimits" type="standard" deleteMode="onEmptyValue">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Limit.FormatInteger</field>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Limit</deleteField>
+        </fieldSet>
+    </view>
+    <view id="MedicalPaymentLimits" title="MedicalPaymentLimits" type="standard" deleteMode="onEmptyValue">
+        <fieldSet searchId="/">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='MEDEX'].Limit[LimitAppliesToCd='PerPerson'].FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='MEDEX'].Limit[LimitAppliesToCd='EachPed'].FormatInteger</field>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='MEDEX']</deleteField>
+        </fieldSet>
+    </view>
+    <view id="BasicFirstPartyBenefitsLimit" title="BasicFirstPartyBenefitsLimit" type="standard" deleteMode="onEmptyValue">
+        <fieldSet searchId="/">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='FPB'].Limit.FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='WLB'].Limit.FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='FEB'].Limit.FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='ADB'].Limit.FormatInteger</field>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='FPB']</deleteField>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='WLB']</deleteField>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='FEB']</deleteField>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='ADB']</deleteField>
+        </fieldSet>
+    </view>
+      <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='COMP_PERIL']" title="Other Than Collision Mutually Exclusive Coverage" type="mutuallyExclusiveFieldSets" deleteMode="onEmptyValue">
+        <fieldSet searchId="COMP">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='COMP'].CoverageCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='COMP']</deleteField>
+        </fieldSet>
+        <fieldSet searchId="PERIL">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PERIL'].CoverageCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PERIL']</deleteField>
+        </fieldSet>
+        <fieldSet searchId="PFIRE">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PFIRE'].CoverageCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PFIRE']</deleteField>
+        </fieldSet>
+        <fieldSet searchId="PFRTH">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PFRTH'].CoverageCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PFRTH']</deleteField>
+        </fieldSet>
+        <fieldSet searchId="LSPER">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='LSPER'].CoverageCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='LSPER']</deleteField>
+        </fieldSet>
+        <fieldSet searchId="ExcludingFallingThroughIce">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='ExcludingFallingThroughIce'].CoverageCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='ExcludingFallingThroughIce']</deleteField>
+        </fieldSet>
+        <fieldSet searchId="IncludingFallingThroughIce">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='IncludingFallingThroughIce'].CoverageCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='IncludingFallingThroughIce']</deleteField>
+        </fieldSet>
+    </view>
+  <!--   
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='COMP_PERIL'].Deductible.FormatInteger" title="Other Than Collision Mutually Exclusive Coverage" type="mutuallyExclusiveFieldSets" deleteMode="onEmptyValue">
+        <fieldSet searchId="COMP">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='COMP'].Deductible.FormatInteger</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='COMP'].Deductible.FormatInteger</deleteField>
+        </fieldSet>
+        <fieldSet searchId="PERIL">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PERIL'].Deductible.FormatInteger</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PERIL'].Deductible.FormatInteger</deleteField>
+        </fieldSet>
+        <fieldSet searchId="PFIRE">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PFIRE'].Deductible.FormatInteger</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PFIRE'].Deductible.FormatInteger</deleteField>
+        </fieldSet>
+        <fieldSet searchId="PFRTH">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PFRTH'].Deductible.FormatInteger</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PFRTH'].Deductible.FormatInteger</deleteField>
+        </fieldSet>
+        <fieldSet searchId="LSPER">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='LSPER'].Deductible.FormatInteger</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='LSPER'].Deductible.FormatInteger</deleteField>
+        </fieldSet>
+        <fieldSet searchId="ExcludingFallingThroughIce">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='ExcludingFallingThroughIce'].Deductible.FormatInteger</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='ExcludingFallingThroughIce'].Deductible.FormatInteger</deleteField>
+        </fieldSet>
+        <fieldSet searchId="IncludingFallingThroughIce">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='IncludingFallingThroughIce'].Deductible.FormatInteger</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='IncludingFallingThroughIce'].Deductible.FormatInteger</deleteField>
+        </fieldSet>
+    </view>
+    
+     -->
+    
+    
+    
+    
+    <!-- POLICY COVERAGES -->
+    <view id="CSL_BISPL_LIMIT" title="CSL BISPL Mutually Exclusive Coverage" type="mutuallyExclusiveFieldSets" deleteMode="onEmptyValue">
+        <fieldSet searchId="CSL">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='CSL'].Limit.FormatInteger</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='CSL']</deleteField>
+        </fieldSet>
+        <fieldSet searchId="BISPL">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='BISPL'].Limit[LimitAppliesToCd='PerPerson'].FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='BISPL'].Limit[LimitAppliesToCd='PerAcc'].FormatInteger</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='BISPL']</deleteField>
+        </fieldSet>
+    </view> 
+    <view id="CSL_BISPL" title="CSL BISPL Mutually Exclusive Coverage" type="mutuallyExclusiveFieldSets" deleteMode="onEmptyValue">
+        <fieldSet searchId="CSL">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='CSL'].CoverageCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='CSL']</deleteField>
+        </fieldSet>
+        <fieldSet searchId="BISPL">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='BISPL'].CoverageCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='BISPL']</deleteField>
+        </fieldSet>
+    </view>     
+    <view id="BISPL_LIMITS" title="BISPL Coverage" type="standard" deleteMode="onEmptyValue">
+        <fieldSet searchId="/">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='BISPL'].Limit[LimitAppliesToCd='PerPerson'].FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='BISPL'].Limit[LimitAppliesToCd='PerAcc'].FormatInteger</field>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='BISPL'].Limit</deleteField>
+        </fieldSet>
+    </view>    
+    <view id="OPTBI_LIMITS" title="OPTBI Coverage" type="standard" deleteMode="onEmptyValue">
+        <fieldSet searchId="/">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='OPTBI'].Limit[LimitAppliesToCd='BIEachPers'].FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='OPTBI'].Limit[LimitAppliesToCd='BIEachOcc'].FormatInteger</field>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='OPTBI'].Limit</deleteField>
+        </fieldSet>
+    </view>        
+    <view id="COMP_PERIL" title="COMP_SCL Mutually Exclusive Coverage" type="mutuallyExclusiveFieldSets" deleteMode="onEmptyValue">
+        <fieldSet searchId="COMP">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlAutoHiredInfo.CommlCoverage[CoverageCd='COMP'].CoverageCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlAutoHiredInfo.CommlCoverage[CoverageCd='COMP'].CoverageCd</deleteField>
+        </fieldSet>
+        <fieldSet searchId="PERIL">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlAutoHiredInfo.CommlCoverage[CoverageCd='PERIL'].CoverageCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlAutoHiredInfo.CommlCoverage[CoverageCd='PERIL'].CoverageCd</deleteField>
+        </fieldSet>
+    </view>
+    
+    <!-- END OF POLICY COVERAGES -->
+    <view id="Display.Roster.Vehicle" title="Vehicle" type="standard" deleteMode="onEmptyValue">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.ModelYear</field>
+            <field type="singleSpace" />
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.Manufacturer</field>
+            <field type="singleSpace" />
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.Model</field>
+            <field type="formatInfo">, </field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.VehIdentificationNumber</field>
+            <field type="singleSpace" />
+        </fieldSet>
+    </view>
+
+    <view id="Display.Roster.Driver" title="Driver" type="standard" deleteMode="onEmptyValue">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlDriver.GeneralPartyInfo.NameInfo.PersonName.GivenName</field>
+            <field type="singleSpace" />
+            <field type="id">CommlAutoLineBusiness.CommlDriver.GeneralPartyInfo.NameInfo.PersonName.OtherGivenName</field>
+            <field type="singleSpace" />
+            <field type="id">CommlAutoLineBusiness.CommlDriver.GeneralPartyInfo.NameInfo.PersonName.Surname</field>
+        </fieldSet>
+    </view>
+
+    <!-- Vehicles Page -->
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.Remarks1" type="standard" title="Registration Plates Remarks" deleteMode="onEmptyValue" relatedAggregateId="CommlAutoLineBusiness.CommlRateState.CommlVeh.@id" apType="RegistrationPlatesDesc">
+        <fieldSet>
+            <field type="id">RemarkText</field>
+            <deleteField>RemarkText</deleteField>
+        </fieldSet>
+        <viewClassName>com.agencyport.domXML.view.RemarksView</viewClassName>
+    </view>
+
+    <!-- @expunge
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMSUM'].CoverageCd" title="Supplementary Uninsured/Underinsured Motorists Coverage" type="standard" class="aggregateExistsBoolean" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMSUM']</field>
+        </fieldSet>
+    </view>
+    
+     
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMUIM'].Option[OptionCd='ST']" title="UNUM Option Code ST View" class="aggregateExistsBoolean" type="standard" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMUIM'].Option[OptionCd='ST']</field>
+        </fieldSet>
+
+    </view>
+
+     Vehicles Page 
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlVehSupplement[VehUseCd='BU']" title="Vehicle Use Code BU" type="standard" class="aggregateExistsBoolean" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlVehSupplement[VehUseCd='BU']</field>
+        </fieldSet>
+
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='APIP'].Limit.FormatInteger" title="Additional PIP Limit" type="standard" deleteMode="onEmptyValue">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='APIP'].Limit.FormatInteger</field>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='APIP']</deleteField>
+        </fieldSet>
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='APIP'].Option.OptionCd" title="Additional PIP Option" type="standard" deleteMode="onEmptyValue">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='APIP'].Option.OptionCd</field>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='APIP']</deleteField>
+        </fieldSet>
+    </view>
+ -->
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='APIP']" title="Additional PIP Coverage for NY" type="standard" deleteMode="onEmptyValue">
+        <fieldSet searchId="/">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='APIP'].Limit.FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='APIP'].Limit[LimitAppliesToCd='WorkLoss'].FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='OTEXP'].Limit.FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='ADB'].Limit.FormatInteger</field>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='APIP']</deleteField>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='OTEXP']</deleteField>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='ADB']</deleteField>
+        </fieldSet>
+    </view>
+
+<!--   @expunge   
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PHE']" title="Vehicle PHE Coverage" type="standard" class="aggregateExistsBoolean" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PHE']</field>
+        </fieldSet>
+
+    </view> 
+   
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Limit.FormatInteger" title="PIP Coverage Limit" type="standard" deleteMode="onEmptyValue">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Limit.FormatInteger</field>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP']</deleteField>
+        </fieldSet>
+    </view>
+
+    Delete candidate
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].CoverageCd" title="Vehicle PIP Coverage" type="standard" class="aggregateExistsBoolean" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP']</field>
+        </fieldSet>
+    </view>
+    
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='OBEL']" title="Vehicle OBEL Coverage" type="standard" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='OBEL']</field>
+        </fieldSet>
+        <viewClassName>com.agencyport.autob.custom.OBELCoverageView</viewClassName>
+    </view>
+ 
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='ST']" title="Vehicle PIP Option Code ST Coverage" class="aggregateExistsBoolean" type="standard" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='ST']</field>
+        </fieldSet>
+
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='MC']" title="Vehicle PIP Option Code MC Coverage" class="aggregateExistsBoolean" type="standard" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='MC']</field>
+        </fieldSet>
+
+    </view>
+-->
+    <!-- Optional Coverages Page -->
+<!--    @expunge
+	 <view id="CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='MEXCO']" title="MEXCO Coverage" type="standard" class="aggregateExistsBoolean" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='MEXCO']</field>
+        </fieldSet>
+
+    </view> 
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='LPD']" title="LPD Coverage" type="standard" class="aggregateExistsBoolean" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='LPD']</field>
+        </fieldSet>
+
+    </view> 
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='GOVT']" title="GOVT Coverage" type="standard" class="aggregateExistsBoolean" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='GOVT']</field>
+        </fieldSet>
+
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='POLUT']" title="POLUT Coverage" class="aggregateExistsBoolean" type="standard" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='POLUT']</field>
+        </fieldSet>
+
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='INLW']" title="INLW Coverage" class="aggregateExistsBoolean" type="standard" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='INLW']</field>
+        </fieldSet>
+
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='BPIP']" title="BPIP Coverage" class="aggregateExistsBoolean" type="standard" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='BPIP']</field>
+        </fieldSet>
+
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='BISPL']" title="BISPL Coverage" type="standard" deleteMode="onEmptyValue">
+        <fieldSet searchId="/">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='BISPL'].Limit[LimitAppliesToCd='PerPerson'].FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='BISPL'].Limit[LimitAppliesToCd='PerAcc'].FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='BISPL'].Limit[LimitAppliesToCd='PropDam'].FormatInteger</field>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='BISPL']</deleteField>
+        </fieldSet>
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='OPTBI_SPL']" title="OPTBI SPL Coverage" type="standard" deleteMode="onEmptyValue">
+        <fieldSet searchId="/">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='OPTBI'].Limit[LimitAppliesToCd='BIEachPers'].FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='OPTBI'].Limit[LimitAppliesToCd='BIEachOcc'].FormatInteger</field>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='OPTBI'].Limit[LimitAppliesToCd='BIEachPers']</deleteField>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='OPTBI'].Limit[LimitAppliesToCd='BIEachOcc']</deleteField>
+        </fieldSet>
+    </view>
+ -->
+    
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UNDSP']" title="UNDSP Coverage" type="standard" deleteMode="onEmptyValue">
+        <fieldSet searchId="/">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UNDSP'].Limit[LimitAppliesToCd='PerPerson'].FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UNDSP'].Limit[LimitAppliesToCd='PerAcc'].FormatInteger</field>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UNDSP']</deleteField>
+        </fieldSet>
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMUIMSP']" title="UMUIMSP Coverage" type="standard" deleteMode="onEmptyValue">
+        <fieldSet searchId="/">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMUIMSP'].Limit[LimitAppliesToCd='PerPerson'].FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMUIMSP'].Limit[LimitAppliesToCd='PerAcc'].FormatInteger</field>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMUIMSP']</deleteField>
+        </fieldSet>
+    </view>
+<!-- @expunge
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMCSL_UMISP']" title="UMCSL UMISP Mutually Exclusive View" type="mutuallyExclusiveFieldSets" deleteMode="onEmptyValue">
+        <fieldSet searchId="UMCSL">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMCSL'].CoverageCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMCSL']</deleteField>
+        </fieldSet>
+        <fieldSet searchId="UMISP">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMISP'].CoverageCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMISP']</deleteField>
+        </fieldSet>
+    </view>
+ -->
+ 
+<!-- @expunge
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='COMP'].Option[OptionCd='FG']" title="Full Glass Coverage Exists" class="aggregateExistsBoolean" type="standard" trueReturnValue="YES" falseReturnValue="NO">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='COMP'].Option[OptionCd='FG']</field>
+        </fieldSet>
+    </view>
+ -->
+    <!-- Additional Benefits applies in PA -->
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='AFPB']" title="Additional First Party Benefits View" type="standard" deleteMode="onEmptyValue">
+        <fieldSet searchId="/">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='MEDEX'].Limit.FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='FEB'].Limit.FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='WLB'].Limit[LimitAppliesToCd='Monthly'].FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='WLB'].Limit[LimitAppliesToCd='PerAcc'].FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='ADB'].Limit.FormatInteger</field>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='MEDEX']</deleteField>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='FEB']</deleteField>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='WLB']</deleteField>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='ADB']</deleteField>
+        </fieldSet>
+    </view>
+
+    <!-- Combination First Party Benefits applies in PA -->
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='CFPB']" title="Combination First Party Benefits View" type="standard" deleteMode="onEmptyValue">
+        <fieldSet searchId="/">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='CFPB'].Limit[LimitAppliesToCd='TotalBen'].FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='CFFEB'].Limit.FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='CFPB'].Limit[LimitAppliesToCd='AccDeath'].FormatInteger</field>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='CFPB']</deleteField>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='CFFEB']</deleteField>
+        </fieldSet>
+    </view>
+<!-- @expunge
+    Tort Option is applicable in PA, NJ, and KY where each states has its own codes denoted below
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='TORT_OPTION']" title="TORT Option Mutually Exclusive Coverage" type="mutuallyExclusiveFieldSets" deleteMode="onEmptyValue">
+        applies to PA
+        <fieldSet searchId="LT">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='TORT'].Option[OptionCd='LT'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='TORT'].Option[OptionCd='LT']</deleteField>
+        </fieldSet>
+        <fieldSet searchId="FT">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='TORT'].Option[OptionCd='FT'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='TORT'].Option[OptionCd='FT']</deleteField>
+        </fieldSet>
+        applies to NJ
+        <fieldSet searchId="VT">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='VT'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='VT']</deleteField>
+        </fieldSet>
+        <fieldSet searchId="NT">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='NT'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='NT']</deleteField>
+        </fieldSet>
+        applies to KY
+        <fieldSet searchId="RJ">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='RJ'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='RJ']</deleteField>
+        </fieldSet>
+        <fieldSet searchId="S">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='S'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='S']</deleteField>
+        </fieldSet>
+        <fieldSet searchId="A">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='A'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='A']</deleteField>
+        </fieldSet>
+    </view> -->
+<!-- @expunge
+    PIP options for NY, WA, and AR.
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP_OPTION_NY_WA_AR']" title="PIP Mutually Exclusive Coverage" type="mutuallyExclusiveFieldSets" deleteMode="onEmptyValue">
+        applies to NY
+        <fieldSet searchId="B">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='B'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP' &amp;&amp; Option.OptionCd='B']</deleteField>
+        </fieldSet>
+        <fieldSet searchId="B25">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='B25'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP' &amp;&amp; Option.OptionCd='B25']</deleteField>
+        </fieldSet>
+        <fieldSet searchId="B50">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='B50'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP' &amp;&amp; Option.OptionCd='B50']</deleteField>
+        </fieldSet>
+        <fieldSet searchId="B100">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='B100'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP' &amp;&amp; Option.OptionCd='B100']</deleteField>
+        </fieldSet>
+        applies to AR
+        <fieldSet searchId="MWA">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='MWA'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='MWA']</deleteField>
+        </fieldSet>
+        <fieldSet searchId="MW">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='MW'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='MW']</deleteField>
+        </fieldSet>
+        <fieldSet searchId="MA">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='MA'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='MA']</deleteField>
+        </fieldSet>
+        applies to WA
+        <fieldSet searchId="BL">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='BL'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='BL']</deleteField>
+        </fieldSet>
+        <fieldSet searchId="IL">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='IL'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='IL']</deleteField>
+        </fieldSet>
+    </view>
+ -->
+    <!-- Exclusion of Work Loss options for FL, MN, and MI -->
+<!--   @expunge  
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='WORK_LOSS']" title="WORK Loss Mutually Exclusive Coverage" type="mutuallyExclusiveFieldSets" deleteMode="onEmptyValue">
+        applies to FL
+        <fieldSet searchId="WI">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='WI'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='WI']</deleteField>
+        </fieldSet>
+        <fieldSet searchId="WR">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='WR'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='WR']</deleteField>
+        </fieldSet>
+        applies to MN
+        <fieldSet searchId="IY">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='IY'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='IY']</deleteField>
+        </fieldSet>
+        <fieldSet searchId="RY">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='RY'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='RY']</deleteField>
+        </fieldSet>
+        applies to MN and MI
+        <fieldSet searchId="I">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='I'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='I']</deleteField>
+        </fieldSet>
+        <fieldSet searchId="R">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='R'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='R']</deleteField>
+        </fieldSet>
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP_STACKING']" title="PIP Stacking Mutually Exclusive Coverage" type="mutuallyExclusiveFieldSets" deleteMode="onEmptyValue">
+        <fieldSet searchId="NS">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='NS'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='NS']</deleteField>
+        </fieldSet>
+        <fieldSet searchId="ST">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='ST'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='ST']</deleteField>
+        </fieldSet>
+    </view>
+ -->
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='DEATH_DISABILITY']" title="DEATH DISABILITY Mutually Exclusive Coverage" type="mutuallyExclusiveFieldSets" deleteMode="onEmptyValue">
+        <fieldSet searchId="GE">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='GE'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='GE']</deleteField>
+        </fieldSet>
+        <fieldSet searchId="GN">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='GN'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='GN']</deleteField>
+        </fieldSet>
+    </view>
+<!-- @expunge
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP_DELEWARE']" title="PIP Delaware Mutually Exclusive Coverage" type="mutuallyExclusiveFieldSets" deleteMode="onEmptyValue">
+        <fieldSet searchId="CSL">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='CSL'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='CSL']</deleteField>
+        </fieldSet>
+        <fieldSet searchId="SPL">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='SPL'].OptionCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Option[OptionCd='SPL']</deleteField>
+        </fieldSet>
+    </view>
+
+    Delete candidate
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP_DELEWARE_SINGLE']" title="PIP Delaware Single Coverage" type="standard" deleteMode="onEmptyValue">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Limit.FormatInteger</field>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Limit</deleteField>
+        </fieldSet>
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP_DELEWARE_SPLIT']" title="PIP Delaware Split Coverage" type="standard" deleteMode="onEmptyValue">
+        <fieldSet searchId="/">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Limit[LimitAppliesToCd='PerPerson'].FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Limit[LimitAppliesToCd='PerAcc'].FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Limit[LimitAppliesToCd='PerMonth'].FormatInteger</field>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].Limit</deleteField>
+        </fieldSet>
+    </view>
+ 
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='APIP_DELEWARE_SINGLE']" title="APIP Delaware Single Coverage" type="standard" deleteMode="onEmptyValue">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='APIP'].Limit.FormatInteger</field>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='APIP'].Limit</deleteField>
+        </fieldSet>
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='APIP_DELEWARE_SPLIT']" title="APIP Delaware Split Coverage" type="standard" deleteMode="onEmptyValue">
+        <fieldSet searchId="/">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='APIP'].Limit[LimitAppliesToCd='PerPerson'].FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='APIP'].Limit[LimitAppliesToCd='PerAcc'].FormatInteger</field>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='APIP'].Limit</deleteField>
+        </fieldSet>
+    </view>
+
+  
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='ADDA'].Limit.FormatInteger" title="ADDA Coverage" type="standard" deleteMode="onEmptyValue">
+        <fieldSet searchId="/">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='ADDA'].Limit[LimitAppliesToCd='AutoDeath'].FormatInteger</field>
+            <field type="formatInfo">/</field>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='ADDA'].Limit[LimitAppliesToCd='PerWeek'].FormatInteger</field>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='ADDA'].Limit</deleteField>
+        </fieldSet>
+    </view>
+ 
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='ADDA']" title="ADDA Coverage Exists" class="aggregateExistsBoolean" type="standard" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='ADDA']</field>
+        </fieldSet>
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='APC']" title="APC Coverage" class="aggregateExistsBoolean" type="standard" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='APC']</field>
+        </fieldSet>
+
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='DD']" title="DD Coverage" class="aggregateExistsBoolean" type="standard" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='DD']</field>
+        </fieldSet>
+
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='CPOOL']" title="CPOOL Coverage" class="aggregateExistsBoolean" type="standard" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='CPOOL']</field>
+        </fieldSet>
+
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlVehSupplement[SpecialUseCd='F']" title="Vehicle Special Use Code F Exists" class="aggregateExistsBoolean" type="standard" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlVehSupplement[SpecialUseCd='F']</field>
+        </fieldSet>
+
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlVehSupplement[SpecialUseCd='L']" title="Vehicle Special Use Code L Exists" class="aggregateExistsBoolean" type="standard" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlVehSupplement[SpecialUseCd='L']</field>
+        </fieldSet>
+
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='DAYLT']" title="Vehicle DAYLT Coverage Exists" class="aggregateExistsBoolean" type="standard" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='DAYLT']</field>
+        </fieldSet>
+
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='MCTR']" title="Vehicle MCTR Coverage Exists" class="aggregateExistsBoolean" type="standard" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='MCTR']</field>
+        </fieldSet>
+
+    </view>
+ -->
+    <!-- Supplemental Coverages -->
+<!--  @expunge   
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='AV']" title="Audio Visual Coverage Exists" class="aggregateExistsBoolean" type="standard" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='AV']</field>
+        </fieldSet>
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='TR']" title="Vehicle TR Coverage Exists" class="aggregateExistsBoolean" type="standard" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='TR']</field>
+        </fieldSet>
+
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='LOAN']" title="Auto Loan Coverage Exists" class="aggregateExistsBoolean" type="standard" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='LOAN']</field>
+        </fieldSet>
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='GAP']" title="Auto Loan Lease Gap Coverage Exists" class="aggregateExistsBoolean" type="standard" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='GAP']</field>
+        </fieldSet>
+    </view>
+ 
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='EXMED']" title="Medical Expense Motor Bus Coverage Exists" class="aggregateExistsBoolean" type="standard" trueReturnValue="YES" falseReturnValue="NO">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='EXMED']</field>
+        </fieldSet>
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='SFTY'].AP_NumSafetyFeatures" title="Safety Features Exists" type="standard" deleteMode="onEmptyValue">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='SFTY'].AP_NumSafetyFeatures</field>
+            <deleteField>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='SFTY']</deleteField>
+        </fieldSet>
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='LFEMP']" title="Vehicle LFEMP Coverage Exists" class="aggregateExistsBoolean" type="standard" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='LFEMP']</field>
+        </fieldSet>
+
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='VFWEE']" title="Vehicle VFWEE Coverage Exists" class="aggregateExistsBoolean" type="standard" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='VFWEE']</field>
+        </fieldSet>
+
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='VFWEB']" title="Vehicle VFWEB Coverage Exists" class="aggregateExistsBoolean" type="standard" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='VFWEB']</field>
+        </fieldSet>
+
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='AKATT']" title="Vehicle AKATT Coverage Exists" class="aggregateExistsBoolean" type="standard" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='AKATT']</field>
+        </fieldSet>
+
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='NYMA']" title="Vehicle NYMA Coverage Exists" class="aggregateExistsBoolean" type="standard" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='NYMA']</field>
+        </fieldSet>
+
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.Registration[RegistrationTypeCd='SCRP']" title="Vehicle SCRP Coverage Exists" class="aggregateExistsBoolean" type="standard" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.Registration[RegistrationTypeCd='SCRP']</field>
+        </fieldSet>
+
+    </view>
+
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlVehSupplement[VehUseCd='DC']" title="Vehicle Use Cd DC Exists" class="aggregateExistsBoolean" type="standard" trueReturnValue="1" falseReturnValue="0">
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlVehSupplement[VehUseCd='DC']</field>
+        </fieldSet>
+    </view>
+-->
+    <!-- New as of 5.0 -->
+<!--   @expunge  
+	<view id="CommlAutoLineBusiness.CoveredAutoSymbol.LiabilitySymbolCd" type="standard" title="Liability Symbol Code View">
+        <customArgument name="optionList" value="xmlreader:autobCodeListRef.xml:commAutoLiabilitySymbols" />
+        <viewClassName>com.agencyport.autob.custom.CoveredAutoSymbolView</viewClassName>
+    </view>
+
+    <view id="CommlAutoLineBusiness.CoveredAutoSymbol.DamageToSomoneElsesPropertySymbolCd" type="standard" title="Damage to Someone Else's Property Symbol Code View">
+        <customArgument name="optionList" value="xmlreader:autobCodeListRef.xml:commAutoDamageToSomoneElsesPropertySymbolCdSymbols" />
+        <viewClassName>com.agencyport.autob.custom.CoveredAutoSymbolView</viewClassName>
+    </view>
+
+    <view id="CommlAutoLineBusiness.CoveredAutoSymbol.OptionalBodilyInjuryToOthersSymbolCd" type="standard" title="Optional Bodily Injury to Others Symbol Code View">
+        <customArgument name="optionList" value="xmlreader:autobCodeListRef.xml:commAutoOptionalBodilyInjuryToOthersSymbols" />
+        <viewClassName>com.agencyport.autob.custom.CoveredAutoSymbolView</viewClassName>
+    </view>
+
+    <view id="CommlAutoLineBusiness.CoveredAutoSymbol.AutoMedicalPaymentsSymbolCd" type="standard" title="Auto Medical Payments Symbol Code View">
+        <customArgument name="optionList" value="xmlreader:autobCodeListRef.xml:commAutoMedPaySymbols" />
+        <viewClassName>com.agencyport.autob.custom.CoveredAutoSymbolView</viewClassName>
+    </view>
+ 
+    <view id="CommlAutoLineBusiness.CoveredAutoSymbol.ComprehensiveSymbolCd" type="standard" title="Comprehensive Symbol Code View">
+        <customArgument name="optionList" value="xmlreader:autobCodeListRef.xml:commAutoCompSymbols" />
+        <viewClassName>com.agencyport.autob.custom.CoveredAutoSymbolView</viewClassName>
+    </view>
+
+    <view id="CommlAutoLineBusiness.CoveredAutoSymbol.SpecifiedPerilsSymbolCd" type="standard" title="Specified Perils Symbol Code View">
+        <customArgument name="optionList" value="xmlreader:autobCodeListRef.xml:commAutoSpecCauseOfLossSymbols" />
+        <viewClassName>com.agencyport.autob.custom.CoveredAutoSymbolView</viewClassName>
+    </view>
+
+    <view id="CommlAutoLineBusiness.CoveredAutoSymbol.CollisionSymbolCd" type="standard" title="Collision Symbol Code View">
+        <customArgument name="optionList" value="xmlreader:autobCodeListRef.xml:commAutoCollisionSymbols" />
+        <viewClassName>com.agencyport.autob.custom.CoveredAutoSymbolView</viewClassName>
+    </view>
+
+    <view id="CommlAutoLineBusiness.CoveredAutoSymbol.PIPNoFaultSymbolCd" type="standard" title="PIP No Fault Symbol Code View">
+        <customArgument name="optionList" value="xmlreader:autobCodeListRef.xml:commAutoPIPSymbols" />
+        <viewClassName>com.agencyport.autob.custom.CoveredAutoSymbolView</viewClassName>
+    </view>
+
+    <view id="CommlAutoLineBusiness.CoveredAutoSymbol.FirstPartyBenefitsSymbolCd" type="standard" title="First Party Benefits Symbol Code View">
+        <customArgument name="optionList" value="xmlreader:autobCodeListRef.xml:commAutoFirstPartyBenefitsSymbolCd" />
+        <viewClassName>com.agencyport.autob.custom.CoveredAutoSymbolView</viewClassName>
+    </view>
+
+    <view id="CommlAutoLineBusiness.CoveredAutoSymbol.CombinationFirstPartyBenefitsSymbolCd" type="standard" title="Combination First Party Benefits Symbol Code View">
+        <customArgument name="optionList" value="xmlreader:autobCodeListRef.xml:commAutoCombinationFirstPartyBenefitsSymbolCd" />
+        <viewClassName>com.agencyport.autob.custom.CoveredAutoSymbolView</viewClassName>
+    </view>
+
+    <view id="CommlAutoLineBusiness.CoveredAutoSymbol.OBELSymbolCd" type="standard" title="Optional Basic Economic Loss Symbol Code View">
+        <customArgument name="optionList" value="xmlreader:autobCodeListRef.xml:commAutoOBELSymbolCd" />
+        <viewClassName>com.agencyport.autob.custom.CoveredAutoSymbolView</viewClassName>
+    </view>
+
+    <view id="CommlAutoLineBusiness.CoveredAutoSymbol.APIPSymbolCd" type="standard" title="Additional PIP Symbol Code View">
+        <customArgument name="optionList" value="xmlreader:autobCodeListRef.xml:commAutoAPIPSymbolCd" />
+        <viewClassName>com.agencyport.autob.custom.CoveredAutoSymbolView</viewClassName>
+    </view>
+
+    <view id="CommlAutoLineBusiness.CoveredAutoSymbol.WorkLossCoordinationSymbolCd" type="standard" title="Work Loss Coordination Symbol Code View">
+        <customArgument name="optionList" value="xmlreader:autobCodeListRef.xml:commAutoWorkLossCoordinationSymbolCd" />
+        <viewClassName>com.agencyport.autob.custom.CoveredAutoSymbolView</viewClassName>
+    </view>
+
+    <view id="CommlAutoLineBusiness.CoveredAutoSymbol.MedicalExpenseEliminationSymbolCd" type="standard" title="Medical Expense Elimination Symbol Code View">
+        <customArgument name="optionList" value="xmlreader:autobCodeListRef.xml:commAutoMedicalExpenseEliminationSymbolCd" />
+        <viewClassName>com.agencyport.autob.custom.CoveredAutoSymbolView</viewClassName>
+    </view>
+
+    <view id="CommlAutoLineBusiness.CoveredAutoSymbol.LimitedPropertyDamageLiabilitySymbolCd" type="standard" title="Limited Property Damage Symbol Code View">
+        <customArgument name="optionList" value="xmlreader:autobCodeListRef.xml:commAutoLimitedPropertyDamageLiabilitySymbolCd" />
+        <viewClassName>com.agencyport.autob.custom.CoveredAutoSymbolView</viewClassName>
+    </view>
+
+    <view id="CommlAutoLineBusiness.CoveredAutoSymbol.PropertyProtectionCoverageSymbolCd" type="standard" title="Property Protection Symbol Code View">
+        <customArgument name="optionList" value="xmlreader:autobCodeListRef.xml:commAutoPropertyProtectionCoverageSymbolCd" />
+        <viewClassName>com.agencyport.autob.custom.CoveredAutoSymbolView</viewClassName>
+    </view>
+
+   
+	<view id="CommlAutoLineBusiness.CoveredAutoSymbol.ExtraordinaryMedicalBenefitsSymbolCd" type="standard" title="Extraordinary Medical Benefits Symbol Code View">
+        <customArgument name="optionList" value="xmlreader:autobCodeListRef.xml:commAutoExtraordinaryMedicalBenefitsSymbolCd" />
+        <viewClassName>com.agencyport.autob.custom.CoveredAutoSymbolView</viewClassName>
+    </view>
+
+    <view id="CommlAutoLineBusiness.CoveredAutoSymbol.TowingAndLaborSymbolCd" type="standard" title="Towing and Labor Symbol Code View">
+        <customArgument name="optionList" value="xmlreader:autobCodeListRef.xml:commAutoTowingSymbols" />
+        <viewClassName>com.agencyport.autob.custom.CoveredAutoSymbolView</viewClassName>
+    </view>
+
+
+	 <view id="CommlAutoLineBusiness.CoveredAutoSymbol.UnInsuredUnderInsuredMotoristSymbolCd" type="standard" title="Uninsured / Underinsured Motorist Symbol Code View">
+        <customArgument name="optionList" value="xmlreader:autobCodeListRef.xml:commAutoUnInsuredUnderInsuredMotoristSymbolCd" />
+        <fieldSet>
+            <field type="id">CommlAutoLineBusiness.CoveredAutoSymbol.UninsuredMotoristSymbolCd</field>
+            <field type="id">CommlAutoLineBusiness.CoveredAutoSymbol.UnderinsuredMotoristSymbolCd</field>
+        </fieldSet>
+        <viewClassName>com.agencyport.autob.custom.CoveredAutoSymbolView</viewClassName>
+    </view> -->
+    
+      
+<!--   @expunge  
+    <view id="CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlAutoHiredInfo.CommlCoverage[CoverageCd='OTC_TYPE']" title="State Level Other Than Collision Mutually Exclusive Coverage" type="mutuallyExclusiveFieldSets" deleteMode="onEmptyValue">
+        <description>This view will handle both coverage code and deductible amount updates even though the deductible field is not explicitly expressed. The deductible amount updates are handled by the custom view implementation.</description>
+        <customArgument name="htmlCoverageCodeFieldId" value="CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlAutoHiredInfo.CommlCoverage[CoverageCd='OTC_TYPE']" />
+        <fieldSet searchId="COMP">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='COMP'].CoverageCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='COMP']</deleteField>
+        </fieldSet>
+        <fieldSet searchId="PERIL">
+            <field type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='PERIL'].CoverageCd</field>
+            <deleteField type="id">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='PERIL']</deleteField>
+        </fieldSet>
+        <viewClassName>com.agencyport.autob.custom.OtherThanCollisionCoverageView</viewClassName>
+    </view>
+ -->
+    <view id="CommlAuto.RemarkText" type="standard" relatedAggregateId="CommlAutoLineBusiness.@id" index="0" class="remarks" deleteMode="onEmptyValue">
+        <fieldSet>
+            <field type="id">RemarkText</field>
+        </fieldSet>
+    </view>
+
+</views>

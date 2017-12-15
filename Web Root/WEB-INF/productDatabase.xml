@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<productDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/product/productDefinitions.xsd">
+
+    <product type="ACCOUNT" description="Account" title="Account" shared="false" version="5.0.0.0" path="account" id="N482">
+        <artifact type="tdf" resourceId="account.xml" title="Account" id="N483" />
+        <artifact type="acordWorkItemMap" resourceId="accountMap.xml" description="Acord to work item mapping for accounts" title="Account" id="N484" />
+        <artifact type="propertyFile" resourceId="account.properties" title="Properties" id="N485" />
+        <artifact type="pageLibrary" resourceId="accountPages.xml" description="Account Page Library" title="Account" id="N486" />
+        <artifact type="behavior" resourceId="accountBehaviors.xml" description="" title="Account Behaviors" id="N487" />
+        <artifact type="optionList" resourceId="accountCodeListRef.xml" title="Account Option Lists" id="N488" />
+        <artifact type="view" resourceId="accountViews.xml" title="Account Views" id="N489" />
+        <artifact resourceId="accountTransformers.xml" type="transformer" description="" title="Account Transformations" id="N490" />
+        <dependency version="5.0.0.0" productRefType="shared" id="N491" />
+        <dependency version="5.0.0.0" productRefType="commercial" id="N492" />
+    </product>
+
+    <product type="shared" shared="true" version="5.0.0.0" path="shared" title="Shared Product" id="N88">
+        <artifact type="tdf" resourceId="worklist.xml" title="Worklist Advanced Search TDF" id="N89" />
+        <artifact type="propertyFile" resourceId="shared.properties" title="Properties" id="N90" />
+        <artifact type="optionList" resourceId="codeListRef.xml" description="Shared Option Lists" title="Shared Option Lists" id="N91" />
+        <artifact type="optionList" resourceId="acordCodeListRef.xml" description="ACORD Code Lists" title="ACORD Code Lists" id="N92" />
+        <artifact type="optionList" resourceId="persLinesCodeListRef.xml" description="Personal Lines Shared Code Lists" title="Personal Lines Shared Code Lists" id="N93" />
+        <artifact type="view" resourceId="commonViews.xml" title="Views" id="N94" />
+        <artifact type="pdfLayout" resourceId="POLICY_CHANGE_LAYOUT.xml" title="Policy Change PDF layout" id="N95" />
+        <artifact type="pdf" resourceId="Acord_Overflow.pdf" title="ACORD_OVERFLOW" description="Overflow PDF" id="N96" />
+        <artifact type="pdf" resourceId="PolicyChangeRequest.pdf" title="POLICY_CHANGE_FORM" description="Policy Change PDF" id="N97" />
+        <artifact type="pdf" resourceId="PolicyChangeRequest_Questions.pdf" title="POLICY_CHANGE_QUESTION_FORM" description="Policy Change Questions PDF" id="N98" />
+        <artifact type="pdf" resourceId="PolicyChangeRequest_Remarks.pdf" title="POLICY_CHANGE_REMARK_FORM" description="Policy Change Remarks PDF" id="N99" />
+        <artifact type="pdfForm" resourceId="AP_WORKITEM_ASSISTANT_COMMENTS.pdf" title="AP_WORKITEM_ASSISTANT_COMMENTS" description="AP work item assistant comments PDF" id="N100" />
+        <artifact type="pdfForm" resourceId="ACORD0101_2008-01_Acroform.pdf" title="ACORD 101 PDF Form" description="ACORD 101 PDF Form" />
+        <artifact type="dynamicListTemplate" resourceId="dynamicListTemplates.xml" description="Shared Dynamic Lists" title="Shared Dynamic Lists" id="N102" />
+        <artifact type="workItemAssistant" resourceId="workitemassistant.xml" title="Shared work item assistant" description="Shared work item assistant" id="N103" />
+        <artifact resourceId="shared_transformers.xml" type="transformer" description="" title="ACORD Standard Transformations" id="N104" />
+        <artifact type="workItemStatusDefinition" resourceId="workItemStatus.xml" title="Work Item Status Codes" description="Work Item Status Codes" id="N105" />
+        <artifact type="menuDefinition" resourceId="menu.xml" title="Main Menus" description="Main Menus" id="N106" />
+        <artifact type="workItemActionDefinition" resourceId="workItemAction.xml" title="Work Item Actions" description="Standard Work Item Actions" id="N107" />
+        <artifact type="workListView" resourceId="solrWorklist.xml" title="SOLR Work Item Work Lists" description="SOLR My Work Work List" id="N108" />
+        <artifact type="workListView" resourceId="solrAccountWorklist.xml" title="SOLR Account Work Lists" description="SOLR My Account Work List" id="N109" />
+        <artifact type="workListView" resourceId="solrRecentQueue.xml" title="SOLR Recent Work Lists for Agents" description="SOLR Recent Work List for Agents" id="N110" />
+        <artifact type="workListView" resourceId="solrUWQueue.xml" title="SOLR Recent Work Lists for UW" description="SOLR Recent Work List for UW" id="N111" />
+        <artifact type="workListView" resourceId="solrAccountWorkItemsWorklist.xml" title="SOLR Recent Work Lists" description="SOLR Recent Work List" id="N112" />
+        <artifact type="workListView" resourceId="solrQuotesByStatus.xml" title="SOLR Quotes by Status" description="SOLR Quotes by Status" id="N113" />
+        <artifact type="indexMapping" resourceId="solrWorkItemIndexMap.xml" title="SOLR Work Item Index Mapping" description="SOLR Work Item Index Mapping" id="N114" />
+        <artifact type="indexMapping" resourceId="solrAccountIndexMap.xml" title="SOLR Account Index Mapping" description="SOLR Account Index Mapping" id="N115" />
+    </product>
+    <product type="commercial" title="Commercial Shared" shared="true" version="5.0.0.0" path="commercial" description="Commercial Lines Product" id="N116">
+        <artifact type="propertyFile" resourceId="commercial.properties" title="Properties" id="N117" />
+        <artifact type="optionList" resourceId="applInfoCodeListRef.xml" title="Option Lists" id="N118" />
+        <artifact type="optionList" resourceId="propcCodeListRef.xml" description="Commercial PropertyOption Lists" title="Commercial Property Option Lists" id="N119" />
+        <artifact type="dynamicListTemplate" resourceId="dynamicListTemplates.xml" description="Dynamic Lists" title="Dynamic Lists" id="N120" />
+        <artifact type="pageLibrary" resourceId="125Commons.xml" title="125 Commons Page Library" id="N121" />
+        <artifact type="pageLibrary" resourceId="CommlCommons.xml" title="Commercial Commons Page Library" id="N122" />
+        <artifact type="pageLibrary" resourceId="endorse125Commons.xml" title="125 Commons Page Library" id="N123" />
+        <artifact type="pageLibrary" resourceId="premisesInformationCommons.xml" title="Premises Commons Page Library" id="N124" />
+        <artifact type="view" resourceId="applInformationViews.xml" title="Applicant Info Views" id="N125" />
+        <artifact type="view" resourceId="otherOrPriorPolicyViews.xml" title="Other Prior Policy Views" id="N126" />
+        <artifact type="view" resourceId="commonCommlViews.xml" title="Common Commercial Views" id="N127" />
+        <artifact type="pdfLayout" resourceId="ACORD_125_LAYOUT.xml" title="Acord 125 PDF layout" id="N128" />
+        <artifact type="pdf" resourceId="Acord125.pdf" title="ACORD_125_FORM" description="Acord 125 PDF" id="N129" />
+        <artifact type="pdfLayout" resourceId="ACORD_139_LAYOUT.xml" title="Acord 139 PDF layout" id="N130" />
+        <artifact type="pdf" resourceId="Acord139.pdf" title="ACORD_139_FORM" description="Acord 139 PDF" id="N131" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_125.pdf" title="ACORD 125 FORM" description="ACORD 125 PDF" id="N101" />
+        <artifact type="behavior" resourceId="125QuestionsBehavior.xml" title="Dynamic Behaviors for Acord 125 Questions" />        
+        <artifact type="behavior" resourceId="CommlCommonsBehaviors.xml" title="Behaviors for Common Pages" />
+        <artifact type="xarcRule" resourceId="commlCommonsEligibilityRules.xml" title="Commercial Common Eligibility Validations" description="Commercial Common Eligibility Validations" />
+        <dependency version="5.0.0.0" productRefType="shared" id="N132" />
+    </product>
+<!--        
+-->
+    
+    
+    
+       
+    <product type="AUTOB" version="5.0.0.0" title="Commercial Auto" path="autob" description="Commercial Auto" id="N167">
+        <artifact type="propertyFile" resourceId="autob.properties" title="Properties" id="N168" />
+        <artifact type="tdf" resourceId="autob.xml" title="New Commercial Auto Application" id="N169" />
+        <artifact type="tdf" resourceId="autobQuickQuote.xml" title="Commercial Auto Quick Quote" id="N170" />
+        <artifact type="tdf" resourceId="autobEndorse.xml" title="Commercial Auto Endorsement" id="N171" />
+        <artifact type="tdf" resourceId="autobRenew.xml" title="Commercial Auto Renewal" id="N172" />
+        <artifact type="pageLibrary" resourceId="autobCommons.xml" title="Commercial Auto Page Library" id="N173" />
+        <artifact type="optionList" resourceId="autobCodeListRef.xml" title="Commercial Auto Code List" id="N174" />
+        <artifact type="optionList" resourceId="autobLookupList.xml" title="Commercial Auto Lookup List" id="N175" />
+        <artifact type="dynamicListTemplate" resourceId="autobDynamicListTemplates.xml" title="Commercial Auto Dynamic Code List" id="N176" />
+        <artifact type="behavior" resourceId="autobEligibilityBehavior.xml" title="Eligibility Behaviors for Commercial Auto" id="N177" />
+        <artifact type="behavior" resourceId="vehicleCoverageBehavior.xml" title="Vehicle Coverage Specific Behaviors for Commercial Auto" id="N178" />
+        <artifact type="behavior" resourceId="noFaultCoverageBehavior.xml" title="No Fault Coverage Specific Behaviors for Commercial Auto" id="N179" />
+        <artifact type="behavior" resourceId="policyCoverageBehavior.xml" title="Policy Coverage Behaviors for Commercial Auto" id="N180" />
+        <artifact type="behavior" resourceId="autobBehavior.xml" title="Miscellaneous Behaviors for Commercial Auto" id="N181" />
+        <artifact type="behavior" resourceId="autobQuestionsBehavior.xml" title="Questionnaire Behaviors for Commercial Auto" id="N182" />
+        <artifact type="behavior" resourceId="autobStateClassBehaviors.xml" title="State Behaviors for Commercial Auto" />
+        <artifact type="view" resourceId="autobViews.xml" title="Views" id="N183" />
+        <artifact resourceId="autobTransformers.xml" type="transformer" title="Commercial Auto Transformations" id="N184" />
+        <artifact type="pdfDefinition" resourceId="autobPdfDefinition.xml" title="PDF definition" description="PDF definitions" id="N588" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_127.pdf" title="ACORD_127_FORM" description="Acord 127 PDF" id="N288" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_129.pdf" title="ACORD_129_FORM" description="Acord 129 PDF" id="N289" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_163.pdf" title="ACORD_163_FORM" description="Acord 163 PDF" id="N290" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_45.pdf" title="ACORD_45_FORM" description="Acord 45 PDF" id="N291" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137MA.pdf" title="ACORD_137MA_FORM" description="Acord 137 MA PDF" id="N292" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137NJ.pdf" title="ACORD_137NJ_FORM" description="Acord 137 NJ PDF" id="N293" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137MI.pdf" title="ACORD_137MI_FORM" description="Acord 137 MI PDF" id="N294" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137NY.pdf" title="ACORD_137NY_FORM" description="Acord 137 NY PDF" id="N295" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137OH.pdf" title="ACORD_137OH_FORM" description="Acord 137 OH PDF" id="N296" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137PA.pdf" title="ACORD_137PA_FORM" description="Acord 137 PA PDF" id="N297" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137VT.pdf" title="ACORD_137VT_FORM" description="Acord 137 VT PDF" id="N298" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137NH.pdf" title="ACORD_137NH_FORM" description="Acord 137 NH PDF" id="N299" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137RI.pdf" title="ACORD_137RI_FORM" description="Acord 137 RI PDF" id="N300" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137CT.pdf" title="ACORD_137CT_FORM" description="Acord 137 CT PDF" id="N581" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137OR.pdf" title="ACORD_137OR_FORM" description="Acord 137 OR PDF" id="N582" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137AZ.pdf" title="ACORD_137AZ_FORM" description="Acord 137 AZ PDF" id="N583" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137NV.pdf" title="ACORD_137NV_FORM" description="Acord 137 NV PDF" id="N584" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137CA.pdf" title="ACORD_137CA_FORM" description="Acord 137 CA PDF" id="N585" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137WA.pdf" title="ACORD_137WA_FORM" description="Acord 137 WA PDF" id="N586" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137KY.pdf" title="ACORD_137KY_FORM" description="Acord 137 KY PDF" id="N587" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137AL.pdf" title="ACORD_137AL_FORM" description="Acord 137 AL PDF" id="N590" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137CO.pdf" title="ACORD_137CO_FORM" description="Acord 137 CO PDF" id="N568" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137DC.pdf" title="ACORD_137DC_FORM" description="Acord 137 DC PDF" id="N591" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137AR.pdf" title="ACORD_137AR_FORM" description="Acord 137 AR PDF" id="N592" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137DE.pdf" title="ACORD_137DE_FORM" description="Acord 137 DE PDF" id="N593" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137AK.pdf" title="ACORD_137AK_FORM" description="Acord 137 AK PDF" id="N594" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137IL.pdf" title="ACORD_137IL_FORM" description="Acord 137 IL PDF" id="N595" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137ID.pdf" title="ACORD_137ID_FORM" description="Acord 137 ID PDF" id="N596" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137IN.pdf" title="ACORD_137IN_FORM" description="Acord 137 IN PDF" id="N597" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137FL.pdf" title="ACORD_137FL_FORM" description="Acord 137 FL PDF" id="N598" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137IA.pdf" title="ACORD_137IA_FORM" description="Acord 137 IA PDF" id="N599" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137GA.pdf" title="ACORD_137GA_FORM" description="Acord 137 GA PDF" id="N600" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137HI.pdf" title="ACORD_137HI_FORM" description="Acord 137 HI PDF" id="N601" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137KS.pdf" title="ACORD_137KS_FORM" description="Acord 137 KS PDF" id="N602" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137MS.pdf" title="ACORD_137MS_FORM" description="Acord 137 MS PDF" id="N603" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137LA.pdf" title="ACORD_137LA_FORM" description="Acord 137 LA PDF" id="N604" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137MO.pdf" title="ACORD_137MO_FORM" description="Acord 137 MO PDF" id="N605" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137NE.pdf" title="ACORD_137NE_FORM" description="Acord 137 NE PDF" id="N606" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137MN.pdf" title="ACORD_137MN_FORM" description="Acord 137 MN PDF" id="N607" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137MT.pdf" title="ACORD_137MT_FORM" description="Acord 137 MT PDF" id="N608" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137MD.pdf" title="ACORD_137MD_FORM" description="Acord 137 MD PDF" id="N609" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137ME.pdf" title="ACORD_137ME_FORM" description="Acord 137 ME PDF" id="N610" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137NM.pdf" title="ACORD_137NM_FORM" description="Acord 137 NM PDF" id="N613" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_137OK.pdf" title="ACORD_137OK_FORM" description="Acord 137 OK PDF" id="N614" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_61FL.pdf" title="ACORD_61FL_FORM" description="Acord 61 FL PDF" id="N611" />
+        <artifact type="pdfForm" resourceId="ACORD_FORM_62FL.pdf" title="ACORD_62FL_FORM" description="Acord 62 FL PDF" id="N612" />
+        <artifact type="pdfForm" resourceId="ADDITIONAL_DATA_FORM127.pdf" title="ADDITIONAL_DATA_FORM127" description="Additional Data" id="N301" />
+        <artifact type="xarcRule" resourceId="autobRules.xml" title="Commercial Auto Validations" description="Commercial Auto Validations" id="N302" />
+        <artifact type="xarcRule" resourceId="autobEligibilityRules.xml" title="Commercial Auto Eligibility Validations" description="Commercial Auto Eligibility Validations" id="N303" />
+        <artifact type="acordWorkItemMap" resourceId="autob_workitem_map.xml" title="Acord to work item mapping for Comml Auto" description="Acord to work item mapping for Comml Auto" id="N304" />
+        <dependency version="5.0.0.0" productRefType="shared" id="N305" />
+        <dependency version="5.0.0.0" productRefType="commercial" id="N306" />
+    </product>    
+    
+    
+         
+        
+        
+       
+        
+ <!-- 
+ -->    
+    
+<!--  
+-->   
+    
+    
+    
+    
+    
+    
+        
+    
+    
+    
+<!-- 
+-->
+</productDatabase>

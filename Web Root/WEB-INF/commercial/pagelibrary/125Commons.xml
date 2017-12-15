@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="125Commons" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/definition/transactionDefinitionFile.xsd">
+  <!-- General Information -->
+  <page id="generalInfo" title="Agency/Applicant Information" type="dataEntry">
+    <pageElement id="agencyInformation" type="fieldset" legend="Agency Information">
+      <fieldElement type="text" id="Producer.GeneralPartyInfo.NameInfo.CommlName.CommercialName" label="Agency Name" required="true" size="40" maxLength="40" groupId="Producer.GeneralPartyInfo.NameInfo" />
+      <fieldElement type="text" id="Producer.GeneralPartyInfo.Addr.Addr1" label="Address Line 1" required="true" size="30" maxLength="40" />
+      <fieldElement type="text" id="Producer.GeneralPartyInfo.Addr.Addr2" label="Address Line 2" size="30" maxLength="40" />
+      <fieldElement type="text" id="Producer.GeneralPartyInfo.Addr.City" label="City" required="true" size="20" maxLength="30" />
+      <fieldElement type="selectlist" id="Producer.GeneralPartyInfo.Addr.StateProvCd" label="State" required="true">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="state" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement> 
+      <fieldElement type="text" id="Producer.GeneralPartyInfo.Addr.PostalCode" label="Zip Code" required="true" size="10" maxLength="10">
+        <formatMask type="USZipCodeShort" />
+      </fieldElement>
+      <fieldElement type="text" id="Producer.GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone'].PhoneNumber" label="Producer Phone" size="20" maxLength="20" groupId="Producer.GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone']">
+        <formatMask type="phone" />
+		<validation type="phone">US</validation>
+		<correction type="phone" />
+      </fieldElement>
+      <fieldElement type="text" id="Producer.GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Fax'].PhoneNumber" label="Producer Fax" size="20" maxLength="20" groupId="Producer.GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Fax']">
+        <formatMask type="phone" />
+		<validation type="phone">US</validation>
+		<correction type="phone" />
+      </fieldElement>
+      <fieldElement type="text" id="Producer.GeneralPartyInfo.Communications.EmailInfo.EmailAddr" label="E-mail Address" size="40" maxLength="128" groupId="Producer.GeneralPartyInfo.Communications.EmailInfo" />
+      <fieldElement type="text" id="Producer.ProducerInfo.ContractNumber" label="Producer Code" size="15" maxLength="15" groupId="Producer.ProducerInfo" />
+      <fieldElement type="text" id="Producer.ProducerInfo.ProducerSubCode" label="Producer Sub Code" size="8" maxLength="8" groupId="Producer.ProducerInfo" />
+      <fieldElement type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].ItemIdInfo.AgencyId" label="Agency Customer ID" size="25" maxLength="25" groupId="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].ItemIdInfo">
+        <fieldHelper type="balloon">Enter the Agency ID for the Insured.</fieldHelper>
+      </fieldElement>
+    </pageElement>
+    <pageElement type="tips">
+      <fieldElement type="message">Please Enter the First Named Insured Under Applicant Name. Enter Other Named Insureds Under Agent Comments.</fieldElement>
+    </pageElement>
+    <pageElement type="fieldset" legend="Applicant Information">
+      <fieldElement type="hidden" id="TransactionRequestDt" defaultValue="SYSTEM_DATE()" />
+      <fieldElement type="hidden" id="RqUID" defaultValue="GUID()" copy="false" />
+      <fieldElement type="hidden" id="CurCd" defaultValue="USD" />
+      <!--fieldElement type="hidden" id="CommlPolicy.LOBCd" defaultValue="PKG"/>-->
+      <fieldElement type="hidden" id="CommlPolicy.@id" defaultValue="GUID()" copy="false" />
+      <fieldElement type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo.CommlName.CommercialName" label="Applicant Name" required="true" size="50" maxLength="50" />
+      <fieldElement type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo.SupplementaryNameInfo[SupplementaryNameCd='DBA'].SupplementaryName" label="Doing Business As" size="50" maxLength="50" groupId="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo.SupplementaryNameInfo[SupplementaryNameCd='DBA']" />
+      <fieldElement type="selectlist" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo.TaxIdentity.TaxIdTypeCd" label="Tax Id Type" groupId="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo.TaxIdentity">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="taxIdType" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo.TaxIdentity.TaxId" label="Tax Id" size="18" maxLength="16" groupId="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo.TaxIdentity" />
+      <fieldElement type="selectlist" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo.LegalEntityCd" label="Legal Entity">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="applInfoCodeListRef.xml" target="legalEntity" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement type="date" id="CommlPolicy.CommlPolicySupplement.CommlParentOrSubsidiaryInfo[MiscParty.MiscPartyInfo.MiscPartyRoleCd='ParentCompany'].BusinessStartDt" label="Date Business Started" required="true" maxLength="10" groupId="CommlPolicy.CommlPolicySupplement.CommlParentOrSubsidiaryInfo[MiscParty.MiscPartyInfo.MiscPartyRoleCd='ParentCompany'].BusinessStartDt" />
+      <fieldElement type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone' &amp;&amp; CommunicationUseCd='Business'].PhoneNumber" label="Business Phone" size="20" maxLength="20" groupId="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone' &amp;&amp; CommunicationUseCd='Business']">
+        <formatMask type="phone" />
+		<validation type="phone">US</validation>
+		<correction type="phone" />
+      </fieldElement>
+      <fieldElement type="selectlist" id="CommlPolicy.BillingMethodCd" label="Billing Method" defaultValue="CPB">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="applInfoCodeListRef.xml" target="billingPlan" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement type="selectlist" id="CommlPolicy.PaymentOption.PaymentPlanCd" label="Direct Bill Pay Plan" defaultValue="8P" groupId="CommlPolicy.PaymentOption">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="paymentPlan" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement type="selectlist" id="CommlPolicy.CommlPolicySupplement.AuditInd" label="Auditable?" defaultValue="0/NV" viewId="commonViews.xml:Display.Audit.Info">
+        <optionList reader="xmlreader" source="applInfoCodeListRef.xml" target="audit" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement type="text" id="CommlPolicy.CommlPolicySupplement.CommlParentOrSubsidiaryInfo[MiscParty.MiscPartyInfo.MiscPartyRoleCd='ParentCompany'].AnnualGrossReceiptsAmt.Amt" label="Gross Annual Revenues" size="10" maxLength="10" groupId="CommlPolicy.CommlPolicySupplement.CommlParentOrSubsidiaryInfo[MiscParty.MiscPartyInfo.MiscPartyRoleCd='ParentCompany'].AnnualGrossReceiptsAmt" />
+      <fieldElement type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Communications.EmailInfo[CommunicationUseCd='Business'].EmailAddr" label="E-Mail Address" size="40" maxLength="128" groupId="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Communications.EmailInfo[CommunicationUseCd='Business']" />
+      <fieldElement type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Communications.WebsiteInfo[CommunicationUseCd='Business'].WebsiteURL" label="Website Address" size="34" maxLength="32" />
+    </pageElement>
+    <pageElement type="fieldset" legend="Policy Term">
+      <fieldElement type="date" id="CommlPolicy.ContractTerm.EffectiveDt" label="Effective Date" required="true" maxLength="10" />
+      <fieldElement type="date" id="CommlPolicy.ContractTerm.ExpirationDt" label="Expiration Date" required="true" maxLength="10">
+        <validation type="dateCompare" message="Expiration date cannot preceed effective date">after(CommlPolicy.ContractTerm.EffectiveDt)</validation>
+      </fieldElement>
+    </pageElement>
+    <pageElement type="fieldset" legend="Mailing Address">
+      <fieldElement type="hidden" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Addr[AddrTypeCd='MailingAddress'].@id" defaultValue="GUID()" copy="false" />
+      <fieldElement type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Addr[AddrTypeCd='MailingAddress'].Addr1" label="Address Line 1" required="true" size="30" maxLength="64" />
+      <fieldElement type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Addr[AddrTypeCd='MailingAddress'].Addr2" label="Address Line 2" size="30" maxLength="64" />
+      <fieldElement type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Addr[AddrTypeCd='MailingAddress'].City" label="City" required="true" size="20" maxLength="32" />
+      <fieldElement type="selectlist" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Addr[AddrTypeCd='MailingAddress'].StateProvCd" label="State" required="true">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="state" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement type="text" id="InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.Addr[AddrTypeCd='MailingAddress'].PostalCode" label="Zip Code" required="true" size="9" maxLength="10">
+        <formatMask type="USZipCodeShort" />
+      </fieldElement>
+    </pageElement>
+    <pageElement type="fieldset" legend="Inspection Contact Information">
+      <!--      <fieldElement type="message">Please note if your accounting and inspection names are the same, type &quot;same&quot; in the name field</fieldElement> -->
+      <fieldElement type="text" id="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='InspectionContact'].GeneralPartyInfo.NameInfo.CommlName.CommercialName" label="Name" size="30" maxLength="30" groupId="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='InspectionContact']" />
+      <fieldElement type="text" id="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='InspectionContact'].GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone' &amp;&amp; CommunicationUseCd='Business'].PhoneNumber" label="Phone" size="20" maxLength="20" groupId="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='InspectionContact']">
+        <formatMask type="phone" />
+		<validation type="phone">US</validation>
+		<correction type="phone" />
+      </fieldElement>
+      <fieldElement type="text" id="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='InspectionContact'].GeneralPartyInfo.Communications.EmailInfo[CommunicationUseCd='Business'].EmailAddr" label="Business Email Address" size="40" maxLength="128" groupId="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='InspectionContact']" />
+    </pageElement>
+    <pageElement type="fieldset" legend="Accounting Contact Information">
+      <fieldElement type="text" id="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='AC'].GeneralPartyInfo.NameInfo.CommlName.CommercialName" label="Name" size="30" maxLength="30" groupId="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='AC']" />
+      <fieldElement type="text" id="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='AC'].GeneralPartyInfo.Communications.PhoneInfo[PhoneTypeCd='Phone' &amp;&amp; CommunicationUseCd='Business'].PhoneNumber" label="Phone" size="20" maxLength="20" groupId="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='AC']">
+        <formatMask type="phone" />
+		<validation type="phone">US</validation>
+		<correction type="phone" />
+      </fieldElement>
+      <fieldElement type="text" id="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='AC'].GeneralPartyInfo.Communications.EmailInfo[CommunicationUseCd='Business'].EmailAddr" label="Business Email Address" size="40" maxLength="128" groupId="CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='AC']" />
+    </pageElement>
+    <!-- Added this section only for reference. This section has been introduced all latest Commercial application -->
+    <!--
+		 <pageElement id="policyControlState" type="fieldset" legend="Controlling State" >
+			<fieldElement type="message">In multi-state risks this will ordinarily be the state containing the headquarters of the business. The state chosen will govern the statutory requirements of the policy.</fieldElement>
+			<fieldElement type="selectlist" id="CommlPolicy.ControllingStateProvCd" label="Choose State" required="true"  >
+				<optionList reader="xmlreader" source="codeListRef.xml" target="blank"/>
+				<optionList reader="xmlreader" source="codeListRef.xml" target="state"/>
+			</fieldElement>
+        </pageElement>
+		-->
+    <pageElement type="fieldset" legend="Nature Of Business">
+      <fieldElement type="textarea" id="InsuredOrPrincipal.InsuredOrPrincipalInfo[InsuredOrPrincipalRoleCd='Insured'].BusinessInfo.OperationsDesc" label="Please describe the nature of the business in the space below." required="true" cols="60" rows="5" />
+    </pageElement>
+    <pageElement type="script" contentType="text/javascript" src="javascript/comml_expiration_date.js" />
+    <pageElement id="script" type="script" contentType="text/javascript" src="javascript/textareaMaxlength.js" />
+    <pageElement id="script" type="script" contentType="text/javascript" src="javascript/copy_contact_information.js" />
+  </page>
+  <!-- Location -->
+  <page id="location" source="Location" title="Locations" type="roster" downFillPageId="location">
+    <pageElement type="tips">
+      <fieldElement type="message">Enter all locations for any line(s) of business to be attached to this policy.</fieldElement>
+    </pageElement>
+    <pageElement id="location" type="roster" legend="Location Information" minEntries="1">
+      <fieldElement type="column" id="Location.ItemIdInfo.AgencyId" label="Location #" maxLength="5" />
+      <fieldElement type="column" id="Location" label="Location Address" maxLength="75" viewId="commonViews.xml:Display.Roster.Location" />
+      <action type="edit" />
+      <action type="delete" />
+    </pageElement>
+    <pageElement id="locationInformation" type="fieldset" legend="Location Information">
+      <fieldElement type="hidden" id="Location.@id" label="Hidden Field" required="true" defaultValue="GUID()" copy="false" />
+      <fieldElement type="hidden" id="Location.SubLocation.@id" label="Hidden Field" required="true" defaultValue="GUID()" copy="false" />
+      <fieldElement type="hidden" id="Location.ItemIdInfo.SystemId" uniqueId="LocationSystemId" downFillFieldId="LocationSystemId" />
+      <fieldElement type="text" id="Location.ItemIdInfo.AgencyId" maxLength="5" uniqueId="locationNumber" label="Location No." required="true">
+			<validation type="numeric" />
+			<validation type="minValue" >1</validation>
+			<formatMask type="integer" />
+      </fieldElement> 
+      <fieldElement type="text" id="Location.Addr.Addr1" label="Address Line 1" required="true" size="30" maxLength="75" downFillFieldId="LocationAddressLine1"  firstTimeDefaultValue="InsuredOrPrincipal.GeneralPartyInfo.Addr.Addr1" />
+      <fieldElement type="text" id="Location.Addr.Addr2" label="Address Line 2" size="30" maxLength="75" downFillFieldId="LocationAddressLine2" firstTimeDefaultValue="InsuredOrPrincipal.GeneralPartyInfo.Addr.Addr2" />
+      <fieldElement type="text" id="Location.Addr.City" label="City" required="true" size="20" maxLength="50" downFillFieldId="LocationAddressCity" firstTimeDefaultValue="InsuredOrPrincipal.GeneralPartyInfo.Addr.City" />
+      <fieldElement type="selectlist" id="Location.Addr.StateProvCd" label="State" required="true" downFillFieldId="LocationAddressState" firstTimeDefaultValue="InsuredOrPrincipal.GeneralPartyInfo.Addr.StateProvCd">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="state" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement type="text" id="Location.Addr.PostalCode" label="Zip Code" required="true" size="9" maxLength="10" downFillFieldId="LocationAddressZip" firstTimeDefaultValue="InsuredOrPrincipal.GeneralPartyInfo.Addr.PostalCode">
+        <formatMask type="USZipCodeShort" />
+      </fieldElement>
+      <fieldElement type="selectlist" id="Location.RiskLocationCd" label="Located" uniqueId="located">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="applInfoCodeListRef.xml" target="risklocation" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement type="text" id="Location.TaxCodeInfo.TaxCd" label="Tax Code" size="5" maxLength="5" groupId="Location.TaxCodeInfo.TaxCd" uniqueId="taxCode" />
+      <fieldElement type="text" id="Location.FireDistrict" label="Fire District Name/Code" size="25" maxLength="25" uniqueId="fireDistrict" />
+    </pageElement>
+  </page>
+  <!-- Building Information -->
+  <!--This screen needs special handling for commlsublocation and sublocation-->
+  <page id="premisesInfo" source="CommlSubLocation" title="Buildings" type="roster">
+    <pageElement type="tips">
+      <fieldElement type="message">Please enter all buildings for each policy location.</fieldElement>
+    </pageElement>
+    <pageElement id="premisesInfo" type="roster" legend="Buildings">
+      <!-- The order of the following two joinInfo segments is very important -->
+      <joinInfo fromPath="CommlSubLocation" fromId="SubLocationRef" toPath="Location.SubLocation" toId="id" />
+      <joinInfo fromPath="CommlSubLocation" fromId="LocationRef" toPath="Location" toId="id" />
+      <fieldElement type="column" id="Location" label="Location" maxLength="75" viewId="commonViews.xml:Display.Roster.Location" />
+      <fieldElement type="column" id="Location.SubLocation.SubLocationDesc" label="Description" maxLength="20" />
+      <action type="edit" />
+      <action type="delete" />
+    </pageElement>
+    <pageElement id="" type="fieldset" legend="Building Details">
+      <fieldElement type="hidden" id="CommlSubLocation.@SubLocationRef" label="Hidden Field" required="true" defaultValue="GUID()" copy="false" />
+      <fieldElement type="selectlist" id="CommlSubLocation.@LocationRef" label="Location" required="true">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="dynamic" source="dynamicListTemplates.xml" target="Locations" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement type="text" id="SP.TEMPLATE.Location.SubLocation.SubLocationDesc" label="Description" required="true" size="59" maxLength="59" />
+      <fieldElement type="selectlist" id="CommlSubLocation.InterestCd" label="Interest Type" required="true">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="applInfoCodeListRef.xml" target="interestType" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement type="text" id="CommlSubLocation.Construction.YearBuilt" label="Year Built" size="4" maxLength="4">
+        <validation type="numeric" />
+      </fieldElement>
+      <fieldElement type="text" id="CommlSubLocation.BldgOccupancy.NumEmployees" label="# Employees" required="true" size="10" maxLength="10">
+        <validation type="numeric" />
+      </fieldElement>
+      <fieldElement type="text" id="CommlSubLocation.BldgOccupancy.OccupiedPct" label="Percentage Occupied" size="9" maxLength="4">
+        <validation type="numeric" />
+        <validation type="minValue">0</validation>
+        <validation type="maxValue">100</validation>
+      </fieldElement>
+    </pageElement>
+    <pageElement id="bldgAdditionalDetails" type="fieldset" legend="Building Additional Details">
+      <fieldElement type="selectlist" id="CommlSubLocation.Construction.ConstructionCd" label="Construction Type" required="true">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="constructionType" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement type="text" id="CommlSubLocation.BldgProtection.DistanceToHydrant[UnitMeasurementCd='FOT'].NumUnits" label="Distance to Hydrant" size="6" maxLength="6" groupId="CommlSubLocation.BldgProtection.DistanceToHydrant[UnitMeasurementCd='FOT']">
+        <validation type="numeric" />
+      </fieldElement>
+      <fieldElement type="text" id="CommlSubLocation.BldgProtection.DistanceToFireStation[UnitMeasurementCd='HM'].NumUnits" label="Distance to Fire Station" size="4" maxLength="4" groupId="CommlSubLocation.BldgProtection.DistanceToFireStation[UnitMeasurementCd='HM']">
+        <validation type="numeric" />
+      </fieldElement>
+      <fieldElement type="text" id="CommlSubLocation.BldgProtection.FireProtectionClassCd" label="Fire Protection Class Cd" size="6" maxLength="4" />
+      <fieldElement type="text" id="CommlSubLocation.Construction.NumStories" label="# Stories" size="4" maxLength="4">
+        <validation type="numeric" />
+      </fieldElement>
+      <fieldElement type="text" id="CommlSubLocation.Construction.NumBasements" label="# Basements" size="4" maxLength="4">
+        <validation type="numeric" />
+      </fieldElement>
+      <fieldElement type="text" id="CommlSubLocation.Construction.BldgArea[UnitMeasurementCd='FTK'].NumUnits" label="Total Bldg Area" size="10" maxLength="10" groupId="CommlSubLocation.Construction.BldgArea[UnitMeasurementCd='FTK']">
+        <validation type="numeric" />
+      </fieldElement>
+      <fieldElement type="text" id="CommlSubLocation.Construction.BldgCodeEffectivenessGradeCd" label="Bldg Grade Cd" size="5" maxLength="5" />
+      <fieldElement type="selectlist" id="CommlSubLocation.Construction.RoofingMaterial.RoofMaterialCd" label="Roof Material" groupId="CommlSubLocation.Construction.RoofingMaterial">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="roofType" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement type="text" id="CommlSubLocation.BldgOccupancy.OccupancyDesc" label="Other Occupancies" size="40" maxLength="40" />
+      <fieldElement type="radio" id="CommlSubLocation.QuestionAnswer[QuestionCd='BOP03'].YesNoCd" label="Heating Boiler on Premises?" defaultValue="NO" groupId="CommlSubLocation.QuestionAnswer[QuestionCd='BOP03']">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="yesNoCd" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement type="radio" id="CommlSubLocation.QuestionAnswer[QuestionCd='CPR02'].YesNoCd" label="Insurance placed elsewhere?" defaultValue="NO" groupId="CommlSubLocation.QuestionAnswer[QuestionCd='CPR02']">
+        <fieldHelper type="balloon">If yes, insurance placed elsewhere?</fieldHelper>
+        <optionList reader="xmlreader" source="codeListRef.xml" target="yesNoCd" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement type="selectlist" id="CommlSubLocation.WindClassCd" label="Wind Class">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="windClass" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+    </pageElement>
+    <pageElement id="bldgImprovements" type="fieldset" legend="Improvements">
+      <fieldElement type="text" id="CommlSubLocation.BldgImprovements.WiringImprovementYear" label="Wiring Year Updated" size="4" maxLength="4" groupId="CommlSubLocation.BldgImprovements">
+        <validation type="numeric" />
+        <validation type="format" message="Please enter year in YYYY format.">^([0-9]{4})$</validation>
+      </fieldElement>
+      <fieldElement type="text" id="CommlSubLocation.BldgImprovements.PlumbingImprovementYear" label="Plumbing Year Updated" size="4" maxLength="4" groupId="CommlSubLocation.BldgImprovements">
+        <validation type="numeric" />
+        <validation type="format" message="Please enter year in YYYY format.">^([0-9]{4})$</validation>
+      </fieldElement>
+      <fieldElement type="text" id="CommlSubLocation.BldgImprovements.RoofingImprovementYear" label="Roofing Year Updated" size="4" maxLength="4" groupId="CommlSubLocation.BldgImprovements">
+        <validation type="numeric" />
+        <validation type="format" message="Please enter year in YYYY format.">^([0-9]{4})$</validation>
+      </fieldElement>
+      <fieldElement type="text" id="CommlSubLocation.BldgImprovements.HeatingImprovementYear" label="Heating Year Updated" size="4" maxLength="4" groupId="CommlSubLocation.BldgImprovements">
+        <validation type="numeric" />
+        <validation type="format" message="Please enter year in YYYY format.">^([0-9]{4})$</validation>
+      </fieldElement>
+      <fieldElement type="text" id="CommlSubLocation.BldgImprovements.OtherImprovementInfo.OtherImprovementDesc" label="Desc. Other Improvements" size="17" maxLength="17" groupId="CommlSubLocation.BldgImprovements" />
+      <fieldElement type="date" id="CommlSubLocation.BldgImprovements.OtherImprovementInfo.OtherImprovementDt" label="Date of Other Improvements" maxLength="10" groupId="CommlSubLocation.BldgImprovements" />
+    </pageElement>
+    <pageElement id="bldgExposures" type="fieldset" legend="Exposures">
+      <fieldElement type="message">Please enter the exposure distance in 'feet'.</fieldElement>
+      <fieldElement type="text" id="CommlSubLocation.BldgExposures[DirectionTypeCd='Right'].Distance[UnitMeasurementCd='FOT'].NumUnits" label="Right Exposure Distance" size="5" maxLength="5" groupId="CommlSubLocation.BldgExposures[DirectionTypeCd='Right']">
+        <validation type="numeric" />
+      </fieldElement>
+      <fieldElement type="text" id="CommlSubLocation.BldgExposures[DirectionTypeCd='Right'].Description" label="Describe Exposure" size="60" maxLength="60" groupId="CommlSubLocation.BldgExposures[DirectionTypeCd='Right']" />
+      <fieldElement type="text" id="CommlSubLocation.BldgExposures[DirectionTypeCd='Left'].Distance[UnitMeasurementCd='FOT'].NumUnits" label="Left Exposure Distance" size="5" maxLength="5" groupId="CommlSubLocation.BldgExposures[DirectionTypeCd='Left']">
+        <validation type="numeric" />
+      </fieldElement>
+      <fieldElement type="text" id="CommlSubLocation.BldgExposures[DirectionTypeCd='Left'].Description" label="Describe Exposure" size="60" maxLength="60" groupId="CommlSubLocation.BldgExposures[DirectionTypeCd='Left']" />
+      <fieldElement type="text" id="CommlSubLocation.BldgExposures[DirectionTypeCd='Front'].Distance[UnitMeasurementCd='FOT'].NumUnits" label="Front Exposure Distance" size="5" maxLength="5" groupId="CommlSubLocation.BldgExposures[DirectionTypeCd='Front']">
+        <validation type="numeric" />
+      </fieldElement>
+      <fieldElement type="text" id="CommlSubLocation.BldgExposures[DirectionTypeCd='Front'].Description" label="Describe Exposure" size="60" maxLength="60" groupId="CommlSubLocation.BldgExposures[DirectionTypeCd='Front']" />
+      <fieldElement type="text" id="CommlSubLocation.BldgExposures[DirectionTypeCd='Rear'].Distance[UnitMeasurementCd='FOT'].NumUnits" label="Rear Exposure Distance" size="5" maxLength="5" groupId="CommlSubLocation.BldgExposures[DirectionTypeCd='Rear']">
+        <validation type="numeric" />
+      </fieldElement>
+      <fieldElement type="text" id="CommlSubLocation.BldgExposures[DirectionTypeCd='Rear'].Description" label="Describe Exposure" size="60" maxLength="60" groupId="CommlSubLocation.BldgExposures[DirectionTypeCd='Rear']" />
+    </pageElement>
+    <pageElement id="bldgAlarmAndSecurity" type="fieldset" legend="Alarm and Security">
+      <fieldElement type="selectlist" id="CommlSubLocation.AlarmAndSecurity[position()=0].AlarmDescCd" label="Burglar Alarm Description" defaultValue="NO">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="alarmDesc" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement type="selectlist" id="CommlSubLocation.AlarmAndSecurity[position()=0].AlarmTypeCd" label="Burglar Alarm Type" defaultValue="NO">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="buglarAlarmType" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement type="text" id="CommlSubLocation.AlarmAndSecurity[position()=0].ULCertificateNumber" label="Alarm Certificate #" size="20" maxLength="40" />
+      <fieldElement type="date" id="CommlSubLocation.AlarmAndSecurity[position()=0].ULCertificateExpirationDt" label="Expiration Date" maxLength="10" />
+      <fieldElement type="text" id="CommlSubLocation.AlarmAndSecurity[position()=0].MiscParty[MiscPartyInfo.MiscPartyRoleCd='AlarmService'].GeneralPartyInfo.NameInfo.CommlName.CommercialName" label="Installed/Serviced By" size="35" maxLength="50" groupId="CommlSubLocation.AlarmAndSecurity[position()=0].MiscParty[MiscPartyInfo.MiscPartyRoleCd='AlarmService'].GeneralPartyInfo" />
+      <fieldElement type="selectlist" id="CommlSubLocation.AlarmAndSecurity[position()=0].ProtectionExtentCd" label="Extent" defaultValue="NO">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="protExtent" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement type="text" id="CommlSubLocation.AlarmAndSecurity[position()=0].ProtectionClassGradeCd" label="Grade" size="5" maxLength="5" />
+      <fieldElement type="text" id="CommlSubLocation.AlarmAndSecurity[position()=0].NumGuards" label="# Guards/Watchmen" size="10" maxLength="10">
+        <validation type="numeric" />
+      </fieldElement>
+      <fieldElement type="selectlist" id="CommlSubLocation.AlarmAndSecurity[position()=0].WatchPersonsFactorCd" label="Guard Type" defaultValue="NO">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="watchFactor" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement type="text" id="CommlSubLocation.BldgProtection.SprinkleredPct" label="Sprinklered Pct" size="5" maxLength="5">
+        <validation type="numeric" />
+        <validation type="minValue">0</validation>
+        <validation type="maxValue">100</validation>
+      </fieldElement>
+      <fieldElement type="selectlist" id="CommlSubLocation.AlarmAndSecurity[position()=1].AlarmTypeCd" label="Fire Alarm Type" defaultValue="NO">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="fireAlarmType" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement type="selectlist" id="CommlSubLocation.AlarmAndSecurity[position()=1].AlarmDescCd" label="Fire Alarm Description" defaultValue="NO">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="fireAlarmDesc" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement type="text" id="CommlSubLocation.AlarmAndSecurity[position()=1].ItemDefinition[ItemTypeCd='MachandEquip'].ManufacturerCd" label="Fire Alarm Manufacturer" size="34" maxLength="34" />
+    </pageElement>
+  </page>
+  <!-- Questionnaire page -->
+  <page id="questionnaire" title="Applicant Questions" type="dataEntry">
+    <pageElement type="tips">
+      <fieldElement type="message">Please answer the following questions.  These questions are part of the ACORD 125.</fieldElement>
+    </pageElement>
+    <pageElement type="questionnaire" legend="Applicant Questions" id="questionnaire">
+      <fieldElement type="question" id="CommlPolicy.QuestionAnswer[QuestionCd='GENRL34'].YesNoCd" uniqueId="genrl34" label="Is the applicant a subsidiary of another entity?" defaultValue="0" />
+      <fieldElement type="textarea" id="CommlPolicy.QuestionAnswer[QuestionCd='GENRL34'].Explanation" uniqueId="genrl34Exp" label="Explanation" required="true" maxLength="256" rows="1" class="DependentQuestion"/>
+      <fieldElement type="question" id="CommlPolicy.QuestionAnswer[QuestionCd='GENRL35'].YesNoCd" uniqueId="genrl35" label="Does the applicant have any subsidiaries?" defaultValue="0" />
+      <fieldElement type="textarea" id="CommlPolicy.QuestionAnswer[QuestionCd='GENRL35'].Explanation" uniqueId="genrl35Exp" label="Explanation" required="true" maxLength="256" rows="1" class="DependentQuestion"/>
+      <fieldElement type="question" id="CommlPolicy.QuestionAnswer[QuestionCd='GENRL47'].YesNoCd" uniqueId="genrl47" label="Is a formal safety program in operation?" defaultValue="0" />
+      <fieldElement type="textarea" id="CommlPolicy.QuestionAnswer[QuestionCd='GENRL47'].Explanation" uniqueId="genrl47Exp" label="Explanation" required="true" maxLength="256" rows="1" class="DependentQuestion"/>
+      <fieldElement type="question" id="CommlPolicy.QuestionAnswer[QuestionCd='GENRL41'].YesNoCd" uniqueId="genrl41" label="Any exposure to flammables, explosives, chemicals?" defaultValue="0" />
+      <fieldElement type="textarea" id="CommlPolicy.QuestionAnswer[QuestionCd='GENRL41'].Explanation" uniqueId="genrl41Exp" label="Explanation" required="true" maxLength="256" rows="1" class="DependentQuestion"/>
+      <fieldElement type="question" id="CommlPolicy.QuestionAnswer[QuestionCd='GENRL22'].YesNoCd" uniqueId="genrl22" label="Any other insurance with this company or being submitted?" defaultValue="0"/>
+      <fieldElement type="textarea" id="CommlPolicy.QuestionAnswer[QuestionCd='GENRL22'].Explanation" uniqueId="genrl22Exp" label="Explanation" required="true" maxLength="256" rows="1" class="DependentQuestion"/>
+      <fieldElement type="question" id="CommlPolicy.QuestionAnswer[QuestionCd='GENRL06'].YesNoCd" uniqueId="genrl06" label="Any policy or coverage declined, cancelled or non-renewed during the prior 3 years? (Not applicable in MO)" defaultValue="0"/>
+      <fieldElement type="textarea" id="CommlPolicy.QuestionAnswer[QuestionCd='GENRL06'].Explanation" uniqueId="genrl06Exp" label="Explanation" required="true" maxLength="256" rows="1" class="DependentQuestion"/>
+      <fieldElement type="question" id="CommlPolicy.QuestionAnswer[QuestionCd='GENRL07'].YesNoCd" uniqueId="genrl07" label="Any past losses or claims relating to sexual abuse or molestation allegations, discrimination or negligent hiring?" defaultValue="0"/>
+      <fieldElement type="textarea" id="CommlPolicy.QuestionAnswer[QuestionCd='GENRL07'].Explanation" uniqueId="genrl07Exp" label="Explanation" required="true" maxLength="256" rows="1" class="DependentQuestion"/>
+      <fieldElement type="question" id="CommlPolicy.QuestionAnswer[QuestionCd='GENRL61'].YesNoCd" uniqueId="genrl61" label="During the Last Five Years (Ten in RI), has any Applicant been Indicted for or Convicted of any degree of the crime of fraud, Bribery, Arson Or any other Arson-Related crime in Connection with this or any other property ? ( In RI, this question must be answered by any applicant for property insurance. Failure to disclose the existence of an arson conviction is a misdemeanor punishable by a sentence of up to one year of imprisonment)." defaultValue="0"/>
+      <fieldElement type="textarea" id="CommlPolicy.QuestionAnswer[QuestionCd='GENRL61'].Explanation" uniqueId="genrl61Exp" label="Explanation" required="true" maxLength="256" rows="1" class="DependentQuestion"/>
+      <fieldElement type="question" id="CommlPolicy.QuestionAnswer[QuestionCd='GENRL09'].YesNoCd" uniqueId="genrl09" label="Any uncorrected fire code violations?" defaultValue="0"/>
+      <fieldElement type="textarea" id="CommlPolicy.QuestionAnswer[QuestionCd='GENRL09'].Explanation" uniqueId="genrl09Exp" label="Explanation" required="true" maxLength="256" rows="1" class="DependentQuestion"/>
+      <fieldElement type="question" id="CommlPolicy.QuestionAnswer[QuestionCd='GENRL25'].YesNoCd" uniqueId="genrl25" label="Has applicant had a foreclosure, repossession or bankruptcy during the past five years?" defaultValue="0"/>
+      <fieldElement type="textarea" id="CommlPolicy.QuestionAnswer[QuestionCd='GENRL25'].Explanation" uniqueId="genrl25Exp" label="Explanation" required="true" maxLength="256" rows="1" class="DependentQuestion"/>
+      <fieldElement type="question" id="CommlPolicy.QuestionAnswer[QuestionCd='GENRL63'].YesNoCd" uniqueId="genrl63" label="Has applicant had a judgement or lien during the specified number of years?" defaultValue="0"/>
+      <fieldElement type="textarea" id="CommlPolicy.QuestionAnswer[QuestionCd='GENRL63'].Explanation" uniqueId="genrl63Exp" label="Explanation" required="true" maxLength="256" rows="1" class="DependentQuestion"/>
+      <fieldElement type="question" id="CommlPolicy.QuestionAnswer[QuestionCd='GENRL40'].YesNoCd" uniqueId="genrl40" label="Has business been placed in a trust?" defaultValue="0"/>
+      <fieldElement type="textarea" id="CommlPolicy.QuestionAnswer[QuestionCd='GENRL40'].Explanation" uniqueId="genrl40Exp" label="Explanation" required="true" maxLength="256" rows="1" class="DependentQuestion"/>
+      <fieldElement type="question" id="CommlPolicy.QuestionAnswer[QuestionCd='GENRL52'].YesNoCd" uniqueId="genrl52" label="Any foreign operations, foreign products distributed in USA, or US products sold/distributed in foreign countries?" defaultValue="0"/>
+      <fieldElement type="textarea" id="CommlPolicy.QuestionAnswer[QuestionCd='GENRL52'].Explanation" uniqueId="genrl52Exp" label="Explanation" required="true" maxLength="256" rows="1" class="DependentQuestion"/>
+      <fieldElement type="question" id="CommlPolicy.QuestionAnswer[QuestionCd='GENRL64'].YesNoCd" uniqueId="genrl64" label="Does applicant have other business ventures for which coverage is not requested?" defaultValue="0"/>
+      <fieldElement type="textarea" id="CommlPolicy.QuestionAnswer[QuestionCd='GENRL64'].Explanation" uniqueId="genrl64Exp" label="Explanation" required="true" maxLength="256" rows="1" class="DependentQuestion"/>
+      <fieldElement type="hidden" id="TransactionRequestDt" label="dummyFieldDoNotDelete" defaultValue="SYSTEM_DATE()" />
+    </pageElement>
+    <pageElement type="fieldset" legend="Remarks">
+      <fieldElement type="textarea" id="RemarkText[@ItemRef='Questions' &amp;&amp; @IdRef='CommlPolicy.@id']" label="Please add any additional remarks :" cols="60" rows="3" viewId="applInformationViews.xml:RemarkText.Questionnaire" />
+    </pageElement>
+  </page>
+  <!-- Loss History 
+  <page id="lossHistory" title="Loss History" type="roster" source="CommlPolicy.Loss" forceViewOnUpload="true">
+    <pageElement type="tips">
+      <fieldElement type="message">Please do your best to tell us about any loss history for this risk. All loss information will be verified before the policy is issued. If you wish to submit remarks associated with any losses you've itemized, please add a comment.</fieldElement>
+    </pageElement>
+    <pageElement id="lossHistory" type="roster" legend="Loss History Information">
+      <fieldElement type="column" id="CommlPolicy.Loss.LossDt" label="Loss Date" maxLength="25" viewId="commonViews.xml:DateFormatter" />
+      <fieldElement type="column" id="CommlPolicy.Loss.TotalPaidAmt.Amt" label="Amount Paid" maxLength="25" />
+      <action type="edit" />
+      <action type="delete" />
+    </pageElement>
+    <pageElement type="fieldset" legend="Loss Information">
+       LOSS.LOBCd will be udpated by Special Field Helper from CommlPolicy.LOBCd location 
+      <fieldElement type="hidden" id="SP.CommlPolicy.Loss.LOBCd" />
+      <fieldElement type="date" id="CommlPolicy.Loss.LossDt" label="Occurrence Date" required="true" maxLength="10" />
+      <fieldElement type="date" id="CommlPolicy.Loss.ReportedDt" label="Claim Date" required="true" maxLength="10" />
+      <fieldElement type="text" id="CommlPolicy.Loss.TotalPaidAmt.Amt" label="Amount Paid" required="true" size="15" maxLength="15">
+        <validation type="numeric" />
+        <validation type="minValue">0</validation>
+        <formatMask type="integer" />
+      </fieldElement>
+      <fieldElement type="text" id="CommlPolicy.Loss.ProbableIncurredAmt.Amt" label="Amount Reserved" required="true" size="15" maxLength="15">
+        <validation type="numeric" />
+        <validation type="minValue">0</validation>
+        <formatMask type="integer" />
+      </fieldElement>
+      <fieldElement type="selectlist" id="CommlPolicy.Loss.ClaimSettledInd" label="Claim Status Indicator" required="true">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="claimStatus" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>      
+      <fieldElement type="text" id="CommlPolicy.Loss.LossDesc" label="Description" size="50" maxLength="255" />
+    </pageElement>
+    <connectors type="process">
+      <connector type="custom" className="com.agencyport.shared.commercial.connectors.AccountValidationManager" id="AccountValidationManager">
+        <executeWhen userAction="Continue" />
+      </connector>
+    </connectors>   
+  </page>
+  -->
+  <!--Agent Remarks Screen-->
+  <page id="agentComments" title="Agent Comments" type="dataEntry">
+    <pageElement type="fieldset" legend="My Comments">
+      <fieldElement type="textarea" id="RemarkText[@idref='1']" label="Please enter any comments in the space below that may be helpful to the underwriter in their review of this submission.  Remember to enter additional named insureds if you did not have enough room in the Applicant Name field." cols="60" rows="5" viewId="applInformationViews.xml:RemarkText.AgentComments" />
+    </pageElement>
+  </page>
+</collection>

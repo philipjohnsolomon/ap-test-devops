@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 sp1 (http://www.altova.com) by Edward Cole (Agencyport) -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" attributeFormDefault="unqualified" version="1.7.0">
+	<!-- There are several changes made to the base ACORD schema that could technically be done via restrictions and then
+	extensions. XMLSpy and XSOM were fine with this approach but JDOM validation could not handle the complexity and had issues so a design decision was
+	made to apply those changes directly to the ACORD schema rather than embracing restrictions as a technique. -->
+	<xsd:redefine schemaLocation="ap_acord_simplified.xsd">
+		<xsd:complexType name="ClaimsOccurrence_Type">
+			<xsd:complexContent>
+				<xsd:extension base="ClaimsOccurrence_Type">
+					<xsd:sequence>
+						<xsd:element ref="LossLocationCd" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+        <xsd:complexType name="Limit_Type">
+            <xsd:complexContent>
+                <xsd:extension base="Limit_Type">
+                    <xsd:sequence>
+                        <xsd:element name="LimitAppliesToCd2" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+
+		<xsd:complexType name="ClaimsNotificationAddRq_Type">
+			<xsd:complexContent>
+				<xsd:extension base="ClaimsNotificationAddRq_Type">
+					<xsd:sequence>
+						<xsd:element ref="CommlPolicy" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="CommlPkgPolicyQuoteInqRq_Type">
+			<xsd:complexContent>
+				<xsd:extension base="CommlPkgPolicyQuoteInqRq_Type">
+					<xsd:sequence>
+						<xsd:element ref="AP_CPPLobIndicators" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="CommlPkgPolicyModRq_Type">
+			<xsd:complexContent>
+				<xsd:extension base="CommlPkgPolicyModRq_Type">
+					<xsd:sequence>
+						<xsd:element ref="AP_CPPLobIndicators" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="CommlPkgPolicyRenewRq_Type">
+			<xsd:complexContent>
+				<xsd:extension base="CommlPkgPolicyRenewRq_Type">
+					<xsd:sequence>
+						<xsd:element ref="AP_CPPLobIndicators" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="Location_Type">
+			<xsd:complexContent>
+				<xsd:extension base="Location_Type">
+					<xsd:sequence>
+						<xsd:element ref="Territory" minOccurs="0"/>
+						<xsd:element ref="HighestFloorNumberOccupied" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="CommlSubLocation_Type">
+			<xsd:complexContent>
+				<xsd:extension base="CommlSubLocation_Type">
+					<xsd:sequence>
+						<xsd:element ref="TotalPayrollAmt" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="CommlInlandMarineLineBusiness_Type">
+			<xsd:complexContent>
+				<xsd:extension base="CommlInlandMarineLineBusiness_Type">
+					<xsd:sequence>
+						<xsd:element ref="AnnualTransit" minOccurs="0"/>
+						<xsd:element ref="ComputerEquipment" minOccurs="0"/>
+						<xsd:element ref="ContractorsEquipment" minOccurs="0"/>
+						<xsd:element ref="Installation" minOccurs="0"/>
+						<xsd:element ref="BuildersRisk" minOccurs="0"/>
+						<xsd:element ref="TransitPropertyNamedPrem" minOccurs="0"/>
+						<xsd:element ref="WindstormDed" minOccurs="0"/>
+						<xsd:element ref="WindstormDedPercent" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		
+		<xsd:complexType name="CareCustodyControlInfo_Type">
+			<xsd:complexContent>
+				<xsd:extension base="CareCustodyControlInfo_Type">
+					<xsd:sequence>
+						<xsd:element name="BuildingOccupancy" type="BldgOccupancy_Type" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		
+		<xsd:complexType name="CommlUmbrellaPolicyQuoteInqRq_Type">
+			<xsd:complexContent>
+				<xsd:extension base="CommlUmbrellaPolicyQuoteInqRq_Type">
+					<xsd:sequence>
+						<xsd:element ref="UnderlyAUTOBPolicyIndicator" minOccurs="0"/>
+						<xsd:element ref="UnderlyCGLPolicyIndicator" minOccurs="0"/>
+						<xsd:element ref="UnderlyELPolicyIndicator" minOccurs="0"/>
+						<xsd:element ref="UnderlyGLPolicyPIADVCoverageIndicator" minOccurs="0"/>
+						<xsd:element ref="UnderlyGLPolicyPRDCOCoverageIndicator" minOccurs="0"/>
+						<xsd:element ref="UnderlyGLPolicyWCRFTCoverageIndicator" minOccurs="0"/>
+						<xsd:element ref="DisplayBasicPolicyCoveragesRetroDatesIndicator" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="PersAutoLineBusiness_Type">
+			<xsd:complexContent>
+				<xsd:extension base="PersAutoLineBusiness_Type">
+					<xsd:sequence>
+						<xsd:element ref="LiabilityCoverageIndicator" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="CommlCoverage_Type">
+			<xsd:annotation>
+				<xsd:documentation>Support for collecting number of safety features. Refer to https://www.squishlist.com/agencyport/templates/53494/</xsd:documentation>
+			</xsd:annotation>
+			<xsd:complexContent>
+				<xsd:extension base="CommlCoverage_Type">
+					<xsd:sequence>
+						<xsd:element ref="AP_NumSafetyFeatures" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="CommlVehSupplement_Type">
+			<xsd:annotation>
+				<xsd:documentation>Support for Owner Operated and Employer Furnished. Refer to https://www.squishlist.com/agencyport/templates/53492/</xsd:documentation>
+			</xsd:annotation>
+			<xsd:complexContent>
+				<xsd:extension base="CommlVehSupplement_Type">
+					<xsd:sequence>
+						<xsd:element ref="AP_OwnerOperatedCd" minOccurs="0"/>
+						<xsd:element ref="AP_EmployerFurnishedInd" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+<!-- 		<xsd:complexType name="PCBASICWATERCRAFT"> -->
+<!-- 			<xsd:complexContent> -->
+<!-- 				<xsd:extension base="PCBASICWATERCRAFT"> -->
+<!-- 					<xsd:sequence> -->
+<!-- 					</xsd:sequence> -->
+<!-- 				</xsd:extension> -->
+<!-- 			</xsd:complexContent> -->
+<!-- 		</xsd:complexType> -->
+		<xsd:complexType name="Watercraft_Type">
+			<xsd:complexContent>
+				<xsd:extension base="Watercraft_Type">
+					<xsd:sequence>
+						<xsd:element name="NumTrailerAxles" type="Long" minOccurs="0" maxOccurs="1"/>
+<!-- 						<xsd:element name="PropulsionTypeCd" type="PropulsionType" minOccurs="0" maxOccurs="1"/> -->
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+        <xsd:complexType name="CommlIMInfo_Type">
+            <xsd:complexContent>
+                <xsd:extension base="CommlIMInfo_Type">
+                    <xsd:sequence>
+                        <xsd:element name="HasTransportation" minOccurs="0"/>
+                        <xsd:element name="HasMotorTruck" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+
+	</xsd:redefine>
+	<xsd:complexType name="ProfessionalLiabilityPolicyQuoteInqRq_Type">
+		<xsd:sequence>
+			<xsd:group ref="MSGRQINFO"/>
+			<xsd:group ref="GENERALLIABILITYPOLINFO"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="ProfessionalLiabilityPolicyQuoteInqRq" type="ProfessionalLiabilityPolicyQuoteInqRq_Type"/>
+	<xsd:complexType name="AP_CPPLobIndicators_Type">
+		<xsd:sequence>
+			<xsd:element ref="CPP_PROPC_indicator"/>
+			<xsd:element ref="CPP_transportation_indicator"/>
+			<xsd:element ref="CPP_INMRC_indicator"/>
+			<xsd:element ref="CPP_installation_indicator"/>
+			<xsd:element ref="CPP_edp_indicator"/>
+			<xsd:element ref="CPP_CGL_indicator"/>
+			<xsd:element ref="CPP_AUTOB_indicator"/>
+			<xsd:element ref="CPP_GARAG_indicator"/>
+			<xsd:element ref="CPP_UMBRC_indicator"/>
+			<xsd:element ref="CPP_INMRCLite_indicator"/>
+			<xsd:element ref="CPP_CRIME_indicator"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Territory_Type">
+		<xsd:sequence>
+			<xsd:element ref="TerritoryCd"/>
+			<xsd:element ref="TerritoryAppliesToCd"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="DisplayBasicPolicyCoveragesRetroDatesIndicator" type="xsd:boolean"/>
+	<xsd:element name="UnderlyAUTOBPolicyIndicator" type="xsd:boolean"/>
+	<xsd:element name="UnderlyCGLPolicyIndicator" type="xsd:boolean"/>
+	<xsd:element name="UnderlyELPolicyIndicator" type="xsd:boolean"/>
+	<xsd:element name="UnderlyGLPolicyPIADVCoverageIndicator" type="xsd:boolean"/>
+	<xsd:element name="UnderlyGLPolicyPRDCOCoverageIndicator" type="xsd:boolean"/>
+	<xsd:element name="UnderlyGLPolicyWCRFTCoverageIndicator" type="xsd:boolean"/>
+	<xsd:element name="AP_CPPLobIndicators" type="AP_CPPLobIndicators_Type"/>
+	<xsd:element name="CPP_PROPC_indicator" type="xsd:string"/>
+	<xsd:element name="CPP_transportation_indicator" type="xsd:string"/>
+	<xsd:element name="CPP_INMRC_indicator" type="xsd:string"/>
+	<xsd:element name="CPP_installation_indicator" type="xsd:string"/>
+	<xsd:element name="CPP_edp_indicator" type="xsd:string"/>
+	<xsd:element name="CPP_CGL_indicator" type="xsd:string"/>
+	<xsd:element name="CPP_AUTOB_indicator" type="xsd:string"/>
+	<xsd:element name="CPP_GARAG_indicator" type="xsd:string"/>
+	<xsd:element name="CPP_UMBRC_indicator" type="xsd:string"/>
+	<xsd:element name="CPP_INMRCLite_indicator" type="xsd:string"/>
+	<xsd:element name="CPP_CRIME_indicator" type="xsd:string"/>
+	<xsd:element name="AnnualTransit" type="xsd:boolean"/>
+	<xsd:element name="ComputerEquipment" type="xsd:boolean"/>
+	<xsd:element name="ContractorsEquipment" type="xsd:boolean"/>
+	<xsd:element name="Installation" type="xsd:boolean"/>
+	<xsd:element name="BuildersRisk" type="xsd:boolean"/>
+	<xsd:element name="TransitPropertyNamedPrem" type="xsd:boolean"/>
+	<xsd:element name="LiabilityCoverageIndicator" type="xsd:string"/>
+	<xsd:element name="Territory" type="Territory_Type"/>
+	<xsd:element name="TerritoryAppliesToCd" type="xsd:string"/>
+	<xsd:element name="AP_NumSafetyFeatures" type="Long"/>
+	<xsd:element name="AP_OwnerOperatedCd" type="CoverageOption"/>
+	<xsd:element name="AP_EmployerFurnishedInd" type="Boolean"/>
+</xsd:schema>

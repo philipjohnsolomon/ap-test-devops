@@ -1,0 +1,39 @@
+<views xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/view/view.xsd">
+	<view id="CommlPolicy.OtherOrPriorPolicy.Coverage.GENAG.Limit" title="GENAG Limit" type="standard" deleteMode="onEmptyValue">
+		<fieldSet>
+			<field type="id" >CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='GENAG'].Limit.FormatInteger</field>
+			<deleteField type="id">CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='GENAG']</deleteField>
+		</fieldSet>
+	</view>
+	<view id="CommlPolicy.OtherOrPriorPolicy.Coverage.PRDCO.Limit" title="PRDCO Limit" type="standard" deleteMode="onEmptyValue">
+		<fieldSet>
+			<field type="id" >CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='PRDCO'].Limit.FormatInteger</field>
+			<deleteField type="id">CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='PRDCO']</deleteField>
+		</fieldSet>
+	</view>
+	<view id="CommlPolicy.OtherOrPriorPolicy.Coverage.PIADV.Limit" title="PIADV Limit" type="standard" deleteMode="onEmptyValue">
+		<fieldSet>
+			<field type="id" >CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='PIADV'].Limit.FormatInteger</field>
+			<deleteField type="id">CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='PIADV']</deleteField>
+		</fieldSet>
+	</view>
+	<view id="CommlPolicy.OtherOrPriorPolicy.Coverage.EAOCC.Limit" title="EAOCC Limit" type="standard" deleteMode="onEmptyValue">
+		<fieldSet>
+			<field type="id" >CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='EAOCC'].Limit.FormatInteger</field>
+			<deleteField type="id">CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='EAOCC']</deleteField>
+		</fieldSet>
+	</view>
+	<view id="CommlPolicy.OtherOrPriorPolicy.Coverage.FIRDM.Limit" title="FIRDM Limit" type="standard" deleteMode="onEmptyValue">
+		<fieldSet>
+			<field type="id" >CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='FIRDM'].Limit.FormatInteger</field>
+			<deleteField type="id">CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='FIRDM']</deleteField>
+		</fieldSet>
+	</view>
+	<view id="CommlPolicy.OtherOrPriorPolicy.Coverage.MEDEX.Limit" title="MEDEX Limit" type="standard" deleteMode="onEmptyValue">
+		<fieldSet>
+			<field type="id" >CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='MEDEX'].Limit.FormatInteger</field>
+			<deleteField type="id">CommlPolicy.OtherOrPriorPolicy.Coverage[CoverageCd='MEDEX']</deleteField>
+		</fieldSet>
+	</view>
+</views>

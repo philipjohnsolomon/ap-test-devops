@@ -1,0 +1,176 @@
+<transactionDefinitionBehavior xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/behavior/transactionDefinitionBehavior.xsd">
+    <!-- The following delimiter applies to the <for> elements for separating page entities -->
+    <delimiter>/</delimiter>
+
+    <hotField key="*/AUTOBquestionnaire/AUTOBuwQuestions/Autop11" />
+    <hotField key="*/AUTOBquestionnaire/AUTOBuwQuestions/Autob11" />
+    <hotField key="*/AUTOBquestionnaire/AUTOBuwQuestions/Inmrc09" />
+    <hotField key="*/AUTOBquestionnaire/AUTOBuwQuestions/Cumbr07" />
+    <hotField key="*/AUTOBquestionnaire/AUTOBuwQuestions/Autob07" />
+    <hotField key="*/AUTOBquestionnaire/AUTOBuwQuestions/Autob04" />
+    <hotField key="*/AUTOBquestionnaire/AUTOBuwQuestions/Autob06" />
+    <hotField key="*/AUTOBquestionnaire/AUTOBuwQuestions/Autob01" />
+    <hotField key="*/AUTOBquestionnaire/AUTOBuwQuestions/Autob02" />
+    <hotField key="*/AUTOBquestionnaire/AUTOBuwQuestions/Inmrc10" />
+    <hotField key="*/AUTOBquestionnaire/AUTOBuwQuestions/Inmrc14" />
+    <hotField key="*/AUTOBquestionnaire/AUTOBuwQuestions/Autob08" />
+    <hotField key="*/AUTOBquestionnaire/AUTOBuwQuestions/Autob03" />
+    <hotField key="*/AUTOBquestionnaire/AUTOBuwQuestions/Autob09" />
+    <hotField key="*/AUTOBquestionnaire/AUTOBuwQuestions/Autob12" />
+
+    <behavior title="Exclude Explanation fields by default">
+        <description>Exclude all Explanations by default; include them as needed.</description>
+        <do action="exclude" />
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Autop11Exp</for>
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Autob11Exp</for>
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Inmrc09Exp</for>
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Cumbr07Exp</for>
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Autob07Exp</for>
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Autob04Exp</for>
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Autob06Exp</for>
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Autob01Exp</for>
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Autob02Exp</for>
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Inmrc10Exp</for>
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Inmrc14Exp</for>
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Autob08Exp</for>
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Autob03Exp</for>
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Autob09Exp</for>
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Autob12Exp</for>
+    </behavior>
+
+    <behavior title="Include explanation for question AUTOP 11 if answered YES">
+        <description>With the exception of encumbrances, are any vehicles not solely owned by and registered to the applicant?</description>
+        <do action="include" />
+        <where>
+            <preCondition name="Autop11">YES</preCondition>
+        </where>
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Autop11Exp</for>
+    </behavior>
+
+    <behavior title="Include explanation for question AUTOB 11 if answered YES">
+        <description>Do over 50% of the employees use their autos in the business?</description>
+        <do action="include" />
+        <where>
+            <preCondition name="Autob11">YES</preCondition>
+        </where>
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Autob11Exp</for>
+    </behavior>
+
+    <behavior title="Include explanation for question INMRC 09 if answered YES">
+        <description>Is there a vehicle maintenance program in operation?</description>
+        <do action="include" />
+        <where>
+            <preCondition name="Inmrc09">YES</preCondition>
+        </where>
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Inmrc09Exp</for>
+    </behavior>
+
+    <behavior title="Include explanation for question CUMBR 07 if answered YES">
+        <description>Are any vehicles leased to others?</description>
+        <do action="include" />
+        <where>
+            <preCondition name="Cumbr07">YES</preCondition>
+        </where>
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Cumbr07Exp</for>
+    </behavior>
+
+    <behavior title="Include explanation for question AUTOB 07 if answered YES">
+        <description>Are any vehicles customized, altered or have special equipment?</description>
+        <do action="include" />
+        <where>
+            <preCondition name="Autob07">YES</preCondition>
+        </where>
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Autob07Exp</for>
+    </behavior>
+
+    <behavior title="Include explanation for question AUTOB 04 if answered YES">
+        <description>Are ICC, PUC or other filings required?</description>
+        <do action="include" />
+        <where>
+            <preCondition name="Autob04">YES</preCondition>
+        </where>
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Autob04Exp</for>
+    </behavior>
+
+    <behavior title="Include explanation for question AUTOB 06 if answered YES">
+        <description>Do operations involve transporting hazardous material?</description>
+        <do action="include" />
+        <where>
+            <preCondition name="Autob06">YES</preCondition>
+        </where>
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Autob06Exp</for>
+    </behavior>
+
+    <behavior title="Include explanation for question AUTOB 01 if answered YES">
+        <description>Any hold harmless agreements?</description>
+        <do action="include" />
+        <where>
+            <preCondition name="Autob01">YES</preCondition>
+        </where>
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Autob01Exp</for>
+    </behavior>
+
+    <behavior title="Include explanation for question AUTOB 02 if answered YES">
+        <description>Any vehicles used by family members?</description>
+        <do action="include" />
+        <where>
+            <preCondition name="Autob02">YES</preCondition>
+        </where>
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Autob02Exp</for>
+    </behavior>
+
+    <behavior title="Include explanation for question INMRC 10 if answered YES">
+        <description>Does the applicant obtain MVR verifications?</description>
+        <do action="include" />
+        <where>
+            <preCondition name="Inmrc10">YES</preCondition>
+        </where>
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Inmrc10Exp</for>
+    </behavior>
+
+    <behavior title="Include explanation for question INMRC 12 if answered YES">
+        <description>Does the applicant have a specific driver recruiting method?</description>
+        <do action="include" />
+        <where>
+            <preCondition name="Inmrc14">YES</preCondition>
+        </where>
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Inmrc14Exp</for>
+    </behavior>
+
+    <behavior title="Include explanation for question AUTOB 08 if answered YES">
+        <description>Are any drivers not covered by Worker's Compensation?</description>
+        <do action="include" />
+        <where>
+            <preCondition name="Autob08">YES</preCondition>
+        </where>
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Autob08Exp</for>
+    </behavior>
+
+    <behavior title="Include explanation for question AUTOB 03 if answered YES">
+        <description>Any vehicles owned but not scheduled on this application?</description>
+        <do action="include" />
+        <where>
+            <preCondition name="Autob03">YES</preCondition>
+        </where>
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Autob03Exp</for>
+    </behavior>
+
+    <behavior title="Include explanation for question AUTOB 09 if answered YES">
+        <description>Any drivers with convictions for moving traffic violations?</description>
+        <do action="include" />
+        <where>
+            <preCondition name="Autob09">YES</preCondition>
+        </where>
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Autob09Exp</for>
+    </behavior>
+
+    <behavior title="Include explanation for question AUTOB 12 if answered YES">
+        <description>Has agent inspected vehicles?</description>
+        <do action="include" />
+        <where>
+            <preCondition name="Autob12">YES</preCondition>
+        </where>
+        <for>*/AUTOBquestionnaire/AUTOBuwQuestions/Autob12Exp</for>
+    </behavior>
+
+</transactionDefinitionBehavior>

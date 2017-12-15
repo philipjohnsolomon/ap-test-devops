@@ -1,0 +1,2640 @@
+%PDF-1.4
+%ÿğ°
+1 0 obj 
+<< /AcroForm << /DR << /Font << /F2 2 0 R >> >> /Fields [ 3 0 R 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 14 0 R 15 0 R 16 0 R 17 0 R 18 0 R 19 0 R 20 0 R 21 0 R 22 0 R 23 0 R 24 0 R 25 0 R 26 0 R 27 0 R 28 0 R 29 0 R 30 0 R 31 0 R 32 0 R 33 0 R 34 0 R 35 0 R 36 0 R 37 0 R 38 0 R 39 0 R 40 0 R 41 0 R 42 0 R 43 0 R 44 0 R 45 0 R 46 0 R 47 0 R 48 0 R 49 0 R 50 0 R 51 0 R 52 0 R 53 0 R 54 0 R 55 0 R 56 0 R 57 0 R 58 0 R 59 0 R 60 0 R 61 0 R 62 0 R 63 0 R 64 0 R 65 0 R 66 0 R 67 0 R 68 0 R 69 0 R 70 0 R 71 0 R 72 0 R 73 0 R 74 0 R 75 0 R 76 0 R 77 0 R 78 0 R 79 0 R 80 0 R 81 0 R 82 0 R 83 0 R 84 0 R 85 0 R 86 0 R 87 0 R 88 0 R 89 0 R 90 0 R 91 0 R 92 0 R 93 0 R 94 0 R 95 0 R 96 0 R 97 0 R 98 0 R 99 0 R 100 0 R 101 0 R 102 0 R 103 0 R 104 0 R 105 0 R 106 0 R 107 0 R 108 0 R 109 0 R 110 0 R 111 0 R 112 0 R 113 0 R 114 0 R 115 0 R 116 0 R 117 0 R 118 0 R 119 0 R 120 0 R 121 0 R 122 0 R 123 0 R 124 0 R 125 0 R 126 0 R 127 0 R 128 0 R 129 0 R 130 0 R 131 0 R 132 0 R 133 0 R 134 0 R 135 0 R 136 0 R 137 0 R 138 0 R 139 0 R 140 0 R 141 0 R 142 0 R 143 0 R 144 0 R 145 0 R 146 0 R 147 0 R 148 0 R 149 0 R 150 0 R 151 0 R 152 0 R 153 0 R 154 0 R 155 0 R 156 0 R 157 0 R 158 0 R 159 0 R 160 0 R 161 0 R 162 0 R 163 0 R 164 0 R 165 0 R 166 0 R 167 0 R 168 0 R 169 0 R 170 0 R 171 0 R 172 0 R 173 0 R 174 0 R 175 0 R 176 0 R 177 0 R 178 0 R 179 0 R 180 0 R 181 0 R 182 0 R 183 0 R 184 0 R 185 0 R 186 0 R 187 0 R 188 0 R 189 0 R 190 0 R 191 0 R 192 0 R 193 0 R 194 0 R 195 0 R 196 0 R 197 0 R 198 0 R 199 0 R 200 0 R 201 0 R 202 0 R 203 0 R 204 0 R 205 0 R 206 0 R 207 0 R 208 0 R 209 0 R 210 0 R 211 0 R ] >> /OpenAction << /JS (function DateV\(event\) {  var regEx = /^\\d{1,2}\\/\\d{1,2}\\/\\d{4}$/; if \(!regEx.test\(event.value\)\) { event.rc = false; app.alert\("The date must be of the format MM/DD/YYYY."\); } };) /S /JavaScript /Type /Action >> /Pages 212 0 R /Type /Catalog >>
+endobj
+213 0 obj 
+<< /Author (ACORD Corporation) /CreationDate (D:20140403170553-04'00') /Creator (Silverlake Software LLC - Forms Dev Environment) /ModDate (D:20140403170553-04'00') /Producer (Silverlake Software LLC - Form Designer - v1.3.14171) /Title (ACORD 0045 2009-04 Acroform) >>
+endobj
+2 0 obj 
+<< /BaseFont /Arial /Encoding /WinAnsiEncoding /FirstChar 0 /FontDescriptor << /Ascent 905.27 /CapHeight 716.31 /Descent -211.91 /Flags 32 /FontBBox [ -45.90 -168.46 1000.00 938.48 ] /FontName /Arial /ItalicAngle 0.00 /StemV 0.00 /Type /FontDescriptor >> /LastChar 255 /Subtype /Type1 /Type /Font /Widths [ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 277.83 277.83 354.98 556.15 556.15 889.16 666.99 190.92 333.01 333.01 389.16 583.98 277.83 333.01 277.83 277.83 556.15 556.15 556.15 556.15 556.15 556.15 556.15 556.15 556.15 556.15 277.83 277.83 583.98 583.98 583.98 556.15 1015.14 666.99 666.99 722.17 722.17 666.99 610.84 777.83 722.17 277.83 500.00 666.99 556.15 833.01 722.17 777.83 666.99 777.83 722.17 666.99 610.84 722.17 666.99 943.85 666.99 666.99 610.84 277.83 277.83 277.83 469.24 556.15 333.01 556.15 556.15 500.00 556.15 556.15 277.83 556.15 556.15 222.17 222.17 500.00 222.17 833.01 556.15 556.15 556.15 556.15 333.01 500.00 277.83 556.15 500.00 722.17 500.00 500.00 500.00 333.98 259.77 333.98 583.98 0 556.15 0 222.17 556.15 333.01 1000.00 556.15 556.15 333.01 1000.00 666.99 333.01 1000.00 0 610.84 0 0 222.17 222.17 333.01 333.01 350.10 556.15 1000.00 333.01 1000.00 500.00 333.01 943.85 0 500.00 666.99 277.83 333.01 556.15 556.15 556.15 556.15 259.77 556.15 333.01 736.82 370.12 556.15 583.98 333.01 736.82 552.25 399.90 548.83 333.01 333.01 333.01 576.17 537.11 333.01 333.01 333.01 365.23 556.15 833.98 833.98 833.98 610.84 666.99 666.99 666.99 666.99 666.99 666.99 1000.00 722.17 666.99 666.99 666.99 666.99 277.83 277.83 277.83 277.83 722.17 722.17 777.83 777.83 777.83 777.83 777.83 583.98 777.83 722.17 722.17 722.17 722.17 666.99 666.99 610.84 556.15 556.15 556.15 556.15 556.15 556.15 889.16 500.00 556.15 556.15 556.15 556.15 277.83 277.83 277.83 277.83 556.15 556.15 556.15 556.15 556.15 556.15 556.15 548.83 610.84 556.15 556.15 556.15 556.15 500.00 556.15 500.00 ] >>
+endobj
+3 0 obj 
+<< /DV (ACORD 0045 2009-04 Acroform) /F 2 /Ff 1 /FT /Tx /P 214 0 R /Rect [ 0 1 0 1 ] /Subtype /Widget /T (Form_EditionIdentifier_A) /TU (The edition identifier of the form including the form number and edition \(the date is typically formatted YYYY/MM\).) /Type /Annot /V (ACORD 0045 2009-04 Acroform) >>
+endobj
+4 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 414 756 594 768 ] /Subtype /Widget /T (Producer_CustomerIdentifier_A) /TU (Enter identifier: The customer's identification number assigned by the producer \(e.g. agency or brokerage\). ) /Type /Annot >>
+endobj
+5 0 obj 
+<< /AA << /V << /JS (DateV\(event\);) /S /JavaScript /Type /Action >> >> /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /MaxLen 10 /P 214 0 R /Q 1 /Rect [ 515 726 587 738 ] /Subtype /Widget /T (Form_CompletionDate_A) /TU (Enter date: The date on which the form is completed. ) /Type /Annot >>
+endobj
+6 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 22 702 302 714 ] /Subtype /Widget /T (Producer_FullName_A) /TU (Enter text: The full name of the producer/agency. ) /Type /Annot >>
+endobj
+7 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 22 678 245 690 ] /Subtype /Widget /T (Policy_PolicyNumberIdentifier_A) /TU (Enter identifier: The identifier assigned by the insurer to the policy, or submission, being referenced exactly as it appears on the policy, including prefix and suffix symbols. If required for self-insurance, the self-insured license or contract number. ) /Type /Annot >>
+endobj
+8 0 obj 
+<< /AA << /V << /JS (DateV\(event\);) /S /JavaScript /Type /Action >> >> /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /MaxLen 10 /P 214 0 R /Q 1 /Rect [ 248 678 306 690 ] /Subtype /Widget /T (Policy_EffectiveDate_A) /TU (Enter date: The effective date of the policy.  The date that the terms and conditions of the policy commence. ) /Type /Annot >>
+endobj
+9 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 310 702 540 714 ] /Subtype /Widget /T (Insurer_FullName_A) /TU (Enter text: The insurer's full legal company name\(s\) as found in the file copy of the policy.  Use the actual name of the company within the group to which the policy has been issued.  This is not the insurer's group name or trade name. ) /Type /Annot >>
+endobj
+10 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 547 702 590 714 ] /Subtype /Widget /T (Insurer_NAICCode_A) /TU (Enter code: The identification code assigned to the insurer by the NAIC. ) /Type /Annot >>
+endobj
+11 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 310 678 590 690 ] /Subtype /Widget /T (NamedInsured_FullName_A) /TU (Enter text: The named insured\(s\) as it/they will appear on the policy declarations page. ) /Type /Annot >>
+endobj
+12 0 obj 
+<< /AP << /D << /1 215 0 R /Off 216 0 R >> /N << /1 217 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 642 32 654 ] /Subtype /Widget /T (AdditionalInterest_Interest_AdditionalInsuredIndicator_A) /TU (Check the box \(if applicable\): Indicates the interest type is an additional insured. ) /Type /Annot >>
+endobj
+13 0 obj 
+<< /AP << /D << /1 218 0 R /Off 219 0 R >> /N << /1 220 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 630 32 642 ] /Subtype /Widget /T (AdditionalInterest_Interest_BreachOfWarrantyIndicator_A) /TU (Check the box \(if applicable\): Indicates the additional interest type is a breach of warranty. ) /Type /Annot >>
+endobj
+14 0 obj 
+<< /AP << /D << /1 221 0 R /Off 222 0 R >> /N << /1 223 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 618 32 630 ] /Subtype /Widget /T (AdditionalInterest_Interest_CoOwnerIndicator_A) /TU (Check the box \(if applicable\): Indicates the additional interest type is a co-owner. ) /Type /Annot >>
+endobj
+15 0 obj 
+<< /AP << /D << /1 224 0 R /Off 225 0 R >> /N << /1 226 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 606 32 618 ] /Subtype /Widget /T (AdditionalInterest_Interest_EmployeeAsLessorIndicator_A) /TU (Check the box \(if applicable\): Indicates the additional interest type is an employee as lessor. ) /Type /Annot >>
+endobj
+16 0 obj 
+<< /AP << /D << /1 227 0 R /Off 228 0 R >> /N << /1 229 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 594 32 606 ] /Subtype /Widget /T (AdditionalInterest_Interest_LeasebackOwnerIndicator_A) /TU (Check the box \(if applicable\): Indicates the additional interest type is a leaseback owner. ) /Type /Annot >>
+endobj
+17 0 obj 
+<< /AP << /D << /1 230 0 R /Off 231 0 R >> /N << /1 232 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 582 32 594 ] /Subtype /Widget /T (AdditionalInterest_Interest_LienholderIndicator_A) /TU (Check the box \(if applicable\): Indicates the additional interest type is a lien holder. ) /Type /Annot >>
+endobj
+18 0 obj 
+<< /AP << /D << /1 233 0 R /Off 234 0 R >> /N << /1 235 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 79 642 94 654 ] /Subtype /Widget /T (AdditionalInterest_Interest_LossPayeeIndicator_A) /TU (Check the box \(if applicable\): Indicates the additional interest type is a loss payee. ) /Type /Annot >>
+endobj
+19 0 obj 
+<< /AP << /D << /1 236 0 R /Off 237 0 R >> /N << /1 238 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 79 630 94 642 ] /Subtype /Widget /T (AdditionalInterest_Interest_MortgageeIndicator_A) /TU (Check the box \(if applicable\): Indicates the additional interest type is a mortgagee. ) /Type /Annot >>
+endobj
+20 0 obj 
+<< /AP << /D << /1 239 0 R /Off 240 0 R >> /N << /1 241 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 79 618 94 630 ] /Subtype /Widget /T (AdditionalInterest_Interest_OwnerIndicator_A) /TU (Check the box \(if applicable\): Indicates the additional interest type is an owner. ) /Type /Annot >>
+endobj
+21 0 obj 
+<< /AP << /D << /1 242 0 R /Off 243 0 R >> /N << /1 244 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 79 606 94 618 ] /Subtype /Widget /T (AdditionalInterest_Interest_RegistrantIndicator_A) /TU (Check the box \(if applicable\): Indicates the additional interest type is a registrant. ) /Type /Annot >>
+endobj
+22 0 obj 
+<< /AP << /D << /1 245 0 R /Off 246 0 R >> /N << /1 247 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 79 594 94 606 ] /Subtype /Widget /T (AdditionalInterest_Interest_TrusteeIndicator_A) /TU (Check the box \(if applicable\): Indicates the additional interest type is a trustee. ) /Type /Annot >>
+endobj
+23 0 obj 
+<< /AP << /D << /1 248 0 R /Off 249 0 R >> /N << /1 250 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 570 32 582 ] /Subtype /Widget /T (AdditionalInterest_Interest_OtherIndicator_A) /TU (Check the box \(if applicable\): Indicates the additional interest is not any of the types listed on the form. ) /Type /Annot >>
+endobj
+24 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 36 570 137 582 ] /Subtype /Widget /T (AdditionalInterest_Interest_OtherDescription_A) /TU (Enter text: The description of the type of interest in the item. ) /Type /Annot >>
+endobj
+25 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 97 558 292 570 ] /Subtype /Widget /T (AdditionalInterest_InterestReasonDescription_A) /TU (Enter text: The description for the interest in the item. ) /Type /Annot >>
+endobj
+26 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 234 654 252 666 ] /Subtype /Widget /T (AdditionalInterest_InterestRank_A) /TU (Enter number: The ranking of 'this' additional interest when multiple additional interests are associated with the same item. ) /Type /Annot >>
+endobj
+27 0 obj 
+<< /AP << /D << /1 251 0 R /Off 252 0 R >> /N << /1 253 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 295 654 310 666 ] /Subtype /Widget /T (AdditionalInterest_CertificateRequiredIndicator_A) /TU (Check the box \(if applicable\): Indicates if the additional interest requires a Certificate of Insurance, ) /Type /Annot >>
+endobj
+28 0 obj 
+<< /AP << /D << /1 254 0 R /Off 255 0 R >> /N << /1 256 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 356 654 371 666 ] /Subtype /Widget /T (AdditionalInterest_PolicyRequiredIndicator_A) /TU (Check the box \(if applicable\): Indicates the additional interest requires a copy of the policy. ) /Type /Annot >>
+endobj
+29 0 obj 
+<< /AP << /D << /1 257 0 R /Off 258 0 R >> /N << /1 259 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 400 654 414 666 ] /Subtype /Widget /T (AdditionalInterest_SendBillIndicator_A) /TU (Check the box \(if applicable\): Indicates the bill should be sent to the additional interest. ) /Type /Annot >>
+endobj
+30 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 144 636 425 648 ] /Subtype /Widget /T (AdditionalInterest_FullName_A) /TU (Enter text: The additional interest's full name. As used here, the complete name and address of the additional interest, including the city, state and country.  If the additional interest is the owner of a motor vehicle, and the owner is different from the Named Insured, show the owner's name here. ) /Type /Annot >>
+endobj
+31 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 144 624 425 636 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_LineOne_A) /TU (Enter text: The additional interest's mailing address line one. ) /Type /Annot >>
+endobj
+32 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 144 612 425 624 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_LineTwo_A) /TU (Enter text: The additional interest's mailing address line two. ) /Type /Annot >>
+endobj
+33 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 144 600 320 612 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_CityName_A) /TU (Enter text: The additional interest's mailing address city name. ) /Type /Annot >>
+endobj
+34 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 320 600 342 612 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_StateOrProvinceCode_A) /TU (Enter code: The additional interest's mailing address state or province code. ) /Type /Annot >>
+endobj
+35 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 342 600 410 612 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_PostalCode_A) /TU (Enter code: The additional interest's mailing address postal code. ) /Type /Annot >>
+endobj
+36 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 410 600 443 612 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_CountryCode_A) /TU (Enter code: The additional interest's country code. ) /Type /Annot >>
+endobj
+37 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 209 582 292 594 ] /Subtype /Widget /T (AdditionalInterest_AccountNumberIdentifier_A) /TU (Enter identifier: The loan number, account number or other controlling number that the additional interest may have assigned the insured. ) /Type /Annot >>
+endobj
+38 0 obj 
+<< /AA << /V << /JS (DateV\(event\);) /S /JavaScript /Type /Action >> >> /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /MaxLen 10 /P 214 0 R /Q 1 /Rect [ 364 582 446 594 ] /Subtype /Widget /T (AdditionalInterest_InterestEndDate_A) /TU (Enter date: The date the interest holder's interest terminates. ) /Type /Annot >>
+endobj
+39 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 187 570 292 582 ] /Subtype /Widget /T (AdditionalInterest_LoanAmount_A) /TU (Enter amount: The amount of the loan. ) /Type /Annot >>
+endobj
+40 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 364 570 446 582 ] /Subtype /Widget /T (AdditionalInterest_Primary_PhoneNumber_A) /TU (Enter number: The primary phone number of the additional interest. ) /Type /Annot >>
+endobj
+41 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 497 570 590 582 ] /Subtype /Widget /T (AdditionalInterest_Primary_FaxNumber_A) /TU (Enter number: The primary fax number of the additional interest. ) /Type /Annot >>
+endobj
+42 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 353 558 590 570 ] /Subtype /Widget /T (AdditionalInterest_Primary_EmailAddress_A) /TU (Enter text: The primary e-mail address for the additional interest. ) /Type /Annot >>
+endobj
+43 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 490 642 518 654 ] /Subtype /Widget /T (AdditionalInterest_Item_LocationProducerIdentifier_A) /TU (Enter number: The producer assigned number of the location which has an additional interest. ) /Type /Annot >>
+endobj
+44 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 558 642 590 654 ] /Subtype /Widget /T (AdditionalInterest_Item_BuildingProducerIdentifier_A) /TU (Enter number: The producer assigned number of the building which has an additional interest. ) /Type /Annot >>
+endobj
+45 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 482 630 518 642 ] /Subtype /Widget /T (AdditionalInterest_Item_VehicleProducerIdentifier_A) /TU (Enter number: The producer assigned number of the vehicle which has an additional interest. ) /Type /Annot >>
+endobj
+46 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 547 630 590 642 ] /Subtype /Widget /T (AdditionalInterest_Item_BoatProducerIdentifier_A) /TU (Enter number: The producer assigned number of the boat which has an additional interest. ) /Type /Annot >>
+endobj
+47 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 486 618 518 630 ] /Subtype /Widget /T (AdditionalInterest_Item_AirportIdentifier_A) /TU (Enter identifier: The Federal Aviation Administration's designator for the airport \(e.g. ORD - O'Hare International Airport\). ) /Type /Annot >>
+endobj
+48 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 558 618 590 630 ] /Subtype /Widget /T (AdditionalInterest_Item_AircraftProducerIdentifier_A) /TU (Enter number: The producer assigned number of the aircraft which has an additional interest. ) /Type /Annot >>
+endobj
+49 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 479 606 518 618 ] /Subtype /Widget /T (AdditionalInterest_Item_ScheduledItemClassCode_A) /TU (Enter code: The description of the property class of the scheduled item \(i.e. Jewelry, Furs, Contractors Equipment, etc.\). ) /Type /Annot >>
+endobj
+50 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 544 606 590 618 ] /Subtype /Widget /T (AdditionalInterest_Item_ScheduledItemProducerIdentifier_A) /TU (Enter number: The producer assigned number of the scheduled item which has an additional interest. ) /Type /Annot >>
+endobj
+51 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 454 582 590 594 ] /Subtype /Widget /T (AdditionalInterest_ItemDescription_A) /TU (Enter text: The description of the item of interest if needed to further clarify.  For a vehicle, list the make, model and VIN number.  For a scheduled item, list the description, such as three carat diamond in six point setting. ) /Type /Annot >>
+endobj
+52 0 obj 
+<< /AP << /D << /1 260 0 R /Off 261 0 R >> /N << /1 262 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 534 32 546 ] /Subtype /Widget /T (AdditionalInterest_Interest_AdditionalInsuredIndicator_B) /TU (Check the box \(if applicable\): Indicates the interest type is an additional insured. ) /Type /Annot >>
+endobj
+53 0 obj 
+<< /AP << /D << /1 263 0 R /Off 264 0 R >> /N << /1 265 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 522 32 534 ] /Subtype /Widget /T (AdditionalInterest_Interest_BreachOfWarrantyIndicator_B) /TU (Check the box \(if applicable\): Indicates the additional interest type is a breach of warranty. ) /Type /Annot >>
+endobj
+54 0 obj 
+<< /AP << /D << /1 266 0 R /Off 267 0 R >> /N << /1 268 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 510 32 522 ] /Subtype /Widget /T (AdditionalInterest_Interest_CoOwnerIndicator_B) /TU (Check the box \(if applicable\): Indicates the additional interest type is a co-owner. ) /Type /Annot >>
+endobj
+55 0 obj 
+<< /AP << /D << /1 269 0 R /Off 270 0 R >> /N << /1 271 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 498 32 510 ] /Subtype /Widget /T (AdditionalInterest_Interest_EmployeeAsLessorIndicator_B) /TU (Check the box \(if applicable\): Indicates the additional interest type is an employee as lessor. ) /Type /Annot >>
+endobj
+56 0 obj 
+<< /AP << /D << /1 272 0 R /Off 273 0 R >> /N << /1 274 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 486 32 498 ] /Subtype /Widget /T (AdditionalInterest_Interest_LeasebackOwnerIndicator_B) /TU (Check the box \(if applicable\): Indicates the additional interest type is a leaseback owner. ) /Type /Annot >>
+endobj
+57 0 obj 
+<< /AP << /D << /1 275 0 R /Off 276 0 R >> /N << /1 277 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 474 32 486 ] /Subtype /Widget /T (AdditionalInterest_Interest_LienholderIndicator_B) /TU (Check the box \(if applicable\): Indicates the additional interest type is a lien holder. ) /Type /Annot >>
+endobj
+58 0 obj 
+<< /AP << /D << /1 278 0 R /Off 279 0 R >> /N << /1 280 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 79 534 94 546 ] /Subtype /Widget /T (AdditionalInterest_Interest_LossPayeeIndicator_B) /TU (Check the box \(if applicable\): Indicates the additional interest type is a loss payee. ) /Type /Annot >>
+endobj
+59 0 obj 
+<< /AP << /D << /1 281 0 R /Off 282 0 R >> /N << /1 283 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 79 522 94 534 ] /Subtype /Widget /T (AdditionalInterest_Interest_MortgageeIndicator_B) /TU (Check the box \(if applicable\): Indicates the additional interest type is a mortgagee. ) /Type /Annot >>
+endobj
+60 0 obj 
+<< /AP << /D << /1 284 0 R /Off 285 0 R >> /N << /1 286 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 79 510 94 522 ] /Subtype /Widget /T (AdditionalInterest_Interest_OwnerIndicator_B) /TU (Check the box \(if applicable\): Indicates the additional interest type is an owner. ) /Type /Annot >>
+endobj
+61 0 obj 
+<< /AP << /D << /1 287 0 R /Off 288 0 R >> /N << /1 289 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 79 498 94 510 ] /Subtype /Widget /T (AdditionalInterest_Interest_RegistrantIndicator_B) /TU (Check the box \(if applicable\): Indicates the additional interest type is a registrant. ) /Type /Annot >>
+endobj
+62 0 obj 
+<< /AP << /D << /1 290 0 R /Off 291 0 R >> /N << /1 292 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 79 486 94 498 ] /Subtype /Widget /T (AdditionalInterest_Interest_TrusteeIndicator_B) /TU (Check the box \(if applicable\): Indicates the additional interest type is a trustee. ) /Type /Annot >>
+endobj
+63 0 obj 
+<< /AP << /D << /1 293 0 R /Off 294 0 R >> /N << /1 295 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 462 32 474 ] /Subtype /Widget /T (AdditionalInterest_Interest_OtherIndicator_B) /TU (Check the box \(if applicable\): Indicates the additional interest is not any of the types listed on the form. ) /Type /Annot >>
+endobj
+64 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 36 462 137 474 ] /Subtype /Widget /T (AdditionalInterest_Interest_OtherDescription_B) /TU (Enter text: The description of the type of interest in the item. ) /Type /Annot >>
+endobj
+65 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 97 450 292 462 ] /Subtype /Widget /T (AdditionalInterest_InterestReasonDescription_B) /TU (Enter text: The description for the interest in the item. ) /Type /Annot >>
+endobj
+66 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 234 546 252 558 ] /Subtype /Widget /T (AdditionalInterest_InterestRank_B) /TU (Enter number: The ranking of 'this' additional interest when multiple additional interests are associated with the same item. ) /Type /Annot >>
+endobj
+67 0 obj 
+<< /AP << /D << /1 296 0 R /Off 297 0 R >> /N << /1 298 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 295 546 310 558 ] /Subtype /Widget /T (AdditionalInterest_CertificateRequiredIndicator_B) /TU (Check the box \(if applicable\): Indicates if the additional interest requires a Certificate of Insurance, ) /Type /Annot >>
+endobj
+68 0 obj 
+<< /AP << /D << /1 299 0 R /Off 300 0 R >> /N << /1 301 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 356 546 371 558 ] /Subtype /Widget /T (AdditionalInterest_PolicyRequiredIndicator_B) /TU (Check the box \(if applicable\): Indicates the additional interest requires a copy of the policy. ) /Type /Annot >>
+endobj
+69 0 obj 
+<< /AP << /D << /1 302 0 R /Off 303 0 R >> /N << /1 304 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 400 546 414 558 ] /Subtype /Widget /T (AdditionalInterest_SendBillIndicator_B) /TU (Check the box \(if applicable\): Indicates the bill should be sent to the additional interest. ) /Type /Annot >>
+endobj
+70 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 144 528 425 540 ] /Subtype /Widget /T (AdditionalInterest_FullName_B) /TU (Enter text: The additional interest's full name. ) /Type /Annot >>
+endobj
+71 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 144 516 425 528 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_LineOne_B) /TU (Enter text: The additional interest's mailing address line one. ) /Type /Annot >>
+endobj
+72 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 144 504 425 516 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_LineTwo_B) /TU (Enter text: The additional interest's mailing address line two. ) /Type /Annot >>
+endobj
+73 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 144 492 320 504 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_CityName_B) /TU (Enter text: The additional interest's mailing address city name. ) /Type /Annot >>
+endobj
+74 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 320 492 342 504 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_StateOrProvinceCode_B) /TU (Enter code: The additional interest's mailing address state or province code. ) /Type /Annot >>
+endobj
+75 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 342 492 410 504 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_PostalCode_B) /TU (Enter code: The additional interest's mailing address postal code. ) /Type /Annot >>
+endobj
+76 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 410 492 443 504 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_CountryCode_B) /TU (Enter code: The additional interest's country code. ) /Type /Annot >>
+endobj
+77 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 209 474 292 486 ] /Subtype /Widget /T (AdditionalInterest_AccountNumberIdentifier_B) /TU (Enter identifier: The loan number, account number or other controlling number that the additional interest may have assigned the insured. ) /Type /Annot >>
+endobj
+78 0 obj 
+<< /AA << /V << /JS (DateV\(event\);) /S /JavaScript /Type /Action >> >> /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /MaxLen 10 /P 214 0 R /Q 1 /Rect [ 364 474 446 486 ] /Subtype /Widget /T (AdditionalInterest_InterestEndDate_B) /TU (Enter date: The date the interest holder's interest terminates. ) /Type /Annot >>
+endobj
+79 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 187 462 292 474 ] /Subtype /Widget /T (AdditionalInterest_LoanAmount_B) /TU (Enter amount: The amount of the loan. ) /Type /Annot >>
+endobj
+80 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 364 462 446 474 ] /Subtype /Widget /T (AdditionalInterest_Primary_PhoneNumber_B) /TU (Enter number: The primary phone number of the additional interest. ) /Type /Annot >>
+endobj
+81 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 497 462 590 474 ] /Subtype /Widget /T (AdditionalInterest_Primary_FaxNumber_B) /TU (Enter number: The primary fax number of the additional interest. ) /Type /Annot >>
+endobj
+82 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 353 450 590 462 ] /Subtype /Widget /T (AdditionalInterest_Primary_EmailAddress_B) /TU (Enter text: The primary e-mail address for the additional interest. ) /Type /Annot >>
+endobj
+83 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 490 534 518 546 ] /Subtype /Widget /T (AdditionalInterest_Item_LocationProducerIdentifier_B) /TU (Enter number: The producer assigned number of the location which has an additional interest. ) /Type /Annot >>
+endobj
+84 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 558 534 590 546 ] /Subtype /Widget /T (AdditionalInterest_Item_BuildingProducerIdentifier_B) /TU (Enter number: The producer assigned number of the building which has an additional interest. ) /Type /Annot >>
+endobj
+85 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 482 522 518 534 ] /Subtype /Widget /T (AdditionalInterest_Item_VehicleProducerIdentifier_B) /TU (Enter number: The producer assigned number of the vehicle which has an additional interest. ) /Type /Annot >>
+endobj
+86 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 547 522 590 534 ] /Subtype /Widget /T (AdditionalInterest_Item_BoatProducerIdentifier_B) /TU (Enter number: The producer assigned number of the boat which has an additional interest. ) /Type /Annot >>
+endobj
+87 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 486 510 518 522 ] /Subtype /Widget /T (AdditionalInterest_Item_AirportIdentifier_B) /TU (Enter identifier: The Federal Aviation Administration's designator for the airport \(e.g. ORD - O'Hare International Airport\). ) /Type /Annot >>
+endobj
+88 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 558 510 590 522 ] /Subtype /Widget /T (AdditionalInterest_Item_AircraftProducerIdentifier_B) /TU (Enter number: The producer assigned number of the aircraft which has an additional interest. ) /Type /Annot >>
+endobj
+89 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 479 498 518 510 ] /Subtype /Widget /T (AdditionalInterest_Item_ScheduledItemClassCode_B) /TU (Enter code: The description of the property class of the scheduled item \(i.e. Jewelry, Furs, Contractors Equipment, etc.\). ) /Type /Annot >>
+endobj
+90 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 544 498 590 510 ] /Subtype /Widget /T (AdditionalInterest_Item_ScheduledItemProducerIdentifier_B) /TU (Enter number: The producer assigned number of the scheduled item which has an additional interest. ) /Type /Annot >>
+endobj
+91 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 454 474 590 486 ] /Subtype /Widget /T (AdditionalInterest_ItemDescription_B) /TU (Enter text: The description of the item of interest if needed to further clarify.  For a vehicle, list the make, model and VIN number.  For a scheduled item, list the description, such as three carat diamond in six point setting. ) /Type /Annot >>
+endobj
+92 0 obj 
+<< /AP << /D << /1 305 0 R /Off 306 0 R >> /N << /1 307 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 426 32 438 ] /Subtype /Widget /T (AdditionalInterest_Interest_AdditionalInsuredIndicator_C) /TU (Check the box \(if applicable\): Indicates the interest type is an additional insured. ) /Type /Annot >>
+endobj
+93 0 obj 
+<< /AP << /D << /1 308 0 R /Off 309 0 R >> /N << /1 310 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 414 32 426 ] /Subtype /Widget /T (AdditionalInterest_Interest_BreachOfWarrantyIndicator_C) /TU (Check the box \(if applicable\): Indicates the additional interest type is a breach of warranty. ) /Type /Annot >>
+endobj
+94 0 obj 
+<< /AP << /D << /1 311 0 R /Off 312 0 R >> /N << /1 313 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 402 32 414 ] /Subtype /Widget /T (AdditionalInterest_Interest_CoOwnerIndicator_C) /TU (Check the box \(if applicable\): Indicates the additional interest type is a co-owner. ) /Type /Annot >>
+endobj
+95 0 obj 
+<< /AP << /D << /1 314 0 R /Off 315 0 R >> /N << /1 316 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 390 32 402 ] /Subtype /Widget /T (AdditionalInterest_Interest_EmployeeAsLessorIndicator_C) /TU (Check the box \(if applicable\): Indicates the additional interest type is an employee as lessor. ) /Type /Annot >>
+endobj
+96 0 obj 
+<< /AP << /D << /1 317 0 R /Off 318 0 R >> /N << /1 319 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 378 32 390 ] /Subtype /Widget /T (AdditionalInterest_Interest_LeasebackOwnerIndicator_C) /TU (Check the box \(if applicable\): Indicates the additional interest type is a leaseback owner. ) /Type /Annot >>
+endobj
+97 0 obj 
+<< /AP << /D << /1 320 0 R /Off 321 0 R >> /N << /1 322 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 366 32 378 ] /Subtype /Widget /T (AdditionalInterest_Interest_LienholderIndicator_C) /TU (Check the box \(if applicable\): Indicates the additional interest type is a lien holder. ) /Type /Annot >>
+endobj
+98 0 obj 
+<< /AP << /D << /1 323 0 R /Off 324 0 R >> /N << /1 325 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 79 426 94 438 ] /Subtype /Widget /T (AdditionalInterest_Interest_LossPayeeIndicator_C) /TU (Check the box \(if applicable\): Indicates the additional interest type is a loss payee. ) /Type /Annot >>
+endobj
+99 0 obj 
+<< /AP << /D << /1 326 0 R /Off 327 0 R >> /N << /1 328 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 79 414 94 426 ] /Subtype /Widget /T (AdditionalInterest_Interest_MortgageeIndicator_C) /TU (Check the box \(if applicable\): Indicates the additional interest type is a mortgagee. ) /Type /Annot >>
+endobj
+100 0 obj 
+<< /AP << /D << /1 329 0 R /Off 330 0 R >> /N << /1 331 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 79 402 94 414 ] /Subtype /Widget /T (AdditionalInterest_Interest_OwnerIndicator_C) /TU (Check the box \(if applicable\): Indicates the additional interest type is an owner. ) /Type /Annot >>
+endobj
+101 0 obj 
+<< /AP << /D << /1 332 0 R /Off 333 0 R >> /N << /1 334 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 79 390 94 402 ] /Subtype /Widget /T (AdditionalInterest_Interest_RegistrantIndicator_C) /TU (Check the box \(if applicable\): Indicates the additional interest type is a registrant. ) /Type /Annot >>
+endobj
+102 0 obj 
+<< /AP << /D << /1 335 0 R /Off 336 0 R >> /N << /1 337 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 79 378 94 390 ] /Subtype /Widget /T (AdditionalInterest_Interest_TrusteeIndicator_C) /TU (Check the box \(if applicable\): Indicates the additional interest type is a trustee. ) /Type /Annot >>
+endobj
+103 0 obj 
+<< /AP << /D << /1 338 0 R /Off 339 0 R >> /N << /1 340 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 354 32 366 ] /Subtype /Widget /T (AdditionalInterest_Interest_OtherIndicator_C) /TU (Check the box \(if applicable\): Indicates the additional interest is not any of the types listed on the form. ) /Type /Annot >>
+endobj
+104 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 36 354 137 366 ] /Subtype /Widget /T (AdditionalInterest_Interest_OtherDescription_C) /TU (Enter text: The description of the type of interest in the item. ) /Type /Annot >>
+endobj
+105 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 97 342 292 354 ] /Subtype /Widget /T (AdditionalInterest_InterestReasonDescription_C) /TU (Enter text: The description for the interest in the item. ) /Type /Annot >>
+endobj
+106 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 234 438 252 450 ] /Subtype /Widget /T (AdditionalInterest_InterestRank_C) /TU (Enter number: The ranking of 'this' additional interest when multiple additional interests are associated with the same item. ) /Type /Annot >>
+endobj
+107 0 obj 
+<< /AP << /D << /1 341 0 R /Off 342 0 R >> /N << /1 343 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 295 438 310 450 ] /Subtype /Widget /T (AdditionalInterest_CertificateRequiredIndicator_C) /TU (Check the box \(if applicable\): Indicates if the additional interest requires a Certificate of Insurance, ) /Type /Annot >>
+endobj
+108 0 obj 
+<< /AP << /D << /1 344 0 R /Off 345 0 R >> /N << /1 346 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 356 438 371 450 ] /Subtype /Widget /T (AdditionalInterest_PolicyRequiredIndicator_C) /TU (Check the box \(if applicable\): Indicates the additional interest requires a copy of the policy. ) /Type /Annot >>
+endobj
+109 0 obj 
+<< /AP << /D << /1 347 0 R /Off 348 0 R >> /N << /1 349 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 400 438 414 450 ] /Subtype /Widget /T (AdditionalInterest_SendBillIndicator_C) /TU (Check the box \(if applicable\): Indicates the bill should be sent to the additional interest. ) /Type /Annot >>
+endobj
+110 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 144 420 425 432 ] /Subtype /Widget /T (AdditionalInterest_FullName_C) /TU (Enter text: The additional interest's full name. ) /Type /Annot >>
+endobj
+111 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 144 408 425 420 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_LineOne_C) /TU (Enter text: The additional interest's mailing address line one. ) /Type /Annot >>
+endobj
+112 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 144 396 425 408 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_LineTwo_C) /TU (Enter text: The additional interest's mailing address line two. ) /Type /Annot >>
+endobj
+113 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 144 384 320 396 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_CityName_C) /TU (Enter text: The additional interest's mailing address city name. ) /Type /Annot >>
+endobj
+114 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 320 384 342 396 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_StateOrProvinceCode_C) /TU (Enter code: The additional interest's mailing address state or province code. ) /Type /Annot >>
+endobj
+115 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 342 384 410 396 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_PostalCode_C) /TU (Enter code: The additional interest's mailing address postal code. ) /Type /Annot >>
+endobj
+116 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 410 384 443 396 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_CountryCode_C) /TU (Enter code: The additional interest's country code. ) /Type /Annot >>
+endobj
+117 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 209 366 292 378 ] /Subtype /Widget /T (AdditionalInterest_AccountNumberIdentifier_C) /TU (Enter identifier: The loan number, account number or other controlling number that the additional interest may have assigned the insured. ) /Type /Annot >>
+endobj
+118 0 obj 
+<< /AA << /V << /JS (DateV\(event\);) /S /JavaScript /Type /Action >> >> /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /MaxLen 10 /P 214 0 R /Q 1 /Rect [ 364 366 446 378 ] /Subtype /Widget /T (AdditionalInterest_InterestEndDate_C) /TU (Enter date: The date the interest holder's interest terminates. ) /Type /Annot >>
+endobj
+119 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 187 354 292 366 ] /Subtype /Widget /T (AdditionalInterest_LoanAmount_C) /TU (Enter amount: The amount of the loan. ) /Type /Annot >>
+endobj
+120 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 364 354 446 366 ] /Subtype /Widget /T (AdditionalInterest_Primary_PhoneNumber_C) /TU (Enter number: The primary phone number of the additional interest. ) /Type /Annot >>
+endobj
+121 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 497 354 590 366 ] /Subtype /Widget /T (AdditionalInterest_Primary_FaxNumber_C) /TU (Enter number: The primary fax number of the additional interest. ) /Type /Annot >>
+endobj
+122 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 353 342 590 354 ] /Subtype /Widget /T (AdditionalInterest_Primary_EmailAddress_C) /TU (Enter text: The primary e-mail address for the additional interest. ) /Type /Annot >>
+endobj
+123 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 490 426 518 438 ] /Subtype /Widget /T (AdditionalInterest_Item_LocationProducerIdentifier_C) /TU (Enter number: The producer assigned number of the location which has an additional interest. ) /Type /Annot >>
+endobj
+124 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 558 426 590 438 ] /Subtype /Widget /T (AdditionalInterest_Item_BuildingProducerIdentifier_C) /TU (Enter number: The producer assigned number of the building which has an additional interest. ) /Type /Annot >>
+endobj
+125 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 482 414 518 426 ] /Subtype /Widget /T (AdditionalInterest_Item_VehicleProducerIdentifier_C) /TU (Enter number: The producer assigned number of the vehicle which has an additional interest. ) /Type /Annot >>
+endobj
+126 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 547 414 590 426 ] /Subtype /Widget /T (AdditionalInterest_Item_BoatProducerIdentifier_C) /TU (Enter number: The producer assigned number of the boat which has an additional interest. ) /Type /Annot >>
+endobj
+127 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 486 402 518 414 ] /Subtype /Widget /T (AdditionalInterest_Item_AirportIdentifier_C) /TU (Enter identifier: The Federal Aviation Administration's designator for the airport \(e.g. ORD - O'Hare International Airport\). ) /Type /Annot >>
+endobj
+128 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 558 402 590 414 ] /Subtype /Widget /T (AdditionalInterest_Item_AircraftProducerIdentifier_C) /TU (Enter number: The producer assigned number of the aircraft which has an additional interest. ) /Type /Annot >>
+endobj
+129 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 479 390 518 402 ] /Subtype /Widget /T (AdditionalInterest_Item_ScheduledItemClassCode_C) /TU (Enter code: The description of the property class of the scheduled item \(i.e. Jewelry, Furs, Contractors Equipment, etc.\). ) /Type /Annot >>
+endobj
+130 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 544 390 590 402 ] /Subtype /Widget /T (AdditionalInterest_Item_ScheduledItemProducerIdentifier_C) /TU (Enter number: The producer assigned number of the scheduled item which has an additional interest. ) /Type /Annot >>
+endobj
+131 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 454 366 590 378 ] /Subtype /Widget /T (AdditionalInterest_ItemDescription_C) /TU (Enter text: The description of the item of interest if needed to further clarify.  For a vehicle, list the make, model and VIN number.  For a scheduled item, list the description, such as three carat diamond in six point setting. ) /Type /Annot >>
+endobj
+132 0 obj 
+<< /AP << /D << /1 350 0 R /Off 351 0 R >> /N << /1 352 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 318 32 330 ] /Subtype /Widget /T (AdditionalInterest_Interest_AdditionalInsuredIndicator_D) /TU (Check the box \(if applicable\): Indicates the interest type is an additional insured. ) /Type /Annot >>
+endobj
+133 0 obj 
+<< /AP << /D << /1 353 0 R /Off 354 0 R >> /N << /1 355 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 306 32 318 ] /Subtype /Widget /T (AdditionalInterest_Interest_BreachOfWarrantyIndicator_D) /TU (Check the box \(if applicable\): Indicates the additional interest type is a breach of warranty. ) /Type /Annot >>
+endobj
+134 0 obj 
+<< /AP << /D << /1 356 0 R /Off 357 0 R >> /N << /1 358 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 294 32 306 ] /Subtype /Widget /T (AdditionalInterest_Interest_CoOwnerIndicator_D) /TU (Check the box \(if applicable\): Indicates the additional interest type is a co-owner. ) /Type /Annot >>
+endobj
+135 0 obj 
+<< /AP << /D << /1 359 0 R /Off 360 0 R >> /N << /1 361 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 282 32 294 ] /Subtype /Widget /T (AdditionalInterest_Interest_EmployeeAsLessorIndicator_D) /TU (Check the box \(if applicable\): Indicates the additional interest type is an employee as lessor. ) /Type /Annot >>
+endobj
+136 0 obj 
+<< /AP << /D << /1 362 0 R /Off 363 0 R >> /N << /1 364 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 270 32 282 ] /Subtype /Widget /T (AdditionalInterest_Interest_LeasebackOwnerIndicator_D) /TU (Check the box \(if applicable\): Indicates the additional interest type is a leaseback owner. ) /Type /Annot >>
+endobj
+137 0 obj 
+<< /AP << /D << /1 365 0 R /Off 366 0 R >> /N << /1 367 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 258 32 270 ] /Subtype /Widget /T (AdditionalInterest_Interest_LienholderIndicator_D) /TU (Check the box \(if applicable\): Indicates the additional interest type is a lien holder. ) /Type /Annot >>
+endobj
+138 0 obj 
+<< /AP << /D << /1 368 0 R /Off 369 0 R >> /N << /1 370 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 79 318 94 330 ] /Subtype /Widget /T (AdditionalInterest_Interest_LossPayeeIndicator_D) /TU (Check the box \(if applicable\): Indicates the additional interest type is a loss payee. ) /Type /Annot >>
+endobj
+139 0 obj 
+<< /AP << /D << /1 371 0 R /Off 372 0 R >> /N << /1 373 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 79 306 94 318 ] /Subtype /Widget /T (AdditionalInterest_Interest_MortgageeIndicator_D) /TU (Check the box \(if applicable\): Indicates the additional interest type is a mortgagee. ) /Type /Annot >>
+endobj
+140 0 obj 
+<< /AP << /D << /1 374 0 R /Off 375 0 R >> /N << /1 376 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 79 294 94 306 ] /Subtype /Widget /T (AdditionalInterest_Interest_OwnerIndicator_D) /TU (Check the box \(if applicable\): Indicates the additional interest type is an owner. ) /Type /Annot >>
+endobj
+141 0 obj 
+<< /AP << /D << /1 377 0 R /Off 378 0 R >> /N << /1 379 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 79 282 94 294 ] /Subtype /Widget /T (AdditionalInterest_Interest_RegistrantIndicator_D) /TU (Check the box \(if applicable\): Indicates the additional interest type is a registrant. ) /Type /Annot >>
+endobj
+142 0 obj 
+<< /AP << /D << /1 380 0 R /Off 381 0 R >> /N << /1 382 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 79 270 94 282 ] /Subtype /Widget /T (AdditionalInterest_Interest_TrusteeIndicator_D) /TU (Check the box \(if applicable\): Indicates the additional interest type is a trustee. ) /Type /Annot >>
+endobj
+143 0 obj 
+<< /AP << /D << /1 383 0 R /Off 384 0 R >> /N << /1 385 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 246 32 258 ] /Subtype /Widget /T (AdditionalInterest_Interest_OtherIndicator_D) /TU (Check the box \(if applicable\): Indicates the additional interest is not any of the types listed on the form. ) /Type /Annot >>
+endobj
+144 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 36 246 137 258 ] /Subtype /Widget /T (AdditionalInterest_Interest_OtherDescription_D) /TU (Enter text: The description of the type of interest in the item. ) /Type /Annot >>
+endobj
+145 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 97 234 292 246 ] /Subtype /Widget /T (AdditionalInterest_InterestReasonDescription_D) /TU (Enter text: The description for the interest in the item. ) /Type /Annot >>
+endobj
+146 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 234 330 252 342 ] /Subtype /Widget /T (AdditionalInterest_InterestRank_D) /TU (Enter number: The ranking of 'this' additional interest when multiple additional interests are associated with the same item. ) /Type /Annot >>
+endobj
+147 0 obj 
+<< /AP << /D << /1 386 0 R /Off 387 0 R >> /N << /1 388 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 295 330 310 342 ] /Subtype /Widget /T (AdditionalInterest_CertificateRequiredIndicator_D) /TU (Check the box \(if applicable\): Indicates if the additional interest requires a Certificate of Insurance, ) /Type /Annot >>
+endobj
+148 0 obj 
+<< /AP << /D << /1 389 0 R /Off 390 0 R >> /N << /1 391 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 356 330 371 342 ] /Subtype /Widget /T (AdditionalInterest_PolicyRequiredIndicator_D) /TU (Check the box \(if applicable\): Indicates the additional interest requires a copy of the policy. ) /Type /Annot >>
+endobj
+149 0 obj 
+<< /AP << /D << /1 392 0 R /Off 393 0 R >> /N << /1 394 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 400 330 414 342 ] /Subtype /Widget /T (AdditionalInterest_SendBillIndicator_D) /TU (Check the box \(if applicable\): Indicates the bill should be sent to the additional interest. ) /Type /Annot >>
+endobj
+150 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 144 312 425 324 ] /Subtype /Widget /T (AdditionalInterest_FullName_D) /TU (Enter text: The additional interest's full name. ) /Type /Annot >>
+endobj
+151 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 144 300 425 312 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_LineOne_D) /TU (Enter text: The additional interest's mailing address line one. ) /Type /Annot >>
+endobj
+152 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 144 288 425 300 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_LineTwo_D) /TU (Enter text: The additional interest's mailing address line two. ) /Type /Annot >>
+endobj
+153 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 144 276 320 288 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_CityName_D) /TU (Enter text: The additional interest's mailing address city name. ) /Type /Annot >>
+endobj
+154 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 320 276 342 288 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_StateOrProvinceCode_D) /TU (Enter code: The additional interest's mailing address state or province code. ) /Type /Annot >>
+endobj
+155 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 342 276 410 288 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_PostalCode_D) /TU (Enter code: The additional interest's mailing address postal code. ) /Type /Annot >>
+endobj
+156 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 410 276 443 288 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_CountryCode_D) /TU (Enter code: The additional interest's country code. ) /Type /Annot >>
+endobj
+157 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 209 258 292 270 ] /Subtype /Widget /T (AdditionalInterest_AccountNumberIdentifier_D) /TU (Enter identifier: The loan number, account number or other controlling number that the additional interest may have assigned the insured. ) /Type /Annot >>
+endobj
+158 0 obj 
+<< /AA << /V << /JS (DateV\(event\);) /S /JavaScript /Type /Action >> >> /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /MaxLen 10 /P 214 0 R /Q 1 /Rect [ 364 258 446 270 ] /Subtype /Widget /T (AdditionalInterest_InterestEndDate_D) /TU (Enter date: The date the interest holder's interest terminates. ) /Type /Annot >>
+endobj
+159 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 187 246 292 258 ] /Subtype /Widget /T (AdditionalInterest_LoanAmount_D) /TU (Enter amount: The amount of the loan. ) /Type /Annot >>
+endobj
+160 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 364 246 446 258 ] /Subtype /Widget /T (AdditionalInterest_Primary_PhoneNumber_D) /TU (Enter number: The primary phone number of the additional interest. ) /Type /Annot >>
+endobj
+161 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 497 246 590 258 ] /Subtype /Widget /T (AdditionalInterest_Primary_FaxNumber_D) /TU (Enter number: The primary fax number of the additional interest. ) /Type /Annot >>
+endobj
+162 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 353 234 590 246 ] /Subtype /Widget /T (AdditionalInterest_Primary_EmailAddress_D) /TU (Enter text: The primary e-mail address for the additional interest. ) /Type /Annot >>
+endobj
+163 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 490 318 518 330 ] /Subtype /Widget /T (AdditionalInterest_Item_LocationProducerIdentifier_D) /TU (Enter number: The producer assigned number of the location which has an additional interest. ) /Type /Annot >>
+endobj
+164 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 558 318 590 330 ] /Subtype /Widget /T (AdditionalInterest_Item_BuildingProducerIdentifier_D) /TU (Enter number: The producer assigned number of the building which has an additional interest. ) /Type /Annot >>
+endobj
+165 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 482 306 518 318 ] /Subtype /Widget /T (AdditionalInterest_Item_VehicleProducerIdentifier_D) /TU (Enter number: The producer assigned number of the vehicle which has an additional interest. ) /Type /Annot >>
+endobj
+166 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 547 306 590 318 ] /Subtype /Widget /T (AdditionalInterest_Item_BoatProducerIdentifier_D) /TU (Enter number: The producer assigned number of the boat which has an additional interest. ) /Type /Annot >>
+endobj
+167 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 486 294 518 306 ] /Subtype /Widget /T (AdditionalInterest_Item_AirportIdentifier_D) /TU (Enter identifier: The Federal Aviation Administration's designator for the airport \(e.g. ORD - O'Hare International Airport\). ) /Type /Annot >>
+endobj
+168 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 558 294 590 306 ] /Subtype /Widget /T (AdditionalInterest_Item_AircraftProducerIdentifier_D) /TU (Enter number: The producer assigned number of the aircraft which has an additional interest. ) /Type /Annot >>
+endobj
+169 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 479 282 518 294 ] /Subtype /Widget /T (AdditionalInterest_Item_ScheduledItemClassCode_D) /TU (Enter code: The description of the property class of the scheduled item \(i.e. Jewelry, Furs, Contractors Equipment, etc.\). ) /Type /Annot >>
+endobj
+170 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 544 282 590 294 ] /Subtype /Widget /T (AdditionalInterest_Item_ScheduledItemProducerIdentifier_D) /TU (Enter number: The producer assigned number of the scheduled item which has an additional interest. ) /Type /Annot >>
+endobj
+171 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 454 258 590 270 ] /Subtype /Widget /T (AdditionalInterest_ItemDescription_D) /TU (Enter text: The description of the item of interest if needed to further clarify.  For a vehicle, list the make, model and VIN number.  For a scheduled item, list the description, such as three carat diamond in six point setting. ) /Type /Annot >>
+endobj
+172 0 obj 
+<< /AP << /D << /1 395 0 R /Off 396 0 R >> /N << /1 397 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 210 32 222 ] /Subtype /Widget /T (AdditionalInterest_Interest_AdditionalInsuredIndicator_E) /TU (Check the box \(if applicable\): Indicates the interest type is an additional insured. ) /Type /Annot >>
+endobj
+173 0 obj 
+<< /AP << /D << /1 398 0 R /Off 399 0 R >> /N << /1 400 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 198 32 210 ] /Subtype /Widget /T (AdditionalInterest_Interest_BreachOfWarrantyIndicator_E) /TU (Check the box \(if applicable\): Indicates the additional interest type is a breach of warranty. ) /Type /Annot >>
+endobj
+174 0 obj 
+<< /AP << /D << /1 401 0 R /Off 402 0 R >> /N << /1 403 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 186 32 198 ] /Subtype /Widget /T (AdditionalInterest_Interest_CoOwnerIndicator_E) /TU (Check the box \(if applicable\): Indicates the additional interest type is a co-owner. ) /Type /Annot >>
+endobj
+175 0 obj 
+<< /AP << /D << /1 404 0 R /Off 405 0 R >> /N << /1 406 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 174 32 186 ] /Subtype /Widget /T (AdditionalInterest_Interest_EmployeeAsLessorIndicator_E) /TU (Check the box \(if applicable\): Indicates the additional interest type is an employee as lessor. ) /Type /Annot >>
+endobj
+176 0 obj 
+<< /AP << /D << /1 407 0 R /Off 408 0 R >> /N << /1 409 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 162 32 174 ] /Subtype /Widget /T (AdditionalInterest_Interest_LeasebackOwnerIndicator_E) /TU (Check the box \(if applicable\): Indicates the additional interest type is a leaseback owner. ) /Type /Annot >>
+endobj
+177 0 obj 
+<< /AP << /D << /1 410 0 R /Off 411 0 R >> /N << /1 412 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 150 32 162 ] /Subtype /Widget /T (AdditionalInterest_Interest_LienholderIndicator_E) /TU (Check the box \(if applicable\): Indicates the additional interest type is a lien holder. ) /Type /Annot >>
+endobj
+178 0 obj 
+<< /AP << /D << /1 413 0 R /Off 414 0 R >> /N << /1 415 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 79 210 94 222 ] /Subtype /Widget /T (AdditionalInterest_Interest_LossPayeeIndicator_E) /TU (Check the box \(if applicable\): Indicates the additional interest type is a loss payee. ) /Type /Annot >>
+endobj
+179 0 obj 
+<< /AP << /D << /1 416 0 R /Off 417 0 R >> /N << /1 418 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 79 198 94 210 ] /Subtype /Widget /T (AdditionalInterest_Interest_MortgageeIndicator_E) /TU (Check the box \(if applicable\): Indicates the additional interest type is a mortgagee. ) /Type /Annot >>
+endobj
+180 0 obj 
+<< /AP << /D << /1 419 0 R /Off 420 0 R >> /N << /1 421 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 79 186 94 198 ] /Subtype /Widget /T (AdditionalInterest_Interest_OwnerIndicator_E) /TU (Check the box \(if applicable\): Indicates the additional interest type is an owner. ) /Type /Annot >>
+endobj
+181 0 obj 
+<< /AP << /D << /1 422 0 R /Off 423 0 R >> /N << /1 424 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 79 174 94 186 ] /Subtype /Widget /T (AdditionalInterest_Interest_RegistrantIndicator_E) /TU (Check the box \(if applicable\): Indicates the additional interest type is a registrant. ) /Type /Annot >>
+endobj
+182 0 obj 
+<< /AP << /D << /1 425 0 R /Off 426 0 R >> /N << /1 427 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 79 162 94 174 ] /Subtype /Widget /T (AdditionalInterest_Interest_TrusteeIndicator_E) /TU (Check the box \(if applicable\): Indicates the additional interest type is a trustee. ) /Type /Annot >>
+endobj
+183 0 obj 
+<< /AP << /D << /1 428 0 R /Off 429 0 R >> /N << /1 430 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 18 138 32 150 ] /Subtype /Widget /T (AdditionalInterest_Interest_OtherIndicator_E) /TU (Check the box \(if applicable\): Indicates the additional interest is not any of the types listed on the form. ) /Type /Annot >>
+endobj
+184 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 36 138 137 150 ] /Subtype /Widget /T (AdditionalInterest_Interest_OtherDescription_E) /TU (Enter text: The description of the type of interest in the item. ) /Type /Annot >>
+endobj
+185 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 97 126 292 138 ] /Subtype /Widget /T (AdditionalInterest_InterestReasonDescription_E) /TU (Enter text: The description for the interest in the item. ) /Type /Annot >>
+endobj
+186 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 234 222 252 234 ] /Subtype /Widget /T (AdditionalInterest_InterestRank_E) /TU (Enter number: The ranking of 'this' additional interest when multiple additional interests are associated with the same item. ) /Type /Annot >>
+endobj
+187 0 obj 
+<< /AP << /D << /1 431 0 R /Off 432 0 R >> /N << /1 433 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 295 222 310 234 ] /Subtype /Widget /T (AdditionalInterest_CertificateRequiredIndicator_E) /TU (Check the box \(if applicable\): Indicates if the additional interest requires a Certificate of Insurance, ) /Type /Annot >>
+endobj
+188 0 obj 
+<< /AP << /D << /1 434 0 R /Off 435 0 R >> /N << /1 436 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 356 222 371 234 ] /Subtype /Widget /T (AdditionalInterest_PolicyRequiredIndicator_E) /TU (Check the box \(if applicable\): Indicates the additional interest requires a copy of the policy. ) /Type /Annot >>
+endobj
+189 0 obj 
+<< /AP << /D << /1 437 0 R /Off 438 0 R >> /N << /1 439 0 R >> >> /AS /Off /F 4 /Ff 8388608 /FT /Btn /MK << /CA (8) >> /P 214 0 R /Rect [ 400 222 414 234 ] /Subtype /Widget /T (AdditionalInterest_SendBillIndicator_E) /TU (Check the box \(if applicable\): Indicates the bill should be sent to the additional interest. ) /Type /Annot >>
+endobj
+190 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 144 204 425 216 ] /Subtype /Widget /T (AdditionalInterest_FullName_E) /TU (Enter text: The additional interest's full name. ) /Type /Annot >>
+endobj
+191 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 144 192 425 204 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_LineOne_E) /TU (Enter text: The additional interest's mailing address line one. ) /Type /Annot >>
+endobj
+192 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 144 180 425 192 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_LineTwo_E) /TU (Enter text: The additional interest's mailing address line two. ) /Type /Annot >>
+endobj
+193 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 144 168 320 180 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_CityName_E) /TU (Enter text: The additional interest's mailing address city name. ) /Type /Annot >>
+endobj
+194 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 320 168 342 180 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_StateOrProvinceCode_E) /TU (Enter code: The additional interest's mailing address state or province code. ) /Type /Annot >>
+endobj
+195 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 342 168 410 180 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_PostalCode_E) /TU (Enter code: The additional interest's mailing address postal code. ) /Type /Annot >>
+endobj
+196 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 410 168 443 180 ] /Subtype /Widget /T (AdditionalInterest_MailingAddress_CountryCode_E) /TU (Enter code: The additional interest's country code. ) /Type /Annot >>
+endobj
+197 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 209 150 292 162 ] /Subtype /Widget /T (AdditionalInterest_AccountNumberIdentifier_E) /TU (Enter identifier: The loan number, account number or other controlling number that the additional interest may have assigned the insured. ) /Type /Annot >>
+endobj
+198 0 obj 
+<< /AA << /V << /JS (DateV\(event\);) /S /JavaScript /Type /Action >> >> /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /MaxLen 10 /P 214 0 R /Q 1 /Rect [ 364 150 446 162 ] /Subtype /Widget /T (AdditionalInterest_InterestEndDate_E) /TU (Enter date: The date the interest holder's interest terminates. ) /Type /Annot >>
+endobj
+199 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 187 138 292 150 ] /Subtype /Widget /T (AdditionalInterest_LoanAmount_E) /TU (Enter amount: The amount of the loan. ) /Type /Annot >>
+endobj
+200 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 364 138 446 150 ] /Subtype /Widget /T (AdditionalInterest_Primary_PhoneNumber_E) /TU (Enter number: The primary phone number of the additional interest. ) /Type /Annot >>
+endobj
+201 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 497 138 590 150 ] /Subtype /Widget /T (AdditionalInterest_Primary_FaxNumber_E) /TU (Enter number: The primary fax number of the additional interest. ) /Type /Annot >>
+endobj
+202 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 353 126 590 138 ] /Subtype /Widget /T (AdditionalInterest_Primary_EmailAddress_E) /TU (Enter text: The primary e-mail address for the additional interest. ) /Type /Annot >>
+endobj
+203 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 490 210 518 222 ] /Subtype /Widget /T (AdditionalInterest_Item_LocationProducerIdentifier_E) /TU (Enter number: The producer assigned number of the location which has an additional interest. ) /Type /Annot >>
+endobj
+204 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 558 210 590 222 ] /Subtype /Widget /T (AdditionalInterest_Item_BuildingProducerIdentifier_E) /TU (Enter number: The producer assigned number of the building which has an additional interest. ) /Type /Annot >>
+endobj
+205 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 482 198 518 210 ] /Subtype /Widget /T (AdditionalInterest_Item_VehicleProducerIdentifier_E) /TU (Enter number: The producer assigned number of the vehicle which has an additional interest. ) /Type /Annot >>
+endobj
+206 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 547 198 590 210 ] /Subtype /Widget /T (AdditionalInterest_Item_BoatProducerIdentifier_E) /TU (Enter number: The producer assigned number of the boat which has an additional interest. ) /Type /Annot >>
+endobj
+207 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 486 186 518 198 ] /Subtype /Widget /T (AdditionalInterest_Item_AirportIdentifier_E) /TU (Enter identifier: The Federal Aviation Administration's designator for the airport \(e.g. ORD - O'Hare International Airport\). ) /Type /Annot >>
+endobj
+208 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 558 186 590 198 ] /Subtype /Widget /T (AdditionalInterest_Item_AircraftProducerIdentifier_E) /TU (Enter number: The producer assigned number of the aircraft which has an additional interest. ) /Type /Annot >>
+endobj
+209 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 479 174 518 186 ] /Subtype /Widget /T (AdditionalInterest_Item_ScheduledItemClassCode_E) /TU (Enter code: The description of the property class of the scheduled item \(i.e. Jewelry, Furs, Contractors Equipment, etc.\). ) /Type /Annot >>
+endobj
+210 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 544 174 590 186 ] /Subtype /Widget /T (AdditionalInterest_Item_ScheduledItemProducerIdentifier_E) /TU (Enter number: The producer assigned number of the scheduled item which has an additional interest. ) /Type /Annot >>
+endobj
+211 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 214 0 R /Rect [ 454 150 590 162 ] /Subtype /Widget /T (AdditionalInterest_ItemDescription_E) /TU (Enter text: The description of the item of interest if needed to further clarify.  For a vehicle, list the make, model and VIN number.  For a scheduled item, list the description, such as three carat diamond in six point setting. ) /Type /Annot >>
+endobj
+212 0 obj 
+<< /Count 1 /Kids [ 214 0 R ] /Type /Pages >>
+endobj
+214 0 obj 
+<< /Annots 440 0 R /Contents 441 0 R /CropBox [ 0 0 612 792 ] /MediaBox [ 0 0 612 792 ] /Parent 212 0 R /Resources << /Font << /F1 442 0 R >> /ProcSet [ /PDF /Text /ImageB ] /XObject << /Img1 443 0 R >> >> /Type /Page >>
+endobj
+215 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+216 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+217 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+218 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+219 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+220 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+221 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+222 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+223 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+224 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+225 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+226 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+227 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+228 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+229 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+230 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+231 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+232 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+233 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+234 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+235 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+236 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+237 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+238 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+239 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+240 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+241 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+242 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+243 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+244 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+245 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+246 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+247 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+248 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+249 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+250 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+251 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+252 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+253 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+254 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+255 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+256 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+257 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+258 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+259 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+260 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+261 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+262 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+263 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+264 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+265 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+266 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+267 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+268 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+269 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+270 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+271 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+272 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+273 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+274 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+275 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+276 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+277 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+278 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+279 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+280 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+281 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+282 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+283 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+284 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+285 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+286 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+287 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+288 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+289 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+290 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+291 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+292 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+293 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+294 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+295 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+296 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+297 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+298 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+299 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+300 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+301 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+302 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+303 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+304 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+305 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+306 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+307 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+308 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+309 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+310 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+311 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+312 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+313 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+314 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+315 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+316 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+317 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+318 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+319 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+320 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+321 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+322 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+323 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+324 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+325 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+326 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+327 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+328 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+329 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+330 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+331 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+332 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+333 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+334 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+335 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+336 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+337 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+338 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+339 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+340 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+341 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+342 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+343 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+344 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+345 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+346 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+347 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+348 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+349 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+350 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+351 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+352 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+353 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+354 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+355 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+356 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+357 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+358 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+359 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+360 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+361 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+362 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+363 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+364 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+365 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+366 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+367 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+368 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+369 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+370 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+371 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+372 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+373 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+374 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+375 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+376 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+377 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+378 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+379 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+380 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+381 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+382 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+383 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+384 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+385 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+386 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+387 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+388 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+389 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+390 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+391 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+392 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+393 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+394 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+395 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+396 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+397 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+398 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+399 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+400 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+401 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+402 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+403 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+404 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+405 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+406 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+407 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+408 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+409 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+410 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+411 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+412 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+413 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+414 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+415 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+416 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+417 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+418 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+419 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+420 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+421 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+422 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+423 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+424 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+425 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+426 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+427 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+428 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+429 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+430 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+431 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+432 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+433 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+434 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+435 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+436 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+437 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 67 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\ÆzF@°l./—¡!ˆ–Ïñà’ÆÈrÁ¼\¼\ °Wè
+endstream
+endobj
+438 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 41 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ğ37UHÑ
+`ÂĞDÏHØE©¼\i¼\¼\ «Q¨
+endstream
+endobj
+439 0 obj 
+<< /BBox [ 0.00 0.00 14.40 12.00 ] /Filter [ /FlateDecode ] /FormType 1 /Length 45 /Subtype /Form /Type /XObject >>
+stream
+xœ+äå2Ö32P04Ğ30PÈåå24q@¼.iŒ,ÌËÈË |ç1
+endstream
+endobj
+440 0 obj 
+[ 3 0 R 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 14 0 R 15 0 R 16 0 R 17 0 R 18 0 R 19 0 R 20 0 R 21 0 R 22 0 R 23 0 R 24 0 R 25 0 R 26 0 R 27 0 R 28 0 R 29 0 R 30 0 R 31 0 R 32 0 R 33 0 R 34 0 R 35 0 R 36 0 R 37 0 R 38 0 R 39 0 R 40 0 R 41 0 R 42 0 R 43 0 R 44 0 R 45 0 R 46 0 R 47 0 R 48 0 R 49 0 R 50 0 R 51 0 R 52 0 R 53 0 R 54 0 R 55 0 R 56 0 R 57 0 R 58 0 R 59 0 R 60 0 R 61 0 R 62 0 R 63 0 R 64 0 R 65 0 R 66 0 R 67 0 R 68 0 R 69 0 R 70 0 R 71 0 R 72 0 R 73 0 R 74 0 R 75 0 R 76 0 R 77 0 R 78 0 R 79 0 R 80 0 R 81 0 R 82 0 R 83 0 R 84 0 R 85 0 R 86 0 R 87 0 R 88 0 R 89 0 R 90 0 R 91 0 R 92 0 R 93 0 R 94 0 R 95 0 R 96 0 R 97 0 R 98 0 R 99 0 R 100 0 R 101 0 R 102 0 R 103 0 R 104 0 R 105 0 R 106 0 R 107 0 R 108 0 R 109 0 R 110 0 R 111 0 R 112 0 R 113 0 R 114 0 R 115 0 R 116 0 R 117 0 R 118 0 R 119 0 R 120 0 R 121 0 R 122 0 R 123 0 R 124 0 R 125 0 R 126 0 R 127 0 R 128 0 R 129 0 R 130 0 R 131 0 R 132 0 R 133 0 R 134 0 R 135 0 R 136 0 R 137 0 R 138 0 R 139 0 R 140 0 R 141 0 R 142 0 R 143 0 R 144 0 R 145 0 R 146 0 R 147 0 R 148 0 R 149 0 R 150 0 R 151 0 R 152 0 R 153 0 R 154 0 R 155 0 R 156 0 R 157 0 R 158 0 R 159 0 R 160 0 R 161 0 R 162 0 R 163 0 R 164 0 R 165 0 R 166 0 R 167 0 R 168 0 R 169 0 R 170 0 R 171 0 R 172 0 R 173 0 R 174 0 R 175 0 R 176 0 R 177 0 R 178 0 R 179 0 R 180 0 R 181 0 R 182 0 R 183 0 R 184 0 R 185 0 R 186 0 R 187 0 R 188 0 R 189 0 R 190 0 R 191 0 R 192 0 R 193 0 R 194 0 R 195 0 R 196 0 R 197 0 R 198 0 R 199 0 R 200 0 R 201 0 R 202 0 R 203 0 R 204 0 R 205 0 R 206 0 R 207 0 R 208 0 R 209 0 R 210 0 R 211 0 R ]
+endobj
+441 0 obj 
+<< /Filter [ /FlateDecode ] /Length 3293 >>
+stream
+xœ­œİrÛºÇï=ãwàLo’™c›ø )õ–è˜=²äJrN3“O¬ä¸uâÔöœö<Rß²E@ñ_•‹È6µ`±Ø%ÆçŒGñyëÿ¬_¿|?=áÑßNO„Lª?¤"®^Õßåöõ?êul_z:=Y\®OO.®X”¦çi­¿*=)Ïvïc£íëúáôD'¢µRò.ÿPÌ'Ÿ¢Éİj½¸)–Q9ıëûhıÏÓ“b½W–Ul•±Qõc’¤F×Y|±ZÙtZ®ËÅ<ŸEå|],‹Õ:úünşüİ?=E_7O¯ÑıÏŸOFoÏÕß^¿l~Ü¿<>¿FgÑÏ—ç?6Ñóíõß7ÑÍ—ÍëëıËŸÑÃıÛıç÷û‰j°	X¼{•£)ÎÒİï/›Ê&•%y¼[ER_kXÒ\%À’r|ÎjK²˜'ê}ÙHšÕ³ê§íê‹««b².?Ñ4_®Š’ÚŒMEâ<KvŠæùM1U\İ-‹éçw«æÊ«µÔËFKIìKO$½RiÜm ¦Í·©¦}»˜•Ê•æw7—Å²5c™ËÄM?®/õ.“t§bl>æÚhå$š,¦Àğ³ ?ÎgAoà$_.KgêÚØ`æãÄËo´Ùßº;€¤k§m×–qÓµÁ	Myõ3çiµ3»*F»ÑÖêXå“Årı¸ÿ¾‰î<DOÏßÔY|Ù(•ß_ß6/›‡èûıË¿^£ç¯»÷î'÷ïÓ“$kF­í@²ZU½H5ßTG°‹òû7MŸOOşŞKDc¢ûÃ´›¤LTüàq<¾ˆeó¸ÊT®6^kû_ÄÆcq¶ÕT/_ıw»XæÛhuE¹
+E/ß~{UVxİ¼ü±y8o¹gµKÇD–X—Èø!Ç»½L­ø¡}qv“—³HQ8W ;ÕR¤m·,òÕb]-–&wj«ˆrçÔõÏÅoóæ‘ ¥“8Ò35•â2Ÿüê££ñS‡2Ÿ¯?ù(û)¨ÈÀk»^*{L®£ÅU—Š«m€Îèz©ÒcÑÒkù$FòËâC¹Zo—c‹tcÏ¬+8ÎX¦·‹rD}‰rD‘ÕşÓä±1ØUşuìò‹É/ÑüùóûNß1>m«uEp{½˜{e¿DÅß,ö’è+ûb,İy°*îW~Xó(¿YÜÍ»‚YÎÈZ>¢¦ª)æÓ*Ë·WÂeJm¹”öä91êp¥r]ÜtæL‹'câfyOh1òf«r6»mh@i˜,ó+¯ˆ„5Lg½AIG¨ %]m\šRÑ=MÁ™jÊ€½Öç‹”ãh»KRF2‚”á¤'e)ÃH™˜”‰™ÖJûìf¢›¨3p]­²]¡sÆ`EÔp&©ÇKE#4è²uµ=Ë—ål¶÷sdÇÙa#Öol¸w¿]Ü…˜ö’ÈË©ª›±§cº'l×3‰©Z¥™FtæßçíFÉWÑLÕ1¯âA$	ˆu»¨uRMµåºœ)È{Z	“ÿÆVÿÅ²}Œ¦Åj²,o·¢G%†wJ§‹NYÖ¡AÕ¿vW‚uŞkŠo[î[É(W^W•>ªZ¹O§òeq¥£ü.ºˆf‹|ı¥;“¦¬ãLŠåº¼*'=²ŒÙ¨ê¸e6n¬Îl”NÇå<ª6­İ{Ò'càp{~á“[D3·$uƒ5[¬VÑmşÉ¯Zä(=İ¨ûAµ…„»Wª[U;×‹ÙÔÏîÅÍílÑ³
+S*8‰Å¤j¯üj¨âò®œMËù¿‚ócq]Nf…ß$ †ËEŞS¬˜ìQõgtµ›¹e¿İcº­(Ø˜b1%ÕngQ€c%T‘¢çç)ZÆ-R´Œ[¤h·HÑ2n‘ÂÈŒ¡eÜ"Eo(äíşYÎ5‚±œk#åšÁH¹v0R®!Œ°³+š†”iÂ\ß3c¹R¦åt¥Z~	,èÊHAûHÀ^µp™¡Áecºò‘«IüHÈDrFÊ‡’œxÉ‘0!„µUÃH”ÃIlŸıI„­cÉd¸n¸0'ÎKÆ=+Y1:É¸ü#9À:*‰8¥ËPk‡“1Hr@Ò¨/‰¬{%º®À®äMr$Fr$,kBH©Á›ä`$+è 9 º§)8S–I1:dÜq´LBÊĞäƒ¤?’¤?’¤?’¤?’¤?’¤?Ò-'Z+í³[›ähJrdr(É	±~csÄ½ûù“™Hrº'l×3àÆn«Ôé!9j‡‡’åÀÁ$¸œi„˜_şkfûa$ïTÉÁ¼INS| Éiå¾$Ÿ@’£Vw\’£æP’#å`’#!¿!9Şy"9’%9¶%Ì$BHVDr°1CHÖàMr”!ƒH ï[
+p×î1A_ìšä !SRívX0VB)z~$ıEŠ–!é(R´I@ÆĞ2$ıA…¼İ!ËÑXÁHÑüØÁHÑüY‚Ù 9À÷ÌX®”¾¤Z~	š[WF/ùHÀ^µH¡É«é¹Û®ÛD>:Éi)ÒÁã@’#Ø’#`B!9B$9j«‡’Ûg’#`ëØKrÈp! ,Ö'ÎKÆ=+Y>>Éá¸ü$9ômVÑ÷qÑºµæ1€äÄÃHØ}‰÷|ºH×Ø•¼IàÃH€eMÉ!5x“¬!€ä`$D÷4gÊ’!)F‡Œ;–q?M­eHò!Hú#Hú#Hú#Hú#Hú#Hú#Ür¢µÒ>»µIr¡$G¤‡’œàë76GÜ»Ÿ?Éé$§{Âv=ãŞn—:=$GğÁ$G9p0É.g’÷ËÍl?Œäà
+!9Xƒ7ÉiŠ%9ñ1I>$G­î¸$G¤ƒIH“ùEÉwƒHCIm	3‰’ƒU‘lÌ’ƒ5x“eÈ ’Ãéû–ÜÀµ{LĞ*¸…ƒ&9HˆÅ”T»EŒ•PEŠI@‘¢eHúŠ-CÒ1´IP!o÷_Èr4V0R4ÿv0R4ÿA–`vEHğ=3–+¥ÿ¤Z~éZÈh\ƒ|O$`¯Z$Ç0'’Ã;VÓs·]·‰l|$’ÓR¤ƒÇ$‡Ão7ù’BÉáÉ@’ÃÓÁ$‡ÃöÙŸäpØ:ö‘N†`±>qn\2èYÉòøx$—a$ØÁä¶8eHN|’ÃÙ0’6G_b=Ÿ.Òuv%o’ÃÅ0’ÃaYBrHŞ$k 9XAÉÑ=MÁ™²dHŠÑ!ã£eÜœj’|p’şp’şp’şp’şp’şp’şp·œh­´Ïnm’£Qh(ÉáÙ¡$'xÄúÍ÷îçOrxv Éé°]Ï€oö¶J’ÃÅ`’£8˜ä —3ÉBxæ?~,’ƒw*„ä`Ş$§)>ä´rß@’ƒÏ@ ÉQ«;.ÉQåÕP’ÃÓÁ$‡C~Br8¼óDr¸JrlK˜I„¬"ˆä`c†¬Á›ä(C†‘ú¾%'¿í’¦nÀ7²Æ´‹)©v;‹æG~û)z~$ıEŠ–!é(R´I@ÆĞ2$ıA…¼İ!ËÑXÁHÑüØÁHÑüY‚Ù"9ôg€”¹äJµüXĞ•Ñ¸ùHÀ^µH¡ÉaôjXßs¶4É‰Erâc’¿İäKrL!$‡¥IrÅ¡$‡ÁöÙŸä0Ø:ö‘F†F@¹qÉ8¢g%ËØÑHÃå_ÉvĞQ‰õÀ)]†Zó8œä0>Œä€Í1—úW×Ø•¼I“ÃHƒeMÉ!5x“¬!€ä`$D÷4gÊ’!)F‡Œ;–q?rªeHòÁHúÃHúÃHúÃHúÃHúÃHúÃÜr¢µÒ>»µI3!a—¬}IJr‚G¬ßØqï~ş$‡$9İ¶ëğÍŞV©ÓCr˜Lr”“àr&Yô=àÇøÙ±HŞ©’ƒ5x“œ¦ø@’ÓÊ}I>$G­î¸$GmÛP’Ã²Á$‡A~Br¼óDrX2”äØ–0“!9XEÉÁÆ!9Xƒ7ÉQ†"9Œ¾oÉÀ\»Ç­øFÖ˜b1%ÕngÑüÈo"EÏ¤? HÑ2$ıEŠ–!éÈZ†¤?¨·û/d9š+)šÿ ;)šÿ K0»¢$ø‹~4+jù%° +£qò=‘€½j?1İ<V’}x™çBì²HªG}§ñ˜™',§¦ãC~_M®‹éİ¬;s	)+µv_¬ûÑmï¨Úâ››‹éôâ“ú‡/yıñº÷Íêj[kú?~Lf€
+endstream
+endobj
+442 0 obj 
+<< /BaseFont /Arial,Bold /Encoding /WinAnsiEncoding /FirstChar 0 /FontDescriptor << /Ascent 905.27 /CapHeight 715.82 /Descent -211.91 /Flags 32 /FontBBox [ -45.90 -175.78 1000.00 938.48 ] /FontName /Arial,Bold /ItalicAngle 0.00 /StemV 0.00 /Type /FontDescriptor >> /LastChar 255 /Subtype /Type1 /Type /Font /Widths [ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 277.83 333.01 474.12 556.15 556.15 889.16 722.17 237.79 333.01 333.01 389.16 583.98 277.83 333.01 277.83 277.83 556.15 556.15 556.15 556.15 556.15 556.15 556.15 556.15 556.15 556.15 333.01 333.01 583.98 583.98 583.98 610.84 975.10 722.17 722.17 722.17 722.17 666.99 610.84 777.83 722.17 277.83 556.15 722.17 610.84 833.01 722.17 777.83 666.99 777.83 722.17 666.99 610.84 722.17 666.99 943.85 666.99 666.99 610.84 333.01 277.83 333.01 583.98 556.15 333.01 556.15 610.84 556.15 610.84 556.15 333.01 610.84 610.84 277.83 277.83 556.15 277.83 889.16 610.84 610.84 610.84 610.84 389.16 556.15 333.01 610.84 556.15 777.83 556.15 556.15 500.00 389.16 279.79 389.16 583.98 0 556.15 0 277.83 556.15 500.00 1000.00 556.15 556.15 333.01 1000.00 666.99 333.01 1000.00 0 610.84 0 0 277.83 277.83 500.00 500.00 350.10 556.15 1000.00 333.01 1000.00 556.15 333.01 943.85 0 500.00 666.99 277.83 333.01 556.15 556.15 556.15 556.15 279.79 556.15 333.01 736.82 370.12 556.15 583.98 333.01 736.82 552.25 399.90 548.83 333.01 333.01 333.01 576.17 556.15 333.01 333.01 333.01 365.23 556.15 833.98 833.98 833.98 610.84 722.17 722.17 722.17 722.17 722.17 722.17 1000.00 722.17 666.99 666.99 666.99 666.99 277.83 277.83 277.83 277.83 722.17 722.17 777.83 777.83 777.83 777.83 777.83 583.98 777.83 722.17 722.17 722.17 722.17 666.99 666.99 610.84 556.15 556.15 556.15 556.15 556.15 556.15 889.16 556.15 556.15 556.15 556.15 556.15 277.83 277.83 277.83 277.83 610.84 610.84 610.84 610.84 610.84 610.84 610.84 548.83 610.84 610.84 610.84 610.84 610.84 556.15 610.84 556.15 ] >>
+endobj
+443 0 obj 
+<< /BitsPerComponent 8 /ColorSpace /DeviceGray /Filter [ /FlateDecode ] /Height 122 /Length 4626 /Subtype /Image /Type /XObject /Width 285 >>
+stream
+xœí]{\Lé?]U£+åRH*]F+—BÉ-Š²Y»‰Q¬²?¬{Xë²vå³î,-k±.‰!aÑÙhY¶T’İè2İk~gÎ™™÷™™sfN™f
+ß?Vûç½=ó¾ÏûÜŞs¸ÜøˆµUœŠÅåœª:e§5 ®$ëŞ¥#;¾û:Èw¬ûp‡>}ú¸ç¼lëÑëéo•=>%¡áÕİÃçw¶é¬ƒÑ@ßjPÀº³9Ê©BÑ˜›úû²ÉıMh™"u£«K”=f… âŸÓ“í™±AÕuÓ#e¼eÑX’´'x`WÍ&2†Ó deO ÅŸ¸# ·ZóøÂ‡Vpª²gÑÈü9¸¿î;1†„ÙÎ÷ì„/LüŞÍXŒ!ñùKeÏG~H?2§ÜCÀá_eÏI.hÌÚãg¡*c®*êj$ÔUr‡ı²'öîÈ8üÍfRa™ôrpñ˜·zcÔşè„x—Eí\³0Ğs]ç|ß|eÏíİwd’¹ä¬T­GO]¸5æÊ½gô:]Ãë	GW:KS~Õ
+œŠœñæBH/±3[ÛØÁwéîËéùÌÚh(É<»Â³³:5w¢Zv-‡Äˆ~"igë>w[\VysÚÊ9âHÅ«<yZx½Û]L¢£ËWŸ¿Ó&xõG¾$w¶ÈkÀ
+CÙÍğÂá·ïå“Q)‡fÓÖXˆ3§oV òöÖŒİÂwÃ¥l9¶¹ÊT”9j7äØzK£>e¾%Ü†£Ö'¼`(v™#c–¨lŞ$ïZeqşÚÄ5ÙAûä¹b Nõ„Ì	j¡^äÂ½Ãˆı¤ã¶êâóìç±`{›:éæ¼Ávöú)•ÓÂ]UMCÌü¦…;“’æá#í0a—B¬AÎd!sú¼PD‡ï‚Û³qåwø–TE9YŞ¸	˜Óïµ‚ºlª/OÅ0×ué~ÊèÆgÎĞ
+öÚdœaÖá—=ÆÃ|æ|*weAn¨‰wÁ4<N¾R|ÏuãHæÌQ|×ëÙ-}¢œ¾Ï‘±‹]Êé]&.Òó<¦4³¸| 77¥ÑD²Y,–wDŠ¢%ÀÍ±Ö·”ˆà1ÇºŒ †ÇŞYŠ—{o¦cDº";”D9ÁôÏ#q¦°Ãb®Fâ˜Æ(l\™ë'nUºòõ‚§v¥}ÌãM$©>gñØsU1£Ê?¹öX©bº’†·66€Ö}_-)‘$¢ŞDáÿ§ˆÕp?úF³\òF%®%¯£}êÍbÅp"Ç4_Ga
+SM¨HT»c]Ó=La±¹8sØøÂaóãÊb)T(+œ¡XíC|¥¤ğ˜ãÿı†÷O.76¥ãm/Mú§7‹Í0'ŠøG1ûªµ W~áàÌá±E¨çDJ>œ1–+ai~¤»~PÌùz±”‡,S.¹­Iaó†X>
+JçJyÉ;É	æd±ˆs
+<m6vÜtäHµ&q–¸òrï¿oLY¦mÀÛ,/4JÆ;æà|aE¹¶ìIŞPVX\\T\Û„o‹Š‹‹92¦Ñ2ÈÂY29æ*oy¥\2%#äoŠ<ppëF±¥úÒÌóûÖÍñ3¢¿½ƒC×‘Ÿ…m8x£€>) ¡ìÙ¥ıkç~î>Â‘íààÀ4Âkê’]g2ië†‡§>ÇıœââRªøzİƒ¿%ˆÈ+yË©R¦àaGñ¶RJ$77U.ßu¿AaCÆ¹môÄƒ÷8T»Œ\›E±Š²ã7ûÛPÔÀôÙsüGÑÉ-#um>´ptìjÖÛuÆ–Dq‡QŒ†65´´MºZò8œ\Äç+ïwõ&¼:yór¸£¥¦>4ÜßìÓLNÓ°SOS#¨¶üK¬Jæn_{”x­®oÜ£GÇöA½‚â%úYOÅI!G?=/J&š„‰óü+¤×=Ràíòfê¯(.h…%%Ó9{È¯Ñ³™ºùÔ_Ÿå=¾¶?ÌQ›_ì^k¼>îÛAP¡Å§k\˜YXû“¯¹¶˜_³nzØmÅŠeËfù»vSm7ş„ENèIWïÑ$<†Ø™Šdé¸EWô)Q¸áy•ñ1•;
+µA›¡pä×`¿½.r‡D,shåf¯e£QÏ‹-iîÙÖ^`àëDÄÕ£ÎèÑR²¨>s3(ÄÂÁîM )”Ûğ‹ ·¶<ÿnôªÑ"éãhvz uƒc05Í‹°.ˆÆí„dH±ñJüÉATP´ÁRX¡Ój
+É’5	t\ìEå*hQÕBÅZwõjTl$~?¤<)¦óZ\‘ÍQ”ùBîjß£ ©)V{¨î¼ñØda4­1¥_«L¢–WNıÎFb¶È¹ëòŸ…ÅUƒPé˜*®¢ajS&^)‡? µ’$ÀóI´ş¡¢£ÂàÜ`´ßõvÑ ß|Úİ+,ÎéˆJ¿FÔÕ@a¿
+‹SÀÎ¡<kïÀı8´IÙU¢¼Á†Kè×mÑSµL"/)}Q®çèé‘i!”I¿¢BU (ÃĞ}(,ş•ê‰•$¶Áô÷£†/@±´Õ: ÚwÄHbAF´æN&&tG5¯I!Ì³ÃşEP
+Ö©-ˆ^œôîŸê‘¨t Å®Âñ
+póa2~ÓADïöƒê?ˆ’\ 
+Ÿ*#[ä
+ØØi”ŸÊi|“âE7T6#%ü®ßP÷ef_Äd
+<pˆ
+Ë¹™ Wy{*Ë™4šsïI§]HİøªÇ!°À®ŠCª£ú>T¼«%Ñô²ôÒ…i˜C®›Ü
+ éh> $…0IÜ…IŒ¡ æ¨;K'^hmI»®¬3¤=Bš¹öVÔ@%ÈdSï*.7ôb|›ÁpÔMğFTa‡Ş±ÿr=Fí~j¨Ÿ‘A<ÛÌÉrÈ_Hx¥b;@ë!ÍQ¯ é¤nŞiL&Á-'S§©—ÉâŒ~0{QÚË] ªacex&jİñP2R‹ä®Ú	>Ùİ,A™ıj¡±Õ×ú“¦—‚ —~ŒÎòÚäCjYœ¨¾î5MİdĞ¬>£İ
+’:1•8ÄiÀ"ÁüHu¬UÓû¯rŸŞŠ^ç%bÆ¾â™Ì`Qô- è‡dxE+ˆÉ$ªCÈ	¢¸Ph-=Ô¥ŒÁ(¿È’QPöbë‰¢r°«4Ì»›™´'ïèÚ?-®då õw]/ßƒNé9ä/ì/ÔÎ¯€
+Bñ«`³¿Ò4E?]ú¨5‰Z/@¬KÚ-"[HZÕƒ(Íè¨;:ùVï‘ödp’×}Iú¡”ÆrpùD#?øá Y#F©7sA}©V85 µé°[ŠJÌ»Q`Û÷ <œ€¿ğÙSàòFå°lh‚oÑ@uÀ$7´r,¨ñ‰Ÿ‰ ¿‘€&i0—Ù7»	t y/¬Ñó º!¹FØÒB7$øz±Ús§	Œ[ÌdD2ômzÒiå£A	2ˆÀm3Ÿ,»NÍ-Ü
+@1Bòœ9ŒÎ4½ìËS3ZæjšEMR=¿r/&wêD˜3I:í3hXæË‚5¨Hõ	¾ñàA#)Â ‡Æ4k"Ş§‘½©82yƒ+†e6t…gr±®ÊÔğ—JÊÒØ’ï¥ªŠÊ†ñÌ ‚0ƒKbM” ‹Ò¿^¼•PœNMÀ_7¾±'‹à"ôS$œ up»vbô¨Q{J#l„¢ÛJàƒºVÊF^A)Ù‰9 /g»){©ÿ
+Ì–)5«¦„^’	|P×&Õ·- il¬¦‰ñ‚W¼ô”rõ¬ZÎBïÌT¨GuÑĞ<Cô§Ÿ‡˜Rº‡«B…ê™ƒçë~ı(vh-Ô²Éó*ß92qØWƒ@ŞùS·ö(	Õ•ò›ÚÏ ¥ÚØH)P`(¯;d'ggÙií3	Ê¾”Ö4^­È•â\)W¬¨$PÃš.õ6É—ô#T¾„_vÏAÚ¾Wş¾]²“ÊıH«~*ûÎW%¹Ñ{P[IÑ`Ø²l?”Í£K¦M›/<ËöµCÆP&ú?_ƒ6°î0Øªª_‚­†aıôw=‰Ë…ÇÁÁétH¦(æ6†¤†’!Fi0È+0ÁOBcÉãEµüÃSL°ÍhYïÍ–´”ó~D2VÍ[ä–3tÙÙµš2¸İ±/…Ôeà¸S©Ş&,‘>‡…ÒùÂC5É›vÇi—ÅÙ~¢Ç`õjùüşÈüªÜÛ;&™âöM(lçÆ0Paê•<ô«Udš…ÔÓé‰yƒâ+T'ò/¡ì¸]9Ù2Ó“ãö¯ñ1G«·ËÇ™dHD7­¸º42yv"Ø)XÏ9ë‰‹;{pãWã{“Ş›~¢Iã•¿ #@•q &îÂÙC›æz  p{m[á0¨Æ52ÇHXûöèB¢“Èû­zúo{(Ş	%JI16‡~ûAS›Š6JÍí%¶¢oaÓÔÑAc¹ÜoéuŒ¯1´Ï5tXÀ	¦n:~wŠ¤ÒÑ0‘XÂ×àü#O˜#©íTÃ —Tµ-=ÖœÏ-jÔ¯íŞÏeH_ËÉR|,q»ÛÙ:uêdkgÖ_äıWµ‰[üœº‰¿ØGÇÌqì’ßQúûr£¹ÛŠ½[Iİ°·ÛÔŸâ©e@¡¹…]Ÿ!..ìlLD	;;w³³í;ÔÅÅÅÁÖV5ñ³åsr¡ÀÁc}¾\¾ûó¥0'-­¸¼,?]Ú¬H~˜“]R^V^’óà„¡Y’â§•á!¡8BB­Şy*şÔ{¸uÏnşñË†Å¡d°å»™Io…TŞ}’ó²¬¬¬èyÖÑvkï¥ædç—ãÏ^fgßJ%˜SSò¶Œ¥¥­÷‚ç{šÜ¬§ÅéJIfl(uY6Ñ‡ŠhÛ6ùÊ+… ÑÉ­M¼_E)ˆWùì£È¡ÃtlRë`NMA«;4ÿë„Mlƒª¸÷LÙcÀ.sSşèŠ3?Rä«*>fN•o¯Häí
+ùş©’Ç@…§qƒ[VjDËâß¥.ó™¹“<Ë™.H¸ñ¥Õ”Öú
+DÂ+Û[Y/u*8Ü¿›ÏßJê\6ÆN—¦¤êÊwVX¶ó¿®”®¡Ú™`N?Å€£ø §ÊºlĞV—üØó2Ù¤òDÑÅy0ƒYJ~õ,¼à§³êÒ¿Fî¨¿½b†uZ|_q]6/I!]ôñNÊZ³^ß^F’#L„¶WÀ‡mÊÿüÖ•’¶[ù:9€+>Ö½›‹Š„•.¼“¦ÏéVñV" 7PLµX/µÏO…Ûa,³éwšp']ÉXCL¡-"^Æ¯ŸÀOÙM(Zœùj‰å^9_‚ópG€5?^k×Æ¾ˆWd% yJn(L>0·¿ }TÅqEübÎ2±x/6dÇ³wo5÷Ò–€(m·ã´?ä„´>¤›ˆsë>ãæ5ª,÷ÆŞğæ ‰Å`øö§­Á×ØDH0‡EğÁûMş‚EÑ£óÛç4ıè@¿oşb˜øĞQîNÅëìyıy%ç{]É³¤Ãß†Œa›iˆ6¡j¹àrës~6	é]©¹ƒCÃĞÉoñö˜[ÿdæ•TÔÖÕXSË)}“–štş·ïLÕ[—â‹ŠšvÁ1ïÁ×6/IŠQ°:Z:ºùÌgJèlB§øLğéÌîÑ¡=íçyO¾vwÓ’nÍ‚Áà•·d\ƒmKx<^^ŒQ±ğùñ^[=›hP¶¶ƒì‰Ë„ş°E1OŞ3Îøwåk¤£ÛEÑOÛğÇídàÚLŠo1‚¹ÇÂCJz{¿âğpİ@-Ù¬€Ğ4øcBV«ş^‡ÜP{û»q–íd3Ã´ÌØcÃ·_NÏ>Ş+ui6ÍlLóUH\14èå´r×ÅÏ?Ôœ§ÒÜä[–‡úqv²¶Âaé0ÄÙËoö7>•”]PŞ:zZ*9<´aãñ#š„ÿÓ…M
+endstream
+endobj
+xref
+0 444
+0000000000 65535 f
+0000000017 00000 n
+0000002235 00000 n
+0000004175 00000 n
+0000004499 00000 n
+0000004787 00000 n
+0000005096 00000 n
+0000005313 00000 n
+0000005747 00000 n
+0000006114 00000 n
+0000006520 00000 n
+0000006761 00000 n
+0000007025 00000 n
+0000007388 00000 n
+0000007760 00000 n
+0000008113 00000 n
+0000008486 00000 n
+0000008853 00000 n
+0000009212 00000 n
+0000009569 00000 n
+0000009925 00000 n
+0000010274 00000 n
+0000010632 00000 n
+0000010984 00000 n
+0000011359 00000 n
+0000011619 00000 n
+0000011872 00000 n
+0000012181 00000 n
+0000012559 00000 n
+0000012923 00000 n
+0000013278 00000 n
+0000013757 00000 n
+0000014014 00000 n
+0000014271 00000 n
+0000014530 00000 n
+0000014813 00000 n
+0000015076 00000 n
+0000015325 00000 n
+0000015657 00000 n
+0000015993 00000 n
+0000016212 00000 n
+0000016469 00000 n
+0000016722 00000 n
+0000016981 00000 n
+0000017276 00000 n
+0000017571 00000 n
+0000017864 00000 n
+0000018151 00000 n
+0000018472 00000 n
+0000018767 00000 n
+0000019090 00000 n
+0000019396 00000 n
+0000019812 00000 n
+0000020175 00000 n
+0000020547 00000 n
+0000020900 00000 n
+0000021273 00000 n
+0000021640 00000 n
+0000021999 00000 n
+0000022356 00000 n
+0000022712 00000 n
+0000023061 00000 n
+0000023419 00000 n
+0000023771 00000 n
+0000024146 00000 n
+0000024406 00000 n
+0000024659 00000 n
+0000024968 00000 n
+0000025346 00000 n
+0000025710 00000 n
+0000026065 00000 n
+0000026293 00000 n
+0000026550 00000 n
+0000026807 00000 n
+0000027066 00000 n
+0000027349 00000 n
+0000027612 00000 n
+0000027861 00000 n
+0000028193 00000 n
+0000028529 00000 n
+0000028748 00000 n
+0000029005 00000 n
+0000029258 00000 n
+0000029517 00000 n
+0000029812 00000 n
+0000030107 00000 n
+0000030400 00000 n
+0000030687 00000 n
+0000031008 00000 n
+0000031303 00000 n
+0000031626 00000 n
+0000031932 00000 n
+0000032348 00000 n
+0000032711 00000 n
+0000033083 00000 n
+0000033436 00000 n
+0000033809 00000 n
+0000034176 00000 n
+0000034535 00000 n
+0000034892 00000 n
+0000035248 00000 n
+0000035598 00000 n
+0000035957 00000 n
+0000036310 00000 n
+0000036686 00000 n
+0000036947 00000 n
+0000037201 00000 n
+0000037511 00000 n
+0000037890 00000 n
+0000038255 00000 n
+0000038611 00000 n
+0000038840 00000 n
+0000039098 00000 n
+0000039356 00000 n
+0000039616 00000 n
+0000039900 00000 n
+0000040164 00000 n
+0000040414 00000 n
+0000040747 00000 n
+0000041084 00000 n
+0000041304 00000 n
+0000041562 00000 n
+0000041816 00000 n
+0000042076 00000 n
+0000042372 00000 n
+0000042668 00000 n
+0000042962 00000 n
+0000043250 00000 n
+0000043572 00000 n
+0000043868 00000 n
+0000044192 00000 n
+0000044499 00000 n
+0000044916 00000 n
+0000045280 00000 n
+0000045653 00000 n
+0000046007 00000 n
+0000046381 00000 n
+0000046749 00000 n
+0000047109 00000 n
+0000047467 00000 n
+0000047824 00000 n
+0000048174 00000 n
+0000048533 00000 n
+0000048886 00000 n
+0000049262 00000 n
+0000049523 00000 n
+0000049777 00000 n
+0000050087 00000 n
+0000050466 00000 n
+0000050831 00000 n
+0000051187 00000 n
+0000051416 00000 n
+0000051674 00000 n
+0000051932 00000 n
+0000052192 00000 n
+0000052476 00000 n
+0000052740 00000 n
+0000052990 00000 n
+0000053323 00000 n
+0000053660 00000 n
+0000053880 00000 n
+0000054138 00000 n
+0000054392 00000 n
+0000054652 00000 n
+0000054948 00000 n
+0000055244 00000 n
+0000055538 00000 n
+0000055826 00000 n
+0000056148 00000 n
+0000056444 00000 n
+0000056768 00000 n
+0000057075 00000 n
+0000057492 00000 n
+0000057856 00000 n
+0000058229 00000 n
+0000058583 00000 n
+0000058957 00000 n
+0000059325 00000 n
+0000059685 00000 n
+0000060043 00000 n
+0000060400 00000 n
+0000060750 00000 n
+0000061109 00000 n
+0000061462 00000 n
+0000061838 00000 n
+0000062099 00000 n
+0000062353 00000 n
+0000062663 00000 n
+0000063042 00000 n
+0000063407 00000 n
+0000063763 00000 n
+0000063992 00000 n
+0000064250 00000 n
+0000064508 00000 n
+0000064768 00000 n
+0000065052 00000 n
+0000065316 00000 n
+0000065566 00000 n
+0000065899 00000 n
+0000066236 00000 n
+0000066456 00000 n
+0000066714 00000 n
+0000066968 00000 n
+0000067228 00000 n
+0000067524 00000 n
+0000067820 00000 n
+0000068114 00000 n
+0000068402 00000 n
+0000068724 00000 n
+0000069020 00000 n
+0000069344 00000 n
+0000069651 00000 n
+0000070068 00000 n
+0000001944 00000 n
+0000070135 00000 n
+0000070377 00000 n
+0000070602 00000 n
+0000070801 00000 n
+0000071004 00000 n
+0000071229 00000 n
+0000071428 00000 n
+0000071631 00000 n
+0000071856 00000 n
+0000072055 00000 n
+0000072258 00000 n
+0000072483 00000 n
+0000072682 00000 n
+0000072885 00000 n
+0000073110 00000 n
+0000073309 00000 n
+0000073512 00000 n
+0000073737 00000 n
+0000073936 00000 n
+0000074139 00000 n
+0000074364 00000 n
+0000074563 00000 n
+0000074766 00000 n
+0000074991 00000 n
+0000075190 00000 n
+0000075393 00000 n
+0000075618 00000 n
+0000075817 00000 n
+0000076020 00000 n
+0000076245 00000 n
+0000076444 00000 n
+0000076647 00000 n
+0000076872 00000 n
+0000077071 00000 n
+0000077274 00000 n
+0000077499 00000 n
+0000077698 00000 n
+0000077901 00000 n
+0000078126 00000 n
+0000078325 00000 n
+0000078528 00000 n
+0000078753 00000 n
+0000078952 00000 n
+0000079155 00000 n
+0000079380 00000 n
+0000079579 00000 n
+0000079782 00000 n
+0000080007 00000 n
+0000080206 00000 n
+0000080409 00000 n
+0000080634 00000 n
+0000080833 00000 n
+0000081036 00000 n
+0000081261 00000 n
+0000081460 00000 n
+0000081663 00000 n
+0000081888 00000 n
+0000082087 00000 n
+0000082290 00000 n
+0000082515 00000 n
+0000082714 00000 n
+0000082917 00000 n
+0000083142 00000 n
+0000083341 00000 n
+0000083544 00000 n
+0000083769 00000 n
+0000083968 00000 n
+0000084171 00000 n
+0000084396 00000 n
+0000084595 00000 n
+0000084798 00000 n
+0000085023 00000 n
+0000085222 00000 n
+0000085425 00000 n
+0000085650 00000 n
+0000085849 00000 n
+0000086052 00000 n
+0000086277 00000 n
+0000086476 00000 n
+0000086679 00000 n
+0000086904 00000 n
+0000087103 00000 n
+0000087306 00000 n
+0000087531 00000 n
+0000087730 00000 n
+0000087933 00000 n
+0000088158 00000 n
+0000088357 00000 n
+0000088560 00000 n
+0000088785 00000 n
+0000088984 00000 n
+0000089187 00000 n
+0000089412 00000 n
+0000089611 00000 n
+0000089814 00000 n
+0000090039 00000 n
+0000090238 00000 n
+0000090441 00000 n
+0000090666 00000 n
+0000090865 00000 n
+0000091068 00000 n
+0000091293 00000 n
+0000091492 00000 n
+0000091695 00000 n
+0000091920 00000 n
+0000092119 00000 n
+0000092322 00000 n
+0000092547 00000 n
+0000092746 00000 n
+0000092949 00000 n
+0000093174 00000 n
+0000093373 00000 n
+0000093576 00000 n
+0000093801 00000 n
+0000094000 00000 n
+0000094203 00000 n
+0000094428 00000 n
+0000094627 00000 n
+0000094830 00000 n
+0000095055 00000 n
+0000095254 00000 n
+0000095457 00000 n
+0000095682 00000 n
+0000095881 00000 n
+0000096084 00000 n
+0000096309 00000 n
+0000096508 00000 n
+0000096711 00000 n
+0000096936 00000 n
+0000097135 00000 n
+0000097338 00000 n
+0000097563 00000 n
+0000097762 00000 n
+0000097965 00000 n
+0000098190 00000 n
+0000098389 00000 n
+0000098592 00000 n
+0000098817 00000 n
+0000099016 00000 n
+0000099219 00000 n
+0000099444 00000 n
+0000099643 00000 n
+0000099846 00000 n
+0000100071 00000 n
+0000100270 00000 n
+0000100473 00000 n
+0000100698 00000 n
+0000100897 00000 n
+0000101100 00000 n
+0000101325 00000 n
+0000101524 00000 n
+0000101727 00000 n
+0000101952 00000 n
+0000102151 00000 n
+0000102354 00000 n
+0000102579 00000 n
+0000102778 00000 n
+0000102981 00000 n
+0000103206 00000 n
+0000103405 00000 n
+0000103608 00000 n
+0000103833 00000 n
+0000104032 00000 n
+0000104235 00000 n
+0000104460 00000 n
+0000104659 00000 n
+0000104862 00000 n
+0000105087 00000 n
+0000105286 00000 n
+0000105489 00000 n
+0000105714 00000 n
+0000105913 00000 n
+0000106116 00000 n
+0000106341 00000 n
+0000106540 00000 n
+0000106743 00000 n
+0000106968 00000 n
+0000107167 00000 n
+0000107370 00000 n
+0000107595 00000 n
+0000107794 00000 n
+0000107997 00000 n
+0000108222 00000 n
+0000108421 00000 n
+0000108624 00000 n
+0000108849 00000 n
+0000109048 00000 n
+0000109251 00000 n
+0000109476 00000 n
+0000109675 00000 n
+0000109878 00000 n
+0000110103 00000 n
+0000110302 00000 n
+0000110505 00000 n
+0000110730 00000 n
+0000110929 00000 n
+0000111132 00000 n
+0000111357 00000 n
+0000111556 00000 n
+0000111759 00000 n
+0000111984 00000 n
+0000112183 00000 n
+0000112386 00000 n
+0000112611 00000 n
+0000112810 00000 n
+0000113013 00000 n
+0000113238 00000 n
+0000113437 00000 n
+0000113640 00000 n
+0000113865 00000 n
+0000114064 00000 n
+0000114267 00000 n
+0000114492 00000 n
+0000114691 00000 n
+0000114894 00000 n
+0000115119 00000 n
+0000115318 00000 n
+0000115521 00000 n
+0000115746 00000 n
+0000115945 00000 n
+0000116148 00000 n
+0000116373 00000 n
+0000116572 00000 n
+0000116775 00000 n
+0000117000 00000 n
+0000117199 00000 n
+0000117402 00000 n
+0000118995 00000 n
+0000122374 00000 n
+0000124325 00000 n
+trailer
+<< /Info 213 0 R /Root 1 0 R /Size 444 >>
+startxref
+129135
+%%EOF

@@ -1,0 +1,469 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" attributeFormDefault="unqualified" version="1.7.0">
+	<!-- There are several changes made to the base ACORD schema that could technically be done via restrictions and then
+	extensions. XMLSpy and XSOM were fine with this approach but JDOM validation could not handle the complexity and had issues so a design decision was
+	made to apply those changes directly to the ACORD schema rather than embracing restrictions as a technique. -->
+	<xsd:redefine schemaLocation="ap_templates_extension.xsd">
+		<xsd:complexType name="ProfessionalLiabilityPolicyQuoteInqRq_Type">
+			<xsd:complexContent>
+				<xsd:extension base="ProfessionalLiabilityPolicyQuoteInqRq_Type">
+					<xsd:sequence>
+						<xsd:element ref="ModInfo" minOccurs="0" maxOccurs="unbounded"/>
+						<xsd:element name="ProfessionalLiabilityLineBusiness" type="ProfessionalLiabilityLineBusiness_Type"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		
+		<!--  
+		<xsd:complexType name="CommlPolicySupplement_Type">
+			<xsd:complexContent>
+				<xsd:extension base="CommlPolicySupplement_Type">
+					<xsd:sequence>
+						<xsd:element ref="CommlName" minOccurs="0"/>
+						<xsd:element ref="AnnualBillingsAndFees" minOccurs="0"/>
+						<xsd:element ref="EmployeeCountInfo" minOccurs="0" maxOccurs="unbounded"/>
+						<xsd:element ref="IncomeInformation" minOccurs="0" maxOccurs="unbounded"/>
+						<xsd:element ref="PropertyManagementInfo" minOccurs="0" maxOccurs="unbounded"/>
+						<xsd:element ref="AppraisalInfo" minOccurs="0"/>
+						<xsd:element ref="Trustee" minOccurs="0" maxOccurs="unbounded"/>
+						<xsd:element ref="Trust" minOccurs="0" maxOccurs="unbounded"/>
+						<xsd:element ref="MediaSalesInfo" minOccurs="0"/>
+						<xsd:element ref="PrintMediaInfo" minOccurs="0"/>
+						<xsd:element ref="DigitalMediaInfo" minOccurs="0"/>
+						<xsd:element ref="AdvertisingMediaInfo" minOccurs="0"/>
+						<xsd:element ref="MiscellaneousPublishingMediaInfo" minOccurs="0"/>
+						<xsd:element ref="QuestionAnswer" minOccurs="0" maxOccurs="unbounded"/>
+						<xsd:element ref="Option" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		-->
+		<xsd:complexType name="CommlPolicy_Type">
+			<xsd:complexContent>
+				<xsd:extension base="CommlPolicy_Type">
+					<xsd:sequence>
+						<xsd:element ref="ISO_Ratebook_Id"/>
+						<xsd:element ref="SubcontractorInfo" minOccurs="0" maxOccurs="unbounded"/>
+						<xsd:element ref="ProfessionalLiabilityPolicySupplement" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="AdvertisersLiabilityInfo_Type">
+			<xsd:complexContent>
+				<xsd:extension base="AdvertisersLiabilityInfo_Type">
+					<xsd:sequence>
+						<xsd:element ref="AdMediaDesc"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="EmployeeCountInfo_Type">
+			<xsd:complexContent>
+				<xsd:extension base="EmployeeCountInfo_Type">
+					<xsd:sequence>
+						<xsd:element ref="OccupationClassCd"/>
+						<xsd:element name="OccupationClassCdDesc" type="C-80"/>
+						<xsd:element ref="NumEmployeesInactive"/>
+						<xsd:element ref="NumMoreThan400"/>
+						<xsd:element ref="NumIndependentContractor"/>
+						<xsd:element ref="AnnualTurnOverRate"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="ProductCompletedOpsInfo_Type">
+			<xsd:complexContent>
+				<xsd:extension base="ProductCompletedOpsInfo_Type">
+					<xsd:sequence>
+						<xsd:element ref="ClientName" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="BusinessInfo_Type">
+			<xsd:complexContent>
+				<xsd:extension base="BusinessInfo_Type">
+					<xsd:sequence>
+						<xsd:element ref="NumOfficers" minOccurs="0"/>
+						<xsd:element ref="PricipalOfficersPartnersProfessionalEducationTraining" minOccurs="0"/>
+						<xsd:element ref="PrincipalsOfficersPartnersAverageYearsPractice" minOccurs="0"/>
+						<xsd:element ref="NumOtherProfessionalEmployees" minOccurs="0"/>
+						<xsd:element ref="OtherProfessionalEmployeesEducationTraining" minOccurs="0"/>
+						<xsd:element ref="OtherProfessionalEmployeesAverageYearsPractice" minOccurs="0"/>
+						<xsd:element ref="StaffingDesc"/>
+						<xsd:element ref="RevenuePct" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="FinancialStatementInfo_Type">
+			<xsd:complexContent>
+				<xsd:extension base="FinancialStatementInfo_Type">
+					<xsd:sequence>
+						<xsd:element ref="DomesticRevenuePct" minOccurs="0"/>
+						<xsd:element ref="InternationalRevenuePct" minOccurs="0"/>
+						<xsd:element ref="PriorTotalRevenueAmt" minOccurs="0"/>
+						<xsd:element ref="PriorDomesticRevenuePct" minOccurs="0"/>
+						<xsd:element ref="PriorInternationalRevenuePct" minOccurs="0"/>
+						<xsd:element ref="PriorTwoYearsTotalRevenueAmt" minOccurs="0"/>
+						<xsd:element ref="PriorTwoYearsDomesticRevenuePct" minOccurs="0"/>
+						<xsd:element ref="PriorTwoYearsInternationalRevenuePct" minOccurs="0"/>
+						<xsd:element ref="DomesticRevenueAmt" minOccurs="0"/>
+						<xsd:element ref="NextYearsTotalRevenueAmt" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="CommlCoverage_Type">
+			<xsd:complexContent>
+				<xsd:extension base="CommlCoverage_Type">
+					<xsd:sequence>
+						<xsd:element ref="APUI_LimitOfLiability" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="NameInfo_Type">
+			<xsd:complexContent>
+				<xsd:extension base="NameInfo_Type">
+					<xsd:sequence>
+						<xsd:element ref="LegalEntityOther"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:redefine>
+	<xsd:complexType name="ProfessionalLiabilityPolicySupplement_Type">
+		<xsd:sequence>
+			<xsd:element ref="CommlName" minOccurs="0"/>
+			<xsd:element ref="AnnualBillingsAndFees" minOccurs="0"/>
+			<xsd:element ref="EmployeeCountInfo" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="IncomeInformation" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="PropertyManagementInfo" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="AppraisalInfo" minOccurs="0"/>
+			<xsd:element ref="Trustee" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Trust" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="MediaSalesInfo" minOccurs="0"/>
+			<xsd:element ref="PrintMediaInfo" minOccurs="0"/>
+			<xsd:element ref="DigitalMediaInfo" minOccurs="0"/>
+			<xsd:element ref="AdvertisingMediaInfo" minOccurs="0"/>
+			<xsd:element ref="MiscellaneousPublishingMediaInfo" minOccurs="0"/>
+			<xsd:element ref="QuestionAnswer" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Option" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="PolicyTypeCd" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="ExecRecruitingIndustry" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="MediaSalesInfo" type="MediaSalesInfo_Type"/>
+	<xsd:element name="GrossAnnualMediaSales" type="GrossAnnualMediaSales_Type"/>
+	<xsd:element name="SalesEstThisYear" type="CURRENCY"/>
+	<xsd:element name="SalesLastYear" type="CURRENCY"/>
+	<xsd:element name="SalesPreviousYear" type="CURRENCY"/>
+	<xsd:element name="TotalPlanAssets" type="CURRENCY"/>
+	<xsd:element name="PreviosYearPlanAssets" type="CURRENCY"/>
+	<xsd:element name="PrintMediaInfo" type="PrintMediaInfo_Type"/>
+	<xsd:element name="BookPublishing" type="BookPublishing_Type"/>
+	<xsd:element name="MagazineNewspaperPublishing" type="MagazineNewspaperPublishing_Type"/>
+	<xsd:element name="PublicationType" type="C-80"/>
+	<xsd:element name="PublicationName" type="C-80"/>
+	<xsd:element name="PublicationCirulationFrequency" type="C-80"/>
+	<xsd:element name="PublicationCirulationAverage" type="Long"/>
+	<xsd:element name="PublisherBookType" type="C-80"/>
+	<xsd:element name="PublisherBookPercent" type="PercentDecimal"/>
+	<xsd:element name="DigitalMediaInfo" type="DigitalMediaInfo_Type"/>
+	<xsd:element name="BroadcastingTelecasting" type="BroadcastingTelecasting_Type"/>
+	<xsd:element name="Cablecasting" type="Cablecasting_Type"/>
+	<xsd:element name="HighestAdvertising" type="Long"/>
+	<xsd:element name="CablecastingSystemName" type="C-80"/>
+	<xsd:element name="MarketClassification" type="C-80"/>
+	<xsd:element name="OriginatedProgrammingType" type="C-80"/>
+	<xsd:element name="AdvertisingMediaInfo" type="AdvertisingMediaInfo_Type"/>
+	<xsd:element name="ComparativeAdvertisement" type="ComparativeAdvertisement_Type"/>
+	<xsd:element name="RadioTelevisionProgram" type="RadioTelevisionProgram_Type"/>
+	<xsd:element name="ComparativeAdvertisementAccount" type="C-80"/>
+	<xsd:element name="ComparativeAdvertisementType" type="C-80"/>
+	<xsd:element name="ComparativeAdvertisementDesc" type="C-80"/>
+	<xsd:element name="OnAirProductionName" type="C-80"/>
+	<xsd:element name="OnAirProductionDetail" type="C-80"/>
+	<xsd:element name="MiscellaneousPublishingMediaInfo" type="MiscellaneousPublishingMediaInfo_Type"/>
+	<xsd:element name="OtherPublishedMaterials" type="OtherPublishedMaterials_Type"/>
+	<xsd:element name="PrintingForThirdParties" type="PrintingForThirdParties_Type"/>
+	<xsd:element name="OtherPublishedMaterialsType" type="C-80"/>
+	<xsd:element name="OtherPublishedMaterialsSales" type="Long"/>
+	<xsd:element name="PrintingType" type="C-80"/>
+	<xsd:element name="PrintingReceipts" type="Long"/>
+	<xsd:element name="AnnualBillingsAndFees" type="AnnualBillingsAndFees_Type"/>
+	<xsd:element name="AdMediaDesc" type="C-80"/>
+	<xsd:element name="ExecRecruitingIndustry" type="ExecRecruitingIndustry_Type"/>
+	<xsd:element name="Trustee" type="Trustee_Type"/>
+	<xsd:element name="Trust" type="Trust_Type"/>
+	<xsd:element name="NumEmployeesInactive" type="Long"/>
+	<xsd:element name="NumMoreThan400" type="Long"/>
+	<xsd:element name="NumIndependentContractor" type="Long"/>
+	<xsd:element name="AnnualTurnOverRate" type="Long"/>
+	<xsd:element name="AppraisalConductor" type="AppraisalConductor_Type"/>
+	<xsd:element name="AppraisalInstitution" type="AppraisalInstitution_Type"/>
+	<xsd:element name="NumAppraisals" type="Long"/>
+	<xsd:element name="AppraisalFees" type="CURRENCY"/>
+	<xsd:element name="RealEstateAppraisal" type="RealEstateAppraisal_Type"/>
+	<xsd:element name="AppraisalInfo" type="AppraisalInfo_Type"/>
+	<xsd:element name="AppraisalClient" type="AppraisalClient_Type"/>
+	<xsd:element name="PropertyManagementInfo" type="PropertyManagementInfo_Type"/>
+	<xsd:element name="IncomeInformation" type="IncomeInformation_Type"/>
+	<xsd:element name="DomesticRevenuePct" type="PercentDecimal"/>
+	<xsd:element name="InternationalRevenuePct" type="PercentDecimal"/>
+	<xsd:element name="PriorTotalRevenueAmt" type="CURRENCY"/>
+	<xsd:element name="PriorDomesticRevenuePct" type="PercentDecimal"/>
+	<xsd:element name="PriorInternationalRevenuePct" type="PercentDecimal"/>
+	<xsd:element name="PriorTwoYearsTotalRevenueAmt" type="CURRENCY"/>
+	<xsd:element name="PriorTwoYearsDomesticRevenuePct" type="PercentDecimal"/>
+	<xsd:element name="PriorTwoYearsInternationalRevenuePct" type="PercentDecimal"/>
+	<xsd:element name="DomesticRevenueAmt" type="CURRENCY"/>
+	<xsd:element name="NextYearsTotalRevenueAmt" type="CURRENCY"/>
+	<xsd:element name="ClientName" type="string_Id_Type"/>
+	<xsd:element name="PricipalOfficersPartnersProfessionalEducationTraining" type="C-255"/>
+	<xsd:element name="PrincipalsOfficersPartnersAverageYearsPractice" type="Long"/>
+	<xsd:element name="NumOtherProfessionalEmployees" type="Long"/>
+	<xsd:element name="OtherProfessionalEmployeesEducationTraining" type="C-255"/>
+	<xsd:element name="OtherProfessionalEmployeesAverageYearsPractice" type="Long"/>
+	<xsd:element name="StaffingDesc" type="C-255"/>
+	<xsd:element name="APUI_LimitOfLiability" type="C-50"/>
+	<xsd:element name="ISO_Ratebook_Id" type="Long"/>
+	<xsd:element name="LegalEntityOther" type="C-50"/>
+	<xsd:element name="ProfessionalLiabilityPolicySupplement" type="ProfessionalLiabilityPolicySupplement_Type"/>
+	<xsd:complexType name="boolean_Id_Type">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:boolean">
+				<xsd:attribute name="id" type="ID" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="string_Id_Type">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="id" type="ID" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="MediaSalesInfo_Type" mixed="true">
+		<xsd:sequence>
+			<xsd:element ref="GrossAnnualMediaSales" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="GrossAnnualMediaSales_Type" mixed="true">
+		<xsd:sequence>
+			<xsd:element ref="MediaTypeCd"/>
+			<xsd:element ref="SalesEstThisYear"/>
+			<xsd:element ref="SalesLastYear"/>
+			<xsd:element ref="SalesPreviousYear"/>
+			<xsd:element ref="TotalPlanAssets"/>
+			<xsd:element ref="PreviosYearPlanAssets"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="ID"/>
+	</xsd:complexType>
+	<xsd:complexType name="PrintMediaInfo_Type" mixed="true">
+		<xsd:sequence>
+			<xsd:element ref="BookPublishing" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="MagazineNewspaperPublishing" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="DigitalMediaInfo_Type" mixed="true">
+		<xsd:sequence>
+			<xsd:element ref="BroadcastingTelecasting" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Cablecasting" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="AdvertisingMediaInfo_Type" mixed="true">
+		<xsd:sequence>
+			<xsd:element ref="ComparativeAdvertisement" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="RadioTelevisionProgram" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="MiscellaneousPublishingMediaInfo_Type" mixed="true">
+		<xsd:sequence>
+			<xsd:element ref="OtherPublishedMaterials" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="PrintingForThirdParties" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="BroadcastingTelecasting_Type" mixed="true">
+		<xsd:sequence>
+			<xsd:element ref="CallLetters"/>
+			<xsd:element ref="HighestAdvertising"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="ID"/>
+		<xsd:attribute name="locationRef" type="IDREF" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="Cablecasting_Type" mixed="true">
+		<xsd:sequence>
+			<xsd:element ref="CablecastingSystemName"/>
+			<xsd:element ref="NumLocations"/>
+			<xsd:element ref="MarketClassification"/>
+			<xsd:element ref="OriginatedProgrammingType"/>
+			<xsd:element ref="NumHoursPerWeek"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="ID"/>
+		<xsd:attribute name="locationRef" type="IDREF" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="ComparativeAdvertisement_Type" mixed="true">
+		<xsd:sequence>
+			<xsd:element ref="ComparativeAdvertisementAccount"/>
+			<xsd:element ref="ComparativeAdvertisementType"/>
+			<xsd:element ref="ComparativeAdvertisementDesc"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="ID"/>
+	</xsd:complexType>
+	<xsd:complexType name="RadioTelevisionProgram_Type" mixed="true">
+		<xsd:sequence>
+			<xsd:element ref="OnAirProductionName"/>
+			<xsd:element ref="OnAirProductionDetail"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="ID"/>
+	</xsd:complexType>
+	<xsd:complexType name="OtherPublishedMaterials_Type" mixed="true">
+		<xsd:sequence>
+			<xsd:element ref="OtherPublishedMaterialsType"/>
+			<xsd:element ref="OtherPublishedMaterialsSales"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="ID"/>
+	</xsd:complexType>
+	<xsd:complexType name="PrintingForThirdParties_Type" mixed="true">
+		<xsd:sequence>
+			<xsd:element ref="PrintingType"/>
+			<xsd:element ref="PrintingReceipts"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="ID"/>
+	</xsd:complexType>
+	<xsd:complexType name="BookPublishing_Type" mixed="true">
+		<xsd:sequence>
+			<xsd:element ref="PublisherBookType"/>
+			<xsd:element ref="PublisherBookPercent"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="ID"/>
+	</xsd:complexType>
+	<xsd:complexType name="MagazineNewspaperPublishing_Type" mixed="true">
+		<xsd:sequence>
+			<xsd:element ref="PublicationType"/>
+			<xsd:element ref="PublicationName"/>
+			<xsd:element ref="PublicationCirulationFrequency"/>
+			<xsd:element ref="PublicationCirulationAverage"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="ID"/>
+		<xsd:attribute name="locationRef" type="IDREF" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="AnnualBillingsAndFees_Type" mixed="true">
+		<xsd:sequence>
+			<xsd:element ref="AdvertisersLiabilityInfo" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="ReceiptsInfo" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ExecRecruitingIndustry_Type">
+		<xsd:sequence>
+			<xsd:element name="IndustryName" type="C-80" minOccurs="0"/>
+			<xsd:element name="IndustryPct" type="PercentDecimal" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="ID"/>
+	</xsd:complexType>
+	<xsd:complexType name="Trustee_Type" mixed="true">
+		<xsd:sequence>
+			<xsd:element name="TrusteeOrProposedTrustee" type="C-10"/>
+			<xsd:element name="CourtAppointedYesNo" type="C-10"/>
+			<xsd:element name="JudicialAuthority" type="C-80"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="ID" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="Trust_Type" mixed="true">
+		<xsd:sequence>
+			<xsd:element name="TrustName" type="C-80"/>
+			<xsd:element name="TrustType" type="TrustType_Type" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="ID" use="required"/>
+		<xsd:attribute name="trusteeRef" type="IDREF" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="TrustType_Type" mixed="true">
+		<xsd:sequence>
+			<xsd:element name="TrustTypeCd" type="C-10" minOccurs="0"/>
+			<xsd:element name="LastYearValue" type="CURRENCY" minOccurs="0"/>
+			<xsd:element name="ThisYearValue" type="CURRENCY" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="AppraisalInfo_Type" mixed="true">
+		<xsd:sequence>
+			<xsd:element ref="RealEstateAppraisal" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="AppraisalClient" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="AppraisalInstitution" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="AppraisalConductor" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="RealEstateAppraisal_Type" mixed="true">
+		<xsd:sequence>
+			<xsd:element name="PropertyType" type="C-10"/>
+			<xsd:element name="PropertyTypeDesc" type="C-80"/>
+			<xsd:element ref="NumAppraisals"/>
+			<xsd:element ref="AppraisalFees"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="ID" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="AppraisalClient_Type" mixed="true">
+		<xsd:sequence>
+			<xsd:element name="ClientType" type="C-10"/>
+			<xsd:element name="ClientDesc" type="C-80"/>
+			<xsd:element ref="NumAppraisals"/>
+			<xsd:element ref="AppraisalFees"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="ID" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="AppraisalConductor_Type" mixed="true">
+		<xsd:sequence>
+			<xsd:element name="AppraiserName" type="C-80"/>
+			<xsd:element name="AppraiserYearsExperience" type="C-80"/>
+			<xsd:element name="AppraiserAssociationMembership" type="C-80"/>
+			<xsd:element name="AppraiserLicenseType" type="C-80"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="ID" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="AppraisalInstitution_Type" mixed="true">
+		<xsd:sequence>
+			<xsd:element name="InstitutionName" type="C-80"/>
+			<xsd:element name="InstitutionCity" type="C-80"/>
+			<xsd:element name="InstitutionStateCd" type="C-10"/>
+			<xsd:element name="NumYearsWorkPerformed" type="Long"/>
+			<xsd:element name="AnnualRevenuePct" type="Long"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="ID" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="PropertyManagementInfo_Type" mixed="true">
+		<xsd:sequence>
+			<xsd:element ref="ItemValueAmt" minOccurs="0"/>
+			<xsd:element ref="ClassCd" minOccurs="0"/>
+			<xsd:element ref="ClassCdDesc" minOccurs="0"/>
+			<xsd:element ref="BusinessIncomeInfo" minOccurs="0"/>
+			<xsd:element ref="NumApartments" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="ID"/>
+	</xsd:complexType>
+	<xsd:complexType name="IncomeInformation_Type" mixed="true">
+		<xsd:sequence>
+			<xsd:element name="IncomeCategoryCd" type="C-10"/>
+			<xsd:element name="IncomeCategoryCdDesc" type="C-80"/>
+			<xsd:element name="ConsultingDesc" type="C-255"/>
+			<xsd:element name="GrossIncomePreviousTwelveMonths" type="CURRENCY"/>
+			<xsd:element name="NumTransactionsPreviousTwelveMonths" type="Long"/>
+			<xsd:element name="SoldWithWarrentyPct" type="PercentDecimal"/>
+			<xsd:element name="ProjectedIncomeNextTwelveMonths" type="CURRENCY"/>
+			<xsd:element name="ProjectedNumTransactionsNextTwelveMonths" type="Long"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="ID" use="required"/>
+	</xsd:complexType>
+	<!-- Schema for switching from GeneralLiabiilty to ProfessionalLiability  -->
+	<xsd:complexType name="ProfessionalLiabilityLineBusiness_Type" mixed="true">
+		<xsd:sequence>
+			<xsd:element ref="LOBCd"/>
+			<xsd:element ref="LOBSubCd"/>
+			<xsd:element ref="QuestionAnswer" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="LiabilityInfo" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="ProductCompletedOpsInfo" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,95 @@
+<fields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/pdf/pdfDefinitions.xsd" >
+	<field type="checkbox">
+		<eLabel>Vehicle_CombinedSingleLimit_LimitIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='CSL'].CoverageCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_TwoIndicator_B</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[AutoMedicalPaymentsSymbolCd='2'].AutoMedicalPaymentsSymbolCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_ThreeIndicator_B</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[AutoMedicalPaymentsSymbolCd='3'].AutoMedicalPaymentsSymbolCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_FourIndicator_B</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[AutoMedicalPaymentsSymbolCd='4'].AutoMedicalPaymentsSymbolCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_SevenIndicator_B</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[AutoMedicalPaymentsSymbolCd='7'].AutoMedicalPaymentsSymbolCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_EightIndicator_B</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[AutoMedicalPaymentsSymbolCd='8'].AutoMedicalPaymentsSymbolCd</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_MedicalPayments_PerPersonLimitAmount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='MEDPM'].Limit.FormatInteger</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_CombinedSingleLimit_LimitIndicator_B</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='UMCSL'].CoverageCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BodilyInjury_EachPersonLimitIndicator_B</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='UMISP'].CoverageCd</xpath>
+	</field>
+	<!-- 
+	<field>
+		<eLabel>Vehicle_UninsuredMotorists_BodilyInjuryPerPersonLimitAmount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='UMCSL' or (CoverageCd='UMISP' and Limit.LimitAppliesToCd='PerPerson')].Limit.FormatInteger</xpath>
+	</field>
+	 -->
+	<field>
+		<eLabel>Vehicle_UninsuredMotorists_BodilyInjuryPerAccidentLimitAmount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='UMISP'].Limit[LimitAppliesToCd='PerAcc'].FormatInteger</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_UninsuredMotorists_PropertyDamagePerAccidentLimit_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='UMPD'].Limit.FormatInteger</xpath>
+	</field>
+
+	<field type="checkbox">
+		<eLabel>Vehicle_Coverage_CollisionIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='COLL'].CoverageCd</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_Collision_DeductibleAmount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='COLL'].Deductible.FormatInteger</xpath>
+	</field>
+	
+	
+	<field type="checkbox">
+		<eLabel>NamedInsured_Residency_PermanentResidentInStateIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.QuestionAnswer[QuestionCd='GENRL65' &amp;&amp; YesNoCd ='YES'].YesNoCd</xpath>
+	</field>
+	<field>
+		<eLabel>NamedInsured_PhysicalAddress_LineOne_A</eLabel>
+		<xpath>CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='IR'].GeneralPartyInfo.Addr.Addr1</xpath>
+	</field>
+	<field>
+		<eLabel>NamedInsured_PhysicalAddress_LineTwo_A</eLabel>
+		<xpath>CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='IR'].GeneralPartyInfo.Addr.Addr2</xpath>
+	</field>
+	<field>
+		<eLabel>NamedInsured_PhysicalAddress_CityName_A</eLabel>
+		<xpath>CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='IR'].GeneralPartyInfo.Addr.City</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>NamedInsured_Residency_ExemptFromResidencyRequirementIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.QuestionAnswer[QuestionCd='GENRL66' &amp;&amp; YesNoCd='YES'].YesNoCd</xpath>
+	</field>
+	<field>
+		<eLabel>NamedInsured_PhysicalAddress_CityName_B</eLabel>
+		<xpath>CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='SL'].GeneralPartyInfo.Addr.City</xpath>
+	</field>
+	<field>
+		<eLabel>NamedInsured_PhysicalAddress_CountyName_B</eLabel>
+		<xpath>CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='SL'].GeneralPartyInfo.Addr.County</xpath>
+	</field>
+	<field>
+		<eLabel>NamedInsured_PhysicalAddress_StateOrProvinceCode_B</eLabel>
+		<xpath>CommlPolicy.MiscParty[MiscPartyInfo.MiscPartyRoleCd='SL'].GeneralPartyInfo.Addr.StateProvCd</xpath>
+	</field>
+</fields>

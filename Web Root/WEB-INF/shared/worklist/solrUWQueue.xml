@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by Norm Baker (AgencyPort) -->
+<workListViewDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" viewName="WorkItemsRecentUWQueue" index="worklist" workItemType="regular" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/worklist/workListViewDefinition.xsd">
+<!-- http://reference.agencyport.com/schemas/5.2/worklist/workListViewDefinition.xsd C:\Projects\sdk\apwebapp\resources\schemas\worklist\workListViewDefinition.xsd -->
+	
+	<sortInfos>
+		<sortInfo id="sort1" name="workitem_sort_by" >
+			<defaultSortClause fieldRefId="last_update_time" acsending="false"/>
+			<fieldRef fieldRefId="last_update_time"/>
+			<content localeId="1" title="Sort By"/>
+		</sortInfo>
+	</sortInfos> 
+	<queryInfos>
+		<queryInfo id="query1" name="recent_workitems_query_info" >
+			<!-- The following query field accommodates the search for a work item by name -->
+			<queryField interactive="false" fieldRefId="status" >
+				<opCode>NOT_EQUAL</opCode>
+				<operands>
+					<operand>INPROGRESS</operand>
+				</operands>
+			</queryField>
+			<queryField interactive="false" fieldRefId="status" >
+				<opCode>NOT_EQUAL</opCode>
+				<operands>
+					<operand>DELETE</operand>
+				</operands>
+			</queryField>
+			<queryField fieldRefId="entity_name" >
+				<opCode>CONTAINS</opCode>
+				<operands>
+					<operand>*</operand>
+				</operands>
+			</queryField>						
+			<queryField interactive="false" fieldRefId="commit_flag" >
+				<opCode>EQUALS</opCode>
+				<operands>
+					<operand>1</operand>
+				</operands>
+			</queryField>
+			<content localeId="1" title="Queue Search" />
+		</queryInfo>
+	</queryInfos>
+	<views>
+		<view>
+			<filterRefs>
+			</filterRefs>
+			<sortInfoRef sortInfoRefId="sort1"/>
+			<queryInfoRef queryInfoRefId="query1"/>
+			<listView type="TABULAR" fetchSize="5">
+				<fieldRef fieldRefId="work_item_id"/>
+				<fieldRef fieldRefId="entity_name"/>
+                 <fieldRef fieldRefId="status">
+                        <content localeId="1" title="Status" styleClass="hidden-xs" />
+                        <content localeId="3" title="Estado" styleClass="hidden-xs" />
+                 </fieldRef>
+                 <fieldRef fieldRefId="lob"/>
+                 <fieldRef fieldRefId="effective_date">
+                        <content localeId="1" title="Effective" styleClass="hidden-xs hidden-sm hidden-md"/>
+                        <content localeId="3" title="Efectivo" styleClass="hidden-xs hidden-sm hidden-md"/>
+                 </fieldRef>
+                 <fieldRef fieldRefId="last_update_time">
+                        <content localeId="1" title="Duration (Days)"/>
+                        <content localeId="3" title="Duración (Días)"/>
+                 </fieldRef>
+
+			</listView>
+		</view>
+	</views>
+</workListViewDefinition>

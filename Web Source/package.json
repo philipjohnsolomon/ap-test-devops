@@ -1,0 +1,12 @@
+{
+  "name": "agencyportal-web",
+  "version": "5.0.0",
+  "description": "Javascript and CSS resources for the AgencyPortal SDK",
+  "dependencies": {
+    "grunt-cli": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-bless": "latest"
+  }
+}

@@ -1,0 +1,78 @@
+<fields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/pdf/pdfDefinitions.xsd">
+	<field type="checkbox">
+		<eLabel>CommercialPolicy_Attachment_AdditionalInterestScheduleIndicator_A</eLabel>
+		<xpath>FileAttachmentInfo[AttachmentTypeCd='SCHDAI'].AttachmentTypeCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CommercialPolicy_Attachment_AdditionalPremisesScheduleIndicator_A</eLabel>
+		<xpath>FileAttachmentInfo[AttachmentTypeCd='SCHDPREM'].AttachmentTypeCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CommercialPolicy_Attachment_ApartmentBuildingSupplementIndicator_A</eLabel>
+		<xpath>FileAttachmentInfo[AttachmentTypeCd='APTBLDG'].AttachmentTypeCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CommercialPolicy_Attachment_CondominiumAssociationByLawsIndicator_A</eLabel>
+		<xpath>FileAttachmentInfo[AttachmentTypeCd='CONDOASSC'].AttachmentTypeCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CommercialPolicy_Attachment_ContractorsSupplementIndicator_A</eLabel>
+		<xpath>FileAttachmentInfo[AttachmentTypeCd='CQ'].AttachmentTypeCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CommercialPolicy_Attachment_CoveragesScheduleIndicator_A</eLabel>
+		<xpath>FileAttachmentInfo[AttachmentTypeCd='SCHDCOV'].AttachmentTypeCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Policy_SectionAttached_DriverInformationScheduleIndicator_A</eLabel>
+		<xpath>FileAttachmentInfo[AttachmentTypeCd='SCHDDRV'].AttachmentTypeCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CommercialPolicy_Attachment_InternationalLiabilityExposureSupplementIndicator_A</eLabel>
+		<xpath>FileAttachmentInfo[AttachmentTypeCd='INTLIAB'].AttachmentTypeCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CommercialPolicy_Attachment_InternationalPropertyExposureSupplementIndicator_A</eLabel>
+		<xpath>FileAttachmentInfo[AttachmentTypeCd='INTLPROP'].AttachmentTypeCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CommercialPolicy_Attachment_LossSummaryIndicator_A</eLabel>
+		<xpath>FileAttachmentInfo[AttachmentTypeCd='LHI'].AttachmentTypeCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CommercialPolicy_Attachment_PremiumPaymentSupplementIndicator_A</eLabel>
+		<xpath>FileAttachmentInfo[AttachmentTypeCd='PREMPAY'].AttachmentTypeCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CommercialPolicy_Attachment_ProfessionalLiabilitySupplementIndicator_A</eLabel>
+		<xpath>FileAttachmentInfo[AttachmentTypeCd='PROFLIAB'].AttachmentTypeCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CommercialPolicy_Attachment_RestaurantTavernSupplementIndicator_A</eLabel>
+		<xpath>FileAttachmentInfo[AttachmentTypeCd='RESTTAV'].AttachmentTypeCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CommercialPolicy_Attachment_StatementOfValuesIndicator_A</eLabel>
+		<xpath>FileAttachmentInfo[AttachmentTypeCd='SOV'].AttachmentTypeCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CommercialPolicy_Attachment_StateSupplementIndicator_A</eLabel>
+		<xpath>FileAttachmentInfo[AttachmentTypeCd='STATESUPP'].AttachmentTypeCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CommercialPolicy_Attachment_VacantBuildingSupplementIndicator_A</eLabel>
+		<xpath>FileAttachmentInfo[AttachmentTypeCd='VACBLDG'].AttachmentTypeCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Policy_SectionAttached_VehicleScheduleIndicator_A</eLabel>
+		<xpath>FileAttachmentInfo[AttachmentTypeCd='SCHDVEH'].AttachmentTypeCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>CommercialPolicy_Attachment_OtherIndicator_A</eLabel>
+		<xpath>FileAttachmentInfo[AttachmentTypeCd='OT'].AttachmentTypeCd</xpath>
+	</field>
+	<field>
+		<eLabel>CommercialPolicy_Attachment_OtherDescription_A</eLabel>
+		<xpath>FileAttachmentInfo[AttachmentTypeCd='OT'].AttachmentTypeCd</xpath>
+	</field>
+</fields>

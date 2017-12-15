@@ -1,0 +1,151 @@
+<transactionDefinitionBehavior xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/behavior/transactionDefinitionBehavior.xsd">
+	<!--  The following delimiter applies to the <for> elements for separating page entities -->
+	<delimiter>/</delimiter>
+		
+	<hotField key="*/questionnaire/questionnaire/genrl34"/>
+	<hotField key="*/questionnaire/questionnaire/genrl35"/>
+	<hotField key="*/questionnaire/questionnaire/genrl47"/>
+	<hotField key="*/questionnaire/questionnaire/genrl41"/>
+	<hotField key="*/questionnaire/questionnaire/genrl22"/>
+	<hotField key="*/questionnaire/questionnaire/genrl06"/>
+	<hotField key="*/questionnaire/questionnaire/genrl07"/>
+	<hotField key="*/questionnaire/questionnaire/genrl61"/>
+	<hotField key="*/questionnaire/questionnaire/genrl09"/>
+	<hotField key="*/questionnaire/questionnaire/genrl25"/>
+	<hotField key="*/questionnaire/questionnaire/genrl63"/>
+	<hotField key="*/questionnaire/questionnaire/genrl40"/>
+	<hotField key="*/questionnaire/questionnaire/genrl52"/>
+	<hotField key="*/questionnaire/questionnaire/genrl64"/>
+	
+	<behavior title="Exclude all dependent fields and field sets" >
+		<do action="exclude" />
+		<for>*/*/.DependentQuestion</for>
+		<for>*/*/*/.DependentQuestion</for>
+	</behavior>
+
+	<behavior title="Include explanation for question genrl34 if answered YES">
+		<description>Is the applicant a subsidiary of another entity?</description>
+		<do action="include" />
+		<where>
+			<preCondition name="genrl34">YES</preCondition>
+		</where>
+		<for>*/questionnaire/questionnaire/genrl34Exp</for>
+	</behavior>
+	
+	<behavior title="Include explanation for question genrl35 if answered YES">
+		<description>Does the applicant have any subsidiaries?</description>
+		<do action="include" />
+		<where>
+			<preCondition name="genrl35">YES</preCondition>
+		</where>
+		<for>*/questionnaire/questionnaire/genrl35Exp</for>
+	</behavior>
+	
+	<behavior title="Include explanation for question genrl47 if answered YES">
+	
+		<do action="include" />
+		<where>
+			<preCondition name="genrl47">YES</preCondition>
+		</where>
+		<for>*/questionnaire/questionnaire/genrl47Exp</for>
+	</behavior>
+	
+	<behavior title="Include explanation for question genrl41 if answered YES">
+
+		<do action="include" />
+		<where>
+			<preCondition name="genrl41">YES</preCondition>
+		</where>
+		<for>*/questionnaire/questionnaire/genrl41Exp</for>
+	</behavior>
+	
+	<behavior title="Include explanation for question genrl22 if answered YES">
+		
+		<do action="include" />
+		<where>
+			<preCondition name="genrl22">YES</preCondition>
+		</where>
+		<for>*/questionnaire/questionnaire/genrl22Exp</for>
+	</behavior>
+	
+	<behavior title="Include explanation for question genrl06 if answered YES">
+	
+		<do action="include" />
+		<where>
+			<preCondition name="genrl06">YES</preCondition>
+		</where>
+		<for>*/questionnaire/questionnaire/genrl06Exp</for>
+	</behavior>
+	
+	<behavior title="Include explanation for question genrl07 if answered YES">
+	
+		<do action="include" />
+		<where>
+			<preCondition name="genrl07">YES</preCondition>
+		</where>
+		<for>*/questionnaire/questionnaire/genrl07Exp</for>
+	</behavior>
+	
+	<behavior title="Include explanation for question genrl61 if answered YES">
+		
+		<do action="include" />
+		<where>
+			<preCondition name="genrl61">YES</preCondition>
+		</where>
+		<for>*/questionnaire/questionnaire/genrl61Exp</for>
+	</behavior>
+	
+	<behavior title="Include explanation for question genrl09 if answered YES">
+		
+		<do action="include" />
+		<where>
+			<preCondition name="genrl09">YES</preCondition>
+		</where>
+		<for>*/questionnaire/questionnaire/genrl09Exp</for>
+	</behavior>
+	
+	<behavior title="Include explanation for question genrl25 if answered YES">
+	
+		<do action="include" />
+		<where>
+			<preCondition name="genrl25">YES</preCondition>
+		</where>
+		<for>*/questionnaire/questionnaire/genrl25Exp</for>
+	</behavior>
+	
+	<behavior title="Include explanation for question genrl63 if answered YES">
+		
+		<do action="include" />
+		<where>
+			<preCondition name="genrl63">YES</preCondition>
+		</where>
+		<for>*/questionnaire/questionnaire/genrl63Exp</for>
+	</behavior>
+	
+	<behavior title="Include explanation for question genrl40 if answered YES">
+		
+		<do action="include" />
+		<where>
+			<preCondition name="genrl40">YES</preCondition>
+		</where>
+		<for>*/questionnaire/questionnaire/genrl40Exp</for>
+	</behavior>
+	
+	<behavior title="Include explanation for question genrl52 if answered YES">
+		<do action="include" />
+		<where>
+			<preCondition name="genrl52">YES</preCondition>
+		</where>
+		<for>*/questionnaire/questionnaire/genrl52Exp</for>
+	</behavior>
+	
+	<behavior title="Include explanation for question genrl64 if answered YES">
+		<do action="include" />
+		<where>
+			<preCondition name="genrl64">YES</preCondition>
+		</where>
+		<for>*/questionnaire/questionnaire/genrl64Exp</for>
+	</behavior>
+	
+										
+</transactionDefinitionBehavior>

@@ -1,0 +1,116 @@
+<views xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/codelist/view.xsd" >
+	
+	<view id="Display.Roster.PremisesNames" title="Premises" type="standard" deleteMode="onEmptyValue">
+		<fieldSet>
+			<field type="id">Location.SubLocation.SubLocationDesc</field>
+			<field type="formatInfo"> - </field>
+			<field type="id">Location.Addr.Addr1</field>
+			<field type="singleSpace"> </field>
+			<field type="id">Location.Addr.City</field>
+			<field type="formatInfo">, </field>
+			<field type="id">Location.Addr.StateProvCd</field>
+			<field type="singleSpace"> </field>
+			<field type="id">Location.Addr.PostalCode</field>
+		</fieldSet>
+	</view>
+	
+	<view id="CurrencyFormatView" title="Currency Format" type="standard"  displayFormat="CURRENCY_DISPLAY" storageFormat="CURRENCY_STORAGE">
+		<viewClassName>com.agencyport.shared.custom.NumberFormatView</viewClassName>
+	</view>
+	
+	<view id="DateFormatter" title="Date Format" type="standard" deleteMode="onEmptyValue">
+		<viewClassName>com.agencyport.domXML.view.DateFormatView</viewClassName>
+	</view>
+
+	<view id="TimeFormatter" title="Time Format" type="standard" deleteMode="onEmptyValue">
+		<viewClassName>com.agencyport.domXML.view.TimeFormatView</viewClassName>
+	</view>
+	
+	<!-- The following product builtin view was enhanced as of build 3.7.0.00027 to use the TDF field element id instead
+	of having to configure the field id in the view file itself -->
+	<view id="GenericAggregateExistsBooleanView" title="Generic Aggregate Exists Boolean View" type="standard" >
+		<viewClassName>com.agencyport.domXML.view.AggregateExistsBooleanView</viewClassName>
+	</view>
+
+	<!-- The following product builtin view was enhanced as of build 3.7.0.00027 to use the TDF field element id instead
+	of having to configure the field id in the view file itself -->
+	<view id="GenericAggregateExistsBooleanYesNoView" title="Generic Aggregate Exists Boolean Yes No View" type="standard" 
+			trueReturnValue="YES" falseReturnValue="NO" >
+		<viewClassName>com.agencyport.domXML.view.AggregateExistsBooleanView</viewClassName>
+	</view>	
+    
+    <!-- The following product builtin view was enhanced as of build 3.7.0.00027 to use the TDF field element id instead
+    of having to configure the field id in the view file itself -->
+    <view id="GenericAggregateExistsBooleanYNView" title="Generic Aggregate Exists Boolean Yes No View" type="standard" 
+            trueReturnValue="Y" falseReturnValue="N" >
+        <viewClassName>com.agencyport.domXML.view.AggregateExistsBooleanView</viewClassName>
+    </view> 
+
+	<!--  The following view reverses the sense of the YES/NO selections,
+		with YES indicating the corresponding aggregate path DOES NOT exist -->
+	<view id="GenericAggregateDoesNotExistBooleanYesNoView" title="Generic Aggregate Does Not Exist Boolean Yes No View" type="standard" 
+			trueReturnValue="NO" falseReturnValue="YES" >
+		<viewClassName>com.agencyport.domXML.view.AggregateExistsBooleanView</viewClassName>
+	</view>	
+
+	<view id="Display.Roster.Location" title="Location" type="standard" deleteMode="onEmptyValue">
+		<fieldSet>
+			<field type="id">Location.Addr.Addr1</field>
+			<field type="singleSpace"> </field>
+			<field type="id">Location.Addr.Addr2</field>
+			<field type="singleSpace"> </field>
+			<field type="id">Location.Addr.City</field>
+			<field type="formatInfo">, </field>
+			<field type="id">Location.Addr.StateProvCd</field>
+			<field type="singleSpace"> </field>
+			<field type="id">Location.Addr.PostalCode</field>
+		</fieldSet>
+	</view>
+	<view id="Display.Roster.AILocation" title="Location" type="standard" deleteMode="onEmptyValue">
+		<fieldSet>
+			<field type="id">PersPolicy.AdditionalInterest.GeneralPartyInfo.Addr.Addr1</field>
+			<field type="singleSpace"> </field>
+			<field type="id">PersPolicy.AdditionalInterest.GeneralPartyInfo.Addr.Addr2</field>
+			<field type="singleSpace"> </field>
+			<field type="id">PersPolicy.AdditionalInterest.GeneralPartyInfo.Addr.City</field>
+			<field type="formatInfo">, </field>
+			<field type="id">PersPolicy.AdditionalInterest.GeneralPartyInfo.Addr.StateProvCd</field>
+			<field type="singleSpace"> </field>
+			<field type="id">PersPolicy.AdditionalInterest.GeneralPartyInfo.Addr.PostalCode</field>
+		</fieldSet>
+	</view>
+	<view id="PersonalLineConcatenateEntityName" title="Entity Name" type="standard">
+		<fieldSet>
+			<field type="id">InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo.PersonName.GivenName</field>
+			<field type="formatInfo"> </field>
+			<field type="id">InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Insured'].GeneralPartyInfo.NameInfo.PersonName.Surname</field>
+		</fieldSet>
+	</view>
+	
+  	<view id="Display.Audit.Info" title="Audit Info" type="standard" deleteMode="onEmptyValue">
+		<fieldSet searchId="/">
+			<field type="id">CommlPolicy.CommlPolicySupplement.AuditInd</field> 
+		  	<field type="formatInfo">/</field> 
+		  	<field type="id">CommlPolicy.CommlPolicySupplement.AuditFrequencyCd</field> 
+	  	</fieldSet>
+  	</view>	
+  
+  	<view id="PersonalLineConcatenateCoApplicant" type="standard">
+			<fieldSet>
+				<field type="id">InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Coinsured'].GeneralPartyInfo.NameInfo.PersonName.GivenName</field>
+				<field type="formatInfo"> </field>
+				<field type="id">InsuredOrPrincipal[InsuredOrPrincipalInfo.InsuredOrPrincipalRoleCd='Coinsured'].GeneralPartyInfo.NameInfo.PersonName.Surname</field>
+			</fieldSet>
+	</view>
+
+	<view id="MiscPartyEntityName" title="Entity Name" type="standard">
+		<fieldSet>
+			<field type="id">CommlPolicy.MiscParty.GeneralPartyInfo.NameInfo.PersonName.Surname</field>
+			<field type="formatInfo">, </field>
+			<field type="id">CommlPolicy.MiscParty.GeneralPartyInfo.NameInfo.PersonName.GivenName</field>
+		</fieldSet>
+	</view>
+
+	
+</views>

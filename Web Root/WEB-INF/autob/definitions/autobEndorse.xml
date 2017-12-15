@@ -1,0 +1,58 @@
+<transaction 
+	title						="Commercial Auto Endorsement" 
+	id							="autobEndorse" 
+	target						="CommlAutoPolicyModRq" 
+	lob							="AUTOB" 
+	allowEmptyNode				="false" 
+	enableAllMenuEntries		="true" 
+	autoMaintainIdAttributes	="true" 
+	type						="endorsement" 
+	summaryPageId				="policyChangeSummary"
+	supportsDefaults			="false" 
+	mappingId					="autob"
+	workItemAssistantId			="workitemassistant"
+	xmlns:xsi					="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/definition/transactionDefinitionFile.xsd">
+	<description>Multi state Endorsement transaction for Commercial Auto Line of Business</description>
+	
+		<!-- General Information -->
+	<importPage id="AUTOB.generalInfo" 	fileName="autobCommons.xml"/>
+		
+	<!--  Location Roster -->
+	<importPage id="AUTOB.AUTOBGarageLocation" 	fileName="autobCommons.xml"/>
+	
+	<!-- Vehicles Page Roster -->
+	<importPage id="AUTOB.vehicle" 				fileName="autobCommons.xml"/>
+	
+	<!--  Policy Coverages Roster -->
+	<importPage id="AUTOB.policyCoverages" 	fileName="autobCommons.xml"/>
+
+	<!-- Premium Modification Roster -->
+	<importPage id="AUTOB.AUTOBpremiumModification" fileName="autobCommons.xml"/>
+	
+	<!-- General Information -->
+	<importPage id="AUTOB.AUTOBquestionnaire" 	fileName="autobCommons.xml"/>	
+	
+	<!--  Driver Roster -->
+	<importPage id="AUTOB.drivers" 				fileName="autobCommons.xml"/>
+	
+	<!-- General Questionnaire -->
+	<importPage id="125Commons.questionnaire" 	fileName="125Commons.xml"/>
+	
+	<!-- Additional Interests -->
+	<importPage id="AUTOB.additionalInterests" 	fileName="autobCommons.xml"/>		
+
+	<!-- Prior Carrier-->
+	<importPage id="CommlCommons.PriorCarrier" 	fileName="CommlCommons.xml"/>
+
+	<!-- Loss History-->
+	<importPage id="CommlCommons.lossHistory" fileName="CommlCommons.xml" />
+	
+	<!-- File Attachment -->
+	<importPage id="AUTOB.fileAttachment" 		fileName="autobCommons.xml"/>
+	
+	<importPage id="125Commons.agentComments" 	fileName="125Commons.xml"/>
+
+	<page id="policyChangeSummary" title="Policy Change Summary" type="page" validateTransactionOnDisplay="true"></page>
+	
+</transaction>

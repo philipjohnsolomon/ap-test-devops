@@ -1,0 +1,29 @@
+<fields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/pdf/pdfDefinitions.xsd">
+	<field>
+		<eLabel>PriorCoverage_PolicyYear</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy.ContractTerm.EffectiveDt</xpath>
+		<format type="date" pattern="yyyy" />
+	</field>
+	<field>
+		<eLabel>PriorCoverage_Automobile_InsurerFullName</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy.InsurerName</xpath>
+	</field>
+	<field>
+		<eLabel>PriorCoverage_Automobile_PolicyNumberIdentifier</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy.PolicyNumber</xpath>
+	</field>
+	<field>
+		<eLabel>PriorCoverage_Automobile_EffectiveDate</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy.ContractTerm.EffectiveDt</xpath>
+	</field>
+	<field>
+		<eLabel>PriorCoverage_Automobile_ExpirationDate</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy.ContractTerm.ExpirationDt
+		</xpath>
+	</field>
+	<field>
+		<eLabel>PriorCoverage_Automobile_TotalPremiumAmount</eLabel>
+		<xpath>CommlPolicy.OtherOrPriorPolicy.PolicyAmt.Amt</xpath>
+	</field>
+</fields>

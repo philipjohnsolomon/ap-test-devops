@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rule_file xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="commlAutoRules" title="Commercial Auto Rules" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/xarcrules/xarcrules.xsd">
+    <rule name="policyCoveragesStateDupe" title="Optional Coverage State Duplication Rule" id="N1">
+        <description id="N2">Stop the user from adding multiple Optional Coverages per State</description>
+        <action id="N3">
+            <message severity="30" showMultiple="false">
+                <text id="N5">There is already an Optional Coverage for the State to be added. Please edit the existing Optional Coverage for that State.</text>
+            </message>
+        </action>
+        <step id="N6">
+            <selectNodes xpath="CommlAutoLineBusiness.CommlRateState" id="N7">
+                <variables id="N14">
+                    <variable name="state" order="0" id="N15">
+                        <xpath id="N16">CommlAutoLineBusiness.CommlRateState.StateProvCd</xpath>
+                    </variable>
+                    <variable name="aggregateToCheck" order="1">
+                        <constant>CommlAutoLineBusiness.CommlRateState[StateProvCd='${state}'].CommlAutoOptionalCoverages</constant>
+                    </variable>
+                </variables>
+                <where order="0">
+                    <javaclass>com.agencyport.autob.custom.OptionalCoveragesRuleValidation</javaclass>
+                </where>
+            </selectNodes>
+        </step>
+    </rule>
+    <rule name="premMomDupeRule" title="Premium Modification State Duplication Rule">
+        <description>Prevents the user from adding a second premium modification on the state level.</description>
+        <action>
+            <message severity="30" showMultiple="true">
+                <text>There is already a Premium Modification for the State to be added. Please edit the existing Premium Modification for that State.</text>
+            </message>
+        </action>
+        <step>
+            <selectNodes xpath="CommlAutoLineBusiness.CommlRateState">
+                <variables>
+                    <variable name="state" order="0">
+                        <xpath>CommlAutoLineBusiness.CommlRateState.StateProvCd</xpath>
+                    </variable>
+                    <variable name="aggregateToCheck" order="1">
+                        <constant>CommlAutoLineBusiness.CommlRateState[StateProvCd='${state}'].CommlAutoPremiumModification</constant>
+                    </variable>
+                </variables>
+                <where order="0">
+                    <javaclass>com.agencyport.autob.custom.OptionalCoveragesRuleValidation</javaclass>
+                </where>
+            </selectNodes>
+        </step>
+    </rule>
+    <rule name="mutExValuation" title="Mutually Exclusive Valuation Validation">
+        <description>Stops the user from entering mutually exclusive validation</description>
+        <action>
+            <message severity="10" showMultiple="true">
+                <text>Original Cost New and Stated Amount are mutually exclusive. Please enter values in only one field.</text>
+            </message>
+        </action>
+        <step>
+            <selectNodes>
+                <variables>
+                    <variable name="originalCost" order="0">
+                        <field pageElementKey="commlAuto/vehicle/vehicleCoverages" pageKey="commlAuto/vehicle" fieldKey="*/vehicle/vehicleCoverages/pdcOriginalCostNew">CommlAutoLineBusiness.CommlRateState.CommlVeh.CostNewAmt.Amt</field>
+                    </variable>
+                    <variable name="statedAmount" order="1">
+                        <field pageElementKey="commlAuto/vehicle/vehicleCoverages" pageKey="commlAuto/vehicle" fieldKey="*/vehicle/vehicleCoverages/statedAmount">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='COLL'].Limit[ValuationCd='StatedAmt'].FormatInteger</field>
+                    </variable>
+                </variables>
+                <where order="0">
+                    <operator>
+                        <operand>
+                            <variableReference>originalCost</variableReference>
+                        </operand>
+                    </operator>
+                </where>
+                <where order="1">
+                    <operator>
+                        <operand>
+                            <variableReference>statedAmount</variableReference>
+                        </operand>
+                    </operator>
+                </where>
+            </selectNodes>
+        </step>
+    </rule>
+    <rule name="OBELLimitRequired" title="OBEL Limit is Required">
+        <description>Requires the user add Policy Coverages for State when OBEL = YES</description>
+        <action>
+            <message severity="30" showMultiple="true">
+                <text>OBEL Limits are required for the state of NY, since at least one vehicle has requested OBEL. Please visit the State Coverage for New York to obtain the OBEL limit or add a new Policy Coverage for New York, if you have not done so already.</text>
+            </message>
+        </action>
+        <step>
+            <selectNodes xpath="CommlAutoLineBusiness.CommlRateState">
+                <where>
+                    <operator>
+                        <operand fieldType="field">
+                            <field fieldKey="*/vehicle/stateCoverages/OBEL">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='OBEL']</field>
+                        </operand>
+                    </operator>
+                </where>
+                <where negate="true">
+                    <operator>
+                        <operand fieldType="field">
+                            <field fieldKey="*/policyCoverages/supplementalCoverages/obelCoverageLimit">CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='OBEL'].Limit.FormatInteger</field>
+                        </operand>
+                    </operator>
+                </where>
+            </selectNodes>
+        </step>
+    </rule>
+    <rule name="medicalNoFaultMutex" title="medicalNoFaultMutex">
+        <description>Medical Payments and No Fault Coverages are mutually exclusive.</description>
+        <action>
+            <message severity="30" showMultiple="true">
+                <text>Med Payments do not apply to autos subject to No Fault Coverages.  Please select either Medical Payments Coverage or No Fault Coverage.</text>
+            </message>
+        </action>
+        <step>
+            <selectNodes>
+                <variables>
+                    <variable name="medicalPaymentsLimit" order="0">
+                        <field fieldKey="*/vehicle/stateCoverages/medicalPaymentsLimit" pageElementKey="commlAuto/vehicle/stateCoverages" pageKey="commlAuto/vehicle">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='MEDPM'].Limit.FormatInteger</field>
+                    </variable>
+                    <variable name="pipCoverage" order="1">
+                        <field fieldKey="*/vehicle/stateCoverages/pipCoverageLimit" pageKey="commlAuto/vehicle" pageElementKey="commlAuto/vehicle/stateCoverages">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP']</field>
+                    </variable>
+                </variables>
+                <where order="0">
+                    <operator>
+                        <operand>
+                            <variableReference>medicalPaymentsLimit</variableReference>
+                        </operand>
+                    </operator>
+                </where>
+                <where order="1">
+                    <operator>
+                        <operand>
+                            <variableReference>pipCoverage</variableReference>
+                        </operand>
+                    </operator>
+                </where>
+            </selectNodes>
+        </step>
+    </rule>
+    <rule name="additionalAndCombinationFirstPartyBenefitsMutex" title="Additional and Combination First Party Benefits Are Mutually Exclusive">
+        <description>Additional and Combination First Party Benefits Are Mutually Exclusive.</description>
+        <action>
+            <message severity="30" showMultiple="true">
+                <text>Additional First Party Benefits and Combination First Party Benefits cannot both be selected.  Please select either Additional First Party Benefits or Combination First Party Benefits.</text>
+            </message>
+        </action>
+        <step>
+            <selectNodes>
+                <variables>
+                    <variable name="additionalFirstPartyBenefits" order="0">
+                        <field fieldKey="*/vehicle/stateCoverages/additionalFirstPartyBenefits" pageElementKey="commlAuto/vehicle/additionalFirstPartyBenefits" pageKey="commlAuto/vehicle">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='WLB'].Limit[LimitAppliesToCd='Monthly'].FormatInteger</field>
+                    </variable>
+                    <variable name="combinationFirstPartyBenefits" order="1">
+                        <field fieldKey="*/vehicle/stateCoverages/combinationFirstPartyBenefits" pageElementKey="commlAuto/vehicle/stateCoverages" pageKey="commlAuto/vehicle">CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='CFPB'].Limit.FormatInteger</field>
+                    </variable>
+                </variables>
+                <where order="0">
+                    <operator>
+                        <operand>
+                            <variableReference>additionalFirstPartyBenefits</variableReference>
+                        </operand>
+                    </operator>
+                </where>
+                <where order="1">
+                    <operator>
+                        <operand>
+                            <variableReference>combinationFirstPartyBenefits</variableReference>
+                        </operand>
+                    </operator>
+                </where>
+            </selectNodes>
+        </step>
+    </rule>
+    <rule title="Electonic Device Indicator Rule" name="rule_6">
+        <action>
+            <message severity="30">
+                <text>At Least one Electronic Monitoring Device Should be Selected</text>
+            </message>
+        </action>
+        <step>
+            <selectNodes>
+                <where>
+                    <operator type="=">
+                        <operand fieldType="field">
+                            <field fieldKey="*/AUTOBquestionnaire/AUTOBemdQuestions/ElectronicMonitoringInd">CommlAutoLineBusiness.CommlAutoPolicyInfo.ElectronicMonitoringInfo.ElectronicMonitoringInd</field>
+                        </operand>
+                        <operand fieldType="constant">
+                            <constant>YES</constant>
+                        </operand>
+                    </operator>
+                </where>
+                <where id="N123" negate="true">
+                    <operator id="N124" type="=">
+                        <operand id="N125" fieldType="field">
+                            <field id="N126" fieldKey="*/AUTOBquestionnaire/AUTOBemdQuestions/MonitorDriverSafetyInd">CommlAutoLineBusiness.CommlAutoPolicyInfo.ElectronicMonitoringInfo.MonitorDriverSafetyInd</field>
+                        </operand>
+                        <operand fieldType="constant">
+                            <constant>YES</constant>
+                        </operand>
+                    </operator>
+                </where>
+                <where id="N127" negate="true">
+                    <operator id="N128" type="=">
+                        <operand id="N129" fieldType="field">
+                            <field id="N130" fieldKey="*/AUTOBquestionnaire/AUTOBemdQuestions/NavigationInd">CommlAutoLineBusiness.CommlAutoPolicyInfo.ElectronicMonitoringInfo.NavigationInd</field>
+                        </operand>
+                        <operand fieldType="constant">
+                            <constant>YES</constant>
+                        </operand>
+                    </operator>
+                </where>
+                <where id="N131" negate="true">
+                    <operator id="N132" type="=">
+                        <operand id="N133" fieldType="field">
+                            <field id="N134" fieldKey="*/AUTOBquestionnaire/AUTOBemdQuestions/FuelConsumptionTrackingInd">CommlAutoLineBusiness.CommlAutoPolicyInfo.ElectronicMonitoringInfo.FuelConsumptionTrackingInd</field>
+                        </operand>
+                        <operand fieldType="constant">
+                            <constant>YES</constant>
+                        </operand>
+                    </operator>
+                </where>
+                <where id="N135" negate="true">
+                    <operator id="N136" type="=">
+                        <operand id="N137" fieldType="field">
+                            <field id="N138" fieldKey="*/AUTOBquestionnaire/AUTOBemdQuestions/MonitorVehicleMaintenanceInd">CommlAutoLineBusiness.CommlAutoPolicyInfo.ElectronicMonitoringInfo.MonitorVehicleMaintenanceInd</field>
+                        </operand>
+                        <operand fieldType="constant">
+                            <constant>YES</constant>
+                        </operand>
+                    </operator>
+                </where>
+                <where id="N139" negate="true">
+                    <operator id="N140" type="=">
+                        <operand id="N141" fieldType="field">
+                            <field id="N142" fieldKey="*/AUTOBquestionnaire/AUTOBemdQuestions/MileageTrackingInd">CommlAutoLineBusiness.CommlAutoPolicyInfo.ElectronicMonitoringInfo.MileageTrackingInd</field>
+                        </operand>
+                        <operand fieldType="constant">
+                            <constant>YES</constant>
+                        </operand>
+                    </operator>
+                </where>
+                <where id="N143" negate="true">
+                    <operator id="N144" type="=">
+                        <operand id="N145" fieldType="field">
+                            <field id="N146" fieldKey="*/AUTOBquestionnaire/AUTOBemdQuestions/LocationTrackingInd">CommlAutoLineBusiness.CommlAutoPolicyInfo.ElectronicMonitoringInfo.LocationTrackingInd</field>
+                        </operand>
+                        <operand fieldType="constant">
+                            <constant>YES</constant>
+                        </operand>
+                    </operator>
+                </where>
+            </selectNodes>
+        </step>
+    </rule>
+</rule_file>
+

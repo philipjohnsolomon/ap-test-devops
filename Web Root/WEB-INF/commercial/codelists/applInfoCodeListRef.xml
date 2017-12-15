@@ -1,0 +1,151 @@
+<codeListRef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/codelist/codelist.xsd">
+	<!-- applInfoCodeListRef.xml -->
+	<optionList id="legalEntity">
+        <option value="AS">Association</option>
+        <option value="B">Business</option>
+        <option value="CA">Condo Association</option>
+        <option value="CC">City Commission</option>
+        <option value="CCORP">C Corporation</option>
+        <option value="CD">City Department</option>
+        <option value="CE">Co-Employer</option>
+        <option value="CH">Church</option>
+        <option value="CM">Corporations(Multiple)</option>
+        <option value="CN">Corporation Non-profit Organization</option>
+        <option value="CO">Common Ownership</option>
+        <option value="CP">Corporation</option>
+        <option value="CW">Condo Owners</option>
+        <option value="CY">County</option>
+        <option value="ES">Estate of</option>
+        <option value="FR">Fraternity</option>
+        <option value="GA">Government Agency</option>
+        <option value="GE">Government Entity</option>
+        <option value="GP">General Partnership </option>
+        <option value="HO">Hospital</option>
+        <option value="IN">Individual</option>
+        <option value="IP">Indian Pueblo</option>
+        <option value="IS">Individuals (more than one) </option>
+        <option value="IT">Indian Tribe</option>
+        <option value="JV">Joint Venture</option>
+        <option value="LC">Limited Corporation</option>
+        <option value="LL">Limited Liability Company</option>
+        <option value="LP">Limited Partnership</option>
+        <option value="LU">Labor Union</option>
+        <option value="MS">Multiple Status</option>
+        <option value="MU">Municipality</option>
+        <option value="NP">Not for Profit Organization</option>
+        <option value="OT">Other</option>
+        <option value="PR">Proprietorship</option>
+        <option value="PS">Political Subdivision</option>
+        <option value="PT">Partnership</option>
+        <option value="Retail">Retail</option>
+        <option value="SB">School Board</option>
+        <option value="SC">School</option>
+        <option value="SCORP">S Corporation</option>
+        <option value="SO">Sorority</option>
+        <option value="SolePrp">Sole Proprietor</option>
+        <option value="SS">Subchapter S Corporation</option>
+        <option value="TN">Township</option>
+        <option value="TR">Trust</option>
+        <option value="UA">Unincorporated Association</option>
+	</optionList>
+
+    <optionList id="billingPlan">
+        <option value="AB">Agency Bill</option>
+        <option value="CAB">Company Account Billed</option>
+        <option value="CPB">Company Policy Billed</option>        
+    </optionList>
+
+	<optionList id="risklocation">
+		<option value="IN">Inside City Limits</option>
+		<option value="OUT">Outside City Limits</option>
+		<option value="OT">Other</option>
+	</optionList>
+
+	<optionList id="interestType">
+		<option value="LESSEE">Lessee</option>
+        <option value="OWNER">Owner</option>
+        <option value="TENANT">Tenant</option>
+	</optionList>
+
+	<optionList id="sections">
+		<option value="P">Property</option>
+		<option value="A">Accounts Receivable/Valuable Papers</option>
+		<option value="G">Glass and Sign</option>
+		<option value="C">Crime/Miscellaneous Crime</option>
+		<option value="T">Transportation/Motor Truck Cargo</option>
+		<option value="E">Equipment Floater</option>
+		<option value="I">Installation/Builders Risk</option>
+		<option value="EDP">Electronic Data Processing</option>
+		<option value="CGL">Commercial General Liability</option>
+		<option value="B">Business Auto</option>
+		<option value="TR">Truckers/Motor Carrier</option>
+		<option value="GAR">Garage and Dealers</option>
+		<option value="V">Vehicle Schedule</option>
+		<option value="BM">Boiler and Machinery</option>
+		<option value="U">Umbrella</option>
+				
+	</optionList>
+
+	<optionList id="documentType">
+       
+        <option value="ARP">Agings of Receivables/Payables</option>
+		<option value="COI">Certificate of Insurance</option>
+		<option value="BCL">Bank Credit Line Agreement</option>
+		<option value="BFA">Burglar/Fire Alarm Certificate</option>
+		<option value="BLT">Bank Letter</option>
+		<option value="BOS">Bill of Sale</option>
+		<option value="ClaimsDetail">Claims detail for a specific date</option>
+		<option value="ClaimsPayDetail">Claims payment information for a specific date</option>
+		<option value="ClaimsPayHistory">Claims payment information from an evaluation period</option>
+		<option value="CONTR">Contract</option>
+		<option value="COR">Correspondence</option>
+		<option value="CQ">Contractor Questionnaire</option>
+		<option value="CRR">Credit Reports (D&amp;B, etc</option>
+		<option value="CSA">Consignment Agreement</option>
+		<option value="CTA">Continuity Agreement(s)</option>
+		<option value="EXP">Expiring Policy</option>
+		<option value="FS">Financial Statement</option>
+		<option value="FSA">Financial Statement Analysis</option>
+		<option value="INS">Inspection Report</option>
+		<option value="INV">Inventories</option>
+		<option value="ITR">Income Tax Return</option>
+		<option value="LAR">Latest Annual Report</option>
+		<option value="LHI">Loss History</option>
+		<option value="OT">Other</option>
+		<option value="PDC">Protection Device Certificate</option>
+		<option value="PDS">Product Survey</option>
+		<option value="PHO">Photograph</option>
+		<option value="PIF">Pre-Inspection Form</option>
+		<option value="PJS">Project/Job Specifications</option>
+		<option value="PPH">Prior Policy History</option>
+		<option value="QuoteProposal">Quote Proposal</option>
+		<option value="RCW">Replacement Cost Worksheets</option>
+		<option value="RTA">Rental Agreement</option>
+		<option value="SAF">Safe Credit Certificate</option>
+		<option value="SSL">Sub S Letter</option>
+		<option value="SUP">State Supplement</option>
+		<option value="SUR">Survey</option>
+		<option value="TRUST">Copy of Trust</option>
+		<option value="URQ">Unprotected Risk Questionnaire</option>
+		
+    </optionList>
+
+	<optionList id="audit">
+		<option value="0/NV">No Audit</option>
+		<option value="1/AN">Annual</option>
+		<option value="1/SA">Semi-Annual</option>
+		<option value="1/QT">Quarterly</option>
+		<option value="1/MO">Monthly</option>
+		<option value="1/OT">Other</option>
+	</optionList>
+
+	<optionList id="yesNo">
+		<option value="YES">Yes</option>
+		<option value="NO">No</option>
+	</optionList>
+	<optionList id="yesNo_WithoutLabels">
+    	<option value="YES" />
+    	<option value="NO" />
+  	</optionList>
+</codeListRef>

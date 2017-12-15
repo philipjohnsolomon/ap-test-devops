@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformers  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/transformer/transformer.xsd" >
+	<transformer name="builtin-id-attribution-addition" type="aggregator" targetFormat="ANY" lob="shared">
+		<step name="Id Attribute Addition Transform" type="java"  className="com.agencyport.domXML.transform.builtin.IdAttributionTransformer" />
+	</transformer>
+	<transformer name="builtin-empty-aggregate-removal" type="aggregator" targetFormat="ANY" lob="shared">
+		<step name="Empty Aggregate Removal" type="java"  className="com.agencyport.domXML.transform.builtin.EmptyAggregateRemovalTransformer" />
+	</transformer>
+	<transformer name="builtin-standardizations" type="aggregator" targetFormat="ACORDStandard" lob="shared">
+		<step name="Decrypt all Elements" type="java"  className="com.agencyport.domXML.transform.builtin.ElementDecryptorTransformer" />
+		<step name="Standard Attribute Removal" type="java"  className="com.agencyport.domXML.transform.builtin.StandardAttributeRemovalTransformer" />
+		<step name="ModInfo Element Standardization" type="java"  className="com.agencyport.domXML.transform.builtin.ModInfoStandardizer" />
+		<step name="Empty Aggregate Removal" type="link" linkedTo="builtin-empty-aggregate-removal" />
+	</transformer>
+</transformers>

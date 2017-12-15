@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="PREMISES" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/definition/transactionDefinitionFile.xsd">
+  <page id="premisesInformation" title="Computer Equipment - Premises Information" type="roster" source="CommlInlandMarineLineBusiness.CommlIMInfo">
+    <pageElement legend="Premises Information" type="roster" maxEntries="5">
+      <fieldElement id="SP.LocationAA" label="Location" type="column" maxLength="20" />
+      <fieldElement id="SP.Buildings" label="Building" type="column" maxLength="20" />
+      <action type="edit" />
+      <action type="delete" />
+    </pageElement>
+    <pageElement legend="Premises Information" type="fieldset">
+      <fieldElement id="SP.Premises1" label="Location" type="selectlist">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.Premises2" label="Building" type="selectlist">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+    </pageElement>
+    <pageElement legend="Equipment (Hardware) - Owned" type="fieldset">
+      <fieldElement id="SP.Equipment1" label=" Limit of Insurance" type="text" size="10" maxLength="20" />
+      <fieldElement id="SP.Equipment2" label=" Valuation Type" type="selectlist">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="inmrcCodeListRef.xml" target="valuationType" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.Equipment3" label=" Coinsurance %" type="text" size="10" maxLength="20" />
+      <fieldElement id="SP.Equipment4" label="Deductible" type="selectlist">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="inmrcCodeListRef.xml" target="deductible" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.Equipment5" label="Forms and Conditions to Apply" type="text" size="10" maxLength="20" />
+    </pageElement>
+    <pageElement legend="Equipment (Hardware) - Leased" type="fieldset">
+      <fieldElement id="SP.EquipmentLeased1" label=" Limit of Insurance" type="text" size="10" maxLength="20" />
+      <fieldElement id="SP.EquipmentLeased2" label=" Valuation Type" type="selectlist">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="inmrcCodeListRef.xml" target="valuationTypeLeased" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.EquipmentLeased3 " label=" Coinsurance %" type="text" size="10" maxLength="20" />
+      <fieldElement id="SP.EquipmentLeased4" label="Deductible" type="selectlist">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="inmrcCodeListRef.xml" target="deductible" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.EquipmentLeased5 " label="Forms and Conditions to Apply" type="text" size="10" maxLength="20" />
+    </pageElement>
+    <pageElement legend="Equipment (Hardware) in Transit" type="fieldset">
+      <fieldElement id="SP.EquipmentTransit1" label=" Limit of Insurance" type="text" size="10" maxLength="20" />
+      <fieldElement id="SP.EquipmentTransit2" label=" Valuation Type" type="selectlist">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="inmrcCodeListRef.xml" target="valuationTypeLeased" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.EquipmentTransit3 " label=" Coinsurance %" type="text" size="10" maxLength="20" />
+      <fieldElement id="SP.EquipmentTransit4" label="Deductible" type="selectlist">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="inmrcCodeListRef.xml" target="deductible" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.EquipmentTransit5 " label="Forms and Conditions to Apply" type="text" size="10" maxLength="20" />
+    </pageElement>
+    <pageElement legend="Media/Data (Software)" type="fieldset">
+      <fieldElement id="SP.Media1" label=" Limit of Insurance" type="text" size="10" maxLength="20" />
+      <fieldElement id="SP.Media2" label="Reproduction" type="selectlist">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.Media3" label=" Coinsurance %" type="text" size="10" maxLength="20" />
+      <fieldElement id="SP.Media4" label="Deductible" type="selectlist">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="inmrcCodeListRef.xml" target="deductible" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.Media5" label="Forms and Conditions to Apply" type="text" size="10" maxLength="20" />
+    </pageElement>
+    <pageElement legend="Media/Data (Software) in Transit" type="fieldset">
+      <fieldElement id="SP.MediaTransit1" label=" Limit of Insurance" type="text" size="10" maxLength="20" />
+      <fieldElement id="SP.MediaTransit2" label=" Reproduction" type="selectlist">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id=" SP.MediaTransit3" label=" Coinsurance %" type="text" size="10" maxLength="20" />
+      <fieldElement id="SP.MediaTransit4" label="Deductible" type="selectlist">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="inmrcCodeListRef.xml" target="deductible" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.MediaTransit5 " label="Forms and Conditions to Apply" type="text" size="10" maxLength="20" />
+    </pageElement>
+    <pageElement legend="Extra Expense" type="fieldset">
+      <fieldElement id="SP.ExtraExpense1" label=" Limit of Insurance" type="text" size="10" maxLength="20" />
+      <fieldElement id="SP.ExtraExpense2" label=" Period of Restoration" type="text" size="10" maxLength="20" />
+      <fieldElement id="SP.ExtraExpense3" label=" Coinsurance %" type="text" size="10" maxLength="20" />
+      <fieldElement id="SP.ExtraExpense4" label="Deductible" type="selectlist">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="inmrcCodeListRef.xml" target="deductible" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.ExtraExpense5" label="Forms and Conditions to Apply" type="text" size="10" maxLength="20" />
+    </pageElement>
+    <pageElement legend="Business Interruption" type="fieldset">
+      <fieldElement id="SP.Business1" label=" Limit of Insurance" type="text" size="10" maxLength="20" />
+      <fieldElement id="SP.Business2" label=" Per Day Limit" type="text" size="10" maxLength="20" />
+      <fieldElement id="SP.Business3 " label=" # of Days" type="text" size="10" maxLength="20" />
+      <fieldElement id="SP.Business4 " label=" Coinsurance %" type="text" size="10" maxLength="20" />
+      <fieldElement id="SP.Business5" label="Deductible" type="selectlist">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="inmrcCodeListRef.xml" target="deductible" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.Business6 " label=" Waiting Period (Hours)" type="text" size="10" maxLength="20" />
+      <fieldElement id="SP.Business7 " label="Forms and Conditions to Apply" type="text" size="10" maxLength="20" />
+    </pageElement>
+    <pageElement legend="Mechanical Breakdown" type="fieldset">
+      <fieldElement id="SP.Mechanical1" label=" Mechanical Breakdown Coverage" type="selectlist">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.Mechanical2" label="Deductible" type="selectlist">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="inmrcCodeListRef.xml" target="deductible" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.Mechanical3" label="Forms and Conditions to Apply" type="text" size="10" maxLength="20" />
+    </pageElement>
+    <pageElement legend="Protection and Control System" type="fieldset">
+      <fieldElement id="SP.Protection1" label=" Limit of Insurance" type="text" size="10" maxLength="20" />
+      <fieldElement id="SP.Protection2" label=" Valuation Type" type="text" size="10" maxLength="20" />
+      <fieldElement id="SP.Protection3" label=" Coinsurance %" type="text" size="10" maxLength="20" />
+      <fieldElement id="SP.Protection4" label="Deductible" type="selectlist">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="inmrcCodeListRef.xml" target="deductible" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.Protection5" label="Forms and Conditions to Apply" type="text" size="10" maxLength="20" />
+    </pageElement>
+    <pageElement legend="Flood Coverage" type="fieldset">
+      <fieldElement id="SP.FloodCoverage1" label=" Flood Coverage" type="selectlist">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.FloodCoverage2" label="Flood Zone" type="text" size="10" maxLength="20" />
+      <fieldElement id="SP.FloodCoverage3" label="Location of Equipment" type="selectlist">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="inmrcCodeListRef.xml" target="equipment" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+    </pageElement>
+    <pageElement legend="Earthquake Coverage" type="fieldset">
+      <fieldElement id="SP.EarthQuake1" label="Earthquake Coverage" type="selectlist">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.EarthQuake2 " label="Earthquake Zone" type="text" size="10" maxLength="20" />
+    </pageElement>
+  </page>
+  <page id="scheduleOfEquipment" title="Computer Equipment - Schedule of Equipment" type="roster" source="CommlInlandMarineLineBusiness.CommlIMInfo">
+    <pageElement legend="Schedule of Equipment" type="roster" maxEntries="5">
+      <fieldElement id="SP.Item" type="column" label="Item #" maxLength="30" />
+      <fieldElement id="SP.Manufacturer" type="column" label="Manufacturer" maxLength="30" />
+      <fieldElement id="SP.Model" type="column" label="Model" maxLength="30" />
+      <action type="edit" />
+      <action type="delete" />
+    </pageElement>
+    <pageElement legend="Schedule of Equipment " type="fieldset">
+      <fieldElement id="SP.ScheduleOfEquipment1" type="selectlist" label="Location">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.ScheduleOfEquipment2" type="selectlist" label="Building">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <optionList reader="xmlreader" source="codeListRef.xml" target="blank" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.ScheduleOfEquipment3" type="text" label="Item #" size="20" maxLength="30" />
+      <fieldElement id="SP.ScheduleOfEquipment4" type="text" label="Manufacturer" size="20" maxLength="30" />
+      <fieldElement id="SP.ScheduleOfEquipment5" type="text" label="Model" size="20" maxLength="30" />
+      <fieldElement id="SP.ScheduleOfEquipment6" type="text" label="Serial #" size="20" maxLength="30" />
+      <fieldElement id="SP.ScheduleOfEquipment7" type="selectlist" label="Leased or Owned">
+        <optionList reader="xmlreader" source="inmrcCodeListRef.xml" target="leasedOwned" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.ScheduleOfEquipment8" type="text" label="Current Full 100% Value" size="20" maxLength="30" />
+      <fieldElement id="SP.ScheduleOfEquipment9" type="text" label="Amount of Insurance" size="20" maxLength="30" />
+    </pageElement>
+  </page>
+  <page id="computerEquipment" title="Computer Equipment - Additional Information" type="dataEntry">
+    <pageElement type="tips">
+      <fieldElement type="message">tips - Please Explain All "Yes" Responses</fieldElement>
+    </pageElement>
+    <pageElement legend="General Information" type="fieldset">
+      <fieldElement id="SP.GeneralInformation1" type="selectlist" label="In the Event of a Major or Total Loss Could You Return to Operation within One Week?">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.GeneralInformation2" type="selectlist" label="Do You have an Arrangement for the Use of other Equipment? (Attach Copy of Agreement)">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.GeneralInformation3" type="selectlist" label="Is Your Equipment Manufacturer in a Position to Replace Your Equipment Promptly?">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.GeneralInformation4" type="selectlist" label="Is Your Equipment under Manufacturer's Warranty?">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.GeneralInformation5" type="selectlist" label="Do you have a Service Maintenance Contract with a Manufacturer or Other Service Contractor?">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.GeneralInformation6" type="selectlist" label="Is the Equipment Shipped by Common Carrier?">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.GeneralInformation7" type="selectlist" label="Is the Equipment Shipped by Company Vehicle?">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+    </pageElement>
+    <pageElement legend="Computer Room Information" type="fieldset">
+      <fieldElement id="SP.ComputerRoomInformation1" type="selectlist" label="Is the Data Processing Equipment Located in a Specifically Designated Room">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.ComputerRoomInformation2" type="selectlist" label="Is Access to the Room Restricted">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.ComputerRoomInformation3" type="selectlist" label="Is the Equipment Controlled by a Master Shutdown Switch">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.ComputerRoomInformation4" type="selectlist" label="Is there a Separate Airconditioning System Designed to Specifically Protect the EDP Equipment">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.ComputerRoomInformation5" type="selectlist" label="Is the Computer Room Protected by a Wet Sprinkler System">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.ComputerRoomInformation6" type="selectlist" label="Is the Computer Room Protected by a Dry Sprinkler System">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.ComputerRoomInformation7" type="selectlist" label="Is the Computer Room Protected by a Halon System">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.ComputerRoomInformation8" type="selectlist" label="Is the Computer Room Protected by a CO2 System">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.ComputerRoomInformation9" type="selectlist" label="Is the Computer Room Protected by any Other System">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.ComputerRoomInformation10" type="selectlist" label="Does the Computer Room have a Raised Pedestal Floor">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.ComputerRoomInformation11" type="selectlist" label="Floor Construction Type">
+        <optionList reader="xmlreader" source="inmrcCodeListRef.xml" target="combustion" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.ComputerRoomInformation12" type="selectlist" label="Below Floor Protection - Smoke Detectors?">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.ComputerRoomInformation13" type="selectlist" label="Below Floor Protection - Halon System/CO² System?">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.ComputerRoomInformation14" type="selectlist" label="Below Floor Protection - Other?">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.ComputerRoomInformation15" type="selectlist" label="Temperature Alarm - Local">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.ComputerRoomInformation16" type="selectlist" label="Temperature Alarm - Central">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.ComputerRoomInformation17" type="selectlist" label="Humidity Alarm - Local">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.ComputerRoomInformation18" type="selectlist" label="Humidity Alarm  - Central">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.ComputerRoomInformation19" type="selectlist" label="Smoke Alarm - Local">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.ComputerRoomInformation20" type="selectlist" label="Smoke Alarm - Central">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.ComputerRoomInformation21" type="selectlist" label="Fire Alarm - Local">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.ComputerRoomInformation22" type="selectlist" label="Fire Alarm -  Central">
+        x
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+    </pageElement>
+    <pageElement type="tips">
+      <fieldElement type="message">Please Explain All "Yes" Responses</fieldElement>
+    </pageElement>
+    <pageElement legend="Media and Data (Software) Information" type="fieldset">
+      <fieldElement id="SP.MediaDataInformation1" type="selectlist" label="Are Anti-Viral Safeguards in Effect">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.MediaDataInformation2" type="selectlist" label="Are Duplicates of Software Maintained">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.MediaDataInformation3" type="selectlist" label="How Often is Data Backed Up">
+        x
+        <optionList reader="xmlreader" source="inmrcCodeListRef.xml" target="dataBackUp" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.MediaDataInformation5" type="selectlist" label="Duplicate Software On Premises">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.MediaDataInformation6" type="selectlist" label="Duplicate Software Off Premises">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.MediaDataInformation7" type="selectlist" label="Data Backups On Premises">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.MediaDataInformation8" type="selectlist" label="Data Backups Off Premises">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.MediaDataInformation9" type="selectlist" label="On Premises Software Duplicates and Data Backup Storage - Safe">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.MediaDataInformation10" type="selectlist" label="On Premises Software Duplicates and Data Backup Storage - Vault">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.MediaDataInformation11" type="selectlist" label="On Premises Software Duplicates and Data Backup Storage - Computer Room">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.MediaDataInformation12" type="selectlist" label="On Premises Software Duplicates and Data Backup Storage - Other">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+      <fieldElement id="SP.MediaDataInformation13" type="selectlist" label="Premises Storage Location">
+        <optionList reader="xmlreader" source="codeListRef.xml" target="boolean" />
+        <correction type="useSubstitute" condition="missing" source="prototype" message="A substitute value was copied from user defaults" />
+        <correction type="bestMatch" condition="incorrect" liberty="moderate" message="This value was changed to match an item in the list." />
+      </fieldElement>
+    </pageElement>
+    <pageElement legend="Remarks " type="fieldset">
+      <fieldElement type="textarea" id="CommlInlandMarineLineBusiness.CommlIMInfo.CommlCoverage[CoverageCd='EQUFL'].CommlCoverageSupplement[0].RemarkText.1" label="Remarks Related to Specific Job" cols="60" rows="5" viewId="equipFloaterViews.xml:CommlInlandMarineLineBusiness.CommlIMInfo.CommlCoverage[0].CommlCoverageSupplement[0].RemarkText.1" />
+    </pageElement>
+  </page>
+</collection>

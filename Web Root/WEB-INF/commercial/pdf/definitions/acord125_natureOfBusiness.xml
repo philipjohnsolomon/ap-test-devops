@@ -1,0 +1,61 @@
+<fields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/pdf/pdfDefinitions.xsd">
+	<!-- <field type="checkbox">
+		<eLabel>BusinessInformation_BusinessType_ApartmentsIndicator_A</eLabel>
+		<xpath>InsuredOrPrincipal.InsuredOrPrincipalInfo[InsuredOrPrincipalRoleCd='Insured'].BusinessInfo[NatureBusinessCd='AP'].NatureBusinessCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>BusinessInformation_BusinessType_CondominiumsIndicator_A</eLabel>
+		<xpath>InsuredOrPrincipal.InsuredOrPrincipalInfo[InsuredOrPrincipalRoleCd='Insured'].BusinessInfo[NatureBusinessCd='CO'].NatureBusinessCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>BusinessInformation_BusinessType_ContractorIndicator_A</eLabel>
+		<xpath>InsuredOrPrincipal.InsuredOrPrincipalInfo[InsuredOrPrincipalRoleCd='Insured'].BusinessInfo[NatureBusinessCd='CT'].NatureBusinessCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>BusinessInformation_BusinessType_InstitutionalIndicator_A</eLabel>
+		<xpath>InsuredOrPrincipal.InsuredOrPrincipalInfo[InsuredOrPrincipalRoleCd='Insured'].BusinessInfo[NatureBusinessCd='IN'].NatureBusinessCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>BusinessInformation_BusinessType_ManufacturingIndicator_A</eLabel>
+		<xpath>InsuredOrPrincipal.InsuredOrPrincipalInfo[InsuredOrPrincipalRoleCd='Insured'].BusinessInfo[NatureBusinessCd='MN'].NatureBusinessCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>BusinessInformation_BusinessType_OfficeIndicator_A</eLabel>
+		<xpath>InsuredOrPrincipal.InsuredOrPrincipalInfo[InsuredOrPrincipalRoleCd='Insured'].BusinessInfo[NatureBusinessCd='OF'].NatureBusinessCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>BusinessInformation_BusinessType_RestaurantIndicator_A</eLabel>
+		<xpath>InsuredOrPrincipal.InsuredOrPrincipalInfo[InsuredOrPrincipalRoleCd='Insured'].BusinessInfo[NatureBusinessCd='RS'].NatureBusinessCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>BusinessInformation_BusinessType_RetailIndicator_A</eLabel>
+		<xpath>InsuredOrPrincipal.InsuredOrPrincipalInfo[InsuredOrPrincipalRoleCd='Insured'].BusinessInfo[NatureBusinessCd='RL'].NatureBusinessCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>BusinessInformation_BusinessType_ServiceIndicator_A</eLabel>
+		<xpath>InsuredOrPrincipal.InsuredOrPrincipalInfo[InsuredOrPrincipalRoleCd='Insured'].BusinessInfo[NatureBusinessCd='SV'].NatureBusinessCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>BusinessInformation_BusinessType_WholesaleIndicator_A</eLabel>
+		<xpath>InsuredOrPrincipal.InsuredOrPrincipalInfo[InsuredOrPrincipalRoleCd='Insured'].BusinessInfo[NatureBusinessCd='WL'].NatureBusinessCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>BusinessInformation_BusinessType_OtherIndicator_A</eLabel>
+		<xpath>InsuredOrPrincipal.InsuredOrPrincipalInfo[InsuredOrPrincipalRoleCd='Insured'].BusinessInfo[NatureBusinessCd='OT'].NatureBusinessCd</xpath>
+	</field> -->
+	
+	<!-- InsuredOrPrincipal.InsuredOrPrincipalInfo[InsuredOrPrincipalRoleCd='Insured'].BusinessInfo.SICCd -->
+	<field>
+		<eLabel>BusinessInformation_BusinessType_OtherDescription_A</eLabel>
+		<xpath>InsuredOrPrincipal.InsuredOrPrincipalInfo[InsuredOrPrincipalRoleCd='Insured'].BusinessInfo[NatureBusinessCd='OT'].NatureBusinessCd</xpath>
+	</field>
+	
+	<field type="checkbox" javaclass="com.agencyport.autob.pdf.eform.BusinessClassValueGetter">
+		<eLabel>BusinessInformation_BusinessType_OtherIndicator_A</eLabel>
+		<xpath>InsuredOrPrincipal.InsuredOrPrincipalInfo[InsuredOrPrincipalRoleCd='Insured'].BusinessInfo.SICCd</xpath>
+	</field>
+	<field type="checkbox" javaclass="com.agencyport.autob.pdf.eform.BusinessClassValueFormatter">
+		<eLabel>BusinessInformation_BusinessType_OtherDescription_A</eLabel>
+		<xpath>InsuredOrPrincipal.InsuredOrPrincipalInfo[InsuredOrPrincipalRoleCd='Insured'].BusinessInfo.SICCd</xpath>
+	</field>	
+</fields>

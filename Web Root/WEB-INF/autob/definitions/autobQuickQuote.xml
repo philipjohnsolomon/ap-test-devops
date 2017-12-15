@@ -1,0 +1,46 @@
+<transaction 
+	title					="Commercial Auto QQ" 
+	id						="autobQuickQuote" 
+	target					="CommlAutoPolicyQuoteInqRq" 
+	lob						="AUTOB" 
+	type					="quick_quote" 
+	relatedTransactionId	="autob"
+	allowEmptyNode			="false" 
+	enableAllMenuEntries	="false"
+	fieldValidations		="enabled" 
+	summaryPageId			="policySummary"
+	prevalidate				="true"
+	mappingId				="autob"
+	workItemAssistantId		="workitemassistant"
+	supportsIPDTRDynamicContent="true"
+	supportsDefaults		="true" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/definition/transactionDefinitionFile.xsd"
+	autoMaintainIdAttributes="true">
+ 	<description>Multi state Quote transaction for Commercial Auto Line of Business</description>
+ 	
+	<!-- General Information -->
+	<importPage id="AUTOB.generalInfo" fileName="autobCommons.xml"/>
+		
+	<!-- Driver Roster -->
+	<importPage id="AUTOB.drivers" fileName="autobCommons.xml"/>
+		
+	<!-- Location Roster -->
+	<importPage id="AUTOB.AUTOBGarageLocation" 	fileName="autobCommons.xml"/>
+	
+	<!-- Vehicles & Coverages Roster -->
+	<importPage id="AUTOB.vehicle" fileName="autobCommons.xml"/>
+	
+	<!-- Policy Coverages -->
+	<importPage id="AUTOB.policyCoverages" fileName="autobCommons.xml"/>
+
+	<!-- Application Questions -->
+	<importPage id="125Commons.questionnaire" fileName="125Commons.xml"/>
+	
+	<!-- Underwriting Questions -->
+	<importPage id="AUTOB.AUTOBquestionnaire" fileName="autobCommons.xml"/>
+
+	<!-- Summary -->
+	<importPage id="AUTOB.policySummary" fileName="autobCommons.xml"/>
+	
+</transaction>

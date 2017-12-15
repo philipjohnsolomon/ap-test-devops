@@ -1,0 +1,3110 @@
+.work-item-assistant .wia-users dl,
+.work-item-assistant .wia-users dl dd {
+  margin-bottom: 0;
+}
+
+/* Search & Filtering */
+
+.search-filter {
+  padding: 0;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+  /*	misc. tablet-view styles */
+}
+
+.search-filter .container {
+  background: #fff;
+  padding-top: 15px;
+  border: 1px solid #666666;
+}
+
+.search-filter .active-filters-display {
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  border-bottom: 1px solid #bfbfbf;
+  padding-bottom: .5em;
+  margin-bottom: 1em;
+}
+
+.search-filter .active-filters-display .filter-button {
+  display: inline-block;
+  padding: 0;
+  padding-right: 20px;
+  margin: 5px 0;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.search-filter .active-filters-display .filter-button.reset a {
+  cursor: pointer;
+}
+
+.search-filter .active-filters-display .filter-button button.close {
+  position: relative;
+  right: -5px;
+  top: -2px;
+}
+
+.search-filter .active-filters-display .filter-button button.close .fa:before {
+  content: "\f057";
+}
+
+.search-filter .active-filters-display .filter-button.showing-all {
+  padding: 0;
+  display: none;
+}
+
+.search-filter .filter-display .nav-tabs {
+  background: #416daf;
+  border-bottom: 0 !important;
+}
+
+.search-filter .filter-display .nav-tabs > li {
+  margin-bottom: 0;
+}
+
+.search-filter .filter-display .nav-tabs > li > a {
+  margin-right: 0;
+  background: none;
+  margin-bottom: 0;
+}
+
+.search-filter .filter-display .nav-tabs > li.active > a {
+  background: transparent;
+  font-weight: 700;
+}
+
+.search-filter .filter-display .tab-content {
+  background: #fff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  padding: 15px;
+  overflow: auto;
+}
+
+.search-filter .filter-display .tab-content ul {
+  margin: 0;
+  padding: 0;
+}
+
+.search-filter .filter-display .tab-content ul li {
+  list-style: none;
+  float: left;
+  margin-right: 50px;
+  line-height: 2;
+}
+
+.search-filter .filter-display .tab-content ul li a {
+  color: #bfbfbf;
+}
+
+.search-filter .filter-display .tab-content ul li a:hover {
+  color: #555555;
+  text-decoration: underline;
+}
+
+.search-filter .row.input-group.search,
+.search-filter .row.filter-row,
+.search-filter .row.search-bar {
+  margin-bottom: 10px;
+}
+
+.search-filter .row.search-bar {
+  text-align: center;
+}
+
+.search-filter .row.search-bar .search-field {
+  margin: 0 auto;
+  width: 33.3333%;
+  /* Find an Account input */
+}
+
+.search-filter .row.search-bar .search-field .input-group.search,
+.search-filter .row.search-bar .search-field .twitter-typeahead {
+  width: 100%;
+}
+
+.search-filter .row.search-bar .search-field input.form-control.tt-input {
+  margin: 0 auto;
+}
+
+.search-filter .row.search-bar .search-field .dropdown {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.search-filter .row.search-bar .search-field form.advanced {
+  text-align: left;
+  width: 300px;
+  margin: 10px;
+}
+
+.search-filter .row.search-bar .search-field .twitter-typeahead .account-search-input.tt-input {
+  background: #fff !important;
+}
+
+.search-filter .row.search-bar .search-field .twitter-typeahead .account-search-input.tt-input::-moz-placeholder {
+  color: #bfbfbf;
+}
+
+.search-filter .row.filter-row {
+  /* Advanced Search dropdowns (date ranges) */
+  /* filter counter DIV*/
+  /* filter counter */
+}
+
+.search-filter .row.filter-row .advanced-search-div .dropdown-menu {
+  width: 300px;
+}
+
+.search-filter .row.filter-row .advanced-search-div .dropdown-menu form.advanced,
+.search-filter .row.filter-row .advanced-search-div .dropdown-menu div.advanced {
+  padding: 10px;
+}
+
+.search-filter .row.filter-row .advanced-search-div .dropdown-menu form.advanced .form-group,
+.search-filter .row.filter-row .advanced-search-div .dropdown-menu div.advanced .form-group {
+  margin: 0;
+}
+
+.search-filter .row.filter-row .advanced-search-div .dropdown-menu .has-addon .input-group.date {
+  position: static;
+}
+
+.search-filter .row.filter-row .advanced-search-div .dropdown-menu .has-addon .input-group.date .fa:before {
+  content: "\f073";
+}
+
+.search-filter .row.filter-row .advanced-search-div .dropdown-menu .has-addon .input-group > .form-control {
+  width: 100%;
+}
+
+.search-filter .row.filter-row .advanced-search-div .dropdown-menu .work-item-id {
+  margin-bottom: 5px;
+}
+
+.search-filter .row.filter-row .advanced-search-div .dropdown-menu .work-item-id label {
+  margin-top: 5px;
+}
+
+.search-filter .row.filter-row .advanced-search-div .dropdown-menu .work-item-id .form-group {
+  width: 100%;
+}
+
+.search-filter .row.filter-row .advanced-search-div .dropdown-menu .work-item-id .form-group .form-control {
+  float: right;
+  width: 68%;
+}
+
+.search-filter .row.filter-row .advanced-search-div .dropdown-menu .form-group.effective-date-form {
+  padding-bottom: 5px;
+  overflow: auto;
+  margin-bottom: 5px;
+}
+
+.search-filter .row.filter-row .advanced-search-div .dropdown-menu .form-group.effective-date-form .effective-date {
+  overflow: auto;
+  margin-bottom: 0;
+}
+
+.search-filter .row.filter-row .advanced-search-div .dropdown-menu .form-group.effective-date-form .effective-date label {
+  display: block;
+}
+
+.search-filter .row.filter-row .advanced-search-div .dropdown-menu .form-group.effective-date-form .effective-date .date-operator {
+  width: 50%;
+  float: left;
+}
+
+.search-filter .row.filter-row .advanced-search-div .dropdown-menu .form-group.effective-date-form .effective-date .date-operator .form-control {
+  width: 100%;
+}
+
+.search-filter .row.filter-row .advanced-search-div .dropdown-menu .form-group.effective-date-form .effective-date .start-date,
+.search-filter .row.filter-row .advanced-search-div .dropdown-menu .form-group.effective-date-form .effective-date .between-dates,
+.search-filter .row.filter-row .advanced-search-div .dropdown-menu .form-group.effective-date-form .effective-date .end-date {
+  width: 48%;
+  float: right;
+}
+
+.search-filter .row.filter-row .advanced-search-div .dropdown-menu .form-group.effective-date-form .effective-date .end-date,
+.search-filter .row.filter-row .advanced-search-div .dropdown-menu .form-group.effective-date-form .effective-date .between-dates {
+  margin-top: 10px;
+  position: static;
+}
+
+.search-filter .row.filter-row .advanced-search-div .dropdown-menu .form-group.effective-date-form .effective-date .form-control {
+  padding: 6px;
+}
+
+.search-filter .row.filter-row .advanced-search-div .dropdown-menu .form-group.effective-date-form .btn {
+  margin-top: 5px;
+  float: right;
+}
+
+.search-filter .row.filter-row .advanced-search-div .dropdown-menu .form-group.save-filter-as {
+  border-top: 1px solid #eeeeee;
+  padding-top: 5px;
+}
+
+.search-filter .row.filter-row .advanced-search-div .dropdown-menu .form-group.save-filter-as .form-control {
+  width: 218px;
+}
+
+.search-filter .row.filter-row .advanced-search-div .dropdown-menu .form-group.save-filter-as .btn {
+  margin-top: 5px;
+  float: none;
+}
+
+.search-filter .row.filter-row .button-row {
+  overflow: auto;
+}
+
+.search-filter .row.filter-row .button-row .btn {
+  margin-bottom: 10px;
+}
+
+.search-filter .row.filter-row .button-row .btn.button-right {
+  float: right;
+}
+
+.search-filter .row.filter-row .btn {
+  margin-bottom: 3px;
+}
+
+.search-filter .row.filter-row div.filter-counter {
+  display: inline-block;
+  padding: 6px 12px 0;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.search-filter .row.filter-row div.filter-counter:after {
+  content: ".";
+  visibility: hidden;
+}
+
+.search-filter .row.filter-row .btn.btn-default.filter-counter {
+  font-weight: 700;
+}
+
+.search-filter .row.filter-row .btn.btn-default.filter-counter:after {
+  content: ".";
+  visibility: hidden;
+}
+
+.search-filter .row.filter-row .btn.btn-default.filter-counter:hover {
+  background-color: #fff;
+  border-color: #bfbfbf;
+  color: #333333;
+  cursor: default;
+}
+
+.search-filter .row.filter-row .btn-filter {
+  color: white;
+  background-color: #6f6f6f;
+  border-color: #626262;
+}
+
+.search-filter .row.filter-row .btn-filter:hover,
+.search-filter .row.filter-row .btn-filter:focus,
+.search-filter .row.filter-row .btn-filter:active,
+.search-filter .row.filter-row .btn-filter.active,
+.open .dropdown-toggle.search-filter .row.filter-row .btn-filter {
+  color: white;
+  background-color: #5b5b5b;
+  border-color: #444444;
+}
+
+.search-filter .row.filter-row .btn-filter:active,
+.search-filter .row.filter-row .btn-filter.active,
+.open .dropdown-toggle.search-filter .row.filter-row .btn-filter {
+  background-image: none;
+}
+
+.search-filter .row.filter-row .btn-filter.disabled,
+.search-filter .row.filter-row .btn-filter[disabled],
+fieldset[disabled] .search-filter .row.filter-row .btn-filter,
+.search-filter .row.filter-row .btn-filter.disabled:hover,
+.search-filter .row.filter-row .btn-filter[disabled]:hover,
+fieldset[disabled] .search-filter .row.filter-row .btn-filter:hover,
+.search-filter .row.filter-row .btn-filter.disabled:focus,
+.search-filter .row.filter-row .btn-filter[disabled]:focus,
+fieldset[disabled] .search-filter .row.filter-row .btn-filter:focus,
+.search-filter .row.filter-row .btn-filter.disabled:active,
+.search-filter .row.filter-row .btn-filter[disabled]:active,
+fieldset[disabled] .search-filter .row.filter-row .btn-filter:active,
+.search-filter .row.filter-row .btn-filter.disabled.active,
+.search-filter .row.filter-row .btn-filter[disabled].active,
+fieldset[disabled] .search-filter .row.filter-row .btn-filter.active {
+  background-color: #6f6f6f;
+  border-color: #626262;
+}
+
+.search-filter .row.filter-row .btn-filter .badge {
+  color: #6f6f6f;
+  background-color: white;
+}
+
+.search-filter .row.input-group.search {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.search-filter .search-filter .filter-button.showing-all {
+  padding-right: 8px;
+}
+
+.search-filter .filter select {
+  width: 140px;
+}
+
+.search-filter .filter input[type="text"] {
+  width: 20%;
+}
+
+.search-filter .filter-controls {
+  z-index: 5;
+  /* 
+			Status filter 
+			Double-purposing as a work items colors legend 
+		*/
+  /* 
+			"Current selected LOB filter" 
+			Attempt at deposing the work item Active Filter Display gray buttons
+		*/
+}
+
+.search-filter .filter-controls select.form-control {
+  display: inline;
+  width: auto;
+}
+
+.search-filter .filter-controls .dropdown-menu > li:hover,
+.search-filter .filter-controls .dropdown-menu > li:focus {
+  background: #416daf;
+}
+
+.search-filter .filter-controls .dropdown-menu > li:hover a,
+.search-filter .filter-controls .dropdown-menu > li:focus a {
+  color: white;
+  background: transparent;
+}
+
+.search-filter .filter-controls .dropdown-menu.filter-status > li {
+  position: relative;
+  padding: 3px 20px;
+}
+
+.search-filter .filter-controls .dropdown-menu.filter-status > li a {
+  display: inline;
+  padding-left: 15px;
+}
+
+.search-filter .filter-controls .dropdown-menu.filter-status > li a .swatch {
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  background-color: #bfbfbf;
+  border-radius: 3px;
+}
+
+.search-filter .filter-controls .dropdown-menu.filter-status > li.status-APPROVE .swatch {
+  background-color: #27ae60;
+}
+
+.search-filter .filter-controls .dropdown-menu.filter-status > li.status-BIND .swatch {
+  background-color: #2c3e50;
+}
+
+.search-filter .filter-controls .dropdown-menu.filter-status > li.status-CLIENTDECLINED .swatch {
+  background-color: #923a59;
+}
+
+.search-filter .filter-controls .dropdown-menu.filter-status > li.status-DECLINE .swatch {
+  background-color: #c0392b;
+}
+
+.search-filter .filter-controls .dropdown-menu.filter-status > li.status-INPROGRESS .swatch {
+  background-color: #16a085;
+}
+
+.search-filter .filter-controls .dropdown-menu.filter-status > li.status-REFER .swatch {
+  background-color: #f0ad4e;
+}
+
+.search-filter .filter-controls .dropdown-menu.filter-status > li.status-REJECT .swatch {
+  background-color: #ec6151;
+}
+
+.search-filter .filter-controls .dropdown-menu.filter-status > li.status-ACTIVE .swatch {
+  background-color: #07a6b9;
+}
+
+.search-filter .filter-controls .dropdown-menu.filter-status > li.status-INACTIVE .swatch {
+  background-color: #602727;
+}
+
+.search-filter .filter-controls .dropdown-menu.filter-status > li.status-DELETE .swatch {
+  background-color: #bfbfbf;
+}
+
+.search-filter .filter-controls .dropdown-menu.filter-status > li.status-OFFLINE .swatch {
+  background-color: #595959;
+}
+
+.search-filter .filter-controls .dropdown-menu.filter-status > li.status-TRANSFERTOADMIN .swatch {
+  background-color: #ed7f36;
+}
+
+.search-filter .filter-controls .dropdown-menu.filter-selector.filter-lob > li.selected-lob:hover a,
+.search-filter .filter-controls .dropdown-menu.filter-selector.filter-lob > li.selected-lob:focus a {
+  color: #fff;
+}
+
+.search-filter .filter-controls .dropdown-menu.filter-selector.filter-lob > li.selected-lob a {
+  color: #416daf;
+  background: transparent;
+  font-weight: 700;
+}
+
+.search-filter .search-area {
+  text-align: center;
+}
+
+.search-filter .search-area .input-group {
+  margin: 0 auto;
+}
+
+.search-filter .search-area .input-group.search {
+  width: 100%;
+}
+
+.search-filter .search-area .input-group.search .twitter-typeahead {
+  width: 100%;
+}
+
+.search-filter .search-area .input-group.search .twitter-typeahead .form-control {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .search-filter .row.search-bar .search-field {
+    width: 90%;
+  }
+}
+
+/*	Modals 
+	Lightbox windows, so far used in Turnstile
+*/
+
+/* Modal base*/
+
+.modal {
+  /* 
+		fix for modal page shift 
+		http://stackoverflow.com/questions/19960162/bootstrap-3-modal-fires-and-causes-page-to-shift-to-the-left-momentarily-brows
+	*/
+  overflow-y: auto;
+  /* Modal tabs */
+  /* File Uploader Widget buttons */
+  /* modal-wide addons */
+  /* Fix for IE < 8 (hack to make LESS spit out "screen\9" syntax) */
+}
+
+.modal-open {
+  overflow: auto;
+}
+
+.modal#turnstile-upload-widget .modal-content {
+  overflow: hidden;
+}
+
+.modal .modal-dialog {
+  height: 85%;
+  overflow: auto;
+}
+
+.modal .modal-content {
+  border-radius: 0;
+}
+
+.modal .btn {
+  position: relative;
+}
+
+.modal .btn .pull-right.spinner-container {
+  position: relative;
+  top: 10px;
+}
+
+.modal .modal-header {
+  background: #555555;
+}
+
+.modal .modal-header h2,
+.modal .modal-header h3,
+.modal .modal-header h4 {
+  font-size: 18px;
+  color: white;
+}
+
+.modal .modal-header button.close {
+  color: #fff;
+  text-shadow: none !important;
+  opacity: 0.5;
+}
+
+.modal .modal-header button.close:hover,
+.modal .modal-header button.close:focus {
+  opacity: 1;
+}
+
+.modal .modal-body {
+  background: white;
+  color: #687178;
+}
+
+.modal .modal-body h3 {
+  margin: 0;
+  margin-bottom: 7px;
+  border-bottom: 1px solid #bfbfbf;
+  padding-bottom: 7px;
+  font-size: 18px;
+}
+
+.modal .modal-body .turnstile-file-upload-status .popover-content {
+  word-break: break-all;
+}
+
+.modal .modal-body .unprocessed-pages .list-group-item {
+  word-break: break-all;
+}
+
+.modal .modal-body .unprocessed-forms .list-group-item {
+  word-break: break-all;
+}
+
+.modal .modal-body td.file-column {
+  max-width: 215px;
+  word-break: break-all;
+}
+
+.modal .modal-body td.status-column {
+  min-width: 130px;
+}
+
+.modal .modal-body td.file-name {
+  max-width: 300px;
+  word-break: break-all;
+}
+
+.modal .modal-body td.date-column {
+  white-space: nowrap;
+}
+
+.modal .modal-body .turnstile-account-search-listing .account-type.P .fa:before {
+  content: "\f183";
+}
+
+.modal .modal-body .turnstile-account-search-listing .account-type.C .fa:before {
+  content: "\f0f7";
+}
+
+.modal .modal-body .turnstile-account-search-listing .account-type.U .fa:before {
+  content: "\f059";
+}
+
+.modal .modal-body .table > thead > tr > td.danger,
+.modal .modal-body .table > tbody > tr > td.danger,
+.modal .modal-body .table > tfoot > tr > td.danger,
+.modal .modal-body .table > thead > tr > th.danger,
+.modal .modal-body .table > tbody > tr > th.danger,
+.modal .modal-body .table > tfoot > tr > th.danger,
+.modal .modal-body .table > thead > tr.danger > td,
+.modal .modal-body .table > tbody > tr.danger > td,
+.modal .modal-body .table > tfoot > tr.danger > td,
+.modal .modal-body .table > thead > tr.danger > th,
+.modal .modal-body .table > tbody > tr.danger > th,
+.modal .modal-body .table > tfoot > tr.danger > th {
+  background-color: inherit;
+}
+
+.modal .modal-body .tab-content .turnstile-file-upload-list {
+  max-height: 485px;
+  overflow-x: auto;
+}
+
+.modal .modal-body .tab-content > .tab-pane {
+  padding-top: 10px;
+}
+
+.modal .modal-body .tab-content .table td,
+.modal .modal-body .tab-content .table th {
+  padding: 10px;
+}
+
+.modal .modal-body .tab-content .table thead td,
+.modal .modal-body .tab-content .table thead th {
+  border-bottom: 1px solid #bfbfbf;
+  vertical-align: bottom;
+  font-weight: 700;
+  padding-top: 0;
+}
+
+.modal .modal-body .tab-content .table tbody td {
+  border-bottom: 1px solid #eeeeee;
+  vertical-align: top;
+}
+
+.modal .modal-body .tab-content .table tbody td.td-label {
+  font-weight: bold;
+}
+
+.modal .modal-body .tab-content .table tbody td.file-action {
+  text-align: right;
+}
+
+.modal .modal-body .button-row {
+  margin-bottom: 10px;
+}
+
+.modal .modal-body .list-group {
+  max-height: 330px;
+  overflow-y: auto;
+}
+
+.modal .modal-body .list-group .list-group-item:nth-child(odd) {
+  background-color: #fff;
+}
+
+.modal .modal-body .list-group .list-group-item:nth-child(even) {
+  background-color: #eeeeee;
+}
+
+.modal .modal-body .list-group-item h4.list-group-item-heading {
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.modal .modal-body .list-group-item h4.list-group-item-heading.toggler a span {
+  color: #687178;
+}
+
+.modal .modal-body .list-group-item h4.list-group-item-heading.forms-not-processed .fa {
+  margin-right: 5px;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.modal .modal-body .list-group-item h4.list-group-item-heading.forms-not-processed .fa:before {
+  content: "\f0d7";
+}
+
+.modal .modal-body .list-group-item .radio,
+.modal .modal-body .list-group-item .checkbox {
+  margin: 0;
+}
+
+.modal .modal-body .input-group .form-control.tt-input,
+.modal .modal-body .form-horizontal .form-group .form-control {
+  width: 100% !important;
+}
+
+.modal .modal-body p a {
+  color: #416daf;
+  text-decoration: none;
+  font-weight: inherit;
+}
+
+.modal .modal-body p a:hover {
+  text-decoration: none;
+}
+
+.modal .modal-body p a.btn {
+  text-decoration: none;
+  color: inherit;
+}
+
+.modal .modal-body .input-group-addon,
+.modal .modal-body .input-group-btn {
+  vertical-align: top;
+}
+
+.modal .modal-body .accounts-search-modal-results {
+  margin: 10px 0;
+  padding: 10px 0;
+  border-top: 1px solid #eeeeee;
+}
+
+.modal .modal-body .form-group label {
+  display: block;
+}
+
+.modal .modal-body p .systemAutoCorrect i .fa-2 {
+  content: "\f05d";
+}
+
+.modal .modal-footer {
+  text-align: left;
+}
+
+.modal .nav-tabs {
+  border-color: #555555;
+}
+
+.modal .nav-tabs > li {
+  float: left;
+  margin-bottom: -1px;
+  position: relative;
+}
+
+.modal .nav-tabs > li > a {
+  color: #555555;
+  background: #d9d9d9;
+  border-color: #d9d9d9;
+  margin-bottom: 1px;
+}
+
+.modal .nav-tabs > li > a:hover {
+  background: #f2f2f2;
+}
+
+.modal .nav-tabs > li.active > a,
+.modal .nav-tabs > li.active > a:hover,
+.modal .nav-tabs > li.active > a:focus {
+  color: #fff;
+  background: #555555;
+  border-color: #555555;
+  outline: 0;
+}
+
+.modal .file-uploader-widget,
+.modal .turnstile-file-upload-status {
+  /* File input button  (moved from turnstile_upload_widget.jsp) */
+}
+
+.modal .file-uploader-widget .cancel,
+.modal .turnstile-file-upload-status .cancel {
+  float: right;
+}
+
+.modal .file-uploader-widget .fileinput-button,
+.modal .turnstile-file-upload-status .fileinput-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.modal .file-uploader-widget .fileinput-button input,
+.modal .turnstile-file-upload-status .fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  -ms-filter: 'alpha(opacity=0)';
+  font-size: 200px;
+  direction: ltr;
+  cursor: pointer;
+}
+
+.modal .input-group-addon .search .fa:before {
+  content: "\f002";
+}
+
+@media screen\9 {
+  .modal .fileinput-button input {
+    filter: alpha(opacity=0);
+    font-size: 100%;
+    height: 100%;
+  }
+}
+
+.twitter-typeahead {
+  width: auto;
+}
+
+.twitter-typeahead .tt-dropdown-menu {
+  background-clip: padding-box;
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.twitter-typeahead .tt-dropdown-menu .tt-suggestions {
+  text-align: left;
+}
+
+.twitter-typeahead .tt-dropdown-menu .tt-suggestions .tt-suggestion {
+  color: #333333;
+  padding: 5px 10px;
+  margin: 0;
+}
+
+.twitter-typeahead .tt-dropdown-menu .tt-suggestions .tt-suggestion p.not-owned {
+  color: #bfbfbf;
+}
+
+.twitter-typeahead .tt-dropdown-menu .tt-suggestions .tt-suggestion p.owned {
+  cursor: pointer;
+}
+
+/* 100% width for Modals with input-group-addon */
+
+.modal-body .twitter-typeahead {
+  width: 100%;
+}
+
+/* constrained width for top center Search area */
+
+.filter-row .search .twitter-typeahead {
+  width: 330px;
+}
+
+.ap-dashboard .report-block {
+  border: 1px solid #ddd;
+  background: #fff;
+  margin: 20px auto;
+}
+
+.ap-dashboard .report-block .report {
+  min-height: 400px;
+}
+
+.ap-dashboard .report-block .row.report-console {
+  margin: 20px;
+}
+
+.ap-dashboard .report-block .row.report-console .date .input-group-addon {
+  width: auto;
+}
+
+.ap-dashboard .report-block .row.report-console .date .input-group-addon .fa:before {
+  content: "\f073";
+}
+
+#rosterAddNewLink {
+  padding-bottom: 10px;
+}
+
+table.roster {
+  border: 1px solid #eeeeee;
+  /* Roster editing states */
+}
+
+table.roster th.actions {
+  text-align: right;
+}
+
+table.roster td.actionCell {
+  text-align: right;
+  min-width: 30%;
+}
+
+table.roster td.actionCell a {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+table.roster .table > thead > tr > th {
+  border-bottom: 1px solid #eeeeee;
+  font-weight: 400;
+  background: transparent;
+}
+
+table.roster .table > tbody > tr > td {
+  vertical-align: middle;
+}
+
+table.roster #rosterUpdateButton {
+  margin-bottom: 20px;
+}
+
+table.roster .btn {
+  padding: 3px 6px;
+}
+
+table.roster tr.needs-visiting td {
+  color: #c0392b;
+}
+
+table.roster tr.unrecoverable td {
+  color: #bfbfbf;
+}
+
+table.roster tr.was-deleted td {
+  color: #bfbfbf;
+}
+
+table.roster tr.was-edited td {
+  font-style: italic;
+}
+
+table.roster tr.was-added td {
+  color: #138a58;
+}
+
+/* Roster editing states in popup helper  */
+
+.roster-help-container .needs-visiting {
+  color: #c0392b;
+}
+
+.roster-help-container .unrecoverable {
+  color: #bfbfbf;
+}
+
+.roster-help-container .was-deleted {
+  color: #bfbfbf;
+}
+
+.roster-help-container .was-edited {
+  font-style: italic;
+}
+
+.roster-help-container .was-added {
+  color: #138a58;
+}
+
+/* 
+	overriding Bootstrap responsive defaults. 
+	nowrap's not realistic for this content.
+*/
+
+.table-responsive {
+  border: 0;
+}
+
+.table-responsive > .table > thead > tr > th,
+.table-responsive > .table > tbody > tr > th,
+.table-responsive > .table > tfoot > tr > th,
+.table-responsive > .table > thead > tr > td,
+.table-responsive > .table > tbody > tr > td,
+.table-responsive > .table > tfoot > tr > td {
+  white-space: normal;
+}
+
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  -ms-filter: 'alpha(opacity=0)';
+  font-size: 200px;
+  direction: ltr;
+  cursor: pointer;
+}
+
+p span.hasChanged {
+  background-color: #d9edf7;
+}
+
+p span.wasDeleted {
+  background-color: #f2dede;
+}
+
+p span.wasAdded {
+  background-color: #dff0d8;
+}
+
+p span.needsVisiting {
+  background-color: #fcf8e3;
+}
+
+span.originalValue {
+  font-weight: bold;
+}
+
+div.restoreOriginalValue {
+  margin-top: 10px;
+}
+
+/* Upload Helper modal */
+
+.upload-help .problem-field {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+.upload-help .legend .not-available .fa:before {
+  content: "\f05e";
+}
+
+.upload-help .legend .undo .fa:before {
+  content: "\f0e2";
+}
+
+.upload-help .legend .change .fa:before {
+  content: "\f0e2";
+}
+
+.upload-help .legend .system-auto-correct .fa:before {
+  content: "\f05d";
+}
+
+/* Fixes for IE < 8 */
+
+/*@media screen\9 {
+  .fileinput-button input {
+    filter: alpha(opacity=0);
+    font-size: 100%;
+    height: 100%;
+  }
+}*/
+
+.worklist-section {
+  padding: 0;
+  /* container for table view, in case clients want extra padding or rounded corners */
+  /* couldn't find this in the app. perhaps it's discarded. reformatted in CLASS selectors anyway */
+  /* icons visible for Cards, not TABLE view */
+  /* filter controls */
+  /* Get Started dropdown for TABLE view, no A HREFs */
+  /* saved filters */
+}
+
+.worklist-section .search-filter {
+  margin-top: 20px;
+}
+
+.worklist-section .work-list-table-container {
+  /* work list table */
+}
+
+.worklist-section .work-list-table-container .table.work-list {
+  /* 
+				Selected rows
+				(temporary solution for currently wacky "info" class selector)
+			*/
+}
+
+.worklist-section .work-list-table-container .table.work-list > thead > tr > th,
+.worklist-section .work-list-table-container .table.work-list > tbody > tr > td,
+.worklist-section .work-list-table-container .table.work-list > tfoot > tr > td {
+  padding: 15px;
+}
+
+.worklist-section .work-list-table-container .table.work-list > thead > tr > td.info,
+.worklist-section .work-list-table-container .table.work-list > tbody > tr > td.info,
+.worklist-section .work-list-table-container .table.work-list > tfoot > tr > td.info,
+.worklist-section .work-list-table-container .table.work-list > thead > tr > th.info,
+.worklist-section .work-list-table-container .table.work-list > tbody > tr > th.info,
+.worklist-section .work-list-table-container .table.work-list > tfoot > tr > th.info,
+.worklist-section .work-list-table-container .table.work-list > thead > tr.info > td,
+.worklist-section .work-list-table-container .table.work-list > tbody > tr.info > td,
+.worklist-section .work-list-table-container .table.work-list > tfoot > tr.info > td,
+.worklist-section .work-list-table-container .table.work-list > thead > tr.info > th,
+.worklist-section .work-list-table-container .table.work-list > tbody > tr.info > th,
+.worklist-section .work-list-table-container .table.work-list > tfoot > tr.info > th,
+.worklist-section .work-list-table-container .table.work-list > tbody > tr.selected > td,
+.worklist-section .work-list-table-container .table.work-list > tbody > tr.worklistactions td {
+  background-color: #416daf;
+  color: white;
+  border-color: #416daf;
+}
+
+.worklist-section .work-list-table-container .table.work-list > thead > tr > td.info .popover,
+.worklist-section .work-list-table-container .table.work-list > tbody > tr > td.info .popover,
+.worklist-section .work-list-table-container .table.work-list > tfoot > tr > td.info .popover,
+.worklist-section .work-list-table-container .table.work-list > thead > tr > th.info .popover,
+.worklist-section .work-list-table-container .table.work-list > tbody > tr > th.info .popover,
+.worklist-section .work-list-table-container .table.work-list > tfoot > tr > th.info .popover,
+.worklist-section .work-list-table-container .table.work-list > thead > tr.info > td .popover,
+.worklist-section .work-list-table-container .table.work-list > tbody > tr.info > td .popover,
+.worklist-section .work-list-table-container .table.work-list > tfoot > tr.info > td .popover,
+.worklist-section .work-list-table-container .table.work-list > thead > tr.info > th .popover,
+.worklist-section .work-list-table-container .table.work-list > tbody > tr.info > th .popover,
+.worklist-section .work-list-table-container .table.work-list > tfoot > tr.info > th .popover,
+.worklist-section .work-list-table-container .table.work-list > tbody > tr.selected > td .popover,
+.worklist-section .work-list-table-container .table.work-list > tbody > tr.worklistactions td .popover {
+  color: #687178;
+}
+
+.worklist-section .work-list-table-container .table.work-list > thead > tr > td.info .fa,
+.worklist-section .work-list-table-container .table.work-list > tbody > tr > td.info .fa,
+.worklist-section .work-list-table-container .table.work-list > tfoot > tr > td.info .fa,
+.worklist-section .work-list-table-container .table.work-list > thead > tr > th.info .fa,
+.worklist-section .work-list-table-container .table.work-list > tbody > tr > th.info .fa,
+.worklist-section .work-list-table-container .table.work-list > tfoot > tr > th.info .fa,
+.worklist-section .work-list-table-container .table.work-list > thead > tr.info > td .fa,
+.worklist-section .work-list-table-container .table.work-list > tbody > tr.info > td .fa,
+.worklist-section .work-list-table-container .table.work-list > tfoot > tr.info > td .fa,
+.worklist-section .work-list-table-container .table.work-list > thead > tr.info > th .fa,
+.worklist-section .work-list-table-container .table.work-list > tbody > tr.info > th .fa,
+.worklist-section .work-list-table-container .table.work-list > tfoot > tr.info > th .fa,
+.worklist-section .work-list-table-container .table.work-list > tbody > tr.selected > td .fa,
+.worklist-section .work-list-table-container .table.work-list > tbody > tr.worklistactions td .fa {
+  color: white;
+}
+
+.worklist-section .work-list-table-container .table.work-list tr {
+  background: #fff;
+}
+
+.worklist-section .work-list-table-container .table.work-list tr.odd td {
+  background: #f9f9f9;
+}
+
+.worklist-section .work-list-table-container .table.work-list tr.even td {
+  background: transparent;
+}
+
+.worklist-section .work-list-table-container .table.work-list tr.worklistactions {
+  position: absolute;
+  right: 10px;
+  display: block;
+  background: #416daf;
+}
+
+.worklist-section .work-list-table-container .table.work-list tr.worklistactions td {
+  background-color: #416daf;
+  color: white;
+  border-color: #416daf;
+}
+
+.worklist-section .work-list-table-container .table.work-list tr.worklistactions td .btn {
+  margin: 0 3px;
+}
+
+.worklist-section .work-list-table-container .table.work-list tr.worklistactions td .btn-group.actions-other .btn {
+  margin: 0;
+}
+
+.worklist-section .work-list-table-container .table.work-list tr.worklistactions td .dropdown-menu {
+  padding: 5px 0;
+}
+
+.worklist-section .work-list-table-container .table.work-list tr.worklistactions td .dropdown-menu > li > span {
+  clear: both;
+  display: block;
+  color: #555555;
+  font-weight: normal;
+  padding: 3px 20px;
+  white-space: nowrap;
+}
+
+.worklist-section .work-list-table-container .table.work-list tr.worklistactions td .dropdown-menu > li > span:hover {
+  color: white;
+  background: #416daf;
+}
+
+.worklist-section .work-list-table-container .table.work-list .worklistdata-effectivedate,
+.worklist-section .work-list-table-container .table.work-list .worklistdata-premium {
+  text-align: right;
+}
+
+.worklist-section .work-list-table-container .table.work-list .worklistdata-complete {
+  text-align: center;
+}
+
+.worklist-section .work-list-table-container .table.work-list .no-account .fa {
+  position: static;
+  right: auto;
+  bottom: auto;
+  font-size: 80%;
+  color: #555555;
+}
+
+.worklist-section .work-list-table-container .table.work-list .no-account .fa:before {
+  content: "\f0c1";
+}
+
+.worklist-section .wi-reference .progress-bar span {
+  margin-left: 5px;
+}
+
+.worklist-section .wi-reference .progress-bar-default span {
+  color: #eeeeee;
+}
+
+.worklist-section .wi-reference .lob-title {
+  margin-left: 10px;
+}
+
+.worklist-section .invisible {
+  display: none;
+}
+
+.worklist-section .progress {
+  margin-bottom: 0;
+}
+
+.worklist-section .progress .bar {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.worklist-section .progress .bar .pull-right {
+  padding-right: 10px;
+}
+
+.worklist-section .blue-header {
+  color: #138a58;
+}
+
+.worklist-section .label-large {
+  padding: 12px;
+  margin: 4px;
+}
+
+.worklist-section .worklist-item.worklist-tile:hover .badge {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.worklist-section .row.searchresults {
+  margin: 0;
+}
+
+.worklist-section div.info-account,
+.worklist-section #account_detail {
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 20px;
+  min-height: 160px;
+  cursor: pointer;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  border-top: 2px solid #fff;
+}
+
+.worklist-section div.info-account h3 {
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  line-height: 1.42857;
+}
+
+.worklist-section div.info-account ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.worklist-section h1#account_title,
+.worklist-section h2.search-results-title {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.worklist-section h2.search-results-title .small {
+  font-size: 50%;
+  color: inherit;
+}
+
+.worklist-section #account_details_container #workitems #work_list_contents .container {
+  width: auto;
+}
+
+.worklist-section h2 {
+  margin-top: 0;
+}
+
+.worklist-section .card.PI .lob-icon.fa-stethoscope,
+.worklist-section .card.KIDRA .lob-icon.fa-dollar,
+.worklist-section .card.CGL .lob-icon.fa-medkit,
+.worklist-section .card.CFRM .lob-icon.fa-picture,
+.worklist-section .card.UMBRC .lob-icon.fa-umbrella,
+.worklist-section .card.BOP .lob-icon.fa-building-o,
+.worklist-section .card.PROPC .lob-icon.fa-building-o,
+.worklist-section .card.AUTOP .lob-icon.fa-road,
+.worklist-section .card.HOME .lob-icon.fa-home,
+.worklist-section .card.WORK .lob-icon.fa-wrench,
+.worklist-section .card.AUTOB .lob-icon.fa-truck {
+  display: inline;
+}
+
+.worklist-section .filter-controls a .fa {
+  padding-right: 5px;
+}
+
+.worklist-section .filter-controls .filter-selector li a .fa {
+  margin-right: 5px;
+}
+
+.worklist-section .filter-controls .filter-selector .account_types-P .fa:before {
+  content: "\f183";
+}
+
+.worklist-section .filter-controls .filter-selector .account_types-C .fa:before {
+  content: "\f0f7";
+}
+
+.worklist-section .filter-controls .filter-selector .account_types-U .fa:before {
+  content: "\f059";
+}
+
+.worklist-section .filter-controls li.lob-AUTOP i.lob-icon:before {
+  content: "\f018";
+}
+
+.worklist-section .filter-controls li.lob-HOME i.lob-icon:before {
+  content: "\f015";
+}
+
+.worklist-section .filter-controls li.lob-WORK i.lob-icon:before {
+  content: "\f0ad";
+}
+
+.worklist-section .filter-controls li.lob-AUTOB i.lob-icon:before {
+  content: "\f0d1";
+}
+
+.worklist-section .filter-controls li.lob-CFRM i.lob-icon:before {
+  content: "\f06c";
+}
+
+.worklist-section .filter-controls li.lob-BOP i.lob-icon:before {
+  content: "\f0b1";
+}
+
+.worklist-section .filter-controls li.lob-MROF i.lob-icon:before {
+  content: "\f201";
+}
+
+.worklist-section .filter-controls li.lob-UMBRP i.lob-icon:before {
+  content: "\f0e9";
+}
+
+.worklist-section .filter-controls li.lob-PROPC i.lob-icon:before {
+  content: "\f19c";
+}
+
+.worklist-section .filter-controls li.lob-CPKGE i.lob-icon:before {
+  content: "\f06b";
+}
+
+.worklist-section .filter-controls li.lob-CGL i.lob-icon:before {
+  content: "\f05b";
+}
+
+.worklist-section .filter-controls li.lob-TEST i.lob-icon:before {
+  content: "\f109";
+}
+
+.worklist-section .filter-controls li.lob-DFIRE i.lob-icon:before {
+  content: "\f06d";
+}
+
+.worklist-section .filter-controls .repeater {
+  display: inline;
+}
+
+.worklist-section .dropdown-menu.filter-selector.filter-lob li.on-click {
+  padding: 3px 20px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.worklist-section .dropdown-menu.filter-selector.filter-lob li.on-click:hover,
+.worklist-section .dropdown-menu.filter-selector.filter-lob li.on-click:focus {
+  color: white;
+  background: #416daf;
+}
+
+.worklist-section .dropdown-menu.saved-filter > li > a {
+  display: inline-block;
+}
+
+.worklist-section .dropdown-menu.saved-filter > li > a.filter-entry {
+  width: 80%;
+  white-space: normal;
+  padding-right: 0;
+}
+
+.worklist-section .dropdown-menu.saved-filter .delete {
+  padding: 3px 10px;
+  max-width: 20%;
+}
+
+.worklist-section .dropdown-menu.saved-filter .delete .fa:before {
+  content: "\f05c";
+}
+
+.card {
+  position: relative;
+  color: #555555;
+  background-color: white;
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding: 20px;
+  min-height: 160px;
+  cursor: pointer;
+  height: 255px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  /* Cards for Work Items */
+  /* Cards for Accounts */
+}
+
+.card:hover {
+  color: white;
+}
+
+.card:hover h2 {
+  color: white;
+}
+
+.card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.card .row.card-actions,
+.card .row.worklist-actions {
+  margin: 0;
+  position: absolute;
+  bottom: 18px;
+}
+
+.card .row.card-actions .card-button .action-button {
+  margin-right: 3px;
+}
+
+.card .row.card-actions .card-button .other-actions {
+  margin-left: -3px;
+}
+
+.card .row.card-actions .card-button .dropdown-menu {
+  padding: 5px 0;
+}
+
+.card .row.card-actions .card-button .dropdown-menu > li > span {
+  clear: both;
+  display: block;
+  color: #555555;
+  font-weight: normal;
+  padding: 3px 20px;
+  white-space: nowrap;
+}
+
+.card .row.card-actions .card-button .dropdown-menu > li > span:hover {
+  color: white;
+  background: #416daf;
+}
+
+.card .row.card-actions .worklist-card-button .worklist-actions {
+  margin-right: 5px;
+}
+
+.card.workitem:hover {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.45);
+}
+
+.card.workitem:hover .card-content h2 .no-account .fa {
+  color: white;
+}
+
+.card.workitem:hover .percentage-color {
+  display: none;
+}
+
+.card.workitem:hover #card-header {
+  border-color: #bfbfbf;
+}
+
+.card.workitem-mouseover .worklist-card-name {
+  /* background-color: #4e9a06; */
+  background-color: #27ae60;
+}
+
+.card.workitem .percentage {
+  color: white;
+  position: absolute;
+  top: 16px;
+  right: 10px;
+}
+
+.card.workitem .delete {
+  display: none;
+  color: white;
+  position: absolute;
+  top: 16px;
+  right: 12px;
+}
+
+.card.workitem .delete .fa {
+  font-size: 30px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.card.workitem .delete .fa:hover,
+.card.workitem .delete .fa:focus {
+  color: white;
+}
+
+.card.workitem .delete .fa:before {
+  content: "\f014";
+}
+
+.card.workitem .card-header {
+  margin: 0 40px 5px 0;
+  border-bottom: 1px solid #bfbfbf;
+  padding-bottom: 5px;
+  font-size: 80%;
+}
+
+.card.workitem .card-header .badge {
+  float: right;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.card.workitem .card-content {
+  margin-right: 50px;
+}
+
+.card.workitem .card-content .fa {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 80px;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.card.workitem .card-content h2 {
+  font-size: 24px;
+  line-height: 24px;
+  padding: 0;
+  padding-right: 25px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.card.workitem .card-content h2 .no-account .fa {
+  position: static;
+  right: auto;
+  bottom: auto;
+  font-size: 80%;
+  color: #555555;
+}
+
+.card.workitem .card-content h2 .no-account .fa:before {
+  content: "\f0c1";
+}
+
+.card.workitem .card-content h2 .popover {
+  font-size: 12px;
+  color: black;
+}
+
+.card.workitem .card-content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card.workitem .card-content ul li {
+  font-size: 14px;
+  line-height: 18.2px;
+}
+
+.card.workitem.PI .card-content .fa:before {
+  content: "\f0ad";
+}
+
+.card.workitem.KIDRA .card-content .fa:before {
+  content: "\f0d6";
+}
+
+.card.workitem.CGL .card-content .fa:before {
+  content: "\f0fa";
+}
+
+.card.workitem.CFRM .card-content .fa:before {
+  content: "\f06c";
+}
+
+.card.workitem.UMBRC .card-content .fa:before {
+  content: "\f0e9";
+}
+
+.card.workitem.BOP .card-content .fa:before {
+  content: "\f0b1";
+}
+
+.card.workitem.PROPC .card-content .fa:before {
+  content: "\f0b1";
+}
+
+.card.workitem.AUTOP .card-content .fa:before {
+  content: "\f018";
+}
+
+.card.workitem.HOME .card-content .fa:before {
+  content: "\f015";
+}
+
+.card.workitem.WORK .card-content .fa:before {
+  content: "\f0ad";
+}
+
+.card.workitem.AUTOB .card-content .fa:before {
+  content: "\f0d1";
+}
+
+.card.workitem.MROF .card-content .fa:before {
+  content: "\f201";
+}
+
+.card.workitem.PROPC .card-content .fa:before {
+  content: "\f19c";
+}
+
+.card.workitem.CPKGE .card-content .fa:before {
+  content: "\f06b";
+}
+
+.card.workitem.CGL .card-content .fa:before {
+  content: "\f05b";
+}
+
+.card.workitem.TEST .card-content .fa:before {
+  content: "\f109";
+}
+
+.card.workitem.DFIRE .card-content .fa:before {
+  content: "\f06d";
+}
+
+.card.workitem .percentage-color {
+  width: 50px;
+  height: 255px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.card.workitem .transaction-type {
+  margin-left: 1em;
+}
+
+.card.workitem.card-inprogress .percentage-color {
+  background-color: #16a085;
+}
+
+.card.workitem.card-refer .percentage-color {
+  background-color: #f0ad4e;
+}
+
+.card.workitem.card-decline .percentage-color {
+  background-color: #c0392b;
+}
+
+.card.workitem.card-approve .percentage-color {
+  background-color: #27ae60;
+}
+
+.card.workitem.card-renewal .percentage-color {
+  background-color: #27ae60;
+}
+
+.card.workitem.card-reject .percentage-color {
+  background-color: #ec6151;
+}
+
+.card.workitem.card-bind .percentage-color {
+  background-color: #2c3e50;
+}
+
+.card.workitem.card-deleted .percentage-color {
+  background-color: #bfbfbf;
+}
+
+.card.workitem.card-inprogress:hover {
+  background: #16a085;
+}
+
+.card.workitem.card-refer:hover {
+  background: #f0ad4e;
+}
+
+.card.workitem.card-decline:hover {
+  background: #c0392b;
+}
+
+.card.workitem.card-approve:hover,
+.card.workitem.card-renewal:hover {
+  background: #27ae60;
+}
+
+.card.workitem.card-bind:hover {
+  background: #2c3e50;
+}
+
+.card.workitem.card-deleted:hover {
+  background: #bfbfbf;
+}
+
+.card.workitem.card-reject:hover {
+  background: #ec6151;
+}
+
+.card.account ul {
+  list-style: none;
+  margin: 0 30px 0 0;
+  padding: 0;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.card.account ul li {
+  font-size: 16.1px;
+}
+
+.card.account .other_name,
+.card.account .entity_name {
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.card.account .delete {
+  position: absolute;
+  top: 16px;
+  right: 10px;
+  color: #fff;
+}
+
+.card.account .delete .fa {
+  font-size: 37px;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.card.account .delete .fa:before {
+  content: "\f014";
+}
+
+.card.account .lob-icon {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  color: rgba(0, 0, 0, 0.1);
+  font-size: 80px;
+}
+
+.card.account.C .lob-icon .fa:before {
+  content: "\f0f7";
+}
+
+.card.account.P .lob-icon .fa:before {
+  content: "\f183";
+}
+
+.card.account.U .lob-icon .fa:before {
+  content: "\f059";
+}
+
+.card.account:hover {
+  color: white;
+  background-color: #416daf;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.45);
+}
+
+.card.account:hover .delete .fa {
+  color: rgba(255, 255, 255, 0.05);
+}
+
+.card.account:hover .delete .fa:hover,
+.card.account:hover .delete .fa:focus {
+  color: white;
+}
+
+.card.add {
+  background-color: transparent;
+  padding: 0;
+  box-shadow: none;
+  /* Add New Account card: BUTTON */
+  /* Add New Account card: LIST */
+  /* Add New Account card: TURNSTILE */
+  /* Add New Account card: PERSONAL & COMMERCIAL */
+}
+
+.card.add .add-button {
+  border: 4px dashed #bfbfbf;
+  text-align: center;
+  height: 100%;
+  padding: 20px;
+}
+
+.card.add .add-button .fa {
+  display: block;
+  font-size: 180px;
+  color: rgba(0, 0, 0, 0.1);
+  position: static;
+  bottom: auto;
+  right: auto;
+}
+
+.card.add .add-button .fa:before {
+  content: "\f067";
+}
+
+.card.add .add-button a {
+  color: #555555;
+  font-size: 24px;
+}
+
+.card.add .add-button:hover {
+  box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.25);
+  color: inherit;
+  background: #416daf;
+  border-color: #416daf;
+}
+
+.card.add .add-button:hover a {
+  color: white;
+}
+
+.card.add .add-button:hover .fa {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.card.add .accountcard.ADD:hover .add-button {
+  background: #416daf;
+  border-color: #416daf;
+}
+
+.card.add .accountcard.ADD:hover .add-button a {
+  color: white;
+}
+
+.card.add .add-list {
+  background: white;
+  height: 100%;
+  padding: 0;
+}
+
+.card.add .add-list h3 {
+  color: white;
+  background: #416daf;
+  padding: 10px;
+  margin: 0;
+  font-size: 110%;
+}
+
+.card.add .add-list h3 .close {
+  opacity: 1;
+  color: rgba(255, 255, 255, 0.3);
+  text-shadow: none;
+  font-size: 30px;
+  margin-top: -6px;
+}
+
+.card.add .add-list h3 .close:hover {
+  color: #ffffff;
+}
+
+.card.add .add-list ul {
+  border: 1px solid #ccc;
+  margin: 20px;
+  overflow: auto;
+  height: 180px;
+  padding: 15px;
+}
+
+.card.add .add-list ul {
+  line-height: 2;
+}
+
+.card.add .add-list ul li:hover {
+  color: #416daf;
+  font-weight: 500;
+}
+
+.card.add .add-turnstile {
+  background: transparent;
+  height: 100%;
+}
+
+.card.add .add-turnstile a {
+  width: 49.6%;
+  height: 100%;
+  display: block;
+  color: #555555;
+  background: white;
+  font-size: 24px;
+  text-align: center;
+  float: left;
+  padding: 10px;
+}
+
+.card.add .add-turnstile a .link {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.card.add .add-turnstile a.start {
+  float: right;
+}
+
+.card.add .add-turnstile a:hover {
+  background: #416daf;
+  color: white;
+}
+
+.card.add .add-turnstile a:hover .fa {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.card.add .add-turnstile a .fa {
+  display: block;
+  font-size: 400%;
+  color: rgba(0, 0, 0, 0.1);
+  position: static;
+  bottom: auto;
+  right: auto;
+  margin-top: 40px;
+}
+
+.card.add .add-turnstile a.upload .fa:before {
+  content: "\f0c2";
+}
+
+.card.add .add-turnstile a.start .fa:before {
+  content: "\f15c";
+}
+
+.card.add .add-account {
+  background: transparent;
+  height: 100%;
+}
+
+.card.add .add-account a {
+  width: 49.6%;
+  height: 100%;
+  display: block;
+  color: #555555;
+  background: white;
+  font-size: 24px;
+  text-align: center;
+  float: left;
+}
+
+.card.add .add-account a .fa {
+  display: block;
+  font-size: 400%;
+  color: rgba(0, 0, 0, 0.1);
+  position: static;
+  bottom: auto;
+  right: auto;
+  margin-top: 70px;
+}
+
+.card.add .add-account a.add-commercial .fa:before {
+  content: "\f0f7";
+}
+
+.card.add .add-account a.add-personal .fa:before {
+  content: "\f183";
+}
+
+.card.add .add-account a.add-unknown .fa:before {
+  content: "\f059";
+}
+
+.card.add .add-account a.add-personal {
+  float: right;
+}
+
+.card.add .add-account a:hover {
+  background: #416daf;
+  color: white;
+}
+
+.card.add .add-account a:hover .fa {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.card.add .add-account:hover {
+  background: transparent;
+}
+
+footer {
+  background: #555555;
+  color: #bfbfbf;
+  padding: 20px 0;
+  margin-top: 0;
+}
+
+footer h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: white;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+footer .footer-credit {
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer .footer-credit p {
+  padding: 0;
+  margin: 0;
+  color: #888888;
+}
+
+footer a,
+footer ul.link-list li a {
+  color: white;
+}
+
+footer .fa {
+  color: white;
+}
+
+footer .ap-contact {
+  /* font awesome control */
+}
+
+footer .ap-contact .postal {
+  margin-bottom: 20px;
+}
+
+footer .ap-contact .fa {
+  margin-right: 6px;
+}
+
+footer .ap-contact .remote .telephone .fa:before {
+  content: "\f095";
+}
+
+footer .ap-contact .remote .email .fa:before {
+  content: "\f0e0";
+}
+
+@media (max-width: 1200px) {
+  footer {
+    padding: 20px 0;
+  }
+}
+
+.timeline-dialog .timeline-event-list.col-md-3 {
+  padding: 0;
+}
+
+.timeline-dialog .timeline-event-list ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.timeline-dialog .timeline-event-list ul li a {
+  display: block;
+  padding: 10px;
+}
+
+.timeline-dialog .timeline-event-list ul li a .timeline-counter {
+  font-weight: bold;
+}
+
+.timeline-dialog .timeline-event-list ul li a .timeline-title {
+  display: block;
+  line-height: 100%;
+  margin-bottom: 5px;
+}
+
+.timeline-dialog .timeline-event-list ul li a .timeline-timestamp {
+  font-size: 80%;
+  display: block;
+  color: #bfbfbf;
+}
+
+.timeline-dialog .timeline-event-list ul li a:hover {
+  background-color: #eeeeee;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.timeline-dialog .timeline-event-list ul li.active a {
+  background-color: #416daf;
+  color: #fff;
+}
+
+.timeline-dialog .timeline-event-list ul li.active a .timeline-timestamp {
+  color: #fff;
+}
+
+.timeline-dialog .timeline-header {
+  padding: 10px 0;
+  border-bottom: 1px solid #bfbfbf;
+  margin-bottom: 10px;
+}
+
+.timeline-dialog .timeline-header p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.timeline-dialog .timeline-header p .timeline-when {
+  float: right;
+  font-weight: normal;
+}
+
+h2.start,
+h2.date {
+  font-size: 20px;
+}
+
+.vco-navigation,
+.nav-container {
+  display: none;
+}
+
+.slider-item,
+.vco-slider {
+  overflow-y: inherit !important;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.account-section {
+  padding-bottom: 40px;
+  /*	Dropdowns */
+  /*	Account Detail */
+  /* FORM outside of our standard markup (Locations and People tabs) */
+  /*	tabbed UI */
+  /*	888 pixels is an artistic decision. Existing breakpoints don't look as good */
+}
+
+.account-section .nav > li > a {
+  color: white;
+  background: #bfbfbf;
+  border-color: #bfbfbf;
+  border: 0;
+  margin-bottom: 1px;
+}
+
+.account-section .nav > li > a:hover {
+  color: white;
+  background: #d9d9d9;
+  border-color: #d9d9d9;
+}
+
+.account-section .nav-tabs > li.active > a,
+.account-section .nav-tabs > li.active > a:hover,
+.account-section .nav-tabs > li.active > a:focus {
+  color: white;
+  background: #555555;
+  border-color: #555555;
+  outline: 0;
+  border: 0;
+}
+
+.account-section .filter-type li a .fa {
+  margin-right: 5px;
+}
+
+.account-section .filter-type .type-P .fa:before {
+  content: "\f183";
+}
+
+.account-section .filter-type .type-C .fa:before {
+  content: "\f0f7";
+}
+
+.account-section .account-details {
+  margin: 40px 0;
+}
+
+.account-section .account-details .header {
+  color: #fff;
+  background: #555555;
+  padding: 10px;
+  overflow: auto;
+}
+
+.account-section .account-details .header .edit-account .fa:before {
+  content: "\f044";
+}
+
+.account-section .account-details .header .merge-account .fa:before {
+  content: "\f074";
+}
+
+.account-section .account-details .header .delete-account .fa:before {
+  content: "\f014";
+}
+
+.account-section .account-details .header h2 {
+  display: inline-block;
+  color: #fff;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  line-height: 2;
+}
+
+.account-section .account-details .header ul {
+  list-style: none;
+  margin: 0;
+}
+
+.account-section .account-details .header li {
+  display: inline;
+  font-size: 24.5px;
+  margin-left: 20px;
+}
+
+.account-section .account-details .header li span {
+  display: none;
+}
+
+.account-section .account-details .header li a {
+  color: #fff;
+}
+
+.account-section .account-details .header li a:hover {
+  color: #bfbfbf;
+}
+
+.account-section .account-details .account-detail .info-internal dl dt {
+  font-style: normal;
+  font-weight: 100;
+  font-size: 17.5px;
+}
+
+.account-section .account-details .account-detail .info-internal dl dd {
+  margin-bottom: .5em;
+  padding-bottom: .5em;
+  border-bottom: 1px solid;
+  border-color: #f2f2f2;
+}
+
+.account-section .account-details .account-detail .info-account.row {
+  position: relative;
+  background: #fff;
+  min-height: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  cursor: default;
+  border: 0;
+  -webkit-box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.25);
+}
+
+.account-section .account-details .account-detail .info-account.row .account-column {
+  position: relative;
+  padding: 20px;
+}
+
+.account-section .account-details .account-detail .info-account.row .account-column dl {
+  margin-bottom: 1em;
+}
+
+.account-section .account-details .account-detail .info-account.row .account-column dl dt {
+  font-weight: 600;
+}
+
+.account-section .account-details .account-detail .info-account.row .account-column dl dt.account-name {
+  font-size: 24.5px;
+  font-weight: 400;
+  line-height: 1.21428571;
+  margin-bottom: .5em;
+}
+
+.account-section .account-details .account-detail .info-account.row .account-column dl dd {
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.account-section .account-details .account-detail .info-account.row .account-column.contact-info {
+  border-left: 1px solid #f2f2f2;
+  border-right: 1px solid #f2f2f2;
+}
+
+.account-section .account-details .account-detail .info-account.row .account-column.contact-info .phone-label {
+  color: #bfbfbf;
+}
+
+.account-section form.account-form {
+  /* 
+			IE 10 on Windows 8 
+			http://stackoverflow.com/questions/1120879/css-checkbox-input-styling
+		*/
+  /* alerts specific to account details */
+  /* horizontal alignment of Type, Company & Person for People/Add Details */
+}
+
+.account-section form.account-form .form-control {
+  width: auto;
+}
+
+.account-section form.account-form .search-field .form-control {
+  width: 100%;
+}
+
+.account-section form.account-form .date .input-group-addon .fa {
+  line-height: 18px;
+}
+
+.account-section form.account-form .date .input-group-addon .fa:before {
+  content: "\f073";
+}
+
+.account-section form.account-form .input-group.date {
+  display: inline-block;
+  width: 146px;
+}
+
+.account-section form.account-form .input-group.date .form-control {
+  float: none;
+}
+
+.account-section form.account-form .input-group.date .input-group-addon {
+  height: 34px;
+  padding: 6px 12px;
+  display: inline-block;
+  margin-left: -4px;
+  margin-top: -2px;
+}
+
+.account-section form.account-form.form-horizontal ::-ms-check {
+  background: transparent;
+}
+
+.account-section form.account-form.form-horizontal .form-group .checkbox input[type="checkbox"] {
+  padding: 0;
+  outline: 0;
+}
+
+.account-section form.account-form .tab-content .initial-display-messages .alert,
+.account-section form.account-form .tab-content .ajax-messages .alert {
+  position: relative;
+}
+
+.account-section form.account-form .tab-content .initial-display-messages .alert .fa,
+.account-section form.account-form .tab-content .ajax-messages .alert .fa {
+  left: 15px;
+}
+
+.account-section form.account-form .radioSet {
+  overflow: auto;
+}
+
+.account-section form.account-form .radioSet .options {
+  padding-top: 7px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.account-section form.account-form .radioSet .options label {
+  margin-left: 10px;
+  margin-bottom: 0;
+  padding-left: 20px;
+  vertical-align: middle;
+}
+
+.account-section form.account-form .radioSet .options label input[type="radio"] {
+  float: left;
+  margin-left: -20px;
+  margin-top: 4px;
+  line-height: normal;
+  padding: 0;
+  min-height: 0;
+}
+
+.account-section .tab-content {
+  position: relative;
+  background: transparent;
+  padding: 0;
+  box-shadow: 0;
+}
+
+.account-section .tab-content .tab-white-background {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #eeeeee;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.account-section .tab-content .agencyportal-form {
+  border: 0;
+  padding: 0;
+}
+
+.account-section .tab-content table.roster {
+  background: #fff;
+}
+
+.account-section .tab-content table.roster thead td,
+.account-section .tab-content table.roster thead th {
+  color: #555555;
+  background: #fff;
+}
+
+@media (max-width: 698px) {
+  .account-section .account-details .account-detail .info-account.row .account-column {
+    min-height: 0;
+    border: 0;
+    border-bottom: 1px solid #f2f2f2;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.label-in-progress {
+  background-color: #16a085;
+}
+
+.label-referred {
+  background-color: #f0ad4e;
+}
+
+.label-declined {
+  background-color: #c0392b;
+}
+
+.label-approved {
+  background-color: #27ae60;
+}
+
+.label-renewal {
+  background-color: #27ae60;
+}
+
+.label-rejcted {
+  background-color: #ec6151;
+}
+
+.label-bound {
+  background-color: #2c3e50;
+}
+
+.label-deleted {
+  background-color: #bfbfbf;
+}
+
+#ui-timepicker-div {
+  padding: 5px;
+  font-size: inherit;
+}
+
+#ui-timepicker-div .ui-helper-clearfix {
+  min-height: 0;
+}
+
+#ui-timepicker-div .ui-helper-clearfixbefore {
+  content: "";
+  display: table;
+}
+
+#ui-timepicker-div .ui-helper-clearfixafter {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#ui-timepicker-div .ui-widget {
+  font-size: 1.1em;
+}
+
+#ui-timepicker-div .ui-widget-contenta {
+  color: #416daf;
+}
+
+#ui-timepicker-div .ui-widget-header {
+  border: 0;
+}
+
+#ui-timepicker-div .ui-widget-headera {
+  color: white;
+}
+
+#ui-timepicker-div .ui-state-default {
+  background: transparent;
+  padding: 5px 8px;
+  border-radius: 4px;
+}
+
+#ui-timepicker-div .ui-state-defaulta {
+  text-decoration: none;
+}
+
+#ui-timepicker-div .ui-state-hover {
+  border: 0;
+  background: #eeeeee;
+}
+
+#ui-timepicker-div .ui-state-hovera {
+  color: #85a3d2;
+}
+
+#ui-timepicker-div .ui-state-active {
+  border: 0;
+  color: white;
+  background: #416daf;
+}
+
+#ui-timepicker-div .ui-state-activea {
+  text-decoration: none;
+}
+
+#ui-timepicker-div .ui-state-highlight {
+  border: 1px solid #fed22f;
+  color: #363636;
+}
+
+#ui-timepicker-div .ui-state-highlighta {
+  color: #363636;
+}
+
+#ui-timepicker-div .ui-corner-all {
+  border-radius: 4px;
+}
+
+#ui-timepicker-div .ui-timepicker-table {
+  display: inline-table;
+  width: 0;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+#ui-timepicker-div .ui-timepicker-table table {
+  margin: 0.15em 0 0 0;
+}
+
+#ui-timepicker-div .ui-timepicker-table .ui-timepicker-title {
+  line-height: 1.8em;
+  text-align: center;
+}
+
+#ui-timepicker-div .ui-timepicker-table td {
+  padding: 5px;
+  width: auto;
+  vertical-align: top;
+}
+
+#ui-timepicker-div .ui-timepicker-table td span {
+  display: block;
+  width: 1.2em;
+  text-align: left;
+  text-decoration: none;
+}
+
+#ui-timepicker-div .ui-timepicker-table td span a {
+  display: block;
+  width: 1.2em;
+  cursor: pointer;
+  text-align: left;
+  text-decoration: none;
+}
+
+#ui-timepicker-div .ui-timepicker-table th.periods {
+  padding: 5px;
+  width: 2.2em;
+  vertical-align: top;
+}
+
+#ui-timepicker-div .ui-timepicker-hours {
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+#ui-timepicker-div .ui-timepicker-hours .ui-timepicker-minutes {
+  padding: 5px;
+}
+
+/* modifying /lib/bootstrap-datepicker-master/less/datepicker3.less  */
+
+/* datepicker (data entry forms) */
+
+.datepicker table tr:first-child th:hover,
+.open .dropdown-toggle.datepicker table tr:first-child th:hover,
+.datepicker table tr td span:hover,
+.open .dropdown-toggle.datepicker table tr td span:hover,
+.datepicker table tr td.day:hover,
+.open .dropdown-toggle.datepicker table tr td.day:hover,
+.datepicker table tr td.day.focused,
+.open .dropdown-toggle.datepicker table tr td.day.focused,
+.datepicker table tr td.disabled,
+.open .dropdown-toggle.datepicker table tr td.disabled,
+.datepicker table tr td.disabled:hover,
+.open .dropdown-toggle.datepicker table tr td.disabled:hover,
+.datepicker table tr td.disabled:hover:hover,
+.open .dropdown-toggle.datepicker table tr td.disabled:hover:hover,
+.datepicker table tr td:focus,
+.open .dropdown-toggle.datepicker table tr td:focus,
+.datepicker table tr td:hover:focus,
+.open .dropdown-toggle.datepicker table tr td:hover:focus,
+.datepicker table tr td.disabled:focus,
+.open .dropdown-toggle.datepicker table tr td.disabled:focus,
+.datepicker table tr td.disabled:hover:focus,
+.open .dropdown-toggle.datepicker table tr td.disabled:hover:focus,
+.datepicker table tr td.disabled:active,
+.open .dropdown-toggle.datepicker table tr td.disabled:active,
+.datepicker table tr td.disabled:hover:active,
+.open .dropdown-toggle.datepicker table tr td.disabled:hover:active,
+.datepicker table tr td.disabled.active,
+.open .dropdown-toggle.datepicker table tr td.disabled.active,
+.datepicker table tr td.disabled:hover.active,
+.open .dropdown-toggle.datepicker table tr td.disabled:hover.active {
+  background-color: #416daf;
+  border: none;
+}
+
+.datepicker table tr td.today,
+.open .dropdown-toggle.datepicker table tr td.today {
+  background-color: #bfbfbf;
+}
+
+.datepicker table tr td.active,
+.open .dropdown-toggle.datepicker table tr td.active,
+.datepicker table tr td:hover.active,
+.open .dropdown-toggle.datepicker table tr td:hover.active,
+.datepicker table tr td:active,
+.open .dropdown-toggle.datepicker table tr td:active,
+.datepicker table tr td:hover:active,
+.open .dropdown-toggle.datepicker table tr td:hover:active {
+  color: white;
+  background-color: #416daf;
+}
+
+/* ap calendar (dropdown from Search Filter) */
+
+.ap-calendar .dropdown-menu {
+  background-color: white;
+  padding: 5px;
+  width: auto !important;
+}
+
+.ap-calendar .dropdown-menu li:hover {
+  background: transparent !important;
+}
+
+.ap-calendar .dropdown-menu li table {
+  width: 300px;
+}
+
+.ap-calendar .dropdown-menu li table:focus,
+.ap-calendar .dropdown-menu li table:active {
+  border: 0;
+  outline: 0;
+}
+
+.ap-calendar .dropdown-menu li table .btn-sm,
+.ap-calendar .dropdown-menu li table.h6 em {
+  padding: 6px 10px !important;
+  float: none !important;
+}
+
+.ap-calendar .dropdown-menu li table thead th {
+  text-align: center;
+  padding: 2px;
+}
+
+.ap-calendar .dropdown-menu li table thead th .btn {
+  margin: 0 !important;
+}
+
+.ap-calendar .dropdown-menu li table thead th .btn.pull-right {
+  float: left !important;
+}
+
+.ap-calendar .dropdown-menu li table tbody td {
+  text-align: center;
+}
+
+.ap-calendar .dropdown-menu li table tbody td.h6 em {
+  font-style: normal;
+}
+
+.ap-calendar .dropdown-menu li table tbody td.text-center {
+  padding: 2px;
+}
+
+.ap-calendar .dropdown-menu li table .btn.active {
+  color: #fff !important;
+  background-color: #416daf !important;
+}
+
+.ap-calendar .dropdown-menu li table .btn.active .text-info {
+  color: white;
+}
+
+.ap-calendar .dropdown-menu li .btn {
+  margin-bottom: 0 !important;
+}
+
+.ap-calendar .dropdown-menu li .btn.btn-info,
+.ap-calendar .dropdown-menu li .btn.btn-danger,
+.ap-calendar .dropdown-menu li .btn.btn-success {
+  color: #333;
+  background: white;
+  border-color: #ccc;
+}
+
+.ap-calendar .dropdown-menu li .btn.btn-info:hover,
+.ap-calendar .dropdown-menu li .btn.btn-danger:hover,
+.ap-calendar .dropdown-menu li .btn.btn-success:hover {
+  background: #eeeeee;
+}
+
+.ap-calendar .dropdown-menu li .pull-left .btn {
+  float: left !important;
+}
+
+/* Policy Summary */
+
+.policy-summary.endorsement {
+  padding-top: 20px;
+}
+
+.policy-summary .window-history {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.policy-summary .window-history .fa {
+  font-size: 70%;
+}
+
+.policy-summary h1,
+.policy-summary h2,
+.policy-summary h3 {
+  margin-top: 0;
+}
+
+.policy-summary .header h1 {
+  color: #687178;
+  position: relative;
+}
+
+.policy-summary .header h1 .label {
+  float: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: 4px;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid #555555;
+  font-size: 50%;
+  /* Policy summary JSPs should use the IWorkItemStatus.getMnemonic().toLowerCase()
+				   as a key in these CSS styles and not the after title which can vary across
+				   locales. Below we have kept both until all template JSPs are cut over to properly
+				   use IWorkItemStatus.getMnemonic().toLowerCase() */
+}
+
+.policy-summary .header h1 .label-in-progress {
+  color: #16a085;
+  border-color: #16a085;
+}
+
+.policy-summary .header h1 .label-inprogress {
+  color: #16a085;
+  border-color: #16a085;
+}
+
+.policy-summary .header h1 .label-referred {
+  color: #f0ad4e;
+  border-color: #f0ad4e;
+}
+
+.policy-summary .header h1 .label-refer {
+  color: #f0ad4e;
+  border-color: #f0ad4e;
+}
+
+.policy-summary .header h1 .label-declined {
+  color: #c0392b;
+  border-color: #c0392b;
+}
+
+.policy-summary .header h1 .label-decline {
+  color: #c0392b;
+  border-color: #c0392b;
+}
+
+.policy-summary .header h1 .label-approved {
+  color: #27ae60;
+  border-color: #27ae60;
+}
+
+.policy-summary .header h1 .label-approve {
+  color: #27ae60;
+  border-color: #27ae60;
+}
+
+.policy-summary .header h1 .label-renewal {
+  color: #27ae60;
+  border-color: #27ae60;
+}
+
+.policy-summary .header h1 .label-rejected {
+  color: #ec6151;
+  border-color: #ec6151;
+}
+
+.policy-summary .header h1 .label-reject {
+  color: #ec6151;
+  border-color: #ec6151;
+}
+
+.policy-summary .header h1 .label-bound {
+  color: #2c3e50;
+  border-color: #2c3e50;
+}
+
+.policy-summary .header h1 .label-bind {
+  color: #2c3e50;
+  border-color: #2c3e50;
+}
+
+.policy-summary .header h1 .label-deleted {
+  color: #bfbfbf;
+  border-color: #bfbfbf;
+}
+
+.policy-summary .header h1 .label-delete {
+  color: #bfbfbf;
+  border-color: #bfbfbf;
+}
+
+.policy-summary .header p {
+  color: #687178;
+}
+
+.policy-summary .premiums .premium {
+  position: relative;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.policy-summary .premiums .premium h3 {
+  font-size: 30px;
+  color: #138a58;
+  border-bottom: 1px solid #bfbfbf;
+  margin: 0;
+  padding-bottom: 5px;
+  margin-bottom: 8px;
+}
+
+.policy-summary .premiums .premium h4 {
+  margin: 0;
+  font-size: 14px;
+}
+
+@media (max-width: 992px) {
+  .policy-summary .premiums .premium {
+    text-align: left;
+    border-bottom: 1px solid #bfbfbf;
+    margin-bottom: 25px;
+    padding-bottom: 8px;
+  }
+
+  .policy-summary .premiums .premium h3 {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .policy-summary .premiums .premium h4 {
+    position: absolute;
+    right: 0;
+    top: 20%;
+  }
+}
+
+.policy-summary .cards .card {
+  cursor: default;
+  min-height: 170px;
+  height: auto;
+  font-size: inherit;
+}
+
+.policy-summary .cards .card:hover {
+  color: inherit;
+}
+
+.policy-summary .cards .card .fa {
+  color: #bfbfbf;
+  font-size: 35px;
+}
+
+.policy-summary .cards .card.agency .fa:before {
+  content: "\f0f7";
+}
+
+.policy-summary .cards .card.applicant .fa:before {
+  content: "\f007";
+}
+
+.policy-summary .cards .card.documents .fa:before {
+  content: "\f0c5";
+}
+
+.policy-summary .cards .card.policy .fa:before {
+  content: "\f0c5";
+}
+
+.policy-summary .switch-views {
+  border-bottom: 1px solid #bfbfbf;
+  margin: 0 0 1em;
+  padding-bottom: 1em;
+}
+
+.policy-summary .table .table {
+  background: inherit;
+}
+
+.policy-summary .table .roster {
+  border: 0;
+}
+
+.policy-summary table.coverage-comparision tr.tabs th {
+  width: 33%;
+  vertical-align: top;
+}
+
+.policy-summary table.coverage-comparision tr.tabs th .fa {
+  float: right;
+  z-index: 2;
+  color: #bfbfbf;
+}
+
+.policy-summary table.coverage-comparision tr.tabs th .fa:before {
+  content: "\f1ce";
+}
+
+.policy-summary table.coverage-comparision tr.tabs th.active {
+  background: #eeeeee;
+  cursor: pointer;
+}
+
+.policy-summary table.coverage-comparision tr.tabs th.active.good {
+  background: #fcf8e3;
+  border-color: #8a6d3b;
+}
+
+.policy-summary table.coverage-comparision tr.tabs th.active.good h3 {
+  color: #8a6d3b;
+}
+
+.policy-summary table.coverage-comparision tr.tabs th.active.better {
+  background: #d9edf7;
+  border-color: #31708f;
+}
+
+.policy-summary table.coverage-comparision tr.tabs th.active.better h3 {
+  color: #31708f;
+}
+
+.policy-summary table.coverage-comparision tr.tabs th.active.best {
+  background: #dff0d8;
+  border-color: #3c763d;
+}
+
+.policy-summary table.coverage-comparision tr.tabs th.active.best h3 {
+  color: #3c763d;
+}
+
+.policy-summary table.coverage-comparision tr.tabs th ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* Results table styles */
+
+table.multi_results td {
+  border-bottom: 0px !important;
+  padding: 2px !important;
+}
+
+table.multi_results tbody tr td {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+table.multi_results th {
+  width: 100px;
+  text-align: center;
+  padding: 2px !important;
+}
+
+#mr_table {
+  border-bottom: solid 2px #C0C0C0;
+  overflow-x: hidden;
+}
+
+#multi_results div.mr_modal {
+  max-width: 75%;
+  overflow: auto;
+}
+
+#mr_buttons {
+  margin: 20px;
+  text-align: center;
+}
+
+#mr_buttons input[type=button] {
+  margin: 0 10px 0 10px;
+}
+
+#mr_inner {
+  max-height: 300px;
+  overflow: auto;
+}
+
+#mr_message {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+
+#mr_body td a {
+  text-decoration: underline;
+}
+
+#mr_body td a:hover {
+  text-weight: bold;
+  color: red;
+}
+
+#mr_save_message {
+  color: red;
+  text-align: center;
+  display: none;
+  font-weight: bold;
+}
+
+tr.mr_title_row.even td {
+  background-color: #dfdfdf !important;
+  cursor: default !important;
+}
+
+tr.mr_title_row.odd td {
+  background-color: transparent !important;
+  cursor: default !important;
+}
+
+/*# sourceMappingURL=agencyportal.css.map */

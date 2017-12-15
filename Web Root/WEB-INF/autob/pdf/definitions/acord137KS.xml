@@ -1,0 +1,55 @@
+<fields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/pdf/pdfDefinitions.xsd">
+		<!-- Hired Physical Damage -->
+	<field>
+		<eLabel>Vehicle_Comprehensive_DeductibleAmount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlAutoHiredInfo.CommlCoverage[CoverageCd='COMP'].Deductible.FormatInteger</xpath>
+	</field>
+		
+	<!-- Hired/Borrowed Liability & non-owned liability -->
+	<checkBoxGroup>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='HRDBD'].CoverageCd</xpath>
+		<checkBox trueValue="HRDBD">
+			<eLabel>Vehicle_HiredBorrowed_YesIndicator_A</eLabel>
+		</checkBox>
+	</checkBoxGroup>
+	<checkBoxGroup>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlCoverage[CoverageCd='NOWND'].CoverageCd</xpath>
+		<checkBox trueValue="NOWND">
+			<eLabel>Vehicle_NonOwned_YesIndicator_A</eLabel>
+		</checkBox>
+	</checkBoxGroup>
+	
+	<checkBoxGroup>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlAutoHiredInfo.CommlCoverage[CoverageCd='COMP'].CoverageCd</xpath>
+		<checkBox trueValue="COMP">
+			<eLabel>Vehicle_Coverage_ComprehensiveDeductibleIndicator_A</eLabel>
+		</checkBox>
+	</checkBoxGroup>
+	<checkBoxGroup>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlAutoOptionalCoverages.CommlAutoHiredInfo.CommlCoverage[CoverageCd='PERIL'].CoverageCd</xpath>
+		<checkBox trueValue="PERIL">
+			<eLabel>Vehicle_Coverage_SpecifiedCauseOfLossDeductibleIndicator_A</eLabel>
+		</checkBox>
+	</checkBoxGroup>
+	
+	<!-- Underinsured Motorist -->
+	<checkBoxGroup>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol.UnderinsuredMotoristSymbolCd</xpath>
+		<checkBox trueValue="2">
+			<eLabel>Vehicle_BusinessAutoSymbol_TwoIndicator_D</eLabel>
+		</checkBox>
+		<checkBox trueValue="3">
+			<eLabel>Vehicle_BusinessAutoSymbol_ThreeIndicator_D</eLabel>
+		</checkBox>
+		<checkBox trueValue="4">
+			<eLabel>Vehicle_BusinessAutoSymbol_FourIndicator_D</eLabel>
+		</checkBox>
+		<checkBox trueValue="6">
+			<eLabel>Vehicle_BusinessAutoSymbol_SixIndicator_D</eLabel>
+		</checkBox>
+		<checkBox trueValue="7">
+			<eLabel>Vehicle_BusinessAutoSymbol_SevenIndicator_D</eLabel>
+		</checkBox>
+	</checkBoxGroup>
+    </fields>

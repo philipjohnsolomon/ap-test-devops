@@ -1,0 +1,144 @@
+%PDF-1.4
+%ÿð°
+1 0 obj 
+<< /AcroForm << /DR << /Font << /F2 2 0 R >> >> /Fields [ 3 0 R 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 14 0 R 15 0 R 16 0 R 17 0 R 18 0 R 19 0 R ] >> /OpenAction << /JS (function DateV\(event\) {  var regEx = /^\\d{1,2}\\/\\d{1,2}\\/\\d{4}$/; if \(!regEx.test\(event.value\)\) { event.rc = false; app.alert\("The date must be of the format MM/DD/YYYY."\); } };) /S /JavaScript /Type /Action >> /Pages 20 0 R /Type /Catalog >>
+endobj
+21 0 obj 
+<< /Author (ACORD Corporation) /CreationDate (D:20140430152720-04'00') /Creator (Silverlake Software LLC - Forms Dev Environment) /ModDate (D:20140430152720-04'00') /Producer (Silverlake Software LLC - Form Designer - v1.3.14209) /Title (ACORD 0101 2008-01 Acroform) >>
+endobj
+2 0 obj 
+<< /BaseFont /Arial /Encoding /WinAnsiEncoding /FirstChar 0 /FontDescriptor << /Ascent 905.27 /CapHeight 716.31 /Descent -211.91 /Flags 32 /FontBBox [ -45.90 -168.46 1000.00 938.48 ] /FontName /Arial /ItalicAngle 0.00 /StemV 0.00 /Type /FontDescriptor >> /LastChar 255 /Subtype /Type1 /Type /Font /Widths [ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 277.83 277.83 354.98 556.15 556.15 889.16 666.99 190.92 333.01 333.01 389.16 583.98 277.83 333.01 277.83 277.83 556.15 556.15 556.15 556.15 556.15 556.15 556.15 556.15 556.15 556.15 277.83 277.83 583.98 583.98 583.98 556.15 1015.14 666.99 666.99 722.17 722.17 666.99 610.84 777.83 722.17 277.83 500.00 666.99 556.15 833.01 722.17 777.83 666.99 777.83 722.17 666.99 610.84 722.17 666.99 943.85 666.99 666.99 610.84 277.83 277.83 277.83 469.24 556.15 333.01 556.15 556.15 500.00 556.15 556.15 277.83 556.15 556.15 222.17 222.17 500.00 222.17 833.01 556.15 556.15 556.15 556.15 333.01 500.00 277.83 556.15 500.00 722.17 500.00 500.00 500.00 333.98 259.77 333.98 583.98 0 556.15 0 222.17 556.15 333.01 1000.00 556.15 556.15 333.01 1000.00 666.99 333.01 1000.00 0 610.84 0 0 222.17 222.17 333.01 333.01 350.10 556.15 1000.00 333.01 1000.00 500.00 333.01 943.85 0 500.00 666.99 277.83 333.01 556.15 556.15 556.15 556.15 259.77 556.15 333.01 736.82 370.12 556.15 583.98 333.01 736.82 552.25 399.90 548.83 333.01 333.01 333.01 576.17 537.11 333.01 333.01 333.01 365.23 556.15 833.98 833.98 833.98 610.84 666.99 666.99 666.99 666.99 666.99 666.99 1000.00 722.17 666.99 666.99 666.99 666.99 277.83 277.83 277.83 277.83 722.17 722.17 777.83 777.83 777.83 777.83 777.83 583.98 777.83 722.17 722.17 722.17 722.17 666.99 666.99 610.84 556.15 556.15 556.15 556.15 556.15 556.15 889.16 500.00 556.15 556.15 556.15 556.15 277.83 277.83 277.83 277.83 556.15 556.15 556.15 556.15 556.15 556.15 556.15 548.83 610.84 556.15 556.15 556.15 556.15 500.00 556.15 500.00 ] >>
+endobj
+3 0 obj 
+<< /DV (ACORD 0101 2008-01 Acroform) /F 2 /Ff 1 /FT /Tx /P 22 0 R /Rect [ 0 1 0 1 ] /Subtype /Widget /T (Form_EditionIdentifier_A) /TU (The edition identifier of the form including the form number and edition \(the date is typically formatted YYYY/MM\).) /Type /Annot /V (ACORD 0101 2008-01 Acroform) >>
+endobj
+4 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 22 0 R /Rect [ 378 756 594 768 ] /Subtype /Widget /T (Producer_CustomerIdentifier_A) /TU (Enter identifier: The customer's identification number assigned by the producer \(e.g. agency or brokerage\). ) /Type /Annot >>
+endobj
+5 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 22 0 R /Rect [ 378 744 464 756 ] /Subtype /Widget /T (Location_ProducerIdentifier_A) /TU (Enter number: The producer assigned number of the location. ) /Type /Annot >>
+endobj
+6 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 22 0 R /Rect [ 536 720 558 732 ] /Subtype /Widget /T (Form_CurrentPageNumber_A) /TU (Enter number: The page number applicable to this page. ) /Type /Annot >>
+endobj
+7 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 22 0 R /Rect [ 572 720 594 732 ] /Subtype /Widget /T (Form_TotalPageNumber_A) /TU (Enter number: The total number of pages applicable to this form \(e.g., Page 1 of 4\).  If only one page, indicate Page 1 of 1. ) /Type /Annot >>
+endobj
+8 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 22 0 R /Rect [ 22 690 302 702 ] /Subtype /Widget /T (Producer_FullName_A) /TU (Enter text: The full name of the producer/agency. ) /Type /Annot >>
+endobj
+9 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 22 0 R /Rect [ 22 666 302 678 ] /Subtype /Widget /T (Policy_PolicyNumberIdentifier_A) /TU (Enter identifier: The identifier assigned by the insurer to the policy, or submission, being referenced exactly as it appears on the policy, including prefix and suffix symbols. If required for self-insurance, the self-insured license or contract number. ) /Type /Annot >>
+endobj
+10 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 22 0 R /Rect [ 22 642 252 654 ] /Subtype /Widget /T (Insurer_FullName_A) /TU (Enter text: The insurer's full legal company name\(s\) as found in the file copy of the policy.  Use the actual name of the company within the group to which the policy has been issued.  This is not the insurer's group name or trade name. ) /Type /Annot >>
+endobj
+11 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 22 0 R /Rect [ 259 642 302 654 ] /Subtype /Widget /T (Insurer_NAICCode_A) /TU (Enter code: The identification code assigned to the insurer by the NAIC. ) /Type /Annot >>
+endobj
+12 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 22 0 R /Rect [ 310 690 590 702 ] /Subtype /Widget /T (NamedInsured_FullName_A) /TU (Enter text: The named insured\(s\) as it/they will appear on the policy declarations page. ) /Type /Annot >>
+endobj
+13 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 22 0 R /Rect [ 310 678 590 690 ] /Subtype /Widget /T (NamedInsured_FullName_B) /TU (Enter text: The named insured\(s\) as it/they will appear on the policy declarations page. ) /Type /Annot >>
+endobj
+14 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 22 0 R /Rect [ 310 666 590 678 ] /Subtype /Widget /T (NamedInsured_FullName_C) /TU (Enter text: The named insured\(s\) as it/they will appear on the policy declarations page. ) /Type /Annot >>
+endobj
+15 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 22 0 R /Rect [ 310 654 590 666 ] /Subtype /Widget /T (NamedInsured_FullName_D) /TU (Enter text: The named insured\(s\) as it/they will appear on the policy declarations page. ) /Type /Annot >>
+endobj
+16 0 obj 
+<< /AA << /V << /JS (DateV\(event\);) /S /JavaScript /Type /Action >> >> /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /MaxLen 10 /P 22 0 R /Q 1 /Rect [ 367 642 457 654 ] /Subtype /Widget /T (Policy_EffectiveDate_A) /TU (Enter date: The effective date of the policy.  The date that the terms and conditions of the policy commence. ) /Type /Annot >>
+endobj
+17 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 22 0 R /Rect [ 90 602 130 614 ] /Subtype /Widget /T (AdditionalRemark_FormIdentifier_A) /TU (Enter identifier: The form number to which this section is attached. ) /Type /Annot >>
+endobj
+18 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8388608 /FT /Tx /P 22 0 R /Rect [ 191 602 590 614 ] /Subtype /Widget /T (AdditionalRemark_FormName_A) /TU (Enter text: The name of the form to which this section is attached. ) /Type /Annot >>
+endobj
+19 0 obj 
+<< /DA (/F2 8 Tf 0 g) /F 4 /Ff 8392704 /FT /Tx /P 22 0 R /Rect [ 22 48 590 594 ] /Subtype /Widget /T (AdditionalRemark_RemarkText_A) /TU (Enter text: The additional remarks. ) /Type /Annot >>
+endobj
+20 0 obj 
+<< /Count 1 /Kids [ 22 0 R ] /Type /Pages >>
+endobj
+22 0 obj 
+<< /Annots 23 0 R /Contents 24 0 R /CropBox [ 0 0 612 792 ] /MediaBox [ 0 0 612 792 ] /Parent 20 0 R /Resources << /Font << /F1 25 0 R >> /ProcSet [ /PDF /Text /ImageB ] /XObject << /Img1 26 0 R >> >> /Type /Page >>
+endobj
+23 0 obj 
+[ 3 0 R 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 14 0 R 15 0 R 16 0 R 17 0 R 18 0 R 19 0 R ]
+endobj
+24 0 obj 
+<< /Filter [ /FlateDecode ] /Length 687 >>
+stream
+xœUMo›@¼#ñžÔK"5d¿Yr#€ZÛ¤x])R.VMœ´v¬ÚQû›ú/‹Ù/Ü\XÛ73;;ûŒ<L yÕÖ×ï×¹U®s=ÂÀû ž\‡pYU9•ì°ª¥ë\!RP\ç"’H¥ßˆC•Ü\‚úá:I‰Bàó¡™ëf¦×’¡);YÐ.­]gv–_ZüÔ#\óOÃIC:Íó$>aÇ†wÈ]Ü&oK¦Ã]ÁyÉØ(–bâq¤ßgã4z€é|r›ä§~a:H^—øüÂÂøÚbHíWA”ÅÉ‘yxDõC……yžv”×^ûÃ®ùïsMö‘†Ÿ’iôpä”·O„IT­WB¯»¢E&„'ŒK~A,k6ÜÑ8‹àÃi–©án‘J¿U²âÔtÑNW}êÒzH+eæ½£ÖòêRÛˆæ3•M’Òø¦{´>¯K0&´Íé8µmÞ>{¹÷íaQ>«Ä×GpQŽët³Âo]çk/-ghï«âÄmÆŒ¥¨ë›à­’å6ó‡»‚¾®Z)ÆÝ˜é]	„±5p¤4~ÇqªÒlŽ!O&aþe³è.‰çãž+¥ÕØé&Âo@KøAÐë5¼/ÞuóÀ”ït‘VÉêòùPF²§©XŒYý^XâIØQ–O@¥jœôÕ‘æ1baè	ú.Ì¨õßÅ˜FQwézÎ³B?”š“•Aey\Õ>Ï!r2‡˜ä}ƒè˜‹òN‡Ï”ˆjüè\s1þB9Q¤¡.÷YÄz áz»—ÕóÛ¾ß»ßÅÒ;@®%‹¨ü7TÏ…ay]l
+X¼.a½]ma±+JøÕËþ­ØKØ,v?÷°}Òï¾#ï´Å÷Š	#‡^#üxyDûèÞ¹}
+endstream
+endobj
+25 0 obj 
+<< /BaseFont /Arial,Bold /Encoding /WinAnsiEncoding /FirstChar 0 /FontDescriptor << /Ascent 905.27 /CapHeight 715.82 /Descent -211.91 /Flags 32 /FontBBox [ -45.90 -175.78 1000.00 938.48 ] /FontName /Arial,Bold /ItalicAngle 0.00 /StemV 0.00 /Type /FontDescriptor >> /LastChar 255 /Subtype /Type1 /Type /Font /Widths [ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 277.83 333.01 474.12 556.15 556.15 889.16 722.17 237.79 333.01 333.01 389.16 583.98 277.83 333.01 277.83 277.83 556.15 556.15 556.15 556.15 556.15 556.15 556.15 556.15 556.15 556.15 333.01 333.01 583.98 583.98 583.98 610.84 975.10 722.17 722.17 722.17 722.17 666.99 610.84 777.83 722.17 277.83 556.15 722.17 610.84 833.01 722.17 777.83 666.99 777.83 722.17 666.99 610.84 722.17 666.99 943.85 666.99 666.99 610.84 333.01 277.83 333.01 583.98 556.15 333.01 556.15 610.84 556.15 610.84 556.15 333.01 610.84 610.84 277.83 277.83 556.15 277.83 889.16 610.84 610.84 610.84 610.84 389.16 556.15 333.01 610.84 556.15 777.83 556.15 556.15 500.00 389.16 279.79 389.16 583.98 0 556.15 0 277.83 556.15 500.00 1000.00 556.15 556.15 333.01 1000.00 666.99 333.01 1000.00 0 610.84 0 0 277.83 277.83 500.00 500.00 350.10 556.15 1000.00 333.01 1000.00 556.15 333.01 943.85 0 500.00 666.99 277.83 333.01 556.15 556.15 556.15 556.15 279.79 556.15 333.01 736.82 370.12 556.15 583.98 333.01 736.82 552.25 399.90 548.83 333.01 333.01 333.01 576.17 556.15 333.01 333.01 333.01 365.23 556.15 833.98 833.98 833.98 610.84 722.17 722.17 722.17 722.17 722.17 722.17 1000.00 722.17 666.99 666.99 666.99 666.99 277.83 277.83 277.83 277.83 722.17 722.17 777.83 777.83 777.83 777.83 777.83 583.98 777.83 722.17 722.17 722.17 722.17 666.99 666.99 610.84 556.15 556.15 556.15 556.15 556.15 556.15 889.16 556.15 556.15 556.15 556.15 556.15 277.83 277.83 277.83 277.83 610.84 610.84 610.84 610.84 610.84 610.84 610.84 548.83 610.84 610.84 610.84 610.84 610.84 556.15 610.84 556.15 ] >>
+endobj
+26 0 obj 
+<< /BitsPerComponent 8 /ColorSpace /DeviceGray /Filter [ /FlateDecode ] /Height 122 /Length 4626 /Subtype /Image /Type /XObject /Width 285 >>
+stream
+xœí]{\Lé?]U£+åRH*]F+—BÉ-Š²Y»‰Q¬²?¬{Xë²vå³î,-k±.‰!aÑÙhY¶T’Ýè2Ýk~gÎ™™÷™™sfN™f
+ß?Vûžç½=ó¾ÏûÜÞs¸ÜøˆµUœŠÅåœª:e§5 ®$ëÞ¥#;¾û:Èw¬ûp‡>}ú¸ç¼lëÑëéo•=>%¡áÕÝÃçw¶é¬ƒÑ@ßjPÀº³9Ê©BÑ˜›úû²ÉýMh™"u£«K”=f… âŸÓ“í™±AÕuÓ#e¼eÑX’´'x`WÍ&2†Ó deO ÅŸ¸# ·ZóøÂ‡Vpª²gÑÈü9¸¿î;1†„ÙÎ÷ì„/LüÞÍXŒ!ñùKeÏG~H?2§ÜCÀá_eÏI.hÌÚãg¡*c®*êj$ÔUr‡ý²'öîÈ8üÍfRa™ôrpñ˜·zcÔþè„x—Eí\³0Ðs]ç|ß|eÏíÝwd’¹ä¬T­GO]¸5æÊ½gô:]Ãë	GW:KS~Õ
+œŠœñæBH/±3[ÛØÁwéîËéùÌÚh(É<»Â³³:5w¢Zv-‡Äˆ~"igë>w[\VysÚÊ9âHÅ«<yZx½Û]L¢£ËWŸ¿Ó&xõG¾$w¶ÈkÀ
+CÙÍðÂá·ïå“Q)‡fÓÖXˆ3§oV òöÖŒÝÂwÃ¥l9¶¹ÊT”9j7äØzK£>e¾%Ü†£Ö'¼`(v™#c–¨lÞ$ïZeqþÚÄ5ÙAûä¹b Nõ„Ì	j¡^äÂ½Ãˆý¤ã¶êâóìç±`Ž{›:éæ¼Ávöú)•ÓÂ]UMCÌü¦…;“’æá#í0a—B¬AÎd!sú¼PD‡ï‚Û³qåwø–TE9YÞ¸	˜Óïµ‚ºlª/OÅ0×ué~ÊèÆgÎÐ
+öÚdœaÖá—=ÆÃ|æ|*weAn¨‰wÁ4<N¾R|ÏuãHæÌQ|×ëŽÙ-}¢œ¾Ï‘±‹]Êé]&.ŽÒó<¦4³¸| 77¥ÑD²Y,–wDŠ¢%ÀÍ±Ö·”ˆà1ÇºŒž †ÇÞYŠ—{o¦cDº";”D9ÁôÏ#q¦°Ãb®Fâ˜Æ(l\™ë'nUºòõ‚§vž¥}ÌãM$©>gñØsU1£Ê?¹öX©bº’†·66€Ö}_-)‘$¢ÞDáÿ§ˆÕp?úF³\òF%®%¯£}êÍbÅp"Ç4_Ga
+SMŽ¨HT»c]Ó=La±¹8sØøÂaóãÊb)T(+œ¡XíC|¥¤ð˜ãÿý†÷O.76¥ãm/Mú§7‹Í0'ŠøG1ûªµ W~áàÌá±E¨çDJ>œ1–+aŽi~¤»~PÌùz±”‡,S.¹­Iaó†X>
+JçJyÉ;É	æd±ˆs
+<m6vÜtäHµ&q–¸òrï¿oLY¦mÀÛ,/4JÆ;æà|aE¹¶ìIÞPVX\\T\Û„o‹Š‹‹92¦Ñ2ÈÂY29æ*oy¥\2%#äoŠ<ppëF±¥úÒÌóûÖÍñ3¢¿½ƒC×‘Ÿ…m8x£€>) ¡ìÙ¥ýkç~î>Â‘íààÀ4Âkê’]g2ië†‡§>ÇýœââRªøzÝƒ¿%ˆÈ+yË©R¦àaGñ¶RJ$77U.ßu¿AaCÆ¹môÄƒ÷8T»Œ\›E±Š²ã7ûÛPÔÀôÙsŽüGÑÉ-#um>´ptìjÖÛuÆ–Dq‡QŒŽ†65´´MºZò8œ\ÄçŽ+ïwõ&¼:yór¸£¥¦>4ÜßìÓLNÓ°SOS#¨¶üK¬Jæn_{”x­®oÜ£GÇöA½‚â%úYOÅI!G?=/J&š„‰óü+¤×=Ràíòfê¯(.h…%%Ó9{È¯Ñ³™ºùÔ_Ÿå=¾¶?ÌQ›_ì^k¼>îÛAP¡Å§kŽ\˜YXžû“¯¹¶˜_³nzØmÅŠeËfù»vSm7þ„ENèIWïÑ$<†Ø™Šdé¸EWô)Q¸áy•ñ1•;
+µA›¡pä×`¿½.r‡D,shåf¯e£QÏ‹-iîÙÖ^`àëDÄÕ£ÎèÑR²¨>s3(ÄÂÁîM )”Ûð‹ ·¶<ÿnôªÑ"éãhvz uƒc05Í‹°.ˆÆí„dH±ñJüÉATP´ÁRX¡Ój
+É’5	t\žìEå*hQÕBÅZwõjTl$~?¤<)¦óZ\‘ÍQ”ùBîjß£ ©Ž)V{¨î¼ñØda4­1¥_«L¢–WNýÎFb¶È¹ëòŸ…ÅUƒPé˜*®¢ajS&^)‡? Žµ’$ÀóI´þ¡¢£ÂàÜ`´ßõvÑ ß|ÚÝ+,ÎéˆJ¿FÔÕ@a¿
+‹SÀÎ¡<kïÀý8´IÙU¢¼Á†Kè×mÑSµL"/)}Q®çèéŽ‘i!”I¿¢BU (ÃÐ}(,þ•ê‰•$¶Áô÷£†/@±´Õ: ÚwÄHbAF´æN&&tG5¯I!Ì³ÃþEP
+Ö©-ˆ^œôîŸê‘¨t Å®Âñ
+póa2~ÓADïöƒê?ˆ’\ 
+Ÿ*#[ä
+ØØi”ŸÊi|“âE7T6Ž#%ü®ßP÷ef_Äd
+<pˆ
+Ë¹™ Wy{*Ë™4šsïI§]HÝøªÇ!°À®ŠCª£ú>T¼«%Ñô²ôÒ…i˜C®›Ü
+ éh> $…0IÜ…IŒ¡ æ¨;K'^hmI»®¬3¤=Bš¹öVÔ@%ÈdSï*.7ôb|›ÁpÔMðFTa‡Þ±ÿr=Fí~j¨Ÿ‘A<ÛÌÉrÈ_Hx¥b;@ë!ÍQ¯ é¤nÞžiL&Á-'S§©—ÉâŒ~0{žQÚË] ªacex&jÝñP2R‹ä®Ú	>ÙÝ,A™ýj¡±Õ×ú“¦—‚ —~ŒÎòÚäCjYœ¨¾î5MÝdÐ¬>£Ý
+’:1•8ÄiÀ"ÁüHu¬UÓû¯rŸÞŠ^ç%bÆ¾â™Ì`Qô- è‡dxE+ˆÉ$ªCÈ	¢¸Ph-=Ô¥ŒÁ(¿È’QPöbë‰¢r°«4Ì»›™´'ïèÚ?-®då õw]/ßƒNé9ä/ì/ÔÎ¯€
+Bñ«`³¿Ò4E?]ú¨5‰Z/@¬KÚ-"[HZÕƒ(Íè¨;:ùVï‘ödp’×}Iú¡”ÆrpùD#?øá Y#F©7sA}©V85 µé°[ŠJÌ»Q`Û÷ <œ€¿ðÙSàòFå°lh‚oÑ@uÀ$7´r,¨ñ‰Ÿ‰ ¿‘€&i0—Ù7Ž»	t y/¬Ñó º!¹FØÒB7$øz±Ús§	Œ[ÌždD2ômzÒiå£A	2ˆÀm3Ÿ,»NÍ-Ü
+@1Bòœ9ŒÎ4½ìËS3ZæjšEMR=¿r/&wêD˜3I:í3hXæË‚5¨Hõ	¾ñàA#)Â ‡Æ4k"Þ§‘½©82yƒ+†e6t…gr±®ÊÔð—JÊÒØ’ï¥ªŠÊ†ñÌ ‚0ƒKbM” ‹Ò¿^¼•PœNMÀ_7¾±'‹à"ôS$œ up»vbô¨Q{J#l„¢ÛJàƒºVÊF^A)Ù‰9 /g»){©ÿ
+Ì–)5«¦„^’	|P×&Õ·- il¬¦‰ñ‚W¼ô”rõ¬ZÎBïÌT¨GžuÑÐ<Cô§Ÿ‡ž˜Rº‡«B…ê™ƒçë~ý(vh-Ô²Éó*ß92qØWƒ@ÞùS·ö(	Õ•ò›ÚÏ ¥ÚØH)P`(¯;d'ggÙií3	Ê¾”Ö4^­È•â\)W¬¨$PÃš.õ6É—ô#T¾„_vÏAÚ¾Wþ¾]²“ÊýH«~*ûÎW%¹Ñ{P[IÑ`Ø²l?”Í£K¦M›/<ËöµCÆP&ú?_ƒ6°î0ØŽªª_‚­†aýôw=‰Ë…ÇÁÁétH¦(æ6†¤†’!Fi0È+0ÁOBcÉãEµüÃSL°ÍhYïÍ–´”ó~D2VÍ[ä–3tÙÙµš2¸Ý±/…Ôeà¸S©Þ&,‘>‡…ÒùÂC5É›vÇiž—ÅŽÙ~¢Ç`õjùüþÈüªÜÛ;&™âöM(lçÆ0Paê•<ô«Udš…ÔÓé‰yƒâ+T'ò/¡ì¸]9Ù2Ó“ãö¯ñ1G«·ËÇ™dHD7­¸º42yv"Ø)XÏ9ëž‰‹;{pãWã{“Þ›~¢Iã•¿ #@•q &îÂÙC›æz  p{m[á0¨Æ52ÇHXûöèB¢“Èû­zúo{(Þ	%JI16‡~ûAS›Š6JÍí%¶¢oaÓÔÑAc¹ÜoéuŒ¯1´Ï5tXÀ	¦n:~wŠ¤ÒÑ0‘XÂ×àü#O˜#©íTÃ —Tµ-=ÖœÏ-jÔ¯íÞÏeH_ËÉR|,q»ÛÙ:uêdkgÖ_äýWµ‰[üœº‰¿ØGÇÌqì’ßQúûr£¹ÛŠ½[IÝ°·ÛÔŸâ©e@¡¹…]Ÿ!..ìlLD	;;w³³í;ÔÅÅÅÁÖV5ñ³åsr¡ÀÁc}¾\¾ûó¥0'-­¸¼,?]Ú¬H~˜“]R^V^’óàŽ„¡Y’â§•á!¡8BB­Þy*þÔ{¸uÏnþñË†Å¡d°å»™Io…TÞ}’ó²¬¬¬èyÖÑvkï¥ædç—ãÏ^fgßJ%˜SSò¶Œ¥¥­÷‚ç{ŽšÜ¬§ÅéJIfl(uY6Ñ‡ŠhÛ6ùÊ+… ÑÉ­M¼_E)ˆWùì£È¡ÃtlRë`NMA«;4ÿë„Mlƒª¸÷LÙcÀ.sSþèŠ3?Rä«*>fN•o¯Häí
+ùþ©’Ç@…§qƒ[VjDËâß¥.ó™¹“<Ë™.H¸ñ¥Õ”Öú
+DÂ+Û[Y/u*8Ü¿›ÏßJê\6ÆN—¦¤êÊwVX¶ó¿®”®¡Ú™`N?Å€£ø §žÊºlÐV—üØó2Ù¤òDÑÅy0ƒYJ~õŽ,¼à§³êÒ¿Fî¨¿½b†uZ|_q]6/I!]ôñNÊZ³^ß^F’#L„¶WÀ‡mÊÿüÖ•’¶[ù:9€+>Ö½›‹Š„•.¼“¦ÏéVñV" 7PLŽµX/µÏO…Ûa,³éwšp']ÉXCL¡-"^Æ¯ŸÀOÙM(Zœùj‰å^9_‚ópG€5?^k×Æ¾ˆWd% yJn(L>0·¿ }TÅqEübÎ2±x/6dÇ³wo5÷Ò–€(m·ã´?ä„´>¤›ˆsë>ãæ5ª,÷ÆÞðæ ‰Å`øö§­Á×ØDH0‡EðÁûMþ‚EÑ£óÛçŽ4ýè@¿oþb˜øÐQîNÅëìyýy%ç{]É³¤Ãß†Œa›iˆ6¡j¹àrës~6	é]©¹ƒCÃÐÉoñö˜[ÿdæ•TÔÖÕXSË)}“–štþ·ïLÕ[—â‹ŠšvÁ1ïÁ×6/IŠQ°:Z:ºùÌgJèlB§øLðéÌîÑ¡=íçžyO¾vwÓ’nŽÍ‚Áà•·d\ƒmKx<^^ŒQ±ðùñ^[=›hP¶¶ƒì‰Ë„þ°E1OÞ3Îøwåk¤£ÛEÑOÛðÇídàÚLŠoŽ1‚¹ÇÂCJz{¿âðpÝ@-Ù¬€Ð4øcBV«þ^‡ÜP{û»q–íd3Ã´ÌØcÃ·_NÏ>Þ+ui6ÍlLóUH\14èå´r×ÅÏ?Ôœ§ÒÜä[–‡úqv²¶Âaé0ÄÙËoö7>•”]PÞ:zZ*9<´aãñ#š„ÿÓ…M
+endstream
+endobj
+xref
+0 27
+0000000000 65535 f
+0000000017 00000 n
+0000000777 00000 n
+0000002717 00000 n
+0000003040 00000 n
+0000003327 00000 n
+0000003564 00000 n
+0000003791 00000 n
+0000004089 00000 n
+0000004305 00000 n
+0000004738 00000 n
+0000005143 00000 n
+0000005383 00000 n
+0000005646 00000 n
+0000005909 00000 n
+0000006172 00000 n
+0000006435 00000 n
+0000006802 00000 n
+0000007052 00000 n
+0000007296 00000 n
+0000007508 00000 n
+0000000487 00000 n
+0000007573 00000 n
+0000007809 00000 n
+0000007945 00000 n
+0000008716 00000 n
+0000010666 00000 n
+trailer
+<< /Info 21 0 R /Root 1 0 R /Size 27 >>
+startxref
+15475
+%%EOF

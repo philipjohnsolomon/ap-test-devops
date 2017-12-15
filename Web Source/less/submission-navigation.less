@@ -1,0 +1,90 @@
+.submission-navigation-menu {
+	
+	.list-group-item {
+		background-color: @submission-nav-background;
+		border-color: @submission-nav-border;
+		a {
+			color: submission-nav-link;
+			.fa {
+				color: @submission-nav-icon;
+				&.fa-chevron-right {
+					padding-top: 2px;
+				}
+			}
+		}
+		&:hover {
+			background-color: @submission-nav-hover-background;
+			border-color: @submission-nav-hover-border;
+			a {
+				color: @submission-nav-hover-link;
+				.fa {
+					color: @submission-nav-hover-icon;
+				}
+			}
+		}
+		
+		&.active {
+			background-color: @submission-nav-active-background;
+			border-color: @submission-nav-active-border;
+			a {
+				color: @submission-nav-active-link;
+				.fa {
+					color: @submission-nav-active-icon;
+				}
+			}
+			&:hover {
+				background-color: @theme-active-background;
+				border-color: @theme-active-background;
+				a {
+					color: @submission-nav-active-link;
+					.fa {
+						color: @submission-nav-hover-icon;
+					}
+				}
+			}
+		}
+		&.disabled {
+			background-color: @submission-nav-disabled-background;
+			border-color:@submission-nav-disabled-border;
+			a {
+				color: @submission-nav-disabled-link;
+				.fa {
+					color: @submission-nav-disabled-icon;
+				}
+			}
+			&:hover {
+				background-color: @submission-nav-hover-background;
+				border-color: @submission-nav-hover-border;
+				a {
+					color: @submission-nav-hover-link;
+					.fa {
+						color: @submission-nav-hover-icon;
+					}
+				}
+			}
+		}
+		&.problem {
+			background-color: @submission-nav-problem-background;
+			border-color: @submission-nav-problem-border;
+			a {
+				color: @submission-nav-problem-link;
+				.fa {
+					color: @submission-nav-problem-icon;
+				}
+			}
+			&:hover {
+				background-color: @submission-nav-hover-background;
+				border-color: @submission-nav-hover-border;
+				a {
+					color: @submission-nav-hover-link;
+					.fa {
+						color: @submission-nav-hover-icon;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+

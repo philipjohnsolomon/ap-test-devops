@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transactionDefinitionBehavior xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/behavior/transactionDefinitionBehavior.xsd">
+	<delimiter>/</delimiter>
+	<hotField key="*/accountInformation/AccountInformationSection/AccountHolderType" >
+		<refreshListFieldEvent key="*/accountInformation/AccountInformationSection/sicCode-IK" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+		<refreshListFieldEvent key="*/accountInformation/AccountInformationSection/sicCode" selectionHint="PRESERVE_CURRENT_USER_VALUE" />
+	</hotField>
+		
+	<hotField key="*/people/ContactDetailSection/AccountContactType" 
+		assistant="com.agencyport.account.precondition.ContactRoleIPTDRAssistant"/>
+  	
+	<hotField key="*/people/RolesSection/contactRoleDriver" />
+
+	<behavior id="newId[1]" title="Exclude Account Holder Fields">
+		<do action="exclude" />
+		<for>*/accountInformation/AccountInformationSection/AccountHolderFirstName</for>
+		<for>*/accountInformation/AccountInformationSection/AccountHolderLastName</for>
+		<for>*/accountInformation/AccountInformationSection/AccountHolderCompanyName</for>
+		<for>*/accountInformation/AccountInformationSection/DoingBusinessAs</for>
+		<for>*/accountInformation/AccountInformationSection/taxIdFEIN</for>
+		<for>*/accountInformation/AccountInformationSection/taxIdSSN</for>		
+		<for>*/accountInformation/AccountInformationSection/ApplicantHomePhoneNumber</for>
+		<for>*/accountInformation/AccountInformationSection/ApplicantWorkPhoneNumber</for>
+		<for>*/accountInformation/AccountInformationSection/ApplicantMobilePhoneNumber</for>
+		<for>*/accountInformation/AccountInformationSection/ApplicantBusinessPhoneNumber</for>
+		<for>*/accountInformation/AccountInformationSection/sicCode</for>		
+		<for>*/accountInformation/AccountInformationSection/sicCode-IK</for>		
+		<for>*/accountInformation/AccountInformationSection/legalEntity</for>		
+		<for>*/accountInformation/AccountInformationSection/AccHolderNameInfoExternalIdPersonal</for>
+		<for>*/accountInformation/AccountInformationSection/AccHolderNameInfoExternalLockingIdPersonal</for>
+		<for>*/accountInformation/AccountInformationSection/AccHolderNameInfoExternalIdCommercial</for>
+		<for>*/accountInformation/AccountInformationSection/AccHolderNameInfoExternalLockingIdCommercial</for>
+		<for>*/accountInformation/AccountInformationSection/AccHolderPhone1ExtId</for>
+		<for>*/accountInformation/AccountInformationSection/AccHolderPhone1ExtLockingId</for>
+		<for>*/accountInformation/AccountInformationSection/AccHolderPhone2ExtId</for>
+		<for>*/accountInformation/AccountInformationSection/AccHolderPhone2ExtLockingId</for>
+		<for>*/accountInformation/AccountInformationSection/AccHolderPhone3ExtLockingId</for>
+		<for>*/accountInformation/AccountInformationSection/AccHolderPhone3ExtId</for>
+		<for>*/accountInformation/AccountInformationSection/AccHolderPhone4ExtId</for>
+		<for>*/accountInformation/AccountInformationSection/AccHolderPhone4ExtLockingId</for>
+	</behavior>
+	
+	<behavior id="newId[1.5]" title="Exclude Producer Code Page">
+		<do action="exclude" />
+		<where>
+			<preCondition name="inUploadWriterMode">false</preCondition>
+		</where>
+		<for>*/producer</for>
+	</behavior>
+	
+	<behavior id="newId[2]" title="Include if AccountHolderType equals Person">
+		<do action="include" />
+		<where>
+			<preCondition name="AccountHolderType">P</preCondition>
+		</where>
+		<for>*/accountInformation/AccountInformationSection/AccountHolderFirstName</for>
+		<for>*/accountInformation/AccountInformationSection/AccountHolderLastName</for>
+		<for>*/accountInformation/AccountInformationSection/taxIdSSN</for>
+		<for>*/accountInformation/AccountInformationSection/ApplicantHomePhoneNumber</for>
+		<for>*/accountInformation/AccountInformationSection/ApplicantWorkPhoneNumber</for>
+		<for>*/accountInformation/AccountInformationSection/ApplicantMobilePhoneNumber</for>
+		<for>*/accountInformation/AccountInformationSection/AccHolderNameInfoExternalIdPersonal</for>
+		<for>*/accountInformation/AccountInformationSection/AccHolderNameInfoExternalLockingIdPersonal</for>
+		<for>*/accountInformation/AccountInformationSection/AccHolderPhone1ExtId</for>
+		<for>*/accountInformation/AccountInformationSection/AccHolderPhone1ExtLockingId</for>
+		<for>*/accountInformation/AccountInformationSection/AccHolderPhone2ExtId</for>
+		<for>*/accountInformation/AccountInformationSection/AccHolderPhone2ExtLockingId</for>
+		<for>*/accountInformation/AccountInformationSection/AccHolderPhone3ExtLockingId</for>
+		<for>*/accountInformation/AccountInformationSection/AccHolderPhone3ExtId</for>
+	</behavior>
+
+	<behavior id="newId[3]" title="Include if AccountHolderType equals Company">
+		<do action="include" />
+		<where>
+			<preCondition name="AccountHolderType">C</preCondition>
+		</where>
+		<for>*/accountInformation/AccountInformationSection/AccountHolderCompanyName</for>
+		<for>*/accountInformation/AccountInformationSection/DoingBusinessAs</for>
+		<for>*/accountInformation/AccountInformationSection/taxIdFEIN</for>
+		<for>*/accountInformation/AccountInformationSection/ApplicantBusinessPhoneNumber</for>		
+		<for>*/accountInformation/AccountInformationSection/legalEntity</for>		
+		<for>*/accountInformation/AccountInformationSection/AccHolderNameInfoExternalIdCommercial</for>
+		<for>*/accountInformation/AccountInformationSection/AccHolderNameInfoExternalLockingIdCommercial</for>
+		<for>*/accountInformation/AccountInformationSection/AccHolderPhone4ExtId</for>
+		<for>*/accountInformation/AccountInformationSection/AccHolderPhone4ExtLockingId</for>
+	</behavior>
+	<behavior id="newId[3.5]" title="Include if AccountHolderType equals Company and IK flag on">
+		<do action="include" />
+		<where>
+			<preCondition name="AccountHolderType">C</preCondition>
+		    <preCondition name="PROPERTY{ACCOUNT.enable_integration_kits}">true</preCondition>
+		</where>
+		<for>*/accountInformation/AccountInformationSection/sicCode-IK</for>		
+	</behavior>
+	<behavior id="newId[3.6]" title="Include if AccountHolderType equals Company and IK flag off">
+		<do action="include" />
+		<where>
+			<preCondition name="AccountHolderType">C</preCondition>
+		    <preCondition name="PROPERTY{ACCOUNT.enable_integration_kits}">!true</preCondition>
+		</where>
+		<for>*/accountInformation/AccountInformationSection/sicCode</for>		
+	</behavior>
+	
+	<behavior id="newId[4]" title="Exclude Contact Fields">
+		<do action="exclude" />
+		<for>*/people/ContactDetailSection/ContactFirstName</for>
+		<for>*/people/ContactDetailSection/ContactLastName</for>
+		<for>*/people/ContactDetailSection/ContactCompanyName</for>
+		<for>*/people/ContactDetailSection/contactFEIN</for>
+		<for>*/people/ContactDetailSection/contactSSN</for>
+		<for>*/people/RolesSection/ContactLicenseNumber</for>
+		<for>*/people/RolesSection/ContactLicenseState</for>
+		<for>*/people/ContactDetailSection/ContactHomePhoneNumber</for>
+		<for>*/people/ContactDetailSection/ContactWorkPhoneNumber</for>
+		<for>*/people/ContactDetailSection/ContactMobilePhoneNumber</for>
+		<for>*/people/ContactDetailSection/ContactBusinessPhoneNumber</for>		
+	</behavior>
+	
+	<behavior id="newId[5]" title="Include if contact Type equals Person">
+		<do action="include" />
+		<where>
+			<preCondition name="AccountContactType">P</preCondition>
+		</where>
+		<for>*/people/ContactDetailSection/ContactFirstName</for>
+		<for>*/people/ContactDetailSection/ContactLastName</for>
+		<for>*/people/ContactDetailSection/contactSSN</for>
+		<for>*/people/ContactDetailSection/ContactHomePhoneNumber</for>
+		<for>*/people/ContactDetailSection/ContactWorkPhoneNumber</for>
+		<for>*/people/ContactDetailSection/ContactMobilePhoneNumber</for>
+	</behavior>
+	
+  
+	<behavior id="newId[5.1]" title="Include if contact is driver">
+		<do action="include" />
+		<where>
+			<preCondition name="driverInfoIncluded">true</preCondition>
+		</where>
+		<for>*/people/RolesSection/ContactLicenseNumber</for>
+		<for>*/people/RolesSection/ContactLicenseState</for>
+	</behavior>
+
+	<behavior id="newId[6]" title="Include if contact Type equals Company">
+		<do action="include" />
+		<where>
+			<preCondition name="AccountContactType">C</preCondition>
+		</where>
+		<for>*/people/ContactDetailSection/ContactCompanyName</for>
+		<for>*/people/ContactDetailSection/contactFEIN</for>
+		<for>*/people/ContactDetailSection/ContactBusinessPhoneNumber</for>
+	</behavior>
+ 	
+ 	<behavior id="newId[8]" title="use correct contact role type">
+		<do action="exclude" />
+		<for>*/people/RolesSection/contactRoleDriver</for>
+		<for>*/people/RolesSection/contactRoleOwnerOfficer</for>
+		<for>*/people/RolesSection/contactRoleLaborClient</for>
+		<for>*/people/RolesSection/contactRoleLaborContractor</for>
+	</behavior>
+	
+	<behavior id="newId[8.1]" title="use correct contact role type">
+		<do action="include" />
+		<where>
+			<preCondition name="AccountContactType">P</preCondition>
+		</where>
+		<for>*/people/RolesSection/contactRoleDriver</for>
+		<for>*/people/RolesSection/contactRoleOwnerOfficer</for>
+	</behavior>
+	
+   <behavior id="newId[8.2]" title="use correct contact role type">
+		<do action="include" />
+		<where>
+			<preCondition name="AccountContactType">C</preCondition>
+		</where>
+		<for>*/people/RolesSection/contactRoleLaborClient</for>
+		<for>*/people/RolesSection/contactRoleLaborContractor</for>
+	</behavior>
+  
+    <behavior id="newId[8.3]" title="use correct contact role type">
+		<do action="exclude" />
+		<where>
+			<preCondition name="accountHolderExcluded">true</preCondition>
+		</where>
+		<for>*/people/RolesSection/contactRoleAccountHolder</for>
+	</behavior>
+
+    <behavior id="newId[10.2]" title="create tips">
+		<do action="exclude" />
+		<where>
+			<preCondition name="inRosterEditMode">true</preCondition>
+		</where>
+		<for>*/people/ContactAddressSection/sameAsAccountHolderAddress</for>
+	</behavior>
+	
+	<behavior id="newId[9]" title="account type readonly">
+		<do action="alter">
+			<property name="readonly">false</property>
+		</do>
+		<where>
+			<preCondition name="AccountHolderType">in('C','P')</preCondition>
+			<preCondition name="inIPDTRMode">true</preCondition>
+		</where>
+		<for>*/accountInformation/AccountInformationSection/AccountHolderType</for>
+	</behavior>
+
+	<behavior id="N19" title="account type readonly">
+		<do action="alter">
+			<property name="readonly">true</property>
+		</do>
+		<where>
+			<preCondition name="isCommitted">true</preCondition>
+			<preCondition name="AccountHolderType">in('C','P')</preCondition>
+			<preCondition name="inIPDTRMode">false</preCondition>
+		</where>
+		<for>*/accountInformation/AccountInformationSection/AccountHolderType</for>
+	</behavior>
+	
+	<behavior id="newId[10]" title="edit tips">
+		<do action="exclude" />
+		<where>
+			<preCondition name="isCommitted">false</preCondition>
+		</where>
+		<for>*/accountInformation/editTip</for>
+	</behavior>
+	<behavior id="newId[10.1]" title="create tips">
+		<do action="exclude" />
+		<where>
+			<preCondition name="isCommitted">true</preCondition>
+		</where>
+		<for>*/accountInformation/createTip</for>
+	</behavior>
+	<behavior id="newId[11]" title="edit tips">
+		<do action="alter">
+			<property name="title">Edit Account</property>
+		</do>
+		<where>
+			<preCondition name="isCommitted">true</preCondition>
+		</where>
+		<for>*/accountInformation</for>
+	</behavior>
+
+ 	<behavior id="newId[12]" title="create tips">
+		<do action="alter">
+			<property name="readonly">true</property>
+		</do>
+		<where>
+			<preCondition name="inRosterEditMode">true</preCondition>
+		</where>
+		<for>*/people/ContactDetailSection/AccountContactType</for>
+	</behavior>
+</transactionDefinitionBehavior>
+

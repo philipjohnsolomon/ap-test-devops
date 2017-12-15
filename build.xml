@@ -1,0 +1,174 @@
+<project name="agencyportal" basedir="." default="package" xmlns:sonar="antlib:org.sonar.ant">
+
+	<!-- project-specific variables -->
+	<property name="app.name" value="agencyportal" />
+	<property name="package.name" value="${app.name}.war" />
+	<property name="build.dir" value="build" />
+	<property name="sdk.lib.dir" value="sdk/lib" />
+	<property name="sdk.war.dir" value="sdk/war" />
+	<property name="web.dir" value="Web Root" />
+	<property name="src.dir" value="Java Source" />
+	<property name="test.dir" value="Java Test" />
+	<property name="res.dir" value="resources" />
+	<property name="dist.dir" value="${build.dir}/dist" />
+	<property name="reports.dir" location="${build.dir}/report" />
+	<property name="temp.dir" value="${build.dir}/temp" />
+	<property name="temp.dir.classes" value="${temp.dir}/WEB-INF/classes" />
+	<property name="package.file" value="${dist.dir}/${package.name}" />
+	<property name="manifest.vendor" value="Agencyport Software" />
+	<property name="manifest.title" value="agencyportal" />
+	<property name="manifest.version" value="1.0" />
+	<!-- Define the SonarQube global properties (the most usual way is to pass these properties via the command line) -->
+	<property name="sonar.host.url" value="http://localhost:9000" />
+	<!-- Define the SonarQube project properties -->
+	<property name="sonar.projectKey" value="org.sonarqube:sonarqube-scanner-ant" />
+	<property name="sonar.projectName" value="Agency Portal Demo Suit" />
+	<property name="sonar.projectVersion" value="1.0" />
+	<property name="sonar.sources" value="${src.dir}" />
+	<property name="sonar.java.binaries" value="${sdk.lib.dir}" />
+	<property name="sonar.java.libraries" value="sdk/lib/*.jar" />
+
+	<path id="build.class.path">
+		<fileset dir="${sdk.lib.dir}">
+			<include name="**/*.jar" />
+		</fileset>
+		<!-- TODO - add your non-SDK lib dependencies and other container provided compile time dependencies (like the J2EE servlet-api) -->
+	</path>
+
+	<target name="clean">
+		<delete dir="${dist.dir}" />
+		<delete dir="${temp.dir}" />
+		<delete dir="${reports.dir}" />
+	</target>
+
+	<target name="prepare" depends="clean">
+		<mkdir dir="${dist.dir}" />
+		<mkdir dir="${temp.dir}" />
+		<mkdir dir="${reports.dir}" />
+		<mkdir dir="${res.dir}" />
+	</target>
+
+
+	<target name="setup" depends="prepare">
+		<copy todir="${temp.dir}">
+			<fileset dir="${sdk.war.dir}" />
+		</copy>
+		<copy todir="${temp.dir.classes}">
+			<fileset dir="${res.dir}" />
+		</copy>
+	</target>
+
+
+	<target name="compile">
+		<echo>=== COMPILE ===</echo>
+		<echo>Compiling ${src.dir} files ...</echo>
+		<javac debug="on" srcdir="${src.dir}" destdir="${temp.dir.classes}" source="1.8" target="1.8" includes="**/*">
+			<classpath refid="build.class.path" />
+		</javac>
+		<javac debug="on" srcdir="${test.dir}" destdir="${temp.dir.classes}" source="1.8" target="1.8" includes="**/*">
+			<classpath refid="build.class.path" />
+		</javac>
+		<!-- copy any classpath resources in the source folder to the classpath -->
+		<copy todir="${temp.dir.classes}">
+			<fileset dir="${src.dir}">
+				<exclude name="**/*.java" />
+			</fileset>
+		</copy>
+	</target>
+
+
+	<target name="package" depends="setup, test, runtest, sonar">
+		<echo>=== PACKAGE ===</echo>
+		<!-- with all resources in place, create the war file -->
+		<war destfile="${package.file}" basedir="${temp.dir}" update="true">
+			<fileset dir="${web.dir}" />
+			<lib dir="${sdk.lib.dir}" />
+			<classes dir="${temp.dir.classes}" />
+			<manifest>
+				<attribute name="Build-Java-VM-Version" value="${java.vm.version}" />
+				<attribute name="Build-Date" value="${TODAY}" />
+				<attribute name="Build-Label" value="${label}" />
+				<attribute name="Implementation-Vendor" value="${manifest.vendor}" />
+				<attribute name="Implementation-Title" value="${manifest.title}" />
+				<attribute name="Implementation-Version" value="${manifest.version}" />
+			</manifest>
+		</war>
+	</target>
+
+	<!-- Define SonarQube Scanner for Ant Target -->
+	<target name="sonar" depends="compile">
+		<taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
+			<!-- Update the following line, or put the "sonarqube-ant-task-*.jar" file in your "$HOME/.ant/lib" folder -->
+			<classpath path="sdk/lib/sonarqube-ant-task-2.5.jar" />
+		</taskdef>
+
+		<!-- Execute SonarQube Scanner for Ant Analysis -->
+		<sonar:sonar />
+	</target>
+
+	<taskdef uri="antlib:org.jacoco.ant" resource="org/jacoco/ant/antlib.xml">
+		<classpath path="sdk/lib/jacocoant.jar" />
+	</taskdef>
+
+	<target name="runtest" depends="compile">
+		<jacoco:coverage destfile="${temp.dir.classes}/jacoco.exec" xmlns:jacoco="antlib:org.jacoco.ant" exclclassloader="sun.reflect.DelegatingClassLoader:javassist.Loader">
+			<junit haltonfailure="yes" fork="true" forkmode="once" printsummary="on">
+				<classpath refid="classpath.test" />
+				<classpath location="${temp.dir.classes}" />
+				<formatter type="xml" />
+				<batchtest fork="yes" todir="${reports.dir}">
+					<fileset dir="${test.dir}">
+						<include name="**/*Test*.java" />
+					</fileset>
+				</batchtest>
+			</junit>
+		</jacoco:coverage>
+
+		<jacoco:report xmlns:jacoco="antlib:org.jacoco.ant">
+			<executiondata>
+				<file file="${temp.dir.classes}/jacoco.exec" />
+			</executiondata>
+			<structure name="Jacoco">
+				<classfiles>
+					<fileset dir="${temp.dir.classes}">
+						<exclude name="**/*Test*.class" />
+					</fileset>
+				</classfiles>
+				<sourcefiles encoding="UTF-8">
+					<fileset dir="${src.dir}" />
+				</sourcefiles>
+			</structure>
+			<!-- to produce reports in different formats. -->
+			<html destdir="${reports.dir}/Jacoco" />
+			<csv destfile="${reports.dir}/Jacoco/report.csv" />
+			<xml destfile="${reports.dir}/Jacoco/report.xml" />
+		</jacoco:report>
+	</target>
+
+	<!-- classpath for test needs to include the dist/classes directory -->
+	<path id="classpath.test">
+		<pathelement location="${temp.dir.classes}" />
+		<fileset dir="sdk/lib">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<target name="test" description="Run JUnit Tests" depends="compile">
+		<echo>=== UNIT TESTS ===</echo>
+		<delete>
+			<fileset dir="${reports.dir}" includes="**/TEST-*.txt" />
+		</delete>
+		<junit dir="./" printsummary="yes" fork="yes" haltonfailure="yes">
+			<formatter type="plain" />
+			<batchtest fork="yes" todir="${reports.dir}">
+				<fileset dir="${test.dir}">
+					<include name="**/*Test*.java" />
+				</fileset>
+			</batchtest>
+			<classpath>
+				<path refid="classpath.test" />
+			</classpath>
+		</junit>
+	</target>
+
+</project>

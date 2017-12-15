@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workItemActionDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/workitem/workItemActionDefinition.xsd">
+	<workItemAction actionCode="Open" title="Open" requiredPermission="accessCanOpen" isPrimary="true">
+		<when workItemType="regular" status="15" isCreator="true" isOwner="true" openMode="editMode" />
+		<when workItemType="regular" status="15" isCreator="false" isOwner="false" openMode="no" />
+		<when workItemType="regular" status="15" isCreator="false" isOwner="true" openMode="editMode" />
+		<when workItemType="regular" status="15" isCreator="true" isOwner="false" openMode="editMode" />
+
+		<when workItemType="regular" status="20" isCreator="true" isOwner="true" openMode="summaryOnly" />
+		<when workItemType="regular" status="20" isCreator="false" isOwner="false" openMode="no" />
+		<when workItemType="regular" status="20" isCreator="false" isOwner="true" openMode="editMode" />
+		<when workItemType="regular" status="20" isCreator="true" isOwner="false" openMode="summaryOnly" />
+
+		<when workItemType="regular" status="21" isCreator="true" isOwner="true" openMode="summaryOnly" />
+		<when workItemType="regular" status="21" isCreator="true" isOwner="false" openMode="summaryOnly" />
+		<when workItemType="regular" status="21" isCreator="false" isOwner="false" openMode="no" />
+		<when workItemType="regular" status="21" isCreator="false" isOwner="true" openMode="summaryOnly" />
+
+		<when workItemType="regular" status="22" isCreator="true" isOwner="true" openMode="summaryOnly" />
+		<when workItemType="regular" status="22" isCreator="true" isOwner="false" openMode="summaryOnly" />
+		<when workItemType="regular" status="22" isCreator="false" isOwner="false" openMode="no" />
+		<when workItemType="regular" status="22" isCreator="false" isOwner="true" openMode="summaryOnly" />
+
+		<when workItemType="regular" status="30" isCreator="true" isOwner="true" openMode="summaryOnly" />
+		<when workItemType="regular" status="30" isCreator="true" isOwner="false" openMode="summaryOnly" />
+		<when workItemType="regular" status="30" isCreator="false" isOwner="false" openMode="no" />
+		<when workItemType="regular" status="30" isCreator="false" isOwner="true" openMode="summaryOnly" />
+
+		<when workItemType="regular" status="35" isCreator="true" isOwner="true" openMode="editMode" />
+		<when workItemType="regular" status="35" isCreator="true" isOwner="false" openMode="summaryOnly" />
+		<when workItemType="regular" status="35" isCreator="false" isOwner="true" openMode="summaryOnly" />
+
+  		<url workItemType="regular">LaunchWorkItem?WORKITEMID=${WORKITEM_ID}&amp;action=Open&amp;WorkListType=WorkItemsView</url>
+	</workItemAction>
+
+	<workItemAction actionCode="Open" title="Open" requiredPermission="accessCanOpen" isPrimary="true">
+		<when workItemType="account" status="115" isCreator="true" isOwner="true" openMode="editMode" />
+		<when workItemType="account" status="115" isCreator="false" isOwner="true" openMode="editMode" />
+		<when workItemType="account" status="115" isCreator="true" isOwner="false" openMode="editMode" />
+		<when workItemType="account" status="115" isCreator="false" isOwner="false" openMode="editMode" />
+		<when workItemType="account" status="120" isCreator="true" isOwner="true" openMode="editMode" />
+		<url workItemType="account">DisplayWorkInProgress?WORKITEMID=${WORKITEM_ID}&amp;action=Open&amp;WorkListType=AccountItemsView</url>
+	</workItemAction>
+
+	<workItemAction actionCode="Delete" title="Delete" requiredPermission="accessCanDelete" isPrimary="false">
+		<when workItemType="regular" status="15" isCreator="true" isOwner="true" />
+		<when workItemType="regular" status="15" isCreator="true" isOwner="false" />
+		<when workItemType="regular" status="15" isCreator="false" isOwner="true" />
+
+		<when workItemType="regular" status="20" isCreator="true" isOwner="true" />
+		<when workItemType="regular" status="20" isCreator="false" isOwner="true" />
+
+		<when workItemType="regular" status="21" isCreator="true" isOwner="true" />
+		<when workItemType="regular" status="21" isCreator="false" isOwner="true" />
+
+		<when workItemType="regular" status="22" isCreator="true" isOwner="true" />
+		<when workItemType="regular" status="22" isCreator="false" isOwner="true" />
+
+		<when workItemType="regular" status="30" isCreator="true" isOwner="true" />
+
+		<when workItemType="regular" status="35" isCreator="true" isOwner="true" />
+		<when workItemType="regular" status="35" isCreator="true" isOwner="false" />
+		<when workItemType="regular" status="35" isCreator="false" isOwner="true" />
+
+		<!-- paramValues are actually key to WorkItem object property to retrieve the value  -->
+		<url workItemType="regular">WorkItemAction?WORKITEMID=${WORKITEM_ID}&amp;action=Delete&amp;WorkListType=WorkItemsView</url>
+	</workItemAction>
+	
+	<workItemAction actionCode="Delete" title="Delete" requiredPermission="accessCanDelete" isPrimary="true">
+		<when workItemType="account" status="115" isCreator="true" isOwner="true" />
+		<when workItemType="account" status="115" isCreator="false" isOwner="false" />
+		<when workItemType="account" status="115" isCreator="true" isOwner="false" />
+		<when workItemType="account" status="115" isCreator="false" isOwner="true" />
+		<!-- paramValues are actually key to WorkItem object property to retrieve the value  -->
+		<url workItemType="account">WorkItemAction?WORKITEMID=${WORKITEM_ID}&amp;action=Delete&amp;WorkListType=AccountsView</url>
+	</workItemAction>
+		
+	<!-- Claim action only applies to a few statuses on new business transactions -->
+	<workItemAction actionCode="Claim" title="Claim" requiredPermission="accessCanClaim" isPrimary="false">
+		<when workItemType="new_business" status="15" isCreator="true" isOwner="true" />
+		<when workItemType="new_business" status="15" isCreator="true" isOwner="false" />
+		<when workItemType="new_business" status="15" isCreator="false" isOwner="true" />
+
+		<when workItemType="new_business" status="22" isCreator="true" isOwner="true" />
+		<when workItemType="new_business" status="22" isCreator="true" isOwner="false" />
+		<when workItemType="new_business" status="22" isCreator="false" isOwner="true" />
+		<url workItemType="regular">WorkItemAction?WORKITEMID=${WORKITEM_ID}&amp;action=Claim&amp;WorkListType=WorkItemsView</url>
+	</workItemAction>
+	
+	<workItemAction actionCode="Approve" title="Approve" requiredPermission="accessCanApprove">
+		<when workItemType="regular" status="20" isCreator="true" isOwner="true" />
+		<when workItemType="regular" status="20" isCreator="false" isOwner="true" />
+		<when workItemType="regular" status="20" isCreator="false" isOwner="false" />
+		<when workItemType="regular" status="20" isCreator="true" isOwner="false" />
+		<url workItemType="regular">WorkItemAction?WORKITEMID=${WORKITEM_ID}&amp;action=Approve&amp;WorkListType=WorkItemsView</url>
+	</workItemAction>
+	
+	<workItemAction actionCode="Copy" title="Copy" requiredPermission="accessCanCopy" isPrimary="false">
+		<when workItemType="regular" status="15" isCreator="true" isOwner="true" />
+		<when workItemType="regular" status="15" isCreator="false" isOwner="false" />
+		<when workItemType="regular" status="15" isCreator="false" isOwner="true" />
+		<when workItemType="regular" status="15" isCreator="true" isOwner="false" />
+
+		<when workItemType="regular" status="20" isCreator="true" isOwner="true" />
+		<when workItemType="regular" status="20" isCreator="false" isOwner="false" />
+		<when workItemType="regular" status="20" isCreator="false" isOwner="true" />
+		<when workItemType="regular" status="20" isCreator="true" isOwner="false" />
+
+		<when workItemType="regular" status="21" isCreator="true" isOwner="true" />
+		<when workItemType="regular" status="21" isCreator="true" isOwner="false" />
+		<when workItemType="regular" status="21" isCreator="false" isOwner="false" />
+		<when workItemType="regular" status="21" isCreator="false" isOwner="true" />
+
+		<when workItemType="regular" status="22" isCreator="true" isOwner="true" />
+		<when workItemType="regular" status="22" isCreator="true" isOwner="false" />
+		<when workItemType="regular" status="22" isCreator="false" isOwner="false" />
+		<when workItemType="regular" status="22" isCreator="false" isOwner="true" />
+
+		<when workItemType="regular" status="30" isCreator="true" isOwner="true" />
+		<when workItemType="regular" status="30" isCreator="true" isOwner="false" />
+		<when workItemType="regular" status="30" isCreator="false" isOwner="false" />
+		<when workItemType="regular" status="30" isCreator="false" isOwner="true" />
+
+		<when workItemType="regular" status="35" isCreator="true" isOwner="true" />
+		<when workItemType="regular" status="35" isCreator="true" isOwner="false" />
+		<when workItemType="regular" status="35" isCreator="false" isOwner="true" />
+
+		<when workItemType="account" status="115" isCreator="true" isOwner="true" />
+		<when workItemType="account" status="115" isCreator="false" isOwner="true" />
+		<when workItemType="account" status="115" isCreator="true" isOwner="false" />
+		<when workItemType="account" status="115" isCreator="false" isOwner="false" />
+		
+		<when workItemType="account" status="120" isCreator="true" isOwner="true" />
+		<url workItemType="regular">WorkItemAction?WORKITEMID=${WORKITEM_ID}&amp;action=Copy&amp;WorkListType=WorkItemsView</url>
+		<url workItemType="account">WorkItemAction?WORKITEMID=${WORKITEM_ID}&amp;action=Copy&amp;WorkListType=AccountItemsView</url>
+	</workItemAction>
+	
+	<workItemAction actionCode="ViewAccount" title="View" requiredPermission="accessCanViewAccount" isPrimary="false">
+
+		<when workItemType="account" status="115" isCreator="true" isOwner="true" openMode="editMode" />
+		<when workItemType="account" status="115" isCreator="false" isOwner="true" openMode="editMode" />
+		<when workItemType="account" status="115" isCreator="true" isOwner="false" openMode="editMode" />
+		<when workItemType="account" status="115" isCreator="false" isOwner="true" openMode="editMode" />
+		<when workItemType="account" status="115" isCreator="false" isOwner="false" openMode="editMode" />
+		<url workItemType="account">WorkItemAction?WORKITEMID=${WORKITEM_ID}&amp;action=ViewAccount&amp;WorkListType=AccountItemsView</url>
+	</workItemAction>
+	
+	<workItemAction actionCode="Merge" title="Merge" requiredPermission="accessCanMerge" isPrimary="false">
+
+		<when workItemType="account" status="115" isCreator="true" isOwner="true" />
+		<when workItemType="account" status="115" isCreator="false" isOwner="true" />
+		<when workItemType="account" status="115" isCreator="true" isOwner="false" />
+		<when workItemType="account" status="115" isCreator="false" isOwner="false" />
+
+	</workItemAction>
+
+	<workItemAction actionCode="Move" title="Move" requiredPermission="accessCanMove" isPrimary="false">
+	
+		<when workItemType="regular" status="15" isCreator="true" isOwner="true" openMode="editMode" />
+		<when workItemType="regular" status="15" isCreator="false" isOwner="false" openMode="no" />
+		<when workItemType="regular" status="15" isCreator="false" isOwner="true" openMode="editMode" />
+		<when workItemType="regular" status="15" isCreator="true" isOwner="false" openMode="editMode" />
+
+		<when workItemType="regular" status="20" isCreator="true" isOwner="true" openMode="summaryOnly" />
+		<when workItemType="regular" status="20" isCreator="false" isOwner="false" openMode="no" />
+		<when workItemType="regular" status="20" isCreator="false" isOwner="true" openMode="editMode" />
+		<when workItemType="regular" status="20" isCreator="true" isOwner="false" openMode="summaryOnly" />
+
+		<when workItemType="regular" status="21" isCreator="true" isOwner="true" openMode="summaryOnly" />
+		<when workItemType="regular" status="21" isCreator="true" isOwner="false" openMode="summaryOnly" />
+		<when workItemType="regular" status="21" isCreator="false" isOwner="false" openMode="no" />
+		<when workItemType="regular" status="21" isCreator="false" isOwner="true" openMode="summaryOnly" />
+
+		<when workItemType="regular" status="22" isCreator="true" isOwner="true" openMode="summaryOnly" />
+		<when workItemType="regular" status="22" isCreator="true" isOwner="false" openMode="summaryOnly" />
+		<when workItemType="regular" status="22" isCreator="false" isOwner="false" openMode="no" />
+		<when workItemType="regular" status="22" isCreator="false" isOwner="true" openMode="summaryOnly" />
+
+		<when workItemType="regular" status="30" isCreator="true" isOwner="true" openMode="summaryOnly" />
+		<when workItemType="regular" status="30" isCreator="true" isOwner="false" openMode="summaryOnly" />
+		<when workItemType="regular" status="30" isCreator="false" isOwner="false" openMode="no" />
+		<when workItemType="regular" status="30" isCreator="false" isOwner="true" openMode="summaryOnly" />
+
+		<when workItemType="regular" status="35" isCreator="true" isOwner="true" openMode="editMode" />
+		<when workItemType="regular" status="35" isCreator="true" isOwner="false" openMode="summaryOnly" />
+		<when workItemType="regular" status="35" isCreator="false" isOwner="true" openMode="summaryOnly" />
+
+		<when workItemType="account" status="115" isCreator="true" isOwner="true" openMode="editMode" />
+		<when workItemType="account" status="115" isCreator="false" isOwner="true" openMode="editMode" />
+		<when workItemType="account" status="115" isCreator="true" isOwner="false" openMode="editMode" />
+		<when workItemType="account" status="115" isCreator="false" isOwner="false" openMode="editMode" />
+		<when workItemType="account" status="120" isCreator="true" isOwner="true" openMode="editMode" />
+		<url workItemType="regular">WorkItemAction?WORKITEMID=${WORKITEM_ID}&amp;SRC_ACCOUNT=${RELATED_ACCOUNT_ID}&amp;action=MoveWorkItems&amp;MOVE_TYPE=MOVE&amp;WorkListType=WorkItemsView</url>
+	</workItemAction>
+
+	<workItemAction actionCode="Link" title="Link" requiredPermission="accessCanLink" isPrimary="false">
+	
+		<when workItemType="regular" status="15" isCreator="true" isOwner="true" openMode="editMode" />
+		<when workItemType="regular" status="15" isCreator="false" isOwner="false" openMode="no" />
+		<when workItemType="regular" status="15" isCreator="false" isOwner="true" openMode="editMode" />
+		<when workItemType="regular" status="15" isCreator="true" isOwner="false" openMode="editMode" />
+
+		<when workItemType="regular" status="20" isCreator="true" isOwner="true" openMode="summaryOnly" />
+		<when workItemType="regular" status="20" isCreator="false" isOwner="false" openMode="no" />
+		<when workItemType="regular" status="20" isCreator="false" isOwner="true" openMode="editMode" />
+		<when workItemType="regular" status="20" isCreator="true" isOwner="false" openMode="summaryOnly" />
+
+		<when workItemType="regular" status="21" isCreator="true" isOwner="true" openMode="summaryOnly" />
+		<when workItemType="regular" status="21" isCreator="true" isOwner="false" openMode="summaryOnly" />
+		<when workItemType="regular" status="21" isCreator="false" isOwner="false" openMode="no" />
+		<when workItemType="regular" status="21" isCreator="false" isOwner="true" openMode="summaryOnly" />
+
+		<when workItemType="regular" status="22" isCreator="true" isOwner="true" openMode="summaryOnly" />
+		<when workItemType="regular" status="22" isCreator="true" isOwner="false" openMode="summaryOnly" />
+		<when workItemType="regular" status="22" isCreator="false" isOwner="false" openMode="no" />
+		<when workItemType="regular" status="22" isCreator="false" isOwner="true" openMode="summaryOnly" />
+
+		<when workItemType="regular" status="30" isCreator="true" isOwner="true" openMode="summaryOnly" />
+		<when workItemType="regular" status="30" isCreator="true" isOwner="false" openMode="summaryOnly" />
+		<when workItemType="regular" status="30" isCreator="false" isOwner="false" openMode="no" />
+		<when workItemType="regular" status="30" isCreator="false" isOwner="true" openMode="summaryOnly" />
+
+		<when workItemType="regular" status="35" isCreator="true" isOwner="true" openMode="editMode" />
+		<when workItemType="regular" status="35" isCreator="true" isOwner="false" openMode="summaryOnly" />
+		<when workItemType="regular" status="35" isCreator="false" isOwner="true" openMode="summaryOnly" />
+		<url workItemType="regular">WorkItemAction?WORKITEMID=${WORKITEM_ID}&amp;SRC_ACCOUNT=-1&amp;action=MoveWorkItems&amp;MOVE_TYPE=LINK&amp;WorkListType=WorkItemsView</url>
+	</workItemAction>
+
+	<workItemAction actionCode="Endorse" title="Endorse" requiredPermission="accessCanEndorse" isPrimary="false">
+		<when workItemType="new_business" status="15" isCreator="true" isOwner="true" />
+		<when workItemType="new_business" status="15" isCreator="true" isOwner="false" />
+		<when workItemType="new_business" status="15" isCreator="false" isOwner="true" />
+		<url workItemType="regular">FrontServlet?PAGE_NAME=launchPASRequest&amp;METHOD=Display&amp;LOB=${LOB}&amp;POLICY_NUMBER=${WORKITEM_ID}&amp;NEW_PAS_REQUEST=true</url>
+	</workItemAction>
+</workItemActionDefinition>

@@ -1,0 +1,650 @@
+<fields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/pdf/pdfDefinitions.xsd" >
+	<field type="checkbox">
+		<eLabel>Vehicle_CombinedSingleLimit_LimitIndicator_A</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_FiveIndicator_L</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_SevenIndicator_L</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_OtherSymbolIndicator_L</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_BusinessAutoSymbol_OtherSymbolCode_L</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_FirstPartyBenefits_MedicalLimitAmount_A</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_FirstPartyBenefits_FuneralExpenseLimitAmount_A</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_FirstPartyBenefits_WorkLossLimitAmount_A</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_FirstPartyBenefits_AccidentalDeathLimitAmount_A</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_FiveIndicator_N</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_SevenIndicator_N</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_OtherSymbolIndicator_N</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_BusinessAutoSymbol_OtherSymbolCode_N</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_CombinedFirstPartyBenefits_TotalLimitAmount_A</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_CombinedFirstPartyBenefits_FuneralExpenseLimitAmount_A</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_CombinedFirstPartyBenefits_AccidentalDeathLimitAmount_A</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_FiveIndicator_O</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_SevenIndicator_O</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_OtherSymbolIndicator_O</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_BusinessAutoSymbol_OtherSymbolCode_O</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_ExtraordinaryMedicalBenefits_LimitAmount_A</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_TwoIndicator_B</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_ThreeIndicator_B</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_FourIndicator_B</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_SevenIndicator_B</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_EightIndicator_B</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_OtherSymbolIndicator_B</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_BusinessAutoSymbol_OtherSymbolCode_B</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_MedicalPayments_PerPersonLimitAmount_A</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_UninsuredMotoristsOption_StackedIndicator_A</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_UninsuredMotoristsOption_NonStackedIndicator_A</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_CombinedSingleLimit_LimitIndicator_B</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BodilyInjury_EachPersonLimitIndicator_B</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_UninsuredMotorists_BodilyInjuryPerPersonLimitAmount_A</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_UninsuredMotorists_BodilyInjuryPerAccidentLimitAmount_A</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_UnderinsuredMotoristsOption_StackedIndicator_A</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_UnderinsuredMotoristsOption_NonStackedIndicator_A</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_TwoIndicator_D</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_ThreeIndicator_D</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_FourIndicator_D</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_SixIndicator_D</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_SevenIndicator_D</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_OtherSymbolIndicator_D</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_BusinessAutoSymbol_OtherSymbolCode_D</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_CombinedSingleLimit_LimitIndicator_C</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BodilyInjury_EachPersonLimitIndicator_C</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_UnderinsuredMotorists_BodilyInjuryPerPersonLimitAmount_A</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_UnderinsuredMotorists_BodilyInjuryPerAccidentLimitAmount_A</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_OtherSymbolIndicator_H</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_BusinessAutoSymbol_OtherSymbolCode_H</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_OtherCoverageDescription_F</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_OtherCoverage_SymbolDescription_F</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_OtherCoverage_LimitAmount_F</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_Coverage_CollisionIndicator_A</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_Collision_DeductibleAmount_A</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_CombinedSingleLimit_LimitIndicator_D</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_TruckersSymbol_FortyFourIndicator_L</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_TruckersSymbol_FortySixIndicator_L</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_TruckersSymbol_OtherSymbolIndicator_L</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_TruckersSymbol_OtherSymbolCode_L</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_FirstPartyBenefits_MedicalLimitAmount_B</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_FirstPartyBenefits_FuneralExpenseLimitAmount_B</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_FirstPartyBenefits_WorkLossLimitAmount_B</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_FirstPartyBenefits_AccidentalDeathLimitAmount_B</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_TruckersSymbol_FortyFourIndicator_N</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_TruckersSymbol_FortySixIndicator_N</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_TruckersSymbol_OtherSymbolIndicator_N</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_TruckersSymbol_OtherSymbolCode_N</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_CombinedFirstPartyBenefits_TotalLimitAmount_B</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_CombinedFirstPartyBenefits_FuneralExpenseLimitAmount_B</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_CombinedFirstPartyBenefits_AccidentalDeathLimitAmount_B</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_TruckersSymbol_FortyFourIndicator_O</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_TruckersSymbol_FortySixIndicator_O</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_TruckersSymbol_OtherSymbolIndicator_O</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_TruckersSymbol_OtherSymbolCode_O</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_ExtraordinaryMedicalBenefits_LimitAmount_B</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_TruckersSymbol_FortyTwoIndicator_B</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_TruckersSymbol_FortyThreeIndicator_B</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_TruckersSymbol_FortySixIndicator_B</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_TruckersSymbol_OtherSymbolIndicator_B</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_TruckersSymbol_OtherSymbolCode_B</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_MedicalPayments_PerPersonLimitAmount_B</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_UninsuredMotoristsOption_StackedIndicator_B</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_UninsuredMotoristsOption_NonStackedIndicator_B</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_CombinedSingleLimit_LimitIndicator_E</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BodilyInjury_EachPersonLimitIndicator_E</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_UninsuredMotorists_BodilyInjuryPerPersonLimitAmount_B</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_UninsuredMotorists_BodilyInjuryPerAccidentLimitAmount_B</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_UnderinsuredMotoristsOption_StackedIndicator_B</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_UnderinsuredMotoristsOption_NonStackedIndicator_B</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_TruckersSymbol_FortyTwoIndicator_D</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_TruckersSymbol_FortyThreeIndicator_D</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_TruckersSymbol_FortyFiveIndicator_D</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_TruckersSymbol_FortySixIndicator_D</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_TruckersSymbol_OtherSymbolIndicator_D</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_TruckersSymbol_OtherSymbolCode_D</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_CombinedSingleLimit_LimitIndicator_F</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BodilyInjury_EachPersonLimitIndicator_F</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_UnderinsuredMotorists_BodilyInjuryPerPersonLimitAmount_B</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_UnderinsuredMotorists_BodilyInjuryPerAccidentLimitAmount_B</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_OtherCoverageDescription_G</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_OtherCoverage_SymbolDescription_G</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_OtherCoverage_LimitAmount_G</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_TruckersSymbol_OtherSymbolIndicator_H</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_TruckersSymbol_OtherSymbolCode_H</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_TrailerInterchange_TrailerValueAmount_A</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_OtherCoverageDescription_J</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_OtherCoverage_SymbolDescription_J</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_OtherCoverage_LimitAmount_J</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_CombinedSingleLimit_LimitIndicator_G</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_MotorCarrierSymbol_SixtyFiveIndicator_L</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_MotorCarrierSymbol_SixtySevenIndicator_L</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_MotorCarrierSymbol_OtherSymbolIndicator_L</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_MotorCarrierSymbol_OtherSymbolCode_L</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_FirstPartyBenefits_MedicalLimitAmount_C</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_FirstPartyBenefits_FuneralExpenseLimitAmount_C</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_FirstPartyBenefits_WorkLossLimitAmount_C</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_FirstPartyBenefits_AccidentalDeathLimitAmount_C</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_MotorCarrierSymbol_SixtyFiveIndicator_N</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_MotorCarrierSymbol_SixtySevenIndicator_N</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_MotorCarrierSymbol_OtherSymbolIndicator_N</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_MotorCarrierSymbol_OtherSymbolCode_N</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_CombinedFirstPartyBenefits_TotalLimitAmount_C</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_CombinedFirstPartyBenefits_FuneralExpenseLimitAmount_C</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_CombinedFirstPartyBenefits_AccidentalDeathLimitAmount_C</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_MotorCarrierSymbol_SixtyFiveIndicator_O</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_MotorCarrierSymbol_SixtySevenIndicator_O</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_MotorCarrierSymbol_OtherSymbolIndicator_O</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_MotorCarrierSymbol_OtherSymbolCode_O</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_ExtraordinaryMedicalBenefits_LimitAmount_C</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_MotorCarrierSymbol_SixtyTwoIndicator_B</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_MotorCarrierSymbol_SixtyThreeIndicator_B</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_MotorCarrierSymbol_SixtyFourIndicator_B</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_MotorCarrierSymbol_SixtySevenIndicator_B</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_MotorCarrierSymbol_OtherSymbolIndicator_B</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_MotorCarrierSymbol_OtherSymbolCode_B</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_MedicalPayments_PerPersonLimitAmount_C</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_UninsuredMotoristsOption_StackedIndicator_C</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_UninsuredMotoristsOption_NonStackedIndicator_C</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_CombinedSingleLimit_LimitIndicator_H</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BodilyInjury_EachPersonLimitIndicator_H</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_UninsuredMotorists_BodilyInjuryPerPersonLimitAmount_C</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_UninsuredMotorists_BodilyInjuryPerAccidentLimitAmount_C</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_UnderinsuredMotoristsOption_StackedIndicator_C</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_UnderinsuredMotoristsOption_NonStackedIndicator_C</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_MotorCarrierSymbol_SixtyTwoIndicator_D</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_MotorCarrierSymbol_SixtyThreeIndicator_D</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_MotorCarrierSymbol_SixtyFourIndicator_D</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_MotorCarrierSymbol_SixtySixIndicator_D</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_MotorCarrierSymbol_SixtySevenIndicator_D</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_MotorCarrierSymbol_OtherSymbolIndicator_D</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_MotorCarrierSymbol_OtherSymbolCode_D</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_CombinedSingleLimit_LimitIndicator_I</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BodilyInjury_EachPersonLimitIndicator_I</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_UnderinsuredMotorists_BodilyInjuryPerPersonLimitAmount_C</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_UnderinsuredMotorists_BodilyInjuryPerAccidentLimitAmount_C</eLabel>
+		<xpath/>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_MotorCarrierSymbol_OtherSymbolIndicator_H</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_MotorCarrierSymbol_OtherSymbolCode_H</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_TrailerInterchange_TrailerValueAmount_B</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_OtherCoverageDescription_O</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_OtherCoverage_SymbolDescription_O</eLabel>
+		<xpath/>
+	</field>
+	<field>
+		<eLabel>Vehicle_OtherCoverage_LimitAmount_O</eLabel>
+		<xpath/>
+	</field>
+</fields>

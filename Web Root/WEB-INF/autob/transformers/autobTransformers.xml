@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/transformer/transformer.xsd">
+    <transformer name="AP Comml Auto Simplfied ACORD to ACORD standard" type="aggregator" targetFormat="ACORDStandard" lob="AUTOB">
+        <step name="AUTOB Transformation target - ACORD Standard Step" type="XSLT" xsltResourceId="autobStandard.xsl" />
+        <step name="Shared Standard Built-in Transformations" type="link" linkedTo="builtin-standardizations" />
+    </transformer>
+    <transformer name="ACORD AUTOB standard to AP AUTOB Simplfied ACORD " type="aggregator" targetFormat="ACORDSimplified" lob="AUTOB">
+        <step name="Turnstile Remediation" type="java" className="com.agencyport.autob.transformers.AutobTurnstileTransformer" />
+        <step name="AUTOB Transformation target - ACORD Simplified Step 1" type="XSLT" xslTransformerType="INTERPRETED" xsltResourceId="autobSimplified.xsl" />
+        <step name="Upload Emendation" type="java" className="com.agencyport.autob.transformers.AutobUploadTransformer" />		
+		<step name="Tax Id Formatter" type="java"  className="com.agencyport.shared.transformers.TaxIdTransformer" />
+        <!-- transformer location -->
+    </transformer>
+    <!-- @lob is the lob of source transaction. @name must be unique across all LOB's. @lob + @targetFormat is a key and must be unique across all LOB's. -->
+    <transformer name="Account XML to Comml Auto Workitem XML" type="aggregator" targetFormat="ACORDWorkItemDownFill" lob="AUTOB">
+        <step name="Account_TO_AUTOB_WorkItem" type="XSLT" xsltResourceId="workitemdownfill.xsl" />
+    </transformer>
+</transformers>
+
+

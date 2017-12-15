@@ -1,0 +1,542 @@
+<transactionDefinitionBehavior xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/behavior/transactionDefinitionBehavior.xsd">
+    <!-- The following delimiter applies to the <for> elements for separating page entities -->
+    <delimiter>/</delimiter>
+    <!-- Example of class level behaviors -->
+    <behavior id="excludeStateSpecific" title="State Specific content exclusion">
+        <do action="exclude" />
+        <for>*/.StateSpecific</for>
+        <for>*/*/.StateSpecific</for>
+        <for>*/*/*/.StateSpecific</for>
+    </behavior>
+
+    <behavior id="includeAKContent" title="Include AK content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('AK')</preCondition>
+        </where>
+        <for>*/.AK</for>
+        <for>*/*/.AK</for>
+        <for>*/*/*/.AK</for>
+    </behavior>
+
+    <behavior id="includeALContent" title="Include AL content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('AL')</preCondition>
+        </where>
+        <for>*/.AL</for>
+        <for>*/*/.AL</for>
+        <for>*/*/*/.AL</for>
+    </behavior>
+
+    <behavior id="includeARContent" title="Include AR content" >
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('AR')</preCondition>
+        </where>
+        <for>*/.AR</for>
+        <for>*/*/.AR</for>
+        <for>*/*/*/.AR</for>
+    </behavior>
+
+    <behavior id="includeAZContent" title="Include AZ content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('AZ')</preCondition>
+        </where>
+        <for>*/.AZ</for>
+        <for>*/*/.AZ</for>
+        <for>*/*/*/.AZ</for>
+    </behavior>
+
+    <behavior id="includeCAContent" title="Include CA content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('CA')</preCondition>
+        </where>
+        <for>*/.CA</for>
+        <for>*/*/.CA</for>
+        <for>*/*/*/.CA</for>
+    </behavior>
+
+    <behavior id="includeCOContent" title="Include CO content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('CO')</preCondition>
+        </where>
+        <for>*/.CO</for>
+        <for>*/*/.CO</for>
+        <for>*/*/*/.CO</for>
+    </behavior>
+
+    <behavior id="includeCTContent" title="Include CT content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('CT')</preCondition>
+        </where>
+        <for>*/.CT</for>
+        <for>*/*/.CT</for>
+        <for>*/*/*/.CT</for>
+    </behavior>
+
+    <behavior id="includeDCContent" title="Include DC content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('DC')</preCondition>
+        </where>
+        <for>*/.DC</for>
+        <for>*/*/.DC</for>
+        <for>*/*/*/.DC</for>
+    </behavior>
+
+    <behavior id="includeDEContent" title="Include DE content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('DE')</preCondition>
+        </where>
+        <for>*/.DE</for>
+        <for>*/*/.DE</for>
+        <for>*/*/*/.DE</for>
+    </behavior>
+
+    <behavior id="includeFLContent" title="Include FL content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('FL')</preCondition>
+        </where>
+        <for>*/.FL</for>
+        <for>*/*/.FL</for>
+        <for>*/*/*/.FL</for>
+    </behavior>
+
+    <behavior id="includeGAContent" title="Include GA content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('GA')</preCondition>
+        </where>
+        <for>*/.GA</for>
+        <for>*/*/.GA</for>
+        <for>*/*/*/.GA</for>
+    </behavior>
+
+    <behavior id="includeHIContent" title="Include HI content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('HI')</preCondition>
+        </where>
+        <for>*/.HI</for>
+        <for>*/*/.HI</for>
+        <for>*/*/*/.HI</for>
+    </behavior>
+
+    <behavior id="includeIAContent" title="Include IA content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('IA')</preCondition>
+        </where>
+        <for>*/.IA</for>
+        <for>*/*/.IA</for>
+        <for>*/*/*/.IA</for>
+    </behavior>
+
+    <behavior id="includeIDContent" title="Include ID content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('ID')</preCondition>
+        </where>
+        <for>*/.ID</for>
+        <for>*/*/.ID</for>
+        <for>*/*/*/.ID</for>
+    </behavior>
+
+    <behavior id="includeILContent" title="Include IL content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('IL')</preCondition>
+        </where>
+        <for>*/.IL</for>
+        <for>*/*/.IL</for>
+        <for>*/*/*/.IL</for>
+    </behavior>
+
+    <behavior id="includeINContent" title="Include IN content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('IN')</preCondition>
+        </where>
+        <for>*/.IN</for>
+        <for>*/*/.IN</for>
+        <for>*/*/*/.IN</for>
+    </behavior>
+
+    <behavior id="includeKSContent" title="Include KS content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('KS')</preCondition>
+        </where>
+        <for>*/.KS</for>
+        <for>*/*/.KS</for>
+        <for>*/*/*/.KS</for>
+    </behavior>
+
+    <behavior id="includeKYContent" title="Include KY content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('KY')</preCondition>
+        </where>
+        <for>*/.KY</for>
+        <for>*/*/.KY</for>
+        <for>*/*/*/.KY</for>
+    </behavior>
+
+    <behavior id="includeLAContent" title="Include LA content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('LA')</preCondition>
+        </where>
+        <for>*/.LA</for>
+        <for>*/*/.LA</for>
+        <for>*/*/*/.LA</for>
+    </behavior>
+
+    <behavior id="includeMAContent" title="Include MA content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('MA')</preCondition>
+        </where>
+        <for>*/.MA</for>
+        <for>*/*/.MA</for>
+        <for>*/*/*/.MA</for>
+    </behavior>
+
+    <behavior id="includeMDContent" title="Include MD content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('MD')</preCondition>
+        </where>
+        <for>*/.MD</for>
+        <for>*/*/.MD</for>
+        <for>*/*/*/.MD</for>
+    </behavior>
+
+    <behavior id="includeMEContent" title="Include ME content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('ME')</preCondition>
+        </where>
+        <for>*/.ME</for>
+        <for>*/*/.ME</for>
+        <for>*/*/*/.ME</for>
+    </behavior>
+
+    <behavior id="includeMIContent" title="Include MI content" >
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('MI')</preCondition>
+        </where>
+        <for>*/.MI</for>
+        <for>*/*/.MI</for>
+        <for>*/*/*/.MI</for>
+    </behavior>
+
+    <behavior id="includeMNContent" title="Include MN content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('MN')</preCondition>
+        </where>
+        <for>*/.MN</for>
+        <for>*/*/.MN</for>
+        <for>*/*/*/.MN</for>
+    </behavior>
+
+    <behavior id="includeMOContent" title="Include MO content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('MO')</preCondition>
+        </where>
+        <for>*/.MO</for>
+        <for>*/*/.MO</for>
+        <for>*/*/*/.MO</for>
+    </behavior>
+
+    <behavior id="includeMSContent" title="Include MS content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('MS')</preCondition>
+        </where>
+        <for>*/.MS</for>
+        <for>*/*/.MS</for>
+        <for>*/*/*/.MS</for>
+    </behavior>
+
+    <behavior id="includeMTContent" title="Include MT content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('MT')</preCondition>
+        </where>
+        <for>*/.MT</for>
+        <for>*/*/.MT</for>
+        <for>*/*/*/.MT</for>
+    </behavior>
+
+    <behavior id="includeNCContent" title="Include NC content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('NC')</preCondition>
+        </where>
+        <for>*/.NC</for>
+        <for>*/*/.NC</for>
+        <for>*/*/*/.NC</for>
+    </behavior>
+
+    <behavior id="includeNDContent" title="Include ND content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('ND')</preCondition>
+        </where>
+        <for>*/.ND</for>
+        <for>*/*/.ND</for>
+        <for>*/*/*/.ND</for>
+    </behavior>
+
+    <behavior id="includeNEContent" title="Include NE content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('NE')</preCondition>
+        </where>
+        <for>*/.NE</for>
+        <for>*/*/.NE</for>
+        <for>*/*/*/.NE</for>
+    </behavior>
+
+    <behavior id="includeNHContent" title="Include NH content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('NH')</preCondition>
+        </where>
+        <for>*/.NH</for>
+        <for>*/*/.NH</for>
+        <for>*/*/*/.NH</for>
+    </behavior>
+
+    <behavior id="includeNJContent" title="Include NJ content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('NJ')</preCondition>
+        </where>
+        <for>*/.NJ</for>
+        <for>*/*/.NJ</for>
+        <for>*/*/*/.NJ</for>
+    </behavior>
+
+    <behavior id="includeNMContent" title="Include NM content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('NM')</preCondition>
+        </where>
+        <for>*/.NM</for>
+        <for>*/*/.NM</for>
+        <for>*/*/*/.NM</for>
+    </behavior>
+    
+    <behavior id="includeNVContent" title="Include NV content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('NV')</preCondition>
+        </where>
+        <for>*/.NV</for>
+        <for>*/*/.NV</for>
+        <for>*/*/*/.NV</for>
+    </behavior>
+
+    <behavior id="includeNYContent" title="Include NY content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('NY')</preCondition>
+        </where>
+        <for>*/.NY</for>
+        <for>*/*/.NY</for>
+        <for>*/*/*/.NY</for>
+    </behavior>
+
+    <behavior id="includeOHContent" title="Include OH content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('OH')</preCondition>
+        </where>
+        <for>*/.OH</for>
+        <for>*/*/.OH</for>
+        <for>*/*/*/.OH</for>
+    </behavior>
+
+    <behavior id="includeOKContent" title="Include OK content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('OK')</preCondition>
+        </where>
+        <for>*/.OK</for>
+        <for>*/*/.OK</for>
+        <for>*/*/*/.OK</for>
+    </behavior>
+
+    <behavior id="includeORContent" title="Include OR content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('OR')</preCondition>
+        </where>
+        <for>*/.OR</for>
+        <for>*/*/.OR</for>
+        <for>*/*/*/.OR</for>
+    </behavior>
+
+    <behavior id="includePAContent" title="Include PA content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('PA')</preCondition>
+        </where>
+        <for>*/.PA</for>
+        <for>*/*/.PA</for>
+        <for>*/*/*/.PA</for>
+    </behavior>
+
+    <behavior id="includePRContent" title="Include PR content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('PR')</preCondition>
+        </where>
+        <for>*/.PR</for>
+        <for>*/*/.PR</for>
+        <for>*/*/*/.PR</for>
+    </behavior>
+
+    <behavior id="includeRIContent" title="Include RI content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('RI')</preCondition>
+        </where>
+        <for>*/.RI</for>
+        <for>*/*/.RI</for>
+        <for>*/*/*/.RI</for>
+    </behavior>
+
+    <behavior id="includeSCContent" title="Include SC content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('SC')</preCondition>
+        </where>
+        <for>*/.SC</for>
+        <for>*/*/.SC</for>
+        <for>*/*/*/.SC</for>
+    </behavior>
+
+    <behavior id="includeSDContent" title="Include SD content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('SD')</preCondition>
+        </where>
+        <for>*/.SD</for>
+        <for>*/*/.SD</for>
+        <for>*/*/*/.SD</for>
+    </behavior>
+
+    <behavior id="includeTNContent" title="Include TN content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('TN')</preCondition>
+        </where>
+        <for>*/.TN</for>
+        <for>*/*/.TN</for>
+        <for>*/*/*/.TN</for>
+    </behavior>
+
+    <behavior id="includeTXContent" title="Include TX content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('TX')</preCondition>
+        </where>
+        <for>*/.TX</for>
+        <for>*/*/.TX</for>
+        <for>*/*/*/.TX</for>
+    </behavior>
+
+    <behavior id="includeUTContent" title="Include UT content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('UT')</preCondition>
+        </where>
+        <for>*/.UT</for>
+        <for>*/*/.UT</for>
+        <for>*/*/*/.UT</for>
+    </behavior>
+
+    <behavior id="includeVAContent" title="Include VA content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('VA')</preCondition>
+        </where>
+        <for>*/.VA</for>
+        <for>*/*/.VA</for>
+        <for>*/*/*/.VA</for>
+    </behavior>
+
+    <behavior id="includeVIContent" title="Include VI content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('VI')</preCondition>
+        </where>
+        <for>*/.VI</for>
+        <for>*/*/.VI</for>
+        <for>*/*/*/.VI</for>
+    </behavior>
+
+    <behavior id="includeVTContent" title="Include VT content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('VT')</preCondition>
+        </where>
+        <for>*/.VT</for>
+        <for>*/*/.VT</for>
+        <for>*/*/*/.VT</for>
+    </behavior>
+
+    <behavior id="includeWAContent" title="Include WA content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('WA')</preCondition>
+        </where>
+        <for>*/.WA</for>
+        <for>*/*/.WA</for>
+        <for>*/*/*/.WA</for>
+    </behavior>
+
+    <behavior id="includeWIContent" title="Include WI content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('WI')</preCondition>
+        </where>
+        <for>*/.WI</for>
+        <for>*/*/.WI</for>
+        <for>*/*/*/.WI</for>
+    </behavior>
+
+    <behavior id="includeWVContent" title="Include WV content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('WV')</preCondition>
+        </where>
+        <for>*/.WV</for>
+        <for>*/*/.WV</for>
+        <for>*/*/*/.WV</for>
+    </behavior>
+
+    <behavior id="includeWYContent" title="Include WY content">
+        <do action="include" />
+        <where>
+            <preCondition name="HotRateState">in('WY')</preCondition>
+        </where>
+        <for>*/.WY</for>
+        <for>*/*/.WY</for>
+        <for>*/*/*/.WY</for>
+    </behavior>
+
+</transactionDefinitionBehavior>

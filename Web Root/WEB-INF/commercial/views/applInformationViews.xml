@@ -1,0 +1,30 @@
+<views xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/view/view.xsd">
+	<!-- applInformationViews.xml -->
+	<view id="CommlPolicy.RemarkText.1" title="Remarks" type="standard" relatedAggregateId="CommlPolicy.@id" index="0" deleteMode="onEmptyValue" class="remarks">
+		<fieldSet>
+			<field type="id" >RemarkText</field>
+		</fieldSet>
+	</view>
+	<view id="CommlPolicy.AdditionalInterest.Trust.GeneralPartyInfo.NameInfo.CommlName.CommercialName" title="Additional Interest Trust" type="standard" deleteMode="onEmptyValue">
+		<fieldSet>
+			<field type="id" >CommlPolicy.AdditionalInterest[AdditionalInterestInfo.NatureInterestCd='TR'].GeneralPartyInfo.NameInfo.CommlName.CommercialName</field>
+			<deleteField type="id">CommlPolicy.AdditionalInterest[AdditionalInterestInfo.NatureInterestCd='TR']</deleteField>
+		</fieldSet>
+	</view>
+	<view id="RemarkText.AgentComments" title="Agent Comments" type="standard" relatedAggregateId="CommlPolicy.@id" index="0" apType="AgentComments" deleteMode="onEmptyValue" class="remarks">
+		<fieldSet>
+			<field type="id" >RemarkText</field>
+		</fieldSet>
+	</view>	
+	<view id="RemarkText.Questionnaire" title="Applicant Questionnaire Remarks" type="standard" relatedAggregateId="CommlPolicy.@id" index="0" deleteMode="onEmptyValue" class="remarks">
+		<fieldSet>
+			<field type="id" >RemarkText</field>
+		</fieldSet>
+	</view>
+	<view id="RemarkText.lossHistory" title="Loss Remarks" type="standard" relatedAggregateId="CommlPolicy.Loss.@id" index="0" apType="lossHistory" deleteMode="onEmptyValue" class="remarks">
+		<fieldSet>
+			<field type="id" >RemarkText</field>
+		</fieldSet>
+	</view>
+</views>

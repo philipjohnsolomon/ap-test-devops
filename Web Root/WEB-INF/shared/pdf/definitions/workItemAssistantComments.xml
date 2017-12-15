@@ -1,0 +1,5 @@
+<fields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/pdf/pdfDefinitions.xsd">
+	<field javaclass="com.agencyport.shared.pdf.eform.WorkItemAssistantCommentFieldValueGetter">
+		<eLabel>Comments_A</eLabel>
+	</field>
+</fields>

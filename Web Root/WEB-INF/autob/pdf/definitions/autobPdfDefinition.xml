@@ -1,0 +1,968 @@
+<forms lob="AUTOB" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/pdf/pdfDefinitions.xsd">
+	<formGroups>
+		<group name="ACORD137" title="label.Document.AcordForm137">
+			<formResource>ACORD137MA</formResource>
+			<formResource>ACORD137MI</formResource>
+			<formResource>ACORD137NH</formResource>
+			<formResource>ACORD137NJ</formResource>
+			<formResource>ACORD137NY</formResource>
+			<formResource>ACORD137PA</formResource>
+			<formResource>ACORD137RI</formResource>
+			<formResource>ACORD137VT</formResource>
+			<formResource>ACORD137CT</formResource>
+			<formResource>ACORD137OR</formResource>
+			<formResource>ACORD137AZ</formResource>
+			<formResource>ACORD137NV</formResource>
+			<formResource>ACORD137CA</formResource>
+			<formResource>ACORD137WA</formResource>
+			<formResource>ACORD137KY</formResource>
+			<formResource>ACORD137AL</formResource>
+			<formResource>ACORD137CO</formResource>
+			<formResource>ACORD137DC</formResource>
+			<formResource>ACORD137AR</formResource>
+			<formResource>ACORD137DE</formResource>
+			<formResource>ACORD137AK</formResource>
+			<formResource>ACORD137IL</formResource>
+			<formResource>ACORD137ID</formResource>
+			<formResource>ACORD137IN</formResource>
+		    <formResource>ACORD137IA</formResource>
+			<formResource>ACORD137GA</formResource>
+			<formResource>ACORD137HI</formResource>
+			<formResource>ACORD137KS</formResource>
+			<formResource>ACORD137MS</formResource>
+			<formResource>ACORD137LA</formResource>
+			<formResource>ACORD137MO</formResource>
+			<formResource>ACORD137NE</formResource>
+			<formResource>ACORD137MN</formResource>
+			<formResource>ACORD137MT</formResource>
+			<formResource>ACORD137MD</formResource>
+			<formResource>ACORD137ME</formResource>
+			<formResource>ACORD137NM</formResource>
+			<formResource>ACORD137OK</formResource>
+		 </group>
+		 <group name="ACORD137" title="label.Document.AcordForm137">
+		    <formResource>ACORD137FL</formResource> 
+			<formResource>ACORD61FL</formResource>
+			<formResource>ACORD62FL</formResource>
+		</group> 
+		<group name="ACORD125" title="label.Document.AcordForm125">
+			<formResource>ACORD125</formResource>
+		</group>
+		<group name="ACORD127" title="label.Document.AcordForm127">
+			<formResource>ACORD127</formResource>
+		</group>
+		<group name="ACORDFORM" title="label.Document.AcordForms">
+			<formResource>ACORD125</formResource>
+			<formResource>ACORD127</formResource>
+			<formResource>ACORD137MA</formResource>
+			<formResource>ACORD137MI</formResource>
+			<formResource>ACORD137NH</formResource>
+			<formResource>ACORD137NJ</formResource>
+			<formResource>ACORD137NY</formResource>
+			<formResource>ACORD137PA</formResource>
+			<formResource>ACORD137RI</formResource>
+			<formResource>ACORD137VT</formResource>
+			<formResource>ACORD137CT</formResource>
+			<formResource>ACORD137OR</formResource>
+			<formResource>ACORD137AZ</formResource>
+			<formResource>ACORD137NV</formResource>
+			<formResource>ACORD137CA</formResource>
+			<formResource>ACORD137WA</formResource>
+			<formResource>ACORD137KY</formResource>
+			<formResource>ACORD137AL</formResource>
+			<formResource>ACORD137CO</formResource>
+			<formResource>ACORD137DC</formResource>
+			<formResource>ACORD137AR</formResource>
+			<formResource>ACORD137DE</formResource>
+			<formResource>ACORD137AK</formResource>
+			<formResource>ACORD137IL</formResource>
+			<formResource>ACORD137ID</formResource>
+			<formResource>ACORD137IN</formResource>
+			<formResource>ACORD137IA</formResource>
+			<formResource>ACORD137GA</formResource>
+			<formResource>ACORD137HI</formResource>
+			<formResource>ACORD137KS</formResource>
+			<formResource>ACORD137MS</formResource>
+			<formResource>ACORD137LA</formResource>
+			<formResource>ACORD137MO</formResource>
+			<formResource>ACORD137NE</formResource>
+			<formResource>ACORD137MN</formResource>
+			<formResource>ACORD137MT</formResource>
+			<formResource>ACORD137MD</formResource>
+			<formResource>ACORD137ME</formResource>
+			<formResource>ACORD137NM</formResource>
+			<formResource>ACORD137OK</formResource>
+	    </group>
+		<group name="ACORDFORM" title="label.Document.AcordForms">
+		<formResource>ACORD137FL</formResource>
+		    <formResource>ACORD61FL</formResource>
+			<formResource>ACORD62FL</formResource>
+		</group>
+	</formGroups>
+	<form name="ACORD125" resourceId="ACORD_FORM_125.pdf">
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include
+			resourceId="../../../commercial/pdf/definitions/acord125_natureOfBusiness.xml" />
+		<include
+			resourceId="../../../commercial/pdf/definitions/acord125_attachmentIndicator.xml" />
+		<include
+			resourceId="../../../commercial/pdf/definitions/acord125_generalInformation.xml" />
+		<include
+			resourceId="../../../commercial/pdf/definitions/acord125_producerNameInsured.xml" />
+		<include resourceId="acord125_generalInformationDetail.xml" />
+		<schedule name="lossHistory">
+			<repeat size="3" source="CommlPolicy.Loss">
+				<include
+					resourceId="../../../commercial/pdf/definitions/acord125_lossHistory.xml" />
+			</repeat>
+		</schedule>
+		<schedule name="AdditionalInterest">
+			<repeat size="1"
+				source="CommlAutoLineBusiness.CommlRateState.CommlVeh.AdditionalInterest">
+				<include resourceId="acord127_additionalInterest.xml" />
+			</repeat>
+		</schedule>
+		<schedule name="priorcarrier">
+			<repeat size="3" source="CommlPolicy.OtherOrPriorPolicy">
+				<include resourceId="priorCarrier.xml" />
+			</repeat>
+		</schedule>
+	</form>
+	<form name="ACORD127" resourceId="ACORD_FORM_127.pdf">
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord127_generalInfo.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<schedule name="Driver" overflow="driverSchedule">
+			<repeat size="13" source="CommlAutoLineBusiness.CommlDriver">
+				<include resourceId="acord127_drivers.xml" />
+			</repeat>
+		</schedule>
+		<schedule name="Vehicle" overflow="vehicleSchedule">
+			<repeat size="4" source="CommlAutoLineBusiness.CommlRateState.CommlVeh">
+				<include resourceId="acord127_vehicles.xml" />
+			</repeat>
+		</schedule>
+		<schedule name="AdditionalInterest" overflow="additionalInterestSchedule">
+			<repeat size="2"
+				source="CommlAutoLineBusiness.CommlRateState.CommlVeh.AdditionalInterest">
+				<include resourceId="acord127_additionalInterest.xml" />
+			</repeat>
+		</schedule>
+		<schedule name="additionalData" overflow="additionalData">
+			<repeat size="0" source="CommlAutoLineBusiness.CommlRateState.CommlVeh">
+				<include resourceId="additionalData127.xml" />
+			</repeat>
+		</schedule>
+		<overflow name="driverSchedule" size="24" resourceId="ACORD_FORM_163.pdf"
+			scheduleIndicator="CommercialVehicleLineOfBusiness_Attachment_CommercialAutoDriverInformationScheduleIndicator_A">
+			<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+			<fields>
+				<field>
+					<eLabel>Policy_EffectiveDate_A</eLabel>
+					<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+					<format type="date" />
+				</field>
+			</fields>
+		</overflow>
+		<overflow name="vehicleSchedule" size="5" resourceId="ACORD_FORM_129.pdf"
+			scheduleIndicator="CommercialVehicleLineOfBusiness_Attachment_VehicleScheduleIndicator_A">
+			<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+			<fields>
+				<field>
+					<eLabel>Policy_EffectiveDate_A</eLabel>
+					<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+					<format type="date" />
+				</field>
+			</fields>
+		</overflow>
+		<overflow name="additionalInterestSchedule" size="5"
+			resourceId="ACORD_FORM_45.pdf"
+			scheduleIndicator="CommercialVehicleLineOfBusiness_Attachment_AdditionalInterestIndicator_A">
+			<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+			<fields>
+				<field>
+					<eLabel>Policy_EffectiveDate_A</eLabel>
+					<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+					<format type="date" />
+				</field>
+			</fields>
+		</overflow>
+		<overflow name="additionalData" size="2"
+			resourceId="ADDITIONAL_DATA_FORM127.pdf">
+			<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+			<pagination pageElabel="Current_Page_A" totalPageElabel="Total_Page_A" />
+		</overflow>
+	</form>
+	<form name="WORKITEM_ASSISTANT" resourceId="AP_WORKITEM_ASSISTANT_COMMENTS.pdf">
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include
+			resourceId="../../../shared/pdf/definitions/workItemAssistantComments.xml" />
+	</form>
+	<form name="ACORD61FL" resourceId="ACORD_FORM_61FL.pdf">
+		<variables>
+			<variable name="stateCode" value="FL" />
+		</variables>
+		 <criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='FL'].StateProvCd"
+				value="FL" />
+		 </criteria>
+ 	</form>
+	<form name="ACORD62FL" resourceId="ACORD_FORM_62FL.pdf">
+		<variables>
+			<variable name="stateCode" value="FL" />
+		</variables>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='FL'].StateProvCd"
+				value="FL" />
+		</criteria>
+	 </form>
+	<form name="ACORD137MA" resourceId="ACORD_FORM_137MA.pdf">
+		<variables>
+			<variable name="stateCode" value="MA" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137MA.xml" />
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='MA'].StateProvCd"
+				value="MA" />
+		</criteria>
+	</form>
+	<form name="ACORD137MI" resourceId="ACORD_FORM_137MI.pdf">
+		<variables>
+			<variable name="stateCode" value="MI" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137MI.xml" />
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='MI'].StateProvCd"
+				value="MI" />
+		</criteria>
+	</form>
+	<form name="ACORD137NH" resourceId="ACORD_FORM_137NH.pdf">
+		<variables>
+			<variable name="stateCode" value="NH" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137NH.xml" />
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='NH'].StateProvCd"
+				value="NH" />
+		</criteria>
+	</form>
+	<form name="ACORD137NJ" resourceId="ACORD_FORM_137NJ.pdf">
+		<variables>
+			<variable name="stateCode" value="NJ" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137NJ.xml" />
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='NJ'].StateProvCd"
+				value="NJ" />
+		</criteria>
+	</form>
+	<form name="ACORD137NY" resourceId="ACORD_FORM_137NY.pdf">
+		<variables>
+			<variable name="stateCode" value="NY" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137NY.xml" />
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='NY'].StateProvCd"
+				value="NY" />
+		</criteria>
+	</form>
+	<form name="ACORD137OH" resourceId="ACORD_FORM_137OH.pdf">
+		<variables>
+			<variable name="stateCode" value="OH" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<!-- <include resourceId="acord137OH.xml"/> -->
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='OH'].StateProvCd"
+				value="OH" />
+		</criteria>
+	</form>
+	<form name="ACORD137PA" resourceId="ACORD_FORM_137PA.pdf">
+		<variables>
+			<variable name="stateCode" value="PA" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<!-- <include resourceId="acord137PA.xml"/> -->
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='PA'].StateProvCd"
+				value="PA" />
+		</criteria>
+	</form>
+	<form name="ACORD137RI" resourceId="ACORD_FORM_137RI.pdf">
+		<variables>
+			<variable name="stateCode" value="RI" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137RI.xml" />
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='RI'].StateProvCd"
+				value="RI" />
+		</criteria>
+	</form>
+	<form name="ACORD137VT" resourceId="ACORD_FORM_137VT.pdf">
+		<variables>
+			<variable name="stateCode" value="VT" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137VT.xml" />
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='VT'].StateProvCd"
+				value="VT" />
+		</criteria>
+	</form>
+	<form name="ACORD137CT" resourceId="ACORD_FORM_137CT.pdf">
+		<variables>
+			<variable name="stateCode" value="CT" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137CT.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='CT'].StateProvCd"
+				value="CT" />
+		</criteria>
+	</form>
+	<form name="ACORD137OR" resourceId="ACORD_FORM_137OR.pdf">
+		<variables>
+			<variable name="stateCode" value="OR" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137OR.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='OR'].StateProvCd"
+				value="OR" />
+		</criteria>
+	</form>
+	<form name="ACORD137AZ" resourceId="ACORD_FORM_137AZ.pdf">
+		<variables>
+			<variable name="stateCode" value="AZ" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137AZ.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='AZ'].StateProvCd"
+				value="AZ" />
+		</criteria>
+	</form>
+	<form name="ACORD137NV" resourceId="ACORD_FORM_137NV.pdf">
+		<variables>
+			<variable name="stateCode" value="NV" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137NV.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='NV'].StateProvCd"
+				value="NV" />
+		</criteria>
+	</form>
+	<form name="ACORD137CA" resourceId="ACORD_FORM_137CA.pdf">
+		<variables>
+			<variable name="stateCode" value="CA" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137CA.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='CA'].StateProvCd"
+				value="CA" />
+		</criteria>
+	</form>
+	<form name="ACORD137WA" resourceId="ACORD_FORM_137WA.pdf">
+
+		<variables>
+			<variable name="stateCode" value="WA" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137WA.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='WA'].StateProvCd"
+				value="WA" />
+		</criteria>
+	</form>
+	<form name="ACORD137KY" resourceId="ACORD_FORM_137KY.pdf">
+		<variables>
+			<variable name="stateCode" value="KY" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137KY.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='KY'].StateProvCd"
+				value="KY" />
+		</criteria>
+	</form>
+	<form name="ACORD137AL" resourceId="ACORD_FORM_137AL.pdf">
+		<variables>
+			<variable name="stateCode" value="AL" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137AL.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='AL'].StateProvCd"
+				value="AL" />
+		</criteria>
+	</form>
+
+	<form name="ACORD137CO" resourceId="ACORD_FORM_137CO.pdf">
+		<variables>
+			<variable name="stateCode" value="CO" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<!-- <include resourceId="acord137CO.xml" /> -->
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='CO'].StateProvCd"
+				value="CO" />
+		</criteria>
+	</form>
+	<form name="ACORD137DC" resourceId="ACORD_FORM_137DC.pdf">
+		<variables>
+			<variable name="stateCode" value="DC" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137DC.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='DC'].StateProvCd"
+				value="DC" />
+		</criteria>
+	</form>
+	<form name="ACORD137AR" resourceId="ACORD_FORM_137AR.pdf">
+		<variables>
+			<variable name="stateCode" value="AR" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137AR.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='AR'].StateProvCd"
+				value="AR" />
+		</criteria>
+	</form>
+	<form name="ACORD137DE" resourceId="ACORD_FORM_137DE.pdf">
+		<variables>
+			<variable name="stateCode" value="DE" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137DE.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='DE'].StateProvCd"
+				value="DE" />
+		</criteria>
+	</form>
+	<form name="ACORD137AK" resourceId="ACORD_FORM_137AK.pdf">
+		<variables>
+			<variable name="stateCode" value="AK" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137AK.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='AK'].StateProvCd"
+				value="AK" />
+		</criteria>
+	</form>
+	<form name="ACORD137IL" resourceId="ACORD_FORM_137IL.pdf">
+		<variables>
+			<variable name="stateCode" value="IL" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137IL.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='IL'].StateProvCd"
+				value="IL" />
+		</criteria>
+	</form>
+
+	<form name="ACORD137IN" resourceId="ACORD_FORM_137IN.pdf">
+		<variables>
+			<variable name="stateCode" value="IN" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137IN.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='IN'].StateProvCd"
+				value="IN" />
+		</criteria>
+	</form>
+	<form name="ACORD137ID" resourceId="ACORD_FORM_137ID.pdf">
+		<variables>
+			<variable name="stateCode" value="ID" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='ID'].StateProvCd"
+				value="ID" />
+		</criteria>
+	</form>
+	<form name="ACORD137FL" resourceId="ACORD_FORM_137FL.pdf">
+		<variables>
+			<variable name="stateCode" value="FL" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" /> 
+		<include resourceId="acord137FL.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='FL'].StateProvCd"
+				value="FL" />
+		</criteria>
+	</form>
+	
+	<form name="ACORD137IA" resourceId="ACORD_FORM_137IA.pdf">
+		<variables>
+			<variable name="stateCode" value="IA" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137IA.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='IA'].StateProvCd"
+				value="IA" />
+		</criteria>
+	</form>
+	<form name="ACORD137GA" resourceId="ACORD_FORM_137GA.pdf">
+		<variables>
+			<variable name="stateCode" value="GA" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137GA.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='GA'].StateProvCd"
+				value="GA" />
+		</criteria>
+	</form>
+	<form name="ACORD137HI" resourceId="ACORD_FORM_137HI.pdf">
+		<variables>
+			<variable name="stateCode" value="HI" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137HI.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='HI'].StateProvCd"
+				value="HI" />
+		</criteria>
+	</form>
+	<form name="ACORD137KS" resourceId="ACORD_FORM_137KS.pdf">
+		<variables>
+			<variable name="stateCode" value="KS" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137KS.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='KS'].StateProvCd"
+				value="KS" />
+		</criteria>
+	</form>
+	<form name="ACORD137MS" resourceId="ACORD_FORM_137MS.pdf">
+		<variables>
+			<variable name="stateCode" value="MS" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137MS.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='MS'].StateProvCd"
+				value="MS" />
+		</criteria>
+	</form>
+	<form name="ACORD137LA" resourceId="ACORD_FORM_137LA.pdf">
+		<variables>
+			<variable name="stateCode" value="LA" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137LA.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='LA'].StateProvCd"
+				value="LA" />
+		</criteria>
+	</form>
+	<form name="ACORD137MO" resourceId="ACORD_FORM_137MO.pdf">
+		<variables>
+			<variable name="stateCode" value="MO" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137MO.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='MO'].StateProvCd"
+				value="MO" />
+		</criteria>
+	</form>
+	<form name="ACORD137NE" resourceId="ACORD_FORM_137NE.pdf">
+		<variables>
+			<variable name="stateCode" value="NE" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137NE.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='NE'].StateProvCd"
+				value="NE" />
+		</criteria>
+	</form>
+	<form name="ACORD137MN" resourceId="ACORD_FORM_137MN.pdf">
+		<variables>
+			<variable name="stateCode" value="MN" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137MN.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='MN'].StateProvCd"
+				value="MN" />
+		</criteria>
+	</form>
+	<form name="ACORD137MT" resourceId="ACORD_FORM_137MT.pdf">
+		<variables>
+			<variable name="stateCode" value="MT" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137MT.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='MT'].StateProvCd"
+				value="MT" />
+		</criteria>
+	</form>
+	<form name="ACORD137MD" resourceId="ACORD_FORM_137MD.pdf">
+		<variables>
+			<variable name="stateCode" value="MD" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137MD.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='MD'].StateProvCd"
+				value="MD" />
+		</criteria>
+	</form>
+	<form name="ACORD137ME" resourceId="ACORD_FORM_137ME.pdf">
+		<variables>
+			<variable name="stateCode" value="ME" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137ME.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='ME'].StateProvCd"
+				value="ME" />
+		</criteria>
+	</form>
+	<form name="ACORD137NM" resourceId="ACORD_FORM_137NM.pdf">
+		<variables>
+			<variable name="stateCode" value="NM" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		 <include resourceId="acord137NM.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='NM'].StateProvCd"
+				value="NM" />
+		</criteria>
+	</form>
+	<form name="ACORD137OK" resourceId="ACORD_FORM_137OK.pdf">
+		<variables>
+			<variable name="stateCode" value="OK" />
+		</variables>
+		<include resourceId="../../../commercial/pdf/definitions/acord_formHeader.xml" />
+		<include resourceId="acord137Common.xml" />
+		<include resourceId="acord137OK.xml" />
+		<fields>
+			<field>
+				<eLabel>Policy_EffectiveDate_A</eLabel>
+				<xpath>CommlPolicy.ContractTerm.EffectiveDt</xpath>
+				<format type="date" />
+			</field>
+		</fields>
+		<criteria>
+			<condition
+				xpath="CommlAutoLineBusiness.CommlRateState[StateProvCd='OK'].StateProvCd"
+				value="OK" />
+		</criteria>
+	</form>
+</forms>

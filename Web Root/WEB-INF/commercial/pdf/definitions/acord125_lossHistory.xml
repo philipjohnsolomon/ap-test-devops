@@ -1,0 +1,34 @@
+<fields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/pdf/pdfDefinitions.xsd">
+	<field>
+		<eLabel>LossHistory_OccurrenceDate</eLabel>
+		<xpath>CommlPolicy.Loss.LossDt</xpath>
+	</field>
+	<field>
+		<eLabel>LossHistory_LineOfBusiness</eLabel>
+		<xpath>CommlPolicy.LOBCd</xpath>
+	</field>
+	<field>
+		<eLabel>LossHistory_OccurrenceDescription</eLabel>
+		<xpath>CommlPolicy.Loss.LossDesc</xpath>
+	</field>
+	<field>
+		<eLabel>LossHistory_ClaimDate</eLabel>
+		<xpath>CommlPolicy.Loss.ReportedDt</xpath>
+	</field>
+	<field>
+		<eLabel>LossHistory_PaidAmount</eLabel>
+		<xpath>CommlPolicy.Loss.TotalPaidAmt.Amt</xpath>
+	</field>
+	<field>
+		<eLabel>LossHistory_ReservedAmount</eLabel>
+		<xpath>CommlPolicy.Loss.ProbableIncurredAmt.Amt</xpath>
+	</field>
+	<field yesValue="s">
+		<eLabel>LossHistory_ClaimStatus_SubrogationCode</eLabel>
+		<xpath>CommlPolicy.Loss.ClaimStatusCd</xpath>
+	</field>
+	<field type="question" yesValue="1">
+		<eLabel>LossHistory_ClaimStatus_OpenCode</eLabel>
+		<xpath>CommlPolicy.Loss.ClaimSettledInd</xpath>
+	</field>
+</fields>

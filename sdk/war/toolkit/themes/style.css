@@ -1,0 +1,2011 @@
+html, body, #pageBody, #lower, #agency_portal {
+	background:transparent none repeat scroll 0 0;
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	font-family: 'Droid Sans', sans-serif;
+	width: 100%; 
+	height: 100%;
+}
+div, span, fieldset {
+	outline-style: none;
+}
+fieldset {
+	border: 1px solid #ccc;
+	margin: 5px 0px;
+	padding: 10px 5px;
+	outline-style: none;
+}
+p {
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+    margin-top: 0;
+}
+label {
+	padding-right: 8px;
+}
+legend {
+	border: 0px solid #efefef;
+	background: #fff;
+	font-weight:bold;
+}
+acronym {
+	cursor: help;
+	border-bottom: 0px dotted purple;
+}
+
+
+/* Status Dialogs */
+#pleaseWait{
+	width: 60px;
+	z-index: 1000;
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	background: orange;
+	color: #fff;
+	padding: 3px 5px 3px 5px;
+	text-align: center;
+}
+#saving {
+	background:#D15600 none repeat scroll 0 0;
+	color:#FFFFFF;
+	margin:0;
+	padding:3px 5px;
+	position:absolute;
+	right:0;
+	text-align:center;
+	top:0;
+	width:60px;
+	z-index:1000;
+}
+#please_wait {
+	width: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 100;
+	font-weight: bold;
+	background: #fff;
+}
+#please_wait p {
+	padding: 25px;
+}
+/* End Status Dialogs */
+
+
+
+/* Top Bar Style Classes */
+#header {
+	color: #fff;
+	background: url(header_bkg.png) repeat-x 0 0;
+	height: 25px;
+	position: relative;
+	line-height: 25px;
+	padding: 0px 20px;
+}
+#header a {
+	color: #000;
+	text-decoration: none;
+}
+#version_stamp {
+	position: absolute;
+	top: 2px;
+	right: 25px;
+	font-size: 9px;
+	color: #000;
+}
+/* END Top Bar Style Classes */
+
+
+
+/* Palette Style Classes */
+#palette {
+    bottom: 0px;
+}
+#paletteContainer {
+	background-color: #FFFFFF;
+	border: 0 solid #CCCCCC;
+    height: 200px;
+	margin-top: 10px;
+	overflow: auto;
+	padding: 0px;
+	width: 100%;
+}
+#palette fieldset {
+	background: #fff;
+	border:0px;
+	border-top:1px solid #999;
+}
+#palette legend {
+	background: #f4f3f3;
+	border-color: #dfdfdf;
+}
+#palette div.formRow {
+	height: auto;
+	min-height: auto;
+	padding: 3px 0px;
+}
+#palette ul {
+	margin-bottom:5px;
+	margin-top:10px;
+	margin-left:15px;
+	padding-left: 0px;
+}
+.dj_ie .dijitCheckBoxInput {
+	filter: alpha(opacity=100);
+}
+.dijitCheckBoxInput{
+	opacity: 1;
+}
+
+/* End Palette Style Classes */
+
+
+
+
+
+
+
+/* REVIEW Questionable Class - What the heck is this? */
+div.scrollTable {
+	/*
+	overflow: auto;
+ 	position:relative;
+ 	width:500px;
+ 	height:120px;
+ 	*/
+}
+/* end REVIEW */
+
+
+
+
+.hidden {
+	display: none;
+}
+#tdf_body {
+	padding-left: 245px;
+	height: 100%;
+}
+div.tip_container {
+	cursor: pointer;
+}
+td.focusedTab {
+	background-color:#3875D7;
+	color:#FFFFFF;
+}
+td.correctionOption {
+	cursor:pointer;
+}
+
+ul li.tab {
+	padding: 6px 10px;
+	list-style: none;
+	display: inline;
+	background: #fff url(tabbkg.png) repeat-x bottom left;
+	border: 1px solid #999;
+	border-bottom: 0px;
+	border-right: 1px solid #999;
+	cursor: pointer;
+	line-height: 15px;
+	color: #545454;	
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	-khtml-border-radius-topleft: 5px;
+	-khtml-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+ul li.invalid {
+	color:red;
+}
+ul li.focusedTab {
+	background-color: #fff;
+	color: black;
+}
+ul li.focusedTab {
+	background: #fff url(tabbkg_sel.png) repeat-x top left;
+	border-left: 1px solid #999;
+	border-top: 1px solid #999;
+	border-right: 1px solid #999;
+	border-bottom: 1px solid #fff;
+	color: black;
+	font-weight: bold;
+}
+ul li.focusedTab.invalid {
+	color:red;
+}
+
+#editor_background {
+	background-color: #fff;
+	border-top: 1px solid #c6c6c6
+}
+#editor_shadow {
+	margin: 15px;
+}
+#editor {
+	position:relative;
+	background-color: #fff;
+	overflow-x:hidden;
+	overflow-y:auto;
+	/*border: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc; --------------------------------------------------------------*/
+}
+#editor_header {
+	padding: 5px;
+	margin: 5px 10px;
+}
+#editor_header, #editor_header input.inPlaceBehind {
+	font-size: 14px;
+	font-weight: normal;
+	text-align:left;
+}
+#editor_inner {
+	background-color: #fff;
+	margin: 0 10px 10px;
+	padding: 5px;
+}
+#editor div textarea{
+ 	width: 100%;
+}
+
+#editor div.formRow, #editor label, #editor legend {
+	cursor: pointer;
+}
+/*#editor div.formRow:hover {
+	background: #99b3de;
+	color:#FFF;
+}*/
+#editor div.hiddenField  p:hover, #editor div.messageField p:hover {
+	background-color: #99B3DE;
+	cursor: pointer;
+}
+#view_container div.focused_page_entity.field div.formRow:hover {
+	background: #99B3DE !important;
+}
+#view_container div.focused_page_entity.deleteField div.formRow:hover {
+	background: #99B3DE !important;
+}
+
+#editor div.fieldElement label.label {
+    text-align: right;
+}
+
+#editor fieldset.standardForm label,
+#editor fieldset.standardForm span.label,
+#editor div.standardForm label,
+#editor div.standardForm span.label {
+	width: 175px;
+}
+.toolkitLightbox legend {
+    display: inline-block;
+    height: auto;
+    width: 945px;
+}
+.toolkitLightbox div.standardForm div.formRow {
+    width: 960px;
+}
+.toolkitLightbox fieldset.standardForm label {
+	display:inline-block;
+	width: 150px;
+}
+.toolkitLightbox fieldset.standardForm .aptext {
+    display: inline-block;
+    width: 785px;
+}
+
+.toolkitLightbox div.standardForm div.formRow select.pageElement_refresh_target {
+	width: 790px;
+}
+
+#palette .label {
+	display: inline-block;
+    text-align: right;
+	vertical-align: top;
+    width: 190px;
+}
+
+#toolkit .pageElement_accordion_content,
+#toolkit .connectors_accordion_content{
+	padding: 10px;
+}
+
+/* editor accordion header style classes */
+#accordion_container div.dijitTitlePaneTitle {
+	margin: 0;
+	padding: 0;
+	text-indent: 18px;
+	font-size: 13px;
+	font-weight: normal;
+	height: 25px;
+	line-height: 25px;
+	color: #000;
+	cursor: pointer;
+	background: transparent url(bullet_arrow_right.png) no-repeat 5px 5px;
+	width: auto;
+	clear: both;
+	border-top: 0px solid #999;
+	border-right: 0px solid #666;
+	border-bottom: 0px solid #666;
+	border-left: 0px solid #999;
+}
+
+/* ROB, may need some changes on the imported page H1 */
+#accordion_container div.dijitOpen  {
+	background: #99b3de url(bullet_arrow_down.png) no-repeat 5px 7px;
+	color:#FFF;
+	margin-bottom: 10px;
+}
+/* ROB, may need some changes on the imported page H1 */
+#accordion_container div.dijitTitlePaneTitle.dijitClosed.focused  {
+	background-color: #99b3de;
+	color:#FFF;
+}
+#accordion_container div.dijitTitlePaneTitle.dijitClosed.focused:hover  {
+	background-color: #99b3de;
+	color:#000;
+}
+#accordion_container span.dijitArrowNodeInner {
+	display: none;
+}
+#accordion_container div.dijitTitlePaneTitleHover {
+	background-color: #99b3de;
+	color:#000;
+}
+#accordion_container div.dijitClosed:hover {
+	background-color: #99b3de;
+	color:#fff;
+}
+
+#editor h1.pageElement_accordion_toggle_active.pageElement_accordion_toggle:hover
+#editor h1.artifact_accordion_toggle_active.artifact_accordion_toggle:hover,
+#editor h1.connectors_accordion_toggle_active.connectors_accordion_toggle:hover,
+#editor h1.products_accordion_toggle_active.products_accordion_toggle:hover {
+	background-color: #ccc;
+}
+
+#accordion_container div.dijitTitlePaneTitle.dijitOpen.invalid  {
+	color:red;
+}
+#accordion_container div.dijitTitlePaneTitle.dijitClosed.invalid  {
+	color:red;
+}
+
+
+/* end editor accordion header style classes */
+
+
+
+
+/* General/Editor Agnostic inner-editor styling */
+
+#accordion_container div.accordion {
+	/*background: transparent url(accordion_bg.png) repeat-x;
+	border-top: 0px;*/
+	
+}
+#accordion_container div.dijitTitlePaneContentInner {
+/*	margin: 10px;*/
+	position: relative;
+}
+#accordion_container div.dijitTitlePaneContentInner ul{
+    margin-bottom: 5px;
+    margin-left: 15px;
+    margin-top: 10px;
+    padding-left: 0;
+}
+#accordion_container div.dijitTitlePaneContentOuter {
+	/* border-left: 1px solid #999999;
+     border-right: 1px solid #999999;
+	 border-bottom: 1px solid #999999;*/
+     
+}
+
+	/* CSS in support of inner-editor tabluar presentation */
+	#editor table{
+		width: auto;
+		border-collapse: collapse;
+		border: 1px solid #d0d0d0;
+		width: 100%;
+		font-size: 12px;
+	}
+	#editor .accordion_inner table{
+		width: auto;
+	}
+	#editor table thead th {
+		background-color: #EAEAEA;
+		border-bottom: 1px solid #D5D5D5;
+		border-left: 1px solid #D0D0D0;
+		border-right: 1px solid #D0D0D0;
+		color: #000000;
+		cursor: default;
+		font-size: 11px;
+		font-weight: normal;
+		padding: 3px 5px;
+		text-align: left;
+	}
+
+	#editor table thead th.orderHeader {
+		width: 40px;
+	}
+	#editor table thead th.fieldTypeCol {
+		width: 10%;
+	}
+	#editor table thead th.fieldValueCol {
+		width: 85%;
+	}
+	#editor table thead th.fieldMenuCol {
+		width: 5%;
+	}
+	#editor table thead tr.super_header th {
+		font-weight: bold;
+		background: url(editor_super_th.png);
+	}
+	#editor table tr td {
+		padding: 3px 5px 0px;
+		border-right: 1px solid #d0d0d0;
+		border-left: 1px solid #d0d0d0;
+	}
+	#editor table .sortable_container tr td {
+		border: 0px;
+	}
+	#editor table tr.odd {
+		background: #f1f5fa;
+	}
+	#editor table tr td div.input_container {
+		position: relative;
+		text-align: center;
+		margin: 0;
+	}
+	#editor table tr td input{
+		margin: 0;
+		padding: 1px;
+		border: 1px #b5b5b5 solid;
+		border-right: 1px #d3d3d3 solid;
+		border-bottom: 1px #d3d3d3 solid;
+	}
+	#editor table tr td div.dijitTextBox div.dijitInputField input.field{
+		margin: 0;
+		padding-top: 5px;
+		border: 1px #b5b5b5 solid;
+		border-right: 1px #d3d3d3 solid;
+		border-bottom: 1px #d3d3d3 solid;
+		width: 90%;
+
+	}
+
+	#editor table tr td input.order {
+		width: auto;
+	}
+
+	#editor table tr td.actions {
+		text-align: right;
+	}
+
+	#editor table tr.palette_toggle td {
+		cursor: pointer;
+	}
+	#editor table tr.palette_toggle:hover td {
+		background: #99B3DE;
+	}
+
+	#editor table tr td.palette_toggle {
+		cursor: pointer;
+	}
+	#editor table tr td.palette_toggle:hover {
+		background: #99B3DE;
+	}
+
+	#editor table tr.focused_page_entity:hover td {
+		background: #99B3DE !important;
+	}
+	#editor table tr.focused_page_entity td div.action_text {
+		color: black;
+	}
+
+	#editor table.noborder {
+		border :0px;
+	}
+
+	#editor table.noborder tr td{
+		border :0px;
+	}
+	/* END CSS in support of inner-editor tabluar presentation */
+
+/* End General Editor Agnostic inner-editor styling */
+
+
+
+/* Transaction/Page Library Editor Specific Definitions TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT*/
+.accordion_content.pageElementContainer{
+	overflow: hidden;
+	height: 0px;
+	padding: 0px 10px 10px 10px;
+	position:relative;
+}
+.palette_tab {
+	border: 1px solid #999;
+	padding: 10px;
+}
+.palette_tab h1 {
+	background-color: red;
+}
+div.page_sub_section {
+	margin-bottom: 10px;
+}
+table.roster_editor td {
+	text-align: center;
+}
+#editor table tr td.column_container_td {
+	vertical-align: top;
+}
+#editor table tr td.join_info_container_td table tr td{
+	border: 1px solid #d0d0d0;
+	padding: 2px;
+}
+#editor table tr td.join_info_container_td table tr td p {
+	margin: 0;
+}
+/* End Transaction Editor Specific Definitions */
+
+/* Code List Editor Specific Definitions CLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLC*/
+/* End Code List Editor Specific Definitions */
+
+/* Dynamagic List Editor Specific Definitions DLDLDLDLDLDLDLDLDLDLDLDLDLDLDLDLDLDLDLDLDLDLD*/
+/* End Dynamagic List Editor Specific Definitions */
+
+/* xARC Editor Specific Definitions xARCxARCxARCxARCxARCxARCxARCxARCxARCxARCxARCxARCxARCxARC*/
+#editor div.rule_sub_container {
+	margin: 10px 0px;
+	overflow: auto;
+}
+/* End xARC Editor Specific Definitions */
+
+/* Behavior/HotField Editor Specific Definitions bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb*/
+/* End Behavior/HotField Editor Specific Definitions */
+
+/* View Editor Specific Definitions vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
+/* End View Editor Specific Definitions */
+
+/* PDF Editor Specific Definitions pdfpdfpdfpdfpdfpdfpdfpdfpdfpdfpdfpdfpdfpdfpdfpdfpdfpdfpd*/
+/* End PDF Editor Specific Definitions */
+
+/* Property Editor Specific Definitions propproppropproppropproppropproppropproppropproppro*/
+/* End Properties editor specific Definitions */
+
+/* Legacy Connector Editor Specific Definitions ccccccccccccccccccccccccccccccccccccccccccc*/
+/* End Legacy Connector Editor specific Definitions */
+
+/* SFH Editor Specific Definitions sfhsfhsfhsfhsfhsfhsfhsfhsfhsfhsfhsfhsfhsfhsfhsfhsfhsfhsfh*/
+/* End SFH Editor specific Definitions */
+
+
+
+
+
+#editor div.hiddenField  p, #editor div.messageField p {
+	cursor: pointer;
+	font-size: 11px;
+	margin: 5px 0px;
+	padding: 5px;
+}
+#editor div.hiddenField p {
+	font-style: italic;
+	color: #333;
+	padding-left: 20px;
+	background: transparent url();
+}
+#editor div.messageField p {
+	padding-left: 20px;
+}
+#editor span.balloonFieldHelper {
+
+}
+#editor .formRow.focused_page_entity div.fieldHelpers{
+	background: #DDD;
+	border: 1px dotted #444;
+}
+div.fieldHelpers{
+	display: inline;
+	min-width: 60px;
+	height: 20px;
+}
+
+#editor div.fieldHelpers div{
+	display: inline;
+}
+div.focused_page_entity.formRow,
+div.pageElement.noaccordion.focused_page_entity,
+div.page.noaccordion.focused_page_entity,
+fieldset.focused_page_entity legend,
+
+
+div.focused_page_entity.views_title h3,
+div.focused_page_entity.xarcrules_container h3,
+div.focused_page_entity.transactionDefinitionBehavior_container div.transactionDefinitionBehavior_heading,
+#editor div.messageField.focused_page_entity p,
+
+#editor div.hiddenField.focused_page_entity  p
+#editor div.message.focused_page_entity  p,
+#editor div.column.focused_page_entity  p,
+#editor div.action.focused_page_entity  p,
+#editor tr.focused_page_entity,
+#editor tr.odd.focused_page_entity,
+#editor td.focused_page_entity,
+#palette td.focused_page_entity.expression_palette_toggle,
+#editor p.focused_page_entity,
+#editor h1.focused_page_entity {
+	background-color:#d7d7d7;
+	-moz-user-select: none;
+}
+div.invalid.formRow,
+fieldset.invalid legend,
+div.invalid.transaction_container h3,
+div.invalid.xarcrules_container h3,
+div.invalid.transactionDefinitionBehavior_container div.transactionDefinitionBehavior_heading,
+#editor div.messageField.invalid p,
+#editor div.hiddenField.invalid  p,
+#editor div.message.invalid  p,
+#editor div.column.invalid  p,
+#editor div.action.invalid  p,
+#editor tr.invalid,
+#editor td.invalid,
+#palette td.invalid.expression_palette_toggle,
+#editor p.invalid {
+	color:red;
+}
+.invalidChildren {
+	color: #FF0000;
+}
+#editor.focused_page_entity {
+	color: #333;
+}
+
+#editor div.rule_sub_container_actions {
+   margin: 10px 0 0 -5px;
+}
+
+
+.functionTypeSelectorPanel select{
+	width: auto;
+}
+.hovering {
+	background:#ecf3fe !important;
+}
+
+
+.accordion_toggle,.artifact_accordion_toggle, .products_accordion_toggle,
+.pageElement_accordion_toggle,
+.connectors_accordion_toggle  {
+	cursor: pointer;
+	padding: 3px;
+}
+
+#menuPane .accordion_toggle, #menuPane .artifact_accordion_toggle,
+#menuPane .pageElement_accordion_toggle,
+#menuPane .products_accordion_toggle{
+	line-height: 18px;
+	font-size: 11px;
+	cursor: pointer;
+	background: url(bullet_arrow_right.png) no-repeat 0px center;
+	padding: 16px 0 0 8px;
+	-moz-outline-style: none;
+
+}
+
+
+#menuPane .accordion_toggle_active, #menuPane .artifact_accordion_toggle_active,
+#menuPane .pageElement_accordion_toggle_active,
+#menuPane .products_accordion_toggle_active {
+	line-height: 18px;
+	font-size: 11px;
+	cursor: pointer;
+	background: url(bullet_arrow_down.png) no-repeat 0px center;
+	cursor: pointer;
+	padding: 20px 0 0 10px;
+}
+fieldset, img {
+border:medium none;
+}
+img.accordion_toggle_active {
+	line-height: 18px;
+	font-size: 11px;
+	cursor: pointer;
+	background: url(bullet_arrow_up.png) no-repeat 3px center;
+	cursor: pointer;
+	padding: 20px 0 0 20px;
+
+}
+#menuPane div.itemUnderEdit {
+	background-color:#3875D7 !important;
+	color:#FFFFFF !important;
+}
+.accordion_content, .generalAccordionContent, .artifact_accordion_content,
+.products_accordion_content
+{
+	overflow: hidden;
+	height: 0px;
+
+}
+.artifact_accordion_content,
+.products_accordion_content {
+	padding-left: 10px;
+}
+#menuPane .dijitTreeRowSelected {
+       background-color:#99b3de;
+       color:#fff;
+}
+#menuPane .dijitTreeRowHover {
+       background-color:#99b3de;
+       color:#fff;
+}
+
+div.transaction_container {
+	padding: 0px 0px 25px 0px;
+	background: #fff;
+}
+div.transaction_container h3 {
+	font-weight: bold;
+	margin: 0px 0px 10px 0px;
+	padding: 5px;
+	cursor: pointer;
+}
+div.views_title h3 {
+	font-weight: normal;
+	margin: 0px 0px 10px 0px;
+	padding: 5px;
+	cursor: pointer;
+}
+
+div.transaction_container div.pageContainer{
+	margin: 0 10px;
+	min-height: 30px;
+}
+
+#tempDiv {
+	border: 2px #CCC dashed;
+	height: 15px;
+}
+.advancedToggler {
+	color: blue;
+	text-decoration: underline;
+	font-size: 9px;
+	font-style: italic;
+	cursor: pointer;
+}
+
+.validationMessage {
+	display: inline;
+	background-color: #FFBBBB;
+	padding: 3px;
+	position: absolute;
+}
+
+#behaviorPane {
+	background-color: white;
+}
+.behaviorDiv {
+	padding: 20px;
+	border: dotted 1px;
+}
+#whereDiv, #forDiv {
+	position: relative;
+}
+#whereDiv .addAnotherButton {
+	position: absolute;
+	bottom: 0px;
+	right: 275px;
+}
+#forDiv .addAnotherButton {
+	position: absolute;
+	bottom: 0px;
+	right: 600px;
+}
+#searchDiv {
+	background: #F8F8F8;
+	margin: 15px 0px 15px 0px;
+	padding: 5px;
+}
+
+
+.inPlaceDisplay:hover {
+	background:none;
+	cursor: text;
+}
+
+.inPlaceDisplay {
+/*	border-left:1px solid #999;
+	border-top: 1px solid #999;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	display: inline-block;
+
+	width:60%;*/
+}
+input {
+	border-left:1px solid #999;
+	border-top: 1px solid #999;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+
+}
+/*#editor #editor_header .inPlaceDisplay {
+	width:75%;
+}*/
+#editor #editor_header .dijitInline{
+	/*width:100%;*/
+}
+/*#editor #editor_header .dijitTextBox {
+	border:0px;
+	margin:0px;
+}*/
+.paletteContainer .inPlaceDisplay {
+    display: inline-block;
+    vertical-align: top;
+    width: 75%;
+}
+.paletteContainer .dijitInline{
+	/*width:100%;*/
+}
+.paletteContainer .dijitTextBox {
+   /*width: 75%;*/
+}
+.toolkitLightbox #title_inplace {
+	width:auto;
+}
+.toolkitLightbox .inPlaceDisplay {
+    margin: 0;
+    width: 75%;
+}
+.toolkitLightbox .inPlaceDisplay .dijitInline{
+	
+}
+.toolkitLightbox .dijitTextBox {
+	margin:0px;
+}
+.toolkitLightbox .dijitDialog{
+	overflow:auto;
+}
+
+.inPlaceTip {
+	font-size: 12px;
+}
+
+
+#wizard .generalAccordionContent {
+	display: none;
+	padding: 10px;
+	border-right: 1px solid #e3e3e3;
+	border-left: 1px solid #e3e3e3;
+}
+
+/*span.action {  removed to style buttons. Buttons were picking up the blue underline
+	color: blue;
+	text-decoration: underline;
+	cursor: pointer;
+	float: right;
+	font-size: 10px;
+}*/
+#wizard {
+	width:100%; height:100%;
+}
+
+
+#defaultWizard span.action {
+	float: none;
+}
+
+#productsHeading {
+	padding-top: 10px;
+	height: 20px;
+}
+#productsHeading .title {
+	font-size: 16px;
+	float: left;
+}
+#productsHeading .actions {
+	font-size: 10px;
+	line-height: 20px;
+	float: right;
+}
+div.artifacts div.artifactMenu {
+	text-align: right;
+	padding: 3px 0;
+}
+div.artifacts a{
+	font-size: 10px;
+	padding: 3px;
+}
+#mainContainer {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+
+#menuPane .artifacts li {
+	bullet-style: none;
+	cursor: pointer;
+}
+#menuPane .tdf {
+	background: url(icon_transaction.png) transparent no-repeat scroll 3px 3px;
+}
+#menuPane .view {
+	background: url(icon_zoom.png) transparent no-repeat scroll 3px 3px;
+}
+#menuPane .codeList {
+	background: url(script.png) transparent no-repeat scroll 3px 3px;
+}
+#menuPane .behavior {
+	background: url(icon_dynamic.png) transparent no-repeat scroll 3px 3px;
+}
+#menuPane .arcRule,#menuPane .arcReference  {
+	background: url(vector.png) transparent no-repeat scroll 3px 3px;
+}
+#menuPane .xarcRule  {
+	background: url(icon_rules.png) transparent no-repeat scroll 3px 3px;
+}
+#menuPane .xarcReference  {
+	background: url(table.png) transparent no-repeat scroll 3px 3px;
+}
+#menuPane .connector {
+	background: url(connect.png) transparent no-repeat scroll 3px 3px;
+}
+#menuPane .pdf {
+	background: url(page_white_acrobat.png) transparent no-repeat scroll 3px 3px;
+}
+#menuPane .pdfLayout {
+	background: url(application_form.png) transparent no-repeat scroll 3px 3px;
+}
+#menuPane .optionList {
+	background: url(icon_dynamic_lists.png) transparent no-repeat scroll 3px 3px;
+}
+#menuPane .pageLibrary {
+	background:transparent url(icon_book.png) no-repeat scroll 3px 3px;
+}
+#menuPane .dynamicListTemplate {
+	background: url(icon_lists.png) transparent no-repeat scroll 3px 3px;
+}
+#menuPane .propertyFile,#menuPane .sfh  {
+	background: url(icon_properties.png) transparent no-repeat scroll 3px 3px;
+}
+#menuPane .workItemAssistant {
+	background: url(icon_shared.png) transparent no-repeat scroll 3px 3px;
+}
+#menuPane .artifacts {
+	cursor:pointer;
+	line-height:18px;
+	padding-left:20px;
+	padding-top:20px;
+}
+
+#menuPane .artifacts .itemUnderEdit {
+	background-color:#3875D7;
+	color:#FFFFFF;
+}
+.lightbox {
+	display: none;
+}
+.leftPane {
+	float: left;
+}
+.rightPane {
+	float: right;
+	padding-left: 15px;
+	border-left: 1px dashed black;
+}
+#footer {
+	display: none;
+}
+div.autocomplete {
+background-color:white;
+margin:0px;
+padding:0px;
+}
+div.autocomplete ul {
+list-style-type:none;
+margin:0px;
+padding:0px;
+}
+div.autocomplete ul li.selected {
+background-color:#FFFFBB;
+}
+div.autocomplete ul li div.id {
+display:none;
+}
+div.autocomplete ul li {
+cursor:pointer;
+display:block;
+list-style-type:none;
+margin:0pt;
+padding:2px;
+border:1px solid #E3E3E3;
+}
+
+select.productInfoPath {
+	width:160px;
+}
+
+a.fieldHelperBalloon, a.fieldHelperCalendar,span.fieldHelperCalendar, a.fieldHelperScript{
+	display: block;
+	width: 18px;
+	height: 18px;
+	clear: none;
+	float: left;
+}
+a.fieldHelperBalloon {
+	background: url(information.png) no-repeat top left;
+}
+a.fieldHelperCalendar, span.fieldHelperCalendar {
+	background: url(calendar.png) no-repeat top left;
+}
+a.fieldHelperScript {
+	background: url(script.png) no-repeat top left;
+}
+
+.column span {
+	float:left;
+}
+.column {
+	clear:both;
+}
+
+div.text {
+	padding: 10px;
+	font-size: 13px;
+}
+.horizontalDrag{
+	cursor:col-resize;
+	background: #e1eafc;
+}
+.horizontalDrag div {
+	width:2px;
+
+}
+.verticalDrag{
+    height: 2px;
+	cursor:row-resize;
+}
+
+.palette_tab table {
+	border-collapse: collapse;
+}
+.palette_tab table tr.even {
+	background: #efefef;
+}
+.childPalette .paletteRow {
+	clear: left;
+}
+.palette_tab table .paletteRow {
+	padding-left: 5px;
+}
+.palette_tab table .paletteRow td {
+	padding: 5px 15px 5px 0px;
+}
+.palette_tab table .paletteRow td.inversion {
+	padding-right: 0px;
+}
+.palette_tab table tfoot {
+	text-align: right;
+}
+fieldset.palette_tab .children span.pill {
+	float: right;
+}
+.palette_tab .palette_table_wrapper {
+	max-height: 175px;
+	overflow: auto;
+}
+.whereContainer,
+.forContainer {
+	padding: 10px;
+	border: 1px dotted #888;
+}
+
+#pageBodyPanel {
+	width: 100%;
+}
+#pageBody_WrapperDiv {
+	position:relative;
+	background: #FFFFFF none repeat scroll 0 0;
+/*	overflow:hidden;*/
+}
+.context_action {
+    background: none repeat scroll 0 0 #999999;
+    border-bottom: 1px solid #999999;
+    border-top: 1px solid #666666;
+    height: 29px;
+    padding: 0;
+}
+/*#contextAction span.save {
+	background: url(disk.png) no-repeat center left;
+	height: 16px;         height throws of alignment of save button
+	width: 16px;          width throws of alignment of save button
+	cursor: pointer;
+}*/
+
+#menuPane {
+	background: url(canvas.png);
+	border-top:1px solid #666;
+	width:300px;
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+#toolkit #pageBody .imported_page,
+
+#toolkit #pageBody .accordion_no_image {
+	background-image: url();
+}
+
+#toolkit #pageBody div.focused_page_entity.page h1.imported_page,
+div.field.focused_page_entity , div.deleteField.focused_page_entity , div.fieldSet.focused_page_entity legend {
+	background-color:#3875D7;
+	color:#FFFFFF;
+}
+#editor div.fieldSet.focused_page_entity legend:hover {
+	background-color:#3875D7;
+}
+/*
+TODO: review this
+fieldset.standardForm select,
+div.standardForm select{
+	max-width: 150px;
+}*/
+
+
+
+/* Menu CSS CLASSES - TARGETED FOR REMOVAL PER #44380, Make AP4 tool kit buttons re-useable by other non-toolkit components */
+span.pill {
+	cursor: pointer;
+	display: inline-block;
+	padding: 0px;
+	width:auto;
+	float:left;
+	/* Prevent selecting button text in mozilla */
+	-moz-outline-style: none;
+}
+.context_action span.pill {
+   margin:2px 0 2px 0;
+}
+span.pill div{
+	display: block;
+	float: left;
+	clear: none;
+	height: 23px;
+}
+.buttons span.pill {
+	float:none;
+}
+/*span.pill div.action {
+}
+span.pill div.action.center, div.action.left {
+	border-right: 1px solid #c7c7c7;
+}*/
+/*span.pill div.action.left, div.action.solo{
+	padding-left: 1px;
+	background: url(off.png) no-repeat top left;
+}*/
+/*span.pill div.action.right{
+	padding-right: 1px;
+	background: url(off.png) no-repeat top right;
+}*/
+/*span.pill div.action.hover, div.action.solo.hover div.action_text {
+	background-image: url(on.png);
+}*/
+/*span.pill div.action.right div.action_text, div.action.center div.action_text {
+	background: url(border.png);
+	padding-left: 1px;
+}*/
+/*span.pill div.action.solo div.action_text{
+	background: url(off.png) no-repeat top right;
+}*/
+
+/*span.pill div.action_text div{
+	padding: 0px 8px;
+	background: url(center_off.png) repeat-x;
+	line-height: 24px;
+}*/
+span.pill div.action.primary {
+	font-weight: bold;
+}
+span.pill div.action div.action_text div {
+	background: url(center_on.png);
+	padding: 0px 8px;
+	line-height: 24px;
+	border: 1px solid #333333;
+    border-radius: 3px 3px 3px 3px;
+    margin: 0 5px 0 0;
+    vertical-align: middle;
+}
+span.pill div.action div.action_text div:hover {
+    background: url(center_off.png) repeat-x;
+	color:#FFF;
+}
+span.pill div.action.hover div.action_text div {
+	background: url(center_on.png);
+}
+span.pill div.action.click div.action_text div {
+	background: url(center_d.png);
+}
+
+span.pill div.action_text.list div {
+	position: relative;
+	z-index: 5;
+}
+span.pill div.action_text.list ul{
+	background: #fff;
+	margin: 0px 6px 6px -6px;
+	list-style: none;
+	padding: 0px;
+	border: 1px solid #C7C7C7;
+	/* Prevent selecting button text in mozilla */
+	-moz-outline-style: none;
+}
+span.pill div.action div.action_text.list div.dropShadow {
+	position: absolute;
+	top: 22px;
+	left: -2px;
+	height: auto;
+	padding: 0;
+	margin: 0px 6px 6px 6px;
+	background: transparent url(shadowAlpha.png) bottom right no-repeat;
+	z-index: 10;
+}
+span.pill div.action ul li {
+	padding: 0px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+span.pill div.action ul li.hover {
+	background: transparent url(highlight.png) center left repeat-x;
+	color: #fff;
+}
+span.pill div.action_text.list div span {
+	padding-right: 12px;
+	background: url(down.png) no-repeat right 3px;
+}
+/* END Menu CSS CLASSES - TARGETED FOR REMOVAL PER #44380, Make AP4 tool kit buttons re-useable by other non-toolkit components */
+
+
+
+
+
+
+
+.crossReference {
+	cursor: pointer;
+}
+tr.crossReference td{
+	padding-right: 10px;
+}
+
+/* below is everything for the combobox (autocomplete)*/
+ul.dijitMenu {
+	overflow-y: auto;
+
+	width: 500px;
+}
+.wherePalette div.autocomplete {
+	bottom: 0px;
+	top: auto;
+}
+ul.dijitMenu {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+
+.dijitComboBox .dijitArrowButton .dijitArrowButtonInner {
+	background:url("spriteArrows.png") no-repeat scroll 1px center transparent;
+	font-size:1px;
+	height:20px !important;
+	margin:0 4px 0 5px;
+	width:8px;
+}
+.dijitComboBox {
+	border:1px solid black;
+	vertical-align:middle;
+	border: 1px solid #999;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+
+.tundra .dijitMenuPassive .dijitMenuItemHover,
+.tundra .dijitMenuItemSelected {
+	background-color: #3559ac;
+	color:#fff;
+}
+.dijitTooltipContainer {
+	border: solid #999 1px; 
+	background: #eaeaea; 
+	color: #000; 
+	font-size: small;
+	padding:2px;
+}
+.dijitTextBoxError .dijitValidationContainer {
+	display: none;	
+}
+
+ul.dijitMenu li.selected {
+	background-color: #ffb;
+}
+ul.dijitMenu li.dijitMenuItem {
+	border-bottom:1px solid #EFEFEF;
+	cursor:pointer;
+	display:block;
+	list-style-type:none;
+	margin:0;
+	padding:4px 2px;
+	text-align:left;
+	white-space:normal;
+}
+.dijitMenuItemSelected {
+	background-color: #3875D7;
+	color:#fff;
+}
+.dijitMenu {
+	background-color:white;
+	border:1px solid #ccc;
+}
+/*
+ul.dijitMenu li .preconditionValue {
+	display: none;
+}
+.autocomplete_choices_container {
+	position: absolute;
+	height: 1px;
+	z-index: 10;
+}*/
+/*comment this out until we decide exactly where it is needed.*/
+fieldset.standardForm .forKey select,
+div.standardForm .forKey select
+/* ,
+fieldset.standardForm .refreshListKey select,
+fieldset.standardForm .selectionHint select */{
+	max-width: 175px;
+}
+div.standardForm label, div.standardForm span.label{
+	font-size: 12px;
+	font-weight: normal;
+	margin: 0px 5px 3px 0px;
+	display: block;
+	clear: none;
+	float: left;
+	width: 220px;
+  	text-align: right;
+}
+div.standardForm label.readOnly {
+	color: #666;
+	background: #f5f5f5;
+}
+div.standardForm select {
+	width: auto;
+	font-size:12px;
+	color: black;
+	}
+div.standardForm p {
+	clear: both;
+	font-weight: normal;
+}
+div.standardForm p.readonly{
+	background: transparent url();
+	border: 0px;
+}
+div.standardForm a{
+	color: blue;
+	font-weight: normal;
+	text-decoration: underline;
+}
+div.standardForm p.warning {
+ 	background: #FFFFCC url(little_warning.gif) no-repeat 3px 3px;
+	border-top: 1px solid #E4ECD3;
+	border-left: 1px solid #E4ECD3;
+	border-bottom: 1px solid #999;
+	border-right: 1px solid #999;
+}
+div.standardForm p.error{
+	background: #F8EFEF url(little_error.gif) no-repeat 3px 3px;
+	border: 1px solid #F2A2A2;
+	font-style: normal;
+	border-right: 1px solid #B22222;
+	border-bottom: 1px solid #B22222;
+}
+div.questionnaire input{
+	border: 0px;
+}
+div.questionnaire p {
+	clear: both;
+	border: 1px solid #E4ECD3;
+	background: #FDFCF0 url(little_tip.gif) no-repeat 3px 3px;
+	font-size:11px;
+	color: #666666;
+	font-weight: normal;
+	font-style: italic;
+	margin: 5px 0px 5px 0px;
+	padding: 0px 0px 10px 25px;
+
+}
+div.standardForm div.formRow {
+	clear: both;
+    min-height: 25px;
+    line-height: 25px;
+    margin: 0;
+	}
+div.standardForm div.formRow.select_list_event {
+    height: 138px;
+	}
+div.standardForm div.formRow select {
+	float: left;
+	text-align: left;
+	}
+div.standardForm div.formRow input {
+	float: left;
+	clear: none;
+	text-align: left;
+	padding: 2px;
+	border: 1px solid #999;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	font-size:11px;
+	color: black;
+	margin-top: 2px;
+	}
+div.standardForm div.aptext {
+	border-color: #999999 #CCCCCC #CCCCCC #999999;
+    border-style: solid;
+    border-width: 1px;
+	
+}	
+
+div.standardForm div.required {
+    border-color: #999999 #CCCCCC #CCCCCC #999999;
+    border-style: solid;
+    border-width: 1px;
+	
+}	
+div.standardForm div.formRow input.readonly, div.standardForm div.formRow textarea.readonly {
+	border: 0px;
+}
+div.standardForm div.formRow div.radioSet  input.radio {
+	float: none;
+	border: 1px solid red;
+	padding: 2px;
+	border: 0px;
+	font-size:11px;
+	color: black;
+	}
+div.standardForm div.formRow div.radioSet  label{
+	width: auto;
+	font-style: italic;
+}
+div.standardForm div.formRow div.textarea label {
+	display: block;
+	width: 100%;
+
+	white-space: normal;
+	text-align: left;
+	margin: 5px;
+	float: none;
+}
+div.standardForm div.formRow div.textarea textarea {
+	width: 90%;
+	float: left;
+	margin-left: 10px;
+	text-align: left;
+	border: 1px solid #999;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	padding: 3px;
+	font-family: arial, sans-serif;
+	font-size: 12px;
+	}
+div.standardForm div.formRow a {
+	margin: 0px 3px 0px 3px;
+}
+div.standardForm div.formInlineHelp {
+	padding: 10px;
+	margin: 10px;
+	color: #666666;
+	font-size: 11px;
+	font-weight: normal;
+	font-style: italic;
+}
+div#usersWizard tbody tr,
+div#rolesWizard tbody tr,
+div#groupsWizard tbody tr,
+ul#userManagementMenu li {
+	cursor: pointer;
+}
+.mouseOverClickable{
+	border:2px #e3e3e3 outset;
+	background-color: #FFFFBB;
+}
+
+.expression_palette_toggle {
+	cursor:pointer;
+}
+
+div.xarcrules_container h3 {
+	cursor:pointer;
+	font-weight:normal;
+	margin:0 0 10px;
+	padding:5px;
+}
+/* Cover Text Supporting Styles */
+
+div.cover_text {
+	font-size: 14px;
+	padding: 0 25px 0 150px;
+	min-height: 200px;
+}
+div.cover_text h3 {
+	color: #000;
+	font-size: 26px;
+	font-weight: normal;
+	text-align: right;
+	margin-top: 0;
+}
+div.cover_text h4 {
+	color: #333;
+	font-size: 18px;
+	margin: 12px 0;
+}
+div.cover_text p {
+	line-height: 140%;
+}
+div.cover_text p.hint {
+	background: #efefef url(hint.png) no-repeat 10px 10px;
+	padding: 10px 55px;
+	color: #666;
+	font-size: 13px;
+	min-height: 30px;
+}
+div.cover_text p.hint span.hint {
+	font-weight: bold;
+}
+div.cover_text ul {
+	list-style-type: none;
+}
+div.cover_text span.keyword {
+	font-style: italic;
+}
+div.cover_text span.menu_action {
+	font-weight: bold;
+}
+div.cover_text span.strike {
+	text-decoration: line-through;
+	color: #ccc;
+}
+div.cover_text span.emphasis {
+	text-decoration: italic;
+}
+div.cover_text span.example {
+	color: #666;
+}
+div.cover_text span.bold {
+	font-weight: bold;
+}
+
+div.toolkit_intro {
+	background: url(advancedsettings.png) no-repeat 15px 50px;
+}
+div.tdf_intro {
+	background: url(windowlist.png) no-repeat 15px 50px;
+}
+div.pageLibrary_intro {
+	background: url(page_library.png) no-repeat 15px 50px;
+}
+div.optionList_intro {
+	background: url(lists.png) no-repeat 15px 50px;
+}
+div.view_intro {
+	background: url(find.png) no-repeat 15px 50px;
+}
+div.xarcRule_intro {
+	background: url(flag.png) no-repeat 15px 50px;
+}
+div.behavior_intro {
+	background: url(quick_restart.png) no-repeat 15px 50px;
+}
+div.pdf_intro {
+	background: url(acroread.png) no-repeat 15px 50px;
+}
+div.propertyFile_intro {
+	background: url(exec.png) no-repeat 15px 50px;
+}
+div.connector_intro {
+	background: url(chardevice.png) no-repeat 15px 50px;
+}
+div.sfh_intro {
+	background: url(kcmsystem.png) no-repeat 15px 50px;
+}
+div.locked_artifact {
+	background: url(gpg.png) no-repeat 15px 50px;
+}
+div.workItemAssistant_intro {
+	background: url(workitemassistant_bkg.png) no-repeat 15px 50px;
+}
+/* End of Cover Text Supporting Styles */
+
+span.dijitDialogCloseIcon {
+	  background: url("close_lightbox.gif") no-repeat scroll -1px -4px transparent;
+      display: block;
+      height: 15px;
+      position: absolute;
+      right: 10px;
+      top: 4px;
+      width: 15px;
+}
+div.dijitDialog {
+	  z-index:1090;
+	  position: absolute;
+   	  top: 0px;
+	  left: 0px;
+  	  background: url(popupbkg.png) repeat-x top left #fff;
+	  border: 1px solid #666;
+	  padding: 22px 5px 15px 5px;
+	  border-radius: 5px;
+	  border-bottom:1px solid #ccc;
+	  border-right:1px solid #ccc;
+	  border-top:1px solid #ccc;
+	  border-left:1px solid #ccc;
+	  /*max-width:950px;*/
+}
+.workitem_assistant_file_attachment_type{
+	color: #000;
+	font-size: 13px;
+	line-height: 24px;
+	width: auto;
+	word-wrap: break-word;
+}
+
+/*
+div.dijitDialogUnderlayWrapper {
+	position: absolute;
+	    z-index:1070;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+		border: 0px;
+	    filter:alpha(opacity=0);
+	    -moz-opacity: 0.0;
+	    opacity: 0.0;
+		overflow: hidden;
+		margin: 0px;
+		padding: 0px;
+}*/
+
+/* Lightbox Supportting Classes */
+	#lb_underlay{
+		position: absolute;
+	    z-index:1070;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+		border: 0px;
+	    background:#000;
+	    filter:alpha(opacity=0);
+	    -moz-opacity: 0.0;
+	    opacity: 0.0;
+		overflow: hidden;
+		margin: 0px;
+		padding: 0px;
+	}
+	#lb_overlay{
+		position: absolute;
+	    z-index:1080;
+	    width: 100%;
+	    height: 100%;
+	    top: 0;
+	    left: 0;
+	    background:#000;
+	    filter:alpha(opacity=50);
+	    -moz-opacity: 0.50;
+	    opacity: 0.50;
+		overflow: hidden;
+	}
+	#lb_box{
+		z-index:1090;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	    background:#fff;
+		border: 1px solid #666;
+		overflow: auto;
+		padding: 22px 5px 15px 5px;
+	}
+	#lb_close {
+		display: block;
+		background: url(close_lightbox.gif) no-repeat top right;
+		height: 20px;
+		width: 20px;
+		position: absolute;
+		top: 1px;
+		right: 1px;
+	}
+	#lb_close span {
+		display: none;
+	}
+	#box #boxContents {
+		margin-top:12px;
+		padding:5px;
+	}
+	div.lightbox_panel {
+		padding-left: 70px;
+		padding-right: 18px;
+	}
+	#lb_please_wait {
+		text-align: center;
+		padding: 0px;
+		height: 85px;
+	}
+
+	#alert {
+		color: white;
+		background-position: 5px 10px;
+		background-repeat: no-repeat;
+		padding: 5px;
+		margin: 5px 0;
+		background-color: #F8EFEF;
+		background-image: url(../agencyportal/delete.png);
+	}
+	#alert p {
+		margin: 5px 3px 5px 25px;
+		font-size: 12px;
+		color: #BC583C;
+	}
+	#alert h4 {
+		display: none;
+	}
+/* END Lightbox Supportting Classes */
+
+div.accordion_inner{
+	overflow-y: hidden;	
+	overflow-x: auto;	
+}
+
+.dijitSplitterH, .dijitGutterH {
+	background:#fcfcfc; 
+	border:0; 
+	height:5px;
+}
+.dijitSplitterH .dijitSplitterThumb {
+	background: url(splitter_handle.png) no-repeat top left;
+    height: 8px;
+    width: 8px;
+}
+.dijitSplitterV,
+.dijitGutterV {
+	background:#fcfcfc; 
+	border:0; 
+	width:5px;
+}
+.dijitSplitterV .dijitSplitterThumb {
+	background: url(splitter_handle.png) no-repeat top left;
+	height:8px; 
+	width:8px;
+}
+.dijitSplitterActive {
+	font-size: 1px; 
+	background-image: none; 
+	background-color: #aaa; 
+	-moz-opacity: 0.6; 
+	opacity: 0.6; 
+	filter: Alpha(Opacity=60);
+	 margin: 0;
+}
+#paletteContainer_splitter{
+	background:#fff url(splitterbkg_horz.png) repeat-x bottom left;
+	height:6px;
+}
+#menuPane_splitter{
+	background:#fff url(splitterbkg_vert.png) repeat-y top right;
+	width:6px;
+}
+.dijitInlineEditBoxDisplayModeHover, .dijit_ally
+.dijitInlineEditBoxDisplayModeHover, .dj_ie6
+.dijitInlineEditBoxDisplayModeHover {
+	background:none;
+	border: 0px;
+	border-bottom: 0px;
+}
+
+.buttons{
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+}
+.errorMessage {
+	padding-left:10px;
+	background-color:#ffffcc;
+}
+.errorMessage p {
+	color:#F00;
+	font-weight:bold;
+}
+#accordion_container{
+    border: 0px solid #eaeaea;
+}
+/*.dijitInputContainer {
+    float: none !important;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+}*/
+.dijitTextBox {
+    border-color: #999999 #CCCCCC #CCCCCC #999999;
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom: 3px;
+   /* width: 75%;*/
+}
+.templateField .dijitTextBox {
+    width: 100%;
+}
+div.dijitDialog .dijitTextBox {
+    width: 78%;
+}
+
+.dijitTextBox INPUT {
+    float: left;
+}
+.dijitTitlePaneTextNode{
+	margin-left:1px;
+}
+.dijitTreeContent {
+    cursor: default;
+}
+/*.dijitTreeLabel:hover {
+	background-color:#99b3de;
+    color: #fff;
+	
+}*/
+#menuPane .dijitTreeRowSelected:hover{
+	 color: #000;
+}
+.dijitButtonNode {
+    border: 0px;
+}
+.dijitInline {
+   /* display: inline-block !important;*/
+	margin:0px;
+}
+/*#contextAction span#saveButton {
+	height: 0px;
+	width: 0px;
+}*/
+.dijitButton {
+    background: url(center_on.png) repeat-x;
+	line-height: 24px;
+	height: 23px;
+	border:1px solid #B5B5B5;
+}
+
+.dijitDownArrowButton {
+    background: url(center_on.png) repeat-x;
+	border: 1px solid #333;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	line-height: 24px;
+	margin: 0 5px 0 5px;
+	height: 23px;
+}
+
+.autocomplete .dijitDownArrowButton {
+    background: url("center_on.png") repeat-x scroll 0 0 transparent;
+    border-top: 1px solid #333333;
+	border-right: 1px solid #333333;
+	border-bottom: 1px solid #333333;
+	border-left: 1px solid #333333;
+    border-radius: 3px 3px 3px 3px;
+    height: auto;
+    margin: 0;
+}
+.autocomplete .dijitInputInner {
+    font-size: 12px;
+    padding: 1px;
+}
+.dijitComboBox .dijitArrowButton .dijitArrowButtonInner {
+    background: url("spriteArrows.png") no-repeat scroll 1px center transparent;
+    font-size: 1px;
+    height: 18px !important;
+    width: 8px;
+}
+.dijitSpinner .dijitSpinnerButtonContainer, .dijitComboBox .dijitArrowButtonContainer {
+    border-width: 0 0 0 0 !important;
+}
+.dijitButton:hover,
+.dijitDownArrowButton:hover {
+	background: url(center_off.png) repeat-x;
+	color:#FFF;
+}
+
+.dijitButton .dijitButtonText{
+    padding:0px 8px 0px;
+    font-size:12px;
+    line-height: 23px;
+}
+.dijitDownArrowButton .dijitButtonText{
+    padding:0px 8px 0px;
+    font-size:12px;
+   line-height: 23px;
+}
+
+.dijitMenuItemIconCell {
+       display: none;
+}
+.dijitInlineEditBoxDisplayMode {
+    border-bottom: 1px solid #666;
+}
+.dijitPopup .dijitMenuItemLabel{
+    padding: 3px;
+}
+element.style {
+    padding-left: 57px;
+}
+.dijitTreeRow, .dijitTreeContent {
+    line-height: 20px;
+    white-space: nowrap;
+}
+.dijitToggleButton, .dijitButton, .dijitComboButton {
+    border: 1px solid #333;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+    margin: 0px 5px 0 5px;
+    vertical-align: top;
+}
+.noOptionsMessage{
+	margin:0px 0px 0px 10px;
+}
+div.standardForm div.formRow input.filterInput {
+	float: none;
+}
+.dijitArrowButtonChar {
+    color: #535353;
+	font-size:11px;
+	padding-right:2px;
+}
+.dijitArrowButtonContainer {
+    border: 0;
+}
+div.filterlist {
+    background: url("filterlist.png") no-repeat scroll left bottom #F5F5F5;
+    border: 1px solid #CCCCCC;
+    clear: none;
+    display: inline;
+    float: left;
+    margin: 0 0 5px;
+    width: 275px;
+}
+div.filterControls {
+    clear: left;
+    color: #666666;
+    display: inline;
+    float: left;
+    font-size: 10px;
+    font-weight: normal;
+    padding: 5px;
+}
+div.standardForm div.formRow div.filterControls input.filterInput{
+    background-color: #FFFFFF;
+    float: left;
+	margin-right: 10px;
+}
+div.filterlist select {
+    height: 100px;
+    margin-bottom: 0;
+    width: 275px;
+}
+.dijitArrowButtonChar {
+     display: inline-block !important;
+}

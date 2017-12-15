@@ -1,0 +1,74 @@
+<fields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/pdf/pdfDefinitions.xsd" >
+	<field type="checkbox">
+		<eLabel>Vehicle_CombinedSingleLimit_LimitIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='CSL'].CoverageCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_TwoIndicator_B</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[AutoMedicalPaymentsSymbolCd='2'].AutoMedicalPaymentsSymbolCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_ThreeIndicator_B</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[AutoMedicalPaymentsSymbolCd='3'].AutoMedicalPaymentsSymbolCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_FourIndicator_B</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[AutoMedicalPaymentsSymbolCd='4'].AutoMedicalPaymentsSymbolCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_SevenIndicator_B</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[AutoMedicalPaymentsSymbolCd='7'].AutoMedicalPaymentsSymbolCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_BusinessAutoSymbol_EightIndicator_B</eLabel>
+		<xpath>CommlAutoLineBusiness.CoveredAutoSymbol[AutoMedicalPaymentsSymbolCd='8'].AutoMedicalPaymentsSymbolCd</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_MedicalPayments_PerPersonLimitAmount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='MEDPM'].Limit.FormatInteger</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_UninsuredUnderinsuredMotoristsOption_CombinedSingleLimitBodilyInjuryOnlyIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd ='UMCSL'].Option[OptionCd='BI'].OptionCd</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_UninsuredUnderinsuredMotorists_CombinedSingleLimitPerAccidentLimitAmount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='UMCSL' &amp;&amp; Option.OptionCd='BI'].Limit.FormatInteger</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_UninsuredUnderinsuredMotoristsOption_CombinedSingleLimitBodilyInjuryAndPropertyDamageIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd ='UMCSL'].Option[OptionCd='PD'].OptionCd</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_UninsuredUnderinsuredMotorists_CombinedSingleLimitPerAccidentLimitAmount_B</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='UMCSL' &amp;&amp;  Option.OptionCd='PD'].Limit.FormatInteger</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_UninsuredUnderinsuredMotoristsOption_BodilyInjuryIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd ='UMISP'].CoverageCd</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_UninsuredUnderinsuredMotorists_BodilyInjuryPerPersonLimitAmount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='UMISP'].Limit[LimitAppliesToCd='PerPerson'].FormatInteger</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_UninsuredUnderinsuredMotorists_BodilyInjuryPerAccidentLimitAmount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='UMISP'].Limit[LimitAppliesToCd='PerAcc'].FormatInteger</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_UninsuredUnderinsuredMotoristsOption_PropertyDamageIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='UMPD'].CoverageCd</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_UninsuredUnderinsuredMotorists_PropertyDamagePerAccidentLimitAmount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='UMPD'].Limit.FormatInteger</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_Coverage_CollisionIndicator_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='COLL'].CoverageCd</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_Collision_DeductibleAmount_A</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlCoverage[CoverageCd='COLL'].Deductible.FormatInteger</xpath>
+	</field>
+</fields>

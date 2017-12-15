@@ -1,0 +1,246 @@
+<fields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/pdf/pdfDefinitions.xsd">
+	<field defaultValue="${itemIndex}">
+		<eLabel>Vehicle_ProducerIdentifier</eLabel>
+	</field>
+	<field>
+		<eLabel>Vehicle_ModelYear</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.ModelYear</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_ManufacturersName</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.Manufacturer</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_ModelName</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.Model</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_BodyCode</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.VehBodyTypeCd</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_VINIdentifier</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.VehIdentificationNumber</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_SymbolCode</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.VehSymbolCd</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_ComprehensiveSymbolCode</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.ComprehensiveOTCSymbolCd</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_CollisionSymbolCode</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CollisionSymbolCd</xpath>
+	</field>
+	<field indexRef="CommlAutoLineBusiness.CommlRateState.CommlVeh.@LocationRef">
+		<eLabel>Vehicle_PhysicalAddress_LineOne</eLabel>
+		<xpath>Location[@id='${indexRef}'].Addr.Addr1</xpath>
+	</field>
+	<field indexRef="CommlAutoLineBusiness.CommlRateState.CommlVeh.@LocationRef">
+		<eLabel>Vehicle_PhysicalAddress_CityName</eLabel>
+		<xpath>Location[@id='${indexRef}'].Addr.City</xpath>
+	</field>
+	<field indexRef="CommlAutoLineBusiness.CommlRateState.CommlVeh.@LocationRef">
+		<eLabel>Vehicle_PhysicalAddress_CountyName</eLabel>
+		<xpath>Location[@id='${indexRef}'].Addr.County</xpath>
+	</field>
+	<field indexRef="CommlAutoLineBusiness.CommlRateState.CommlVeh.@LocationRef">
+		<eLabel>Vehicle_PhysicalAddress_StateOrProvinceCode</eLabel>
+		<xpath>Location[@id='${indexRef}'].Addr.StateProvCd</xpath>
+	</field>
+	<field indexRef="CommlAutoLineBusiness.CommlRateState.CommlVeh.@LocationRef">
+		<eLabel>Vehicle_PhysicalAddress_PostalCode</eLabel>
+		<xpath>Location[@id='${indexRef}'].Addr.PostalCode</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_Registration_StateOrProvinceCode</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.Registration.StateProvCd</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_RatingTerritoryCode</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.TerritoryCd</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_GrossVehicleWeight</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.GrossVehOrCombinedWeight[UnitMeasurementCd='LBR'].NumUnits</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_RateClassCode</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlVehSupplement.PrimaryClassCd</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_SpecialIndustryClassCode</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlVehSupplement.SecondaryClassCd</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_PrimaryLiabilityRatingFactor</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlVehSupplement.PrimaryRatingFactorLiability</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_SeatingCapacityCount</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlVehSupplement.SeatingCapacity</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_RadiusOfUse</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlVehSupplement.RadiusUseTypeCd</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_FarthestZoneCode</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlVehSupplement.FarZoneCd</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_CostNewAmount</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CostNewAmt.Amt</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_Use_OtherIndicator</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlVehSupplement[VehUseCd='OT'].VehUseCd</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_Use_OtherDescription</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlVehSupplement[VehUseCd='OT'].VehUseCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_Coverage_LiabilityIndicator</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='CSL'].CoverageCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_Coverage_NoFaultIndicator</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PIP'].CoverageCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_Coverage_AdditionalNoFaultIndicator</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='APIP'].CoverageCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_Coverage_MedicalPaymentsIndicator</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='MEDPM'].CoverageCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_Coverage_UninsuredMotoristsIndicator</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UMCSL_UMISP'].CoverageCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_Coverage_UnderinsuredMotoristsIndicator</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='UNDSP'].CoverageCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_Coverage_TowingAndLabourIndicator</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='TL'].CoverageCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_Coverage_SpecifiedCauseOfLossIndicator</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PERIL'].CoverageCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_Coverage_FireIndicator</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PFIRE'].CoverageCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_Coverage_FireTheftIndicator</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PFRTH'].CoverageCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_Coverage_FireTheftWindstormIndicator</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='PTHWD'].CoverageCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_Coverage_LimitedSpecifiedPerilsIndicator</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='LSPER'].CoverageCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_Coverage_ComprehensiveIndicator</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='COMP'].CoverageCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_Coverage_CollisionIndicator</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='COLL'].CoverageCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_Coverage_RentalReimbursementIndicator</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='RREIM'].CoverageCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_Coverage_FullGlassIndicator</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='COMP'].Option[OptionCd='FG'].OptionCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_Coverage_ValuationActualCashValueIndicator</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='COMP'].Limit[ValuationCd='ACV'].ValuationCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_Coverage_ValuationAgreedAmountIndicator</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='COMP'].Limit[ValuationCd='V'].ValuationCd</xpath>
+	</field>
+	<field type="checkbox">
+		<eLabel>Vehicle_Coverage_ValuationStatedAmountIndicator</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='COMP'].Limit[ValuationCd='StatedAmt'].ValuationCd</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_Coverage_AgreedOrStatedAmount</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='COMP'].Limit.FormatInteger</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_Coverage_ComprehensiveOrSpecifiedCauseOfLossDeductibleAmount</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd ='PERIL'  or CoverageCd ='PFIRE'  or CoverageCd='PFRTH' or CoverageCd ='PTHWD' or CoverageCd ='LSPER'].Deductible.FormatInteger</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_Collision_DeductibleAmount</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage[CoverageCd='COLL'].Deductible.FormatInteger</xpath>
+	</field>
+	<field>
+		<eLabel>Vehicle_TotalPremiumAmount</eLabel>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.FullTermAmt.Amt</xpath>
+	</field>
+	<checkBoxGroup>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlVehSupplement.VehTypeCd</xpath>
+		<checkBox trueValue="PP">
+			<eLabel>Vehicle_VehicleType_PrivatePassengerIndicator</eLabel>
+		</checkBox>
+		<checkBox trueValue="SPEC">
+			<eLabel>Vehicle_VehicleType_SpecialIndicator</eLabel>
+		</checkBox>
+		<checkBox trueValue="COML">
+			<eLabel>Vehicle_VehicleType_CommercialIndicator</eLabel>
+		</checkBox>
+	</checkBoxGroup>
+	<checkBoxGroup>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlVehSupplement.VehUseCd</xpath>
+		<checkBox trueValue="PL">
+			<eLabel>Vehicle_Use_PleasureIndicator</eLabel>
+		</checkBox>
+		<checkBox trueValue="FM">
+			<eLabel>Vehicle_Use_FarmIndicator</eLabel>
+		</checkBox>
+		<checkBox trueValue="CM">
+			<eLabel>Vehicle_Use_CommercialIndicator</eLabel>
+		</checkBox>
+		<checkBox trueValue="RT">
+			<eLabel>Vehicle_Use_RetailIndicator</eLabel>
+		</checkBox>
+		<checkBox trueValue="SR">
+			<eLabel>Vehicle_Use_ServiceIndicator</eLabel>
+		</checkBox>
+		<checkBox trueValue="FH">
+			<eLabel>Vehicle_Use_ForHireIndicator</eLabel>
+		</checkBox>
+		<checkBox trueValue="DU">
+			<eLabel>Vehicle_Use_UnderFifteenMilesIndicator</eLabel>
+		</checkBox>
+		<checkBox trueValue="DO">
+			<eLabel>Vehicle_Use_FifteenMilesOrOverIndicator</eLabel>
+		</checkBox>
+	</checkBoxGroup>
+	<checkBoxGroup>
+		<xpath>CommlAutoLineBusiness.CommlRateState.CommlVeh.CommlCoverage.CoverageCd</xpath>
+		<checkBox trueValue="PERIL">
+			<eLabel>Vehicle_Coverage_SpecifiedCauseOfLossDeductibleIndicator</eLabel>
+		</checkBox>
+		<checkBox trueValue="COMP">
+			<eLabel>Vehicle_Coverage_ComprehensiveDeductibleIndicator</eLabel>
+		</checkBox>
+	</checkBoxGroup>
+</fields>

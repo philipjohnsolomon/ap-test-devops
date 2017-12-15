@@ -1,0 +1,136 @@
+<transactionDefinitionBehavior xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/behavior/transactionDefinitionBehavior.xsd">
+    <!-- The following delimiter applies to the <for> elements for separating page entities -->
+    <delimiter>/</delimiter>
+
+    <hotField key="*/generalInfo/controllingState/ControllingState" />
+    <hotField key="*/generalInfo/controllingState/ApplicantClassBusiness" />
+    <!-- These hot fields are used by custom Eligibility XARC Connector   -->  
+    <hotField key="*/generalInfo/eligibility/cpr21" />
+    <hotField key="*/generalInfo/eligibility/autop02" />
+    <hotField key="*/generalInfo/eligibility/drive19" />
+    <hotField key="*/generalInfo/eligibility/inmrc12" />
+
+    <!-- TODO: Example Eligibility behaviors. Project teams should update these behaviors as required.
+        Changes to the set of eligibility question(s) must be reflected in the CommlAutoPreConditions.eligibilityUniqueIds array. -->
+        
+        <!-- Set LOBCd based on transaction -->
+        <behavior>
+            <do action="alter">
+            <property name="defaultValue">AUTOB</property>
+            </do>
+            <for>autob/generalInfo/controllingState/CommlPolicyLOBCd</for>
+            <for>autobQuickQuote/generalInfo/controllingState/CommlPolicyLOBCd</for>
+            <for>autobEndorse/generalInfo/controllingState/CommlPolicyLOBCd</for>
+            <for>autobRenew/generalInfo/controllingState/CommlPolicyLOBCd</for>
+        </behavior>
+
+    <behavior id="excludeIneligibleMsg" title="Exclude the Ineligible Message By Default">
+        <do action="exclude" />
+        <for>*/generalInfo/eligibilityTips/</for>
+    </behavior>
+    <behavior id="includeIneligibleMsg" title="Include Ineligible Message when a Controlling State and SICCd are entered, and a question has been answered 'Yes'">
+        <do action="include" />
+        <where>
+            <preCondition name="ControllingState">!</preCondition>
+            <preCondition name="ApplicantClassBusiness">!</preCondition>
+            <preCondition name="XPATH{ count(CommlPolicy/QuestionAnswer[QuestionCd='CPR21' or QuestionCd='AUTOP02' or QuestionCd='DRIVE19' or QuestionCd='INMRC12']/YesNoCd[.='YES']) }">!0</preCondition>
+        </where>
+        <for>autob/generalInfo/eligibilityTips/</for>
+        <for>autobQuickQuote/generalInfo/eligibilityTips/</for>
+    </behavior>
+
+    <behavior id="excludeEligibilityQ1" title="Example for Class 1234">
+        <do action="exclude" />
+        <where>
+            <preCondition name="ApplicantClassBusiness"></preCondition>
+        </where>
+        <for>*/generalInfo/eligibility/cpr21</for>
+    </behavior>
+
+    <behavior id="excludeEligibilityQ3" title="Example for Class 1234">
+        <do action="exclude" />
+        <where>
+            <preCondition name="ApplicantClassBusiness">!1234</preCondition>
+        </where>
+        <for>*/generalInfo/eligibility/drive19</for>
+    </behavior>
+
+    <behavior id="excludeEligibilityQ4" title="Example for Class 2345">
+        <do action="exclude" />
+        <where>
+            <preCondition name="ApplicantClassBusiness">!2345</preCondition>
+        </where>
+        <for>*/generalInfo/eligibility/inmrc12</for>
+    </behavior>
+
+    <behavior id="excludeEligibilityQ2" title="Example for Class 3456">
+        <do action="exclude" />
+        <where>
+            <preCondition name="ApplicantClassBusiness">!3456</preCondition>
+        </where>
+        <for>*/generalInfo/eligibility/autop02</for>
+    </behavior>
+
+    <behavior>
+        <description>Exclude all other field sets on the General Information page until the risk is 
+		determined to be eligible.  Applies to quote and full application transactions only, when entered
+		via Portal directly. 
+
+		The 'inUploadWriterMode' and 'hasOriginalDocument' checks prevent this behavior from excluding
+		fields during upload processing, which would result in data loss.  The 'hasOriginalDocument'
+		check prevents this behavior from resolving to true for uploads, endorsement and renewal transactions
+		which causes the system to drop data for all excluded fields. In these scenarios we show all the fields
+		allowing the data to flow into Portal and lean on the XARC rule to prevents ineligible risks from proceeding.
+		See com.agencyport.autob.custom.EligibilityXarcValidation</description>
+
+
+        <do action="exclude" />
+        <where>
+            <preCondition name="ApplicantClassBusiness"></preCondition>            
+            <preCondition name="inUploadWriterMode">false</preCondition>
+        </where>
+        <where>
+            <preCondition name="cpr21">!NO</preCondition>            
+            <preCondition name="inUploadWriterMode">false</preCondition>
+        </where>
+        <where>
+            <preCondition name="ApplicantClassBusiness">3456</preCondition>
+            <preCondition name="autop02">!NO</preCondition>            
+            <preCondition name="inUploadWriterMode">false</preCondition>
+        </where>
+        <where>
+            <preCondition name="ApplicantClassBusiness">1234</preCondition>
+            <preCondition name="drive19">!NO</preCondition>            
+            <preCondition name="inUploadWriterMode">false</preCondition>
+        </where>
+        <where>
+            <preCondition name="ApplicantClassBusiness">2345</preCondition>
+            <preCondition name="inmrc12">!NO</preCondition>            
+            <preCondition name="inUploadWriterMode">false</preCondition>
+        </where>
+        <for>autobQuickQuote/generalInfo/agencyInformation</for>
+        <for>autobQuickQuote/generalInfo/firstNamedInsuredTips</for>
+        <for>autobQuickQuote/generalInfo/applicantInformation</for>
+        <for>autobQuickQuote/generalInfo/policyTerm</for>
+        <for>autobQuickQuote/generalInfo/mailingAddress</for>
+        <for>autobQuickQuote/generalInfo/inspectionContactInfo</for>
+        <for>autobQuickQuote/generalInfo/accountingContactInfo</for>
+        <for>autobQuickQuote/generalInfo/natureOfBusiness</for>
+        <for>autob/generalInfo/agencyInformation</for>
+        <for>autob/generalInfo/firstNamedInsuredTips</for>
+        <for>autob/generalInfo/applicantInformation</for>
+        <for>autob/generalInfo/policyTerm</for>
+        <for>autob/generalInfo/mailingAddress</for>
+        <for>autob/generalInfo/inspectionContactInfo</for>
+        <for>autob/generalInfo/accountingContactInfo</for>
+        <for>autob/generalInfo/natureOfBusiness</for>
+    </behavior>
+
+    <behavior>
+        <description>Exclude eligibility XARC Rules for endorsement and renewal transactions.</description>
+        <do action="exclude" />
+        <for>autobEndorse/generalInfo/process/generalInfoEligibilityXarcConnector</for>
+        <for>autobRenew/generalInfo/process/generalInfoEligibilityXarcConnector</for>
+    </behavior>
+
+</transactionDefinitionBehavior>

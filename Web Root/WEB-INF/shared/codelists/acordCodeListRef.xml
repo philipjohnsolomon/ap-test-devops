@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codeListRef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/codelist/codelist.xsd">
+  <optionList title="Roof Material Type List" id="roofMaterialTypeCd">
+    <option value="ALUM">Aluminum Shingles</option>
+    <option value="ARCH">Architectural Shingles</option>
+    <option value="ASBO">Asbestos</option>
+    <option value="ASPHS">Asphalt Shingle</option>
+    <option value="BLTXGRVL">Built Up without Gravel</option>
+    <option value="CEDRK">Cedar Shakes</option>
+    <option value="CEDRS">Cedar Shingles</option>
+    <option value="CLAY">Clay Tile or Slate</option>
+    <option value="COMP">Composition (Fiberglass, Asphalt, etc.)</option>
+    <option value="CONCRETE">Concrete (Not Tile)</option>
+    <option value="CONC">Concrete Tile</option>
+    <option value="COPP">Copper</option>
+    <option value="STCOR">Corrugated Steel</option>
+    <option value="FIBER">Fiberglass</option>
+    <option value="FOAM">Foam</option>
+    <option value="GRAVL">Gravel</option>
+    <option value="LTMTLPNL">Light Metal Panel</option>
+    <option value="METL">Metal</option>
+    <option value="MINFR">Mineral Fiber</option>
+    <option value="MissTile">Mission Tile</option>
+    <option value="NEPineS">New England Pine Shingle</option>
+    <option value="OT">Other</option>
+    <option value="PLAS">Plastic</option>
+    <option value="POUR">Poured</option>
+    <option value="RECYC">Recycled Roofing Products</option>
+    <option value="ROCK">Rock</option>
+    <option value="ROLL">Rolled Roofing</option>
+    <option value="RUBB">Rubber Roof</option>
+    <option value="SEAMMETAL">Seam Metal</option>
+    <option value="MEMSINGLEBALL">Single Ply Membrane Ballasted</option>
+    <option value="SPMS">Single Ply Membrane Systems</option>
+    <option value="SLAT">Slate</option>
+    <option value="SpTile">Spanish Tile</option>
+    <option value="STPOR">Steel/Porcelain Shingles</option>
+    <option value="TAR">Tar and Gravel</option>
+    <option value="TARGRB">Tar and Gravel (Built-up)</option>
+    <option value="TILE">Tile</option>
+    <option value="TIN">Tin</option>
+    <option value="VSS">Victorian Scalloped Shake</option>
+    <option value="WF">Wood Fiber Shingles</option>
+    <option value="WOODSS">Wood Shake/Shingle</option>
+    <option value="WOODK">Wood Shakes</option>
+    <option value="WOODS">Wood Shingles</option>
+  </optionList>
+  <optionList title="Fire Protection Class" id="fireProtectionClassCd">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+  </optionList>
+  <optionList title="Wind Class Code" id="windClassCd">
+    <option value="SWR">Semi-Wind Resistive</option>
+    <option value="WR">Wind Resistive</option>
+    <option value="OT">Other</option>
+  </optionList>
+  <optionList title="Renovation Improvement Code List" id="renovationImprovementCd">
+    <option value="C">Complete Improvement/Code</option>
+    <option value="P">Partial Improvement/Update</option>
+  </optionList>
+  <optionList title="Housekeepong Condition Code" id="housekeepingConditionCd">
+    <option value="E">Excellent</option>
+    <option value="GD">Good</option>
+    <option value="AV">Average</option>
+    <option value="BAVE">Below Average</option>
+  </optionList>
+  <optionList title="Earthquake Retrofit Type" id="earthquakeRetrofitTypeCd">
+    <option value="AL">All retrofit conditions met</option>
+    <option value="WB">Cripple walls braced (WB)</option>
+    <option value="BS">Cripple walls braced and water heater strapped/braced/anchored</option>
+    <option value="AF">Structure anchored to foundation</option>
+    <option value="AB">Structure anchored to foundation and cripple walls braced</option>
+    <option value="AS">Structure anchored to foundation and water heater strapped/braced/anchored</option>
+    <option value="WS">Water heater strapped to wall/braced/anchored</option>
+    <option value="NR">Structure not retrofitted</option>
+  </optionList>
+  <optionList title="Heat Source Code" id="heatSourceCd">
+    <option value="CNPI">Coal Non-Professionally Installed</option>
+    <option value="CPI">Coal Professionally Installed</option>
+    <option value="E">Electric</option>
+    <option value="F">Electric Portable Heater</option>
+    <option value="FIREPLACE">Fireplace</option>
+    <option value="FLOORFURN">Floor Furnace</option>
+    <option value="HEATPUMP">Heat Pump</option>
+    <option value="K">Kerosene</option>
+    <option value="H">Kerosene Portable Heater</option>
+    <option value="L">Liquid Propane Gas</option>
+    <option value="M">Liquid Propane Portable Heater</option>
+    <option value="G">Natural Gas</option>
+    <option value="NONE">None</option>
+    <option value="O">Oil</option>
+    <option value="OT">Other</option>
+    <option value="PELLETSTOV">Pellet Stove</option>
+    <option value="T">Solar Non-Professionally Installed</option>
+    <option value="S">Solar Professionally Installed</option>
+    <option value="WALLUNIT">Wall Unit</option>
+    <option value="X">Wood Non-Professionally Installed</option>
+    <option value="W">Wood Professionally Installed</option>
+  </optionList>
+</codeListRef>
+

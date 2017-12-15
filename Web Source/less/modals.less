@@ -1,0 +1,348 @@
+/*	Modals 
+	Lightbox windows, so far used in Turnstile
+*/
+
+
+/* Modal base*/
+.modal {
+
+	/* 
+		fix for modal page shift 
+		http://stackoverflow.com/questions/19960162/bootstrap-3-modal-fires-and-causes-page-to-shift-to-the-left-momentarily-brows
+	*/
+ 	overflow-y: auto;
+	&-open {
+	 overflow: auto;
+	}
+	
+    &#turnstile-upload-widget {
+        .modal-content {
+            overflow: hidden;
+        }
+	}
+    
+	.modal-dialog {
+		height: 85%;
+		overflow: auto;
+	}
+	
+	.modal-content {
+		border-radius: 0;
+	}
+	
+	.btn {
+		position: relative;
+	}
+	.btn .pull-right.spinner-container	{
+		position: relative;
+		top: 10px;
+	}
+
+	.modal-header {
+		background: @theme-modal-header-background;
+		h2, h3, h4 {
+			font-size: @font-size-h4;
+			color: @theme-modal-header-color;
+		}
+		button.close {
+			color: #fff; 
+			text-shadow: none !important; 
+			opacity: 0.5;
+		}	
+		button.close:hover,
+		button.close:focus	{
+			opacity: 1;
+		}	
+	}
+	.modal-body	{
+		background: @theme-modal-body-background;
+		color: @theme-modal-body-color;
+	
+		h3 {
+			margin: 0;
+			margin-bottom: 7px;
+			border-bottom: 1px solid @gray-light;
+			padding-bottom: 7px;
+			font-size: @font-size-h4;
+		}
+		
+		.turnstile-file-upload-status {
+            .popover-content {
+                word-break: break-all;
+            }
+            
+            
+        }
+        
+        .unprocessed-pages {
+        	.list-group-item {
+        	 	word-break: break-all;
+        	}	
+        }
+        .unprocessed-forms {
+        	.list-group-item {
+        	 	word-break: break-all;
+        	}	
+        }
+        
+        td.file-column {
+            max-width: 215px;
+            word-break: break-all;
+        }
+        
+         td.status-column {
+           min-width: 130px;
+           
+        }
+        
+        td.file-name {
+            max-width: 300px;
+            word-break: break-all;
+        }
+            
+        td.date-column {
+          white-space: nowrap;
+        }
+        
+		.turnstile-account-search-listing {
+			.account-type {
+			
+				&.P .fa {
+					&:before{content: @icon-account-personal;}
+				}
+				&.C .fa {
+					&:before{content: @icon-account-commercial;}
+				}
+				&.U .fa {
+					&:before{content: @icon-account-unknown;}
+				}
+			}		
+		}
+				
+		.table > thead > tr > td.danger, 
+		.table > tbody > tr > td.danger, 
+		.table > tfoot > tr > td.danger, 
+		.table > thead > tr > th.danger, 
+		.table > tbody > tr > th.danger, 
+		.table > tfoot > tr > th.danger, 
+		.table > thead > tr.danger > td, 
+		.table > tbody > tr.danger > td, 
+		.table > tfoot > tr.danger > td, 
+		.table > thead > tr.danger > th, 
+		.table > tbody > tr.danger > th, 
+		.table > tfoot > tr.danger > th {
+			background-color: inherit;
+		}		
+		
+		.tab-content { 
+            
+            .turnstile-file-upload-status  {
+            }
+            .turnstile-file-upload-list {
+                max-height: 485px;
+                overflow-x: auto;
+            }
+			> .tab-pane {
+				padding-top: 10px;
+			}		
+				
+			.table {
+				td, 
+				th {
+					padding: 10px;
+				}			
+				thead {
+					td, 
+					th {
+						border-bottom: 1px solid @gray-light; 
+						vertical-align: bottom; 
+						font-weight: 700;
+						padding-top: 0;
+					}
+				}			
+				tbody {
+					td {
+						border-bottom: 1px solid @gray-lighter;
+						vertical-align: top;
+						&.td-label {
+							font-weight: bold;
+						}
+						&.file-action {
+							text-align: right;
+						}
+					}		
+				}			
+			}
+		}
+		
+		.button-row	{margin-bottom: 10px;}
+		
+		.list-group {
+                    max-height: 330px;
+    				overflow-y: auto;	
+            
+			.list-group-item:nth-child(odd) {
+			  background-color: #fff;
+			}
+			.list-group-item:nth-child(even) {
+			  background-color: @gray-lighter;
+			}
+		
+		}
+		
+		.list-group-item {
+			h4.list-group-item-heading {
+				font-size: @font-size-base;
+				font-weight: 900;
+
+				&.toggler {
+					a span	{color: @text-color;}
+				}
+				&.forms-not-processed {
+
+					.fa {
+						margin-right: 5px; 
+						display: inline-block;
+						font-family: FontAwesome;
+						font-style: normal;
+						font-weight: normal;
+						line-height: 1;
+						-webkit-font-smoothing: antialiased;
+						-moz-osx-font-smoothing: grayscale;
+						
+						&:before{
+							content: @icon-upload-not-processed;
+						}
+					}
+				}
+			}
+			.radio, .checkbox {
+    			margin: 0;
+    		}
+		}		
+		
+		.input-group .form-control.tt-input,
+		.form-horizontal .form-group .form-control {
+			width: 100% !important;
+		}
+		
+		
+		p a {
+			color: @brand-primary;
+			text-decoration: none;
+			font-weight: inherit;
+		}
+		p a:hover {
+			text-decoration: none;
+		}
+		
+		p a.btn	{
+			text-decoration: none; 
+			color: inherit;
+		}
+
+		.input-group-addon, 
+		.input-group-btn {
+			vertical-align: top;
+		}
+		
+		.accounts-search-modal-results {
+			margin: 10px 0;
+			padding: 10px 0;
+			border-top: 1px solid @gray-lighter;
+		}
+		
+		.form-group {
+			label {
+				display: block;
+			}
+		}
+		
+		p .systemAutoCorrect {
+			i .fa-2{
+				content: @icon-ui-check-o;
+			}        	
+        }
+	}
+	
+	.modal-footer	{
+		text-align: left;
+	}
+
+
+	/* Modal tabs */
+	
+	.nav-tabs {
+		border-color: @gray;
+
+		> li {
+			float: left;
+			margin-bottom: -1px;
+			position: relative;
+		}
+		> li > a {
+			color: @gray;
+			background: lighten(@gray-light, 10%);
+			border-color: lighten(@gray-light, 10%);
+			margin-bottom: 1px;
+		}
+		> li > a:hover {
+			background: lighten(@gray-light, 20%);
+		}
+		> li.active > a, 
+		> li.active > a:hover, 
+		> li.active > a:focus {
+			color: #fff;
+			background: @gray;
+			border-color: @gray;
+			outline: 0;
+		}
+	}	
+	
+
+	/* File Uploader Widget buttons */
+	
+	.file-uploader-widget, 
+	.turnstile-file-upload-status {
+		.cancel	{float: right;}
+				
+		/* File input button  (moved from turnstile_upload_widget.jsp) */
+
+		.fileinput-button {
+		  position: relative;
+		  overflow: hidden;
+		}
+		.fileinput-button input {
+		  position: absolute;
+		  top: 0;
+		  right: 0;
+		  margin: 0;
+		  opacity: 0;
+		  -ms-filter: 'alpha(opacity=0)';
+		  font-size: 200px;
+		  direction: ltr;
+		  cursor: pointer;
+		}		
+	}
+	
+	/* modal-wide addons */
+	
+	.input-group-addon {
+		.search .fa {
+			&:before {content: @icon-ui-search;}		
+		}
+	}
+	
+		
+	/* Fix for IE < 8 (hack to make LESS spit out "screen\9" syntax) */
+	
+	@iehack: screen\9;
+	@media @iehack {
+		.fileinput-button input {
+			filter: alpha(opacity=0);
+			font-size: 100%;
+			height: 100%;
+		}
+	} 
+	
+}

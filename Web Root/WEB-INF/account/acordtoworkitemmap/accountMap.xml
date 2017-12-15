@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- id is the transaction.@mappingId -->
+<acordtoworkitemmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="http://reference.agencyport.com/schemas/5.2/acordtoworkitemmap/acordtoworkitemmap.xsd"
+	id="accountMap">
+	<mapEntry>
+		<xpath valueType="string">MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.NameInfo[NameTypeCd='P'].PersonName.GivenName</xpath>
+		<workitemproperty>ENTITY_NAME</workitemproperty>
+	</mapEntry>	
+	<mapEntry>
+		<xpath valueType="string">MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.NameInfo[NameTypeCd='P'].PersonName.Surname</xpath>
+		<workitemproperty>OTHER_NAME</workitemproperty>
+	</mapEntry>
+	<mapEntry>
+		<xpath viewId="accountViews.xml:AccountHolder.Address" valueType="string">MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Addr.Addr1</xpath>
+		<workitemproperty>ADDRESS</workitemproperty>
+	</mapEntry>
+	<mapEntry>
+		<xpath valueType="string">MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Addr.City</xpath>
+		<workitemproperty>CITY</workitemproperty>
+	</mapEntry>
+	<mapEntry>
+		<xpath valueType="string">MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Addr.StateProvCd</xpath>
+		<workitemproperty>STATE_PROV_CD</workitemproperty>
+	</mapEntry>
+	<mapEntry>
+		<xpath valueType="string">MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Addr.PostalCode</xpath>
+		<workitemproperty>POSTAL_CODE</workitemproperty>
+	</mapEntry>
+	<mapEntry>
+		<xpath valueType="string">MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.Communications.PhoneInfo[CommunicationUseCd='Business'].PhoneNumber</xpath>
+		<workitemproperty>PHONE_NUMBER</workitemproperty>
+	</mapEntry>	
+	<mapEntry>
+		<xpath valueType="string">MiscParty[MiscPartyInfo.MiscPartyRoleCd='AccountHolder'].GeneralPartyInfo.NameInfo.TaxIdentity.TaxId</xpath>
+		<workitemproperty>TAX_ID</workitemproperty>
+	</mapEntry>
+	<mapEntry>
+		<xpath valueType="string">AccountNumber</xpath>
+		<workitemproperty>ACCOUNT_NUMBER</workitemproperty>
+	</mapEntry>	
+	<mapEntry>
+		<xpath valueType="string">BroadLOBCd</xpath>
+		<workitemproperty>ACCOUNT_TYPE</workitemproperty>
+	</mapEntry>	
+</acordtoworkitemmap>

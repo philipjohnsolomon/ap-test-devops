@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by Norm Baker (AgencyPort) -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" attributeFormDefault="unqualified" version="1.7.0">
+	<!-- There are several changes made to the base ACORD schema that could technically be done via restrictions and then
+	extensions. XMLSpy and XSOM were fine with this approach but JDOM validation could not handle the complexity and had issues so a design decision was
+	made to apply those changes directly to the ACORD schema rather than embracing restrictions as a technique. -->
+	<xsd:redefine schemaLocation="acord-pcs-v1_30_0-nodoc-nocodes.xsd">
+		<xsd:complexType name="RemarkTextType">
+			<xsd:annotation>
+				<xsd:documentation>Addition of AgencyPort's apType attribute</xsd:documentation>
+			</xsd:annotation>
+			<xsd:simpleContent>
+				<xsd:extension base="RemarkTextType">
+					<xsd:attribute name="apType" type="AP_Type" use="optional"/>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+		<xsd:complexType name="CommlPropertyInfo_Type">
+			<xsd:annotation>
+				<xsd:documentation>Addition of AgencyPort's Reporting element</xsd:documentation>
+			</xsd:annotation>
+			<xsd:complexContent>
+				<xsd:extension base="CommlPropertyInfo_Type">
+					<xsd:sequence>
+						<xsd:element ref="Reporting" minOccurs="0" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Added by AgencyPort</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="ModInfo_Type">
+			<xsd:annotation>
+				<xsd:documentation>ModInfo enhancement for AgencyPort endorsement support</xsd:documentation>
+			</xsd:annotation>
+			<xsd:complexContent>
+				<xsd:extension base="ModInfo_Type">
+					<xsd:sequence>
+						<xsd:element ref="AP_DomainAggregateXPath" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:group name="INSURANCESVCRQMSGS">
+			<xsd:annotation>
+				<xsd:documentation>Added commercial garage and dealers</xsd:documentation>
+			</xsd:annotation>
+			<xsd:sequence>
+				<xsd:group ref="INSURANCESVCRQMSGS"/>
+				<xsd:element ref="CommlGarageDealersPolicyQuoteInqRq"/>
+			</xsd:sequence>
+		</xsd:group>
+		<xsd:complexType name="AdditionalInterestInfo_Type">
+			<xsd:complexContent>
+				<xsd:extension base="AdditionalInterestInfo_Type">
+					<xsd:sequence>
+						<xsd:element ref="LOBCd" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="AdditionalInterest_Type">
+			<xsd:annotation>
+				<xsd:documentation>Changes to support AI Data Standards Spec @ https://svn.corp.ap/ap_products/sdk_root/trunk/sdk/documentation/03 Functional Specs/Additional_Interests_Rev2.doc</xsd:documentation>
+			</xsd:annotation>
+			<xsd:complexContent>
+				<xsd:extension base="AdditionalInterest_Type">
+					<xsd:sequence>
+						<xsd:element name="RelatedType" type="RelatedType_Type" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>Classification of risk to which  this interest relates.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+					<xsd:attribute name="IdRef" type="IDREF"/>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="CommlPkgPolicyQuoteInqRq_Type">
+			<xsd:complexContent>
+				<xsd:extension base="CommlPkgPolicyQuoteInqRq_Type">
+					<xsd:sequence>
+						<xsd:element ref="ModInfo" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<!-- UMBRP -->
+		<xsd:complexType name="PersUmbrellaPolicyQuoteInqRq_Type">
+			<xsd:complexContent>
+				<xsd:extension base="PersUmbrellaPolicyQuoteInqRq_Type">
+					<xsd:sequence>
+						<xsd:element ref="ModInfo" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="CommlPropertyPolicyQuoteInqRq_Type">
+			<xsd:complexContent>
+				<xsd:extension base="CommlPropertyPolicyQuoteInqRq_Type">
+					<xsd:sequence>
+						<xsd:element ref="ModInfo" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:group name="COMMLPKGPOLINFO">
+			<xsd:sequence>
+				<xsd:element ref="Producer" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="InsuredOrPrincipal" maxOccurs="unbounded"/>
+				<xsd:element ref="MiscParty" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="CommlPolicy"/>
+				<xsd:element ref="Location" maxOccurs="unbounded"/>
+				<xsd:element ref="CommlSubLocation" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="CommlPropertyLineBusiness" minOccurs="0"/>
+				<xsd:element ref="GeneralLiabilityLineBusiness" minOccurs="0"/>
+				<xsd:element ref="CommlAutoLineBusiness" minOccurs="0"/>
+				<xsd:element ref="CrimeLineBusiness" minOccurs="0"/>
+				<xsd:element ref="BoilerMachineryLineBusiness" minOccurs="0"/>
+				<xsd:element ref="EDPLineBusiness" minOccurs="0"/>
+				<xsd:element ref="CommlUmbrellaLineBusiness" minOccurs="0"/>
+				<xsd:element ref="CommlInlandMarineLineBusiness" minOccurs="0"/>
+				<xsd:element ref="RemarkText" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="FileAttachmentInfo" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:group>
+		<xsd:complexType name="CommlAutoPolicyQuoteInqRq_Type">
+			<xsd:complexContent>
+				<xsd:extension base="CommlAutoPolicyQuoteInqRq_Type">
+					<xsd:sequence>
+						<xsd:element ref="ModInfo" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="OtherOrPriorPolicy_Type">
+			<xsd:complexContent>
+				<xsd:extension base="OtherOrPriorPolicy_Type">
+					<xsd:sequence>
+						<xsd:element ref="Loss" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="BOPPolicyQuoteInqRq_Type">
+			<xsd:complexContent>
+				<xsd:extension base="BOPPolicyQuoteInqRq_Type">
+					<xsd:sequence>
+						<xsd:element ref="ModInfo" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="AlarmAndSecurity_Type">
+			<xsd:complexContent>
+				<xsd:extension base="AlarmAndSecurity_Type">
+					<xsd:sequence>
+						<xsd:element ref="ProtectiveSafeguardDesc" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="CrimeSchedule_Type">
+			<xsd:complexContent>
+				<xsd:extension base="CrimeSchedule_Type">
+					<xsd:sequence>
+						<xsd:element ref="GeneralPartyInfo" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="EmployeeBenefitPlanInfo_Type">
+			<xsd:complexContent>
+				<xsd:extension base="EmployeeBenefitPlanInfo_Type">
+					<xsd:sequence>
+						<xsd:element ref="TotalAssetsAmt" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="GeneralLiabilityPolicyQuoteInqRq_Type">
+			<xsd:complexContent>
+				<xsd:extension base="GeneralLiabilityPolicyQuoteInqRq_Type">
+					<xsd:sequence>
+						<xsd:element ref="ModInfo" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="CommlUmbrellaPolicyQuoteInqRq_Type">
+			<xsd:complexContent>
+				<xsd:extension base="CommlUmbrellaPolicyQuoteInqRq_Type">
+					<xsd:sequence>
+						<xsd:element ref="ModInfo" minOccurs="0" maxOccurs="unbounded"/>
+						<xsd:element ref="PolicyTypeCd" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="PersAutoPolicyQuoteInqRq_Type">
+			<xsd:complexContent>
+				<xsd:extension base="PersAutoPolicyQuoteInqRq_Type">
+					<xsd:sequence>
+						<xsd:element ref="ModInfo" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="HomePolicyQuoteInqRq_Type">
+			<xsd:complexContent>
+				<xsd:extension base="HomePolicyQuoteInqRq_Type">
+					<xsd:sequence>
+						<xsd:element ref="ModInfo" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="DwellFirePolicyQuoteInqRq_Type">
+			<xsd:complexContent>
+				<xsd:extension base="DwellFirePolicyQuoteInqRq_Type">
+					<xsd:sequence>
+						<xsd:element ref="ModInfo" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="WatercraftPolicyQuoteInqRq_Type">
+			<xsd:complexContent>
+				<xsd:extension base="WatercraftPolicyQuoteInqRq_Type">
+					<xsd:sequence>
+						<xsd:element ref="ModInfo" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="PersInlandMarinePolicyQuoteInqRq_Type">
+			<xsd:complexContent>
+				<xsd:extension base="PersInlandMarinePolicyQuoteInqRq_Type">
+					<xsd:sequence>
+						<xsd:element ref="ModInfo" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="PersPkgPolicyQuoteInqRq_Type">
+			<xsd:complexContent>
+				<xsd:extension base="PersPkgPolicyQuoteInqRq_Type">
+					<xsd:sequence>
+						<xsd:element ref="ModInfo" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="PolicyInqRq_Type">
+			<xsd:complexContent>
+				<xsd:extension base="PolicyInqRq_Type">
+					<xsd:sequence>
+						<xsd:element ref="ModInfo" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="CrimePolicyQuoteInqRq_Type">
+			<xsd:complexContent>
+				<xsd:extension base="CrimePolicyQuoteInqRq_Type">
+					<xsd:sequence>
+						<xsd:element ref="ModInfo" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="WorkCompPolicyQuoteInqRq_Type">
+			<xsd:complexContent>
+				<xsd:extension base="WorkCompPolicyQuoteInqRq_Type">
+					<xsd:sequence>
+						<xsd:element ref="ModInfo" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="WorkCompIndividuals_Type">
+			<xsd:complexContent>
+				<xsd:extension base="WorkCompIndividuals_Type">
+					<xsd:sequence>
+						<xsd:element ref="RatingClassificationDescCd" minOccurs="0"/>
+						<xsd:element ref="RatingClassificationDesc" minOccurs="0"/>
+						<xsd:element ref="ItemIdInfo" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="FarmPolicyQuoteInqRq_Type">
+			<xsd:complexContent>
+				<xsd:extension base="FarmPolicyQuoteInqRq_Type">
+					<xsd:sequence>
+						<xsd:element ref="ModInfo" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="Location_Type">
+			<xsd:complexContent>
+				<xsd:extension base="Location_Type">
+					<xsd:sequence>
+						<xsd:element ref="PrimaryInd" minOccurs="0" maxOccurs="1"/>
+						<xsd:element ref="PrimaryFarmInd" minOccurs="0"/>
+						<xsd:element ref="QuestionAnswer" minOccurs="0" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Added for integration with Guidewire</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element ref="Option" minOccurs="0" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Added for integration with Guidewire</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="FarmSubLocation_Type">
+			<xsd:complexContent>
+				<xsd:extension base="FarmSubLocation_Type">
+					<xsd:sequence>
+						<xsd:element ref="WaterQuantityCd" minOccurs="0"/>
+						<xsd:element ref="WaterSourceCd" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="CommlInlandMarinePolicyQuoteInqRq_Type">
+			<xsd:complexContent>
+				<xsd:extension base="CommlInlandMarinePolicyQuoteInqRq_Type">
+					<xsd:sequence>
+						<xsd:element ref="ModInfo" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="PropertyItem_Type">
+			<xsd:complexContent>
+				<xsd:extension base="PropertyItem_Type">
+					<xsd:sequence>
+						<xsd:element ref="IsSummaryInd" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="BuildersRiskInstallationInfo_Type">
+			<xsd:complexContent>
+				<xsd:extension base="BuildersRiskInstallationInfo_Type">
+					<xsd:sequence>
+						<xsd:element ref="CommlCoverage" minOccurs="0"/>
+						<xsd:element ref="Construction" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="Construction_Type">
+			<xsd:complexContent>
+				<xsd:extension base="Construction_Type">
+					<xsd:sequence>
+						<xsd:element ref="FloorConstructionCd" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="NameInfo_Type">
+			<xsd:complexContent>
+				<xsd:extension base="NameInfo_Type">
+					<xsd:sequence>
+						<xsd:element name="NameTypeCd" type="xsd:string" minOccurs="0"/>
+						<xsd:element ref="ItemIdInfo" minOccurs="0" maxOccurs="1" />
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="GeneralPartyInfo_Type">
+			<xsd:complexContent>
+				<xsd:extension base="GeneralPartyInfo_Type">
+					<xsd:sequence>
+						<xsd:element ref="License" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="PCPOLICY_NoID">
+			<xsd:complexContent>
+				<xsd:extension base="PCPOLICY_NoID">
+					<xsd:sequence>
+						<xsd:element name="UWCompanyCode" minOccurs="0" type="C-20">
+							<xsd:annotation>
+								<xsd:documentation>Used to store the underwriting company code for the work item or policy</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		<xsd:complexType name="ItemIdInfo_Type">
+			<xsd:complexContent>
+				<xsd:extension base="ItemIdInfo_Type">
+					<xsd:sequence>
+						<xsd:element name="ExternalSystemId" minOccurs="0" type="C-64">
+							<xsd:annotation>
+								<xsd:documentation>Used to store the external system id for an entity </xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="ExternalSystemLockingId" minOccurs="0" type="C-64">
+							<xsd:annotation>
+								<xsd:documentation>Used to store the external system locking id for an entity </xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		
+		<xsd:complexType name="PhoneInfo_Type">
+			<xsd:complexContent>
+				<xsd:extension base="PhoneInfo_Type">
+					<xsd:sequence>
+						<xsd:element ref="ItemIdInfo" minOccurs="0" maxOccurs="1" />
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		
+		<xsd:complexType name="EmailInfo_Type">
+			<xsd:complexContent>
+				<xsd:extension base="EmailInfo_Type">
+					<xsd:sequence>
+						<xsd:element ref="ItemIdInfo" minOccurs="0" maxOccurs="1" />
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:redefine>
+	<xsd:element name="CommlGarageDealersPolicyQuoteInqRq" type="CommlGarageDealersPolicyQuoteInqRq_Type"/>
+	<xsd:element name="CommlGarageDealersPolicyModRq" type="CommlGarageDealersPolicyModRq_Type"/>
+	<xsd:complexType name="CommlGarageDealersPolicyQuoteInqRq_Type">
+		<xsd:sequence>
+			<xsd:group ref="MSGRQINFO"/>
+			<xsd:group ref="COMMLGARAGEDEALERSPOLINOF"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CommlGarageDealersPolicyModRq_Type">
+		<xsd:sequence>
+			<xsd:group ref="MSGRQINFO"/>
+			<xsd:element ref="ModInfo" maxOccurs="unbounded"/>
+			<xsd:group ref="COMMLGARAGEDEALERSPOLINOF"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:group name="COMMLGARAGEDEALERSPOLINOF">
+		<xsd:sequence>
+			<xsd:element ref="Producer" minOccurs="0"/>
+			<xsd:element ref="InsuredOrPrincipal"/>
+			<xsd:element ref="CommlPolicy"/>
+			<xsd:element ref="Location" maxOccurs="unbounded"/>
+			<xsd:element name="CommlGarageDealersLineBusiness" type="CommlGarageDealersLineBusiness_Type"/>
+			<xsd:element ref="CommlSubLocation" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="RemarkText" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="FileAttachmentInfo" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="CommlGarageDealersLineBusiness_Type">
+		<xsd:complexContent>
+			<xsd:extension base="PCLINEBUSINESS">
+				<xsd:sequence>
+					<xsd:element ref="CommlCoverage" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="CommlDriver" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="CommlRateState" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="OperationsAndSales" minOccurs="0" maxOccurs="unbounded">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="OperationsAndSalesCd" type="OpenEnum"/>
+								<xsd:element ref="YesNoCd"/>
+							</xsd:sequence>
+							<xsd:attribute name="id" type="ID"/>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="ServiceOrRepair" minOccurs="0">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element ref="AnnualGrossReceiptsAmt"/>
+								<xsd:element name="AnnualGasPumped">
+									<xsd:complexType>
+										<xsd:sequence>
+											<xsd:element ref="NumUnits"/>
+											<xsd:element ref="UnitMeasurementCd"/>
+										</xsd:sequence>
+									</xsd:complexType>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="AutoDealers" minOccurs="0">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="FranchisedInd" type="Boolean"/>
+								<xsd:element ref="Sales" minOccurs="0" maxOccurs="unbounded"/>
+								<xsd:element name="SalesPercent" maxOccurs="unbounded">
+									<xsd:complexType>
+										<xsd:sequence>
+											<xsd:element ref="AmtTypeCd"/>
+											<xsd:element ref="Amt"/>
+										</xsd:sequence>
+										<xsd:attribute name="id" type="ID"/>
+									</xsd:complexType>
+								</xsd:element>
+								<xsd:element name="PhysicalDamage" maxOccurs="unbounded">
+									<xsd:complexType>
+										<xsd:sequence>
+											<xsd:element ref="CommlCoverage" minOccurs="0" maxOccurs="unbounded"/>
+											<xsd:element name="NewUsedCd" type="NewUsed"/>
+											<xsd:element ref="InterestCd"/>
+											<xsd:element ref="CoverageCd"/>
+											<xsd:element ref="ReportingBasis" minOccurs="0" maxOccurs="unbounded"/>
+										</xsd:sequence>
+										<xsd:attribute name="id" type="ID"/>
+									</xsd:complexType>
+								</xsd:element>
+								<xsd:element name="OperatorInfo" minOccurs="0" maxOccurs="unbounded">
+									<xsd:complexType>
+										<xsd:sequence>
+											<xsd:element name="Operator" minOccurs="0" maxOccurs="unbounded">
+												<xsd:complexType>
+													<xsd:sequence>
+														<xsd:element name="OperatorTypeCd" type="OpenEnum"/>
+														<xsd:element ref="NumUnits"/>
+													</xsd:sequence>
+													<xsd:attribute name="id" type="ID"/>
+												</xsd:complexType>
+											</xsd:element>
+										</xsd:sequence>
+										<xsd:attribute name="LocationRef" type="IDREF"/>
+										<xsd:attribute name="id" type="ID"/>
+									</xsd:complexType>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="GarageKeepers" minOccurs="0">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element ref="CoveredAutoSymbol" minOccurs="0"/>
+								<xsd:element ref="QuestionAnswer" minOccurs="0" maxOccurs="unbounded"/>
+								<xsd:element ref="CommlPropertyInfo" minOccurs="0" maxOccurs="unbounded"/>
+							</xsd:sequence>
+							<xsd:attribute name="id" type="ID"/>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="NonDealerPayroll" minOccurs="0" maxOccurs="unbounded">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="EstAnnualRemuneration" type="Decimal"/>
+								<xsd:element ref="NumEmployees"/>
+							</xsd:sequence>
+							<xsd:attribute name="LocationRef" type="IDREF"/>
+							<xsd:attribute name="id" type="ID"/>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="VehicleStorage" minOccurs="0" maxOccurs="unbounded">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element ref="QuestionAnswer" maxOccurs="unbounded"/>
+							</xsd:sequence>
+							<xsd:attribute name="LocationRef" type="IDREF" use="required"/>
+							<xsd:attribute name="id" type="ID"/>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element ref="CoveredAutoSymbol" minOccurs="0"/>
+					<xsd:element ref="QuestionAnswer" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="PhysicalDamage" minOccurs="0">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="CommlPropertyInfo" type="CommlPropertyInfo_Type" minOccurs="0" maxOccurs="unbounded"/>
+							</xsd:sequence>
+							<xsd:attribute name="id" type="ID"/>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="NewUsed">
+		<xsd:attribute name="id" type="ID"/>
+		<xsd:attribute name="CodeListRef" type="IDREF"/>
+	</xsd:complexType>
+	<xsd:element name="AP_DomainAggregateXPath" type="AP_DomainAggregateXPath_Type">
+		<xsd:annotation>
+			<xsd:documentation>Contains the AXE XPath expression to the domain aggregate</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="AP_DomainAggregateXPath_Type">
+		<xsd:simpleContent>
+			<xsd:extension base="C-Infinite_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- CPP Specific Field -->
+	<xsd:complexType name="ReportingBasis_Type">
+		<xsd:sequence>
+			<xsd:element ref="FrequencyCd"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Reporting_Type">
+		<xsd:sequence>
+			<xsd:element name="NumDealerRepairPlates" type="Long"/>
+			<xsd:element name="NumTransportationPlates" type="Long"/>
+			<xsd:element ref="NumHoistsUsed"/>
+			<xsd:element ref="EstimatedPayrollAmt"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="SalesApplies">
+		<xsd:simpleContent>
+			<xsd:restriction base="OpenEnum"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="Sales_Type">
+		<xsd:complexContent>
+			<xsd:extension base="FORMATTEDNUMBER_NoID">
+				<xsd:sequence>
+					<xsd:element ref="SalesAppliesToCd" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="RelatedType_Type">
+		<xsd:simpleContent>
+			<xsd:extension base="RelatedTypeNoID_Type">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="RelatedTypeNoID_Type">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Location"/>
+			<xsd:enumeration value="SubLocation"/>
+			<xsd:enumeration value="CommlPolicy"/>
+			<xsd:enumeration value="GeneralLiabilityLineBusiness"/>
+			<xsd:enumeration value="CommlPropertyLineBusiness"/>
+			<xsd:enumeration value="CommlVeh"/>
+			<xsd:enumeration value="PersVeh"/>
+			<xsd:enumeration value="Watercraft"/>
+			<xsd:enumeration value="RecipientInfo"/>
+			<xsd:enumeration value="PropertySchedule"/>
+			<xsd:enumeration value="PropertyItem"/>
+			<xsd:enumeration value="PersPolicy"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="AP_Type">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="AgentComments"/>
+			<xsd:enumeration value="GeneralQuestionnaire"/>
+			<xsd:enumeration value="ClaimsMadeRemarks"/>
+			<xsd:enumeration value="EmployeeBenefitRemarks"/>
+			<xsd:enumeration value="ContractorRemarks"/>
+			<xsd:enumeration value="ProductRemarks"/>
+			<xsd:enumeration value="LiabilityGeneralInformation"/>
+			<xsd:enumeration value="AdditionalInterestDesc"/>
+			<xsd:enumeration value="CUMBRGeneralInformationRemarks"/>
+			<xsd:enumeration value="UnderlyingInformationRemarks"/>
+			<xsd:enumeration value="ExposureRemarks"/>
+			<xsd:enumeration value="LossHistory"/>
+			<xsd:enumeration value="AdditionalInterest"/>
+			<xsd:enumeration value="ApplicantQuestionnaire"/>
+			<xsd:enumeration value="HomeownersQuestionnaire"/>
+			<xsd:enumeration value="DogQuestionnaire"/>
+			<xsd:enumeration value="WoodstoveQuestionnaire"/>
+			<xsd:enumeration value="BusinessInt"/>
+			<xsd:enumeration value="Optical"/>
+			<xsd:enumeration value="RegistrationPlatesDesc"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:element name="ReportingBasis" type="ReportingBasis_Type"/>
+	<xsd:element name="Reporting" type="Reporting_Type"/>
+	<xsd:element name="SalesAppliesToCd" type="SalesApplies"/>
+	<xsd:element name="Sales" type="Sales_Type"/>
+	<xsd:element name="EstimatedPayrollAmt" type="CURRENCY"/>
+	<xsd:element name="CleanUpAfterUploadDoneInd" type="xsd:boolean"/>
+	<xsd:element name="ProtectiveSafeguardDesc" type="C-255"/>
+	<xsd:element name="WindstormDedPercent" type="xsd:string"/>
+	<xsd:element name="WindstormDed" type="xsd:string"/>
+	<xsd:element name="FloorConstructionCd" type="xsd:string"/>
+	<xsd:element name="PrimaryFarmInd" type="xsd:string"/>
+
+	<!-- Schema definition for Account -->
+	<xsd:complexType name="Account_Type">
+		<xsd:sequence>
+			<xsd:element ref="RqUID"/>
+			<xsd:element ref="CurCd"/>
+			<xsd:element ref="TransactionRequestDt" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Used to store when the account was last updated</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="TransactionEffectiveDt" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Used by external system to convey their last updated timestamp</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="ItemIdInfo" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>This aggregate is used to store the account number assigned by portal and carrier system</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AccountStatusCd" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Used for account status cd. e.g. Active, Inactive</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AccountNumber" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Used for account number generated by external account system</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Frozen" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Used for by external account system to convey whether the account is immutable</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="BroadLOBCd" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Used for type of account e.g. Personal, Commercial</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="OperationsDesc" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Used to desc the business of the account holder</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="Producer" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Used to store producer information like producer codes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="MiscParty" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Used for Account Holders and Contact Information</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="Location" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Used to store Location information for this account</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="BusinessInfo" minOccurs="0" >
+				<xsd:annotation>
+					<xsd:documentation>Used to store industry code for this account</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="ModInfo" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Used for represent the changes made to the account information aggregate</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="ID"/>
+	</xsd:complexType>
+	<xsd:element name="Account" type="Account_Type"/>
+</xsd:schema>
